@@ -1,0 +1,15 @@
+{
+  "text": "To solve 17 * 23, we can use the standard multiplication method:\n\n1. First, multiply 17 by 3 (the units digit of 23):\n   - 17 * 3 = 51\n   \n2. Then, multiply 17 by 20 (the tens digit of 23, which is 2 * 10):\n   - 17 * 20 = 340\n   \n3. Finally, add the two results together:\n   - 51 + 340 = 391\n\nSo, 17 * 23 = 391.\n\nThe final answer in a fenced code block is:\n\n```391\n```",
+  "backend": "ollama",
+  "model": "qwen2.5:3b",
+  "prompt": "What is 17 * 23?\nThink step by step, then give the final answer in a fenced code block containing only the number.",
+  "temperature": 0.0,
+  "seed": 0,
+  "elapsed": 4.09189989999868,
+  "meta": {
+    "eval_count": 154,
+    "prompt_eval_count": 59,
+    "total_duration": 2040280700
+  },
+  "cached_at": "2026-08-20T10:45:07"
+}
