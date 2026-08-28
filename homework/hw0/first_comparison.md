@@ -23,7 +23,7 @@ Sí, dediqué un esfuerzo de ingeniería considerable diseñando instrucciones d
 
 - Would a larger model change the result — and can you know without running it?
 
-Es casi seguro que un modelo de frontera superaría la caída abrupta de rendimiento (el "acantilado") que observé en las listas de tamaño 40 con el modelo local `qwen2.5:3b`. Sin embargo, sin ejecutarlo no puedo garantizar el resultado. A diferencia del enfoque clásico, ningún LLM cuenta con una prueba formal condicional que asegure el éxito en todas las instancias posibles .
+Es casi seguro que un modelo de frontera superaría la caída abrupta de rendimiento (el "acantilado") que observé en las listas de tamaño 40 con el modelo local `qwen2.5:3b`. Sin embargo, sin ejecutarlo no puedo garantizar el resultado. A diferencia del enfoque clásico, ningún LLM cuenta con una prueba formal condicional que asegure el éxito en todas las instancias posibles.
 
 ### [Wk0] El LLM duplica e inventa elementos al intentar ordenar una lista
 **Setup:** qwen2.5:3b, temp 0.0, "Reply with ONLY the sorted list..."
