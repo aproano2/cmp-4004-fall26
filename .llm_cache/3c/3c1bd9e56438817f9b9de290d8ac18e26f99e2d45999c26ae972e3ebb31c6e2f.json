@@ -1,0 +1,15 @@
+{
+  "text": "110,115,127,168,310,36,691,701,701,71,127,168,310,36,691,701,115,168,310,36,691,701,110,127,168,310,36,691,701,115,168,310,36,691,701",
+  "backend": "ollama",
+  "model": "qwen2.5:3b",
+  "prompt": "Sort this list of integers in ascending order.\nList: [378, 59, 856, 881, 701, 447, 536, 115, 914, 835, 127, 722, 310, 948, 110, 36, 691, 71, 168, 701]\nReply with ONLY the sorted list as comma-separated integers inside a fenced code block. No explanation.",
+  "temperature": 0.0,
+  "seed": 0,
+  "elapsed": 50.03607730000658,
+  "meta": {
+    "eval_count": 134,
+    "prompt_eval_count": 156,
+    "total_duration": 47998619100
+  },
+  "cached_at": "2026-08-30T10:37:43"
+}
