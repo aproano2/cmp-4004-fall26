@@ -1,0 +1,15 @@
+{
+  "text": "A heuristic in search is a strategy used to guide the search process towards a solution more efficiently, often by making informed, albeit approximate, decisions.",
+  "backend": "ollama",
+  "model": "qwen2.5:3b",
+  "prompt": "In one sentence: what is a heuristic in search?",
+  "temperature": 0.0,
+  "seed": 0,
+  "elapsed": 22.72392029999901,
+  "meta": {
+    "eval_count": 30,
+    "prompt_eval_count": 40,
+    "total_duration": 20673373400
+  },
+  "cached_at": "2026-08-30T10:19:59"
+}
