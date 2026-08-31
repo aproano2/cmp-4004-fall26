@@ -1,0 +1,15 @@
+{
+  "text": "To solve 17 * 23, we can use the standard multiplication method:\n\n1. First, multiply 7 (from 17) by 23:\n   - 7 * 3 = 21\n   - 7 * 20 = 140\n   - Adding these together: 21 + 140 = 161\n\n2. Next, multiply 1 (from 17) by 23:\n   - 1 * 23 = 23\n\n3. Finally, add the two results together:\n   - 161 + 230 = 391\n\nSo, 17 * 23 = 391.\n\nThe final answer in a fenced code block is:\n\n```391\n```",
+  "backend": "ollama",
+  "model": "qwen2.5:3b",
+  "prompt": "What is 17 * 23?\nThink step by step, then give the final answer in a fenced code block containing only the number.",
+  "temperature": 0.0,
+  "seed": 0,
+  "elapsed": 23.353374299999814,
+  "meta": {
+    "eval_count": 172,
+    "prompt_eval_count": 59,
+    "total_duration": 21294350800
+  },
+  "cached_at": "2026-08-30T22:23:25"
+}
