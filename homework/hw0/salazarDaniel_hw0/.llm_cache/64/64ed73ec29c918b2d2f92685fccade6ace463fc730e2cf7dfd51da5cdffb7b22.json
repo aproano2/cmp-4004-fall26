@@ -1,0 +1,13 @@
+{
+  "text": "[echo backend] 8 chars received. This is NOT a model response.",
+  "backend": "echo",
+  "model": "qwen2.5:1.5b",
+  "prompt": "anything",
+  "temperature": 0.0,
+  "seed": 0,
+  "elapsed": 8.100003469735384e-06,
+  "meta": {
+    "fake": true
+  },
+  "cached_at": "2026-08-30T22:06:18"
+}
