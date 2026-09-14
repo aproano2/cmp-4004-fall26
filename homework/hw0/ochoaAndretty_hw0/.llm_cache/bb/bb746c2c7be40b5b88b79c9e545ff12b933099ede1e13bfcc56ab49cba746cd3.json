@@ -1,0 +1,15 @@
+{
+  "text": "108,115,157,164,176,177,189,189,195,198,204,260,268,297,362,369,45,508,519,527,542,547,558,559,563,585,60,623,663,732,735,768,78,782,789,795,81,831,899,910,912,957,967,971,974,979,985,990,999,1000",
+  "backend": "ollama",
+  "model": "qwen2.5:3b",
+  "prompt": "Sort this list of integers in ascending order.\nList: [558, 164, 971, 78, 831, 663, 508, 623, 957, 108, 260, 45, 732, 967, 189, 60, 115, 362, 157, 189, 177, 547, 735, 176, 195, 782, 527, 519, 912, 559, 297, 974, 910, 268, 542, 81, 899, 369, 198, 204]\nReply with ONLY the sorted list as comma-separated integers inside a fenced code block. No explanation.",
+  "temperature": 0.0,
+  "seed": 0,
+  "elapsed": 43.74865799999998,
+  "meta": {
+    "eval_count": 197,
+    "prompt_eval_count": 255,
+    "total_duration": 41586810700
+  },
+  "cached_at": "2026-08-30T22:34:28"
+}
