@@ -1,0 +1,15 @@
+{
+  "text": "```csv\n13,283,310,326,359,378,410,419,433,501,514,52,552,554,562,563,567,567,562,565,610,625,626,632,655,660,741,772,865,870,878,909,930,958,959\n```",
+  "backend": "ollama",
+  "model": "qwen2.5:1.5b",
+  "prompt": "Sort this list of integers in ascending order.\nList: [180, 655, 149, 563, 326, 302, 772, 625, 626, 930, 562, 865, 433, 283, 378, 554, 959, 870, 141, 419, 310, 632, 52, 660, 13, 483, 958, 514, 359, 410, 741, 567, 359, 878, 610, 552, 447, 501, 909, 798]\nReply with ONLY the sorted list as comma-separated integers inside a fenced code block. No explanation.",
+  "temperature": 0.0,
+  "seed": 0,
+  "elapsed": 12.680285699956585,
+  "meta": {
+    "eval_count": 143,
+    "prompt_eval_count": 257,
+    "total_duration": 10635270900
+  },
+  "cached_at": "2026-08-30T22:09:56"
+}
