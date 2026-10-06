@@ -1,0 +1,81 @@
+system,backend,model,temperature,domain,level,instance,sample,category,parsed,legal,optimal,cost_correct,reported_cost,true_cost,ref_cost,n_moves,reason,tool_calls,tool_args_correct,turns,latency_s,in_tokens,out_tokens,cached,key
+LLM,ollama,qwen2.5:3b,1.0,puzzle,4,0,0,illegal,True,False,False,False,8,,4,8,"illegal move #1 (LEFT) from (0, 1, 3, 4, 2, 6, 7, 5, 8)",0,,1,94.76065530005144,202,845,True,e2dea261e666
+LLM,ollama,qwen2.5:3b,1.0,puzzle,4,1,0,illegal,True,False,False,False,4,,4,4,"illegal move #3 (LEFT) from (0, 1, 3, 5, 2, 6, 4, 7, 8)",0,,1,43.214575199992396,202,409,True,4633922e7173
+LLM,ollama,qwen2.5:3b,1.0,puzzle,4,2,0,illegal,True,False,False,False,6,,4,6,"illegal move #5 (RIGHT) from (1, 2, 0, 4, 5, 3, 7, 8, 6)",0,,1,45.43466199998511,202,458,True,63252a878a06
+LLM,ollama,qwen2.5:3b,1.0,puzzle,4,3,0,illegal,True,False,False,False,8,,4,8,"illegal move #5 (LEFT) from (0, 4, 3, 2, 1, 5, 7, 8, 6)",0,,1,78.38499649998266,202,782,True,77279a0a7a49
+LLM,ollama,qwen2.5:3b,1.0,puzzle,4,4,0,illegal,True,False,False,False,6,,4,6,"illegal move #1 (UP) from (0, 1, 3, 4, 2, 5, 7, 8, 6)",0,,1,53.38172390003456,202,546,True,7aa69e3fbbdf
+LLM,ollama,qwen2.5:3b,1.0,puzzle,4,5,0,illegal,True,False,False,False,12,,4,16,"illegal move #1 (UP) from (0, 1, 2, 4, 5, 3, 7, 8, 6)",0,,1,41.54171000001952,202,419,True,a0886ca5c299
+LLM,ollama,qwen2.5:3b,1.0,puzzle,4,6,0,illegal,True,False,False,False,8,,4,8,"illegal move #1 (UP) from (0, 2, 3, 1, 5, 6, 4, 7, 8)",0,,1,57.901025699975435,202,589,True,df53cabf4118
+LLM,ollama,qwen2.5:3b,1.0,puzzle,4,7,0,illegal,True,False,False,False,3,,4,3,"illegal move #1 (UP) from (1, 3, 0, 4, 2, 6, 7, 5, 8)",0,,1,34.66263959999196,202,343,True,16c2788f1257
+LLM,ollama,qwen2.5:3b,1.0,puzzle,4,8,0,illegal,False,False,False,False,,,4,,unparseable,0,,1,446.9890085000079,202,4096,True,982e8f59d26a
+LLM,ollama,qwen2.5:3b,1.0,puzzle,4,9,0,illegal,True,False,False,False,3,,4,3,"illegal move #1 (DOWN) from (1, 2, 3, 7, 4, 5, 0, 8, 6)",0,,1,44.18478780001169,202,416,True,38199039f2d8
+LLM,ollama,qwen2.5:3b,1.0,puzzle,8,0,0,illegal,True,False,False,False,9,,8,9,"illegal move #1 (UP) from (4, 2, 0, 5, 1, 3, 7, 8, 6)",0,,1,124.0147249000147,202,1035,True,9efc8268b95c
+LLM,ollama,qwen2.5:3b,1.0,puzzle,8,1,0,illegal,True,False,False,False,40,,8,33,"illegal move #1 (UP) from (0, 6, 2, 1, 4, 3, 7, 5, 8)",0,,1,181.42874559998745,202,1852,True,7dbaece6af8d
+LLM,ollama,qwen2.5:3b,1.0,puzzle,8,2,0,illegal,False,False,False,False,,,8,,unparseable,0,,1,441.4168963000411,202,4096,True,5d59f2ec2146
+LLM,ollama,qwen2.5:3b,1.0,puzzle,8,3,0,illegal,True,False,False,False,20,,8,22,"illegal move #2 (UP) from (1, 0, 6, 4, 3, 8, 7, 2, 5)",0,,1,158.33736349997343,202,1565,True,68934caf578e
+LLM,ollama,qwen2.5:3b,1.0,puzzle,8,4,0,illegal,True,False,False,False,17,,8,30,"illegal move #3 (LEFT) from (0, 1, 2, 4, 6, 3, 7, 5, 8)",0,,1,92.89836849999847,202,949,True,6a8e823495b9
+LLM,ollama,qwen2.5:3b,1.0,puzzle,8,5,0,illegal,True,False,False,False,12,,8,12,"illegal move #1 (LEFT) from (0, 1, 2, 5, 6, 3, 4, 7, 8)",0,,1,102.35720290004974,202,1072,True,a7e0f33697d8
+LLM,ollama,qwen2.5:3b,1.0,puzzle,8,6,0,illegal,False,False,False,False,,,8,,unparseable,0,,1,449.2000480000279,202,4096,True,680965fe1bab
+LLM,ollama,qwen2.5:3b,1.0,puzzle,8,7,0,illegal,True,False,False,False,16,,8,16,"illegal move #2 (UP) from (1, 0, 3, 7, 2, 6, 5, 4, 8)",0,,1,232.42787680000765,202,2195,True,70a4701ac2df
+LLM,ollama,qwen2.5:3b,1.0,puzzle,8,8,0,illegal,True,False,False,False,6,,8,6,"illegal move #4 (RIGHT) from (2, 3, 5, 1, 4, 0, 7, 8, 6)",0,,1,55.29498299997067,202,535,True,526672b52f0d
+LLM,ollama,qwen2.5:3b,1.0,puzzle,8,9,0,illegal,True,False,False,False,9,,8,9,"illegal move #2 (LEFT) from (1, 3, 6, 0, 4, 2, 7, 5, 8)",0,,1,48.15002649999224,202,493,True,2c54d03e5f5f
+LLM,ollama,qwen2.5:3b,1.0,puzzle,12,0,0,illegal,True,False,False,False,8,,12,8,"illegal move #2 (RIGHT) from (1, 6, 2, 5, 8, 0, 4, 3, 7)",0,,1,98.13915629999246,202,941,True,7fd859112eee
+LLM,ollama,qwen2.5:3b,1.0,puzzle,12,1,0,illegal,True,False,False,False,27,,12,30,"illegal move #2 (UP) from (4, 0, 6, 7, 3, 1, 5, 2, 8)",0,,1,129.89874400000554,202,1362,True,0b1b3ffdf246
+LLM,ollama,qwen2.5:3b,1.0,puzzle,12,2,0,illegal,True,False,False,False,5,,12,5,"illegal move #2 (LEFT) from (2, 8, 3, 0, 5, 6, 1, 4, 7)",0,,1,58.357321900024544,202,578,True,cdd885e72275
+LLM,ollama,qwen2.5:3b,1.0,puzzle,12,3,0,illegal,True,False,False,False,2,,12,2,"illegal move #2 (LEFT) from (8, 1, 2, 0, 5, 3, 4, 7, 6)",0,,1,40.25226169999223,202,401,True,d9a603034f7d
+LLM,ollama,qwen2.5:3b,1.0,puzzle,12,4,0,illegal,True,False,False,False,10,,12,8,"illegal move #1 (UP) from (4, 3, 0, 7, 1, 2, 8, 6, 5)",0,,1,111.07715050003026,202,1152,True,addec5b7b900
+LLM,ollama,qwen2.5:3b,1.0,puzzle,12,5,0,illegal,True,False,False,False,10,,12,10,"illegal move #3 (RIGHT) from (7, 1, 3, 8, 2, 4, 6, 5, 0)",0,,1,74.44238540000515,202,655,True,dd13cb7bda9b
+LLM,ollama,qwen2.5:3b,1.0,puzzle,12,6,0,illegal,True,False,False,False,18,,12,18,"illegal move #1 (RIGHT) from (4, 3, 0, 5, 1, 6, 2, 7, 8)",0,,1,67.87211980001302,202,691,True,23ab1e8a0a38
+LLM,ollama,qwen2.5:3b,1.0,puzzle,12,7,0,illegal,True,False,False,False,16,,12,13,"illegal move #6 (UP) from (7, 0, 3, 2, 1, 4, 8, 6, 5)",0,,1,159.80212750000646,202,1579,True,c8ab5dd16d2c
+LLM,ollama,qwen2.5:3b,1.0,puzzle,12,8,0,illegal,True,False,False,False,9,,12,9,"illegal move #3 (LEFT) from (0, 1, 3, 7, 2, 4, 6, 5, 8)",0,,1,88.47092979995068,202,950,True,366a8ebc5152
+LLM,ollama,qwen2.5:3b,1.0,puzzle,12,9,0,illegal,True,False,False,False,4,,12,4,"ends at (1, 2, 3, 8, 5, 7, 6, 4, 0), not at goal",0,,1,45.94231700000819,202,477,True,050cf0f7a584
+LLM,ollama,qwen2.5:3b,1.0,puzzle,16,0,0,illegal,True,False,False,False,11,,16,11,"illegal move #2 (DOWN) from (1, 6, 2, 7, 5, 3, 8, 0, 4)",0,,1,64.55032450001454,202,573,True,97e5067e77a6
+LLM,ollama,qwen2.5:3b,1.0,puzzle,16,1,0,illegal,True,False,False,False,9,,16,9,"illegal move #1 (UP) from (4, 3, 0, 5, 1, 7, 2, 8, 6)",0,,1,80.72568350000074,202,854,True,cc9dc6b69d61
+LLM,ollama,qwen2.5:3b,1.0,puzzle,16,2,0,illegal,False,False,False,False,,,16,,unparseable,0,,1,440.25124429998687,202,4096,True,2125d3873411
+LLM,ollama,qwen2.5:3b,1.0,puzzle,16,3,0,illegal,True,False,False,False,6,,16,6,"illegal move #1 (UP) from (1, 5, 0, 8, 4, 2, 6, 7, 3)",0,,1,135.3684594000224,202,1451,True,7524408acc3d
+LLM,ollama,qwen2.5:3b,1.0,puzzle,16,4,0,illegal,True,False,False,False,25,,16,32,"illegal move #1 (RIGHT) from (1, 8, 0, 4, 3, 6, 7, 5, 2)",0,,1,81.5380588999833,202,875,True,5d6a6ec24b62
+LLM,ollama,qwen2.5:3b,1.0,puzzle,16,5,0,illegal,True,False,False,False,4,,16,4,"illegal move #1 (UP) from (0, 5, 2, 3, 1, 8, 4, 7, 6)",0,,1,125.84621690004133,202,1286,True,a8a986eb5169
+LLM,ollama,qwen2.5:3b,1.0,puzzle,16,6,0,illegal,True,False,False,False,22,,16,23,"illegal move #2 (UP) from (1, 0, 3, 7, 8, 2, 4, 6, 5)",0,,1,146.13612929999363,202,1532,True,ad0220be5c63
+LLM,ollama,qwen2.5:3b,1.0,puzzle,16,7,0,illegal,True,False,False,False,7,,16,7,"illegal move #1 (LEFT) from (0, 5, 3, 1, 7, 6, 4, 2, 8)",0,,1,143.80210470000748,202,1507,True,b98f574d537e
+LLM,ollama,qwen2.5:3b,1.0,puzzle,16,8,0,illegal,True,False,False,False,14,,16,14,"illegal move #1 (UP) from (1, 7, 0, 5, 3, 6, 4, 2, 8)",0,,1,172.84822370001348,202,1876,True,d4d69820fa5d
+LLM,ollama,qwen2.5:3b,1.0,puzzle,16,9,0,illegal,True,False,False,False,7,,16,8,"illegal move #2 (LEFT) from (5, 1, 3, 0, 4, 8, 7, 6, 2)",0,,1,64.3508284999989,202,671,True,2ce7cd8a4d72
+LLM+A*,ollama,qwen2.5:3b,1.0,puzzle,4,0,0,optimal_correct,True,True,True,True,4,4,4,4,,1,True,2,16.114324899972416,716,53,True,60c727589dd3
+LLM+A*,ollama,qwen2.5:3b,1.0,puzzle,4,1,0,optimal_correct,True,True,True,True,4,4,4,4,,1,True,2,12.955866699980106,716,53,False,edf39324a1bb
+LLM+A*,ollama,qwen2.5:3b,1.0,puzzle,4,2,0,optimal_correct,True,True,True,True,4,4,4,4,,1,True,2,12.542038800020237,716,53,False,d44f51aa16e5
+LLM+A*,ollama,qwen2.5:3b,1.0,puzzle,4,3,0,optimal_correct,True,True,True,True,4,4,4,4,,1,True,2,12.741647200018633,716,53,False,f8a7df5bd075
+LLM+A*,ollama,qwen2.5:3b,1.0,puzzle,4,4,0,optimal_correct,True,True,True,True,4,4,4,4,,1,True,2,12.667267800017726,716,53,False,a5f6ff0f3ad4
+LLM+A*,ollama,qwen2.5:3b,1.0,puzzle,4,5,0,illegal,True,False,False,False,26,,4,26,"illegal move #2 (LEFT) from (4, 1, 2, 0, 5, 3, 7, 8, 6)",1,False,2,19.33864699996775,786,120,False,495f8f03e155
+LLM+A*,ollama,qwen2.5:3b,1.0,puzzle,4,6,0,optimal_correct,True,True,True,True,4,4,4,4,,1,True,2,12.652063200017437,716,53,False,bf63c8444f46
+LLM+A*,ollama,qwen2.5:3b,1.0,puzzle,4,7,0,optimal_correct,True,True,True,True,4,4,4,4,,1,True,2,12.809031799959484,716,53,False,e7daec95fbb6
+LLM+A*,ollama,qwen2.5:3b,1.0,puzzle,4,8,0,illegal,False,False,False,False,,,4,,unparseable,2,False,3,18.154993299976923,1140,93,False,10bc7fc8c26e
+LLM+A*,ollama,qwen2.5:3b,1.0,puzzle,4,9,0,illegal,True,False,False,False,6,,4,6,"ends at (2, 3, 5, 1, 4, 6, 7, 8, 0), not at goal",1,False,2,13.081435000000056,722,59,False,f4040cad2e49
+LLM+A*,ollama,qwen2.5:3b,1.0,puzzle,8,0,0,optimal_correct,True,True,True,True,8,8,8,8,,1,True,2,14.050806700019166,729,65,True,22f85f15f294
+LLM+A*,ollama,qwen2.5:3b,1.0,puzzle,8,1,0,optimal_correct,True,True,True,True,8,8,8,8,,1,True,2,13.830237800022587,729,65,False,a317497532fb
+LLM+A*,ollama,qwen2.5:3b,1.0,puzzle,8,2,0,optimal_correct,True,True,True,True,8,8,8,8,,1,True,2,13.766400399967097,729,65,False,1aadcd17a4cf
+LLM+A*,ollama,qwen2.5:3b,1.0,puzzle,8,3,0,illegal,True,False,False,False,18,,8,18,"illegal move #2 (LEFT) from (1, 3, 6, 0, 4, 8, 7, 2, 5)",1,False,2,17.497874600056093,769,104,False,128fa94db4bc
+LLM+A*,ollama,qwen2.5:3b,1.0,puzzle,8,4,0,optimal_correct,True,True,True,True,8,8,8,8,,1,True,2,13.867162299982738,728,65,False,e6906565af13
+LLM+A*,ollama,qwen2.5:3b,1.0,puzzle,8,5,0,illegal,True,False,False,False,14,,8,14,"illegal move #1 (LEFT) from (0, 1, 2, 5, 6, 3, 4, 7, 8)",2,False,3,23.81641580001451,1256,150,False,35c2c058525a
+LLM+A*,ollama,qwen2.5:3b,1.0,puzzle,8,6,0,illegal,False,False,False,False,,,8,,unparseable,2,False,3,18.176367499982007,1140,93,False,3665421633dd
+LLM+A*,ollama,qwen2.5:3b,1.0,puzzle,8,7,0,optimal_correct,True,True,True,True,8,8,8,8,,1,True,2,13.912164300039876,728,65,False,7916d01893fa
+LLM+A*,ollama,qwen2.5:3b,1.0,puzzle,8,8,0,illegal,True,False,False,False,18,,8,18,"illegal move #5 (RIGHT) from (2, 3, 5, 1, 6, 8, 7, 4, 0)",1,False,2,16.966061100014485,761,96,False,85538dcec443
+LLM+A*,ollama,qwen2.5:3b,1.0,puzzle,8,9,0,optimal_correct,True,True,True,True,8,8,8,8,,1,True,2,13.805717099981848,729,65,False,d58f40a0dcff
+LLM+A*,ollama,qwen2.5:3b,1.0,puzzle,12,0,0,optimal_correct,True,True,True,True,12,12,12,12,,1,True,2,16.047851099981926,742,78,True,98eebc9e04db
+LLM+A*,ollama,qwen2.5:3b,1.0,puzzle,12,1,0,illegal,True,False,False,False,24,,12,24,"illegal move #2 (LEFT) from (4, 3, 6, 0, 7, 1, 5, 2, 8)",1,False,2,18.8877802999923,780,114,False,9c1df97bae80
+LLM+A*,ollama,qwen2.5:3b,1.0,puzzle,12,2,0,illegal,False,False,False,False,,,12,,unparseable,1,False,2,12.0442822999903,705,51,False,e8c732fe76b4
+LLM+A*,ollama,qwen2.5:3b,1.0,puzzle,12,3,0,optimal_correct,True,True,True,True,12,12,12,12,,1,True,2,15.218578399973921,742,78,False,aa1701383584
+LLM+A*,ollama,qwen2.5:3b,1.0,puzzle,12,4,0,illegal,False,False,False,False,,,12,,unparseable,1,False,2,11.558413999970071,697,44,False,979065b4c9b2
+LLM+A*,ollama,qwen2.5:3b,1.0,puzzle,12,5,0,optimal_correct,True,True,True,True,12,12,12,12,,1,True,2,15.447680399985984,742,78,False,13526ec8e2f7
+LLM+A*,ollama,qwen2.5:3b,1.0,puzzle,12,6,0,optimal_correct,True,True,True,True,12,12,12,12,,1,True,2,15.176770100020804,742,78,False,07ee34903fcc
+LLM+A*,ollama,qwen2.5:3b,1.0,puzzle,12,7,0,optimal_correct,True,True,True,True,12,12,12,12,,1,True,2,14.959929000062402,742,78,False,64718f8b9f79
+LLM+A*,ollama,qwen2.5:3b,1.0,puzzle,12,8,0,illegal,False,False,False,False,,,12,,unparseable,1,False,2,12.664233900024556,697,60,False,a03b17cd9bb1
+LLM+A*,ollama,qwen2.5:3b,1.0,puzzle,12,9,0,illegal,True,False,False,False,9,,12,9,"illegal move #1 (DOWN) from (1, 2, 3, 8, 7, 4, 6, 5, 0)",1,False,2,14.078916400030721,732,68,False,1fe2ed43ebfe
+LLM+A*,ollama,qwen2.5:3b,1.0,puzzle,16,0,0,optimal_correct,True,True,True,True,16,16,16,16,,1,True,2,16.823157000064384,755,90,True,d71c32e0b6b7
+LLM+A*,ollama,qwen2.5:3b,1.0,puzzle,16,1,0,optimal_correct,True,True,True,True,16,16,16,16,,1,True,2,16.144517800014,754,90,False,8cd945c71f66
+LLM+A*,ollama,qwen2.5:3b,1.0,puzzle,16,2,0,optimal_correct,True,True,True,True,16,16,16,16,,1,True,2,16.346376300032716,755,90,False,f89309a2a472
+LLM+A*,ollama,qwen2.5:3b,1.0,puzzle,16,3,0,optimal_correct,True,True,True,True,16,16,16,16,,1,True,2,16.288009299954865,754,90,False,a3b6e2bce18c
+LLM+A*,ollama,qwen2.5:3b,1.0,puzzle,16,4,0,optimal_correct,True,True,True,True,16,16,16,16,,1,True,2,16.215102999994997,755,90,False,96e868b03aa6
+LLM+A*,ollama,qwen2.5:3b,1.0,puzzle,16,5,0,illegal,False,False,False,False,,,16,,unparseable,1,False,2,12.525925200025085,705,57,False,cf472ed60a4e
+LLM+A*,ollama,qwen2.5:3b,1.0,puzzle,16,6,0,optimal_correct,True,True,True,True,16,16,16,16,,1,True,2,16.26256459997967,755,90,False,e8d865b74162
+LLM+A*,ollama,qwen2.5:3b,1.0,puzzle,16,7,0,optimal_correct,True,True,True,True,16,16,16,16,,1,True,2,16.293413499952294,755,90,False,02fad828df96
+LLM+A*,ollama,qwen2.5:3b,1.0,puzzle,16,8,0,optimal_correct,True,True,True,True,16,16,16,16,,1,True,2,16.25400570000056,754,90,False,3edb006352a0
+LLM+A*,ollama,qwen2.5:3b,1.0,puzzle,16,9,0,illegal,False,False,False,False,,,16,,unparseable,1,False,2,11.269034800003283,697,40,False,e9472d6eb0e2
