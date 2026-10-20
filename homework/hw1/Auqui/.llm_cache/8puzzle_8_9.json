@@ -1,0 +1,8 @@
+{
+  "model": "qwen2.5:3b",
+  "domain": "8puzzle",
+  "level": 8,
+  "instance": 9,
+  "prompt": "\nYou are solving an 8-puzzle.\n\nThe board is represented as a flat list of 9 integers.\n0 represents the blank tile.\n\nStart:\n[5, 4, 2, 1, 0, 3, 7, 8, 6]\n\nGoal:\n[1, 2, 3, 4, 5, 6, 7, 8, 0]\n\nA legal move swaps the blank (0) with exactly one horizontally\nor vertically adjacent tile.\n\nFind a legal path from Start to Goal.\n\nReturn ONLY valid JSON in exactly this format:\n\n{\n  \"path\": [\n    [state1],\n    [state2]\n  ]\n}\n\nThe path MUST include both the start state and the goal state.\nDo not include explanations.\n",
+  "response": "{\n  \"path\": [\n    [[5, 4, 2, 1, 0, 3, 7, 8, 6]],\n    [[1, 2, 3, 4, 5, 6, 7, 8, 0]]\n  ]\n}"
+}
