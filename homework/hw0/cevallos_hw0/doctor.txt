@@ -1,0 +1,15 @@
+CMP-4004 environment check
+----------------------------------------------------------
+✔ Python 3.14.0
+✔ numpy 2.3.5, matplotlib 3.11.1, pytest 9.1.1
+✔ optional: pandas MISSING, sklearn MISSING, networkx MISSING, pyperplan MISSING
+! SWI-Prolog not found — needed for weeks 8-9 only
+    brew install swi-prolog   /   sudo apt install swi-prolog
+! backend ollama  serving, no models pulled
+✔ backend manual  always available
+✔ backend echo    always available (testing only — not a model)
+✔ LLM backend: manual — this is a PASS, not a failure.
+    Every lab is completable this way. Note your reduced n in reports.
+✔ .llm_cache/ writable (0 entries)
+----------------------------------------------------------
+→ Ready.
