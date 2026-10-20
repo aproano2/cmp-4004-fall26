@@ -1,4 +1,5 @@
 # Duel 1 — Search
+**Team:** Giuliana Auqui - Felipe Campuzano
 
 ## 1. Duel Scorecard
 
