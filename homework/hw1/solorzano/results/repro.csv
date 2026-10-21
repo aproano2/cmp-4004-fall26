@@ -1,6 +1,0 @@
-instance_id,call,seed,temperature,answer,category,reported_cost,actual_cost,optimal_cost
-8puzzle-8-01,1,1,0.7,DRD,illegal_path,3,,8
-8puzzle-8-01,2,2,0.7,RDL,illegal_path,3,,8
-8puzzle-8-01,3,3,0.7,ULLUDDRRUDUD,illegal_path,12,,8
-8puzzle-8-01,4,4,0.7,,unparseable,,,8
-8puzzle-8-01,5,5,0.7,RUU,illegal_path,3,,8
