@@ -1,8 +1,0 @@
-{
-  "model": "qwen2.5:3b",
-  "domain": "grid",
-  "level": 12,
-  "instance": 7,
-  "prompt": "\nYou are solving a weighted grid pathfinding problem.\n\nTerrain:\n[[4, 7, 6, 4, 3, 5, 6, 8, 5, 1, 6, 6], [7, 6, 5, 2, 1, 9, 4, 1, 4, 6, 1, 2], [9, 8, 9, 9, 6, 3, 2, 9, 4, 5, 9, 3], [8, 6, 9, 3, 1, 4, 4, 3, 3, 1, 2, 2], [8, 5, 9, 9, 1, 2, 8, 7, 1, 5, 6, 4], [9, 3, 2, 7, 2, 5, 6, 6, 4, 9, 9, 4], [5, 3, 6, 6, 4, 3, 5, 8, 1, 9, 3, 6], [1, 7, 5, 9, 7, 7, 3, 2, 2, 3, 4, 5], [4, 4, 5, 3, 1, 1, 8, 8, 4, 8, 3, 3], [8, 2, 7, 5, 7, 3, 9, 2, 7, 4, 4, 7], [3, 3, 4, 5, 9, 1, 7, 4, 4, 7, 3, 2], [2, 3, 4, 4, 7, 6, 2, 9, 6, 9, 9, 7]]\n\nStart:\n[0, 0]\n\nGoal:\n[11, 11]\n\nYou may move only UP, DOWN, LEFT, or RIGHT.\nDiagonal movement is forbidden.\n\nThe cost of a move is the terrain value of the cell ENTERED.\nThe starting cell has no entry cost.\n\nFind a minimum-cost path from Start to Goal.\n\nReturn ONLY valid JSON in exactly this format:\n\n{\n  \"path\": [\n    [row, column],\n    [row, column]\n  ],\n  \"reported_cost\": NUMBER\n}\n\nThe path MUST include both Start and Goal.\nDo not include explanations.\n",
-  "response": "{\n  \"path\": [\n    [0, 0],\n    [1, 0],\n    [2, 0],\n    [3, 0],\n    [4, 0],\n    [5, 0],\n    [6, 0],\n    [7, 0],\n    [8, 0],\n    [9, 0],\n    [10, 0],\n    [11, 11]\n  ],\n  \"reported_cost\": 105\n}"
-}
