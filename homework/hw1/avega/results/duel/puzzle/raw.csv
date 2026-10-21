@@ -1,0 +1,241 @@
+prompt,system,model,size,instance,category,correct,legal,cost_ok,optimal_cost,true_cost,reported_cost,path_len,seconds,tokens_in,tokens_out,tool_calls,expansions,reasons
+v2,A*,A*+manhattan,4,0,optimal,1,1,1,4,4,4.0,4,0.0001,0,0,0,4,
+v2,A*,A*+manhattan,4,1,optimal,1,1,1,4,4,4.0,4,0.0001,0,0,0,4,
+v2,A*,A*+manhattan,4,2,optimal,1,1,1,4,4,4.0,4,0.0001,0,0,0,4,
+v2,A*,A*+manhattan,4,3,optimal,1,1,1,4,4,4.0,4,0.0001,0,0,0,4,
+v2,A*,A*+manhattan,4,4,optimal,1,1,1,4,4,4.0,4,0.0001,0,0,0,4,
+v2,A*,A*+manhattan,4,5,optimal,1,1,1,4,4,4.0,4,0.0001,0,0,0,4,
+v2,A*,A*+manhattan,4,6,optimal,1,1,1,4,4,4.0,4,0.0001,0,0,0,4,
+v2,A*,A*+manhattan,4,7,optimal,1,1,1,4,4,4.0,4,0.0001,0,0,0,4,
+v2,A*,A*+manhattan,4,8,optimal,1,1,1,4,4,4.0,4,0.0,0,0,0,4,
+v2,A*,A*+manhattan,4,9,optimal,1,1,1,4,4,4.0,4,0.0001,0,0,0,4,
+v2,A*,A*+manhattan,8,0,optimal,1,1,1,8,8,8.0,8,0.0001,0,0,0,11,
+v2,A*,A*+manhattan,8,1,optimal,1,1,1,8,8,8.0,8,0.0001,0,0,0,8,
+v2,A*,A*+manhattan,8,2,optimal,1,1,1,8,8,8.0,8,0.0002,0,0,0,12,
+v2,A*,A*+manhattan,8,3,optimal,1,1,1,8,8,8.0,8,0.0002,0,0,0,12,
+v2,A*,A*+manhattan,8,4,optimal,1,1,1,8,8,8.0,8,0.0001,0,0,0,11,
+v2,A*,A*+manhattan,8,5,optimal,1,1,1,8,8,8.0,8,0.0002,0,0,0,10,
+v2,A*,A*+manhattan,8,6,optimal,1,1,1,8,8,8.0,8,0.0001,0,0,0,10,
+v2,A*,A*+manhattan,8,7,optimal,1,1,1,8,8,8.0,8,0.0001,0,0,0,15,
+v2,A*,A*+manhattan,8,8,optimal,1,1,1,8,8,8.0,8,0.0001,0,0,0,12,
+v2,A*,A*+manhattan,8,9,optimal,1,1,1,8,8,8.0,8,0.0001,0,0,0,17,
+v2,A*,A*+manhattan,12,0,optimal,1,1,1,12,12,12.0,12,0.0002,0,0,0,28,
+v2,A*,A*+manhattan,12,1,optimal,1,1,1,12,12,12.0,12,0.0001,0,0,0,12,
+v2,A*,A*+manhattan,12,2,optimal,1,1,1,12,12,12.0,12,0.0003,0,0,0,23,
+v2,A*,A*+manhattan,12,3,optimal,1,1,1,12,12,12.0,12,0.0003,0,0,0,35,
+v2,A*,A*+manhattan,12,4,optimal,1,1,1,12,12,12.0,12,0.0004,0,0,0,48,
+v2,A*,A*+manhattan,12,5,optimal,1,1,1,12,12,12.0,12,0.0002,0,0,0,27,
+v2,A*,A*+manhattan,12,6,optimal,1,1,1,12,12,12.0,12,0.0006,0,0,0,64,
+v2,A*,A*+manhattan,12,7,optimal,1,1,1,12,12,12.0,12,0.0004,0,0,0,47,
+v2,A*,A*+manhattan,12,8,optimal,1,1,1,12,12,12.0,12,0.0003,0,0,0,44,
+v2,A*,A*+manhattan,12,9,optimal,1,1,1,12,12,12.0,12,0.0004,0,0,0,45,
+v2,A*,A*+manhattan,16,0,optimal,1,1,1,16,16,16.0,16,0.0016,0,0,0,169,
+v2,A*,A*+manhattan,16,1,optimal,1,1,1,16,16,16.0,16,0.0005,0,0,0,57,
+v2,A*,A*+manhattan,16,2,optimal,1,1,1,16,16,16.0,16,0.0015,0,0,0,192,
+v2,A*,A*+manhattan,16,3,optimal,1,1,1,16,16,16.0,16,0.0011,0,0,0,151,
+v2,A*,A*+manhattan,16,4,optimal,1,1,1,16,16,16.0,16,0.0015,0,0,0,184,
+v2,A*,A*+manhattan,16,5,optimal,1,1,1,16,16,16.0,16,0.0007,0,0,0,91,
+v2,A*,A*+manhattan,16,6,optimal,1,1,1,16,16,16.0,16,0.0009,0,0,0,128,
+v2,A*,A*+manhattan,16,7,optimal,1,1,1,16,16,16.0,16,0.0013,0,0,0,99,
+v2,A*,A*+manhattan,16,8,optimal,1,1,1,16,16,16.0,16,0.0014,0,0,0,129,
+v2,A*,A*+manhattan,16,9,optimal,1,1,1,16,16,16.0,16,0.001,0,0,0,116,
+v2,LLM,qwen2.5:3b,4,0,illegal,0,0,0,4,,5.0,5,2.7415,317,25,0,0,"move 2: D takes the blank off the board (blank at row 2, col 2)"
+v2,LLM,qwen2.5:3b,4,1,illegal,0,0,0,4,,4.0,4,2.6272,317,22,0,0,"ends on [2, 3, 6, 1, 4, 8, 7, 5, 0], not the goal [1, 2, 3, 4, 5, 6, 7, 8, 0]"
+v2,LLM,qwen2.5:3b,4,2,illegal,0,0,0,4,,5.0,5,2.7001,316,25,0,0,"move 0: R takes the blank off the board (blank at row 2, col 2)"
+v2,LLM,qwen2.5:3b,4,3,illegal,0,0,0,4,,4.0,4,2.6766,317,22,0,0,"move 2: D takes the blank off the board (blank at row 2, col 2)"
+v2,LLM,qwen2.5:3b,4,4,illegal,0,0,0,4,,5.0,5,2.7172,317,25,0,0,"move 1: D takes the blank off the board (blank at row 2, col 1)"
+v2,LLM,qwen2.5:3b,4,5,illegal,0,0,0,4,,7.0,7,2.7,317,31,0,0,"move 4: D takes the blank off the board (blank at row 2, col 0)"
+v2,LLM,qwen2.5:3b,4,6,illegal,0,0,0,4,,4.0,4,2.7046,317,22,0,0,"ends on [1, 3, 6, 4, 2, 8, 7, 5, 0], not the goal [1, 2, 3, 4, 5, 6, 7, 8, 0]"
+v2,LLM,qwen2.5:3b,4,7,illegal,0,0,0,4,,7.0,7,2.8271,317,31,0,0,"move 1: D takes the blank off the board (blank at row 2, col 1)"
+v2,LLM,qwen2.5:3b,4,8,illegal,0,0,0,4,,4.0,4,2.6387,316,22,0,0,"move 0: R takes the blank off the board (blank at row 0, col 2)"
+v2,LLM,qwen2.5:3b,4,9,illegal,0,0,0,4,,4.0,4,2.6969,316,22,0,0,"move 0: R takes the blank off the board (blank at row 0, col 2)"
+v2,LLM,qwen2.5:3b,8,0,illegal,0,0,0,8,,5.0,5,2.6393,317,25,0,0,"move 4: L takes the blank off the board (blank at row 2, col 0)"
+v2,LLM,qwen2.5:3b,8,1,illegal,0,0,0,8,,5.0,5,2.7067,316,25,0,0,"move 0: R takes the blank off the board (blank at row 0, col 2)"
+v2,LLM,qwen2.5:3b,8,2,illegal,0,0,0,8,,4.0,4,2.603,317,22,0,0,"move 1: R takes the blank off the board (blank at row 1, col 2)"
+v2,LLM,qwen2.5:3b,8,3,illegal,0,0,0,8,,3.0,3,2.5927,317,19,0,0,"move 2: R takes the blank off the board (blank at row 2, col 2)"
+v2,LLM,qwen2.5:3b,8,4,illegal,0,0,0,8,,5.0,5,2.695,316,25,0,0,"move 0: R takes the blank off the board (blank at row 0, col 2)"
+v2,LLM,qwen2.5:3b,8,5,illegal,0,0,0,8,,4.0,4,2.6725,317,22,0,0,"ends on [1, 3, 5, 8, 2, 6, 4, 7, 0], not the goal [1, 2, 3, 4, 5, 6, 7, 8, 0]"
+v2,LLM,qwen2.5:3b,8,6,illegal,0,0,0,8,,6.0,7,2.7458,317,31,0,0,"move 2: D takes the blank off the board (blank at row 2, col 2)"
+v2,LLM,qwen2.5:3b,8,7,illegal,0,0,0,8,,4.0,4,2.6438,316,22,0,0,"move 0: R takes the blank off the board (blank at row 2, col 2)"
+v2,LLM,qwen2.5:3b,8,8,illegal,0,0,0,8,,5.0,5,2.6576,317,25,0,0,"move 2: D takes the blank off the board (blank at row 2, col 2)"
+v2,LLM,qwen2.5:3b,8,9,illegal,0,0,0,8,,4.0,4,2.6613,317,22,0,0,"move 2: D takes the blank off the board (blank at row 2, col 2)"
+v2,LLM,qwen2.5:3b,12,0,illegal,0,0,0,12,,5.0,5,2.6672,317,25,0,0,"move 2: D takes the blank off the board (blank at row 2, col 2)"
+v2,LLM,qwen2.5:3b,12,1,illegal,0,0,0,12,,5.0,5,2.7084,316,25,0,0,"move 0: R takes the blank off the board (blank at row 0, col 2)"
+v2,LLM,qwen2.5:3b,12,2,illegal,0,0,0,12,,7.0,7,2.7201,317,31,0,0,"move 1: D takes the blank off the board (blank at row 2, col 1)"
+v2,LLM,qwen2.5:3b,12,3,illegal,0,0,0,12,,6.0,6,2.7361,317,28,0,0,"ends on [1, 5, 2, 7, 3, 6, 0, 8, 4], not the goal [1, 2, 3, 4, 5, 6, 7, 8, 0]"
+v2,LLM,qwen2.5:3b,12,4,illegal,0,0,0,12,,4.0,4,2.6298,316,22,0,0,"move 0: R takes the blank off the board (blank at row 2, col 2)"
+v2,LLM,qwen2.5:3b,12,5,illegal,0,0,0,12,,6.0,7,2.7145,317,31,0,0,"move 2: D takes the blank off the board (blank at row 2, col 2)"
+v2,LLM,qwen2.5:3b,12,6,illegal,0,0,0,12,,7.0,7,2.7149,316,31,0,0,"move 0: R takes the blank off the board (blank at row 0, col 2)"
+v2,LLM,qwen2.5:3b,12,7,illegal,0,0,0,12,,5.0,5,2.6781,317,25,0,0,"ends on [4, 2, 3, 5, 8, 1, 7, 0, 6], not the goal [1, 2, 3, 4, 5, 6, 7, 8, 0]"
+v2,LLM,qwen2.5:3b,12,8,illegal,0,0,0,12,,6.0,6,2.6838,317,28,0,0,"ends on [1, 6, 5, 4, 3, 2, 0, 7, 8], not the goal [1, 2, 3, 4, 5, 6, 7, 8, 0]"
+v2,LLM,qwen2.5:3b,12,9,illegal,0,0,0,12,,4.0,4,2.5281,316,22,0,0,"move 0: R takes the blank off the board (blank at row 0, col 2)"
+v2,LLM,qwen2.5:3b,16,0,illegal,0,0,0,16,,7.0,7,2.6914,317,31,0,0,"move 2: D takes the blank off the board (blank at row 2, col 2)"
+v2,LLM,qwen2.5:3b,16,1,illegal,0,0,0,16,,5.0,5,2.6227,316,25,0,0,"move 0: R takes the blank off the board (blank at row 2, col 2)"
+v2,LLM,qwen2.5:3b,16,2,illegal,0,0,0,16,,7.0,7,2.7022,317,31,0,0,"move 1: D takes the blank off the board (blank at row 2, col 1)"
+v2,LLM,qwen2.5:3b,16,3,illegal,0,0,0,16,,7.0,7,2.6949,317,31,0,0,"move 2: D takes the blank off the board (blank at row 2, col 2)"
+v2,LLM,qwen2.5:3b,16,4,illegal,0,0,0,16,,5.0,5,2.7272,316,25,0,0,"move 0: R takes the blank off the board (blank at row 0, col 2)"
+v2,LLM,qwen2.5:3b,16,5,illegal,0,0,0,16,,5.0,5,2.6868,317,25,0,0,"move 4: L takes the blank off the board (blank at row 2, col 0)"
+v2,LLM,qwen2.5:3b,16,6,illegal,0,0,0,16,,7.0,7,2.6632,317,31,0,0,"move 4: D takes the blank off the board (blank at row 2, col 0)"
+v2,LLM,qwen2.5:3b,16,7,illegal,0,0,0,16,,5.0,5,2.6432,317,25,0,0,"move 1: D takes the blank off the board (blank at row 2, col 1)"
+v2,LLM,qwen2.5:3b,16,8,illegal,0,0,0,16,,6.0,6,2.7149,317,28,0,0,"ends on [1, 8, 6, 4, 2, 5, 0, 7, 3], not the goal [1, 2, 3, 4, 5, 6, 7, 8, 0]"
+v2,LLM,qwen2.5:3b,16,9,illegal,0,0,0,16,,5.0,5,2.5825,317,25,0,0,"ends on [4, 7, 6, 1, 8, 2, 5, 0, 3], not the goal [1, 2, 3, 4, 5, 6, 7, 8, 0]"
+v2,LLM+tool,qwen2.5:3b,4,0,optimal,1,1,1,4,4,4.0,4,5.4579,890,60,1,4,
+v2,LLM+tool,qwen2.5:3b,4,1,illegal,0,0,0,4,,17.0,17,5.8786,930,100,1,305,"move 0: U takes the blank off the board (blank at row 0, col 0)"
+v2,LLM+tool,qwen2.5:3b,4,2,illegal,0,0,0,4,,4.0,7,5.4481,888,69,1,4,"move 4: R takes the blank off the board (blank at row 0, col 2)"
+v2,LLM+tool,qwen2.5:3b,4,3,optimal,1,1,1,4,4,4.0,4,5.4715,890,60,1,4,
+v2,LLM+tool,qwen2.5:3b,4,4,optimal,1,1,1,4,4,4.0,4,5.4529,890,60,1,4,
+v2,LLM+tool,qwen2.5:3b,4,5,illegal,0,0,0,4,,15.0,15,5.8411,924,94,1,177,"move 0: U takes the blank off the board (blank at row 0, col 0)"
+v2,LLM+tool,qwen2.5:3b,4,6,optimal,1,1,1,4,4,4.0,4,5.4562,890,60,1,4,
+v2,LLM+tool,qwen2.5:3b,4,7,optimal,1,1,1,4,4,4.0,4,5.4328,890,60,1,4,
+v2,LLM+tool,qwen2.5:3b,4,8,optimal,1,1,1,4,4,4.0,4,5.4982,888,60,1,4,
+v2,LLM+tool,qwen2.5:3b,4,9,optimal,1,1,1,4,4,4.0,4,5.4001,888,60,1,4,
+v2,LLM+tool,qwen2.5:3b,8,0,optimal,1,1,1,8,8,8.0,8,5.6111,902,72,1,11,
+v2,LLM+tool,qwen2.5:3b,8,1,optimal,1,1,1,8,8,8.0,8,5.446,900,72,1,8,
+v2,LLM+tool,qwen2.5:3b,8,2,optimal,1,1,1,8,8,8.0,8,5.5998,902,72,1,12,
+v2,LLM+tool,qwen2.5:3b,8,3,optimal,1,1,1,8,8,8.0,8,5.5191,902,72,1,12,
+v2,LLM+tool,qwen2.5:3b,8,4,optimal,1,1,1,8,8,8.0,8,5.542,900,72,1,11,
+v2,LLM+tool,qwen2.5:3b,8,5,optimal,1,1,1,8,8,8.0,8,5.4872,902,72,1,10,
+v2,LLM+tool,qwen2.5:3b,8,6,optimal,1,1,1,8,8,8.0,8,5.5497,902,72,1,10,
+v2,LLM+tool,qwen2.5:3b,8,7,optimal,1,1,1,8,8,8.0,8,5.5589,900,72,1,15,
+v2,LLM+tool,qwen2.5:3b,8,8,optimal,1,1,1,8,8,8.0,8,5.5473,902,72,1,12,
+v2,LLM+tool,qwen2.5:3b,8,9,optimal,1,1,1,8,8,8.0,8,5.5931,902,72,1,17,
+v2,LLM+tool,qwen2.5:3b,12,0,optimal,1,1,1,12,12,12.0,12,5.6505,915,85,1,28,
+v2,LLM+tool,qwen2.5:3b,12,1,illegal,0,0,0,12,,9.0,9,5.4934,913,75,1,12,"move 6: L takes the blank off the board (blank at row 0, col 0)"
+v2,LLM+tool,qwen2.5:3b,12,2,optimal,1,1,1,12,12,12.0,12,5.5692,915,85,1,23,
+v2,LLM+tool,qwen2.5:3b,12,3,illegal,0,0,0,12,,9.0,9,5.6014,915,75,1,35,"ends on [1, 0, 2, 4, 5, 3, 7, 8, 6], not the goal [1, 2, 3, 4, 5, 6, 7, 8, 0]"
+v2,LLM+tool,qwen2.5:3b,12,4,optimal,1,1,1,12,12,12.0,12,5.6847,913,85,1,48,
+v2,LLM+tool,qwen2.5:3b,12,5,optimal,1,1,1,12,12,12.0,12,5.6234,915,85,1,27,
+v2,LLM+tool,qwen2.5:3b,12,6,illegal,0,0,0,12,,12.0,10,5.7299,913,79,1,64,"ends on [1, 2, 0, 4, 5, 3, 7, 8, 6], not the goal [1, 2, 3, 4, 5, 6, 7, 8, 0]"
+v2,LLM+tool,qwen2.5:3b,12,7,optimal,1,1,1,12,12,12.0,12,5.6204,915,85,1,47,
+v2,LLM+tool,qwen2.5:3b,12,8,illegal,0,0,0,12,,12.0,10,5.4978,915,79,1,44,"ends on [1, 2, 3, 4, 0, 6, 7, 5, 8], not the goal [1, 2, 3, 4, 5, 6, 7, 8, 0]"
+v2,LLM+tool,qwen2.5:3b,12,9,optimal,1,1,1,12,12,12.0,12,5.6217,913,85,1,45,
+v2,LLM+tool,qwen2.5:3b,16,0,optimal,1,1,1,16,16,16.0,16,5.689,927,97,1,169,
+v2,LLM+tool,qwen2.5:3b,16,1,optimal,1,1,1,16,16,16.0,16,5.5661,925,97,1,57,
+v2,LLM+tool,qwen2.5:3b,16,2,optimal,1,1,1,16,16,16.0,16,5.7904,927,97,1,192,
+v2,LLM+tool,qwen2.5:3b,16,3,optimal,1,1,1,16,16,16.0,16,6.0982,927,97,1,151,
+v2,LLM+tool,qwen2.5:3b,16,4,optimal,1,1,1,16,16,16.0,16,5.7328,925,97,1,184,
+v2,LLM+tool,qwen2.5:3b,16,5,optimal,1,1,1,16,16,16.0,16,5.6563,927,97,1,91,
+v2,LLM+tool,qwen2.5:3b,16,6,optimal,1,1,1,16,16,16.0,16,5.7376,927,97,1,128,
+v2,LLM+tool,qwen2.5:3b,16,7,optimal,1,1,1,16,16,16.0,16,5.6828,927,97,1,99,
+v2,LLM+tool,qwen2.5:3b,16,8,optimal,1,1,1,16,16,16.0,16,5.6173,927,97,1,129,
+v2,LLM+tool,qwen2.5:3b,16,9,optimal,1,1,1,16,16,16.0,16,5.63,927,97,1,116,
+v1,A*,A*+manhattan,4,0,optimal,1,1,1,4,4,4.0,4,0.0001,0,0,0,4,
+v1,A*,A*+manhattan,4,1,optimal,1,1,1,4,4,4.0,4,0.0001,0,0,0,4,
+v1,A*,A*+manhattan,4,2,optimal,1,1,1,4,4,4.0,4,0.0001,0,0,0,4,
+v1,A*,A*+manhattan,4,3,optimal,1,1,1,4,4,4.0,4,0.0001,0,0,0,4,
+v1,A*,A*+manhattan,4,4,optimal,1,1,1,4,4,4.0,4,0.0001,0,0,0,4,
+v1,A*,A*+manhattan,4,5,optimal,1,1,1,4,4,4.0,4,0.0001,0,0,0,4,
+v1,A*,A*+manhattan,4,6,optimal,1,1,1,4,4,4.0,4,0.0001,0,0,0,4,
+v1,A*,A*+manhattan,4,7,optimal,1,1,1,4,4,4.0,4,0.0001,0,0,0,4,
+v1,A*,A*+manhattan,4,8,optimal,1,1,1,4,4,4.0,4,0.0001,0,0,0,4,
+v1,A*,A*+manhattan,4,9,optimal,1,1,1,4,4,4.0,4,0.0001,0,0,0,4,
+v1,A*,A*+manhattan,8,0,optimal,1,1,1,8,8,8.0,8,0.0002,0,0,0,11,
+v1,A*,A*+manhattan,8,1,optimal,1,1,1,8,8,8.0,8,0.0001,0,0,0,8,
+v1,A*,A*+manhattan,8,2,optimal,1,1,1,8,8,8.0,8,0.0001,0,0,0,12,
+v1,A*,A*+manhattan,8,3,optimal,1,1,1,8,8,8.0,8,0.0001,0,0,0,12,
+v1,A*,A*+manhattan,8,4,optimal,1,1,1,8,8,8.0,8,0.0001,0,0,0,11,
+v1,A*,A*+manhattan,8,5,optimal,1,1,1,8,8,8.0,8,0.0001,0,0,0,10,
+v1,A*,A*+manhattan,8,6,optimal,1,1,1,8,8,8.0,8,0.0001,0,0,0,10,
+v1,A*,A*+manhattan,8,7,optimal,1,1,1,8,8,8.0,8,0.0002,0,0,0,15,
+v1,A*,A*+manhattan,8,8,optimal,1,1,1,8,8,8.0,8,0.0001,0,0,0,12,
+v1,A*,A*+manhattan,8,9,optimal,1,1,1,8,8,8.0,8,0.0002,0,0,0,17,
+v1,A*,A*+manhattan,12,0,optimal,1,1,1,12,12,12.0,12,0.0002,0,0,0,28,
+v1,A*,A*+manhattan,12,1,optimal,1,1,1,12,12,12.0,12,0.0001,0,0,0,12,
+v1,A*,A*+manhattan,12,2,optimal,1,1,1,12,12,12.0,12,0.0002,0,0,0,23,
+v1,A*,A*+manhattan,12,3,optimal,1,1,1,12,12,12.0,12,0.0003,0,0,0,35,
+v1,A*,A*+manhattan,12,4,optimal,1,1,1,12,12,12.0,12,0.0004,0,0,0,48,
+v1,A*,A*+manhattan,12,5,optimal,1,1,1,12,12,12.0,12,0.0002,0,0,0,27,
+v1,A*,A*+manhattan,12,6,optimal,1,1,1,12,12,12.0,12,0.0005,0,0,0,64,
+v1,A*,A*+manhattan,12,7,optimal,1,1,1,12,12,12.0,12,0.0004,0,0,0,47,
+v1,A*,A*+manhattan,12,8,optimal,1,1,1,12,12,12.0,12,0.0003,0,0,0,44,
+v1,A*,A*+manhattan,12,9,optimal,1,1,1,12,12,12.0,12,0.0004,0,0,0,45,
+v1,A*,A*+manhattan,16,0,optimal,1,1,1,16,16,16.0,16,0.0015,0,0,0,169,
+v1,A*,A*+manhattan,16,1,optimal,1,1,1,16,16,16.0,16,0.0005,0,0,0,57,
+v1,A*,A*+manhattan,16,2,optimal,1,1,1,16,16,16.0,16,0.0014,0,0,0,192,
+v1,A*,A*+manhattan,16,3,optimal,1,1,1,16,16,16.0,16,0.0011,0,0,0,151,
+v1,A*,A*+manhattan,16,4,optimal,1,1,1,16,16,16.0,16,0.0013,0,0,0,184,
+v1,A*,A*+manhattan,16,5,optimal,1,1,1,16,16,16.0,16,0.0007,0,0,0,91,
+v1,A*,A*+manhattan,16,6,optimal,1,1,1,16,16,16.0,16,0.001,0,0,0,128,
+v1,A*,A*+manhattan,16,7,optimal,1,1,1,16,16,16.0,16,0.0008,0,0,0,99,
+v1,A*,A*+manhattan,16,8,optimal,1,1,1,16,16,16.0,16,0.0009,0,0,0,129,
+v1,A*,A*+manhattan,16,9,optimal,1,1,1,16,16,16.0,16,0.0008,0,0,0,116,
+v1,LLM,qwen2.5:3b,4,0,illegal,0,0,0,4,,3.0,3,6.7611,316,19,0,0,"ends on [1, 2, 3, 4, 5, 0, 7, 8, 6], not the goal [1, 2, 3, 4, 5, 6, 7, 8, 0]"
+v1,LLM,qwen2.5:3b,4,1,illegal,0,0,0,4,,5.0,5,2.7061,316,25,0,0,"ends on [2, 4, 3, 1, 5, 0, 7, 8, 6], not the goal [1, 2, 3, 4, 5, 6, 7, 8, 0]"
+v1,LLM,qwen2.5:3b,4,2,illegal,0,0,0,4,,3.0,3,2.583,315,19,0,0,"move 1: R takes the blank off the board (blank at row 1, col 2)"
+v1,LLM,qwen2.5:3b,4,3,illegal,0,0,0,4,,3.0,3,2.5992,316,19,0,0,"ends on [1, 3, 6, 5, 2, 0, 4, 7, 8], not the goal [1, 2, 3, 4, 5, 6, 7, 8, 0]"
+v1,LLM,qwen2.5:3b,4,4,illegal,0,0,0,4,,3.0,3,2.6031,316,19,0,0,"ends on [1, 2, 3, 8, 7, 5, 4, 0, 6], not the goal [1, 2, 3, 4, 5, 6, 7, 8, 0]"
+v1,LLM,qwen2.5:3b,4,5,illegal,0,0,0,4,,3.0,3,2.5707,316,19,0,0,"move 0: U takes the blank off the board (blank at row 0, col 0)"
+v1,LLM,qwen2.5:3b,4,6,illegal,0,0,0,4,,8.0,8,2.6562,316,34,0,0,"move 4: D takes the blank off the board (blank at row 2, col 2)"
+v1,LLM,qwen2.5:3b,4,7,illegal,0,0,0,4,,3.0,3,2.5686,316,19,0,0,"ends on [1, 2, 3, 4, 8, 5, 7, 0, 6], not the goal [1, 2, 3, 4, 5, 6, 7, 8, 0]"
+v1,LLM,qwen2.5:3b,4,8,illegal,0,0,0,4,,3.0,3,2.5339,315,19,0,0,"move 0: U takes the blank off the board (blank at row 0, col 2)"
+v1,LLM,qwen2.5:3b,4,9,illegal,0,0,0,4,,3.0,3,2.559,315,19,0,0,"move 0: U takes the blank off the board (blank at row 0, col 2)"
+v1,LLM,qwen2.5:3b,8,0,illegal,0,0,0,8,,3.0,3,2.572,316,19,0,0,"move 0: U takes the blank off the board (blank at row 0, col 0)"
+v1,LLM,qwen2.5:3b,8,1,illegal,0,0,0,8,,3.0,3,2.5635,315,19,0,0,"move 0: U takes the blank off the board (blank at row 0, col 2)"
+v1,LLM,qwen2.5:3b,8,2,illegal,0,0,0,8,,3.0,3,2.5896,316,19,0,0,"ends on [1, 6, 2, 5, 3, 0, 4, 7, 8], not the goal [1, 2, 3, 4, 5, 6, 7, 8, 0]"
+v1,LLM,qwen2.5:3b,8,3,illegal,0,0,0,8,,5.0,5,2.6105,316,25,0,0,"move 2: D takes the blank off the board (blank at row 2, col 2)"
+v1,LLM,qwen2.5:3b,8,4,illegal,0,0,0,8,,3.0,3,2.5497,315,19,0,0,"move 0: U takes the blank off the board (blank at row 0, col 2)"
+v1,LLM,qwen2.5:3b,8,5,illegal,0,0,0,8,,3.0,3,2.6082,316,19,0,0,"move 0: U takes the blank off the board (blank at row 0, col 0)"
+v1,LLM,qwen2.5:3b,8,6,illegal,0,0,0,8,,3.0,3,2.5458,316,19,0,0,"ends on [4, 2, 3, 6, 1, 0, 7, 5, 8], not the goal [1, 2, 3, 4, 5, 6, 7, 8, 0]"
+v1,LLM,qwen2.5:3b,8,7,illegal,0,0,0,8,,3.0,3,2.601,315,19,0,0,"move 1: R takes the blank off the board (blank at row 1, col 2)"
+v1,LLM,qwen2.5:3b,8,8,illegal,0,0,0,8,,3.0,3,2.5703,316,19,0,0,"ends on [1, 2, 3, 7, 5, 0, 8, 4, 6], not the goal [1, 2, 3, 4, 5, 6, 7, 8, 0]"
+v1,LLM,qwen2.5:3b,8,9,illegal,0,0,0,8,,3.0,3,2.6093,316,19,0,0,"ends on [1, 2, 3, 7, 4, 5, 8, 0, 6], not the goal [1, 2, 3, 4, 5, 6, 7, 8, 0]"
+v1,LLM,qwen2.5:3b,12,0,illegal,0,0,0,12,,3.0,3,2.5999,316,19,0,0,"ends on [5, 2, 3, 7, 4, 0, 8, 1, 6], not the goal [1, 2, 3, 4, 5, 6, 7, 8, 0]"
+v1,LLM,qwen2.5:3b,12,1,illegal,0,0,0,12,,3.0,3,2.5977,315,19,0,0,"move 0: U takes the blank off the board (blank at row 0, col 2)"
+v1,LLM,qwen2.5:3b,12,2,illegal,0,0,0,12,,3.0,3,2.789,316,19,0,0,"ends on [2, 6, 4, 5, 7, 3, 1, 0, 8], not the goal [1, 2, 3, 4, 5, 6, 7, 8, 0]"
+v1,LLM,qwen2.5:3b,12,3,illegal,0,0,0,12,,3.0,3,2.8177,316,19,0,0,"move 0: U takes the blank off the board (blank at row 0, col 0)"
+v1,LLM,qwen2.5:3b,12,4,illegal,0,0,0,12,,3.0,3,2.7535,315,19,0,0,"move 2: R takes the blank off the board (blank at row 2, col 2)"
+v1,LLM,qwen2.5:3b,12,5,illegal,0,0,0,12,,3.0,3,2.7889,316,19,0,0,"ends on [5, 3, 8, 2, 1, 0, 4, 6, 7], not the goal [1, 2, 3, 4, 5, 6, 7, 8, 0]"
+v1,LLM,qwen2.5:3b,12,6,illegal,0,0,0,12,,3.0,3,2.7738,315,19,0,0,"move 0: U takes the blank off the board (blank at row 0, col 2)"
+v1,LLM,qwen2.5:3b,12,7,illegal,0,0,0,12,,3.0,3,2.7881,316,19,0,0,"move 0: U takes the blank off the board (blank at row 0, col 0)"
+v1,LLM,qwen2.5:3b,12,8,illegal,0,0,0,12,,3.0,3,2.738,316,19,0,0,"move 0: U takes the blank off the board (blank at row 0, col 0)"
+v1,LLM,qwen2.5:3b,12,9,illegal,0,0,0,12,,3.0,3,2.7899,315,19,0,0,"move 0: U takes the blank off the board (blank at row 0, col 2)"
+v1,LLM,qwen2.5:3b,16,0,illegal,0,0,0,16,,3.0,3,2.6099,316,19,0,0,"ends on [7, 2, 3, 4, 5, 0, 8, 1, 6], not the goal [1, 2, 3, 4, 5, 6, 7, 8, 0]"
+v1,LLM,qwen2.5:3b,16,1,illegal,0,0,0,16,,3.0,3,2.8307,315,19,0,0,"move 1: R takes the blank off the board (blank at row 1, col 2)"
+v1,LLM,qwen2.5:3b,16,2,illegal,0,0,0,16,,3.0,3,2.8061,316,19,0,0,"ends on [1, 6, 2, 5, 8, 3, 7, 0, 4], not the goal [1, 2, 3, 4, 5, 6, 7, 8, 0]"
+v1,LLM,qwen2.5:3b,16,3,illegal,0,0,0,16,,3.0,3,2.7518,316,19,0,0,"ends on [6, 1, 3, 5, 2, 0, 4, 7, 8], not the goal [1, 2, 3, 4, 5, 6, 7, 8, 0]"
+v1,LLM,qwen2.5:3b,16,4,illegal,0,0,0,16,,3.0,3,2.7913,315,19,0,0,"move 0: U takes the blank off the board (blank at row 0, col 2)"
+v1,LLM,qwen2.5:3b,16,5,illegal,0,0,0,16,,3.0,3,2.8302,316,19,0,0,"move 0: U takes the blank off the board (blank at row 0, col 0)"
+v1,LLM,qwen2.5:3b,16,6,illegal,0,0,0,16,,3.0,3,2.7781,316,19,0,0,"move 0: U takes the blank off the board (blank at row 0, col 0)"
+v1,LLM,qwen2.5:3b,16,7,illegal,0,0,0,16,,3.0,3,2.8148,316,19,0,0,"ends on [7, 2, 3, 4, 6, 1, 8, 0, 5], not the goal [1, 2, 3, 4, 5, 6, 7, 8, 0]"
+v1,LLM,qwen2.5:3b,16,8,illegal,0,0,0,16,,3.0,3,2.7747,316,19,0,0,"move 0: U takes the blank off the board (blank at row 0, col 0)"
+v1,LLM,qwen2.5:3b,16,9,illegal,0,0,0,16,,3.0,3,2.8363,316,19,0,0,"move 0: U takes the blank off the board (blank at row 0, col 0)"
+v1,LLM+tool,qwen2.5:3b,4,0,illegal,0,0,0,4,,4.0,4,5.5466,887,60,1,4,"ends on [4, 1, 2, 7, 5, 3, 0, 8, 6], not the goal [1, 2, 3, 4, 5, 6, 7, 8, 0]"
+v1,LLM+tool,qwen2.5:3b,4,1,illegal,0,0,0,4,,3.0,3,8.0351,1468,95,2,4,"move 0: U takes the blank off the board (blank at row 0, col 0)"
+v1,LLM+tool,qwen2.5:3b,4,2,illegal,0,0,0,4,,4.0,4,5.2922,885,60,1,4,"ends on [1, 2, 3, 4, 6, 8, 7, 5, 0], not the goal [1, 2, 3, 4, 5, 6, 7, 8, 0]"
+v1,LLM+tool,qwen2.5:3b,4,3,illegal,0,0,0,4,,4.0,4,5.4334,887,60,1,4,"ends on [5, 1, 3, 2, 0, 6, 4, 7, 8], not the goal [1, 2, 3, 4, 5, 6, 7, 8, 0]"
+v1,LLM+tool,qwen2.5:3b,4,4,illegal,0,0,0,4,,4.0,4,8.0499,1479,98,2,8,"move 1: L takes the blank off the board (blank at row 1, col 0)"
+v1,LLM+tool,qwen2.5:3b,4,5,illegal,0,0,0,4,,3.0,3,7.93,1468,95,2,4,"move 0: U takes the blank off the board (blank at row 0, col 0)"
+v1,LLM+tool,qwen2.5:3b,4,6,illegal,0,0,0,4,,4.0,4,5.311,887,60,1,4,"move 0: U takes the blank off the board (blank at row 0, col 0)"
+v1,LLM+tool,qwen2.5:3b,4,7,illegal,0,0,0,4,,4.0,4,5.3266,887,60,1,4,"move 1: L takes the blank off the board (blank at row 1, col 0)"
+v1,LLM+tool,qwen2.5:3b,4,8,illegal,0,0,0,4,,4.0,4,5.2794,885,60,1,4,"move 0: U takes the blank off the board (blank at row 0, col 2)"
+v1,LLM+tool,qwen2.5:3b,4,9,illegal,0,0,0,4,,4.0,4,5.2856,885,60,1,4,"move 0: U takes the blank off the board (blank at row 0, col 2)"
+v1,LLM+tool,qwen2.5:3b,8,0,illegal,0,0,0,8,,8.0,7,5.4304,899,69,1,11,"move 0: U takes the blank off the board (blank at row 0, col 0)"
+v1,LLM+tool,qwen2.5:3b,8,1,illegal,0,0,0,8,,8.0,7,5.3384,897,69,1,8,"move 0: U takes the blank off the board (blank at row 0, col 2)"
+v1,LLM+tool,qwen2.5:3b,8,2,illegal,0,0,0,8,,4.0,4,5.3224,899,60,1,12,"ends on [5, 1, 6, 3, 0, 2, 4, 7, 8], not the goal [1, 2, 3, 4, 5, 6, 7, 8, 0]"
+v1,LLM+tool,qwen2.5:3b,8,3,illegal,0,0,0,8,,5.0,5,5.2999,899,63,1,12,"ends on [4, 1, 6, 7, 3, 8, 2, 0, 5], not the goal [1, 2, 3, 4, 5, 6, 7, 8, 0]"
+v1,LLM+tool,qwen2.5:3b,8,4,illegal,0,0,0,8,,7.0,7,5.392,897,69,1,11,"move 0: U takes the blank off the board (blank at row 0, col 2)"
+v1,LLM+tool,qwen2.5:3b,8,5,illegal,0,0,0,8,,8.0,8,5.3418,899,72,1,10,"move 0: U takes the blank off the board (blank at row 0, col 0)"
+v1,LLM+tool,qwen2.5:3b,8,6,illegal,0,0,0,8,,8.0,8,5.3797,899,72,1,10,"move 6: D takes the blank off the board (blank at row 2, col 0)"
+v1,LLM+tool,qwen2.5:3b,8,7,optimal,1,1,1,8,8,8.0,8,5.3703,897,72,1,15,
+v1,LLM+tool,qwen2.5:3b,8,8,illegal,0,0,0,8,,8.0,8,5.3607,899,72,1,12,"ends on [7, 2, 3, 5, 1, 6, 8, 4, 0], not the goal [1, 2, 3, 4, 5, 6, 7, 8, 0]"
+v1,LLM+tool,qwen2.5:3b,8,9,illegal,0,0,0,8,,8.0,7,5.4421,899,69,1,17,"move 1: L takes the blank off the board (blank at row 1, col 0)"
+v1,LLM+tool,qwen2.5:3b,12,0,illegal,0,0,0,12,,12.0,12,5.6451,912,85,1,28,"ends on [4, 2, 3, 5, 7, 6, 8, 1, 0], not the goal [1, 2, 3, 4, 5, 6, 7, 8, 0]"
+v1,LLM+tool,qwen2.5:3b,12,1,illegal,0,0,0,12,,6.0,6,5.7842,910,66,1,12,"move 0: U takes the blank off the board (blank at row 0, col 2)"
+v1,LLM+tool,qwen2.5:3b,12,2,illegal,0,0,0,12,,12.0,12,6.0391,912,85,1,23,"move 1: L takes the blank off the board (blank at row 1, col 0)"
+v1,LLM+tool,qwen2.5:3b,12,3,illegal,0,0,0,12,,12.0,12,5.949,912,85,1,35,"move 0: U takes the blank off the board (blank at row 0, col 0)"
+v1,LLM+tool,qwen2.5:3b,12,4,illegal,0,0,0,12,,8.0,8,5.8419,910,72,1,48,"move 3: U takes the blank off the board (blank at row 0, col 1)"
+v1,LLM+tool,qwen2.5:3b,12,5,illegal,0,0,0,12,,12.0,12,5.9594,912,85,1,27,"ends on [2, 5, 3, 4, 1, 6, 7, 8, 0], not the goal [1, 2, 3, 4, 5, 6, 7, 8, 0]"
+v1,LLM+tool,qwen2.5:3b,12,6,illegal,0,0,0,12,,12.0,12,5.9604,910,85,1,64,"move 0: U takes the blank off the board (blank at row 0, col 2)"
+v1,LLM+tool,qwen2.5:3b,12,7,illegal,0,0,0,12,,7.0,7,5.7943,912,69,1,47,"move 0: U takes the blank off the board (blank at row 0, col 0)"
+v1,LLM+tool,qwen2.5:3b,12,8,illegal,0,0,0,12,,6.0,6,5.7793,912,66,1,44,"move 0: U takes the blank off the board (blank at row 0, col 0)"
+v1,LLM+tool,qwen2.5:3b,12,9,illegal,0,0,0,12,,12.0,11,5.8825,910,82,1,45,"move 0: U takes the blank off the board (blank at row 0, col 2)"
+v1,LLM+tool,qwen2.5:3b,16,0,illegal,0,0,0,16,,16.0,16,5.7741,924,97,1,169,"ends on [1, 2, 3, 7, 4, 6, 5, 8, 0], not the goal [1, 2, 3, 4, 5, 6, 7, 8, 0]"
+v1,LLM+tool,qwen2.5:3b,16,1,illegal,0,0,0,16,,8.0,8,5.8599,922,72,1,57,"move 3: U takes the blank off the board (blank at row 0, col 1)"
+v1,LLM+tool,qwen2.5:3b,16,2,illegal,0,0,0,16,,7.0,7,5.7971,924,69,1,192,"move 1: L takes the blank off the board (blank at row 1, col 0)"
+v1,LLM+tool,qwen2.5:3b,16,3,optimal,1,1,1,16,16,16.0,16,6.0608,924,97,1,151,
+v1,LLM+tool,qwen2.5:3b,16,4,illegal,0,0,0,16,,16.0,10,5.8626,922,79,1,184,"move 0: U takes the blank off the board (blank at row 0, col 2)"
+v1,LLM+tool,qwen2.5:3b,16,5,optimal,1,1,1,16,16,16.0,16,6.0877,924,97,1,91,
+v1,LLM+tool,qwen2.5:3b,16,6,illegal,0,0,0,16,,12.0,13,6.0209,924,88,1,128,"move 0: U takes the blank off the board (blank at row 0, col 0)"
+v1,LLM+tool,qwen2.5:3b,16,7,illegal,0,0,0,16,,16.0,8,5.8136,924,73,1,99,"move 1: L takes the blank off the board (blank at row 1, col 0)"
+v1,LLM+tool,qwen2.5:3b,16,8,illegal,0,0,0,16,,7.0,7,5.7797,924,69,1,129,"move 0: U takes the blank off the board (blank at row 0, col 0)"
+v1,LLM+tool,qwen2.5:3b,16,9,optimal,1,1,1,16,16,16.0,16,6.0564,924,97,1,116,

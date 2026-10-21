@@ -1,0 +1,28 @@
+{
+ "key": "4dc143ae87ea4e90b965d85569e1c3a018a368d64cb32e403ef709d1a66c8b18",
+ "tag": "direct_grid12_4",
+ "request": {
+  "backend": "ollama",
+  "model": "qwen2.5:3b",
+  "messages": [
+   {
+    "role": "user",
+    "content": "Find the minimum-cost path from S to G.\nTerrain costs: '.' = 1, ',' = 3, '~' = 8.\nMove up/down/left/right only (U = up, toward the first row; D = down; L = left; R = right).\nThe cost of a path is the sum of the terrain cost of every cell you enter (S itself is not counted; G costs 1).\nGrid:\n. , . , . . ~ , . , ~ ~\n. . . . . . , . ~ . , .\n. . , . . . . , . . , .\n. , ~ . , . . . . . . ,\n. ~ . . S . . . . . . .\n. ~ ~ , . ~ . . , , . .\n. . , . . . ~ G ~ . . ,\n~ . . . . . ~ , . . , ~\n, , ~ . . . , , . . . .\n. . ~ , . ~ , , . . . .\n. . . . , . ~ . . . , .\n. , , ~ . . . ~ . . , .\n\nDo not explain and do not show your reasoning. Reply with exactly two lines and nothing else:\nPATH: <letters U/D/L/R, no separators>\nCOST: <integer>\n"
+   }
+  ],
+  "temperature": 0.0,
+  "seed": 0,
+  "num_predict": 200,
+  "num_ctx": 4096,
+  "replicate": 0
+ },
+ "text": "PATH: RRRRDDDLLUUULLLRRRGG\nCOST: 45",
+ "tool_calls": null,
+ "done_reason": "stop",
+ "prompt_tokens": 300,
+ "output_tokens": 21,
+ "gen_latency_s": 17.532,
+ "load_s": 0.001,
+ "wall_s": 17.535,
+ "retries": 0
+}

@@ -1,0 +1,32 @@
+system,instance,motivo,tokens_streaming,final_del_texto
+llm,8puzzle-4-03,terminó (stop),128,"R
+3. R
+4. U
+5. U
+6. U
+7. L
+8. L
+9. L
+10. D
+11. D
+12. D
+
+PATH: RRLULLDDL
+COST: 12"
+llm,grid-12-00,"prediction aborted, token repeat limit reached",497,RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR
+llm,grid-12-05,lo cortamos nosotros: seguía generando (1915 tokens),1915,URUURUURUURUURUURUURUURUURUURUURUURUURUURUURUURUURUURUURUURUURUURUURUURUURUURUUR
+llm,grid-16-01,"prediction aborted, token repeat limit reached",550," . . . .
+. . . . . . . . . . . . . . . .
+. . . . . . . . . . . . . . . .
+. . . ."
+llm,grid-16-02,lo cortamos nosotros: seguía generando (1911 tokens),1911,"R, D, R, D, R, D, R, D, R, D, R, D, R, D, R, D, R, D, R, D, R, D, R, D, R, D, R,"
+llm,grid-16-04,lo cortamos nosotros: seguía generando (1909 tokens),1909, -> R -> D -> R -> D -> R -> D -> R -> D -> R -> D -> R -> D -> R -> D -> R -> D
+llm,grid-16-05,lo cortamos nosotros: seguía generando (1910 tokens),1910,RRUURRRUURRRUURRRUURRRUURRRUURRRUURRRUURRRUURRRUURRRUURRRUURRRUURRRUURRRUURRRUUR
+llm,grid-16-06,lo cortamos nosotros: seguía generando (1908 tokens),1908,URUURUURUURUURUURUURUURUURUURUURUURUURUURUURUURUURUURUURUURUURUURUURUURUURUURUUR
+llm,grid-8-01,terminó (stop),215, represents the sequence of moves taken to reach G from S with the minimum cost.
+tool,grid-12-07,"prediction aborted, token repeat limit reached",124, . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+tool,grid-12-09,"prediction aborted, token repeat limit reached",144,".,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,"
+tool,grid-16-00,"prediction aborted, token repeat limit reached",126,".,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,"
+tool,grid-16-01,"prediction aborted, token repeat limit reached",132, . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+tool,grid-16-03,"prediction aborted, token repeat limit reached",135, . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+tool,grid-16-05,terminó (stop),324,". . . , ."","", . . . . . ~ . . . , , . . , ."","". , . , . . . . , . , , . . , .""]}"

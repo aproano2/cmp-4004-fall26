@@ -1,0 +1,4 @@
+sistema,n,correctas,costo_mediana,costo_unidad,latencia_mediana_s,latencia_p95_s,repro_distintas_de_5,fallas
+clasico,80,80,23.5,expansiones,0.000432,0.002167649999999997,1,timeouts=0
+llm,80,0,204.0,tokens (entrada+salida),8.359,302.05915000000005,1,illegal=45 malformed=3 no_termina=32
+tool,80,17,682.0,tokens (entrada+salida),8.9575,302.0621,,correct=17 illegal=39 malformed=1 no_termina=23

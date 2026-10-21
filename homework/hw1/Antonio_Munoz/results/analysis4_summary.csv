@@ -1,0 +1,13 @@
+domain,algo,level,n,median,q1,q3
+8puzzle,astar_manhattan,4,10,1.0,1.0,1.0
+8puzzle,astar_manhattan,8,10,1.08,1.055,1.09
+8puzzle,astar_manhattan,12,10,1.173,1.121,1.197
+8puzzle,astar_manhattan,16,10,1.22,1.198,1.245
+8puzzle,astar_misplaced,4,10,1.0,1.0,1.0
+8puzzle,astar_misplaced,8,10,1.166,1.139,1.227
+8puzzle,astar_misplaced,12,10,1.309,1.284,1.314
+8puzzle,astar_misplaced,16,10,1.367,1.361,1.38
+grid,astar_manhattan,5,10,1.202,1.149,1.237
+grid,astar_manhattan,8,10,1.175,1.14,1.213
+grid,astar_manhattan,12,10,1.172,1.124,1.223
+grid,astar_manhattan,16,10,1.147,1.121,1.162

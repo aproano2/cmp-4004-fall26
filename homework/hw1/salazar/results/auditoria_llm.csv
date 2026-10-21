@@ -1,0 +1,35 @@
+instance,round,error,hora_log,duracion_s,tokens_generados,tokens_por_s,veredicto
+8puzzle-4-00,0,HTTPError: HTTP Error 500: Internal Server Error,2026/10/04 - 21:35:24,1.6,0,0.0,infraestructura
+8puzzle-4-03,0,HTTPError: HTTP Error 500: Internal Server Error,2026/10/04 - 21:35:47,16.5,2326,154.84,bucle_del_modelo
+8puzzle-8-09,0,TimeoutError: timed out,2026/10/04 - 21:41:25,300.0,40442,136.0,bucle_del_modelo
+8puzzle-12-01,0,TimeoutError: timed out,2026/10/04 - 21:46:30,300.0,39973,134.41,bucle_del_modelo
+8puzzle-12-02,0,TimeoutError: timed out,2026/10/04 - 21:51:32,300.0,39960,134.38,bucle_del_modelo
+8puzzle-12-03,0,TimeoutError: timed out,2026/10/04 - 21:56:34,300.0,40059,134.7,bucle_del_modelo
+8puzzle-12-05,0,HTTPError: HTTP Error 500: Internal Server Error,2026/10/04 - 21:56:40,1.4,0,0.0,infraestructura
+8puzzle-12-08,0,TimeoutError: timed out,2026/10/04 - 22:01:47,300.0,39938,134.3,bucle_del_modelo
+8puzzle-16-02,0,TimeoutError: timed out,2026/10/04 - 22:06:57,300.0,39823,133.91,bucle_del_modelo
+8puzzle-16-04,0,HTTPError: HTTP Error 500: Internal Server Error,2026/10/04 - 22:07:03,0.9,0,0.0,infraestructura
+grid-5-08,0,TimeoutError: timed out,2026/10/04 - 22:13:09,300.0,16409,54.89,bucle_del_modelo
+grid-5-09,0,TimeoutError: timed out,2026/10/04 - 22:18:11,300.0,4066,13.62,bucle_del_modelo
+grid-8-00,0,TimeoutError: timed out,2026/10/04 - 22:23:13,300.0,14770,49.61,bucle_del_modelo
+grid-8-01,0,HTTPError: HTTP Error 500: Internal Server Error,2026/10/04 - 22:23:24,8.9,895,148.8,bucle_del_modelo
+grid-8-02,0,TimeoutError: timed out,2026/10/04 - 22:28:26,300.0,38239,128.57,bucle_del_modelo
+grid-8-03,0,TimeoutError: timed out,2026/10/04 - 22:33:28,300.0,39494,132.8,bucle_del_modelo
+grid-8-05,0,TimeoutError: timed out,2026/10/04 - 22:41:22,300.0,39440,132.64,bucle_del_modelo
+grid-12-00,0,HTTPError: HTTP Error 500: Internal Server Error,2026/10/04 - 22:46:07,2.6,0,0.0,infraestructura
+grid-12-02,0,TimeoutError: timed out,2026/10/04 - 22:51:18,300.0,38269,128.67,bucle_del_modelo
+grid-12-03,0,TimeoutError: timed out,2026/10/04 - 22:56:20,300.0,38937,130.93,bucle_del_modelo
+grid-12-04,0,TimeoutError: timed out,2026/10/04 - 23:01:22,300.0,39239,131.95,bucle_del_modelo
+grid-12-05,0,HTTPError: HTTP Error 500: Internal Server Error,2026/10/04 - 23:01:52,28.3,3660,135.4,bucle_del_modelo
+grid-12-07,0,TimeoutError: timed out,2026/10/04 - 23:09:09,300.0,39024,131.23,bucle_del_modelo
+grid-12-09,0,TimeoutError: timed out,2026/10/04 - 23:15:01,300.0,39304,132.16,bucle_del_modelo
+grid-16-00,0,TimeoutError: timed out,2026/10/04 - 23:20:03,300.0,31136,104.52,bucle_del_modelo
+grid-16-01,0,HTTPError: HTTP Error 500: Internal Server Error,2026/10/04 - 23:20:39,33.6,442,14.04,bucle_del_modelo
+grid-16-02,0,HTTPError: HTTP Error 500: Internal Server Error,2026/10/04 - 23:20:52,11.1,143,14.05,bucle_del_modelo
+grid-16-03,0,TimeoutError: timed out,2026/10/04 - 23:25:54,300.0,15268,51.27,bucle_del_modelo
+grid-16-04,0,HTTPError: HTTP Error 500: Internal Server Error,2026/10/04 - 23:26:24,27.9,3742,138.37,bucle_del_modelo
+grid-16-05,0,HTTPError: HTTP Error 500: Internal Server Error,2026/10/04 - 23:26:54,28.2,3717,137.44,bucle_del_modelo
+grid-16-06,0,HTTPError: HTTP Error 500: Internal Server Error,2026/10/04 - 23:27:21,24.8,3320,138.09,bucle_del_modelo
+grid-16-07,0,TimeoutError: timed out,2026/10/04 - 23:32:23,300.0,39396,132.47,bucle_del_modelo
+grid-16-08,0,TimeoutError: timed out,2026/10/04 - 23:37:25,300.0,39643,133.3,bucle_del_modelo
+grid-16-09,0,TimeoutError: timed out,2026/10/04 - 23:42:27,300.0,20331,68.06,bucle_del_modelo

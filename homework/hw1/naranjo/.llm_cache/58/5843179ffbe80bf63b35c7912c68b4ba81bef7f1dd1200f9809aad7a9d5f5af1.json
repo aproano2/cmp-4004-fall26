@@ -1,0 +1,15 @@
+{
+  "text": "{\"moves\": [\"R\", \"R\", \"D\", \"D\"], \"cost\": 4}",
+  "backend": "ollama",
+  "model": "qwen2.5:3b",
+  "prompt": "You are solving an 8-puzzle.\n\nThe board is 3x3 with tiles 1-8 and one blank, shown as _ . Rows are numbered 0-2 from the top, columns 0-2 from the left.\nA move slides the BLANK one square: U (up), D (down), L (left) or R (right). The tile in that square moves into the blank's old place.\nThe blank cannot leave the board. Every move costs 1, so the cost of a solution is its number of moves.\n\nCurrent board:\n  1 5 2\n  4 _ 3\n  7 8 6\n\nGoal board:\n  1 2 3\n  4 5 6\n  7 8 _\n\nAs lists (row by row, 0 = blank): current = [1, 5, 2, 4, 0, 3, 7, 8, 6], goal = [1, 2, 3, 4, 5, 6, 7, 8, 0].\n\nFind the SHORTEST sequence of moves that turns the current board into the goal board.\n\nReply with ONLY a JSON object, no explanation, in exactly this format:\n{\"moves\": [\"<move>\", \"<move>\", ...], \"cost\": <number of moves>}",
+  "temperature": 0.0,
+  "seed": 3,
+  "elapsed": 2.5587218000000576,
+  "meta": {
+    "eval_count": 22,
+    "prompt_eval_count": 317,
+    "total_duration": 518282000
+  },
+  "cached_at": "2026-10-04T12:44:35"
+}

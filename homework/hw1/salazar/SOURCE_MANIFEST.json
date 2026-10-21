@@ -1,0 +1,18 @@
+{
+  "repository": "https://github.com/aproano2/cmp-4004-fall26",
+  "commit": "fb6780002fa4d87f1c9b6c3861b26529ee40119a",
+  "preserved_files": {
+    "code/curso/week03/_generate_instances.py": "4a5fa5c61d6f1df3ce67fde4cbc60fc59343578b19e820a674b7e1c6722f745d",
+    "code/curso/week03/instances.json": "bb483234a3ca09ca4d14ca73f457648b97f71d350faa6dbb59df9058ed3eecc3",
+    "code/curso/week03/search.py": "d90690a578a3f07eabc2420809dccd1eefca23ed483d07cff843c2085222384d",
+    "code/curso/week04/_generate_instances.py": "209157f4add8c07c74cd91ebac50a750737047426944c82091830faecf1313da",
+    "code/curso/week04/duel.py": "b5420d0c587ee245044e0031780aecb97f1a7f7b1285b09ec8a016c8951f8b23",
+    "code/curso/week04/gridworld.py": "5f03e239a8c579a13f4bb5fc009676d3b07ba0be555df01bda3c31011776e74f",
+    "code/curso/week04/instances.json": "d9fc7a150fd7dc6ad09072ac1b7879dcc42067841d26aa431053a947770c4efb"
+  },
+  "origin": {
+    "code/curso/week03": "studios/week-03 (search.py, instances.json, _generate_instances.py)",
+    "code/curso/week04": "studios/week-04 (gridworld.py, duel.py, instances.json, _generate_instances.py)"
+  },
+  "aicourse_origin": "homework/hw5/week05_salazarD_ochoaA_chanoJ/aicourse (harness de Week 0, sin cambios)"
+}

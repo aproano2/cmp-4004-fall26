@@ -1,0 +1,11 @@
+instance,modo,llamada,temperature,seed,cached,sha_texto,path,reported_cost,category,seconds,textos_distintos,respuestas_distintas
+grid-8-00,identicas_t0_s0,1,0.0,0,False,e3b0c44298fc,,,no_termina,302.098,1,1
+grid-8-00,identicas_t0_s0,2,0.0,0,False,e3b0c44298fc,,,no_termina,302.036,1,1
+grid-8-00,identicas_t0_s0,3,0.0,0,False,e3b0c44298fc,,,no_termina,302.044,1,1
+grid-8-00,identicas_t0_s0,4,0.0,0,False,e3b0c44298fc,,,no_termina,302.044,1,1
+grid-8-00,identicas_t0_s0,5,0.0,0,False,e3b0c44298fc,,,no_termina,302.065,1,1
+grid-8-00,t0.7_semillas_1a5,1,0.7,1,False,e3b0c44298fc,,,no_termina,302.044,4,4
+grid-8-00,t0.7_semillas_1a5,2,0.7,2,False,e3b0c44298fc,,,no_termina,302.052,4,4
+grid-8-00,t0.7_semillas_1a5,3,0.7,3,False,79e54396898a,SRLRDRDLR,10,illegal,32.651,4,4
+grid-8-00,t0.7_semillas_1a5,4,0.7,4,False,8e3ca6dbb1a3,RRRDDDRRUUU,35,illegal,19.347,4,4
+grid-8-00,t0.7_semillas_1a5,5,0.7,5,False,5104379a37e6,RDRRUDLUR,18,illegal,54.858,4,4

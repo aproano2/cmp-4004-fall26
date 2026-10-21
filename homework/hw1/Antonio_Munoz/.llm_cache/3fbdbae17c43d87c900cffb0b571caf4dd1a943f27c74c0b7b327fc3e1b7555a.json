@@ -1,0 +1,28 @@
+{
+ "key": "3fbdbae17c43d87c900cffb0b571caf4dd1a943f27c74c0b7b327fc3e1b7555a",
+ "tag": "repro_temp0.8_noseed_r4",
+ "request": {
+  "backend": "ollama",
+  "model": "qwen2.5:3b",
+  "messages": [
+   {
+    "role": "user",
+    "content": "Find the minimum-cost path from S to G.\nTerrain costs: '.' = 1, ',' = 3, '~' = 8.\nMove up/down/left/right only (U = up, toward the first row; D = down; L = left; R = right).\nThe cost of a path is the sum of the terrain cost of every cell you enter (S itself is not counted; G costs 1).\nGrid:\n. ~ , . . . . .\n. , . , . . . .\n, . . , ~ . ~ ~\n. S . ~ , . , ,\n, , , , . . . .\n, . ~ . . , . ,\n, , , . , . . ,\n, , . . . . G .\n\nDo not explain and do not show your reasoning. Reply with exactly two lines and nothing else:\nPATH: <letters U/D/L/R, no separators>\nCOST: <integer>\n"
+   }
+  ],
+  "temperature": 0.8,
+  "seed": null,
+  "num_predict": 200,
+  "num_ctx": 4096,
+  "replicate": 4
+ },
+ "text": "PATH: DRURURDRUDDDR\nCOST: 40",
+ "tool_calls": null,
+ "done_reason": "stop",
+ "prompt_tokens": 219,
+ "output_tokens": 17,
+ "gen_latency_s": 2.726,
+ "load_s": 0.001,
+ "wall_s": 2.728,
+ "retries": 0
+}

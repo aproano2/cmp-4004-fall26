@@ -1,0 +1,27 @@
+{
+ "key": "b289fd84f6fe512097850027803a28bc4ed22803938cd5ef2206fa45f7df9aa3",
+ "tag": "smoke",
+ "request": {
+  "backend": "ollama",
+  "model": "qwen2.5:3b",
+  "messages": [
+   {
+    "role": "user",
+    "content": "Reply with exactly: PATH: RRDD"
+   }
+  ],
+  "temperature": 0.0,
+  "seed": 0,
+  "num_predict": 512,
+  "num_ctx": 4096,
+  "replicate": 0
+ },
+ "text": "PATH: RRDD",
+ "tool_calls": null,
+ "done_reason": "stop",
+ "prompt_tokens": 37,
+ "output_tokens": 5,
+ "gen_latency_s": 2.733,
+ "load_s": 0.142,
+ "wall_s": 3.053
+}

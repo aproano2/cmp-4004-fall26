@@ -1,0 +1,13 @@
+level,algo,median,q1,q3,iqr
+4,astar_misplaced,4.0,4.0,4.0,0.0
+4,astar_manhattan,4.0,4.0,4.0,0.0
+4,violations (h2 > h1),0.0,,,
+8,astar_misplaced,17.0,15.0,22.5,7.5
+8,astar_manhattan,11.5,10.25,12.0,1.75
+8,violations (h2 > h1),0.0,,,
+12,astar_misplaced,103.0,86.5,106.5,20.0
+12,astar_manhattan,39.5,27.25,46.5,19.25
+12,violations (h2 > h1),0.0,,,
+16,astar_misplaced,551.0,519.25,626.75,107.5
+16,astar_manhattan,128.5,103.25,164.5,61.25
+16,violations (h2 > h1),0.0,,,

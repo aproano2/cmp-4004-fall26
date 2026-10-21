@@ -1,0 +1,8 @@
+# HW1 dependencies.
+#
+#   python3 -m venv .venv && source .venv/bin/activate
+#   pip install -r requirements.txt
+#
+numpy>=1.24
+matplotlib>=3.7
+pytest>=7.4

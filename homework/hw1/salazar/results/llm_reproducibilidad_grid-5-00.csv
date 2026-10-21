@@ -1,0 +1,11 @@
+instance,modo,llamada,temperature,seed,cached,sha_texto,path,reported_cost,category,seconds,textos_distintos,respuestas_distintas
+grid-5-00,identicas_t0_s0,1,0.0,0,False,cf9e49548de8,RRRRURUR,30,illegal,77.544,3,3
+grid-5-00,identicas_t0_s0,2,0.0,0,False,e3b0c44298fc,,,no_termina,302.077,3,3
+grid-5-00,identicas_t0_s0,3,0.0,0,False,2eb930f91493,RRRRDRDR,27,illegal,86.433,3,3
+grid-5-00,identicas_t0_s0,4,0.0,0,False,e3b0c44298fc,,,no_termina,302.054,3,3
+grid-5-00,identicas_t0_s0,5,0.0,0,False,2eb930f91493,RRRRDRDR,27,illegal,86.375,3,3
+grid-5-00,t0.7_semillas_1a5,1,0.7,1,False,dff42353681c,SLULDRLRD,23,illegal,48.552,5,5
+grid-5-00,t0.7_semillas_1a5,2,0.7,2,False,527d6b1adc02,SLRDL,6,illegal,50.311,5,5
+grid-5-00,t0.7_semillas_1a5,3,0.7,3,False,a071af6b1cf6,SRLDG,42,illegal,57.609,5,5
+grid-5-00,t0.7_semillas_1a5,4,0.7,4,False,c29aff4e57b1,SDRRRUR,21,illegal,23.649,5,5
+grid-5-00,t0.7_semillas_1a5,5,0.7,5,False,0e943493f53f,SRULDG,25,illegal,25.575,5,5

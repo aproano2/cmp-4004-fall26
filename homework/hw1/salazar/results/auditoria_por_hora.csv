@@ -1,0 +1,37 @@
+origen,instance,detalle,error,t_fin,duracion_s,tokens_generados,tokens_por_s,veredicto
+llm,8puzzle-12-05,ronda 0,TimeoutError: timed out,2026-10-05T00:28:41,300.0,4066,13.61,bucle_del_modelo
+llm,grid-8-01,ronda 0,TimeoutError: timed out,2026-10-05T00:33:58,300.0,4063,13.6,bucle_del_modelo
+llm,grid-12-00,ronda 0,HTTPError: HTTP Error 500: Internal Server Error,2026-10-05T00:34:40,30.9,450,16.5,bucle_del_modelo
+llm,grid-16-01,ronda 0,TimeoutError: timed out,2026-10-05T00:39:53,300.0,4720,15.9,bucle_del_modelo
+llm,grid-16-02,ronda 0,TimeoutError: timed out,2026-10-05T00:45:05,300.0,4720,15.91,bucle_del_modelo
+tool,8puzzle-4-09,ronda 2,TimeoutError: timed out,2026-10-05T01:11:04,300.0,4047,13.55,bucle_del_modelo
+tool,8puzzle-8-02,ronda 0,TimeoutError: timed out,2026-10-05T01:16:49,300.0,4060,13.59,bucle_del_modelo
+tool,8puzzle-8-03,ronda 0,TimeoutError: timed out,2026-10-05T01:22:01,300.0,4723,15.93,bucle_del_modelo
+tool,8puzzle-12-05,ronda 0,TimeoutError: timed out,2026-10-05T01:28:52,300.0,4059,13.59,bucle_del_modelo
+tool,8puzzle-12-08,ronda 0,TimeoutError: timed out,2026-10-05T01:34:24,300.0,4058,13.59,bucle_del_modelo
+tool,8puzzle-16-00,ronda 0,TimeoutError: timed out,2026-10-05T01:39:45,300.0,4060,13.59,bucle_del_modelo
+tool,8puzzle-16-05,ronda 0,TimeoutError: timed out,2026-10-05T01:45:36,300.0,4064,13.61,bucle_del_modelo
+tool,grid-8-03,ronda 0,TimeoutError: timed out,2026-10-05T01:51:27,300.0,4058,13.59,bucle_del_modelo
+tool,grid-8-07,ronda 1,TimeoutError: timed out,2026-10-05T01:56:55,300.0,4047,13.55,bucle_del_modelo
+tool,grid-8-08,ronda 0,TimeoutError: timed out,2026-10-05T02:01:59,300.0,4726,15.93,bucle_del_modelo
+tool,grid-12-05,ronda 0,TimeoutError: timed out,2026-10-05T02:07:34,300.0,4053,13.57,bucle_del_modelo
+tool,grid-12-06,ronda 0,TimeoutError: timed out,2026-10-05T02:12:46,300.0,4725,15.91,bucle_del_modelo
+tool,grid-12-07,ronda 0,HTTPError: HTTP Error 500: Internal Server Error,2026-10-05T02:13:07,8.4,100,16.51,bucle_del_modelo
+tool,grid-12-09,ronda 0,HTTPError: HTTP Error 500: Internal Server Error,2026-10-05T02:13:46,10.4,143,14.09,bucle_del_modelo
+tool,grid-16-00,ronda 0,HTTPError: HTTP Error 500: Internal Server Error,2026-10-05T02:14:06,8.5,100,16.51,bucle_del_modelo
+tool,grid-16-01,ronda 0,HTTPError: HTTP Error 500: Internal Server Error,2026-10-05T02:14:29,10.5,150,16.25,bucle_del_modelo
+tool,grid-16-02,ronda 0,TimeoutError: timed out,2026-10-05T02:19:41,300.0,4712,15.88,bucle_del_modelo
+tool,grid-16-03,ronda 0,HTTPError: HTTP Error 500: Internal Server Error,2026-10-05T02:20:02,9.0,100,16.45,bucle_del_modelo
+tool,grid-16-04,ronda 0,TimeoutError: timed out,2026-10-05T02:25:14,300.0,4716,15.88,bucle_del_modelo
+tool,grid-16-05,ronda 0,HTTPError: HTTP Error 500: Internal Server Error,2026-10-05T02:25:36,10.0,150,16.51,bucle_del_modelo
+tool,grid-16-07,ronda 0,TimeoutError: timed out,2026-10-05T02:31:39,300.0,4043,13.55,bucle_del_modelo
+tool,grid-16-08,ronda 0,TimeoutError: timed out,2026-10-05T02:36:51,300.0,4716,15.88,bucle_del_modelo
+tool,grid-16-09,ronda 0,TimeoutError: timed out,2026-10-05T02:42:03,300.0,4714,15.88,bucle_del_modelo
+llm,grid-12-00,ronda 0,HTTPError: HTTP Error 500: Internal Server Error,2026-10-05T02:43:32,31.1,450,16.51,bucle_del_modelo
+tool,grid-12-07,ronda 0,HTTPError: HTTP Error 500: Internal Server Error,2026-10-05T02:44:14,9.0,100,14.03,bucle_del_modelo
+tool,grid-12-09,ronda 0,HTTPError: HTTP Error 500: Internal Server Error,2026-10-05T02:44:36,9.6,100,15.97,bucle_del_modelo
+tool,grid-16-00,ronda 0,TimeoutError: timed out,2026-10-05T02:49:48,300.0,4718,15.88,bucle_del_modelo
+tool,grid-16-01,ronda 0,HTTPError: HTTP Error 500: Internal Server Error,2026-10-05T02:50:10,9.8,150,16.53,bucle_del_modelo
+tool,grid-16-03,ronda 0,HTTPError: HTTP Error 500: Internal Server Error,2026-10-05T02:50:31,8.9,100,16.44,bucle_del_modelo
+repro,grid-5-00_llamada_2,identicas_t0_s0,TimeoutError: timed out,2026-10-05T00:53:17,300.0,4068,13.64,bucle_del_modelo
+repro,grid-5-00_llamada_4,identicas_t0_s0,TimeoutError: timed out,2026-10-05T00:59:56,300.0,4065,13.61,bucle_del_modelo

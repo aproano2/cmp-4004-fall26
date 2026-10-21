@@ -1,0 +1,10 @@
+numpy>=1.24
+matplotlib>=3.7
+pytest>=7.4
+requests>=2.31
+# notebook de presentación (al final)
+nbformat>=5.9
+nbclient>=0.9
+nbconvert>=7
+ipykernel>=6
+notebook>=7

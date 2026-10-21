@@ -1,0 +1,81 @@
+arm,solver,tool_protocol,backend,model,domain,level,instance_id,key,category,cost_reported_ok,optimal_cost,actual_cost,reported_cost,detail,answer,tool_used,tool_calls,tool_errors,n_llm_calls,latency_s,cache_hits
+tool,,text,ollama,qwen2.5:3b,8puzzle,4,1,8puzzle-4-01,illegal_path,,4,,9,move 3 (R) leaves the board,RDRDRUULLD,False,0,0,1,10.005,1
+tool,,text,ollama,qwen2.5:3b,8puzzle,4,2,8puzzle-4-02,illegal_path,,4,,9,move 5 (R) leaves the board,RDRDRUULLD,False,0,0,1,2.699,1
+tool,,text,ollama,qwen2.5:3b,8puzzle,4,3,8puzzle-4-03,illegal_path,,4,,10,move 1 (R) leaves the board,RDRDRUULLD,False,0,0,1,2.759,1
+tool,,text,ollama,qwen2.5:3b,8puzzle,4,4,8puzzle-4-04,illegal_path,,4,,9,move 3 (R) leaves the board,RDRDRUULLD,False,0,0,1,2.65,1
+tool,,text,ollama,qwen2.5:3b,8puzzle,4,5,8puzzle-4-05,illegal_path,,4,,9,move 2 (D) leaves the board,RDRDRUULLD,False,0,0,1,2.723,1
+tool,,text,ollama,qwen2.5:3b,8puzzle,4,6,8puzzle-4-06,illegal_path,,4,,9,move 5 (R) leaves the board,RDRDRUULLD,False,0,0,1,2.649,1
+tool,,text,ollama,qwen2.5:3b,8puzzle,4,7,8puzzle-4-07,illegal_path,,4,,9,move 5 (R) leaves the board,RDRDRUULLD,False,0,0,1,2.715,1
+tool,,text,ollama,qwen2.5:3b,8puzzle,4,8,8puzzle-4-08,illegal_path,,4,,9,move 2 (D) leaves the board,RDRDRUULLD,False,0,0,1,2.649,1
+tool,,text,ollama,qwen2.5:3b,8puzzle,4,9,8puzzle-4-09,illegal_path,,4,,9,move 1 (R) leaves the board,RDRDRUULLD,False,0,0,1,2.707,1
+tool,,text,ollama,qwen2.5:3b,8puzzle,4,10,8puzzle-4-10,illegal_path,,4,,12,move 1 (R) leaves the board,RDRDRUULLD,False,0,0,1,2.656,1
+tool,,text,ollama,qwen2.5:3b,8puzzle,8,1,8puzzle-8-01,illegal_path,,8,,9,move 5 (R) leaves the board,RDRDRUULLD,False,0,0,1,2.602,1
+tool,,text,ollama,qwen2.5:3b,8puzzle,8,2,8puzzle-8-02,illegal_path,,8,,9,move 1 (R) leaves the board,RDRDRUULLD,False,0,0,1,2.715,1
+tool,,text,ollama,qwen2.5:3b,8puzzle,8,3,8puzzle-8-03,illegal_path,,8,,9,move 3 (R) leaves the board,RDRDRUULLD,False,0,0,1,2.639,1
+tool,,text,ollama,qwen2.5:3b,8puzzle,8,4,8puzzle-8-04,illegal_path,,8,,9,move 3 (R) leaves the board,RDRDRUULLD,False,0,0,1,2.623,1
+tool,,text,ollama,qwen2.5:3b,8puzzle,8,5,8puzzle-8-05,illegal_path,,8,,11,move 1 (R) leaves the board,RDRDRUULLLUUU,False,0,0,1,2.754,1
+tool,,text,ollama,qwen2.5:3b,8puzzle,8,6,8puzzle-8-06,illegal_path,,8,,9,move 5 (R) leaves the board,RDRDRUULLD,False,0,0,1,2.785,1
+tool,,text,ollama,qwen2.5:3b,8puzzle,8,7,8puzzle-8-07,illegal_path,,8,,9,move 3 (R) leaves the board,RDRDRUULLD,False,0,0,1,2.652,1
+tool,,text,ollama,qwen2.5:3b,8puzzle,8,8,8puzzle-8-08,illegal_path,,8,,9,move 1 (R) leaves the board,RDRDRUULLD,False,0,0,1,2.756,1
+tool,,text,ollama,qwen2.5:3b,8puzzle,8,9,8puzzle-8-09,illegal_path,,8,,9,move 3 (R) leaves the board,RDRDRUULLD,False,0,0,1,2.718,1
+tool,,text,ollama,qwen2.5:3b,8puzzle,8,10,8puzzle-8-10,illegal_path,,8,,9,move 2 (D) leaves the board,RDRDRUULLD,False,0,0,1,2.669,1
+tool,,text,ollama,qwen2.5:3b,8puzzle,12,1,8puzzle-12-01,illegal_path,,12,,15,move 9 (L) leaves the board,RUDDLUULLLUUUDDDRUUULLLDDRRUUUU,False,0,0,1,2.868,1
+tool,,text,ollama,qwen2.5:3b,8puzzle,12,2,8puzzle-12-02,illegal_path,,12,,9,move 1 (R) leaves the board,RDRDRUULLD,False,0,0,1,2.679,1
+tool,,text,ollama,qwen2.5:3b,8puzzle,12,3,8puzzle-12-03,illegal_path,,12,,9,move 2 (D) leaves the board,RDRDRUULLD,False,0,0,1,2.613,1
+tool,,text,ollama,qwen2.5:3b,8puzzle,12,4,8puzzle-12-04,illegal_path,,12,,9,move 5 (R) leaves the board,RDRDRUULLD,False,0,0,1,2.726,1
+tool,,text,ollama,qwen2.5:3b,8puzzle,12,5,8puzzle-12-05,illegal_path,,12,,9,move 1 (R) leaves the board,RDRDRUULLD,False,0,0,1,3.112,1
+tool,,text,ollama,qwen2.5:3b,8puzzle,12,6,8puzzle-12-06,illegal_path,,12,,12,move 9 (L) leaves the board,RUDDLUULLLUUU,False,0,0,1,2.704,1
+tool,,text,ollama,qwen2.5:3b,8puzzle,12,7,8puzzle-12-07,illegal_path,,12,,9,move 1 (R) leaves the board,RDRDRUULLD,False,0,0,1,2.707,1
+tool,,text,ollama,qwen2.5:3b,8puzzle,12,8,8puzzle-12-08,illegal_path,,12,,9,move 5 (R) leaves the board,RDRDRUULLD,False,0,0,1,2.638,1
+tool,,text,ollama,qwen2.5:3b,8puzzle,12,9,8puzzle-12-09,illegal_path,,12,,9,move 5 (R) leaves the board,RDRDRUULLD,False,0,0,1,2.607,1
+tool,,text,ollama,qwen2.5:3b,8puzzle,12,10,8puzzle-12-10,illegal_path,,12,,9,move 1 (R) leaves the board,RDRDRUULLD,False,0,0,1,2.736,1
+tool,,text,ollama,qwen2.5:3b,8puzzle,16,1,8puzzle-16-01,illegal_path,,16,,15,move 9 (L) leaves the board,RUDDLUULLLUUUDDDRUUULLLDDRRUUUU,False,0,0,1,2.803,1
+tool,,text,ollama,qwen2.5:3b,8puzzle,16,2,8puzzle-16-02,illegal_path,,16,,11,move 1 (R) leaves the board,RDRDRUULLLUUU,False,0,0,1,2.672,1
+tool,,text,ollama,qwen2.5:3b,8puzzle,16,3,8puzzle-16-03,illegal_path,,16,,9,move 2 (D) leaves the board,RDRDRUULLD,False,0,0,1,2.615,1
+tool,,text,ollama,qwen2.5:3b,8puzzle,16,4,8puzzle-16-04,illegal_path,,16,,15,move 9 (L) leaves the board,RUDDLUULLLUUUDDDRUUULLLDDRRUUUU,False,0,0,1,2.841,1
+tool,,text,ollama,qwen2.5:3b,8puzzle,16,5,8puzzle-16-05,illegal_path,,16,,12,move 1 (R) leaves the board,RDRDRUULLD,False,0,0,1,2.527,1
+tool,,text,ollama,qwen2.5:3b,8puzzle,16,6,8puzzle-16-06,illegal_path,,16,,4,path does not end at the goal,RDRU,False,0,0,1,2.676,1
+tool,,text,ollama,qwen2.5:3b,8puzzle,16,7,8puzzle-16-07,illegal_path,,16,,9,move 5 (R) leaves the board,RDRDRUULLD,False,0,0,1,2.671,1
+tool,,text,ollama,qwen2.5:3b,8puzzle,16,8,8puzzle-16-08,illegal_path,,16,,9,move 2 (D) leaves the board,RDRDRUULLD,False,0,0,1,2.657,1
+tool,,text,ollama,qwen2.5:3b,8puzzle,16,9,8puzzle-16-09,illegal_path,,16,,9,move 5 (R) leaves the board,RDRDRUULLD,False,0,0,1,2.736,1
+tool,,text,ollama,qwen2.5:3b,8puzzle,16,10,8puzzle-16-10,illegal_path,,16,,9,move 5 (R) leaves the board,RDRDRUULLD,False,0,0,1,2.738,1
+tool,,text,ollama,qwen2.5:3b,grid,5,1,grid-5-01,illegal_path,,7,,24,"does not start at S (0, 1)","0,0->1,0->2,0->3,0->4,0->4,1->4,2->4,3->4,4",False,0,0,1,3.255,1
+tool,,text,ollama,qwen2.5:3b,grid,5,2,grid-5-02,illegal_path,,6,,24,"does not start at S (1, 1)","2,0->1,0->0,0->0,1->0,2->0,3->0,4",False,0,0,1,3.11,1
+tool,,text,ollama,qwen2.5:3b,grid,5,3,grid-5-03,illegal_path,,3,,24,"does not start at S (0, 1)","0,0->0,1->1,1->2,1->3,1->3,2->3,3->2,3->1,3->0,3",False,0,0,1,3.273,1
+tool,,text,ollama,qwen2.5:3b,grid,5,4,grid-5-04,illegal_path,,8,,24,"does not start at S (0, 1)","0,0->1,0->2,0->3,0->4,0->4,1->4,2->4,3->4,4",False,0,0,1,3.247,1
+tool,,text,ollama,qwen2.5:3b,grid,5,5,grid-5-05,illegal_path,,10,,24,"does not start at S (1, 1)","2,1->1,1->0,1->0,2->0,3->0,4->1,4->2,4",False,0,0,1,3.183,1
+tool,,text,ollama,qwen2.5:3b,grid,5,6,grid-5-06,illegal_path,,6,,24,"does not start at S (0, 1)","0,0->0,1->1,1->2,1->3,1->3,2->3,3->3,4->2,4->1,4->0,4",False,0,0,1,3.461,1
+tool,,text,ollama,qwen2.5:3b,grid,5,7,grid-5-07,illegal_path,,6,,24,"does not end at G (3, 3)","0,0->0,1->0,2->1,2->2,2->3,2->3,1->3,0->2,0->1,0->0,0",False,0,0,1,3.342,1
+tool,,text,ollama,qwen2.5:3b,grid,5,8,grid-5-08,illegal_path,,4,,29,"does not start at S (1, 1)","0,2->1,2->2,2->3,2->4,2",False,0,0,1,2.937,1
+tool,,text,ollama,qwen2.5:3b,grid,5,9,grid-5-09,illegal_path,,2,,24,"does not start at S (1, 1)","2,0->1,0->0,0->0,1->0,2->0,3->0,4",False,0,0,1,3.147,1
+tool,,text,ollama,qwen2.5:3b,grid,5,10,grid-5-10,illegal_path,,5,,15,"does not start at S (1, 0)","0,4->1,4->2,4->3,4->4,4",False,0,0,1,2.842,1
+tool,,text,ollama,qwen2.5:3b,grid,8,1,grid-8-01,illegal_path,,13,,35,"does not start at S (3, 1)","7,0->6,0->5,0->4,0->3,0->2,0->1,0->0,0->0,1->0,2->0,3->0,4->0,5->0,6->0,7",False,0,0,1,3.789,1
+tool,,text,ollama,qwen2.5:3b,grid,8,2,grid-8-02,illegal_path,,9,,30,"does not start at S (0, 3)","0,0->0,1->0,2->1,2->2,2->3,2->4,2->5,2->6,2->7,2->7,1->7,0",False,0,0,1,3.498,1
+tool,,text,ollama,qwen2.5:3b,grid,8,3,grid-8-03,illegal_path,,23,,33,"does not start at S (2, 0)","3,0->2,0->1,0->0,0->0,1->0,2->0,3->0,4->0,5->0,6->0,7->1,7->2,7->3,7",False,0,0,1,3.581,1
+tool,,text,ollama,qwen2.5:3b,grid,8,4,grid-8-04,illegal_path,,14,,30,"does not start at S (1, 0)","0,0->0,1->1,1->2,1->3,1->4,1->5,1->6,1->7,1->7,2->7,3->7,4->7,5->7,6->7,7",False,0,0,1,3.631,1
+tool,,text,ollama,qwen2.5:3b,grid,8,5,grid-8-05,illegal_path,,11,,105,"does not start at S (2, 1)","6,0->5,0->4,0->3,0->2,0->1,0->0,0->0,1->0,2->0,3->0,4->0,5->0,6->0,7->1,7->2,7->3,7->4,7->5,7->6,7",False,0,0,1,4.066,1
+tool,,text,ollama,qwen2.5:3b,grid,8,6,grid-8-06,illegal_path,,17,,30,"does not end at G (5, 6)","0,0->0,1->0,2->1,2->2,2->3,2->4,2->5,2->6,2->6,1->6,0",False,0,0,1,3.432,1
+tool,,text,ollama,qwen2.5:3b,grid,8,7,grid-8-07,illegal_path,,8,,40,"does not end at G (4, 5)","2,1->3,1->4,1->5,1->6,1->6,2->6,3->6,4->6,5->6,6->6,7",False,0,0,1,3.507,1
+tool,,text,ollama,qwen2.5:3b,grid,8,8,grid-8-08,illegal_path,,11,,24,"does not start at S (2, 1)","3,3->2,3->1,3->0,3->0,2->0,1->0,0",False,0,0,1,3.164,1
+tool,,text,ollama,qwen2.5:3b,grid,8,9,grid-8-09,illegal_path,,8,,30,"does not start at S (2, 0)","3,0->2,0->1,0->0,0->0,1->0,2->0,3->0,4->0,5->0,6->0,7->1,7->2,7->3,7",False,0,0,1,3.607,1
+tool,,text,ollama,qwen2.5:3b,grid,8,10,grid-8-10,illegal_path,,10,,24,"does not end at G (4, 4)","0,2->1,2->2,2->3,2->4,2->5,2->6,2->7,2",False,0,0,1,3.202,1
+tool,,text,ollama,qwen2.5:3b,grid,12,1,grid-12-01,illegal_path,,13,,120,"does not start at S (2, 3)","3,3->2,3->1,3->1,2->1,1->1,0->2,0->3,0->4,0->5,0->6,0->7,0->8,0->9,0->10,0->11,0->11,1->11,2->11,3->11,4->11,5->11,6->11,7->11,8->11,9->11,10->11,11",False,0,0,1,7.961,1
+tool,,text,ollama,qwen2.5:3b,grid,12,2,grid-12-02,illegal_path,,9,,12,"does not start at S (5, 4)","11,4->10,4->9,4->8,4->7,4->6,4->5,4->4,4->3,4->2,4->1,4->0,4",False,0,0,1,5.479,1
+tool,,text,ollama,qwen2.5:3b,grid,12,3,grid-12-03,illegal_path,,16,,12,"does not start at S (1, 5)","1,0->2,1->3,1->4,1->5,1->6,1->7,1->8,1->9,1->10,1->11,1",False,0,0,1,6.201,1
+tool,,text,ollama,qwen2.5:3b,grid,12,4,grid-12-04,illegal_path,,13,,16,"does not start at S (4, 4)","10,1->9,1->8,0->7,-1->6,-2->5,-3->4,-4->3,-5->2,-6->1,-7->1,-8->1,-9->1,-10->1,-11->1,-12",False,0,0,1,10.392,1
+tool,,text,ollama,qwen2.5:3b,grid,12,5,grid-12-05,illegal_path,,5,,13,"does not start at S (4, 4)","10,1->10,2->9,2->9,3->0,3",False,0,0,1,5.754,1
+tool,,text,ollama,qwen2.5:3b,grid,12,6,grid-12-06,illegal_path,,11,,11,"does not start at S (4, 5)","10,1->9,1->9,0->8,0->7,0->6,0->5,0->4,0->3,0->2,0->1,0->1,1",False,0,0,1,8.565,1
+tool,,text,ollama,qwen2.5:3b,grid,12,7,grid-12-07,illegal_path,,17,,36,"does not start at S (0, 5)","1,0->1,1->2,1->2,2->3,2->3,3->4,3->4,4->5,4->5,5->6,5->6,6->7,6->7,7->8,7->8,8->9,8->9,9->10,9->10,10->11,10->11,11->11,11",False,0,0,1,8.216,1
+tool,,text,ollama,qwen2.5:3b,grid,12,8,grid-12-08,illegal_path,,14,,33,"does not start at S (4, 1)","1,1->2,1->3,1->4,1->5,1->6,1->7,1->8,1->9,1->10,1->11,1",False,0,0,1,5.807,1
+tool,,text,ollama,qwen2.5:3b,grid,12,9,grid-12-09,illegal_path,,12,,33,"does not start at S (2, 3)","1,1->2,1->3,1->4,1->5,1->6,1->7,1->8,1->9,1->10,1->11,1",False,0,0,1,4.788,1
+tool,,text,ollama,qwen2.5:3b,grid,12,10,grid-12-10,illegal_path,,11,,104,"does not start at S (2, 3)","3,4->4,4->5,4->6,4->7,4->8,4->9,4->10,4->11,4->11,5->11,6->11,7->11,8->11,9->11,10->11,11",True,1,1,2,13.55,2
+tool,,text,ollama,qwen2.5:3b,grid,16,1,grid-16-01,illegal_path,,20,,104,"does not start at S (1, 6)","14,1->14,2->14,3->14,4->14,5->14,6->14,7->14,8->14,9->14,10->14,11->14,12->14,13->14,14",False,0,0,1,3.942,1
+tool,,text,ollama,qwen2.5:3b,grid,16,2,grid-16-02,illegal_path,,19,,104,"does not start at S (3, 4)","14,1->14,2->14,3->14,4->14,5->14,6->14,7->14,8->14,9->14,10->14,11->14,12->14,13->14,14",False,0,0,1,3.935,1
+tool,,text,ollama,qwen2.5:3b,grid,16,3,grid-16-03,illegal_path,,24,,16,"does not start at S (4, 5)","1,1->1,2->1,3->1,4->1,5->1,6->1,7->1,8->1,9->1,10->1,11->1,12->1,13->1,14->1,15->2,15->3,15->4,15->5,15->6,15->7,15->8,15->9,15->10,15->11,15->12,15->13,15->14,15->15,15",False,0,0,1,13.549,1
+tool,,text,ollama,qwen2.5:3b,grid,16,4,grid-16-04,illegal_path,,24,,120,"does not start at S (1, 4)","1,1->1,2->1,3->1,4->1,5->1,6->1,7->1,8->1,9->1,10->1,11->1,12->1,13->1,14->1,15->1,16->2,16->3,16->4,16->5,16->6,16->7,16->8,16->9,16->10,16->11,16->12,16->13,16->14,16->15,16->16,16",False,0,0,1,5.34,1
+tool,,text,ollama,qwen2.5:3b,grid,16,5,grid-16-05,illegal_path,,26,,16,"does not start at S (1, 0)","1,1->1,2->1,3->1,4->1,5->1,6->1,7->1,8->1,9->1,10->1,11->1,12->1,13->1,14->1,15->2,15->3,15->4,15->5,15->6,15->7,15->8,15->9,15->10,15->11,15->12,15->13,15->14,15->15,15",False,0,0,1,13.192,1
+tool,,text,ollama,qwen2.5:3b,grid,16,6,grid-16-06,illegal_path,,14,,120,"does not start at S (4, 5)","5,2->4,2->3,2->2,2->1,2->0,2->0,3->0,4->0,5->0,6->0,7->0,8->0,9->0,10->0,11->0,12->0,13->0,14->0,15->0,16->1,16->2,16->3,16->4,16->5,16",False,0,0,1,4.544,1
+tool,,text,ollama,qwen2.5:3b,grid,16,7,grid-16-07,illegal_path,,18,,120,"does not start at S (6, 5)","6,0->5,0->4,0->3,0->2,0->1,0->0,0->0,1->0,2->0,3->0,4->0,5->0,6->0,7->0,8->0,9->0,10->0,11->0,12->0,13->0,14->0,15->1,15->2,15->3,15->4,15->5,15->6,15",False,0,0,1,4.82,1
+tool,,text,ollama,qwen2.5:3b,grid,16,8,grid-16-08,illegal_path,,22,,120,"does not start at S (1, 1)","4,0->3,0->2,0->1,0->0,0->0,1->0,2->0,3->0,4->0,5->0,6->0,7->0,8->0,9->0,10->0,11->0,12->0,13->0,14->0,15->1,15->2,15->3,15->4,15",False,0,0,1,4.522,1
+tool,,text,ollama,qwen2.5:3b,grid,16,9,grid-16-09,unparseable,,17,,,no JSON answer with a 'path' key,,False,0,0,1,14.528,1
+tool,,text,ollama,qwen2.5:3b,grid,16,10,grid-16-10,illegal_path,,19,,120,"does not start at S (5, 0)","6,0->5,0->4,0->3,0->2,0->1,0->0,0->0,1->0,2->0,3->0,4->0,5->0,6->0,7->0,8->0,9->0,10->0,11->0,12->0,13->0,14->0,15->0,16->1,16->2,16->3,16->4,16->5,16->6,16",False,0,0,1,4.984,1

@@ -1,0 +1,19 @@
+{
+  "fecha_utc": "2026-10-04T22:50:57+00:00",
+  "python": "3.13.2",
+  "plataforma": "Windows-10-10.0.19045-SP0",
+  "procesador": "Intel64 Family 6 Model 142 Stepping 9, GenuineIntel",
+  "huellas": {
+    "motor.py": "8b8904838c9c292d65770abb4f859cd47aba83f7a1e16aed834d3ec82ad3b286",
+    "dominios.py": "737045135ad751e32a5fbfeaaf858900de916b33623bfdafd3d3bd2280533529",
+    "heuristicas.py": "92f0b7b21eadbcb729cf076c254d2de5524085348999b4f303b4a5b5c1c5dae7",
+    "benchmark.py": "be28f55b4096e138da2edde04990f1af56f9e171b8bc7facc53217c69ff8d02e"
+  },
+  "timeout_s": 30.0,
+  "dominios": [
+    "8puzzle",
+    "grid"
+  ],
+  "instancias_por_nivel": 10,
+  "filas": 520
+}

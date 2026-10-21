@@ -1,0 +1,6 @@
+instance_id,call,seed,temperature,answer,category,reported_cost,actual_cost,optimal_cost
+8puzzle-8-01,1,1,0.0,RUDLUDULD,illegal_path,10,,8
+8puzzle-8-01,2,2,0.0,RUDLUDULD,illegal_path,10,,8
+8puzzle-8-01,3,3,0.0,RUDLUDULD,illegal_path,10,,8
+8puzzle-8-01,4,4,0.0,RUDLUDULD,illegal_path,10,,8
+8puzzle-8-01,5,5,0.0,RUDLUDULD,illegal_path,10,,8

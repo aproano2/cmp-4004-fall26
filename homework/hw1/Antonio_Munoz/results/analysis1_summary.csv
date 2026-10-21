@@ -1,0 +1,21 @@
+check,domain,level,n,matches,median_ratio
+UCS == astar_manhattan,8puzzle,4,10,10,1.0
+UCS == astar_manhattan,8puzzle,8,10,10,1.0
+UCS == astar_manhattan,8puzzle,12,10,10,1.0
+UCS == astar_manhattan,8puzzle,16,10,10,1.0
+UCS == astar_misplaced,8puzzle,4,10,10,1.0
+UCS == astar_misplaced,8puzzle,8,10,10,1.0
+UCS == astar_misplaced,8puzzle,12,10,10,1.0
+UCS == astar_misplaced,8puzzle,16,10,10,1.0
+UCS == astar_manhattan,grid,5,10,10,1.0
+UCS == astar_manhattan,grid,8,10,10,1.0
+UCS == astar_manhattan,grid,12,10,10,1.0
+UCS == astar_manhattan,grid,16,10,10,1.0
+BFS suboptimal (cost > UCS),8puzzle,4,10,0,1.0
+BFS suboptimal (cost > UCS),8puzzle,8,10,0,1.0
+BFS suboptimal (cost > UCS),8puzzle,12,10,0,1.0
+BFS suboptimal (cost > UCS),8puzzle,16,10,0,1.0
+BFS suboptimal (cost > UCS),grid,5,10,5,1.15
+BFS suboptimal (cost > UCS),grid,8,10,10,1.663
+BFS suboptimal (cost > UCS),grid,12,10,8,1.92
+BFS suboptimal (cost > UCS),grid,16,10,10,1.832

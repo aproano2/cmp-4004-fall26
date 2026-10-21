@@ -1,0 +1,15 @@
+{
+  "text": "PATH: RLRLRU\nCOST: 18",
+  "backend": "ollama",
+  "model": "qwen2.5:3b",
+  "prompt": "Find the minimum-cost path from S to G.\nTerrain costs: '.' = 1, ',' = 3, '~' = 8.\nMove up/down/left/right only.\nGrid:\n. S . . ,\n, . ~ ~ ~\n. . . . ~\n. . , . G\n, . . . .\n\nReply with the path as a sequence of moves (U/D/L/R) and its total cost.\nFormat your final answer as two lines:\nPATH: <letters, no separators>\nCOST: <integer>\n",
+  "temperature": 0.0,
+  "seed": 0,
+  "elapsed": 2.1974485000246204,
+  "meta": {
+    "eval_count": 13,
+    "prompt_eval_count": 137,
+    "total_duration": 170814200
+  },
+  "cached_at": "2026-10-04T22:07:53"
+}

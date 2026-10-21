@@ -1,0 +1,23 @@
+{
+  "text": "{\n  \"tool\": \"astar_solve\",\n  \"domain\": \"puzzle\",\n  \"state\": [0, 2, 3, 1, 4, 5, 7, 8, 6]\n}",
+  "status": "ok",
+  "tokens_in": 316,
+  "tokens_out": 51,
+  "ollama_total_s": 0.52,
+  "backend": "ollama",
+  "model": "qwen2.5:3b",
+  "temperature": 0.0,
+  "seed": 0,
+  "rep": 0,
+  "messages": [
+    {
+      "role": "system",
+      "content": "You can call one tool, astar_solve, an exact A* solver that returns the optimal path and its cost.\nTo call it, reply with ONLY one JSON object and nothing else:\n  grid:     {\"tool\": \"astar_solve\", \"domain\": \"grid\", \"grid\": [\"S.,\", \"~.G\"]}\n            (one string per row, copy every cell, no spaces)\n  8-puzzle: {\"tool\": \"astar_solve\", \"domain\": \"puzzle\", \"state\": [1, 2, 3, 4, 5, 6, 7, 0, 8]}\n            (the 9 cells row by row, 0 for the blank)\nYou will receive the tool result as JSON. Then give your final answer.\nNever write the tool result yourself: you do not know the answer until the tool replies.\n"
+    },
+    {
+      "role": "user",
+      "content": "Solve this 8-puzzle in the minimum number of moves.\n'_' is the blank. A move slides the blank one cell: U (blank goes up), D (down), L (left), R (right). The blank cannot leave the 3x3 board.\nEvery move costs 1, so the cost is the number of moves.\nStart:\n_ 2 3\n1 4 5\n7 8 6\nGoal:\n1 2 3\n4 5 6\n7 8 _\n\nCall the tool now: reply with ONLY the JSON object."
+    }
+  ],
+  "latency_s": 0.537
+}

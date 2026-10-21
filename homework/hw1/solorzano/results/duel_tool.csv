@@ -1,0 +1,81 @@
+arm,solver,tool_protocol,backend,model,domain,level,instance_id,key,category,cost_reported_ok,optimal_cost,actual_cost,reported_cost,detail,answer,tool_used,tool_calls,tool_errors,n_llm_calls,latency_s,cache_hits
+tool,,native,ollama,qwen2.5:3b,8puzzle,4,1,8puzzle-4-01,optimal_correct,True,4,4,4,,URDD,True,1,0,2,13.954,2
+tool,,native,ollama,qwen2.5:3b,8puzzle,4,2,8puzzle-4-02,illegal_path,,4,,12,move 1 (U) leaves the board,UDLRUUURDR,True,1,1,2,5.51,2
+tool,,native,ollama,qwen2.5:3b,8puzzle,4,3,8puzzle-4-03,optimal_correct,True,4,4,4,,LURD,True,1,0,2,5.536,2
+tool,,native,ollama,qwen2.5:3b,8puzzle,4,4,8puzzle-4-04,optimal_correct,True,4,4,4,,LDRR,True,1,0,2,6.0009999999999994,2
+tool,,native,ollama,qwen2.5:3b,8puzzle,4,5,8puzzle-4-05,optimal_correct,True,4,4,4,,RURD,True,1,0,2,5.9719999999999995,2
+tool,,native,ollama,qwen2.5:3b,8puzzle,4,6,8puzzle-4-06,illegal_path,,4,,23,move 1 (U) leaves the board,UDLRUUURDRLLDLURRDLLDUUURRDLLDUUURDDLURRDRLLDUUURDDLURRDRLLDUUURDDLURRDRLLDUUU,True,1,1,2,5.916,2
+tool,,native,ollama,qwen2.5:3b,8puzzle,4,7,8puzzle-4-07,unparseable,,4,,,no JSON answer with a 'path' key,,True,1,1,2,17.203,2
+tool,,native,ollama,qwen2.5:3b,8puzzle,4,8,8puzzle-4-08,optimal_correct,True,4,4,4,,URRD,True,1,0,2,6.041,2
+tool,,native,ollama,qwen2.5:3b,8puzzle,4,9,8puzzle-4-09,illegal_path,,4,,3,path does not end at the goal,LDR,True,1,0,2,5.977,2
+tool,,native,ollama,qwen2.5:3b,8puzzle,4,10,8puzzle-4-10,optimal_correct,True,4,4,4,,LDRD,True,1,0,2,6.0120000000000005,2
+tool,,native,ollama,qwen2.5:3b,8puzzle,8,1,8puzzle-8-01,optimal_correct,True,8,8,8,,RDLURRDD,True,1,0,2,5.978,2
+tool,,native,ollama,qwen2.5:3b,8puzzle,8,2,8puzzle-8-02,unparseable,,8,,,no JSON answer with a 'path' key,,True,1,1,2,17.305,2
+tool,,native,ollama,qwen2.5:3b,8puzzle,8,3,8puzzle-8-03,optimal_correct,True,8,8,8,,RULDLDRR,True,1,0,2,6.175,2
+tool,,native,ollama,qwen2.5:3b,8puzzle,8,4,8puzzle-8-04,optimal_correct,True,8,8,8,,DRUULDDR,True,1,0,2,5.970000000000001,2
+tool,,native,ollama,qwen2.5:3b,8puzzle,8,5,8puzzle-8-05,illegal_path,,8,,14,move 2 (U) leaves the board,LURRDLULDDRURD,True,1,0,2,6.193,2
+tool,,native,ollama,qwen2.5:3b,8puzzle,8,6,8puzzle-8-06,unparseable,,8,,,no JSON answer with a 'path' key,,True,1,1,2,17.312,2
+tool,,native,ollama,qwen2.5:3b,8puzzle,8,7,8puzzle-8-07,optimal_correct,True,8,8,8,,LURRDLDR,True,1,0,2,5.954,2
+tool,,native,ollama,qwen2.5:3b,8puzzle,8,8,8puzzle-8-08,optimal_correct,True,8,8,8,,ULDLURRD,True,1,0,2,5.954,2
+tool,,native,ollama,qwen2.5:3b,8puzzle,8,9,8puzzle-8-09,optimal_correct,True,8,8,8,,DLURURDD,True,1,0,2,5.943,2
+tool,,native,ollama,qwen2.5:3b,8puzzle,8,10,8puzzle-8-10,illegal_path,,8,,6,move 1 (L) leaves the board,LDRURD,True,1,0,2,5.9239999999999995,2
+tool,,native,ollama,qwen2.5:3b,8puzzle,12,1,8puzzle-12-01,optimal_correct,True,12,12,12,,DLUURDLURRDD,True,1,0,2,5.997999999999999,2
+tool,,native,ollama,qwen2.5:3b,8puzzle,12,2,8puzzle-12-02,unparseable,,12,,,path not a UDLR string: '',UNPARSEABLE:'',True,1,1,2,6.023,2
+tool,,native,ollama,qwen2.5:3b,8puzzle,12,3,8puzzle-12-03,optimal_correct,True,12,12,12,,RUURDLULDRDR,True,1,0,2,6.035,2
+tool,,native,ollama,qwen2.5:3b,8puzzle,12,4,8puzzle-12-04,unparseable,,12,,,no JSON answer with a 'path' key,,True,1,1,2,17.009999999999998,2
+tool,,native,ollama,qwen2.5:3b,8puzzle,12,5,8puzzle-12-05,optimal_correct,True,12,12,12,,LLURDRULLDRR,True,1,0,2,5.633,2
+tool,,native,ollama,qwen2.5:3b,8puzzle,12,6,8puzzle-12-06,optimal_correct,True,12,12,12,,LURDDRULLDRR,True,1,0,2,6.026,2
+tool,,native,ollama,qwen2.5:3b,8puzzle,12,7,8puzzle-12-07,illegal_path,,12,,13,path does not end at the goal,LDLURRDLULDRR,True,1,0,2,6.019,2
+tool,,native,ollama,qwen2.5:3b,8puzzle,12,8,8puzzle-12-08,optimal_correct,True,12,12,12,,RDRULDLURRDD,True,1,0,2,6.086,2
+tool,,native,ollama,qwen2.5:3b,8puzzle,12,9,8puzzle-12-09,unparseable,,12,,,"model stuck repeating tokens (Ollama aborted): ollama HTTP 500: {""error"":""prediction aborted, token repeat limit reached""}",,,0,0,0,0.0,0
+tool,,native,ollama,qwen2.5:3b,8puzzle,12,10,8puzzle-12-10,optimal_correct,True,12,12,12,,LDDLUURDLDRR,True,1,0,2,5.98,2
+tool,,native,ollama,qwen2.5:3b,8puzzle,16,1,8puzzle-16-01,optimal_correct,True,16,16,16,,LURDDLUURDLURRDD,True,1,0,2,5.985,2
+tool,,native,ollama,qwen2.5:3b,8puzzle,16,2,8puzzle-16-02,optimal_correct,True,16,16,16,,LLUURRDDLULURDRD,True,1,0,2,6.140000000000001,2
+tool,,native,ollama,qwen2.5:3b,8puzzle,16,3,8puzzle-16-03,optimal_correct,True,16,16,16,,RUURDLDRULDLURRD,True,1,0,2,6.1370000000000005,2
+tool,,native,ollama,qwen2.5:3b,8puzzle,16,4,8puzzle-16-04,optimal_correct,True,16,16,16,,ULDRURDLLURDLDRR,True,1,0,2,6.17,2
+tool,,native,ollama,qwen2.5:3b,8puzzle,16,5,8puzzle-16-05,illegal_path,,16,,10,move 1 (R) leaves the board,RULLDDRURD,True,1,0,2,6.09,2
+tool,,native,ollama,qwen2.5:3b,8puzzle,16,6,8puzzle-16-06,unparseable,,16,,,no JSON answer with a 'path' key,,True,1,1,2,17.087,2
+tool,,native,ollama,qwen2.5:3b,8puzzle,16,7,8puzzle-16-07,unparseable,,16,,,no JSON answer with a 'path' key,,True,1,1,2,17.393,2
+tool,,native,ollama,qwen2.5:3b,8puzzle,16,8,8puzzle-16-08,optimal_correct,True,16,16,16,,UURDRDLLURULDRRD,True,1,0,2,6.023,2
+tool,,native,ollama,qwen2.5:3b,8puzzle,16,9,8puzzle-16-09,unparseable,,16,,,no JSON answer with a 'path' key,,True,1,1,2,17.383,2
+tool,,native,ollama,qwen2.5:3b,8puzzle,16,10,8puzzle-16-10,optimal_correct,True,16,16,16,,DRURDDLLURURDLDR,True,1,0,2,6.054,2
+tool,,native,ollama,qwen2.5:3b,grid,5,1,grid-5-01,illegal_path,,7,,4,"does not start at S (0, 1)","2,2->2,3->2,4->2,5->1,5",True,1,0,2,6.03,2
+tool,,native,ollama,qwen2.5:3b,grid,5,2,grid-5-02,unparseable,,6,,,no JSON answer with a 'path' key,,True,2,2,3,9.248000000000001,3
+tool,,native,ollama,qwen2.5:3b,grid,5,3,grid-5-03,illegal_path,,3,,3,"step 2 (1, 1)->(2, 2) is not adjacent","0,1->1,1->2,2",True,1,0,2,5.6690000000000005,2
+tool,,native,ollama,qwen2.5:3b,grid,5,4,grid-5-04,illegal_path,,8,,33,"does not start at S (0, 1)","0,0->1,0->2,0->3,0->4,0->4,1->4,2->4,3->4,4",True,1,1,2,6.982,2
+tool,,native,ollama,qwen2.5:3b,grid,5,5,grid-5-05,unparseable,,10,,,no JSON answer with a 'path' key,,True,2,2,3,9.422,3
+tool,,native,ollama,qwen2.5:3b,grid,5,6,grid-5-06,optimal_correct,True,6,6,6,,"0,1->1,1->2,1->2,2->2,3->3,3->3,4",True,1,0,2,6.182,2
+tool,,native,ollama,qwen2.5:3b,grid,5,7,grid-5-07,unparseable,,6,,,no JSON answer with a 'path' key,,True,2,2,3,9.600999999999999,3
+tool,,native,ollama,qwen2.5:3b,grid,5,8,grid-5-08,unparseable,,4,,,no JSON answer with a 'path' key,,True,2,2,3,9.855,3
+tool,,native,ollama,qwen2.5:3b,grid,5,9,grid-5-09,optimal_correct,True,2,2,2,,"1,1->2,1->2,2",True,1,0,2,5.837,2
+tool,,native,ollama,qwen2.5:3b,grid,5,10,grid-5-10,unparseable,,5,,,no JSON answer with a 'path' key,,True,2,2,3,10.033000000000001,3
+tool,,native,ollama,qwen2.5:3b,grid,8,1,grid-8-01,illegal_path,,13,,56,"does not start at S (3, 1)","2,1->3,1->4,1->5,1->6,1->7,1->7,2->7,3->7,4->7,5->7,6->7,7->7,8",True,1,1,2,8.524,2
+tool,,native,ollama,qwen2.5:3b,grid,8,2,grid-8-02,illegal_path,,9,,21,"does not start at S (0, 3)","0,0->1,0->2,0->3,0->4,0->5,0->6,0->7,0->7,1->7,2->7,3->7,4->7,5->7,6->7,7",True,1,1,2,7.901,2
+tool,,native,ollama,qwen2.5:3b,grid,8,3,grid-8-03,illegal_path,,23,,35,"does not start at S (2, 0)","0,0->1,0->2,0->3,0->4,0->5,0->5,1->5,2->5,3->5,4->5,5->5,6->5,7->4,7->3,7->2,7->1,7->0,7->0,6->0,5->0,4->0,3->0,2->0,1->0,0",True,1,1,2,8.477,2
+tool,,native,ollama,qwen2.5:3b,grid,8,4,grid-8-04,illegal_path,,14,,33,"does not start at S (1, 0)","0,0->1,0->2,0->3,0->4,0->5,0->6,0->6,1->6,2->6,3->6,4->6,5->6,6->6,7",True,1,1,2,7.2219999999999995,2
+tool,,native,ollama,qwen2.5:3b,grid,8,5,grid-8-05,optimal_correct,True,11,11,11,,"2,1->2,2->2,3->2,4->3,4->4,4->5,4->6,4->7,4->7,5",True,1,0,2,6.911,2
+tool,,native,ollama,qwen2.5:3b,grid,8,6,grid-8-06,illegal_path,,17,,33,"does not end at G (5, 6)","0,0->1,0->2,0->3,0->4,0->5,0->6,0->7,0->7,1->7,2->7,3->7,4->7,5->7,6->7,7",True,1,1,2,8.183,2
+tool,,native,ollama,qwen2.5:3b,grid,8,7,grid-8-07,optimal_correct,True,8,8,8,,"2,1->3,1->3,2->4,2->4,3->4,4->4,5",True,1,0,2,6.587,2
+tool,,native,ollama,qwen2.5:3b,grid,8,8,grid-8-08,illegal_path,,11,,21,"does not end at G (6, 6)","2,1->1,1->0,1->0,2->0,3->0,4->0,5->0,6->0,7->0,8->1,8->2,8",True,1,1,2,7.923,2
+tool,,native,ollama,qwen2.5:3b,grid,8,9,grid-8-09,illegal_path,,8,,36,"does not start at S (2, 0)","2,2->2,3->2,4->2,5->2,6->2,7->2,8->3,8->4,8->5,8->6,8->7,8->8,8",True,1,1,2,6.954,2
+tool,,native,ollama,qwen2.5:3b,grid,8,10,grid-8-10,unparseable,,10,,,no JSON answer with a 'path' key,,False,0,0,1,14.281,1
+tool,,native,ollama,qwen2.5:3b,grid,12,1,grid-12-01,unparseable,,13,,,"model stuck repeating tokens (Ollama aborted): ollama HTTP 500: {""error"":""prediction aborted, token repeat limit reached""}",,,0,0,0,0.0,0
+tool,,native,ollama,qwen2.5:3b,grid,12,2,grid-12-02,illegal_path,,9,,34,"does not start at S (5, 4)","0,61->0,62->0,63->0,64->0,65->0,66->0,67->0,68->0,69->0,70->0,71->0,72->0,73->0,74->0,75->0,76",True,1,0,2,8.645,2
+tool,,native,ollama,qwen2.5:3b,grid,12,3,grid-12-03,unparseable,,16,,,no JSON answer with a 'path' key,,False,0,0,1,4.515,1
+tool,,native,ollama,qwen2.5:3b,grid,12,4,grid-12-04,unparseable,,13,,,no JSON answer with a 'path' key,,False,0,0,1,4.591,1
+tool,,native,ollama,qwen2.5:3b,grid,12,5,grid-12-05,illegal_path,,5,,15,"does not start at S (4, 4)","4,1->3,2->2,2->1,2->0,2->0,1->0,0->1,0->2,0->3,0->4,0",True,1,1,2,7.813000000000001,2
+tool,,native,ollama,qwen2.5:3b,grid,12,6,grid-12-06,illegal_path,,11,,45,"does not start at S (4, 5)","0,32->0,33->0,34->0,35->0,36->0,37->0,38->0,39->0,40->0,41->0,42->0,43->0,44->0,45->0,46->0,47->0,48",True,1,0,2,7.023,2
+tool,,native,ollama,qwen2.5:3b,grid,12,7,grid-12-07,unparseable,,17,,,no JSON answer with a 'path' key,,False,0,0,1,4.437,1
+tool,,native,ollama,qwen2.5:3b,grid,12,8,grid-12-08,illegal_path,,14,,120,"does not start at S (4, 1)","4,4->3,4->2,4->1,4->0,4->0,5->0,6->0,7->0,8->0,9->1,9->2,9->3,9->4,9->5,9->6,9->7,9->8,9->9,9->10,9->11,9->12,9->12,8->12,7->12,6->12,5->12,4->12,3->12,2->12,1->12,0->11,0->10,0->9,0->8,0->7,0->6,0->5,0->4,0->3,0->2,0->1,0->0,0",True,1,1,2,10.457999999999998,2
+tool,,native,ollama,qwen2.5:3b,grid,12,9,grid-12-09,illegal_path,,12,,137,"does not start at S (2, 3)","0,26->0,27->0,28->0,29->0,30->0,31->0,32->0,33->0,34->0,35->0,36->0,37->0,38->0,39->0,40->0,41->0,42->0,43->0,44->0,45->0,46->0,47->0,48->0,49->0,50->0,51->0,52->0,53->0,54->0,55->0,56->0,57->0,58->0,59->0,60->0,61->0,62->0,63->0,64->0,65->0,66->0,67->0,68->0,69->0,70->0,71->0,72->0,73->0,74->0,75->0,76->0,77->0,78->0,79->0,80->0,81->0,82->0,83->0,84->0,85",True,1,0,2,12.32,2
+tool,,native,ollama,qwen2.5:3b,grid,12,10,grid-12-10,unparseable,,11,,,no JSON answer with a 'path' key,,True,1,1,2,8.136,2
+tool,,native,ollama,qwen2.5:3b,grid,16,1,grid-16-01,illegal_path,,20,,13,"does not start at S (1, 6)","4,4->4,5->4,6->4,7->4,8->4,9->4,10->4,11->4,12->4,13->4,14->4,15->4,16",True,1,1,2,10.033,2
+tool,,native,ollama,qwen2.5:3b,grid,16,2,grid-16-02,illegal_path,,19,,9,"does not start at S (3, 4)","4,6->5,6->6,6->7,6->8,6->9,6->10,6->11,6->12,6->13,6->14,6->15,6",True,1,1,2,9.676,2
+tool,,native,ollama,qwen2.5:3b,grid,16,3,grid-16-03,unparseable,,24,,,no JSON answer with a 'path' key,,False,0,0,1,14.726,1
+tool,,native,ollama,qwen2.5:3b,grid,16,4,grid-16-04,unparseable,,24,,,"model stuck repeating tokens (Ollama aborted): ollama HTTP 500: {""error"":""prediction aborted, token repeat limit reached""}",,,0,0,0,0.0,0
+tool,,native,ollama,qwen2.5:3b,grid,16,5,grid-16-05,illegal_path,,26,,16,"does not start at S (1, 0)","0,0->1,0->2,0->3,0->4,0->5,0->6,0->7,0->8,0->9,0->10,0->11,0->12,0->13,0->14,0->15,0",True,1,1,2,10.339,2
+tool,,native,ollama,qwen2.5:3b,grid,16,6,grid-16-06,illegal_path,,14,,13,"does not start at S (4, 5)","4,3->4,4->4,5->4,6->4,7->4,8->4,9->4,10->4,11->4,12->4,13->4,14->4,15->4,16",True,1,1,2,8.708,2
+tool,,native,ollama,qwen2.5:3b,grid,16,7,grid-16-07,unparseable,,18,,,no JSON answer with a 'path' key,,False,0,0,1,6.327,1
+tool,,native,ollama,qwen2.5:3b,grid,16,8,grid-16-08,unparseable,,22,,,no JSON answer with a 'path' key,,False,0,0,1,14.381,1
+tool,,native,ollama,qwen2.5:3b,grid,16,9,grid-16-09,illegal_path,,17,,17,"does not start at S (6, 3)","15,0->14,0->13,0->12,0->11,0->10,0->9,0->8,0->7,0->6,0->5,0->4,0->3,0->2,0->1,0->0,0",True,1,1,2,12.375,2
+tool,,native,ollama,qwen2.5:3b,grid,16,10,grid-16-10,unparseable,,19,,,no JSON answer with a 'path' key,,False,0,0,1,6.103,1

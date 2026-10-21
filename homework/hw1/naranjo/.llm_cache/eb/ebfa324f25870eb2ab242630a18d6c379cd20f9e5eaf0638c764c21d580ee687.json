@@ -1,0 +1,15 @@
+{
+  "text": "{\"path\": [[1, 0], [2, 0], [3, 0], [4, 0], [5, 0], [6, 0], [7, 0], [7, 1], [7, 2], [7, 3], [7, 4], [7, 5], [7, 6], [7, 7]], \"cost\": 89}",
+  "backend": "ollama",
+  "model": "qwen2.5:3b",
+  "prompt": "You are solving a shortest-path problem on a weighted grid.\n\nThe grid is 8x8. Rows are numbered from 0 (top) to 7 (bottom), columns from 0 (left) to 7 (right).\nEach cell has a terrain type, and you pay the cost of a cell when you ENTER it:\n  '.' road  = 1\n  ',' grass = 3\n  '~' water = 8\n  'S' start, 'G' goal = 1\nYou move one cell per step: up, down, left or right (no diagonal moves), and you must stay inside the grid.\nThe cost of a path is the sum of the costs of every cell you enter after S (S itself is not charged).\n\n       0  1  2  3  4  5  6  7\n  0    .  .  ,  .  .  ,  .  .\n  1    S  ~  .  .  ~  .  ,  ,\n  2    .  .  .  ,  .  .  ,  ~\n  3    ,  .  ,  .  .  .  ,  .\n  4    .  ,  .  .  .  .  .  .\n  5    .  .  ,  ~  .  ,  .  .\n  6    .  .  .  ~  .  ~  .  G\n  7    .  ~  .  ,  ~  ,  ,  ,\n\nS is at [1, 0]. G is at [6, 7].\n\nFind the path from S to G with the LOWEST total cost.\n\nReply with ONLY a JSON object, no explanation, in exactly this format:\n{\"path\": [[row, col], [row, col], ...], \"cost\": <total cost>}\nThe path must list every cell from S to G, both included.",
+  "temperature": 0.0,
+  "seed": 0,
+  "elapsed": 8.506694200000084,
+  "meta": {
+    "eval_count": 95,
+    "prompt_eval_count": 448,
+    "total_duration": 6466912700
+  },
+  "cached_at": "2026-10-01T12:00:47"
+}

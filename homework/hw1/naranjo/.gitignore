@@ -1,0 +1,4 @@
+# The root .gitignore ignores every dotfile (".*"). The spec requires the LLM
+# transcripts to be committed, so re-include the cache here.
+!.llm_cache/
+!.llm_cache/**

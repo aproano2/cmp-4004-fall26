@@ -1,0 +1,21 @@
+size,instance,category,reason,reported_cost,true_cost,optimal_cost,cost_reported_ok,path,tool_called,grid_copy_exact,tool_error,tool_path,final_matches_tool,n_calls,prompt_tokens,output_tokens,gen_latency_s,key
+5,0,malformed,no_PATH_found,,,,,,True,False,rows must all have the same length,,,2,818,63,23.0,0711e7836f036830df8c3e05c1777d0e8eda46b073215c3a0b378421582fc72f
+5,1,tool_call_failed,HTTP 500,,,,,,,,HTTP 500 from server,,,0,0,0,0,
+5,2,malformed,no_PATH_found,,,,,,True,False,rows must all have the same length,,,2,810,74,23.81,8c9681824a19f7ca94431a226ec35728d7a7a61f8dacfe0dd87114c1e6adf227
+5,3,malformed,no_PATH_found,,,,,,True,False,rows must all have the same length,,,2,823,72,23.75,8c0cc8437d0725324ad73f0f53e3272c2cb01be5354d10316061ef4d8c820db9
+5,4,illegal,invalid_char,15,,,,COST:15,True,False,rows must all have the same length,,,2,817,46,18.85,2e88c6dc141129c94edb15faf2ec556efeaca4c721fa2eafcbae8e4ed6bb4539
+8,0,malformed,no_PATH_found,,,,,,True,False,rows must all have the same length,,,2,874,92,29.32,1bcb32022d93df1fe689370dd9894a4ece8a837df69ee9ed3c2a57d41e212a8c
+8,1,malformed,no_PATH_found,,,,,,True,False,rows must all have the same length,,,2,867,117,32.95,bf62fa28e3ec1f4fd8589f86cf405dde12f8a8f6bd9669f23390c5c282074c75
+8,2,correct,,23,23,23,True,RRDDRRRRDD,True,False,,RRDDRRRRDD,True,2,882,106,32.36,55849815c8eca5947327c9494f388935d3b11cafb419e221305c36c195e004ed
+8,3,illegal,out_of_bounds,113,,,,RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR,True,False,,RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR,False,2,919,118,36.55,d9e648b2968370dfe3255703fb4122d9e590dc92214c7a79589947a4a41d21a3
+8,4,illegal,invalid_char,-1,,,,COST:1,True,False,rows must all have the same length,,,2,869,66,24.78,578b30327e4195897067c821c402080605973790a32e7a85c93bf141d94bc3b5
+12,0,illegal,invalid_char,-1,,,,COST:1,True,False,rows must all have the same length,,,2,994,134,42.13,6ca925a3e4abcf63d2230aa246162b8f391c5cc94f624fcee01e836ea1036d19
+12,1,illegal,invalid_char,,,,,COST:,True,False,rows must all have the same length,,,2,982,129,40.0,eea6a61c020b2f248d8d1b88734bf78be9a55de0fae4f991e282bf6dd09b93c1
+12,2,malformed,no_PATH_found,,,,,,True,False,rows must all have the same length,,,2,1003,153,45.51,2df0565e3cca663c5aa9032cc83a570ac8acb850e6f57b15ab8ecb6bc9391cd0
+12,3,malformed,no_PATH_found,,,,,,True,False,rows must all have the same length,,,2,1023,724,147.53,6f032f673d1659ebb7f07f830fb61860cd33caeb8fdf17f93c24f0bbd9619bcb
+12,4,illegal,invalid_char,,,,,COST:,True,False,rows must all have the same length,,,2,992,147,64.38,5a9bbe6382dad46f7260ef6aa51bf5c0df481b239f6bc135b27b5b83593ad19b
+16,0,malformed,no_PATH_found,,,,,,False,,,,,1,485,700,137.17,5ce50f796788691d1130d5c723e255c96a8e3dd21d862f62293593694582f63e
+16,1,malformed,no_PATH_found,,,,,,True,False,rows must all have the same length,,,2,1145,281,75.59,8ca11c736fbaf757386935a7eb3fe4598a8940b898a91861e1fcbc5a5f72a248
+16,2,malformed,no_PATH_found,,,,,,False,,,,,1,493,700,137.95,0e80bae78f9c56b7b5e958fcceaa682d6aa75f1eb35622b6059e6ab3421914d6
+16,3,malformed,no_PATH_found,,,,,,True,False,rows must all have the same length,,,2,1180,218,86.58,254e51de8b20b73450c7ed4d1b5c71ce43dbb06c9677d0749731edbc7c9d30aa
+16,4,malformed,no_PATH_found,,,,,,False,,,,,1,485,700,158.78,2b5884aad670cbc39f49ec10e67510ac43d60a061865728e58651829bc57ae61

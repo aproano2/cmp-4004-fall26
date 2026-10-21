@@ -1,0 +1,81 @@
+instance,domain,level,system,model,temperature,seed,cached,seconds,tokens_in,tokens_out,category,reason,path,reported_cost,checker_cost,optimal_cost,suboptimal,wrong_cost,tolerant
+8puzzle-4-00,8puzzle,4,llm,qwen2.5:3b,0.0,0,False,10.871,178,130,illegal,paso 2: el blanco se sale del tablero con R,RRLURULLDD,12,,,False,False,False
+8puzzle-4-01,8puzzle,4,llm,qwen2.5:3b,0.0,0,False,2.282,179,25,illegal,paso 3: el blanco se sale del tablero con U,RRUUULLDDLLDUUURRRUULLDDRRR,16,,,False,False,False
+8puzzle-4-02,8puzzle,4,llm,qwen2.5:3b,0.0,0,False,2.306,177,25,illegal,paso 1: el blanco se sale del tablero con R,RRUUULLDDLLDUUURRRUULLDDRRR,16,,,False,False,False
+8puzzle-4-03,8puzzle,4,llm,qwen2.5:3b,0.0,0,False,18.561,,,no_termina,HTTPError: HTTP Error 500: Internal Server Error,,,,,False,False,False
+8puzzle-4-04,8puzzle,4,llm,qwen2.5:3b,0.0,0,False,2.261,179,25,illegal,paso 5: el blanco se sale del tablero con U,RRUUULLDDLLDUUURRRUULLDDRRR,16,,,False,False,False
+8puzzle-4-05,8puzzle,4,llm,qwen2.5:3b,0.0,0,False,2.281,179,25,illegal,paso 3: el blanco se sale del tablero con U,RRUUULLDDLLDUUURRRUULLDDRRR,16,,,False,False,False
+8puzzle-4-06,8puzzle,4,llm,qwen2.5:3b,0.0,0,False,2.304,179,25,illegal,paso 3: el blanco se sale del tablero con U,RRUUULLDDLLDUUURRRUULLDDRRR,16,,,False,False,False
+8puzzle-4-07,8puzzle,4,llm,qwen2.5:3b,0.0,0,False,2.275,179,23,illegal,paso 5: el blanco se sale del tablero con U,RRUUULLDDLLDUUULLLDDRRRR,16,,,False,False,False
+8puzzle-4-08,8puzzle,4,llm,qwen2.5:3b,0.0,0,False,2.247,177,25,illegal,paso 1: el blanco se sale del tablero con R,RRUUULLDDLLDUUURRRUULLDDRRR,16,,,False,False,False
+8puzzle-4-09,8puzzle,4,llm,qwen2.5:3b,0.0,0,False,2.293,177,25,illegal,paso 1: el blanco se sale del tablero con R,RRUUULLDDLLDUUURRRUULLDDRRR,16,,,False,False,False
+8puzzle-8-00,8puzzle,8,llm,qwen2.5:3b,0.0,0,False,2.271,179,25,illegal,paso 3: el blanco se sale del tablero con U,RRUUULLDDLLDUUURRRUULLDDRRR,15,,,False,False,False
+8puzzle-8-01,8puzzle,8,llm,qwen2.5:3b,0.0,0,False,2.274,177,25,illegal,paso 1: el blanco se sale del tablero con R,RRUUULLDDLLDUUURRRUULLDDRRR,16,,,False,False,False
+8puzzle-8-02,8puzzle,8,llm,qwen2.5:3b,0.0,0,False,2.921,178,130,illegal,paso 2: el blanco se sale del tablero con R,RRLURULLDD,12,,,False,False,False
+8puzzle-8-03,8puzzle,8,llm,qwen2.5:3b,0.0,0,False,2.975,178,130,illegal,paso 2: el blanco se sale del tablero con R,RRLURULLDD,12,,,False,False,False
+8puzzle-8-04,8puzzle,8,llm,qwen2.5:3b,0.0,0,False,2.282,177,25,illegal,paso 1: el blanco se sale del tablero con R,RRUUULLDDLLDUUURRRUULLDDRRR,16,,,False,False,False
+8puzzle-8-05,8puzzle,8,llm,qwen2.5:3b,0.0,0,False,2.291,179,25,illegal,paso 3: el blanco se sale del tablero con U,RRUUULLDDLLDUUURRRUULLDDRRR,16,,,False,False,False
+8puzzle-8-06,8puzzle,8,llm,qwen2.5:3b,0.0,0,False,2.219,178,25,illegal,paso 2: el blanco se sale del tablero con R,RRUUULLDDLLDUUURRRUULLDDRRR,16,,,False,False,False
+8puzzle-8-07,8puzzle,8,llm,qwen2.5:3b,0.0,0,False,2.273,177,25,illegal,paso 1: el blanco se sale del tablero con R,RRUUULLDDLLDUUURRRUULLDDRRR,16,,,False,False,False
+8puzzle-8-08,8puzzle,8,llm,qwen2.5:3b,0.0,0,False,2.904,178,130,illegal,paso 2: el blanco se sale del tablero con R,RRLURULLDD,12,,,False,False,False
+8puzzle-8-09,8puzzle,8,llm,qwen2.5:3b,0.0,0,False,302.059,,,no_termina,TimeoutError: timed out,,,,,False,False,False
+8puzzle-12-00,8puzzle,12,llm,qwen2.5:3b,0.0,0,False,2.974,178,130,illegal,paso 2: el blanco se sale del tablero con R,RRLURULLDD,12,,,False,False,False
+8puzzle-12-01,8puzzle,12,llm,qwen2.5:3b,0.0,0,False,302.037,,,no_termina,TimeoutError: timed out,,,,,False,False,False
+8puzzle-12-02,8puzzle,12,llm,qwen2.5:3b,0.0,0,False,302.041,,,no_termina,TimeoutError: timed out,,,,,False,False,False
+8puzzle-12-03,8puzzle,12,llm,qwen2.5:3b,0.0,0,False,302.057,,,no_termina,TimeoutError: timed out,,,,,False,False,False
+8puzzle-12-04,8puzzle,12,llm,qwen2.5:3b,0.0,0,False,2.309,177,25,illegal,paso 1: el blanco se sale del tablero con R,RRUUULLDDLLDUUURRRUULLDDRRR,16,,,False,False,False
+8puzzle-12-05,8puzzle,12,llm,qwen2.5:3b,0.0,0,False,302.039,,,no_termina,TimeoutError: timed out,,,,,False,False,False
+8puzzle-12-06,8puzzle,12,llm,qwen2.5:3b,0.0,0,False,2.274,177,25,illegal,paso 1: el blanco se sale del tablero con R,RRUUULLDDLLDUUURRRUULLDDRRR,16,,,False,False,False
+8puzzle-12-07,8puzzle,12,llm,qwen2.5:3b,0.0,0,False,2.298,179,25,illegal,paso 3: el blanco se sale del tablero con U,RRUUULLDDLLDUUURRRUULLDDRRR,15,,,False,False,False
+8puzzle-12-08,8puzzle,12,llm,qwen2.5:3b,0.0,0,False,302.058,,,no_termina,TimeoutError: timed out,,,,,False,False,False
+8puzzle-12-09,8puzzle,12,llm,qwen2.5:3b,0.0,0,False,2.274,177,23,illegal,paso 1: el blanco se sale del tablero con R,RRUUULLDDLLDUUULLLLDDRRRR,16,,,False,False,False
+8puzzle-16-00,8puzzle,16,llm,qwen2.5:3b,0.0,0,False,3.326,178,188,illegal,paso 2: el blanco se sale del tablero con R,RRRDDRDDDR,9,,,False,False,False
+8puzzle-16-01,8puzzle,16,llm,qwen2.5:3b,0.0,0,False,2.266,177,25,illegal,paso 1: el blanco se sale del tablero con R,RRUUULLDDLLDUUURRRUULLDDRRR,16,,,False,False,False
+8puzzle-16-02,8puzzle,16,llm,qwen2.5:3b,0.0,0,False,302.053,,,no_termina,TimeoutError: timed out,,,,,False,False,False
+8puzzle-16-03,8puzzle,16,llm,qwen2.5:3b,0.0,0,False,2.924,178,130,illegal,paso 2: el blanco se sale del tablero con R,RRLURULLDD,12,,,False,False,False
+8puzzle-16-04,8puzzle,16,llm,qwen2.5:3b,0.0,0,False,4.095,177,23,illegal,paso 1: el blanco se sale del tablero con R,RRUUULLDDLLDUUULLLLDDRRRR,16,,,False,False,False
+8puzzle-16-05,8puzzle,16,llm,qwen2.5:3b,0.0,0,False,2.306,179,25,illegal,paso 3: el blanco se sale del tablero con U,RRUUULLDDLLDUUURRRUULLDDRRR,16,,,False,False,False
+8puzzle-16-06,8puzzle,16,llm,qwen2.5:3b,0.0,0,False,2.294,179,25,illegal,paso 3: el blanco se sale del tablero con U,RRUUULLDDLLDUUURRRUULLDDRRR,16,,,False,False,False
+8puzzle-16-07,8puzzle,16,llm,qwen2.5:3b,0.0,0,False,2.947,179,130,illegal,el camino termina fuera de la meta,RRLURULLDD,12,,,False,False,False
+8puzzle-16-08,8puzzle,16,llm,qwen2.5:3b,0.0,0,False,2.294,179,25,illegal,paso 3: el blanco se sale del tablero con U,RRUUULLDDLLDUUURRRUULLDDRRR,16,,,False,False,False
+8puzzle-16-09,8puzzle,16,llm,qwen2.5:3b,0.0,0,False,2.303,179,25,illegal,paso 3: el blanco se sale del tablero con U,RRUUULLDDLLDUUURRRUULLDDRRR,16,,,False,False,False
+grid-5-00,grid,5,llm,qwen2.5:3b,0.0,0,False,7.45,136,803,illegal,paso 4: se sale del tablero con R,RRRRDRRR,19,,,False,False,False
+grid-5-01,grid,5,llm,qwen2.5:3b,0.0,0,False,3.747,135,262,illegal,el camino termina fuera de la meta,RDRDR,12,,,False,False,False
+grid-5-02,grid,5,llm,qwen2.5:3b,0.0,0,False,7.947,134,875,illegal,paso 1: símbolo inválido 'S' (solo U/D/L/R),SULUR,14,,,False,False,False
+grid-5-03,grid,5,llm,qwen2.5:3b,0.0,0,False,9.175,136,1060,illegal,el camino termina fuera de la meta,RRRDDLRL,33,,,False,False,False
+grid-5-04,grid,5,llm,qwen2.5:3b,0.0,0,False,7.147,136,733,illegal,el camino termina fuera de la meta,ULDRDR,24,,,False,False,True
+grid-5-05,grid,5,llm,qwen2.5:3b,0.0,0,False,2.197,137,13,illegal,paso 6: se sale del tablero con U,RLRLRU,18,,,False,False,False
+grid-5-06,grid,5,llm,qwen2.5:3b,0.0,0,False,9.365,135,1105,illegal,paso 5: símbolo inválido 'G' (solo U/D/L/R),RDDLGR,15,,,False,False,False
+grid-5-07,grid,5,llm,qwen2.5:3b,0.0,0,False,5.049,135,421,illegal,paso 6: se sale del tablero con D,RRDDDD,5,,,False,False,False
+grid-5-08,grid,5,llm,qwen2.5:3b,0.0,0,False,302.03,,,no_termina,TimeoutError: timed out,,,,,False,False,False
+grid-5-09,grid,5,llm,qwen2.5:3b,0.0,0,False,302.057,,,no_termina,TimeoutError: timed out,,,,,False,False,False
+grid-8-00,grid,8,llm,qwen2.5:3b,0.0,0,False,302.043,,,no_termina,TimeoutError: timed out,,,,,False,False,False
+grid-8-01,grid,8,llm,qwen2.5:3b,0.0,0,False,10.918,,,no_termina,HTTPError: HTTP Error 500: Internal Server Error,,,,,False,False,False
+grid-8-02,grid,8,llm,qwen2.5:3b,0.0,0,False,302.075,,,no_termina,TimeoutError: timed out,,,,,False,False,False
+grid-8-03,grid,8,llm,qwen2.5:3b,0.0,0,False,302.048,,,no_termina,TimeoutError: timed out,,,,,False,False,False
+grid-8-04,grid,8,llm,qwen2.5:3b,0.0,0,False,171.912,175,22790,illegal,paso 1: símbolo inválido '1' (solo U/D/L/R),1MOVERIGHTTO(34):COST=1,8,,,False,False,True
+grid-8-05,grid,8,llm,qwen2.5:3b,0.0,0,False,302.056,,,no_termina,TimeoutError: timed out,,,,,False,False,False
+grid-8-06,grid,8,llm,qwen2.5:3b,0.0,0,False,3.963,173,270,illegal,el camino termina fuera de la meta,RRR,3,,,False,False,False
+grid-8-07,grid,8,llm,qwen2.5:3b,0.0,0,False,5.679,174,546,illegal,el camino termina fuera de la meta,RRRRRR,6,,,False,False,False
+grid-8-08,grid,8,llm,qwen2.5:3b,0.0,0,False,267.361,174,35064,malformed,no se pudo leer PATH y COST,,,,,False,False,False
+grid-8-09,grid,8,llm,qwen2.5:3b,0.0,0,False,3.208,174,144,illegal,paso 4: se sale del tablero con U,RRRUURRRU,32,,,False,False,False
+grid-12-00,grid,12,llm,qwen2.5:3b,0.0,0,False,33.193,,,no_termina,HTTPError: HTTP Error 500: Internal Server Error,,,,,False,False,False
+grid-12-01,grid,12,llm,qwen2.5:3b,0.0,0,False,8.771,256,965,illegal,el camino termina fuera de la meta,DLRRRRRRR,12,,,False,False,False
+grid-12-02,grid,12,llm,qwen2.5:3b,0.0,0,False,302.062,,,no_termina,TimeoutError: timed out,,,,,False,False,False
+grid-12-03,grid,12,llm,qwen2.5:3b,0.0,0,False,302.037,,,no_termina,TimeoutError: timed out,,,,,False,False,False
+grid-12-04,grid,12,llm,qwen2.5:3b,0.0,0,False,302.071,,,no_termina,TimeoutError: timed out,,,,,False,False,False
+grid-12-05,grid,12,llm,qwen2.5:3b,0.0,0,False,30.354,,,no_termina,HTTPError: HTTP Error 500: Internal Server Error,,,,,False,False,False
+grid-12-06,grid,12,llm,qwen2.5:3b,0.0,0,False,134.717,253,17633,malformed,no se pudo leer PATH y COST,,,,,False,False,False
+grid-12-07,grid,12,llm,qwen2.5:3b,0.0,0,False,302.047,,,no_termina,TimeoutError: timed out,,,,,False,False,False
+grid-12-08,grid,12,llm,qwen2.5:3b,0.0,0,False,50.166,253,6322,malformed,no se pudo leer PATH y COST,,,,,False,False,False
+grid-12-09,grid,12,llm,qwen2.5:3b,0.0,0,False,302.043,,,no_termina,TimeoutError: timed out,,,,,False,False,False
+grid-16-00,grid,16,llm,qwen2.5:3b,0.0,0,False,302.074,,,no_termina,TimeoutError: timed out,,,,,False,False,False
+grid-16-01,grid,16,llm,qwen2.5:3b,0.0,0,False,35.596,,,no_termina,HTTPError: HTTP Error 500: Internal Server Error,,,,,False,False,False
+grid-16-02,grid,16,llm,qwen2.5:3b,0.0,0,False,13.185,,,no_termina,HTTPError: HTTP Error 500: Internal Server Error,,,,,False,False,False
+grid-16-03,grid,16,llm,qwen2.5:3b,0.0,0,False,302.049,,,no_termina,TimeoutError: timed out,,,,,False,False,False
+grid-16-04,grid,16,llm,qwen2.5:3b,0.0,0,False,29.921,,,no_termina,HTTPError: HTTP Error 500: Internal Server Error,,,,,False,False,False
+grid-16-05,grid,16,llm,qwen2.5:3b,0.0,0,False,30.213,,,no_termina,HTTPError: HTTP Error 500: Internal Server Error,,,,,False,False,False
+grid-16-06,grid,16,llm,qwen2.5:3b,0.0,0,False,26.846,,,no_termina,HTTPError: HTTP Error 500: Internal Server Error,,,,,False,False,False
+grid-16-07,grid,16,llm,qwen2.5:3b,0.0,0,False,302.035,,,no_termina,TimeoutError: timed out,,,,,False,False,False
+grid-16-08,grid,16,llm,qwen2.5:3b,0.0,0,False,302.055,,,no_termina,TimeoutError: timed out,,,,,False,False,False
+grid-16-09,grid,16,llm,qwen2.5:3b,0.0,0,False,302.051,,,no_termina,TimeoutError: timed out,,,,,False,False,False

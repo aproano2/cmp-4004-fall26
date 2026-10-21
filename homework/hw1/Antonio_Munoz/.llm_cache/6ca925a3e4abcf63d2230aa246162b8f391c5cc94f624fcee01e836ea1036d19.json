@@ -1,0 +1,76 @@
+{
+ "key": "6ca925a3e4abcf63d2230aa246162b8f391c5cc94f624fcee01e836ea1036d19",
+ "tag": "tool_grid12_0_c1",
+ "request": {
+  "backend": "ollama",
+  "model": "qwen2.5:3b",
+  "messages": [
+   {
+    "role": "user",
+    "content": "Find the minimum-cost path from S to G.\nTerrain costs: '.' = 1, ',' = 3, '~' = 8.\nMove up/down/left/right only (U = up, toward the first row; D = down; L = left; R = right).\nThe cost of a path is the sum of the terrain cost of every cell you enter (S itself is not counted; G costs 1).\nGrid (one row per line):\n~..,....,.~.\n..,.~.,..,..\n..,S.,,...~,\n.....,..,,,~\n.....,..,~.~\n~,.,~,~,....\n,,..,....~,~\n.,.....,.,..\n.~,..,,,,.,,\n,.....,.,.~.\n......G....,\n...,..,,..,,\n\nYou have a tool called astar_solve that returns the exact minimum-cost path for a grid. Call it with the grid exactly as shown above: a list with one string per row. After you receive the result, reply with exactly two lines and nothing else:\nPATH: <letters U/D/L/R, no separators>\nCOST: <integer>\n"
+   }
+  ],
+  "temperature": 0.0,
+  "seed": 0,
+  "num_predict": 700,
+  "num_ctx": 4096,
+  "replicate": 0,
+  "tools": [
+   {
+    "type": "function",
+    "function": {
+     "name": "astar_solve",
+     "description": "Exact A* solver for a weighted grid. Returns the minimum-cost path as U/D/L/R letters and its total cost.",
+     "parameters": {
+      "type": "object",
+      "properties": {
+       "grid": {
+        "type": "array",
+        "items": {
+         "type": "string"
+        },
+        "description": "The grid, one string per row, using only the characters . , ~ S G exactly as in the problem."
+       }
+      },
+      "required": [
+       "grid"
+      ]
+     }
+    }
+   }
+  ]
+ },
+ "text": "",
+ "tool_calls": [
+  {
+   "id": "call_if88xijt",
+   "function": {
+    "index": 0,
+    "name": "astar_solve",
+    "arguments": {
+     "grid": [
+      "~..,....,.~.",
+      "..,.~.,..,..",
+      "..,S.,,...~.",
+      ".....,..,,,~.",
+      ".....,..,~.~.",
+      "~.,~,~,....,",
+      ",..,~,~,~,...",
+      ",.,.....,.,..",
+      "~,~,..,,,,.,.",
+      "..,.....,.,~.",
+      "......,..,,..",
+      "~,..,G,.....,."
+     ]
+    }
+   }
+  }
+ ],
+ "done_reason": "stop",
+ "prompt_tokens": 431,
+ "output_tokens": 125,
+ "gen_latency_s": 31.563,
+ "load_s": 0.002,
+ "wall_s": 31.566,
+ "retries": 0
+}

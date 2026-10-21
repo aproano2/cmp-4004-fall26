@@ -1,0 +1,40 @@
+The instance where BFS is suboptimal (weighted grid, non-uniform costs)
+size 12x12, instance 9 of the seeded bank
+terrain: '.' = 1, ',' = 3, '~' = 8;  S = start, G = goal
+
+  grid as given:
+  . , , . . . , . . , , .
+  . , ~ , , , . . . . . ,
+  . ~ . S . . . ~ . , . .
+  . . , . . . . . . . . .
+  . . . . . , . . , . . .
+  . , . ~ ~ , . . . ~ , ~
+  ~ . ~ ~ . , , , . . . ~
+  . ~ . ~ . . , ~ . . . ~
+  . . . . . . . . G , . ,
+  , . , . . . ~ . , . . .
+  . ~ . . . ~ , . . . , .
+  . , . . . . . . , ~ ~ .
+
+  BFS (fewest moves) : DDDDDDRRRRR -> cost 32
+  UCS (least cost)    : DRRRDDRRDDD -> cost 11
+  A* + Manhattan      : cost 11
+
+  BFS counts MOVES, so it prefers the short-looking route through
+  expensive terrain: +21 cost (190.9% over the optimum).
+
+  cells on both paths = 'x', only BFS = 'a', only UCS = 'b'
+  . , , . . . , . . , , .
+  . , ~ , , , . . . . . ,
+  . ~ . x . . . ~ . , . .
+  . . , x b b b . . . . .
+  . . . a . , b . , . . .
+  . , . a ~ , b b b ~ , ~
+  ~ . ~ a . , , , b . . ~
+  . ~ . a . . , ~ b . . ~
+  . . . a a a a a x , . ,
+  , . , . . . ~ . , . . .
+  . ~ . . . ~ , . . . , .
+  . , . . . . . . , ~ ~ .
+  BFS: moves='DDDDDDRRRRR' -> cost 32
+  UCS: moves='DRRRDDRRDDD' -> cost 11

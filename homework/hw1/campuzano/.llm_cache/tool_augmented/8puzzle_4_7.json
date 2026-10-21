@@ -1,0 +1,21 @@
+{
+  "prompt": "You have access to one external search tool.\n\nAvailable tool:\nastar\n\nThe astar tool runs a deterministic A* search implementation and returns\nthe computed path and cost.\n\nProblem:\ndomain = 8puzzle\nlevel = 4\ninstance = 7\n\nSelect the tool that should solve this search problem.\n\nReturn ONLY valid JSON in exactly this format:\n{\"tool\":\"astar\"}\n\nDo not solve the path yourself.\nDo not include Markdown.\nDo not include explanations.\n",
+  "response": "{\"tool\":\"astar\"}",
+  "tool_requested": true,
+  "result": {
+    "domain": "8puzzle",
+    "level": 4,
+    "instance": 7,
+    "model": "qwen2.5:3b",
+    "tool_requested": true,
+    "success": true,
+    "solution_cost": 4,
+    "solution_length": 4,
+    "expansions": 5,
+    "max_frontier": 6,
+    "llm_time_s": 6.872858699876815,
+    "search_time_s": 0.00011879997327923775,
+    "total_time_s": 6.872977499850094,
+    "response": "{\"tool\":\"astar\"}"
+  }
+}

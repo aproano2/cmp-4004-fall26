@@ -1,0 +1,15 @@
+{
+  "text": "{\"path\": [[3, 4], [2, 4], [1, 4], [0, 4], [0, 5], [0, 6], [0, 7], [0, 8], [0, 9], [0, 10], [0, 11], [0, 12], [0, 13]], \"cost\": 14}",
+  "backend": "ollama",
+  "model": "qwen2.5:3b",
+  "prompt": "You are solving a shortest-path problem on a weighted grid.\n\nThe grid is 16x16. Rows are numbered from 0 (top) to 15 (bottom), columns from 0 (left) to 15 (right).\nEach cell has a terrain type, and you pay the cost of a cell when you ENTER it:\n  '.' road  = 1\n  ',' grass = 3\n  '~' water = 8\n  'S' start, 'G' goal = 1\nYou move one cell per step: up, down, left or right (no diagonal moves), and you must stay inside the grid.\nThe cost of a path is the sum of the costs of every cell you enter after S (S itself is not charged).\n\n       0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15\n  0    ,  .  ,  .  .  ~  ,  ~  .  .  ~  ~  .  .  ~  ,\n  1    .  ~  .  .  .  .  ,  ,  .  .  ,  .  .  .  .  .\n  2    .  .  ,  .  .  ~  .  ~  ~  .  .  ,  .  .  ,  .\n  3    .  .  .  .  S  .  .  .  ~  ,  .  .  .  .  .  .\n  4    .  ~  .  .  .  .  .  .  .  .  .  ,  ,  ~  ,  .\n  5    ,  ,  .  ,  ~  .  .  .  .  .  .  ,  .  .  .  .\n  6    .  .  ,  ,  .  .  .  .  .  .  ~  ,  .  .  .  .\n  7    .  .  .  .  .  .  ,  ,  .  ,  .  .  ,  ,  ,  .\n  8    .  ,  .  .  ,  .  .  .  ~  ~  .  ,  .  ,  .  .\n  9    ,  .  ,  .  .  .  .  .  ~  .  ~  .  ,  ~  .  .\n 10    ,  .  .  ,  .  ,  .  .  .  .  ,  .  ~  .  .  ,\n 11    ~  ,  .  ~  ~  .  ,  .  ,  .  ~  ,  .  G  ,  .\n 12    .  ~  .  ,  ,  ,  .  .  .  .  .  .  .  ,  ,  ,\n 13    .  .  ~  .  .  .  ,  .  .  ,  .  .  ,  .  .  .\n 14    .  ,  ,  .  ~  .  ,  .  .  .  ,  ,  .  ,  .  ,\n 15    ,  ~  ,  .  .  ~  .  .  ,  ~  .  .  .  ,  .  ~\n\nS is at [3, 4]. G is at [11, 13].\n\nFind the path from S to G with the LOWEST total cost.\n\nReply with ONLY a JSON object, no explanation, in exactly this format:\n{\"path\": [[row, col], [row, col], ...], \"cost\": <total cost>}\nThe path must list every cell from S to G, both included.",
+  "temperature": 0.0,
+  "seed": 0,
+  "elapsed": 9.493324399999892,
+  "meta": {
+    "eval_count": 93,
+    "prompt_eval_count": 885,
+    "total_duration": 7463892500
+  },
+  "cached_at": "2026-10-01T12:06:03"
+}

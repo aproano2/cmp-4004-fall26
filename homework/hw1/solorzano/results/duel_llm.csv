@@ -1,0 +1,81 @@
+arm,solver,backend,model,domain,level,instance_id,key,category,cost_reported_ok,optimal_cost,actual_cost,reported_cost,detail,answer,tool_used,tool_calls,tool_errors,n_llm_calls,latency_s,cache_hits
+llm,,ollama,qwen2.5:3b,8puzzle,4,1,8puzzle-4-01,illegal_path,,4,,6,move 6 (U) leaves the board,RDLUUU,False,0,0,1,9.530149459838867,0
+llm,,ollama,qwen2.5:3b,8puzzle,4,2,8puzzle-4-02,illegal_path,,4,,4,move 2 (U) leaves the board,RULU,False,0,0,1,7.136588096618652,0
+llm,,ollama,qwen2.5:3b,8puzzle,4,3,8puzzle-4-03,illegal_path,,4,,5,move 1 (R) leaves the board,RDLUR,False,0,0,1,6.009087085723877,0
+llm,,ollama,qwen2.5:3b,8puzzle,4,4,8puzzle-4-04,illegal_path,,4,,6,move 2 (R) leaves the board,RRURUR,False,0,0,1,7.576174259185791,0
+llm,,ollama,qwen2.5:3b,8puzzle,4,5,8puzzle-4-05,illegal_path,,4,,4,move 1 (L) leaves the board,LRLR,False,0,0,1,6.8733437061309814,0
+llm,,ollama,qwen2.5:3b,8puzzle,4,6,8puzzle-4-06,illegal_path,,4,,4,move 2 (U) leaves the board,RULU,False,0,0,1,7.225601673126221,0
+llm,,ollama,qwen2.5:3b,8puzzle,4,7,8puzzle-4-07,illegal_path,,4,,4,move 2 (U) leaves the board,RULU,False,0,0,1,7.1086530685424805,0
+llm,,ollama,qwen2.5:3b,8puzzle,4,8,8puzzle-4-08,unparseable,,4,,,no JSON answer with a 'path' key,,False,0,0,1,18.671420097351074,0
+llm,,ollama,qwen2.5:3b,8puzzle,4,9,8puzzle-4-09,illegal_path,,4,,7,move 6 (U) leaves the board,DDULUUL,False,0,0,1,7.189289569854736,0
+llm,,ollama,qwen2.5:3b,8puzzle,4,10,8puzzle-4-10,illegal_path,,4,,4,move 1 (R) leaves the board,RRDR,False,0,0,1,6.248346328735352,0
+llm,,ollama,qwen2.5:3b,8puzzle,8,1,8puzzle-8-01,unparseable,,8,,,no JSON answer with a 'path' key,,False,0,0,1,36.87028503417969,0
+llm,,ollama,qwen2.5:3b,8puzzle,8,2,8puzzle-8-02,unparseable,,8,,,no JSON answer with a 'path' key,,False,0,0,1,41.8588445186615,0
+llm,,ollama,qwen2.5:3b,8puzzle,8,3,8puzzle-8-03,illegal_path,,8,,4,path does not end at the goal,DLUR,False,0,0,1,12.336281299591064,0
+llm,,ollama,qwen2.5:3b,8puzzle,8,4,8puzzle-8-04,illegal_path,,8,,7,move 2 (R) leaves the board,RRUUDRL,False,0,0,1,15.12330675125122,0
+llm,,ollama,qwen2.5:3b,8puzzle,8,5,8puzzle-8-05,illegal_path,,8,,9,move 1 (R) leaves the board,RRDDRLUD,False,0,0,1,36.90291953086853,0
+llm,,ollama,qwen2.5:3b,8puzzle,8,6,8puzzle-8-06,unparseable,,8,,,no JSON answer with a 'path' key,,False,0,0,1,42.36894679069519,0
+llm,,ollama,qwen2.5:3b,8puzzle,8,7,8puzzle-8-07,illegal_path,,8,,6,path does not end at the goal,RUDUDUD,False,0,0,1,14.704107284545898,0
+llm,,ollama,qwen2.5:3b,8puzzle,8,8,8puzzle-8-08,unparseable,,8,,,no JSON answer with a 'path' key,,False,0,0,1,42.417497634887695,0
+llm,,ollama,qwen2.5:3b,8puzzle,8,9,8puzzle-8-09,unparseable,,8,,,no JSON answer with a 'path' key,,False,0,0,1,43.03292441368103,0
+llm,,ollama,qwen2.5:3b,8puzzle,8,10,8puzzle-8-10,illegal_path,,8,,8,move 2 (D) leaves the board,RDLUDRL,False,0,0,1,21.304999589920044,0
+llm,,ollama,qwen2.5:3b,8puzzle,12,1,8puzzle-12-01,unparseable,,12,,,no JSON answer with a 'path' key,,False,0,0,1,42.97827339172363,0
+llm,,ollama,qwen2.5:3b,8puzzle,12,2,8puzzle-12-02,illegal_path,,12,,8,move 1 (R) leaves the board,RRUURUURU,False,0,0,1,18.92879295349121,0
+llm,,ollama,qwen2.5:3b,8puzzle,12,3,8puzzle-12-03,illegal_path,,12,,4,move 5 (R) leaves the board,RRUUR,False,0,0,1,16.524097204208374,0
+llm,,ollama,qwen2.5:3b,8puzzle,12,4,8puzzle-12-04,illegal_path,,12,,8,move 7 (R) leaves the board,RRDDLRRD,False,0,0,1,14.245237588882446,0
+llm,,ollama,qwen2.5:3b,8puzzle,12,5,8puzzle-12-05,illegal_path,,12,,13,move 1 (R) leaves the board,RRUURURURURURU,False,0,0,1,19.474794149398804,0
+llm,,ollama,qwen2.5:3b,8puzzle,12,6,8puzzle-12-06,illegal_path,,12,,8,move 2 (R) leaves the board,RRDLDULU,False,0,0,1,14.956913232803345,0
+llm,,ollama,qwen2.5:3b,8puzzle,12,7,8puzzle-12-07,illegal_path,,12,,4,move 1 (R) leaves the board,RRDD,False,0,0,1,13.745842456817627,0
+llm,,ollama,qwen2.5:3b,8puzzle,12,8,8puzzle-12-08,illegal_path,,12,,4,move 2 (U) leaves the board,RULU,False,0,0,1,14.765126466751099,0
+llm,,ollama,qwen2.5:3b,8puzzle,12,9,8puzzle-12-09,illegal_path,,12,,7,move 2 (U) leaves the board,RUDUDUD,False,0,0,1,16.209294319152832,0
+llm,,ollama,qwen2.5:3b,8puzzle,12,10,8puzzle-12-10,unparseable,,12,,,no JSON answer with a 'path' key,,False,0,0,1,43.723326444625854,0
+llm,,ollama,qwen2.5:3b,8puzzle,16,1,8puzzle-16-01,illegal_path,,16,,8,move 5 (R) leaves the board,RUDURUDU,False,0,0,1,16.85615038871765,0
+llm,,ollama,qwen2.5:3b,8puzzle,16,2,8puzzle-16-02,unparseable,,16,,,no JSON answer with a 'path' key,,False,0,0,1,44.50027656555176,0
+llm,,ollama,qwen2.5:3b,8puzzle,16,3,8puzzle-16-03,illegal_path,,16,,5,path does not end at the goal,RRUDL,False,0,0,1,16.64729905128479,0
+llm,,ollama,qwen2.5:3b,8puzzle,16,4,8puzzle-16-04,illegal_path,,16,,8,path does not end at the goal,RDLUDRLU,False,0,0,1,14.537116527557373,0
+llm,,ollama,qwen2.5:3b,8puzzle,16,5,8puzzle-16-05,unparseable,,16,,,no JSON answer with a 'path' key,,False,0,0,1,44.474674701690674,0
+llm,,ollama,qwen2.5:3b,8puzzle,16,6,8puzzle-16-06,illegal_path,,16,,8,move 3 (L) leaves the board,DDLLDDRRRR,False,0,0,1,26.601556539535522,0
+llm,,ollama,qwen2.5:3b,8puzzle,16,7,8puzzle-16-07,unparseable,,16,,,no JSON answer with a 'path' key,,False,0,0,1,44.734151124954224,0
+llm,,ollama,qwen2.5:3b,8puzzle,16,8,8puzzle-16-08,illegal_path,,16,,4,path does not end at the goal,RRUU,False,0,0,1,14.253282070159912,0
+llm,,ollama,qwen2.5:3b,8puzzle,16,9,8puzzle-16-09,illegal_path,,16,,8,move 5 (D) leaves the board,RDLDDRLLD,False,0,0,1,14.3169264793396,0
+llm,,ollama,qwen2.5:3b,8puzzle,16,10,8puzzle-16-10,illegal_path,,16,,2,path does not end at the goal,RR,False,0,0,1,10.831064224243164,0
+llm,,ollama,qwen2.5:3b,grid,5,1,grid-5-01,unparseable,,7,,,no JSON answer with a 'path' key,,False,0,0,1,45.08840250968933,0
+llm,,ollama,qwen2.5:3b,grid,5,2,grid-5-02,illegal_path,,6,,8,"does not end at G (3, 3)","1,1->1,0->1,1->1,2->1,3->1,4->2,4->2,5->3,5",False,0,0,1,34.96047878265381,0
+llm,,ollama,qwen2.5:3b,grid,5,3,grid-5-03,unparseable,,3,,,no JSON answer with a 'path' key,,False,0,0,1,44.95615100860596,0
+llm,,ollama,qwen2.5:3b,grid,5,4,grid-5-04,illegal_path,,8,,20,"does not start at S (0, 1)","0,0->0,1->0,2->1,2->2,2->2,3->1,4->1,3->1,2->0,2->0,1->2,4",False,0,0,1,33.71364688873291,0
+llm,,ollama,qwen2.5:3b,grid,5,5,grid-5-05,unparseable,,10,,,no JSON answer with a 'path' key,,False,0,0,1,45.081570625305176,0
+llm,,ollama,qwen2.5:3b,grid,5,6,grid-5-06,unparseable,,6,,,no JSON answer with a 'path' key,,False,0,0,1,44.95088076591492,0
+llm,,ollama,qwen2.5:3b,grid,5,7,grid-5-07,illegal_path,,6,,25,"does not end at G (3, 3)","0,0->0,1->0,2->0,3->0,4->1,4->2,4->3,4->4,4",False,0,0,1,28.78212261199951,0
+llm,,ollama,qwen2.5:3b,grid,5,8,grid-5-08,illegal_path,,4,,11,"does not start at S (1, 1)","1,0->1,1->2,1->2,2->2,3->2,4->2,5->3,5->4,5->5,5->5,4->5,3",False,0,0,1,25.95680570602417,0
+llm,,ollama,qwen2.5:3b,grid,5,9,grid-5-09,unparseable,,2,,,no JSON answer with a 'path' key,,False,0,0,1,45.00903272628784,0
+llm,,ollama,qwen2.5:3b,grid,5,10,grid-5-10,illegal_path,,5,,50,"does not start at S (1, 0)","0,0->0,1->0,2->0,3->1,3->1,2->1,1->1,0->2,0->2,1->2,2->3,2->3,1->3,0->4,0->4,1->4,2->4,3->4,4",False,0,0,1,38.703338384628296,0
+llm,,ollama,qwen2.5:3b,grid,8,1,grid-8-01,illegal_path,,13,,14,"does not start at S (3, 1)","2,2->3,2->4,2->5,2->6,2->6,3->6,4",False,0,0,1,25.701308250427246,0
+llm,,ollama,qwen2.5:3b,grid,8,2,grid-8-02,unparseable,,9,,,no JSON answer with a 'path' key,,False,0,0,1,44.85589098930359,0
+llm,,ollama,qwen2.5:3b,grid,8,3,grid-8-03,unparseable,,23,,,no JSON answer with a 'path' key,,False,0,0,1,45.07785248756409,0
+llm,,ollama,qwen2.5:3b,grid,8,4,grid-8-04,illegal_path,,14,,15,"does not start at S (1, 0)","1,1->0,1->0,0->0,1->0,2->0,3->0,4->0,5->0,6->0,7->1,7->2,7->3,7->4,7->5,7->6,7->7,7->7,6",False,0,0,1,37.938802003860474,0
+llm,,ollama,qwen2.5:3b,grid,8,5,grid-8-05,unparseable,,11,,,no JSON answer with a 'path' key,,False,0,0,1,45.224600315093994,0
+llm,,ollama,qwen2.5:3b,grid,8,6,grid-8-06,illegal_path,,17,,15,"does not end at G (5, 6)","0,0->0,1->0,2->0,3->0,4->0,5->0,6->0,7",False,0,0,1,22.885583877563477,0
+llm,,ollama,qwen2.5:3b,grid,8,7,grid-8-07,unparseable,,8,,,no JSON answer with a 'path' key,,False,0,0,1,45.082279920578,0
+llm,,ollama,qwen2.5:3b,grid,8,8,grid-8-08,illegal_path,,11,,4,"does not end at G (6, 6)","2,1->3,1->4,1->5,1->6,1",False,0,0,1,18.739705324172974,0
+llm,,ollama,qwen2.5:3b,grid,8,9,grid-8-09,illegal_path,,8,,10,"does not start at S (2, 0)","3,3->3,4->3,5->3,6->3,7->4,7->5,7->6,7->6,6->6,5->6,4",False,0,0,1,10.426066398620605,0
+llm,,ollama,qwen2.5:3b,grid,8,10,grid-8-10,illegal_path,,10,,11,"does not start at S (0, 2)","2,0->2,1->2,2->2,3->2,4->2,5->2,6->3,6->4,6->5,6->6,6->6,5",False,0,0,1,10.537786722183228,0
+llm,,ollama,qwen2.5:3b,grid,12,1,grid-12-01,illegal_path,,13,,11,"does not start at S (2, 3)","3,1->3,2->3,3->3,4->3,5->3,6->3,7->3,8->3,9->3,10->3,11->3,12",False,0,0,1,10.625380516052246,0
+llm,,ollama,qwen2.5:3b,grid,12,2,grid-12-02,unparseable,,9,,,no JSON answer with a 'path' key,,False,0,0,1,15.24791693687439,0
+llm,,ollama,qwen2.5:3b,grid,12,3,grid-12-03,illegal_path,,16,,15,"does not start at S (1, 5)","1,1->1,2->1,3->1,4->1,5->2,5->2,6->2,7->2,8->2,9->2,10->2,11->2,12",False,0,0,1,11.39015793800354,0
+llm,,ollama,qwen2.5:3b,grid,12,4,grid-12-04,unparseable,,13,,,no JSON answer with a 'path' key,,False,0,0,1,15.635112524032593,0
+llm,,ollama,qwen2.5:3b,grid,12,5,grid-12-05,unparseable,,5,,,no JSON answer with a 'path' key,,False,0,0,1,14.937296152114868,0
+llm,,ollama,qwen2.5:3b,grid,12,6,grid-12-06,illegal_path,,11,,15,"does not start at S (4, 5)","4,4->4,5->4,6->4,7->4,8->4,9->4,10->4,11->4,12",False,0,0,1,11.309207201004028,0
+llm,,ollama,qwen2.5:3b,grid,12,7,grid-12-07,illegal_path,,17,,35,"does not start at S (0, 5)","0,0->0,1->0,2->0,3->0,4->1,4->2,4->3,4->4,4->4,5",False,0,0,1,10.750852823257446,0
+llm,,ollama,qwen2.5:3b,grid,12,8,grid-12-08,unparseable,,14,,,no JSON answer with a 'path' key,,False,0,0,1,14.755775451660156,0
+llm,,ollama,qwen2.5:3b,grid,12,9,grid-12-09,unparseable,,12,,,no JSON answer with a 'path' key,,False,0,0,1,14.685279369354248,0
+llm,,ollama,qwen2.5:3b,grid,12,10,grid-12-10,illegal_path,,11,,15,"does not start at S (2, 3)","3,3->3,4->3,5->3,6->3,7->3,8->3,9->3,10->4,10->4,11",False,0,0,1,10.235263347625732,0
+llm,,ollama,qwen2.5:3b,grid,16,1,grid-16-01,unparseable,,20,,,no JSON answer with a 'path' key,,False,0,0,1,14.655315160751343,0
+llm,,ollama,qwen2.5:3b,grid,16,2,grid-16-02,unparseable,,19,,,no JSON answer with a 'path' key,,False,0,0,1,14.69623851776123,0
+llm,,ollama,qwen2.5:3b,grid,16,3,grid-16-03,unparseable,,24,,,no JSON answer with a 'path' key,,False,0,0,1,14.719631671905518,0
+llm,,ollama,qwen2.5:3b,grid,16,4,grid-16-04,unparseable,,24,,,no JSON answer with a 'path' key,,False,0,0,1,14.534402847290039,0
+llm,,ollama,qwen2.5:3b,grid,16,5,grid-16-05,unparseable,,26,,,no JSON answer with a 'path' key,,False,0,0,1,14.547210931777954,0
+llm,,ollama,qwen2.5:3b,grid,16,6,grid-16-06,unparseable,,14,,,no JSON answer with a 'path' key,,False,0,0,1,13.802998065948486,0
+llm,,ollama,qwen2.5:3b,grid,16,7,grid-16-07,unparseable,,18,,,no JSON answer with a 'path' key,,False,0,0,1,14.442474365234375,0
+llm,,ollama,qwen2.5:3b,grid,16,8,grid-16-08,unparseable,,22,,,no JSON answer with a 'path' key,,False,0,0,1,14.889527797698975,0
+llm,,ollama,qwen2.5:3b,grid,16,9,grid-16-09,unparseable,,17,,,no JSON answer with a 'path' key,,False,0,0,1,16.19857168197632,0
+llm,,ollama,qwen2.5:3b,grid,16,10,grid-16-10,illegal_path,,19,,121,"does not start at S (5, 0)","0,0->0,1->0,2->0,3->0,4->0,5->0,6->0,7->0,8->0,9->0,10->0,11->0,12->0,13->0,14->0,15",False,0,0,1,10.334625005722046,0

@@ -1,0 +1,121 @@
+system,model,size,instance,category,correct,legal,cost_ok,optimal_cost,true_cost,reported_cost,path_len,seconds,tokens_in,tokens_out,tool_calls,expansions,reasons
+A*,A*+manhattan,5,0,optimal,1,1,1,7,7,7.0,6,0.0001,0,0,0,10,
+A*,A*+manhattan,5,1,optimal,1,1,1,6,6,6.0,5,0.0002,0,0,0,12,
+A*,A*+manhattan,5,2,optimal,1,1,1,3,3,3.0,4,0.0,0,0,0,4,
+A*,A*+manhattan,5,3,optimal,1,1,1,8,8,8.0,7,0.0001,0,0,0,10,
+A*,A*+manhattan,5,4,optimal,1,1,1,10,10,10.0,7,0.0001,0,0,0,12,
+A*,A*+manhattan,5,5,optimal,1,1,1,6,6,6.0,7,0.0001,0,0,0,9,
+A*,A*+manhattan,5,6,optimal,1,1,1,6,6,6.0,7,0.0002,0,0,0,13,
+A*,A*+manhattan,5,7,optimal,1,1,1,4,4,4.0,5,0.0,0,0,0,4,
+A*,A*+manhattan,5,8,optimal,1,1,1,2,2,2.0,3,0.0,0,0,0,3,
+A*,A*+manhattan,5,9,optimal,1,1,1,5,5,5.0,6,0.0001,0,0,0,9,
+A*,A*+manhattan,8,0,optimal,1,1,1,13,13,13.0,10,0.0002,0,0,0,24,
+A*,A*+manhattan,8,1,optimal,1,1,1,9,9,9.0,10,0.0001,0,0,0,15,
+A*,A*+manhattan,8,2,optimal,1,1,1,23,23,23.0,11,0.0002,0,0,0,36,
+A*,A*+manhattan,8,3,optimal,1,1,1,14,14,14.0,13,0.0004,0,0,0,35,
+A*,A*+manhattan,8,4,optimal,1,1,1,11,11,11.0,10,0.0002,0,0,0,26,
+A*,A*+manhattan,8,5,optimal,1,1,1,17,17,17.0,14,0.0002,0,0,0,36,
+A*,A*+manhattan,8,6,optimal,1,1,1,8,8,8.0,7,0.0002,0,0,0,20,
+A*,A*+manhattan,8,7,optimal,1,1,1,11,11,11.0,10,0.0002,0,0,0,27,
+A*,A*+manhattan,8,8,optimal,1,1,1,8,8,8.0,9,0.0001,0,0,0,12,
+A*,A*+manhattan,8,9,optimal,1,1,1,10,10,10.0,7,0.0001,0,0,0,10,
+A*,A*+manhattan,12,0,optimal,1,1,1,13,13,13.0,12,0.0003,0,0,0,31,
+A*,A*+manhattan,12,1,optimal,1,1,1,9,9,9.0,6,0.0001,0,0,0,19,
+A*,A*+manhattan,12,2,optimal,1,1,1,16,16,16.0,15,0.0004,0,0,0,59,
+A*,A*+manhattan,12,3,optimal,1,1,1,13,13,13.0,10,0.0002,0,0,0,29,
+A*,A*+manhattan,12,4,optimal,1,1,1,5,5,5.0,6,0.0001,0,0,0,9,
+A*,A*+manhattan,12,5,optimal,1,1,1,11,11,11.0,8,0.0002,0,0,0,26,
+A*,A*+manhattan,12,6,optimal,1,1,1,17,17,17.0,14,0.0003,0,0,0,40,
+A*,A*+manhattan,12,7,optimal,1,1,1,14,14,14.0,13,0.0003,0,0,0,26,
+A*,A*+manhattan,12,8,optimal,1,1,1,12,12,12.0,11,0.0001,0,0,0,19,
+A*,A*+manhattan,12,9,optimal,1,1,1,11,11,11.0,12,0.0002,0,0,0,19,
+A*,A*+manhattan,16,0,optimal,1,1,1,20,20,20.0,17,0.0004,0,0,0,69,
+A*,A*+manhattan,16,1,optimal,1,1,1,19,19,19.0,20,0.0005,0,0,0,74,
+A*,A*+manhattan,16,2,optimal,1,1,1,24,24,24.0,19,0.0006,0,0,0,102,
+A*,A*+manhattan,16,3,optimal,1,1,1,24,24,24.0,21,0.0007,0,0,0,116,
+A*,A*+manhattan,16,4,optimal,1,1,1,26,26,26.0,21,0.0004,0,0,0,60,
+A*,A*+manhattan,16,5,optimal,1,1,1,14,14,14.0,13,0.0003,0,0,0,40,
+A*,A*+manhattan,16,6,optimal,1,1,1,18,18,18.0,13,0.0005,0,0,0,68,
+A*,A*+manhattan,16,7,optimal,1,1,1,22,22,22.0,19,0.0005,0,0,0,62,
+A*,A*+manhattan,16,8,optimal,1,1,1,17,17,17.0,14,0.0003,0,0,0,38,
+A*,A*+manhattan,16,9,optimal,1,1,1,19,19,19.0,16,0.0004,0,0,0,42,
+LLM,qwen2.5:3b,5,0,illegal,0,0,0,7,,59.0,8,6.5007,352,59,0,0,"ends at [4, 4], G is at [2, 4]"
+LLM,qwen2.5:3b,5,1,illegal,0,0,0,6,,56.0,8,6.6384,351,59,0,0,"ends at [3, 4], G is at [3, 3]"
+LLM,qwen2.5:3b,5,2,illegal,0,0,0,3,,3.0,1,3.6636,350,16,0,0,"ends at [0, 1], G is at [2, 2]"
+LLM,qwen2.5:3b,5,3,illegal,0,0,0,8,,27.0,6,5.8575,352,47,0,0,"ends at [4, 2], G is at [3, 2]"
+LLM,qwen2.5:3b,5,4,illegal,0,0,0,10,,26.0,6,5.5556,352,47,0,0,"ends at [1, 4], G is at [2, 4]"
+LLM,qwen2.5:3b,5,5,illegal,0,0,0,6,,59.0,8,6.1443,353,59,0,0,"ends at [4, 4], G is at [3, 4]"
+LLM,qwen2.5:3b,5,6,illegal,0,0,0,6,,56.0,8,9.0686,351,59,0,0,"ends at [4, 3], G is at [3, 3]"
+LLM,qwen2.5:3b,5,7,wrong_cost,0,1,0,4,4,25.0,5,6.686,351,41,0,0,reported cost 25 != true cost 4
+LLM,qwen2.5:3b,5,8,illegal,0,0,0,2,,3.0,1,3.6606,350,16,0,0,"ends at [1, 1], G is at [2, 2]"
+LLM,qwen2.5:3b,5,9,suboptimal,0,1,0,5,7,25.0,6,5.5577,351,47,0,0,true cost 7 > optimal 5
+LLM,qwen2.5:3b,8,0,illegal,0,0,0,13,,45.0,5,5.5234,447,41,0,0,"ends at [3, 1], G is at [7, 6]"
+LLM,qwen2.5:3b,8,1,illegal,0,0,0,9,,1.0,1,3.7666,448,16,0,0,"ends at [0, 3], G is at [5, 7]"
+LLM,qwen2.5:3b,8,2,illegal,0,0,0,23,,19.0,7,6.3307,449,53,0,0,"ends at [8, 0], G is at [6, 6]; step 6: [8, 0] is out of bounds"
+LLM,qwen2.5:3b,8,3,illegal,0,0,0,14,,89.0,14,8.5067,448,95,0,0,"ends at [7, 7], G is at [6, 7]"
+LLM,qwen2.5:3b,8,4,illegal,0,0,0,11,,30.0,6,5.6588,448,47,0,0,"ends at [7, 1], G is at [7, 5]"
+LLM,qwen2.5:3b,8,5,illegal,0,0,0,17,,89.0,14,9.0956,447,95,0,0,"ends at [7, 6], G is at [5, 6]"
+LLM,qwen2.5:3b,8,6,illegal,0,0,0,8,,89.0,10,7.0039,446,71,0,0,"ends at [7, 5], G is at [4, 5]"
+LLM,qwen2.5:3b,8,7,suboptimal,0,1,0,11,22,70.0,10,7.1575,447,71,0,0,true cost 22 > optimal 11
+LLM,qwen2.5:3b,8,8,illegal,0,0,0,8,,27.0,9,6.5858,447,65,0,0,"ends at [0, 6], G is at [4, 6]"
+LLM,qwen2.5:3b,8,9,illegal,0,0,0,10,,3.0,1,3.6822,447,16,0,0,"ends at [0, 2], G is at [4, 4]"
+LLM,qwen2.5:3b,12,0,illegal,0,0,0,13,,10.0,9,7.4349,638,67,0,0,"ends at [0, 11], G is at [10, 6]; step 1: [2, 3] -> [1, 4] is not a single up/down/left/right move; step 2: [1, 4] -> [0, 5] is not a single up/down/left/right move"
+LLM,qwen2.5:3b,12,1,illegal,0,0,0,9,,23.0,11,7.9993,637,83,0,0,"ends at [11, 8], G is at [6, 8]"
+LLM,qwen2.5:3b,12,2,illegal,0,0,0,16,,3.0,1,3.8183,636,16,0,0,"ends at [1, 5], G is at [9, 11]"
+LLM,qwen2.5:3b,12,3,illegal,0,0,0,13,,3.0,9,6.9718,635,67,0,0,"ends at [12, 4], G is at [8, 9]; step 8: [12, 4] is out of bounds"
+LLM,qwen2.5:3b,12,4,illegal,0,0,0,5,,54.0,17,10.0941,636,120,0,0,"ends at [6, 0], G is at [6, 7]"
+LLM,qwen2.5:3b,12,5,illegal,0,0,0,11,,9.0,12,7.7895,635,82,0,0,"ends at [4, 8], G is at [8, 8]"
+LLM,qwen2.5:3b,12,6,illegal,0,0,0,17,,1.0,1,3.9755,635,16,0,0,"ends at [0, 5], G is at [10, 8]"
+LLM,qwen2.5:3b,12,7,suboptimal,0,1,0,14,39,18.0,13,8.7107,637,96,0,0,true cost 39 > optimal 14
+LLM,qwen2.5:3b,12,8,illegal,0,0,0,12,,1.0,1,3.9142,634,16,0,0,"ends at [2, 3], G is at [8, 7]"
+LLM,qwen2.5:3b,12,9,illegal,0,0,0,11,,29.0,8,6.3884,637,59,0,0,"ends at [0, 8], G is at [8, 8]"
+LLM,qwen2.5:3b,16,0,illegal,0,0,0,20,,8.0,1,3.5147,884,16,0,0,"ends at [1, 6], G is at [11, 12]"
+LLM,qwen2.5:3b,16,1,illegal,0,0,0,19,,14.0,13,9.4933,885,93,0,0,"ends at [0, 13], G is at [11, 13]"
+LLM,qwen2.5:3b,16,2,illegal,0,0,0,24,,1.0,1,4.1782,885,16,0,0,"ends at [4, 5], G is at [13, 14]"
+LLM,qwen2.5:3b,16,3,illegal,0,0,0,24,,3.0,1,4.169,888,16,0,0,"ends at [1, 4], G is at [13, 10]"
+LLM,qwen2.5:3b,16,4,illegal,0,0,0,26,,24.0,11,8.088,888,79,0,0,"ends at [11, 0], G is at [11, 10]"
+LLM,qwen2.5:3b,16,5,illegal,0,0,0,14,,25.0,9,7.1797,883,65,0,0,"ends at [0, 9], G is at [12, 9]"
+LLM,qwen2.5:3b,16,6,illegal,0,0,0,18,,6.0,10,7.8846,884,76,0,0,"ends at [15, 5], G is at [12, 11]"
+LLM,qwen2.5:3b,16,7,illegal,0,0,0,22,,64.0,15,9.9298,885,107,0,0,"ends at [15, 1], G is at [9, 11]"
+LLM,qwen2.5:3b,16,8,illegal,0,0,0,17,,120.0,19,10.8775,883,126,0,0,"ends at [6, 9], G is at [13, 9]"
+LLM,qwen2.5:3b,16,9,illegal,0,0,0,19,,12.0,17,10.4763,885,115,0,0,"ends at [0, 11], G is at [9, 11]"
+LLM+tool,qwen2.5:3b,5,0,optimal,1,1,1,7,7,7.0,6,10.2756,975,72,1,10,
+LLM+tool,qwen2.5:3b,5,1,optimal,1,1,1,6,6,6.0,5,9.3578,967,66,1,12,
+LLM+tool,qwen2.5:3b,5,2,illegal,0,0,0,3,,3.0,3,9.0443,959,54,1,4,"ends at [1, 2], G is at [2, 2]"
+LLM+tool,qwen2.5:3b,5,3,illegal,0,0,0,8,,4.0,5,9.9122,969,66,1,4,"starts at [1, 0], S is at [0, 1]"
+LLM+tool,qwen2.5:3b,5,4,optimal,1,1,1,10,10,10.0,7,9.8079,982,79,1,12,
+LLM+tool,qwen2.5:3b,5,5,optimal,1,1,1,6,6,6.0,7,13.8481,983,78,1,9,
+LLM+tool,qwen2.5:3b,5,6,optimal,1,1,1,6,6,6.0,7,13.3458,979,78,1,13,
+LLM+tool,qwen2.5:3b,5,7,optimal,1,1,1,4,4,4.0,5,9.9903,967,66,1,4,
+LLM+tool,qwen2.5:3b,5,8,optimal,1,1,1,2,2,2.0,3,8.834,953,54,1,3,
+LLM+tool,qwen2.5:3b,5,9,optimal,1,1,1,5,5,5.0,6,10.2376,973,72,1,9,
+LLM+tool,qwen2.5:3b,8,0,optimal,1,1,1,13,13,13.0,10,11.7823,1190,97,1,24,
+LLM+tool,qwen2.5:3b,8,1,optimal,1,1,1,9,9,9.0,10,11.9154,1191,96,1,15,
+LLM+tool,qwen2.5:3b,8,2,optimal,1,1,1,23,23,23.0,11,12.2216,1200,103,1,36,
+LLM+tool,qwen2.5:3b,8,3,optimal,1,1,1,14,14,14.0,13,12.2825,1210,115,1,35,
+LLM+tool,qwen2.5:3b,8,4,optimal,1,1,1,11,11,11.0,10,11.6507,1192,97,1,26,
+LLM+tool,qwen2.5:3b,8,5,optimal,1,1,1,17,17,17.0,14,12.5383,1214,121,1,36,
+LLM+tool,qwen2.5:3b,8,6,optimal,1,1,1,8,8,8.0,7,10.2608,1169,78,1,20,
+LLM+tool,qwen2.5:3b,8,7,optimal,1,1,1,11,11,11.0,10,11.188,1190,97,1,27,
+LLM+tool,qwen2.5:3b,8,8,optimal,1,1,1,8,8,8.0,9,10.6519,1183,90,1,12,
+LLM+tool,qwen2.5:3b,8,9,optimal,1,1,1,10,10,10.0,7,10.0269,1172,79,1,10,
+LLM+tool,qwen2.5:3b,12,0,optimal,1,1,1,13,13,13.0,12,12.4959,1589,114,1,31,
+LLM+tool,qwen2.5:3b,12,1,optimal,1,1,1,9,9,9.0,6,10.1461,1545,72,1,19,
+LLM+tool,qwen2.5:3b,12,2,optimal,1,1,1,16,16,16.0,15,13.7531,1603,132,1,59,
+LLM+tool,qwen2.5:3b,12,3,optimal,1,1,1,13,13,13.0,10,11.1197,1566,97,1,29,
+LLM+tool,qwen2.5:3b,12,4,optimal,1,1,1,5,5,5.0,6,9.5558,1543,72,1,9,
+LLM+tool,qwen2.5:3b,12,5,optimal,1,1,1,11,11,11.0,8,10.5102,1554,85,1,26,
+LLM+tool,qwen2.5:3b,12,6,optimal,1,1,1,17,17,17.0,14,13.0408,1592,123,1,40,
+LLM+tool,qwen2.5:3b,12,7,optimal,1,1,1,14,14,14.0,13,13.2363,1593,120,1,26,
+LLM+tool,qwen2.5:3b,12,8,optimal,1,1,1,12,12,12.0,11,11.9179,1570,103,1,19,
+LLM+tool,qwen2.5:3b,12,9,optimal,1,1,1,11,11,11.0,12,15.728,1582,109,1,19,
+LLM+tool,qwen2.5:3b,16,0,optimal,1,1,1,20,20,20.0,17,15.0523,2116,149,1,69,
+LLM+tool,qwen2.5:3b,16,1,optimal,1,1,1,19,19,19.0,20,15.9935,2144,175,1,74,
+LLM+tool,qwen2.5:3b,16,2,optimal,1,1,1,24,24,24.0,19,16.048,2139,170,1,102,
+LLM+tool,qwen2.5:3b,16,3,optimal,1,1,1,24,24,24.0,21,16.3352,2149,174,1,116,
+LLM+tool,qwen2.5:3b,16,4,optimal,1,1,1,26,26,26.0,21,15.5802,2145,170,1,60,
+LLM+tool,qwen2.5:3b,16,5,optimal,1,1,1,14,14,14.0,13,12.8885,2084,119,1,40,
+LLM+tool,qwen2.5:3b,16,6,optimal,1,1,1,18,18,18.0,13,13.2354,2095,128,1,68,
+LLM+tool,qwen2.5:3b,16,7,optimal,1,1,1,22,22,22.0,19,15.314,2123,154,1,62,
+LLM+tool,qwen2.5:3b,16,8,malformed,0,0,0,17,,,,4.2967,962,27,0,0,no parseable path; never called the tool
+LLM+tool,qwen2.5:3b,16,9,optimal,1,1,1,19,19,19.0,16,13.6022,2107,138,1,42,

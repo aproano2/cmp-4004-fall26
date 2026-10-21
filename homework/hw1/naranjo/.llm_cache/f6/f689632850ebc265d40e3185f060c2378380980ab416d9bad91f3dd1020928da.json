@@ -1,0 +1,15 @@
+{
+  "text": "{\"moves\": [\"U\", \"L\", \"D\", \"R\", \"U\", \"R\", \"D\", \"L\", \"L\", \"U\", \"R\", \"D\", \"L\", \"D\", \"R\", \"R\"], \"cost\": 16}",
+  "backend": "ollama",
+  "model": "qwen2.5:3b",
+  "prompt": "You are solving an 8-puzzle.\n\nThe board is 3x3 with tiles 1-8 and one blank, shown as _ . Rows are numbered 0-2 from the top, columns 0-2 from the left.\nA move slides the BLANK one square: U (up), D (down), L (left) or R (right). The tile in that square moves into the blank's old place.\nThe blank cannot leave the board. Every move costs 1, so the cost of a solution is its number of moves.\n\nCurrent board:\n  6 2 1\n  5 _ 3\n  4 7 8\n\nGoal board:\n  1 2 3\n  4 5 6\n  7 8 _\n\nAs lists (row by row, 0 = blank): current = [6, 2, 1, 5, 0, 3, 4, 7, 8], goal = [1, 2, 3, 4, 5, 6, 7, 8, 0].\n\nFind the SHORTEST sequence of moves that turns the current board into the goal board.\n\nYou have a tool that runs an optimal A* search for this puzzle:\n  astar(state) -> the shortest move sequence from state to the goal and its cost.\nTo call it, reply with ONLY this JSON object and nothing else:\n{\"tool\": \"astar\", \"state\": [9 numbers, row by row, 0 = blank]}\nYou will then receive the tool result. After that, reply with ONLY your final answer as a JSON object:\n{\"moves\": [\"U\", \"L\", ...], \"cost\": <number of moves>}\n\nYOUR REPLY:\n{\"tool\": \"astar\", \"state\": [6, 2, 1, 5, 0, 3, 4, 7, 8]}\n\nTOOL RESULT:\n{\"moves\": [\"U\", \"L\", \"D\", \"R\", \"U\", \"R\", \"D\", \"L\", \"L\", \"U\", \"R\", \"D\", \"L\", \"D\", \"R\", \"R\"], \"cost\": 16}\n\nNow reply with ONLY your final answer as a JSON object:\n{\"moves\": [\"U\", \"L\", ...], \"cost\": <number of moves>}",
+  "temperature": 0.0,
+  "seed": 0,
+  "elapsed": 3.0697495000003983,
+  "meta": {
+    "eval_count": 59,
+    "prompt_eval_count": 530,
+    "total_duration": 1044388100
+  },
+  "cached_at": "2026-10-04T12:34:22"
+}

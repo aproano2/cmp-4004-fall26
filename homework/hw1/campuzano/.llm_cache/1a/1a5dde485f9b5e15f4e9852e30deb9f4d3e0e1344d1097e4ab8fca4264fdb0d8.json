@@ -1,0 +1,15 @@
+{
+  "text": "{\n  \"path\": [\n    [0, 0],\n    [0, 1],\n    [0, 2],\n    [0, 3],\n    [0, 4],\n    [1, 4],\n    [2, 4],\n    [3, 4],\n    [4, 4]\n  ],\n  \"reported_cost\": 38\n}",
+  "backend": "ollama",
+  "model": "qwen2.5:3b",
+  "prompt": "\nYou are solving a weighted grid pathfinding problem.\n\nTerrain:\n[[9, 2, 8, 3, 7], [2, 6, 7, 8, 5], [1, 7, 8, 3, 9], [3, 7, 7, 5, 7], [5, 7, 8, 7, 9]]\n\nStart:\n[0, 0]\n\nGoal:\n[4, 4]\n\nYou may move only UP, DOWN, LEFT, or RIGHT.\nDiagonal movement is forbidden.\n\nThe cost of a move is the terrain value of the cell ENTERED.\nThe starting cell has no entry cost.\n\nFind a minimum-cost path from Start to Goal.\n\nReturn ONLY valid JSON in exactly this format:\n\n{\n  \"path\": [\n    [row, column],\n    [row, column]\n  ],\n  \"reported_cost\": NUMBER\n}\n\nThe path MUST include both Start and Goal.\nDo not include explanations.\n",
+  "temperature": 0.0,
+  "seed": 0,
+  "elapsed": 48.037460499908775,
+  "meta": {
+    "eval_count": 82,
+    "prompt_eval_count": 235,
+    "total_duration": 45649068600
+  },
+  "cached_at": "2026-10-05T21:49:08"
+}

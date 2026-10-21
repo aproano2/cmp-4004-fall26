@@ -1,0 +1,15 @@
+{
+  "text": "{\"tool\":\"astar\"}",
+  "backend": "ollama",
+  "model": "qwen2.5:3b",
+  "prompt": "You have access to one external search tool.\n\nAvailable tool:\nastar\n\nThe astar tool runs a deterministic A* search implementation and returns\nthe computed path and cost.\n\nProblem:\ndomain = 8puzzle\nlevel = 4\ninstance = 5\n\nSelect the tool that should solve this search problem.\n\nReturn ONLY valid JSON in exactly this format:\n{\"tool\":\"astar\"}\n\nDo not solve the path yourself.\nDo not include Markdown.\nDo not include explanations.\n",
+  "temperature": 0.0,
+  "seed": 0,
+  "elapsed": 6.8867548000998795,
+  "meta": {
+    "eval_count": 7,
+    "prompt_eval_count": 125,
+    "total_duration": 4835421500
+  },
+  "cached_at": "2026-10-05T23:00:18"
+}

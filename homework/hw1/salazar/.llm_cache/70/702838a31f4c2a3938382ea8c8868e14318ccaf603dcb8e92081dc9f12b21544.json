@@ -1,0 +1,15 @@
+{
+  "text": "PATH: RRUUULLDDLLDUUURRRUULLDDRRR\nCOST: 16",
+  "backend": "ollama",
+  "model": "qwen2.5:3b",
+  "prompt": "Solve this 8-puzzle with the minimum number of moves.\nThe blank is '_'. Each move slides the blank one cell: U (up), D (down), L (left) or R (right); the tile there takes the blank's place.\nThe blank cannot leave the 3x3 board. Every move costs 1.\nStart:\n1 2 3\n4 8 5\n7 6 _\nGoal:\n1 2 3\n4 5 6\n7 8 _\n\nReply with the path as a sequence of moves (U/D/L/R) and its total cost.\nFormat your final answer as two lines:\nPATH: <letters, no separators>\nCOST: <integer>\n",
+  "temperature": 0.0,
+  "seed": 0,
+  "elapsed": 2.306341400020756,
+  "meta": {
+    "eval_count": 25,
+    "prompt_eval_count": 177,
+    "total_duration": 235966900
+  },
+  "cached_at": "2026-10-04T21:35:29"
+}

@@ -1,0 +1,15 @@
+{
+  "text": "{\"path\": [[1, 6]], \"cost\": 8}",
+  "backend": "ollama",
+  "model": "qwen2.5:3b",
+  "prompt": "You are solving a shortest-path problem on a weighted grid.\n\nThe grid is 16x16. Rows are numbered from 0 (top) to 15 (bottom), columns from 0 (left) to 15 (right).\nEach cell has a terrain type, and you pay the cost of a cell when you ENTER it:\n  '.' road  = 1\n  ',' grass = 3\n  '~' water = 8\n  'S' start, 'G' goal = 1\nYou move one cell per step: up, down, left or right (no diagonal moves), and you must stay inside the grid.\nThe cost of a path is the sum of the costs of every cell you enter after S (S itself is not charged).\n\n       0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15\n  0    ,  .  ~  ~  .  ,  .  .  .  .  .  .  .  .  .  .\n  1    .  .  ,  ~  ,  ~  S  ,  .  .  ~  ,  .  .  ~  .\n  2    ~  ~  .  .  .  .  ,  .  ,  .  .  .  ,  ,  .  .\n  3    ~  ,  ,  ~  .  .  .  ~  .  ~  .  .  ,  .  .  ,\n  4    .  ,  .  ,  .  .  .  .  ,  .  .  .  .  .  .  .\n  5    .  ,  .  ~  .  ,  ~  .  ,  .  ~  .  ,  .  .  .\n  6    ,  .  ,  .  .  ~  .  ,  .  ,  .  .  .  .  .  .\n  7    ,  .  ,  .  .  .  .  .  .  ,  .  ~  .  .  .  .\n  8    ~  ~  .  .  .  .  .  ,  .  .  ~  .  .  .  ~  .\n  9    ,  .  .  ,  .  ,  .  .  ,  .  .  ,  .  ~  .  .\n 10    ,  ,  ,  ,  .  .  .  ,  ,  .  .  .  ~  .  .  .\n 11    ~  .  ,  .  .  .  .  ,  .  .  .  .  G  .  .  .\n 12    ,  ,  ,  ,  ~  ,  ~  .  .  .  .  .  ~  .  ,  ,\n 13    .  ,  ,  ,  ,  .  .  ,  .  ~  ,  ,  .  ,  .  .\n 14    ,  ~  ,  .  .  .  ,  .  ~  .  ,  .  .  .  ,  .\n 15    ,  ,  .  .  ,  .  ~  .  .  .  ,  ,  ,  .  .  ,\n\nS is at [1, 6]. G is at [11, 12].\n\nFind the path from S to G with the LOWEST total cost.\n\nReply with ONLY a JSON object, no explanation, in exactly this format:\n{\"path\": [[row, col], [row, col], ...], \"cost\": <total cost>}\nThe path must list every cell from S to G, both included.",
+  "temperature": 0.0,
+  "seed": 1,
+  "elapsed": 3.6083017999999356,
+  "meta": {
+    "eval_count": 16,
+    "prompt_eval_count": 884,
+    "total_duration": 1546675700
+  },
+  "cached_at": "2026-10-01T12:13:50"
+}

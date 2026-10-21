@@ -1,0 +1,6 @@
+instance,llamada,category,path,reported_cost,tool_called,tool_args_match,seconds,respuestas_distintas
+grid-5-00,1,illegal,SLURR,24,True,,11.083,1
+grid-5-00,2,illegal,SLURR,24,True,,4.713,1
+grid-5-00,3,illegal,SLURR,24,True,,4.676,1
+grid-5-00,4,illegal,SLURR,24,True,,4.643,1
+grid-5-00,5,illegal,SLURR,24,True,,4.681,1

@@ -1,0 +1,19 @@
+{
+  "text": "PATH: RRRRDDDRRULLLUUULLLLLUUULLL\nCOST: 104",
+  "status": "ok",
+  "tokens_in": 423,
+  "tokens_out": 25,
+  "ollama_total_s": 0.362,
+  "backend": "ollama",
+  "model": "qwen2.5:3b",
+  "temperature": 0.0,
+  "seed": 0,
+  "rep": 0,
+  "messages": [
+    {
+      "role": "user",
+      "content": "Find the minimum-cost path from S to G on this grid.\nTerrain costs: '.' = 1, ',' = 3, '~' = 8. Entering G costs 1.\nThe cost of a path is the sum of the costs of every cell you enter (the starting cell S is not counted).\nMoves: U (up), D (down), L (left), R (right). No diagonal moves, and you cannot leave the grid.\nGrid (16 rows x 16 columns, cells separated by spaces):\n. , . , ~ . , . . . , , . . . .\n, S . , , . . . , . ~ . . ~ . ~\n. . . . , . . ~ . , . ~ ~ . . .\n, , , . ~ . . , . , . , . , . .\n, . ~ . . , . , , . . . . ~ ~ ~\n. , . , , . , , . , . , . . . .\n. . . , . , ~ . . . . . . . , .\n. . . . . . ~ . . . , , , . . .\n. , . ~ . . ~ . . . , . . . ~ .\n. ~ ~ . . . , . . . . G , , , ,\n. . , ~ . . . , . , . . , , . .\n. , . , ~ . . , . , . . . , , ,\n~ , , , , . ~ . ~ , . . ~ . , .\n, , . , ~ , . . . , . ~ . , . .\n, . . . . . . ~ . , . . . . , .\n~ , . . , . . . . , ~ ~ . ~ , ,\n\nFormat your final answer as exactly two lines:\nPATH: <letters U/D/L/R, no separators>\nCOST: <integer>\n"
+    }
+  ],
+  "latency_s": 0.365
+}

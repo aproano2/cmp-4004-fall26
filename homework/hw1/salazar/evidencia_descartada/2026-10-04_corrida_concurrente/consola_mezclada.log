@@ -1,0 +1,27 @@
+== brazo LLM Sun Oct  4 21:19:51     2026
+  8puzzle-4-00   illegal     cache
+  8puzzle-4-01   illegal     cache
+  8puzzle-4-02   illegal     cache
+  8puzzle-4-03   no_termina  96.8s
+  8puzzle-4-04   illegal     cache
+  8puzzle-4-05   illegal     cache
+  8puzzle-4-06   illegal     cache
+  8puzzle-4-07   illegal     cache
+  8puzzle-4-08   illegal     cache
+  8puzzle-4-09   illegal     cache
+  8puzzle-8-00   illegal     cache
+  8puzzle-8-01   illegal     cache
+  8puzzle-8-02   illegal     cache
+  8puzzle-8-03   illegal     cache
+  8puzzle-8-04   illegal     cache
+  8puzzle-8-05   illegal     cache
+  8puzzle-8-06   illegal     cache
+  8puzzle-8-07   illegal     cache
+  8puzzle-8-08   illegal     cache
+  8puzzle-8-09   no_termina  302.1s
+  8puzzle-12-00  illegal     cache
+== reproducibilidad Sun Oct  4 21:30:18     2026
+ 302.1s
+  8puzzle-12-03  llm_error   302.1s
+  8puzzle-12-04  illegal     18.2s
+== reproducibilidad Sun Oct  4 21:30:19     2026
