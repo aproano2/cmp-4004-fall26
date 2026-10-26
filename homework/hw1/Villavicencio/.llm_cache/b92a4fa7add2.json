@@ -1,0 +1,20 @@
+{
+ "key": "b92a4fa7add2",
+ "backend": "ollama",
+ "model": "qwen2.5:3b",
+ "temperature": 1.0,
+ "sample": 0,
+ "prompt_version": "v1",
+ "system": "You are an expert at search and planning problems. Be precise.",
+ "messages": [
+  {
+   "role": "user",
+   "content": "Find a MINIMUM-COST path on this weighted grid from S to G.\n\nGrid (row 0 is the top, column 0 is the left):\n. S . . .\n~ . . . .\n. , G . ,\n, . , ~ .\n. ~ ~ . .\n\nS is at (row, col) = (0, 1). G is at (row, col) = (2, 2).\nTerrain cost is charged when you ENTER a cell: '.' = 1, ',' = 3, '~' = 8, 'G' = 1. The starting cell costs nothing. There are no walls, but you cannot leave the grid.\nMoves: U = row-1, D = row+1, L = col-1, R = col+1. The path cost is the sum of the costs of all cells you enter.\n\nYou may reason step by step first. Then END your reply with exactly one JSON object on its own line and nothing after it, in this format:\n{\"moves\": [\"R\", \"D\", ...], \"cost\": <total cost as an integer>}"
+  }
+ ],
+ "text": "First, let's analyze the grid:\n```\n. S . . .\n~ . . . .\n. , G . ,\n, . , ~ .\n. ~ ~ . .\n```\nWe need to find the minimum-cost path from S (0,1) to G (2,2). The cost for entering a cell is given as: '.' = 1, ',' = 3, '~' = 8, 'G' = 1.\n\nLet's break down the grid and the moves step by step:\n1. Start at (0, 1), which is S. The cost of entering this cell is 0 because S is at the starting position.\n2. We need to move to (0, 2) because G is on (2, 2). The only way to move from (0, 1) to (0, 2) is to move right (R).\n3. Next, we need to move to (1, 2). There are two ways to get to (1, 2) from (0, 2):\n   - Move up (U) to (1, 2)\n   - Move down (D) to (1, 2), and then move right (R) to (1, 2)\n4. The move to (1, 2) from (0, 2) costs 1 for the '.' cell. The move from (1, 2) to (1, 2) costs 0 because it's the same cell.\n5. The move from (1, 2) to (2, 2) costs 1 for the '.' cell.\n\nNow, let's count the total cost of the path:\n- Enter S (0, 1): cost = 0\n- Move right to (0, 2): cost = 1\n- Move up to (1, 2): cost = 0\n- Move right to (1, 2): cost = 1\n- Move to (2, 2): cost = 1\n\nThe total cost is 0 + 1 + 0 + 1 + 1 = 3.\n\nThe minimum-cost path from S to G is R, D, R, R.\n\n{\"moves\": [\"R\", \"D\", \"R\", \"R\"], \"cost\": 3}",
+ "latency_s": 49.65676539996639,
+ "in_tokens": 256,
+ "out_tokens": 486,
+ "timestamp": "2026-10-05T16:51:52"
+}
