@@ -1,0 +1,241 @@
+arm,domain,level,instance,category,detail,path,reported_cost,true_cost,optimal_cost,latency_s,tokens_in,tokens_out,status,tool_calls,tool_args_match,tool_expansions
+classical,puzzle,4,0,correct,,URDD,4,4,4,2.8e-05,,,solved,,,4
+llm,puzzle,4,0,illegal,el movimiento 2 (R) saca el hueco del tablero,RRRUULLD,8,,4,0.529,165,14,ok,,,
+tool,puzzle,4,0,no_answer,no se encontró una línea PATH,,,,4,0.618,315,26,ok,0,,0
+classical,puzzle,4,1,correct,,DRDR,4,4,4,5.3e-05,,,solved,,,4
+llm,puzzle,4,1,illegal,el movimiento 3 (R) saca el hueco del tablero,RRRUULLD,8,,4,0.168,166,14,ok,,,
+tool,puzzle,4,1,correct,,DRDR,4,4,4,0.666,750,62,ok,1,True,4
+classical,puzzle,4,2,correct,,LURD,4,4,4,2.7e-05,,,solved,,,4
+llm,puzzle,4,2,illegal,el movimiento 1 (R) saca el hueco del tablero,RRRUULLD,8,,4,0.189,164,14,ok,,,
+tool,puzzle,4,2,correct,,LURD,4,4,4,0.673,747,63,ok,1,True,4
+classical,puzzle,4,3,correct,,LDRR,4,4,4,2.7e-05,,,solved,,,4
+llm,puzzle,4,3,illegal,el movimiento 2 (R) saca el hueco del tablero,RRRUULLD,8,,4,0.171,165,14,ok,,,
+tool,puzzle,4,3,illegal,el movimiento 3 (L) saca el hueco del tablero,ULLDRRULDLURRD,14,,4,0.743,755,69,ok,1,False,61
+classical,puzzle,4,4,correct,,RURD,4,4,4,2.7e-05,,,solved,,,4
+llm,puzzle,4,4,illegal,el movimiento 3 (R) saca el hueco del tablero,RRRUULLD,8,,4,0.169,166,14,ok,,,
+tool,puzzle,4,4,illegal,el movimiento 1 (L) saca el hueco del tablero,LURD,4,,4,0.707,751,63,ok,1,False,4
+classical,puzzle,4,5,correct,,DRRD,4,4,4,3.1e-05,,,solved,,,4
+llm,puzzle,4,5,illegal,el movimiento 3 (R) saca el hueco del tablero,RRRUULLD,8,,4,0.163,166,14,ok,,,
+tool,puzzle,4,5,correct,,DRRD,4,4,4,0.694,750,62,ok,1,True,4
+classical,puzzle,4,6,correct,,RDDR,4,4,4,3.2e-05,,,solved,,,4
+llm,puzzle,4,6,illegal,el movimiento 3 (R) saca el hueco del tablero,RRRUULLD,8,,4,0.177,166,14,ok,,,
+tool,puzzle,4,6,correct,,RDDR,4,4,4,0.697,750,62,ok,1,True,4
+classical,puzzle,4,7,correct,,URRD,4,4,4,5.2e-05,,,solved,,,4
+llm,puzzle,4,7,illegal,el movimiento 3 (R) saca el hueco del tablero,RRRUULLD,8,,4,0.186,166,14,ok,,,
+tool,puzzle,4,7,illegal,el movimiento 1 (D) saca el hueco del tablero,DDLUR,4,,4,1.774,1799,165,ok,3,False,0
+classical,puzzle,4,8,correct,,DLDR,4,4,4,5.4e-05,,,solved,,,4
+llm,puzzle,4,8,illegal,el movimiento 1 (R) saca el hueco del tablero,RRRUULLD,8,,4,0.166,164,14,ok,,,
+tool,puzzle,4,8,correct,,DLDR,4,4,4,0.712,746,62,ok,1,True,4
+classical,puzzle,4,9,correct,,LDRD,4,4,4,5.3e-05,,,solved,,,4
+llm,puzzle,4,9,illegal,el movimiento 1 (R) saca el hueco del tablero,RRRUULLDDLLURRDDLUUDDRLL,15,,4,0.238,164,22,ok,,,
+tool,puzzle,4,9,no_answer,no se encontró una línea PATH,,,,4,0.166,314,14,ok,0,,0
+classical,puzzle,8,0,correct,,RDLURRDD,8,8,8,8.7e-05,,,solved,,,8
+llm,puzzle,8,0,illegal,el movimiento 3 (R) saca el hueco del tablero,RRRUULLDDLLURRDDLUUULLDDR,15,,8,0.246,166,22,ok,,,
+tool,puzzle,8,0,correct,,RDLURRDD,8,8,8,0.684,752,64,ok,1,True,8
+classical,puzzle,8,1,correct,,DLULDDRR,8,8,8,5.3e-05,,,solved,,,8
+llm,puzzle,8,1,illegal,el movimiento 1 (R) saca el hueco del tablero,RRRUULLDD,8,,8,0.166,164,14,ok,,,
+tool,puzzle,8,1,no_answer,no se encontró una línea PATH,,,,8,0.19,314,15,ok,0,,0
+classical,puzzle,8,2,correct,,RULDLDRR,8,8,8,6.4e-05,,,solved,,,12
+llm,puzzle,8,2,illegal,el movimiento 2 (R) saca el hueco del tablero,RRUURRUURRU,9,,8,0.176,165,15,ok,,,
+tool,puzzle,8,2,correct,,RULDLDRR,8,8,8,0.674,752,65,ok,1,True,12
+classical,puzzle,8,3,correct,,DRUULDDR,8,8,8,9.2e-05,,,solved,,,8
+llm,puzzle,8,3,illegal,el movimiento 2 (R) saca el hueco del tablero,RRUUULURRUULURU,12,,8,0.224,165,19,ok,,,
+tool,puzzle,8,3,correct,,DRUULDDR,8,8,8,0.668,750,64,ok,1,True,8
+classical,puzzle,8,4,correct,,DLLDRURD,8,8,8,5.6e-05,,,solved,,,10
+llm,puzzle,8,4,illegal,el movimiento 1 (R) saca el hueco del tablero,RRRUULLDD,8,,8,0.169,164,14,ok,,,
+tool,puzzle,8,4,illegal,el movimiento 3 (R) saca el hueco del tablero,DDRULURD,8,,8,0.673,749,64,ok,1,True,10
+classical,puzzle,8,5,correct,,RDLDRURD,8,8,8,9.3e-05,,,solved,,,8
+llm,puzzle,8,5,illegal,el movimiento 3 (R) saca el hueco del tablero,RRRUULLDDLLURRDDLUUDDRLL,15,,8,0.271,166,22,ok,,,
+tool,puzzle,8,5,correct,,RDLDRURD,8,8,8,0.699,753,65,ok,1,True,8
+classical,puzzle,8,6,correct,,LURRDLDR,8,8,8,0.000113,,,solved,,,10
+llm,puzzle,8,6,illegal,el movimiento 2 (R) saca el hueco del tablero,RRRUULLD,8,,8,0.173,165,14,ok,,,
+tool,puzzle,8,6,correct,,LURRDLDR,8,8,8,0.717,752,65,ok,1,True,10
+classical,puzzle,8,7,correct,,ULDLURRD,8,8,8,7.8e-05,,,solved,,,14
+llm,puzzle,8,7,illegal,el movimiento 1 (R) saca el hueco del tablero,RRRUULLD,8,,8,0.166,164,14,ok,,,
+tool,puzzle,8,7,no_answer,no se encontró una línea PATH,,,,8,0.269,314,15,ok,0,,0
+classical,puzzle,8,8,correct,,DLURURDD,8,8,8,0.000134,,,solved,,,12
+llm,puzzle,8,8,illegal,el movimiento 2 (R) saca el hueco del tablero,RRRUULLD,8,,8,0.186,165,14,ok,,,
+tool,puzzle,8,8,correct,,DLURURDD,8,8,8,0.685,751,64,ok,1,True,12
+classical,puzzle,8,9,correct,,URDLURRD,8,8,8,0.000101,,,solved,,,8
+llm,puzzle,8,9,illegal,el movimiento 3 (R) saca el hueco del tablero,RRRUULLD,8,,8,0.198,166,14,ok,,,
+tool,puzzle,8,9,illegal,el movimiento 1 (L) saca el hueco del tablero,LDLRURD,8,,8,1.226,1255,114,ok,2,False,8
+classical,puzzle,12,0,correct,,DLUURDLURRDD,12,12,12,8.5e-05,,,solved,,,17
+llm,puzzle,12,0,illegal,el movimiento 2 (R) saca el hueco del tablero,RRUUULURRUULURU,12,,12,0.233,165,19,ok,,,
+tool,puzzle,12,0,correct,,DLUURDLURRDD,12,12,12,0.734,754,67,ok,1,True,17
+classical,puzzle,12,1,correct,,LLDDRRULLDRR,12,12,12,0.00013,,,solved,,,12
+llm,puzzle,12,1,illegal,el movimiento 1 (R) saca el hueco del tablero,RRRUULLDD,8,,12,0.185,164,14,ok,,,
+tool,puzzle,12,1,illegal,el movimiento 5 (R) saca el hueco del tablero,LDDRRULLDRR,12,,12,0.706,752,67,ok,1,True,12
+classical,puzzle,12,2,correct,,RUURDLULDRDR,12,12,12,0.000126,,,solved,,,20
+llm,puzzle,12,2,illegal,el movimiento 5 (U) saca el hueco del tablero,RRUUULURRUULURULLUR,12,,12,0.23,166,20,ok,,,
+tool,puzzle,12,2,correct,,RUURDLULDRDR,12,12,12,0.75,756,67,ok,1,True,20
+classical,puzzle,12,3,correct,,RDDLURRULDRD,12,12,12,7.6e-05,,,solved,,,12
+llm,puzzle,12,3,illegal,el movimiento 3 (R) saca el hueco del tablero,RRRUULLDDLLURRDDLUUULLDDR,15,,12,0.259,166,22,ok,,,
+tool,puzzle,12,3,correct,,RDDLURRULDRD,12,12,12,0.739,757,68,ok,1,True,12
+classical,puzzle,12,4,correct,,LLURDRULLDRR,12,12,12,0.000212,,,solved,,,42
+llm,puzzle,12,4,illegal,el movimiento 1 (R) saca el hueco del tablero,RRRUULLD,8,,12,0.171,164,14,ok,,,
+tool,puzzle,12,4,illegal,el tablero final no es la meta,,0,,12,0.627,743,60,ok,1,False,0
+classical,puzzle,12,5,correct,,DRULLURDLDRR,12,12,12,7.5e-05,,,solved,,,12
+llm,puzzle,12,5,illegal,el movimiento 2 (R) saca el hueco del tablero,RRUURRDLLUU,12,,12,0.201,165,16,ok,,,
+tool,puzzle,12,5,correct,,DRULLURDLDRR,12,12,12,0.702,754,67,ok,1,True,12
+classical,puzzle,12,6,correct,,LLDRDLUURRDD,12,12,12,0.000301,,,solved,,,64
+llm,puzzle,12,6,illegal,el movimiento 1 (R) saca el hueco del tablero,RRRUULLD,8,,12,0.166,164,14,ok,,,
+tool,puzzle,12,6,illegal,el tablero final no es la meta,LLDRLDUURRDD,12,,12,0.697,752,67,ok,1,True,64
+classical,puzzle,12,7,correct,,RDRULDLURRDD,12,12,12,0.000171,,,solved,,,34
+llm,puzzle,12,7,illegal,el movimiento 3 (R) saca el hueco del tablero,RRRUULLDDLLURRDDLUUULLDDR,15,,12,0.253,166,22,ok,,,
+tool,puzzle,12,7,correct,,RDRULDLURRDD,12,12,12,0.691,756,67,ok,1,True,34
+classical,puzzle,12,8,correct,,RDRDLURULDDR,12,12,12,0.000139,,,solved,,,27
+llm,puzzle,12,8,illegal,el movimiento 3 (R) saca el hueco del tablero,RRRUULLDDLLURRDDLUUULLDDR,15,,12,0.26,166,22,ok,,,
+tool,puzzle,12,8,correct,,RDRDLURULDDR,12,12,12,0.688,756,67,ok,1,True,27
+classical,puzzle,12,9,correct,,LDDLUURDLDRR,12,12,12,0.00017,,,solved,,,36
+llm,puzzle,12,9,illegal,el movimiento 1 (R) saca el hueco del tablero,RRUURRDLLUU,12,,12,0.185,164,16,ok,,,
+tool,puzzle,12,9,no_answer,no se encontró una línea PATH,,,,12,0.21,314,17,ok,0,,0
+classical,puzzle,16,0,correct,,LURDDLUURDLURRDD,16,16,16,0.000692,,,solved,,,143
+llm,puzzle,16,0,illegal,el movimiento 2 (R) saca el hueco del tablero,RRUULURRLLD,12,,16,0.214,165,17,ok,,,
+tool,puzzle,16,0,correct,,LURDDLUURDLURRDD,16,16,16,0.714,757,69,ok,1,True,143
+classical,puzzle,16,1,correct,,LLUURRDDLULURDRD,16,16,16,0.000167,,,solved,,,34
+llm,puzzle,16,1,illegal,el movimiento 1 (R) saca el hueco del tablero,RRRUULLD,8,,16,0.168,164,14,ok,,,
+tool,puzzle,16,1,correct,,LLUURRDDLULURDRD,16,16,16,0.726,754,68,ok,1,True,34
+classical,puzzle,16,2,correct,,RUURDLDRULDLURRD,16,16,16,0.00049,,,solved,,,98
+llm,puzzle,16,2,illegal,el movimiento 6 (U) saca el hueco del tablero,RRUULUDRRUUL,12,,16,0.204,166,17,ok,,,
+tool,puzzle,16,2,correct,,RUURDLDRULDLURRD,16,16,16,0.731,758,69,ok,1,True,98
+classical,puzzle,16,3,correct,,ULDRURDLLURDLDRR,16,16,16,0.000638,,,solved,,,130
+llm,puzzle,16,3,illegal,el movimiento 2 (R) saca el hueco del tablero,RRUUULURRUULURU,12,,16,0.221,165,19,ok,,,
+tool,puzzle,16,3,illegal,el movimiento 10 (L) saca el hueco del tablero,ULDRLURDLLURDLDRR,16,,16,0.709,757,68,ok,1,True,130
+classical,puzzle,16,4,correct,,LLDRRULLDDRUURDD,16,16,16,0.000786,,,solved,,,145
+llm,puzzle,16,4,illegal,el movimiento 1 (R) saca el hueco del tablero,RRUURRDLLUU,12,,16,0.185,164,16,ok,,,
+tool,puzzle,16,4,illegal,el movimiento 4 (R) saca el hueco del tablero,LDRRULLDDDDRUURDD,16,,16,0.715,755,70,ok,1,True,145
+classical,puzzle,16,5,correct,,DRULDDRRUULDLDRR,16,16,16,0.00035,,,solved,,,71
+llm,puzzle,16,5,illegal,el movimiento 3 (R) saca el hueco del tablero,RRRUULLD,8,,16,0.184,166,14,ok,,,
+tool,puzzle,16,5,correct,,DRULDDRRUULDLDRR,16,16,16,0.716,759,70,ok,1,True,71
+classical,puzzle,16,6,correct,,RDLURDDLURULDRRD,16,16,16,0.000411,,,solved,,,86
+llm,puzzle,16,6,illegal,el movimiento 3 (R) saca el hueco del tablero,RRRUULLDDLLURRDDLUUULLDDR,15,,16,0.271,166,22,ok,,,
+tool,puzzle,16,6,correct,,RDLURDDLURULDRRD,16,16,16,0.727,758,69,ok,1,True,86
+classical,puzzle,16,7,correct,,UURDRDLLURULDRRD,16,16,16,0.000364,,,solved,,,73
+llm,puzzle,16,7,illegal,el movimiento 3 (R) saca el hueco del tablero,RRRUULLDDLLURRDDLUUULLDDR,15,,16,0.254,166,22,ok,,,
+tool,puzzle,16,7,correct,,UURDRDLLURULDRRD,16,16,16,1.253,1242,120,ok,2,True,73
+classical,puzzle,16,8,correct,,RDRULDDRULURDLDR,16,16,16,0.000475,,,solved,,,97
+llm,puzzle,16,8,illegal,el movimiento 3 (R) saca el hueco del tablero,RRRUULLDDLLURRDDLUUULLDDR,15,,16,0.267,166,22,ok,,,
+tool,puzzle,16,8,correct,,RDRULDDRULURDLDR,16,16,16,0.742,758,69,ok,1,True,97
+classical,puzzle,16,9,correct,,DRURDDLLURURDLDR,16,16,16,0.000405,,,solved,,,61
+llm,puzzle,16,9,illegal,el movimiento 3 (R) saca el hueco del tablero,RRRUULLD,8,,16,0.173,166,14,ok,,,
+tool,puzzle,16,9,correct,,DRURDDLLURURDLDR,16,16,16,0.714,758,69,ok,1,True,61
+classical,grid,5,0,correct,,DDRRR,7,7,7,3.3e-05,,,solved,,,8
+llm,grid,5,0,illegal,el movimiento 4 (R) se sale del grid,RRRRDDDRR,40,,7,0.18,190,15,ok,,,
+tool,grid,5,0,no_answer,no se encontró una línea PATH,,,,7,6.914,1278,704,ok,2,,0
+classical,grid,5,1,correct,,DDRR,6,6,6,1.9e-05,,,solved,,,4
+llm,grid,5,1,illegal,el movimiento 4 (R) se sale del grid,RRRRDDDD,34,,6,0.185,189,14,ok,,,
+tool,grid,5,1,illegal,"el camino termina en (3, 2), la meta es (3, 3)",DRD,5,,6,0.63,792,58,ok,1,False,3
+classical,grid,5,2,correct,,DRD,3,3,3,1.3e-05,,,solved,,,3
+llm,grid,5,2,illegal,el movimiento 4 (R) se sale del grid,RRRRDDDRUURRUUDDDUUDDDUU,45,,3,0.263,188,24,ok,,,
+tool,grid,5,2,no_answer,no se encontró una línea PATH,,,,3,1.678,1272,163,ok,2,,0
+classical,grid,5,3,correct,,LDDRDR,8,8,8,3.6e-05,,,solved,,,10
+llm,grid,5,3,illegal,el movimiento 4 (R) se sale del grid,RRRRDDDR,44,,8,0.171,190,14,ok,,,
+tool,grid,5,3,correct,,LDDRDR,8,8,8,0.702,802,65,ok,1,False,10
+classical,grid,5,4,correct,,URRRDD,10,10,10,4e-05,,,solved,,,11
+llm,grid,5,4,illegal,el movimiento 4 (R) se sale del grid,RRRRDDDD,34,,10,0.162,190,14,ok,,,
+tool,grid,5,4,no_answer,no se encontró una línea PATH,,,,10,1.839,1277,180,ok,2,,0
+classical,grid,5,5,correct,,DDRRDR,6,6,6,2.6e-05,,,solved,,,7
+llm,grid,5,5,illegal,movimiento 1: símbolo desconocido 'S',SRDDDR,24,,6,0.152,191,13,ok,,,
+tool,grid,5,5,no_answer,no se encontró una línea PATH,,,,6,2.152,1885,210,ok,4,,0
+classical,grid,5,6,correct,,DDDRRR,6,6,6,2.2e-05,,,solved,,,6
+llm,grid,5,6,illegal,movimiento 1: símbolo desconocido 'S',SRDLRDU,26,,6,0.171,189,14,ok,,,
+tool,grid,5,6,no_answer,error del modelo,,,,6,56.718,0,0,error,0,,0
+classical,grid,5,7,correct,,DRRR,4,4,4,1.8e-05,,,solved,,,4
+llm,grid,5,7,illegal,el movimiento 4 (R) se sale del grid,RRRRDDDD,34,,4,0.19,189,14,ok,,,
+tool,grid,5,7,illegal,"el camino termina en (3, 3), la meta es (2, 4)",DRDR,4,,4,0.922,798,64,ok,1,True,4
+classical,grid,5,8,correct,,DR,2,2,2,1.1e-05,,,solved,,,2
+llm,grid,5,8,illegal,el movimiento 4 (R) se sale del grid,RRRRDL,15,,2,0.165,188,14,ok,,,
+tool,grid,5,8,no_answer,no se encontró una línea PATH,,,,2,7.35,1867,755,ok,3,,0
+classical,grid,5,9,correct,,DDRDR,5,5,5,2.6e-05,,,solved,,,5
+llm,grid,5,9,illegal,movimiento 1: símbolo desconocido 'S',SRUURRUULLD,24,,5,0.18,189,16,ok,,,
+tool,grid,5,9,illegal,"el camino termina en (2, 2), la meta es (4, 2)",RDR,3,,5,1.011,1290,94,ok,2,False,3
+classical,grid,8,0,correct,,RDRDDDRRR,13,13,13,5.2e-05,,,solved,,,14
+llm,grid,8,0,illegal,movimiento 10: símbolo desconocido 'G',RRRRDDDRRGG,40,,13,0.198,228,16,ok,,,
+tool,grid,8,0,no_answer,no se encontró una línea PATH,,,,13,5.794,378,600,ok,0,,0
+classical,grid,8,1,correct,,DDDRRDRRD,9,9,9,4.9e-05,,,solved,,,12
+llm,grid,8,1,illegal,el movimiento 8 (R) se sale del grid,RRRRDDDRRGG,40,,9,0.196,229,16,ok,,,
+tool,grid,8,1,no_answer,no se encontró una línea PATH,,,,9,5.281,2525,536,ok,4,,0
+classical,grid,8,2,correct,,RRDDRRRRDD,23,23,23,8.3e-05,,,solved,,,24
+llm,grid,8,2,illegal,el movimiento 34 (L) se sale del grid,RRRRDDDRRULLLUUULLLDDDDRRRULLLUUULLLDDDDRRRULLLUUULLLDDDD,100,,23,0.449,230,41,ok,,,
+tool,grid,8,2,no_answer,error del modelo,,,,23,59.417,891,194,error,2,,0
+classical,grid,8,3,correct,,DRDDRRRRRDDR,14,14,14,6.6e-05,,,solved,,,18
+llm,grid,8,3,illegal,el movimiento 34 (L) se sale del grid,RRRRDDDRRULLLUUULLLDDDDRRRULLLUUULLLDDDDRRRULLLUUULLLDDDDRRRULLLUUULLLDDDD,104,,14,0.55,229,50,ok,,,
+tool,grid,8,3,no_answer,no se encontró una línea PATH,,,,14,5.684,2522,537,ok,4,,0
+classical,grid,8,4,correct,,RRRDDDDDR,11,11,11,4.7e-05,,,solved,,,12
+llm,grid,8,4,illegal,el movimiento 9 (U) se sale del grid,RRRUULLLUUUUDDDDRRRRRRRRRRR,128,,11,0.301,229,26,ok,,,
+tool,grid,8,4,no_answer,no se encontró una línea PATH,,,,11,2.821,2183,271,ok,4,,0
+classical,grid,8,5,correct,,RDRDDDDRRDRRU,17,17,17,0.000122,,,solved,,,25
+llm,grid,8,5,illegal,el movimiento 12 (R) se sale del grid,RRRRDDDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDRRDR,,,17,5.83,228,600,ok,,,
+tool,grid,8,5,no_answer,no se encontró una línea PATH,,,,17,3.177,2184,312,ok,4,,0
+classical,grid,8,6,correct,,DRDRRR,8,8,8,4.9e-05,,,solved,,,6
+llm,grid,8,6,illegal,movimiento 5: símbolo desconocido 'G',RRRRGRULLLUUUUDDDDD,52,,8,0.247,227,20,ok,,,
+tool,grid,8,6,no_answer,no se encontró una línea PATH,,,,8,5.329,2492,536,ok,4,,0
+classical,grid,8,7,correct,,RDRDRRDDR,11,11,11,4.3e-05,,,solved,,,11
+llm,grid,8,7,illegal,el movimiento 8 (R) se sale del grid,RRRRDRRRDLLUUULLLLUULLLUUUUULLL,40,,11,0.317,228,27,ok,,,
+tool,grid,8,7,no_answer,no se encontró una línea PATH,,,,11,4.604,2418,464,ok,4,,0
+classical,grid,8,8,correct,,RRRRRRDD,8,8,8,5.7e-05,,,solved,,,12
+llm,grid,8,8,illegal,el movimiento 38 (L) se sale del grid,RRRRDDDRRULLLUUULLLDDDDRRRRRRRLLLLLLLLLLLLL,104,,8,0.353,228,31,ok,,,
+tool,grid,8,8,no_answer,no se encontró una línea PATH,,,,8,4.729,2424,468,ok,4,,0
+classical,grid,8,9,correct,,DRRDDD,10,10,10,2.9e-05,,,solved,,,7
+llm,grid,8,9,illegal,el movimiento 9 (R) se sale del grid,RRRRDDDRRULLLUUULLLDDDDRRRRRRRLLLLLL,104,,10,0.336,228,29,ok,,,
+tool,grid,8,9,no_answer,no se encontró una línea PATH,,,,10,3.574,2252,353,ok,4,,0
+classical,grid,12,0,correct,,DDDDDDDDRRR,13,13,13,0.000121,,,solved,,,16
+llm,grid,12,0,illegal,"el camino termina en (8, 9), la meta es (10, 6)",RRRRDDDRRDDD,48,,13,0.24,312,16,ok,,,
+tool,grid,12,0,no_answer,no se encontró una línea PATH,,,,13,6.76,3060,670,ok,4,,0
+classical,grid,12,1,correct,,RRRDR,9,9,9,6.8e-05,,,solved,,,9
+llm,grid,12,1,illegal,el movimiento 12 (R) se sale del grid,RRRRDDDRRDRR,48,,9,0.27,312,17,ok,,,
+tool,grid,12,1,no_answer,no se encontró una línea PATH,,,,9,5.967,462,600,ok,0,,0
+classical,grid,12,2,correct,,DDDDRDDRRRRRDD,16,16,16,0.000114,,,solved,,,31
+llm,grid,12,2,illegal,el movimiento 22 (U) se sale del grid,RRRRDDDRRULLLUUULLLLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULL,,,16,6.026,310,600,ok,,,
+tool,grid,12,2,no_answer,no se encontró una línea PATH,,,,16,5.999,460,600,ok,0,,0
+classical,grid,12,3,correct,,DRDRRDRDR,13,13,13,0.000102,,,solved,,,14
+llm,grid,12,3,illegal,el movimiento 12 (R) se sale del grid,RRRRDDDRRDRR,48,,13,0.249,310,17,ok,,,
+tool,grid,12,3,no_answer,no se encontró una línea PATH,,,,13,7.361,3124,719,ok,4,,0
+classical,grid,12,4,correct,,RRDRD,5,5,5,6e-05,,,solved,,,8
+llm,grid,12,4,illegal,el movimiento 44 (U) se sale del grid,RRRRDDDRRULURDULDRDDLUUULLUULDRDLLUUULURDUUULURDDLUUULLUULDRDDLUUULLUULDRDDLUUULLUULDRDDLUUULLUULDRDDLUUULLUULDRDDLUUULLUULDRDDLUUULLUULDRDDLUUULLUULDRDDLUUULLUULDRDDLUUULLUULDRDDLUUULLUULDRDDLUUULLUULDRDDLUUULLUULDRDDLUUULLUULDRDDLUUULLUULDRDDLUUULLUULDRDDLUUULLUULDRDDLUUULLUULDRDDLUUULLUULDRDDLUUULLUULDRDDLUUULLUULDRDDLUUULLUULDRDDLUUULLUULDRDDLUUULLUULDRDDLUUULLUULDRDDLUUULLUULDRDDLUUULLUULDRDDLUUULLUULDRDDLUUULLUULDRDDLUUULLUULDRDDLUUULLUULDRDDLUUULLUULDRDDLUUULLUULDRDDLUUULLUULDRDDLUUULLUULDRDDLUUULLUULDRDDLUUULLUULDRDDLUUULLUULDRDDLUUULLUULDRDDLUUULLUULDRDDLUUULLUULDRDDLUUULLUULDRDDLUUULLUULDRDDLUUULLUULDRDDLUUULLUULDRDDLUUULLUULDRDDLUUULLUULDRDDLUUULLUULDRDDLUUULLUULDRDDLUUULLUULDRDDLUUULLUULDRDDLUUULLUULDRDDLUUULLUULDRDDLUUULLUULDRDDLUUULLUULDRDDLUUULLUULDRDDLUUULLUULDRDDLUUULLUULDRDDLUUULLUULDRDDLUUULLUULDRDDLUUULLUULDRDDLUUULLUULDRDDLUUULLUULDRDDLUUULLUULDRDDLUUULLUULDRDDLUUULLUULDRDDLUUULLUULDRDDLUUULLUULDRDDLUUULLUULDRDDLUUULLUULDRDDLUUULLUULDRDDLUUULLUULDRDDLUUULLUULDRDDLUUULLUULDRDDLUUULLUULDRDDLUUULLUULDRDDLUUULLUULDRDDLUUULLUULDRDDLUUULLUULDRDDLUUULLUULDRDDLUUULLUULDRDDLUUULLU,,,5,6.239,311,600,ok,,,
+tool,grid,12,4,no_answer,no se encontró una línea PATH,,,,5,6.078,461,600,ok,0,,0
+classical,grid,12,5,correct,,RRDDRDD,11,11,11,0.00014,,,solved,,,15
+llm,grid,12,5,illegal,el movimiento 11 (R) se sale del grid,RRRRDDDRRDRR,48,,11,0.294,310,17,ok,,,
+tool,grid,12,5,no_answer,no se encontró una línea PATH,,,,11,6.246,460,600,ok,0,,0
+classical,grid,12,6,correct,,RDDRDRDDDDDDD,17,17,17,0.000151,,,solved,,,22
+llm,grid,12,6,illegal,el movimiento 11 (R) se sale del grid,RRRRDDDRRDRR,48,,17,0.258,309,17,ok,,,
+tool,grid,12,6,no_answer,no se encontró una línea PATH,,,,17,5.491,3016,515,ok,4,,0
+classical,grid,12,7,correct,,DDRRRDDDDRRR,14,14,14,0.000102,,,solved,,,14
+llm,grid,12,7,illegal,"el camino termina en (8, 9), la meta es (10, 7)",RRRRDDDRRDRR,48,,14,0.255,311,17,ok,,,
+tool,grid,12,7,no_answer,error del modelo,,,,14,60.148,1134,356,error,2,,0
+classical,grid,12,8,correct,,RDRDDDDRDR,12,12,12,4.2e-05,,,solved,,,10
+llm,grid,12,8,illegal,movimiento 5: símbolo desconocido 'G',RRRRGRRRRDLR,48,,12,0.262,309,18,ok,,,
+tool,grid,12,8,no_answer,no se encontró una línea PATH,,,,12,6.355,459,600,ok,0,,0
+classical,grid,12,9,correct,,DRRRDDRRDDD,11,11,11,0.000104,,,solved,,,13
+llm,grid,12,9,illegal,"el camino termina en (6, 11), la meta es (8, 8)",RRRRDDDRRDRR,48,,11,0.243,312,17,ok,,,
+tool,grid,12,9,no_answer,error del modelo,,,,11,59.795,1135,340,error,2,,0
+classical,grid,16,0,correct,,DDDRDDDRDRDDDRRR,20,20,20,0.000192,,,solved,,,53
+llm,grid,16,0,illegal,el movimiento 24 (U) se sale del grid,RRRRDDDRRLLLULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLL,,,20,6.226,421,600,ok,,,
+tool,grid,16,0,no_answer,no se encontró una línea PATH,,,,20,6.024,571,600,ok,0,,0
+classical,grid,16,1,correct,,DRDDDDDRDRRRDDRRRUR,19,19,19,0.00016,,,solved,,,44
+llm,grid,16,1,illegal,el movimiento 24 (U) se sale del grid,RRRRDDDRRULLLUUULLLLLUUULLL,104,,19,0.369,422,25,ok,,,
+tool,grid,16,1,no_answer,no se encontró una línea PATH,,,,19,12.77,572,600,ok,0,,0
+classical,grid,16,2,correct,,DRDDDDDDRDDRRRRRRR,24,24,24,0.000283,,,solved,,,77
+llm,grid,16,2,illegal,el movimiento 28 (U) se sale del grid,RRRRDDDRRULLLUUULLLLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULL,,,24,6.106,422,600,ok,,,
+tool,grid,16,2,no_answer,error del modelo,,,,24,71.275,1500,644,error,2,,0
+classical,grid,16,3,correct,,DDDLDDRDDRDRDRRRDDDR,24,24,24,0.00062,,,solved,,,84
+llm,grid,16,3,illegal,el movimiento 24 (U) se sale del grid,RRRRDDDRRLLLULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLLLUUULLUULLLL,,,24,6.104,425,600,ok,,,
+tool,grid,16,3,no_answer,error del modelo,,,,24,65.715,2709,882,error,3,,0
+classical,grid,16,4,correct,,RDRRRRRDRDDDDDDRRRDD,26,26,26,0.000142,,,solved,,,41
+llm,grid,16,4,illegal,el movimiento 20 (L) se sale del grid,RRRRDDDRRULLLUUULLLLLUUULLLUUULLL,104,,26,0.587,425,28,ok,,,
+tool,grid,16,4,no_answer,no se encontró una línea PATH,,,,26,6.163,575,600,ok,0,,0
+classical,grid,16,5,correct,,DDDDRRRDRDDD,14,14,14,7.3e-05,,,solved,,,20
+llm,grid,16,5,illegal,el movimiento 28 (U) se sale del grid,RRRRDDDRRULLLUUULLLLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULLLUUULL,,,14,6.057,421,600,ok,,,
+tool,grid,16,5,no_answer,no se encontró una línea PATH,,,,14,5.896,571,600,ok,0,,0
+classical,grid,16,6,correct,,RRRRRDDRDDDD,18,18,18,0.000168,,,solved,,,37
+llm,grid,16,6,illegal,el movimiento 20 (D) se sale del grid,RRDDRRDDRRDDRRDDRRDDRRDDRRDDRRDDRRDDRRDDRRDDRRDDRRDDRRDDRRDDRRDDRRDDRRDDRRDDRRDDRRDDRRDDRRDDRRDDRRDDRRDDRR,,,18,6.052,421,600,ok,,,
+tool,grid,16,6,no_answer,no se encontró una línea PATH,,,,18,5.883,571,600,ok,0,,0
+classical,grid,16,7,correct,,DRRDDRDDDDDRRRRRRR,22,22,22,0.000126,,,solved,,,36
+llm,grid,16,7,illegal,el movimiento 21 (L) se sale del grid,RRRRDDDRRULLLUUULLLLLUUULLL,104,,22,0.365,423,25,ok,,,
+tool,grid,16,7,no_answer,no se encontró una línea PATH,,,,22,5.9,573,600,ok,0,,0
+classical,grid,16,8,correct,,DRDRRDRRDDDDR,17,17,17,9.1e-05,,,solved,,,23
+llm,grid,16,8,illegal,"el camino termina en (9, 10), la meta es (13, 9)",RRRRDDDRRULLLUUULLLDDDDRRRRRRR,128,,17,0.375,421,27,ok,,,
+tool,grid,16,8,no_answer,error del modelo,,,,17,56.247,0,0,error,0,,0
+classical,grid,16,9,correct,,DDRRRRRRRRRRDRD,19,19,19,0.000115,,,solved,,,32
+llm,grid,16,9,illegal,el movimiento 19 (L) se sale del grid,RRRRDDDRRLLLULLUULLLLRRRLLL,104,,19,7.393,423,24,ok,,,
+tool,grid,16,9,no_answer,no se encontró una línea PATH,,,,19,6.017,573,600,ok,0,,0
