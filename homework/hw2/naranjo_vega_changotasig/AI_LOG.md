@@ -21,7 +21,9 @@ El uso del LLM **como sujeto del experimento** en los brazos B, B′ y C se docu
 
 ## Integrante 2 — [nombre]
 
-[Pendiente: entradas de los brazos B y B′, con el mismo formato.]
+| N.º y actividad | Herramienta | ¿Qué pedí? | ¿Qué obtuve? | ¿Qué hice con ello? | ¿Lo entendí? |
+|---|---|---|---|---|---|
+| Brazos B y B′ | OpenCode (GPT-6.1 Terra) | Implementar B y B′ con Ollama, ejecutar los problemas y analizar los fallos. | Código, resultados, clasificación de los 20 fallos y borrador del informe. | Pendiente: revisar código, datos y análisis antes de entregar. | Pendiente: completar personalmente después de revisar. |
 
 ## Integrante 3 — [nombre]
 
