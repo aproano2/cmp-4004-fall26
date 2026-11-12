@@ -1,0 +1,15 @@
+{
+  "text": "The 1950 paper \"Computing Machinery and Intelligence\" was authored by Alan Turing. This seminal work introduced the Turing Test, a method to determine a machine's ability to exhibit intelligent behavior equivalent to, or indistinguishable from, that of a human.",
+  "backend": "ollama",
+  "model": "qwen2.5:3b",
+  "prompt": "Name the author of the 1950 paper 'Computing Machinery and Intelligence'.",
+  "temperature": 0.0,
+  "seed": 0,
+  "elapsed": 2.898885699978564,
+  "meta": {
+    "eval_count": 55,
+    "prompt_eval_count": 47,
+    "total_duration": 854728700
+  },
+  "cached_at": "2026-08-20T10:44:55"
+}
