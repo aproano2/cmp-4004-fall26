@@ -1,0 +1,7 @@
+# Week 0. The course harness itself is pure standard library; these are the
+# packages `python -m aicourse.doctor` checks for, plus Jupyter to open the
+# notebook. Install with:  pip install -r requirements.txt
+numpy>=1.24
+matplotlib>=3.7
+pytest>=7.4
+jupyterlab>=4.0        # skip if you open the notebook in VS Code
