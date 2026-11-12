@@ -1,0 +1,15 @@
+{
+  "text": "The 1950 paper \"Computing Machinery and Intelligence\" was authored by Alan Turing. This seminal work introduced the concept of the Turing Test and laid the groundwork for modern discussions in artificial intelligence and machine intelligence.",
+  "backend": "ollama",
+  "model": "qwen2.5:3b",
+  "prompt": "Name the author of the 1950 paper 'Computing Machinery and Intelligence'.",
+  "temperature": 0.0,
+  "seed": 0,
+  "elapsed": 8.337848899999699,
+  "meta": {
+    "eval_count": 45,
+    "prompt_eval_count": 47,
+    "total_duration": 6026942000
+  },
+  "cached_at": "2026-08-30T22:22:50"
+}
