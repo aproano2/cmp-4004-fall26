@@ -1,0 +1,15 @@
+{
+  "text": "17 * 23 equals 391.",
+  "backend": "ollama",
+  "model": "qwen2.5:3b",
+  "prompt": "What is 17 * 23?",
+  "temperature": 0.0,
+  "seed": 0,
+  "elapsed": 3.6260719999991124,
+  "meta": {
+    "eval_count": 13,
+    "prompt_eval_count": 39,
+    "total_duration": 1572740200
+  },
+  "cached_at": "2026-08-18T11:52:36"
+}

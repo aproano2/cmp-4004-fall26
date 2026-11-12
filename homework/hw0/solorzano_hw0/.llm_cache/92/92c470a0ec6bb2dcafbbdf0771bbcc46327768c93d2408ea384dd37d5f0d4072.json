@@ -1,0 +1,15 @@
+{
+  "text": "391",
+  "backend": "ollama",
+  "model": "qwen2.5:3b",
+  "prompt": "What is 17 * 23?\nReply with only the number.",
+  "temperature": 0.0,
+  "seed": 0,
+  "elapsed": 2.9138520999986213,
+  "meta": {
+    "eval_count": 4,
+    "prompt_eval_count": 45,
+    "total_duration": 855621700
+  },
+  "cached_at": "2026-08-18T11:52:39"
+}
