@@ -1,0 +1,23 @@
+{
+ "text": "{\n  \"Elena\": 1,\n  \"green\": 1,\n  \"Paula\": 2,\n  \"purple\": 2,\n  \"Omar\": 3,\n  \"yellow\": 3,\n  \"Hugo\": 4,\n  \"blue\": 4\n}",
+ "status": "ok",
+ "tokens_in": 342,
+ "tokens_out": 63,
+ "ollama_total_s": 0.755,
+ "done_reason": "stop",
+ "backend": "ollama",
+ "model": "qwen2.5:3b",
+ "temperature": 0.0,
+ "seed": 0,
+ "messages": [
+  {
+   "role": "system",
+   "content": "You are good at solving logic puzzles."
+  },
+  {
+   "role": "user",
+   "content": "Solve the puzzle. You may reason briefly first. End your reply with one JSON object that maps every person, colour and pet to its house number.\n\nExample puzzle:\nThree houses stand in a row, numbered 1 to 3 from left to right. Each house has a different owner and a different colour.\nOwners: Zoe, Yuri, Xena.\nColours: pink, grey, brown.\nClues:\n1. Zoe lives in the grey house.\n2. The pink house is immediately to the left of Yuri's house.\n3. Xena's house is not house 1.\nGive the house number of every owner and every colour.\n\nExample final answer:\n{\"Zoe\": 1, \"grey\": 1, \"Xena\": 2, \"pink\": 2, \"Yuri\": 3, \"brown\": 3}\n\nPuzzle:\nFour houses stand in a row, numbered 1 to 4 from left to right. Each house has a different owner and a different colour.\nOwners: Elena, Paula, Omar, Hugo.\nColours: purple, yellow, green, blue.\nClues:\n1. The purple house and the yellow house are next to each other.\n2. Elena's house and Omar's house are next to each other.\n3. The green house is not house 1.\n4. The purple house is somewhere to the left of Hugo's house.\n5. Elena lives in the green house.\n6. Hugo's house is immediately to the left of the blue house.\nGive the house number of every owner and every colour."
+  }
+ ],
+ "latency_s": 0.757
+}

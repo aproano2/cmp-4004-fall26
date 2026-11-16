@@ -1,0 +1,23 @@
+{
+ "text": "{\n  \"Vera\": 1,\n  \"grey\": 1,\n  \"Hugo\": 2,\n  \"pink\": 2,\n  \"Sara\": 3,\n  \"brown\": 3,\n  \"Carla\": 4,\n  \"yellow\": 4\n}",
+ "status": "ok",
+ "tokens_in": 293,
+ "tokens_out": 63,
+ "ollama_total_s": 0.712,
+ "done_reason": "stop",
+ "backend": "ollama",
+ "model": "qwen2.5:3b",
+ "temperature": 0.0,
+ "seed": 0,
+ "messages": [
+  {
+   "role": "system",
+   "content": "You are good at solving logic puzzles."
+  },
+  {
+   "role": "user",
+   "content": "Solve the puzzle. You may reason briefly first. End your reply with one JSON object that maps every person, colour and pet to its house number.\n\nExample puzzle:\nThree houses stand in a row, numbered 1 to 3 from left to right. Each house has a different owner and a different colour.\nOwners: Zoe, Yuri, Xena.\nColours: pink, grey, brown.\nClues:\n1. Zoe lives in the grey house.\n2. The pink house is immediately to the left of Yuri's house.\n3. Xena's house is not house 1.\nGive the house number of every owner and every colour.\n\nExample final answer:\n{\"Zoe\": 1, \"grey\": 1, \"Xena\": 2, \"pink\": 2, \"Yuri\": 3, \"brown\": 3}\n\nPuzzle:\nFour friends -- Vera, Hugo, Sara and Carla -- live in 4 houses in a row, numbered 1 to 4 from left to right. Each friend lives in a different house.\nClues:\n1. Hugo's house and Sara's house are next to each other.\n2. Vera's house is somewhere to the left of Carla's house.\n3. Hugo's house is immediately to the left of Carla's house.\nGive the house number of every friend."
+  }
+ ],
+ "latency_s": 0.715
+}

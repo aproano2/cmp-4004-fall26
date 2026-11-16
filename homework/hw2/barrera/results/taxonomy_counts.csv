@@ -1,0 +1,25 @@
+arm,run,category,count,detectable,nominal_detectable
+B,T=0,malformed_syntax,2,2,Sí
+B,T=0,scope_arity,3,3,A veces
+B,T=0,over_constrained,18,18,Sí
+B,T=0,under_constrained,14,14,A veces
+B,T=0,wrong_problem,0,0,No
+B,T=0,timeout,0,0,Sí
+B,T=0.7,malformed_syntax,10,10,Sí
+B,T=0.7,scope_arity,13,13,A veces
+B,T=0.7,over_constrained,61,61,Sí
+B,T=0.7,under_constrained,57,57,A veces
+B,T=0.7,wrong_problem,11,0,No
+B,T=0.7,timeout,0,0,Sí
+B',T=0,malformed_syntax,0,0,Sí
+B',T=0,scope_arity,3,3,A veces
+B',T=0,over_constrained,14,14,Sí
+B',T=0,under_constrained,19,19,A veces
+B',T=0,wrong_problem,1,0,No
+B',T=0,timeout,0,0,Sí
+B',T=0.7,malformed_syntax,4,4,Sí
+B',T=0.7,scope_arity,15,15,A veces
+B',T=0.7,over_constrained,37,37,Sí
+B',T=0.7,under_constrained,78,78,A veces
+B',T=0.7,wrong_problem,18,3,No
+B',T=0.7,timeout,0,0,Sí
