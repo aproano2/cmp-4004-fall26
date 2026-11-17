@@ -19,11 +19,11 @@ El uso del LLM **como sujeto del experimento** en los brazos B, B′ y C se docu
 
 ---
 
-## Integrante 2 — Nicolas Naranjo
+## Integrante 2 — Nicolás Naranjo
 
 | N.º y actividad | Herramienta | ¿Qué pedí? | ¿Qué obtuve? | ¿Qué hice con ello? | ¿Lo entendí? |
 |---|---|---|---|---|---|
-| Brazos B y B′ | OpenCode (GPT-6.1 Terra) | Implementar B y B′ con Ollama, ejecutar los problemas y analizar los fallos. | Código, resultados, clasificación de los 20 fallos y borrador del informe. | Pendiente: revisar código, datos y análisis antes de entregar. | Pendiente: completar personalmente después de revisar. |
+| Brazos B y B′ | OpenCode (GPT-6.1 Terra) | Implementar B y B′ con Ollama, ejecutar los problemas y analizar los fallos. | Código, resultados, clasificación de los 20 fallos y borrador del informe. | Revisar el codigo y los resultados para verificar que sean correctos. Completar el informe basado en lo escrito como borrador para el informe. | Si, los reultados obtenidos tuvieron sentido y se completo el informe de manera apropiada. |
 
 ## Integrante 3 — Andrés Vega
 
