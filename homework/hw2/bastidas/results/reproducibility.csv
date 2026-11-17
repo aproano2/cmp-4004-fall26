@@ -1,0 +1,4 @@
+arm,problems,runs_per_problem_T0.7,median_distinct_answers,problems_all_runs_identical
+B,40,4,2.0,15
+B',40,4,3.0,5
+C,40,4,4.0,0

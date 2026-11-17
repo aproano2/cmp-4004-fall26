@@ -1,0 +1,23 @@
+{
+ "text": "{\n  \"variables\": {\n    \"Lucia\": [1, 2, 3, 4, 5],\n    \"Mateo\": [1, 2, 3, 4, 5],\n    \"Nora\": [1, 2, 3, 4, 5],\n    \"Paula\": [1, 2, 3, 4, 5],\n    \"Raul\": [1, 2, 3, 4, 5],\n    \"yellow\": [1, 2, 3, 4, 5],\n    \"orange\": [1, 2, 3, 4, 5],\n    \"purple\": [1, 2, 3, 4, 5],\n    \"red\": [1, 2, 3, 4, 5],\n    \"green\": [1, 2, 3, 4, 5]\n  },\n  \"constraints\": [\n    {\"type\": \"alldiff\", \"vars\": [\"Lucia\", \"Mateo\", \"Nora\", \"Paula\", \"Raul\"]},\n    {\"type\": \"alldiff\", \"vars\": [\"yellow\", \"orange\", \"purple\", \"red\", \"green\"]},\n    {\"type\": \"eq\", \"a\": \"red\", \"b\": 5},\n    {\"type\": \"next_to\", \"a\": \"Nora\", \"b\": \"red\"},\n    {\"type\": \"next_to\", \"a\": \"Nora\", \"b\": \"Lucia\"},\n    {\"type\": \"next_to\", \"a\": \"green\", \"b\": \"Paula\"},\n    {\"type\": \"offset\", \"a\": \"Mateo\", \"b\": \"green\"},\n    {\"type\": \"offset\", \"a\": \"Mateo\", \"b\": \"orange\"},\n    {\"type\": \"next_to\", \"a\": \"Nora\", \"b\": \"yellow\"}\n  ]\n}",
+ "status": "ok",
+ "tokens_in": 817,
+ "tokens_out": 417,
+ "ollama_total_s": 4.807,
+ "done_reason": "stop",
+ "backend": "ollama",
+ "model": "qwen2.5:3b",
+ "temperature": 0.7,
+ "seed": 3,
+ "messages": [
+  {
+   "role": "system",
+   "content": "You translate logic puzzles into constraint satisfaction problems (CSP) written in JSON. You never solve the puzzle yourself."
+  },
+  {
+   "role": "user",
+   "content": "Translate the puzzle into a CSP in JSON. Do not solve it. Output only the JSON object.\n\nRules:\n- Make one variable for every person, colour and pet named in the puzzle, using the names exactly as written.\n- The value of every variable is a house number, so every domain is the list of house numbers [1, ..., N].\n- Use only these constraint types:\n  {\"type\": \"alldiff\", \"vars\": [\"A\", \"B\", ...]}    the listed variables all take different values\n  {\"type\": \"eq\", \"a\": \"A\", \"b\": \"B\"}              A equals variable B (or \"b\": 3 for A equals the number 3)\n  {\"type\": \"neq\", \"a\": \"A\", \"b\": \"B\"}             A differs from variable B (or \"b\": 3 for A is not 3)\n  {\"type\": \"lt\", \"a\": \"A\", \"b\": \"B\"}              A < B (A is somewhere to the left of B)\n  {\"type\": \"next_to\", \"a\": \"A\", \"b\": \"B\"}         |A - B| = 1 (A and B are neighbours)\n  {\"type\": \"offset\", \"a\": \"A\", \"b\": \"B\", \"k\": 1}  A = B + k (with k = 1: A is immediately to the right of B)\n\nExample puzzle:\nThree houses stand in a row, numbered 1 to 3 from left to right. Each house has a different owner and a different colour.\nOwners: Zoe, Yuri, Xena.\nColours: pink, grey, brown.\nClues:\n1. Zoe lives in the grey house.\n2. The pink house is immediately to the left of Yuri's house.\n3. Xena's house is not house 1.\nGive the house number of every owner and every colour.\n\nExample JSON:\n{\"variables\": {\"Zoe\": [1, 2, 3], \"Yuri\": [1, 2, 3], \"Xena\": [1, 2, 3],\n               \"pink\": [1, 2, 3], \"grey\": [1, 2, 3], \"brown\": [1, 2, 3]},\n \"constraints\": [\n  {\"type\": \"alldiff\", \"vars\": [\"Zoe\", \"Yuri\", \"Xena\"]},\n  {\"type\": \"alldiff\", \"vars\": [\"pink\", \"grey\", \"brown\"]},\n  {\"type\": \"eq\", \"a\": \"Zoe\", \"b\": \"grey\"},\n  {\"type\": \"offset\", \"a\": \"Yuri\", \"b\": \"pink\", \"k\": 1},\n  {\"type\": \"neq\", \"a\": \"Xena\", \"b\": 1}\n ]}\n\nPuzzle:\nFive houses stand in a row, numbered 1 to 5 from left to right. Each house has a different owner and a different colour.\nOwners: Lucia, Mateo, Raul, Paula, Nora.\nColours: yellow, orange, red, green, purple.\nClues:\n1. Nora's house and the red house are next to each other.\n2. The red house is house 5.\n3. The yellow house is somewhere to the left of Nora's house.\n4. Nora's house is immediately to the left of Lucia's house.\n5. The green house is somewhere to the left of Paula's house.\n6. The green house is immediately to the left of Mateo's house.\n7. Mateo's house is immediately to the left of the orange house.\nGive the house number of every owner and every colour.\n\nJSON:"
+  }
+ ],
+ "latency_s": 4.808
+}

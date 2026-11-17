@@ -1,0 +1,7757 @@
+{
+ "problems": [
+  {
+   "id": "L1-01",
+   "level": 1,
+   "n_houses": 4,
+   "n_vars": 4,
+   "n_clues": 3,
+   "n_constraints": 4,
+   "plain_bt_calls": 5,
+   "groups": {
+    "person": [
+     "Ben",
+     "Gina",
+     "Carla",
+     "Mateo"
+    ]
+   },
+   "text": "Four friends -- Ben, Gina, Carla and Mateo -- live in 4 houses in a row, numbered 1 to 4 from left to right. Each friend lives in a different house.\nClues:\n1. Gina's house is house 3.\n2. Gina's house is somewhere to the left of Carla's house.\n3. Mateo's house is not house 1.\nGive the house number of every friend.",
+   "clues": [
+    {
+     "kind": "at",
+     "x": "Gina",
+     "y": 3
+    },
+    {
+     "kind": "left_of",
+     "x": "Gina",
+     "y": "Carla"
+    },
+    {
+     "kind": "not_at",
+     "x": "Mateo",
+     "y": 1
+    }
+   ],
+   "spec": {
+    "variables": {
+     "Ben": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "Gina": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "Carla": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "Mateo": [
+      1,
+      2,
+      3,
+      4
+     ]
+    },
+    "constraints": [
+     {
+      "type": "alldiff",
+      "vars": [
+       "Ben",
+       "Gina",
+       "Carla",
+       "Mateo"
+      ]
+     },
+     {
+      "type": "eq",
+      "a": "Gina",
+      "b": 3
+     },
+     {
+      "type": "lt",
+      "a": "Gina",
+      "b": "Carla"
+     },
+     {
+      "type": "neq",
+      "a": "Mateo",
+      "b": 1
+     }
+    ]
+   },
+   "gold": {
+    "Ben": 1,
+    "Gina": 3,
+    "Carla": 4,
+    "Mateo": 2
+   }
+  },
+  {
+   "id": "L1-02",
+   "level": 1,
+   "n_houses": 4,
+   "n_vars": 4,
+   "n_clues": 2,
+   "n_constraints": 3,
+   "plain_bt_calls": 6,
+   "groups": {
+    "person": [
+     "Raul",
+     "Nora",
+     "Hugo",
+     "Elena"
+    ]
+   },
+   "text": "Four friends -- Raul, Nora, Hugo and Elena -- live in 4 houses in a row, numbered 1 to 4 from left to right. Each friend lives in a different house.\nClues:\n1. Nora's house is house 3.\n2. Raul's house is immediately to the left of Elena's house.\nGive the house number of every friend.",
+   "clues": [
+    {
+     "kind": "at",
+     "x": "Nora",
+     "y": 3
+    },
+    {
+     "kind": "right_next",
+     "x": "Raul",
+     "y": "Elena"
+    }
+   ],
+   "spec": {
+    "variables": {
+     "Raul": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "Nora": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "Hugo": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "Elena": [
+      1,
+      2,
+      3,
+      4
+     ]
+    },
+    "constraints": [
+     {
+      "type": "alldiff",
+      "vars": [
+       "Raul",
+       "Nora",
+       "Hugo",
+       "Elena"
+      ]
+     },
+     {
+      "type": "eq",
+      "a": "Nora",
+      "b": 3
+     },
+     {
+      "type": "offset",
+      "a": "Elena",
+      "b": "Raul",
+      "k": 1
+     }
+    ]
+   },
+   "gold": {
+    "Raul": 1,
+    "Nora": 3,
+    "Hugo": 4,
+    "Elena": 2
+   }
+  },
+  {
+   "id": "L1-03",
+   "level": 1,
+   "n_houses": 4,
+   "n_vars": 4,
+   "n_clues": 4,
+   "n_constraints": 5,
+   "plain_bt_calls": 5,
+   "groups": {
+    "person": [
+     "Paula",
+     "Sara",
+     "Lucia",
+     "Hugo"
+    ]
+   },
+   "text": "Four friends -- Paula, Sara, Lucia and Hugo -- live in 4 houses in a row, numbered 1 to 4 from left to right. Each friend lives in a different house.\nClues:\n1. Lucia's house is somewhere to the left of Sara's house.\n2. Sara's house is not house 2.\n3. Sara's house and Lucia's house are next to each other.\n4. Lucia's house is somewhere to the left of Hugo's house.\nGive the house number of every friend.",
+   "clues": [
+    {
+     "kind": "left_of",
+     "x": "Lucia",
+     "y": "Sara"
+    },
+    {
+     "kind": "not_at",
+     "x": "Sara",
+     "y": 2
+    },
+    {
+     "kind": "next_to",
+     "x": "Sara",
+     "y": "Lucia"
+    },
+    {
+     "kind": "left_of",
+     "x": "Lucia",
+     "y": "Hugo"
+    }
+   ],
+   "spec": {
+    "variables": {
+     "Paula": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "Sara": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "Lucia": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "Hugo": [
+      1,
+      2,
+      3,
+      4
+     ]
+    },
+    "constraints": [
+     {
+      "type": "alldiff",
+      "vars": [
+       "Paula",
+       "Sara",
+       "Lucia",
+       "Hugo"
+      ]
+     },
+     {
+      "type": "lt",
+      "a": "Lucia",
+      "b": "Sara"
+     },
+     {
+      "type": "neq",
+      "a": "Sara",
+      "b": 2
+     },
+     {
+      "type": "next_to",
+      "a": "Sara",
+      "b": "Lucia"
+     },
+     {
+      "type": "lt",
+      "a": "Lucia",
+      "b": "Hugo"
+     }
+    ]
+   },
+   "gold": {
+    "Paula": 1,
+    "Sara": 3,
+    "Lucia": 2,
+    "Hugo": 4
+   }
+  },
+  {
+   "id": "L1-04",
+   "level": 1,
+   "n_houses": 4,
+   "n_vars": 4,
+   "n_clues": 3,
+   "n_constraints": 4,
+   "plain_bt_calls": 22,
+   "groups": {
+    "person": [
+     "Nora",
+     "Dev",
+     "Sara",
+     "Raul"
+    ]
+   },
+   "text": "Four friends -- Nora, Dev, Sara and Raul -- live in 4 houses in a row, numbered 1 to 4 from left to right. Each friend lives in a different house.\nClues:\n1. Nora's house is somewhere to the left of Dev's house.\n2. Raul's house is immediately to the left of Nora's house.\n3. Sara's house is somewhere to the left of Raul's house.\nGive the house number of every friend.",
+   "clues": [
+    {
+     "kind": "left_of",
+     "x": "Nora",
+     "y": "Dev"
+    },
+    {
+     "kind": "right_next",
+     "x": "Raul",
+     "y": "Nora"
+    },
+    {
+     "kind": "left_of",
+     "x": "Sara",
+     "y": "Raul"
+    }
+   ],
+   "spec": {
+    "variables": {
+     "Nora": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "Dev": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "Sara": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "Raul": [
+      1,
+      2,
+      3,
+      4
+     ]
+    },
+    "constraints": [
+     {
+      "type": "alldiff",
+      "vars": [
+       "Nora",
+       "Dev",
+       "Sara",
+       "Raul"
+      ]
+     },
+     {
+      "type": "lt",
+      "a": "Nora",
+      "b": "Dev"
+     },
+     {
+      "type": "offset",
+      "a": "Nora",
+      "b": "Raul",
+      "k": 1
+     },
+     {
+      "type": "lt",
+      "a": "Sara",
+      "b": "Raul"
+     }
+    ]
+   },
+   "gold": {
+    "Nora": 3,
+    "Dev": 4,
+    "Sara": 1,
+    "Raul": 2
+   }
+  },
+  {
+   "id": "L1-05",
+   "level": 1,
+   "n_houses": 4,
+   "n_vars": 4,
+   "n_clues": 3,
+   "n_constraints": 4,
+   "plain_bt_calls": 21,
+   "groups": {
+    "person": [
+     "Paula",
+     "Mateo",
+     "Sara",
+     "Nora"
+    ]
+   },
+   "text": "Four friends -- Paula, Mateo, Sara and Nora -- live in 4 houses in a row, numbered 1 to 4 from left to right. Each friend lives in a different house.\nClues:\n1. Sara's house and Nora's house are next to each other.\n2. Nora's house is not house 4.\n3. Mateo's house is immediately to the left of Sara's house.\nGive the house number of every friend.",
+   "clues": [
+    {
+     "kind": "next_to",
+     "x": "Sara",
+     "y": "Nora"
+    },
+    {
+     "kind": "not_at",
+     "x": "Nora",
+     "y": 4
+    },
+    {
+     "kind": "right_next",
+     "x": "Mateo",
+     "y": "Sara"
+    }
+   ],
+   "spec": {
+    "variables": {
+     "Paula": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "Mateo": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "Sara": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "Nora": [
+      1,
+      2,
+      3,
+      4
+     ]
+    },
+    "constraints": [
+     {
+      "type": "alldiff",
+      "vars": [
+       "Paula",
+       "Mateo",
+       "Sara",
+       "Nora"
+      ]
+     },
+     {
+      "type": "next_to",
+      "a": "Sara",
+      "b": "Nora"
+     },
+     {
+      "type": "neq",
+      "a": "Nora",
+      "b": 4
+     },
+     {
+      "type": "offset",
+      "a": "Sara",
+      "b": "Mateo",
+      "k": 1
+     }
+    ]
+   },
+   "gold": {
+    "Paula": 4,
+    "Mateo": 1,
+    "Sara": 2,
+    "Nora": 3
+   }
+  },
+  {
+   "id": "L1-06",
+   "level": 1,
+   "n_houses": 4,
+   "n_vars": 4,
+   "n_clues": 3,
+   "n_constraints": 4,
+   "plain_bt_calls": 19,
+   "groups": {
+    "person": [
+     "Lucia",
+     "Ben",
+     "Hugo",
+     "Omar"
+    ]
+   },
+   "text": "Four friends -- Lucia, Ben, Hugo and Omar -- live in 4 houses in a row, numbered 1 to 4 from left to right. Each friend lives in a different house.\nClues:\n1. Lucia's house is immediately to the left of Hugo's house.\n2. Omar's house is somewhere to the left of Hugo's house.\n3. Omar's house is immediately to the left of Ben's house.\nGive the house number of every friend.",
+   "clues": [
+    {
+     "kind": "right_next",
+     "x": "Lucia",
+     "y": "Hugo"
+    },
+    {
+     "kind": "left_of",
+     "x": "Omar",
+     "y": "Hugo"
+    },
+    {
+     "kind": "right_next",
+     "x": "Omar",
+     "y": "Ben"
+    }
+   ],
+   "spec": {
+    "variables": {
+     "Lucia": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "Ben": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "Hugo": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "Omar": [
+      1,
+      2,
+      3,
+      4
+     ]
+    },
+    "constraints": [
+     {
+      "type": "alldiff",
+      "vars": [
+       "Lucia",
+       "Ben",
+       "Hugo",
+       "Omar"
+      ]
+     },
+     {
+      "type": "offset",
+      "a": "Hugo",
+      "b": "Lucia",
+      "k": 1
+     },
+     {
+      "type": "lt",
+      "a": "Omar",
+      "b": "Hugo"
+     },
+     {
+      "type": "offset",
+      "a": "Ben",
+      "b": "Omar",
+      "k": 1
+     }
+    ]
+   },
+   "gold": {
+    "Lucia": 3,
+    "Ben": 2,
+    "Hugo": 4,
+    "Omar": 1
+   }
+  },
+  {
+   "id": "L1-07",
+   "level": 1,
+   "n_houses": 4,
+   "n_vars": 4,
+   "n_clues": 3,
+   "n_constraints": 4,
+   "plain_bt_calls": 11,
+   "groups": {
+    "person": [
+     "Ben",
+     "Felix",
+     "Jon",
+     "Tomas"
+    ]
+   },
+   "text": "Four friends -- Ben, Felix, Jon and Tomas -- live in 4 houses in a row, numbered 1 to 4 from left to right. Each friend lives in a different house.\nClues:\n1. Felix's house is house 1.\n2. Tomas's house is somewhere to the left of Jon's house.\n3. Jon's house is immediately to the left of Ben's house.\nGive the house number of every friend.",
+   "clues": [
+    {
+     "kind": "at",
+     "x": "Felix",
+     "y": 1
+    },
+    {
+     "kind": "left_of",
+     "x": "Tomas",
+     "y": "Jon"
+    },
+    {
+     "kind": "right_next",
+     "x": "Jon",
+     "y": "Ben"
+    }
+   ],
+   "spec": {
+    "variables": {
+     "Ben": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "Felix": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "Jon": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "Tomas": [
+      1,
+      2,
+      3,
+      4
+     ]
+    },
+    "constraints": [
+     {
+      "type": "alldiff",
+      "vars": [
+       "Ben",
+       "Felix",
+       "Jon",
+       "Tomas"
+      ]
+     },
+     {
+      "type": "eq",
+      "a": "Felix",
+      "b": 1
+     },
+     {
+      "type": "lt",
+      "a": "Tomas",
+      "b": "Jon"
+     },
+     {
+      "type": "offset",
+      "a": "Ben",
+      "b": "Jon",
+      "k": 1
+     }
+    ]
+   },
+   "gold": {
+    "Ben": 4,
+    "Felix": 1,
+    "Jon": 3,
+    "Tomas": 2
+   }
+  },
+  {
+   "id": "L1-08",
+   "level": 1,
+   "n_houses": 4,
+   "n_vars": 4,
+   "n_clues": 3,
+   "n_constraints": 4,
+   "plain_bt_calls": 15,
+   "groups": {
+    "person": [
+     "Raul",
+     "Omar",
+     "Kai",
+     "Carla"
+    ]
+   },
+   "text": "Four friends -- Raul, Omar, Kai and Carla -- live in 4 houses in a row, numbered 1 to 4 from left to right. Each friend lives in a different house.\nClues:\n1. Carla's house is somewhere to the left of Omar's house.\n2. Carla's house is immediately to the left of Raul's house.\n3. Omar's house is somewhere to the left of Kai's house.\nGive the house number of every friend.",
+   "clues": [
+    {
+     "kind": "left_of",
+     "x": "Carla",
+     "y": "Omar"
+    },
+    {
+     "kind": "right_next",
+     "x": "Carla",
+     "y": "Raul"
+    },
+    {
+     "kind": "left_of",
+     "x": "Omar",
+     "y": "Kai"
+    }
+   ],
+   "spec": {
+    "variables": {
+     "Raul": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "Omar": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "Kai": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "Carla": [
+      1,
+      2,
+      3,
+      4
+     ]
+    },
+    "constraints": [
+     {
+      "type": "alldiff",
+      "vars": [
+       "Raul",
+       "Omar",
+       "Kai",
+       "Carla"
+      ]
+     },
+     {
+      "type": "lt",
+      "a": "Carla",
+      "b": "Omar"
+     },
+     {
+      "type": "offset",
+      "a": "Raul",
+      "b": "Carla",
+      "k": 1
+     },
+     {
+      "type": "lt",
+      "a": "Omar",
+      "b": "Kai"
+     }
+    ]
+   },
+   "gold": {
+    "Raul": 2,
+    "Omar": 3,
+    "Kai": 4,
+    "Carla": 1
+   }
+  },
+  {
+   "id": "L1-09",
+   "level": 1,
+   "n_houses": 4,
+   "n_vars": 4,
+   "n_clues": 4,
+   "n_constraints": 5,
+   "plain_bt_calls": 9,
+   "groups": {
+    "person": [
+     "Felix",
+     "Ana",
+     "Paula",
+     "Carla"
+    ]
+   },
+   "text": "Four friends -- Felix, Ana, Paula and Carla -- live in 4 houses in a row, numbered 1 to 4 from left to right. Each friend lives in a different house.\nClues:\n1. Felix's house is somewhere to the left of Ana's house.\n2. Carla's house is not house 3.\n3. Ana's house and Carla's house are next to each other.\n4. Felix's house and Ana's house are next to each other.\nGive the house number of every friend.",
+   "clues": [
+    {
+     "kind": "left_of",
+     "x": "Felix",
+     "y": "Ana"
+    },
+    {
+     "kind": "not_at",
+     "x": "Carla",
+     "y": 3
+    },
+    {
+     "kind": "next_to",
+     "x": "Ana",
+     "y": "Carla"
+    },
+    {
+     "kind": "next_to",
+     "x": "Felix",
+     "y": "Ana"
+    }
+   ],
+   "spec": {
+    "variables": {
+     "Felix": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "Ana": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "Paula": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "Carla": [
+      1,
+      2,
+      3,
+      4
+     ]
+    },
+    "constraints": [
+     {
+      "type": "alldiff",
+      "vars": [
+       "Felix",
+       "Ana",
+       "Paula",
+       "Carla"
+      ]
+     },
+     {
+      "type": "lt",
+      "a": "Felix",
+      "b": "Ana"
+     },
+     {
+      "type": "neq",
+      "a": "Carla",
+      "b": 3
+     },
+     {
+      "type": "next_to",
+      "a": "Ana",
+      "b": "Carla"
+     },
+     {
+      "type": "next_to",
+      "a": "Felix",
+      "b": "Ana"
+     }
+    ]
+   },
+   "gold": {
+    "Felix": 2,
+    "Ana": 3,
+    "Paula": 1,
+    "Carla": 4
+   }
+  },
+  {
+   "id": "L1-10",
+   "level": 1,
+   "n_houses": 4,
+   "n_vars": 4,
+   "n_clues": 3,
+   "n_constraints": 4,
+   "plain_bt_calls": 7,
+   "groups": {
+    "person": [
+     "Vera",
+     "Hugo",
+     "Sara",
+     "Carla"
+    ]
+   },
+   "text": "Four friends -- Vera, Hugo, Sara and Carla -- live in 4 houses in a row, numbered 1 to 4 from left to right. Each friend lives in a different house.\nClues:\n1. Hugo's house and Sara's house are next to each other.\n2. Vera's house is somewhere to the left of Carla's house.\n3. Hugo's house is immediately to the left of Carla's house.\nGive the house number of every friend.",
+   "clues": [
+    {
+     "kind": "next_to",
+     "x": "Hugo",
+     "y": "Sara"
+    },
+    {
+     "kind": "left_of",
+     "x": "Vera",
+     "y": "Carla"
+    },
+    {
+     "kind": "right_next",
+     "x": "Hugo",
+     "y": "Carla"
+    }
+   ],
+   "spec": {
+    "variables": {
+     "Vera": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "Hugo": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "Sara": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "Carla": [
+      1,
+      2,
+      3,
+      4
+     ]
+    },
+    "constraints": [
+     {
+      "type": "alldiff",
+      "vars": [
+       "Vera",
+       "Hugo",
+       "Sara",
+       "Carla"
+      ]
+     },
+     {
+      "type": "next_to",
+      "a": "Hugo",
+      "b": "Sara"
+     },
+     {
+      "type": "lt",
+      "a": "Vera",
+      "b": "Carla"
+     },
+     {
+      "type": "offset",
+      "a": "Carla",
+      "b": "Hugo",
+      "k": 1
+     }
+    ]
+   },
+   "gold": {
+    "Vera": 1,
+    "Hugo": 3,
+    "Sara": 2,
+    "Carla": 4
+   }
+  },
+  {
+   "id": "L2-01",
+   "level": 2,
+   "n_houses": 4,
+   "n_vars": 8,
+   "n_clues": 5,
+   "n_constraints": 7,
+   "plain_bt_calls": 30,
+   "groups": {
+    "person": [
+     "Tomas",
+     "Ana",
+     "Lucia",
+     "Ben"
+    ],
+    "colour": [
+     "blue",
+     "black",
+     "white",
+     "orange"
+    ]
+   },
+   "text": "Four houses stand in a row, numbered 1 to 4 from left to right. Each house has a different owner and a different colour.\nOwners: Tomas, Ana, Lucia, Ben.\nColours: blue, black, white, orange.\nClues:\n1. The orange house is somewhere to the left of Tomas's house.\n2. Ana lives in the blue house.\n3. Tomas's house is immediately to the left of Lucia's house.\n4. Lucia does not live in the white house.\n5. Ana's house and Lucia's house are next to each other.\nGive the house number of every owner and every colour.",
+   "clues": [
+    {
+     "kind": "left_of",
+     "x": "orange",
+     "y": "Tomas"
+    },
+    {
+     "kind": "same",
+     "x": "Ana",
+     "y": "blue"
+    },
+    {
+     "kind": "right_next",
+     "x": "Tomas",
+     "y": "Lucia"
+    },
+    {
+     "kind": "differ",
+     "x": "Lucia",
+     "y": "white"
+    },
+    {
+     "kind": "next_to",
+     "x": "Ana",
+     "y": "Lucia"
+    }
+   ],
+   "spec": {
+    "variables": {
+     "Tomas": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "Ana": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "Lucia": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "Ben": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "blue": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "black": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "white": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "orange": [
+      1,
+      2,
+      3,
+      4
+     ]
+    },
+    "constraints": [
+     {
+      "type": "alldiff",
+      "vars": [
+       "Tomas",
+       "Ana",
+       "Lucia",
+       "Ben"
+      ]
+     },
+     {
+      "type": "alldiff",
+      "vars": [
+       "blue",
+       "black",
+       "white",
+       "orange"
+      ]
+     },
+     {
+      "type": "lt",
+      "a": "orange",
+      "b": "Tomas"
+     },
+     {
+      "type": "eq",
+      "a": "Ana",
+      "b": "blue"
+     },
+     {
+      "type": "offset",
+      "a": "Lucia",
+      "b": "Tomas",
+      "k": 1
+     },
+     {
+      "type": "neq",
+      "a": "Lucia",
+      "b": "white"
+     },
+     {
+      "type": "next_to",
+      "a": "Ana",
+      "b": "Lucia"
+     }
+    ]
+   },
+   "gold": {
+    "Tomas": 2,
+    "Ana": 4,
+    "Lucia": 3,
+    "Ben": 1,
+    "blue": 4,
+    "black": 3,
+    "white": 2,
+    "orange": 1
+   }
+  },
+  {
+   "id": "L2-02",
+   "level": 2,
+   "n_houses": 4,
+   "n_vars": 8,
+   "n_clues": 5,
+   "n_constraints": 7,
+   "plain_bt_calls": 74,
+   "groups": {
+    "person": [
+     "Ana",
+     "Raul",
+     "Kai",
+     "Dev"
+    ],
+    "colour": [
+     "white",
+     "green",
+     "purple",
+     "red"
+    ]
+   },
+   "text": "Four houses stand in a row, numbered 1 to 4 from left to right. Each house has a different owner and a different colour.\nOwners: Ana, Raul, Kai, Dev.\nColours: white, green, purple, red.\nClues:\n1. Kai's house is immediately to the left of the white house.\n2. The white house is house 3.\n3. Dev's house is somewhere to the left of the green house.\n4. The green house and the red house are next to each other.\n5. Ana's house and the white house are next to each other.\nGive the house number of every owner and every colour.",
+   "clues": [
+    {
+     "kind": "right_next",
+     "x": "Kai",
+     "y": "white"
+    },
+    {
+     "kind": "at",
+     "x": "white",
+     "y": 3
+    },
+    {
+     "kind": "left_of",
+     "x": "Dev",
+     "y": "green"
+    },
+    {
+     "kind": "next_to",
+     "x": "green",
+     "y": "red"
+    },
+    {
+     "kind": "next_to",
+     "x": "Ana",
+     "y": "white"
+    }
+   ],
+   "spec": {
+    "variables": {
+     "Ana": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "Raul": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "Kai": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "Dev": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "white": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "green": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "purple": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "red": [
+      1,
+      2,
+      3,
+      4
+     ]
+    },
+    "constraints": [
+     {
+      "type": "alldiff",
+      "vars": [
+       "Ana",
+       "Raul",
+       "Kai",
+       "Dev"
+      ]
+     },
+     {
+      "type": "alldiff",
+      "vars": [
+       "white",
+       "green",
+       "purple",
+       "red"
+      ]
+     },
+     {
+      "type": "offset",
+      "a": "white",
+      "b": "Kai",
+      "k": 1
+     },
+     {
+      "type": "eq",
+      "a": "white",
+      "b": 3
+     },
+     {
+      "type": "lt",
+      "a": "Dev",
+      "b": "green"
+     },
+     {
+      "type": "next_to",
+      "a": "green",
+      "b": "red"
+     },
+     {
+      "type": "next_to",
+      "a": "Ana",
+      "b": "white"
+     }
+    ]
+   },
+   "gold": {
+    "Ana": 4,
+    "Raul": 3,
+    "Kai": 2,
+    "Dev": 1,
+    "white": 3,
+    "green": 2,
+    "purple": 4,
+    "red": 1
+   }
+  },
+  {
+   "id": "L2-03",
+   "level": 2,
+   "n_houses": 4,
+   "n_vars": 8,
+   "n_clues": 6,
+   "n_constraints": 8,
+   "plain_bt_calls": 35,
+   "groups": {
+    "person": [
+     "Dev",
+     "Sara",
+     "Hugo",
+     "Jon"
+    ],
+    "colour": [
+     "white",
+     "black",
+     "yellow",
+     "red"
+    ]
+   },
+   "text": "Four houses stand in a row, numbered 1 to 4 from left to right. Each house has a different owner and a different colour.\nOwners: Dev, Sara, Hugo, Jon.\nColours: white, black, yellow, red.\nClues:\n1. Sara's house and Hugo's house are next to each other.\n2. The white house is not house 3.\n3. The yellow house is somewhere to the left of Hugo's house.\n4. Sara lives in the black house.\n5. Dev lives in the red house.\n6. Jon's house is not house 1.\nGive the house number of every owner and every colour.",
+   "clues": [
+    {
+     "kind": "next_to",
+     "x": "Sara",
+     "y": "Hugo"
+    },
+    {
+     "kind": "not_at",
+     "x": "white",
+     "y": 3
+    },
+    {
+     "kind": "left_of",
+     "x": "yellow",
+     "y": "Hugo"
+    },
+    {
+     "kind": "same",
+     "x": "Sara",
+     "y": "black"
+    },
+    {
+     "kind": "same",
+     "x": "Dev",
+     "y": "red"
+    },
+    {
+     "kind": "not_at",
+     "x": "Jon",
+     "y": 1
+    }
+   ],
+   "spec": {
+    "variables": {
+     "Dev": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "Sara": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "Hugo": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "Jon": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "white": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "black": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "yellow": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "red": [
+      1,
+      2,
+      3,
+      4
+     ]
+    },
+    "constraints": [
+     {
+      "type": "alldiff",
+      "vars": [
+       "Dev",
+       "Sara",
+       "Hugo",
+       "Jon"
+      ]
+     },
+     {
+      "type": "alldiff",
+      "vars": [
+       "white",
+       "black",
+       "yellow",
+       "red"
+      ]
+     },
+     {
+      "type": "next_to",
+      "a": "Sara",
+      "b": "Hugo"
+     },
+     {
+      "type": "neq",
+      "a": "white",
+      "b": 3
+     },
+     {
+      "type": "lt",
+      "a": "yellow",
+      "b": "Hugo"
+     },
+     {
+      "type": "eq",
+      "a": "Sara",
+      "b": "black"
+     },
+     {
+      "type": "eq",
+      "a": "Dev",
+      "b": "red"
+     },
+     {
+      "type": "neq",
+      "a": "Jon",
+      "b": 1
+     }
+    ]
+   },
+   "gold": {
+    "Dev": 1,
+    "Sara": 3,
+    "Hugo": 4,
+    "Jon": 2,
+    "white": 4,
+    "black": 3,
+    "yellow": 2,
+    "red": 1
+   }
+  },
+  {
+   "id": "L2-04",
+   "level": 2,
+   "n_houses": 4,
+   "n_vars": 8,
+   "n_clues": 6,
+   "n_constraints": 8,
+   "plain_bt_calls": 113,
+   "groups": {
+    "person": [
+     "Raul",
+     "Ana",
+     "Gina",
+     "Lucia"
+    ],
+    "colour": [
+     "blue",
+     "black",
+     "white",
+     "orange"
+    ]
+   },
+   "text": "Four houses stand in a row, numbered 1 to 4 from left to right. Each house has a different owner and a different colour.\nOwners: Raul, Ana, Gina, Lucia.\nColours: blue, black, white, orange.\nClues:\n1. The white house is immediately to the left of Gina's house.\n2. Raul's house and Gina's house are next to each other.\n3. Raul's house is somewhere to the left of the blue house.\n4. The black house is somewhere to the left of the orange house.\n5. Lucia lives in the orange house.\n6. Raul's house and the orange house are next to each other.\nGive the house number of every owner and every colour.",
+   "clues": [
+    {
+     "kind": "right_next",
+     "x": "white",
+     "y": "Gina"
+    },
+    {
+     "kind": "next_to",
+     "x": "Raul",
+     "y": "Gina"
+    },
+    {
+     "kind": "left_of",
+     "x": "Raul",
+     "y": "blue"
+    },
+    {
+     "kind": "left_of",
+     "x": "black",
+     "y": "orange"
+    },
+    {
+     "kind": "same",
+     "x": "Lucia",
+     "y": "orange"
+    },
+    {
+     "kind": "next_to",
+     "x": "Raul",
+     "y": "orange"
+    }
+   ],
+   "spec": {
+    "variables": {
+     "Raul": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "Ana": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "Gina": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "Lucia": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "blue": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "black": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "white": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "orange": [
+      1,
+      2,
+      3,
+      4
+     ]
+    },
+    "constraints": [
+     {
+      "type": "alldiff",
+      "vars": [
+       "Raul",
+       "Ana",
+       "Gina",
+       "Lucia"
+      ]
+     },
+     {
+      "type": "alldiff",
+      "vars": [
+       "blue",
+       "black",
+       "white",
+       "orange"
+      ]
+     },
+     {
+      "type": "offset",
+      "a": "Gina",
+      "b": "white",
+      "k": 1
+     },
+     {
+      "type": "next_to",
+      "a": "Raul",
+      "b": "Gina"
+     },
+     {
+      "type": "lt",
+      "a": "Raul",
+      "b": "blue"
+     },
+     {
+      "type": "lt",
+      "a": "black",
+      "b": "orange"
+     },
+     {
+      "type": "eq",
+      "a": "Lucia",
+      "b": "orange"
+     },
+     {
+      "type": "next_to",
+      "a": "Raul",
+      "b": "orange"
+     }
+    ]
+   },
+   "gold": {
+    "Raul": 3,
+    "Ana": 1,
+    "Gina": 4,
+    "Lucia": 2,
+    "blue": 4,
+    "black": 1,
+    "white": 3,
+    "orange": 2
+   }
+  },
+  {
+   "id": "L2-05",
+   "level": 2,
+   "n_houses": 4,
+   "n_vars": 8,
+   "n_clues": 8,
+   "n_constraints": 10,
+   "plain_bt_calls": 16,
+   "groups": {
+    "person": [
+     "Omar",
+     "Ana",
+     "Carla",
+     "Paula"
+    ],
+    "colour": [
+     "yellow",
+     "purple",
+     "black",
+     "orange"
+    ]
+   },
+   "text": "Four houses stand in a row, numbered 1 to 4 from left to right. Each house has a different owner and a different colour.\nOwners: Omar, Ana, Carla, Paula.\nColours: yellow, purple, black, orange.\nClues:\n1. Paula's house is not house 2.\n2. Ana does not live in the purple house.\n3. Omar's house is house 3.\n4. The purple house is somewhere to the left of the yellow house.\n5. The yellow house is not house 2.\n6. Omar's house is somewhere to the left of Carla's house.\n7. The orange house is not house 4.\n8. Ana's house is somewhere to the left of the orange house.\nGive the house number of every owner and every colour.",
+   "clues": [
+    {
+     "kind": "not_at",
+     "x": "Paula",
+     "y": 2
+    },
+    {
+     "kind": "differ",
+     "x": "Ana",
+     "y": "purple"
+    },
+    {
+     "kind": "at",
+     "x": "Omar",
+     "y": 3
+    },
+    {
+     "kind": "left_of",
+     "x": "purple",
+     "y": "yellow"
+    },
+    {
+     "kind": "not_at",
+     "x": "yellow",
+     "y": 2
+    },
+    {
+     "kind": "left_of",
+     "x": "Omar",
+     "y": "Carla"
+    },
+    {
+     "kind": "not_at",
+     "x": "orange",
+     "y": 4
+    },
+    {
+     "kind": "left_of",
+     "x": "Ana",
+     "y": "orange"
+    }
+   ],
+   "spec": {
+    "variables": {
+     "Omar": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "Ana": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "Carla": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "Paula": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "yellow": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "purple": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "black": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "orange": [
+      1,
+      2,
+      3,
+      4
+     ]
+    },
+    "constraints": [
+     {
+      "type": "alldiff",
+      "vars": [
+       "Omar",
+       "Ana",
+       "Carla",
+       "Paula"
+      ]
+     },
+     {
+      "type": "alldiff",
+      "vars": [
+       "yellow",
+       "purple",
+       "black",
+       "orange"
+      ]
+     },
+     {
+      "type": "neq",
+      "a": "Paula",
+      "b": 2
+     },
+     {
+      "type": "neq",
+      "a": "Ana",
+      "b": "purple"
+     },
+     {
+      "type": "eq",
+      "a": "Omar",
+      "b": 3
+     },
+     {
+      "type": "lt",
+      "a": "purple",
+      "b": "yellow"
+     },
+     {
+      "type": "neq",
+      "a": "yellow",
+      "b": 2
+     },
+     {
+      "type": "lt",
+      "a": "Omar",
+      "b": "Carla"
+     },
+     {
+      "type": "neq",
+      "a": "orange",
+      "b": 4
+     },
+     {
+      "type": "lt",
+      "a": "Ana",
+      "b": "orange"
+     }
+    ]
+   },
+   "gold": {
+    "Omar": 3,
+    "Ana": 2,
+    "Carla": 4,
+    "Paula": 1,
+    "yellow": 4,
+    "purple": 1,
+    "black": 2,
+    "orange": 3
+   }
+  },
+  {
+   "id": "L2-06",
+   "level": 2,
+   "n_houses": 4,
+   "n_vars": 8,
+   "n_clues": 5,
+   "n_constraints": 7,
+   "plain_bt_calls": 41,
+   "groups": {
+    "person": [
+     "Sara",
+     "Mateo",
+     "Carla",
+     "Ben"
+    ],
+    "colour": [
+     "black",
+     "purple",
+     "white",
+     "red"
+    ]
+   },
+   "text": "Four houses stand in a row, numbered 1 to 4 from left to right. Each house has a different owner and a different colour.\nOwners: Sara, Mateo, Carla, Ben.\nColours: black, purple, white, red.\nClues:\n1. Carla's house is immediately to the left of Ben's house.\n2. The purple house and the red house are next to each other.\n3. The black house is immediately to the left of the red house.\n4. Sara's house and Ben's house are next to each other.\n5. Sara's house and the black house are next to each other.\nGive the house number of every owner and every colour.",
+   "clues": [
+    {
+     "kind": "right_next",
+     "x": "Carla",
+     "y": "Ben"
+    },
+    {
+     "kind": "next_to",
+     "x": "purple",
+     "y": "red"
+    },
+    {
+     "kind": "right_next",
+     "x": "black",
+     "y": "red"
+    },
+    {
+     "kind": "next_to",
+     "x": "Sara",
+     "y": "Ben"
+    },
+    {
+     "kind": "next_to",
+     "x": "Sara",
+     "y": "black"
+    }
+   ],
+   "spec": {
+    "variables": {
+     "Sara": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "Mateo": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "Carla": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "Ben": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "black": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "purple": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "white": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "red": [
+      1,
+      2,
+      3,
+      4
+     ]
+    },
+    "constraints": [
+     {
+      "type": "alldiff",
+      "vars": [
+       "Sara",
+       "Mateo",
+       "Carla",
+       "Ben"
+      ]
+     },
+     {
+      "type": "alldiff",
+      "vars": [
+       "black",
+       "purple",
+       "white",
+       "red"
+      ]
+     },
+     {
+      "type": "offset",
+      "a": "Ben",
+      "b": "Carla",
+      "k": 1
+     },
+     {
+      "type": "next_to",
+      "a": "purple",
+      "b": "red"
+     },
+     {
+      "type": "offset",
+      "a": "red",
+      "b": "black",
+      "k": 1
+     },
+     {
+      "type": "next_to",
+      "a": "Sara",
+      "b": "Ben"
+     },
+     {
+      "type": "next_to",
+      "a": "Sara",
+      "b": "black"
+     }
+    ]
+   },
+   "gold": {
+    "Sara": 3,
+    "Mateo": 4,
+    "Carla": 1,
+    "Ben": 2,
+    "black": 2,
+    "purple": 4,
+    "white": 1,
+    "red": 3
+   }
+  },
+  {
+   "id": "L2-07",
+   "level": 2,
+   "n_houses": 4,
+   "n_vars": 8,
+   "n_clues": 5,
+   "n_constraints": 7,
+   "plain_bt_calls": 17,
+   "groups": {
+    "person": [
+     "Gina",
+     "Carla",
+     "Nora",
+     "Lucia"
+    ],
+    "colour": [
+     "green",
+     "white",
+     "black",
+     "blue"
+    ]
+   },
+   "text": "Four houses stand in a row, numbered 1 to 4 from left to right. Each house has a different owner and a different colour.\nOwners: Gina, Carla, Nora, Lucia.\nColours: green, white, black, blue.\nClues:\n1. Carla's house is immediately to the left of the white house.\n2. Carla's house is not house 1.\n3. Nora's house and the white house are next to each other.\n4. Carla's house is somewhere to the left of Gina's house.\n5. The green house is immediately to the left of the black house.\nGive the house number of every owner and every colour.",
+   "clues": [
+    {
+     "kind": "right_next",
+     "x": "Carla",
+     "y": "white"
+    },
+    {
+     "kind": "not_at",
+     "x": "Carla",
+     "y": 1
+    },
+    {
+     "kind": "next_to",
+     "x": "Nora",
+     "y": "white"
+    },
+    {
+     "kind": "left_of",
+     "x": "Carla",
+     "y": "Gina"
+    },
+    {
+     "kind": "right_next",
+     "x": "green",
+     "y": "black"
+    }
+   ],
+   "spec": {
+    "variables": {
+     "Gina": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "Carla": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "Nora": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "Lucia": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "green": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "white": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "black": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "blue": [
+      1,
+      2,
+      3,
+      4
+     ]
+    },
+    "constraints": [
+     {
+      "type": "alldiff",
+      "vars": [
+       "Gina",
+       "Carla",
+       "Nora",
+       "Lucia"
+      ]
+     },
+     {
+      "type": "alldiff",
+      "vars": [
+       "green",
+       "white",
+       "black",
+       "blue"
+      ]
+     },
+     {
+      "type": "offset",
+      "a": "white",
+      "b": "Carla",
+      "k": 1
+     },
+     {
+      "type": "neq",
+      "a": "Carla",
+      "b": 1
+     },
+     {
+      "type": "next_to",
+      "a": "Nora",
+      "b": "white"
+     },
+     {
+      "type": "lt",
+      "a": "Carla",
+      "b": "Gina"
+     },
+     {
+      "type": "offset",
+      "a": "black",
+      "b": "green",
+      "k": 1
+     }
+    ]
+   },
+   "gold": {
+    "Gina": 3,
+    "Carla": 2,
+    "Nora": 4,
+    "Lucia": 1,
+    "green": 1,
+    "white": 3,
+    "black": 2,
+    "blue": 4
+   }
+  },
+  {
+   "id": "L2-08",
+   "level": 2,
+   "n_houses": 4,
+   "n_vars": 8,
+   "n_clues": 6,
+   "n_constraints": 8,
+   "plain_bt_calls": 23,
+   "groups": {
+    "person": [
+     "Elena",
+     "Sara",
+     "Mateo",
+     "Dev"
+    ],
+    "colour": [
+     "red",
+     "orange",
+     "black",
+     "yellow"
+    ]
+   },
+   "text": "Four houses stand in a row, numbered 1 to 4 from left to right. Each house has a different owner and a different colour.\nOwners: Elena, Sara, Mateo, Dev.\nColours: red, orange, black, yellow.\nClues:\n1. Sara's house is somewhere to the left of Mateo's house.\n2. Elena's house is immediately to the left of the red house.\n3. The black house is immediately to the left of the yellow house.\n4. Elena's house and Dev's house are next to each other.\n5. Dev's house is house 4.\n6. Elena lives in the yellow house.\nGive the house number of every owner and every colour.",
+   "clues": [
+    {
+     "kind": "left_of",
+     "x": "Sara",
+     "y": "Mateo"
+    },
+    {
+     "kind": "right_next",
+     "x": "Elena",
+     "y": "red"
+    },
+    {
+     "kind": "right_next",
+     "x": "black",
+     "y": "yellow"
+    },
+    {
+     "kind": "next_to",
+     "x": "Elena",
+     "y": "Dev"
+    },
+    {
+     "kind": "at",
+     "x": "Dev",
+     "y": 4
+    },
+    {
+     "kind": "same",
+     "x": "Elena",
+     "y": "yellow"
+    }
+   ],
+   "spec": {
+    "variables": {
+     "Elena": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "Sara": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "Mateo": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "Dev": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "red": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "orange": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "black": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "yellow": [
+      1,
+      2,
+      3,
+      4
+     ]
+    },
+    "constraints": [
+     {
+      "type": "alldiff",
+      "vars": [
+       "Elena",
+       "Sara",
+       "Mateo",
+       "Dev"
+      ]
+     },
+     {
+      "type": "alldiff",
+      "vars": [
+       "red",
+       "orange",
+       "black",
+       "yellow"
+      ]
+     },
+     {
+      "type": "lt",
+      "a": "Sara",
+      "b": "Mateo"
+     },
+     {
+      "type": "offset",
+      "a": "red",
+      "b": "Elena",
+      "k": 1
+     },
+     {
+      "type": "offset",
+      "a": "yellow",
+      "b": "black",
+      "k": 1
+     },
+     {
+      "type": "next_to",
+      "a": "Elena",
+      "b": "Dev"
+     },
+     {
+      "type": "eq",
+      "a": "Dev",
+      "b": 4
+     },
+     {
+      "type": "eq",
+      "a": "Elena",
+      "b": "yellow"
+     }
+    ]
+   },
+   "gold": {
+    "Elena": 3,
+    "Sara": 1,
+    "Mateo": 2,
+    "Dev": 4,
+    "red": 4,
+    "orange": 1,
+    "black": 2,
+    "yellow": 3
+   }
+  },
+  {
+   "id": "L2-09",
+   "level": 2,
+   "n_houses": 4,
+   "n_vars": 8,
+   "n_clues": 5,
+   "n_constraints": 7,
+   "plain_bt_calls": 51,
+   "groups": {
+    "person": [
+     "Iris",
+     "Felix",
+     "Nora",
+     "Ben"
+    ],
+    "colour": [
+     "black",
+     "blue",
+     "green",
+     "white"
+    ]
+   },
+   "text": "Four houses stand in a row, numbered 1 to 4 from left to right. Each house has a different owner and a different colour.\nOwners: Iris, Felix, Nora, Ben.\nColours: black, blue, green, white.\nClues:\n1. Ben's house and the white house are next to each other.\n2. Iris's house is immediately to the left of Felix's house.\n3. Felix's house is somewhere to the left of Nora's house.\n4. The white house is immediately to the left of the green house.\n5. Ben lives in the blue house.\nGive the house number of every owner and every colour.",
+   "clues": [
+    {
+     "kind": "next_to",
+     "x": "Ben",
+     "y": "white"
+    },
+    {
+     "kind": "right_next",
+     "x": "Iris",
+     "y": "Felix"
+    },
+    {
+     "kind": "left_of",
+     "x": "Felix",
+     "y": "Nora"
+    },
+    {
+     "kind": "right_next",
+     "x": "white",
+     "y": "green"
+    },
+    {
+     "kind": "same",
+     "x": "Ben",
+     "y": "blue"
+    }
+   ],
+   "spec": {
+    "variables": {
+     "Iris": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "Felix": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "Nora": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "Ben": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "black": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "blue": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "green": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "white": [
+      1,
+      2,
+      3,
+      4
+     ]
+    },
+    "constraints": [
+     {
+      "type": "alldiff",
+      "vars": [
+       "Iris",
+       "Felix",
+       "Nora",
+       "Ben"
+      ]
+     },
+     {
+      "type": "alldiff",
+      "vars": [
+       "black",
+       "blue",
+       "green",
+       "white"
+      ]
+     },
+     {
+      "type": "next_to",
+      "a": "Ben",
+      "b": "white"
+     },
+     {
+      "type": "offset",
+      "a": "Felix",
+      "b": "Iris",
+      "k": 1
+     },
+     {
+      "type": "lt",
+      "a": "Felix",
+      "b": "Nora"
+     },
+     {
+      "type": "offset",
+      "a": "green",
+      "b": "white",
+      "k": 1
+     },
+     {
+      "type": "eq",
+      "a": "Ben",
+      "b": "blue"
+     }
+    ]
+   },
+   "gold": {
+    "Iris": 2,
+    "Felix": 3,
+    "Nora": 4,
+    "Ben": 1,
+    "black": 4,
+    "blue": 1,
+    "green": 3,
+    "white": 2
+   }
+  },
+  {
+   "id": "L2-10",
+   "level": 2,
+   "n_houses": 4,
+   "n_vars": 8,
+   "n_clues": 6,
+   "n_constraints": 8,
+   "plain_bt_calls": 90,
+   "groups": {
+    "person": [
+     "Elena",
+     "Paula",
+     "Omar",
+     "Hugo"
+    ],
+    "colour": [
+     "purple",
+     "yellow",
+     "green",
+     "blue"
+    ]
+   },
+   "text": "Four houses stand in a row, numbered 1 to 4 from left to right. Each house has a different owner and a different colour.\nOwners: Elena, Paula, Omar, Hugo.\nColours: purple, yellow, green, blue.\nClues:\n1. The purple house and the yellow house are next to each other.\n2. Elena's house and Omar's house are next to each other.\n3. The green house is not house 1.\n4. The purple house is somewhere to the left of Hugo's house.\n5. Elena lives in the green house.\n6. Hugo's house is immediately to the left of the blue house.\nGive the house number of every owner and every colour.",
+   "clues": [
+    {
+     "kind": "next_to",
+     "x": "purple",
+     "y": "yellow"
+    },
+    {
+     "kind": "next_to",
+     "x": "Elena",
+     "y": "Omar"
+    },
+    {
+     "kind": "not_at",
+     "x": "green",
+     "y": 1
+    },
+    {
+     "kind": "left_of",
+     "x": "purple",
+     "y": "Hugo"
+    },
+    {
+     "kind": "same",
+     "x": "Elena",
+     "y": "green"
+    },
+    {
+     "kind": "right_next",
+     "x": "Hugo",
+     "y": "blue"
+    }
+   ],
+   "spec": {
+    "variables": {
+     "Elena": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "Paula": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "Omar": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "Hugo": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "purple": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "yellow": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "green": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "blue": [
+      1,
+      2,
+      3,
+      4
+     ]
+    },
+    "constraints": [
+     {
+      "type": "alldiff",
+      "vars": [
+       "Elena",
+       "Paula",
+       "Omar",
+       "Hugo"
+      ]
+     },
+     {
+      "type": "alldiff",
+      "vars": [
+       "purple",
+       "yellow",
+       "green",
+       "blue"
+      ]
+     },
+     {
+      "type": "next_to",
+      "a": "purple",
+      "b": "yellow"
+     },
+     {
+      "type": "next_to",
+      "a": "Elena",
+      "b": "Omar"
+     },
+     {
+      "type": "neq",
+      "a": "green",
+      "b": 1
+     },
+     {
+      "type": "lt",
+      "a": "purple",
+      "b": "Hugo"
+     },
+     {
+      "type": "eq",
+      "a": "Elena",
+      "b": "green"
+     },
+     {
+      "type": "offset",
+      "a": "blue",
+      "b": "Hugo",
+      "k": 1
+     }
+    ]
+   },
+   "gold": {
+    "Elena": 4,
+    "Paula": 1,
+    "Omar": 3,
+    "Hugo": 2,
+    "purple": 1,
+    "yellow": 2,
+    "green": 4,
+    "blue": 3
+   }
+  },
+  {
+   "id": "L3-01",
+   "level": 3,
+   "n_houses": 5,
+   "n_vars": 10,
+   "n_clues": 6,
+   "n_constraints": 8,
+   "plain_bt_calls": 24,
+   "groups": {
+    "person": [
+     "Jon",
+     "Omar",
+     "Elena",
+     "Lucia",
+     "Hugo"
+    ],
+    "colour": [
+     "white",
+     "green",
+     "black",
+     "orange",
+     "yellow"
+    ]
+   },
+   "text": "Five houses stand in a row, numbered 1 to 5 from left to right. Each house has a different owner and a different colour.\nOwners: Jon, Omar, Elena, Lucia, Hugo.\nColours: white, green, black, orange, yellow.\nClues:\n1. Elena lives in the white house.\n2. Omar's house and Hugo's house are next to each other.\n3. The green house is immediately to the left of the white house.\n4. Omar lives in the yellow house.\n5. The orange house is somewhere to the left of the yellow house.\n6. Hugo's house is immediately to the left of Lucia's house.\nGive the house number of every owner and every colour.",
+   "clues": [
+    {
+     "kind": "same",
+     "x": "Elena",
+     "y": "white"
+    },
+    {
+     "kind": "next_to",
+     "x": "Omar",
+     "y": "Hugo"
+    },
+    {
+     "kind": "right_next",
+     "x": "green",
+     "y": "white"
+    },
+    {
+     "kind": "same",
+     "x": "Omar",
+     "y": "yellow"
+    },
+    {
+     "kind": "left_of",
+     "x": "orange",
+     "y": "yellow"
+    },
+    {
+     "kind": "right_next",
+     "x": "Hugo",
+     "y": "Lucia"
+    }
+   ],
+   "spec": {
+    "variables": {
+     "Jon": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "Omar": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "Elena": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "Lucia": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "Hugo": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "white": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "green": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "black": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "orange": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "yellow": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ]
+    },
+    "constraints": [
+     {
+      "type": "alldiff",
+      "vars": [
+       "Jon",
+       "Omar",
+       "Elena",
+       "Lucia",
+       "Hugo"
+      ]
+     },
+     {
+      "type": "alldiff",
+      "vars": [
+       "white",
+       "green",
+       "black",
+       "orange",
+       "yellow"
+      ]
+     },
+     {
+      "type": "eq",
+      "a": "Elena",
+      "b": "white"
+     },
+     {
+      "type": "next_to",
+      "a": "Omar",
+      "b": "Hugo"
+     },
+     {
+      "type": "offset",
+      "a": "white",
+      "b": "green",
+      "k": 1
+     },
+     {
+      "type": "eq",
+      "a": "Omar",
+      "b": "yellow"
+     },
+     {
+      "type": "lt",
+      "a": "orange",
+      "b": "yellow"
+     },
+     {
+      "type": "offset",
+      "a": "Lucia",
+      "b": "Hugo",
+      "k": 1
+     }
+    ]
+   },
+   "gold": {
+    "Jon": 1,
+    "Omar": 2,
+    "Elena": 5,
+    "Lucia": 4,
+    "Hugo": 3,
+    "white": 5,
+    "green": 4,
+    "black": 3,
+    "orange": 1,
+    "yellow": 2
+   }
+  },
+  {
+   "id": "L3-02",
+   "level": 3,
+   "n_houses": 5,
+   "n_vars": 10,
+   "n_clues": 6,
+   "n_constraints": 8,
+   "plain_bt_calls": 265,
+   "groups": {
+    "person": [
+     "Gina",
+     "Mateo",
+     "Ana",
+     "Ben",
+     "Tomas"
+    ],
+    "colour": [
+     "purple",
+     "black",
+     "red",
+     "orange",
+     "blue"
+    ]
+   },
+   "text": "Five houses stand in a row, numbered 1 to 5 from left to right. Each house has a different owner and a different colour.\nOwners: Gina, Mateo, Ana, Ben, Tomas.\nColours: purple, black, red, orange, blue.\nClues:\n1. Mateo's house and the orange house are next to each other.\n2. The red house is somewhere to the left of Ana's house.\n3. Gina's house is immediately to the left of Ana's house.\n4. The black house is immediately to the left of the red house.\n5. The blue house is immediately to the left of the purple house.\n6. The black house is immediately to the left of Tomas's house.\nGive the house number of every owner and every colour.",
+   "clues": [
+    {
+     "kind": "next_to",
+     "x": "Mateo",
+     "y": "orange"
+    },
+    {
+     "kind": "left_of",
+     "x": "red",
+     "y": "Ana"
+    },
+    {
+     "kind": "right_next",
+     "x": "Gina",
+     "y": "Ana"
+    },
+    {
+     "kind": "right_next",
+     "x": "black",
+     "y": "red"
+    },
+    {
+     "kind": "right_next",
+     "x": "blue",
+     "y": "purple"
+    },
+    {
+     "kind": "right_next",
+     "x": "black",
+     "y": "Tomas"
+    }
+   ],
+   "spec": {
+    "variables": {
+     "Gina": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "Mateo": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "Ana": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "Ben": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "Tomas": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "purple": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "black": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "red": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "orange": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "blue": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ]
+    },
+    "constraints": [
+     {
+      "type": "alldiff",
+      "vars": [
+       "Gina",
+       "Mateo",
+       "Ana",
+       "Ben",
+       "Tomas"
+      ]
+     },
+     {
+      "type": "alldiff",
+      "vars": [
+       "purple",
+       "black",
+       "red",
+       "orange",
+       "blue"
+      ]
+     },
+     {
+      "type": "next_to",
+      "a": "Mateo",
+      "b": "orange"
+     },
+     {
+      "type": "lt",
+      "a": "red",
+      "b": "Ana"
+     },
+     {
+      "type": "offset",
+      "a": "Ana",
+      "b": "Gina",
+      "k": 1
+     },
+     {
+      "type": "offset",
+      "a": "red",
+      "b": "black",
+      "k": 1
+     },
+     {
+      "type": "offset",
+      "a": "purple",
+      "b": "blue",
+      "k": 1
+     },
+     {
+      "type": "offset",
+      "a": "Tomas",
+      "b": "black",
+      "k": 1
+     }
+    ]
+   },
+   "gold": {
+    "Gina": 4,
+    "Mateo": 2,
+    "Ana": 5,
+    "Ben": 1,
+    "Tomas": 3,
+    "purple": 5,
+    "black": 2,
+    "red": 3,
+    "orange": 1,
+    "blue": 4
+   }
+  },
+  {
+   "id": "L3-03",
+   "level": 3,
+   "n_houses": 5,
+   "n_vars": 10,
+   "n_clues": 7,
+   "n_constraints": 9,
+   "plain_bt_calls": 182,
+   "groups": {
+    "person": [
+     "Sara",
+     "Omar",
+     "Hugo",
+     "Iris",
+     "Ben"
+    ],
+    "colour": [
+     "red",
+     "green",
+     "orange",
+     "purple",
+     "white"
+    ]
+   },
+   "text": "Five houses stand in a row, numbered 1 to 5 from left to right. Each house has a different owner and a different colour.\nOwners: Sara, Omar, Hugo, Iris, Ben.\nColours: red, green, orange, purple, white.\nClues:\n1. Hugo's house is immediately to the left of Ben's house.\n2. The purple house is somewhere to the left of Ben's house.\n3. The white house is somewhere to the left of Omar's house.\n4. Omar's house is somewhere to the left of Iris's house.\n5. The green house is immediately to the left of Sara's house.\n6. Ben's house and the green house are next to each other.\n7. The orange house is not house 5.\nGive the house number of every owner and every colour.",
+   "clues": [
+    {
+     "kind": "right_next",
+     "x": "Hugo",
+     "y": "Ben"
+    },
+    {
+     "kind": "left_of",
+     "x": "purple",
+     "y": "Ben"
+    },
+    {
+     "kind": "left_of",
+     "x": "white",
+     "y": "Omar"
+    },
+    {
+     "kind": "left_of",
+     "x": "Omar",
+     "y": "Iris"
+    },
+    {
+     "kind": "right_next",
+     "x": "green",
+     "y": "Sara"
+    },
+    {
+     "kind": "next_to",
+     "x": "Ben",
+     "y": "green"
+    },
+    {
+     "kind": "not_at",
+     "x": "orange",
+     "y": 5
+    }
+   ],
+   "spec": {
+    "variables": {
+     "Sara": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "Omar": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "Hugo": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "Iris": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "Ben": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "red": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "green": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "orange": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "purple": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "white": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ]
+    },
+    "constraints": [
+     {
+      "type": "alldiff",
+      "vars": [
+       "Sara",
+       "Omar",
+       "Hugo",
+       "Iris",
+       "Ben"
+      ]
+     },
+     {
+      "type": "alldiff",
+      "vars": [
+       "red",
+       "green",
+       "orange",
+       "purple",
+       "white"
+      ]
+     },
+     {
+      "type": "offset",
+      "a": "Ben",
+      "b": "Hugo",
+      "k": 1
+     },
+     {
+      "type": "lt",
+      "a": "purple",
+      "b": "Ben"
+     },
+     {
+      "type": "lt",
+      "a": "white",
+      "b": "Omar"
+     },
+     {
+      "type": "lt",
+      "a": "Omar",
+      "b": "Iris"
+     },
+     {
+      "type": "offset",
+      "a": "Sara",
+      "b": "green",
+      "k": 1
+     },
+     {
+      "type": "next_to",
+      "a": "Ben",
+      "b": "green"
+     },
+     {
+      "type": "neq",
+      "a": "orange",
+      "b": 5
+     }
+    ]
+   },
+   "gold": {
+    "Sara": 4,
+    "Omar": 3,
+    "Hugo": 1,
+    "Iris": 5,
+    "Ben": 2,
+    "red": 5,
+    "green": 3,
+    "orange": 4,
+    "purple": 1,
+    "white": 2
+   }
+  },
+  {
+   "id": "L3-04",
+   "level": 3,
+   "n_houses": 5,
+   "n_vars": 10,
+   "n_clues": 7,
+   "n_constraints": 9,
+   "plain_bt_calls": 65,
+   "groups": {
+    "person": [
+     "Paula",
+     "Vera",
+     "Gina",
+     "Carla",
+     "Ana"
+    ],
+    "colour": [
+     "blue",
+     "red",
+     "white",
+     "green",
+     "orange"
+    ]
+   },
+   "text": "Five houses stand in a row, numbered 1 to 5 from left to right. Each house has a different owner and a different colour.\nOwners: Paula, Vera, Gina, Carla, Ana.\nColours: blue, red, white, green, orange.\nClues:\n1. Ana's house is somewhere to the left of Paula's house.\n2. Carla lives in the blue house.\n3. Gina's house and Carla's house are next to each other.\n4. Paula's house and Carla's house are next to each other.\n5. The orange house is not house 2.\n6. The green house is somewhere to the left of Ana's house.\n7. Paula's house is somewhere to the left of the white house.\nGive the house number of every owner and every colour.",
+   "clues": [
+    {
+     "kind": "left_of",
+     "x": "Ana",
+     "y": "Paula"
+    },
+    {
+     "kind": "same",
+     "x": "Carla",
+     "y": "blue"
+    },
+    {
+     "kind": "next_to",
+     "x": "Gina",
+     "y": "Carla"
+    },
+    {
+     "kind": "next_to",
+     "x": "Paula",
+     "y": "Carla"
+    },
+    {
+     "kind": "not_at",
+     "x": "orange",
+     "y": 2
+    },
+    {
+     "kind": "left_of",
+     "x": "green",
+     "y": "Ana"
+    },
+    {
+     "kind": "left_of",
+     "x": "Paula",
+     "y": "white"
+    }
+   ],
+   "spec": {
+    "variables": {
+     "Paula": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "Vera": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "Gina": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "Carla": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "Ana": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "blue": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "red": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "white": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "green": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "orange": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ]
+    },
+    "constraints": [
+     {
+      "type": "alldiff",
+      "vars": [
+       "Paula",
+       "Vera",
+       "Gina",
+       "Carla",
+       "Ana"
+      ]
+     },
+     {
+      "type": "alldiff",
+      "vars": [
+       "blue",
+       "red",
+       "white",
+       "green",
+       "orange"
+      ]
+     },
+     {
+      "type": "lt",
+      "a": "Ana",
+      "b": "Paula"
+     },
+     {
+      "type": "eq",
+      "a": "Carla",
+      "b": "blue"
+     },
+     {
+      "type": "next_to",
+      "a": "Gina",
+      "b": "Carla"
+     },
+     {
+      "type": "next_to",
+      "a": "Paula",
+      "b": "Carla"
+     },
+     {
+      "type": "neq",
+      "a": "orange",
+      "b": 2
+     },
+     {
+      "type": "lt",
+      "a": "green",
+      "b": "Ana"
+     },
+     {
+      "type": "lt",
+      "a": "Paula",
+      "b": "white"
+     }
+    ]
+   },
+   "gold": {
+    "Paula": 3,
+    "Vera": 1,
+    "Gina": 5,
+    "Carla": 4,
+    "Ana": 2,
+    "blue": 4,
+    "red": 2,
+    "white": 5,
+    "green": 1,
+    "orange": 3
+   }
+  },
+  {
+   "id": "L3-05",
+   "level": 3,
+   "n_houses": 5,
+   "n_vars": 10,
+   "n_clues": 8,
+   "n_constraints": 10,
+   "plain_bt_calls": 79,
+   "groups": {
+    "person": [
+     "Ben",
+     "Mateo",
+     "Kai",
+     "Paula",
+     "Gina"
+    ],
+    "colour": [
+     "blue",
+     "purple",
+     "black",
+     "red",
+     "green"
+    ]
+   },
+   "text": "Five houses stand in a row, numbered 1 to 5 from left to right. Each house has a different owner and a different colour.\nOwners: Ben, Mateo, Kai, Paula, Gina.\nColours: blue, purple, black, red, green.\nClues:\n1. Paula's house is somewhere to the left of Kai's house.\n2. The black house and the green house are next to each other.\n3. Mateo's house is immediately to the left of the black house.\n4. Ben's house and the blue house are next to each other.\n5. Paula's house is not house 2.\n6. The red house is somewhere to the left of the black house.\n7. Kai's house is somewhere to the left of Ben's house.\n8. Gina's house is house 4.\nGive the house number of every owner and every colour.",
+   "clues": [
+    {
+     "kind": "left_of",
+     "x": "Paula",
+     "y": "Kai"
+    },
+    {
+     "kind": "next_to",
+     "x": "black",
+     "y": "green"
+    },
+    {
+     "kind": "right_next",
+     "x": "Mateo",
+     "y": "black"
+    },
+    {
+     "kind": "next_to",
+     "x": "Ben",
+     "y": "blue"
+    },
+    {
+     "kind": "not_at",
+     "x": "Paula",
+     "y": 2
+    },
+    {
+     "kind": "left_of",
+     "x": "red",
+     "y": "black"
+    },
+    {
+     "kind": "left_of",
+     "x": "Kai",
+     "y": "Ben"
+    },
+    {
+     "kind": "at",
+     "x": "Gina",
+     "y": 4
+    }
+   ],
+   "spec": {
+    "variables": {
+     "Ben": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "Mateo": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "Kai": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "Paula": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "Gina": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "blue": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "purple": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "black": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "red": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "green": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ]
+    },
+    "constraints": [
+     {
+      "type": "alldiff",
+      "vars": [
+       "Ben",
+       "Mateo",
+       "Kai",
+       "Paula",
+       "Gina"
+      ]
+     },
+     {
+      "type": "alldiff",
+      "vars": [
+       "blue",
+       "purple",
+       "black",
+       "red",
+       "green"
+      ]
+     },
+     {
+      "type": "lt",
+      "a": "Paula",
+      "b": "Kai"
+     },
+     {
+      "type": "next_to",
+      "a": "black",
+      "b": "green"
+     },
+     {
+      "type": "offset",
+      "a": "black",
+      "b": "Mateo",
+      "k": 1
+     },
+     {
+      "type": "next_to",
+      "a": "Ben",
+      "b": "blue"
+     },
+     {
+      "type": "neq",
+      "a": "Paula",
+      "b": 2
+     },
+     {
+      "type": "lt",
+      "a": "red",
+      "b": "black"
+     },
+     {
+      "type": "lt",
+      "a": "Kai",
+      "b": "Ben"
+     },
+     {
+      "type": "eq",
+      "a": "Gina",
+      "b": 4
+     }
+    ]
+   },
+   "gold": {
+    "Ben": 5,
+    "Mateo": 2,
+    "Kai": 3,
+    "Paula": 1,
+    "Gina": 4,
+    "blue": 4,
+    "purple": 5,
+    "black": 3,
+    "red": 1,
+    "green": 2
+   }
+  },
+  {
+   "id": "L3-06",
+   "level": 3,
+   "n_houses": 5,
+   "n_vars": 10,
+   "n_clues": 8,
+   "n_constraints": 10,
+   "plain_bt_calls": 328,
+   "groups": {
+    "person": [
+     "Raul",
+     "Dev",
+     "Jon",
+     "Vera",
+     "Kai"
+    ],
+    "colour": [
+     "yellow",
+     "orange",
+     "black",
+     "white",
+     "green"
+    ]
+   },
+   "text": "Five houses stand in a row, numbered 1 to 5 from left to right. Each house has a different owner and a different colour.\nOwners: Raul, Dev, Jon, Vera, Kai.\nColours: yellow, orange, black, white, green.\nClues:\n1. The orange house is somewhere to the left of the white house.\n2. Jon lives in the orange house.\n3. Dev's house and the yellow house are next to each other.\n4. The white house is somewhere to the left of the yellow house.\n5. Jon's house is not house 1.\n6. The yellow house is somewhere to the left of the green house.\n7. The yellow house is somewhere to the left of Raul's house.\n8. Kai lives in the yellow house.\nGive the house number of every owner and every colour.",
+   "clues": [
+    {
+     "kind": "left_of",
+     "x": "orange",
+     "y": "white"
+    },
+    {
+     "kind": "same",
+     "x": "Jon",
+     "y": "orange"
+    },
+    {
+     "kind": "next_to",
+     "x": "Dev",
+     "y": "yellow"
+    },
+    {
+     "kind": "left_of",
+     "x": "white",
+     "y": "yellow"
+    },
+    {
+     "kind": "not_at",
+     "x": "Jon",
+     "y": 1
+    },
+    {
+     "kind": "left_of",
+     "x": "yellow",
+     "y": "green"
+    },
+    {
+     "kind": "left_of",
+     "x": "yellow",
+     "y": "Raul"
+    },
+    {
+     "kind": "same",
+     "x": "Kai",
+     "y": "yellow"
+    }
+   ],
+   "spec": {
+    "variables": {
+     "Raul": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "Dev": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "Jon": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "Vera": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "Kai": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "yellow": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "orange": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "black": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "white": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "green": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ]
+    },
+    "constraints": [
+     {
+      "type": "alldiff",
+      "vars": [
+       "Raul",
+       "Dev",
+       "Jon",
+       "Vera",
+       "Kai"
+      ]
+     },
+     {
+      "type": "alldiff",
+      "vars": [
+       "yellow",
+       "orange",
+       "black",
+       "white",
+       "green"
+      ]
+     },
+     {
+      "type": "lt",
+      "a": "orange",
+      "b": "white"
+     },
+     {
+      "type": "eq",
+      "a": "Jon",
+      "b": "orange"
+     },
+     {
+      "type": "next_to",
+      "a": "Dev",
+      "b": "yellow"
+     },
+     {
+      "type": "lt",
+      "a": "white",
+      "b": "yellow"
+     },
+     {
+      "type": "neq",
+      "a": "Jon",
+      "b": 1
+     },
+     {
+      "type": "lt",
+      "a": "yellow",
+      "b": "green"
+     },
+     {
+      "type": "lt",
+      "a": "yellow",
+      "b": "Raul"
+     },
+     {
+      "type": "eq",
+      "a": "Kai",
+      "b": "yellow"
+     }
+    ]
+   },
+   "gold": {
+    "Raul": 5,
+    "Dev": 3,
+    "Jon": 2,
+    "Vera": 1,
+    "Kai": 4,
+    "yellow": 4,
+    "orange": 2,
+    "black": 1,
+    "white": 3,
+    "green": 5
+   }
+  },
+  {
+   "id": "L3-07",
+   "level": 3,
+   "n_houses": 5,
+   "n_vars": 10,
+   "n_clues": 7,
+   "n_constraints": 9,
+   "plain_bt_calls": 250,
+   "groups": {
+    "person": [
+     "Lucia",
+     "Mateo",
+     "Raul",
+     "Paula",
+     "Nora"
+    ],
+    "colour": [
+     "yellow",
+     "orange",
+     "red",
+     "green",
+     "purple"
+    ]
+   },
+   "text": "Five houses stand in a row, numbered 1 to 5 from left to right. Each house has a different owner and a different colour.\nOwners: Lucia, Mateo, Raul, Paula, Nora.\nColours: yellow, orange, red, green, purple.\nClues:\n1. Nora's house and the red house are next to each other.\n2. The red house is house 5.\n3. The yellow house is somewhere to the left of Nora's house.\n4. Nora's house is immediately to the left of Lucia's house.\n5. The green house is somewhere to the left of Paula's house.\n6. The green house is immediately to the left of Mateo's house.\n7. Mateo's house is immediately to the left of the orange house.\nGive the house number of every owner and every colour.",
+   "clues": [
+    {
+     "kind": "next_to",
+     "x": "Nora",
+     "y": "red"
+    },
+    {
+     "kind": "at",
+     "x": "red",
+     "y": 5
+    },
+    {
+     "kind": "left_of",
+     "x": "yellow",
+     "y": "Nora"
+    },
+    {
+     "kind": "right_next",
+     "x": "Nora",
+     "y": "Lucia"
+    },
+    {
+     "kind": "left_of",
+     "x": "green",
+     "y": "Paula"
+    },
+    {
+     "kind": "right_next",
+     "x": "green",
+     "y": "Mateo"
+    },
+    {
+     "kind": "right_next",
+     "x": "Mateo",
+     "y": "orange"
+    }
+   ],
+   "spec": {
+    "variables": {
+     "Lucia": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "Mateo": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "Raul": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "Paula": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "Nora": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "yellow": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "orange": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "red": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "green": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "purple": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ]
+    },
+    "constraints": [
+     {
+      "type": "alldiff",
+      "vars": [
+       "Lucia",
+       "Mateo",
+       "Raul",
+       "Paula",
+       "Nora"
+      ]
+     },
+     {
+      "type": "alldiff",
+      "vars": [
+       "yellow",
+       "orange",
+       "red",
+       "green",
+       "purple"
+      ]
+     },
+     {
+      "type": "next_to",
+      "a": "Nora",
+      "b": "red"
+     },
+     {
+      "type": "eq",
+      "a": "red",
+      "b": 5
+     },
+     {
+      "type": "lt",
+      "a": "yellow",
+      "b": "Nora"
+     },
+     {
+      "type": "offset",
+      "a": "Lucia",
+      "b": "Nora",
+      "k": 1
+     },
+     {
+      "type": "lt",
+      "a": "green",
+      "b": "Paula"
+     },
+     {
+      "type": "offset",
+      "a": "Mateo",
+      "b": "green",
+      "k": 1
+     },
+     {
+      "type": "offset",
+      "a": "orange",
+      "b": "Mateo",
+      "k": 1
+     }
+    ]
+   },
+   "gold": {
+    "Lucia": 5,
+    "Mateo": 2,
+    "Raul": 1,
+    "Paula": 3,
+    "Nora": 4,
+    "yellow": 2,
+    "orange": 3,
+    "red": 5,
+    "green": 1,
+    "purple": 4
+   }
+  },
+  {
+   "id": "L3-08",
+   "level": 3,
+   "n_houses": 5,
+   "n_vars": 10,
+   "n_clues": 7,
+   "n_constraints": 9,
+   "plain_bt_calls": 83,
+   "groups": {
+    "person": [
+     "Iris",
+     "Paula",
+     "Ana",
+     "Felix",
+     "Nora"
+    ],
+    "colour": [
+     "blue",
+     "red",
+     "white",
+     "green",
+     "orange"
+    ]
+   },
+   "text": "Five houses stand in a row, numbered 1 to 5 from left to right. Each house has a different owner and a different colour.\nOwners: Iris, Paula, Ana, Felix, Nora.\nColours: blue, red, white, green, orange.\nClues:\n1. Paula's house and Felix's house are next to each other.\n2. Ana's house and the green house are next to each other.\n3. The white house is immediately to the left of the blue house.\n4. The red house is somewhere to the left of Ana's house.\n5. Iris's house is immediately to the left of Felix's house.\n6. The blue house is not house 2.\n7. Iris lives in the white house.\nGive the house number of every owner and every colour.",
+   "clues": [
+    {
+     "kind": "next_to",
+     "x": "Paula",
+     "y": "Felix"
+    },
+    {
+     "kind": "next_to",
+     "x": "Ana",
+     "y": "green"
+    },
+    {
+     "kind": "right_next",
+     "x": "white",
+     "y": "blue"
+    },
+    {
+     "kind": "left_of",
+     "x": "red",
+     "y": "Ana"
+    },
+    {
+     "kind": "right_next",
+     "x": "Iris",
+     "y": "Felix"
+    },
+    {
+     "kind": "not_at",
+     "x": "blue",
+     "y": 2
+    },
+    {
+     "kind": "same",
+     "x": "Iris",
+     "y": "white"
+    }
+   ],
+   "spec": {
+    "variables": {
+     "Iris": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "Paula": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "Ana": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "Felix": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "Nora": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "blue": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "red": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "white": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "green": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "orange": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ]
+    },
+    "constraints": [
+     {
+      "type": "alldiff",
+      "vars": [
+       "Iris",
+       "Paula",
+       "Ana",
+       "Felix",
+       "Nora"
+      ]
+     },
+     {
+      "type": "alldiff",
+      "vars": [
+       "blue",
+       "red",
+       "white",
+       "green",
+       "orange"
+      ]
+     },
+     {
+      "type": "next_to",
+      "a": "Paula",
+      "b": "Felix"
+     },
+     {
+      "type": "next_to",
+      "a": "Ana",
+      "b": "green"
+     },
+     {
+      "type": "offset",
+      "a": "blue",
+      "b": "white",
+      "k": 1
+     },
+     {
+      "type": "lt",
+      "a": "red",
+      "b": "Ana"
+     },
+     {
+      "type": "offset",
+      "a": "Felix",
+      "b": "Iris",
+      "k": 1
+     },
+     {
+      "type": "neq",
+      "a": "blue",
+      "b": 2
+     },
+     {
+      "type": "eq",
+      "a": "Iris",
+      "b": "white"
+     }
+    ]
+   },
+   "gold": {
+    "Iris": 2,
+    "Paula": 4,
+    "Ana": 5,
+    "Felix": 3,
+    "Nora": 1,
+    "blue": 3,
+    "red": 1,
+    "white": 2,
+    "green": 4,
+    "orange": 5
+   }
+  },
+  {
+   "id": "L3-09",
+   "level": 3,
+   "n_houses": 5,
+   "n_vars": 10,
+   "n_clues": 6,
+   "n_constraints": 8,
+   "plain_bt_calls": 381,
+   "groups": {
+    "person": [
+     "Omar",
+     "Tomas",
+     "Kai",
+     "Dev",
+     "Mateo"
+    ],
+    "colour": [
+     "white",
+     "orange",
+     "yellow",
+     "red",
+     "green"
+    ]
+   },
+   "text": "Five houses stand in a row, numbered 1 to 5 from left to right. Each house has a different owner and a different colour.\nOwners: Omar, Tomas, Kai, Dev, Mateo.\nColours: white, orange, yellow, red, green.\nClues:\n1. The red house is somewhere to the left of Dev's house.\n2. Tomas lives in the green house.\n3. The green house is somewhere to the left of the orange house.\n4. Omar lives in the orange house.\n5. The yellow house is immediately to the left of Mateo's house.\n6. Dev's house is immediately to the left of Tomas's house.\nGive the house number of every owner and every colour.",
+   "clues": [
+    {
+     "kind": "left_of",
+     "x": "red",
+     "y": "Dev"
+    },
+    {
+     "kind": "same",
+     "x": "Tomas",
+     "y": "green"
+    },
+    {
+     "kind": "left_of",
+     "x": "green",
+     "y": "orange"
+    },
+    {
+     "kind": "same",
+     "x": "Omar",
+     "y": "orange"
+    },
+    {
+     "kind": "right_next",
+     "x": "yellow",
+     "y": "Mateo"
+    },
+    {
+     "kind": "right_next",
+     "x": "Dev",
+     "y": "Tomas"
+    }
+   ],
+   "spec": {
+    "variables": {
+     "Omar": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "Tomas": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "Kai": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "Dev": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "Mateo": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "white": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "orange": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "yellow": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "red": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "green": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ]
+    },
+    "constraints": [
+     {
+      "type": "alldiff",
+      "vars": [
+       "Omar",
+       "Tomas",
+       "Kai",
+       "Dev",
+       "Mateo"
+      ]
+     },
+     {
+      "type": "alldiff",
+      "vars": [
+       "white",
+       "orange",
+       "yellow",
+       "red",
+       "green"
+      ]
+     },
+     {
+      "type": "lt",
+      "a": "red",
+      "b": "Dev"
+     },
+     {
+      "type": "eq",
+      "a": "Tomas",
+      "b": "green"
+     },
+     {
+      "type": "lt",
+      "a": "green",
+      "b": "orange"
+     },
+     {
+      "type": "eq",
+      "a": "Omar",
+      "b": "orange"
+     },
+     {
+      "type": "offset",
+      "a": "Mateo",
+      "b": "yellow",
+      "k": 1
+     },
+     {
+      "type": "offset",
+      "a": "Tomas",
+      "b": "Dev",
+      "k": 1
+     }
+    ]
+   },
+   "gold": {
+    "Omar": 5,
+    "Tomas": 4,
+    "Kai": 1,
+    "Dev": 3,
+    "Mateo": 2,
+    "white": 3,
+    "orange": 5,
+    "yellow": 1,
+    "red": 2,
+    "green": 4
+   }
+  },
+  {
+   "id": "L3-10",
+   "level": 3,
+   "n_houses": 5,
+   "n_vars": 10,
+   "n_clues": 8,
+   "n_constraints": 10,
+   "plain_bt_calls": 286,
+   "groups": {
+    "person": [
+     "Sara",
+     "Lucia",
+     "Tomas",
+     "Raul",
+     "Ben"
+    ],
+    "colour": [
+     "green",
+     "yellow",
+     "orange",
+     "black",
+     "white"
+    ]
+   },
+   "text": "Five houses stand in a row, numbered 1 to 5 from left to right. Each house has a different owner and a different colour.\nOwners: Sara, Lucia, Tomas, Raul, Ben.\nColours: green, yellow, orange, black, white.\nClues:\n1. The black house is somewhere to the left of Sara's house.\n2. Raul's house is immediately to the left of the yellow house.\n3. The yellow house is not house 2.\n4. Raul lives in the orange house.\n5. Lucia's house is immediately to the left of Ben's house.\n6. Tomas's house is somewhere to the left of the green house.\n7. The orange house is somewhere to the left of Lucia's house.\n8. Lucia's house is immediately to the left of the black house.\nGive the house number of every owner and every colour.",
+   "clues": [
+    {
+     "kind": "left_of",
+     "x": "black",
+     "y": "Sara"
+    },
+    {
+     "kind": "right_next",
+     "x": "Raul",
+     "y": "yellow"
+    },
+    {
+     "kind": "not_at",
+     "x": "yellow",
+     "y": 2
+    },
+    {
+     "kind": "same",
+     "x": "Raul",
+     "y": "orange"
+    },
+    {
+     "kind": "right_next",
+     "x": "Lucia",
+     "y": "Ben"
+    },
+    {
+     "kind": "left_of",
+     "x": "Tomas",
+     "y": "green"
+    },
+    {
+     "kind": "left_of",
+     "x": "orange",
+     "y": "Lucia"
+    },
+    {
+     "kind": "right_next",
+     "x": "Lucia",
+     "y": "black"
+    }
+   ],
+   "spec": {
+    "variables": {
+     "Sara": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "Lucia": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "Tomas": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "Raul": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "Ben": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "green": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "yellow": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "orange": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "black": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "white": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ]
+    },
+    "constraints": [
+     {
+      "type": "alldiff",
+      "vars": [
+       "Sara",
+       "Lucia",
+       "Tomas",
+       "Raul",
+       "Ben"
+      ]
+     },
+     {
+      "type": "alldiff",
+      "vars": [
+       "green",
+       "yellow",
+       "orange",
+       "black",
+       "white"
+      ]
+     },
+     {
+      "type": "lt",
+      "a": "black",
+      "b": "Sara"
+     },
+     {
+      "type": "offset",
+      "a": "yellow",
+      "b": "Raul",
+      "k": 1
+     },
+     {
+      "type": "neq",
+      "a": "yellow",
+      "b": 2
+     },
+     {
+      "type": "eq",
+      "a": "Raul",
+      "b": "orange"
+     },
+     {
+      "type": "offset",
+      "a": "Ben",
+      "b": "Lucia",
+      "k": 1
+     },
+     {
+      "type": "lt",
+      "a": "Tomas",
+      "b": "green"
+     },
+     {
+      "type": "lt",
+      "a": "orange",
+      "b": "Lucia"
+     },
+     {
+      "type": "offset",
+      "a": "black",
+      "b": "Lucia",
+      "k": 1
+     }
+    ]
+   },
+   "gold": {
+    "Sara": 5,
+    "Lucia": 3,
+    "Tomas": 1,
+    "Raul": 2,
+    "Ben": 4,
+    "green": 5,
+    "yellow": 3,
+    "orange": 2,
+    "black": 4,
+    "white": 1
+   }
+  },
+  {
+   "id": "L4-01",
+   "level": 4,
+   "n_houses": 5,
+   "n_vars": 15,
+   "n_clues": 9,
+   "n_constraints": 12,
+   "plain_bt_calls": 709,
+   "groups": {
+    "person": [
+     "Nora",
+     "Elena",
+     "Vera",
+     "Gina",
+     "Paula"
+    ],
+    "colour": [
+     "purple",
+     "black",
+     "orange",
+     "yellow",
+     "blue"
+    ],
+    "pet": [
+     "horse",
+     "rabbit",
+     "bird",
+     "hamster",
+     "fish"
+    ]
+   },
+   "text": "Five houses stand in a row, numbered 1 to 5 from left to right. Each house has a different owner, a different colour and a different pet.\nOwners: Nora, Elena, Vera, Gina, Paula.\nColours: purple, black, orange, yellow, blue.\nPets: horse, rabbit, bird, hamster, fish.\nClues:\n1. Vera's house is somewhere to the left of the house with the hamster.\n2. The horse lives in the blue house.\n3. The house with the bird is immediately to the left of Elena's house.\n4. Vera's house is immediately to the left of the blue house.\n5. The house with the rabbit is somewhere to the left of the purple house.\n6. Nora lives in the orange house.\n7. The house with the rabbit is immediately to the left of Paula's house.\n8. Gina's house is immediately to the left of the black house.\n9. Gina's house is immediately to the left of Paula's house.\nGive the house number of every owner, every colour and every pet.",
+   "clues": [
+    {
+     "kind": "left_of",
+     "x": "Vera",
+     "y": "hamster"
+    },
+    {
+     "kind": "same",
+     "x": "blue",
+     "y": "horse"
+    },
+    {
+     "kind": "right_next",
+     "x": "bird",
+     "y": "Elena"
+    },
+    {
+     "kind": "right_next",
+     "x": "Vera",
+     "y": "blue"
+    },
+    {
+     "kind": "left_of",
+     "x": "rabbit",
+     "y": "purple"
+    },
+    {
+     "kind": "same",
+     "x": "Nora",
+     "y": "orange"
+    },
+    {
+     "kind": "right_next",
+     "x": "rabbit",
+     "y": "Paula"
+    },
+    {
+     "kind": "right_next",
+     "x": "Gina",
+     "y": "black"
+    },
+    {
+     "kind": "right_next",
+     "x": "Gina",
+     "y": "Paula"
+    }
+   ],
+   "spec": {
+    "variables": {
+     "Nora": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "Elena": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "Vera": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "Gina": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "Paula": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "purple": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "black": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "orange": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "yellow": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "blue": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "horse": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "rabbit": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "bird": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "hamster": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "fish": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ]
+    },
+    "constraints": [
+     {
+      "type": "alldiff",
+      "vars": [
+       "Nora",
+       "Elena",
+       "Vera",
+       "Gina",
+       "Paula"
+      ]
+     },
+     {
+      "type": "alldiff",
+      "vars": [
+       "purple",
+       "black",
+       "orange",
+       "yellow",
+       "blue"
+      ]
+     },
+     {
+      "type": "alldiff",
+      "vars": [
+       "horse",
+       "rabbit",
+       "bird",
+       "hamster",
+       "fish"
+      ]
+     },
+     {
+      "type": "lt",
+      "a": "Vera",
+      "b": "hamster"
+     },
+     {
+      "type": "eq",
+      "a": "blue",
+      "b": "horse"
+     },
+     {
+      "type": "offset",
+      "a": "Elena",
+      "b": "bird",
+      "k": 1
+     },
+     {
+      "type": "offset",
+      "a": "blue",
+      "b": "Vera",
+      "k": 1
+     },
+     {
+      "type": "lt",
+      "a": "rabbit",
+      "b": "purple"
+     },
+     {
+      "type": "eq",
+      "a": "Nora",
+      "b": "orange"
+     },
+     {
+      "type": "offset",
+      "a": "Paula",
+      "b": "rabbit",
+      "k": 1
+     },
+     {
+      "type": "offset",
+      "a": "black",
+      "b": "Gina",
+      "k": 1
+     },
+     {
+      "type": "offset",
+      "a": "Paula",
+      "b": "Gina",
+      "k": 1
+     }
+    ]
+   },
+   "gold": {
+    "Nora": 5,
+    "Elena": 4,
+    "Vera": 3,
+    "Gina": 1,
+    "Paula": 2,
+    "purple": 3,
+    "black": 2,
+    "orange": 5,
+    "yellow": 1,
+    "blue": 4,
+    "horse": 4,
+    "rabbit": 1,
+    "bird": 3,
+    "hamster": 5,
+    "fish": 2
+   }
+  },
+  {
+   "id": "L4-02",
+   "level": 4,
+   "n_houses": 5,
+   "n_vars": 15,
+   "n_clues": 11,
+   "n_constraints": 14,
+   "plain_bt_calls": 761,
+   "groups": {
+    "person": [
+     "Nora",
+     "Omar",
+     "Carla",
+     "Ana",
+     "Hugo"
+    ],
+    "colour": [
+     "red",
+     "purple",
+     "black",
+     "green",
+     "yellow"
+    ],
+    "pet": [
+     "cat",
+     "rabbit",
+     "fish",
+     "dog",
+     "horse"
+    ]
+   },
+   "text": "Five houses stand in a row, numbered 1 to 5 from left to right. Each house has a different owner, a different colour and a different pet.\nOwners: Nora, Omar, Carla, Ana, Hugo.\nColours: red, purple, black, green, yellow.\nPets: cat, rabbit, fish, dog, horse.\nClues:\n1. The black house is immediately to the left of Carla's house.\n2. Carla lives in the red house.\n3. Carla owns the cat.\n4. The purple house and the house with the cat are next to each other.\n5. Omar's house is somewhere to the left of the house with the cat.\n6. Hugo's house is not house 2.\n7. The green house is somewhere to the left of the yellow house.\n8. The house with the rabbit is somewhere to the left of the house with the dog.\n9. Ana's house is somewhere to the left of the house with the fish.\n10. The red house and the house with the rabbit are next to each other.\n11. Hugo's house is somewhere to the left of Omar's house.\nGive the house number of every owner, every colour and every pet.",
+   "clues": [
+    {
+     "kind": "right_next",
+     "x": "black",
+     "y": "Carla"
+    },
+    {
+     "kind": "same",
+     "x": "Carla",
+     "y": "red"
+    },
+    {
+     "kind": "same",
+     "x": "Carla",
+     "y": "cat"
+    },
+    {
+     "kind": "next_to",
+     "x": "purple",
+     "y": "cat"
+    },
+    {
+     "kind": "left_of",
+     "x": "Omar",
+     "y": "cat"
+    },
+    {
+     "kind": "not_at",
+     "x": "Hugo",
+     "y": 2
+    },
+    {
+     "kind": "left_of",
+     "x": "green",
+     "y": "yellow"
+    },
+    {
+     "kind": "left_of",
+     "x": "rabbit",
+     "y": "dog"
+    },
+    {
+     "kind": "left_of",
+     "x": "Ana",
+     "y": "fish"
+    },
+    {
+     "kind": "next_to",
+     "x": "red",
+     "y": "rabbit"
+    },
+    {
+     "kind": "left_of",
+     "x": "Hugo",
+     "y": "Omar"
+    }
+   ],
+   "spec": {
+    "variables": {
+     "Nora": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "Omar": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "Carla": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "Ana": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "Hugo": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "red": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "purple": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "black": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "green": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "yellow": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "cat": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "rabbit": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "fish": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "dog": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "horse": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ]
+    },
+    "constraints": [
+     {
+      "type": "alldiff",
+      "vars": [
+       "Nora",
+       "Omar",
+       "Carla",
+       "Ana",
+       "Hugo"
+      ]
+     },
+     {
+      "type": "alldiff",
+      "vars": [
+       "red",
+       "purple",
+       "black",
+       "green",
+       "yellow"
+      ]
+     },
+     {
+      "type": "alldiff",
+      "vars": [
+       "cat",
+       "rabbit",
+       "fish",
+       "dog",
+       "horse"
+      ]
+     },
+     {
+      "type": "offset",
+      "a": "Carla",
+      "b": "black",
+      "k": 1
+     },
+     {
+      "type": "eq",
+      "a": "Carla",
+      "b": "red"
+     },
+     {
+      "type": "eq",
+      "a": "Carla",
+      "b": "cat"
+     },
+     {
+      "type": "next_to",
+      "a": "purple",
+      "b": "cat"
+     },
+     {
+      "type": "lt",
+      "a": "Omar",
+      "b": "cat"
+     },
+     {
+      "type": "neq",
+      "a": "Hugo",
+      "b": 2
+     },
+     {
+      "type": "lt",
+      "a": "green",
+      "b": "yellow"
+     },
+     {
+      "type": "lt",
+      "a": "rabbit",
+      "b": "dog"
+     },
+     {
+      "type": "lt",
+      "a": "Ana",
+      "b": "fish"
+     },
+     {
+      "type": "next_to",
+      "a": "red",
+      "b": "rabbit"
+     },
+     {
+      "type": "lt",
+      "a": "Hugo",
+      "b": "Omar"
+     }
+    ]
+   },
+   "gold": {
+    "Nora": 5,
+    "Omar": 2,
+    "Carla": 3,
+    "Ana": 4,
+    "Hugo": 1,
+    "red": 3,
+    "purple": 4,
+    "black": 2,
+    "green": 1,
+    "yellow": 5,
+    "cat": 3,
+    "rabbit": 2,
+    "fish": 5,
+    "dog": 4,
+    "horse": 1
+   }
+  },
+  {
+   "id": "L4-03",
+   "level": 4,
+   "n_houses": 5,
+   "n_vars": 15,
+   "n_clues": 9,
+   "n_constraints": 12,
+   "plain_bt_calls": 848,
+   "groups": {
+    "person": [
+     "Hugo",
+     "Vera",
+     "Elena",
+     "Ben",
+     "Dev"
+    ],
+    "colour": [
+     "white",
+     "yellow",
+     "red",
+     "blue",
+     "green"
+    ],
+    "pet": [
+     "dog",
+     "turtle",
+     "fish",
+     "cat",
+     "bird"
+    ]
+   },
+   "text": "Five houses stand in a row, numbered 1 to 5 from left to right. Each house has a different owner, a different colour and a different pet.\nOwners: Hugo, Vera, Elena, Ben, Dev.\nColours: white, yellow, red, blue, green.\nPets: dog, turtle, fish, cat, bird.\nClues:\n1. Vera's house and the red house are next to each other.\n2. Ben lives in the yellow house.\n3. Hugo's house is somewhere to the left of Dev's house.\n4. The turtle lives in the blue house.\n5. The house with the turtle is somewhere to the left of the house with the dog.\n6. The white house is somewhere to the left of the house with the turtle.\n7. The fish lives in the white house.\n8. Dev owns the fish.\n9. Elena's house is somewhere to the left of the house with the bird.\nGive the house number of every owner, every colour and every pet.",
+   "clues": [
+    {
+     "kind": "next_to",
+     "x": "Vera",
+     "y": "red"
+    },
+    {
+     "kind": "same",
+     "x": "Ben",
+     "y": "yellow"
+    },
+    {
+     "kind": "left_of",
+     "x": "Hugo",
+     "y": "Dev"
+    },
+    {
+     "kind": "same",
+     "x": "blue",
+     "y": "turtle"
+    },
+    {
+     "kind": "left_of",
+     "x": "turtle",
+     "y": "dog"
+    },
+    {
+     "kind": "left_of",
+     "x": "white",
+     "y": "turtle"
+    },
+    {
+     "kind": "same",
+     "x": "white",
+     "y": "fish"
+    },
+    {
+     "kind": "same",
+     "x": "Dev",
+     "y": "fish"
+    },
+    {
+     "kind": "left_of",
+     "x": "Elena",
+     "y": "bird"
+    }
+   ],
+   "spec": {
+    "variables": {
+     "Hugo": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "Vera": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "Elena": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "Ben": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "Dev": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "white": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "yellow": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "red": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "blue": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "green": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "dog": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "turtle": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "fish": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "cat": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "bird": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ]
+    },
+    "constraints": [
+     {
+      "type": "alldiff",
+      "vars": [
+       "Hugo",
+       "Vera",
+       "Elena",
+       "Ben",
+       "Dev"
+      ]
+     },
+     {
+      "type": "alldiff",
+      "vars": [
+       "white",
+       "yellow",
+       "red",
+       "blue",
+       "green"
+      ]
+     },
+     {
+      "type": "alldiff",
+      "vars": [
+       "dog",
+       "turtle",
+       "fish",
+       "cat",
+       "bird"
+      ]
+     },
+     {
+      "type": "next_to",
+      "a": "Vera",
+      "b": "red"
+     },
+     {
+      "type": "eq",
+      "a": "Ben",
+      "b": "yellow"
+     },
+     {
+      "type": "lt",
+      "a": "Hugo",
+      "b": "Dev"
+     },
+     {
+      "type": "eq",
+      "a": "blue",
+      "b": "turtle"
+     },
+     {
+      "type": "lt",
+      "a": "turtle",
+      "b": "dog"
+     },
+     {
+      "type": "lt",
+      "a": "white",
+      "b": "turtle"
+     },
+     {
+      "type": "eq",
+      "a": "white",
+      "b": "fish"
+     },
+     {
+      "type": "eq",
+      "a": "Dev",
+      "b": "fish"
+     },
+     {
+      "type": "lt",
+      "a": "Elena",
+      "b": "bird"
+     }
+    ]
+   },
+   "gold": {
+    "Hugo": 1,
+    "Vera": 3,
+    "Elena": 4,
+    "Ben": 5,
+    "Dev": 2,
+    "white": 2,
+    "yellow": 5,
+    "red": 4,
+    "blue": 3,
+    "green": 1,
+    "dog": 4,
+    "turtle": 3,
+    "fish": 2,
+    "cat": 1,
+    "bird": 5
+   }
+  },
+  {
+   "id": "L4-04",
+   "level": 4,
+   "n_houses": 5,
+   "n_vars": 15,
+   "n_clues": 11,
+   "n_constraints": 14,
+   "plain_bt_calls": 869,
+   "groups": {
+    "person": [
+     "Paula",
+     "Lucia",
+     "Vera",
+     "Raul",
+     "Ben"
+    ],
+    "colour": [
+     "orange",
+     "red",
+     "yellow",
+     "purple",
+     "black"
+    ],
+    "pet": [
+     "bird",
+     "dog",
+     "hamster",
+     "turtle",
+     "fish"
+    ]
+   },
+   "text": "Five houses stand in a row, numbered 1 to 5 from left to right. Each house has a different owner, a different colour and a different pet.\nOwners: Paula, Lucia, Vera, Raul, Ben.\nColours: orange, red, yellow, purple, black.\nPets: bird, dog, hamster, turtle, fish.\nClues:\n1. The yellow house is somewhere to the left of the house with the hamster.\n2. The fish lives in the red house.\n3. The red house is immediately to the left of the house with the turtle.\n4. Lucia's house is immediately to the left of Vera's house.\n5. Lucia's house and the house with the turtle are next to each other.\n6. Lucia's house is immediately to the left of the yellow house.\n7. The dog does not live in the purple house.\n8. Ben's house is immediately to the left of Lucia's house.\n9. Raul does not live in the black house.\n10. The house with the fish is somewhere to the left of the black house.\n11. The purple house is somewhere to the left of Ben's house.\nGive the house number of every owner, every colour and every pet.",
+   "clues": [
+    {
+     "kind": "left_of",
+     "x": "yellow",
+     "y": "hamster"
+    },
+    {
+     "kind": "same",
+     "x": "red",
+     "y": "fish"
+    },
+    {
+     "kind": "right_next",
+     "x": "red",
+     "y": "turtle"
+    },
+    {
+     "kind": "right_next",
+     "x": "Lucia",
+     "y": "Vera"
+    },
+    {
+     "kind": "next_to",
+     "x": "Lucia",
+     "y": "turtle"
+    },
+    {
+     "kind": "right_next",
+     "x": "Lucia",
+     "y": "yellow"
+    },
+    {
+     "kind": "differ",
+     "x": "purple",
+     "y": "dog"
+    },
+    {
+     "kind": "right_next",
+     "x": "Ben",
+     "y": "Lucia"
+    },
+    {
+     "kind": "differ",
+     "x": "Raul",
+     "y": "black"
+    },
+    {
+     "kind": "left_of",
+     "x": "fish",
+     "y": "black"
+    },
+    {
+     "kind": "left_of",
+     "x": "purple",
+     "y": "Ben"
+    }
+   ],
+   "spec": {
+    "variables": {
+     "Paula": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "Lucia": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "Vera": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "Raul": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "Ben": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "orange": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "red": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "yellow": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "purple": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "black": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "bird": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "dog": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "hamster": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "turtle": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "fish": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ]
+    },
+    "constraints": [
+     {
+      "type": "alldiff",
+      "vars": [
+       "Paula",
+       "Lucia",
+       "Vera",
+       "Raul",
+       "Ben"
+      ]
+     },
+     {
+      "type": "alldiff",
+      "vars": [
+       "orange",
+       "red",
+       "yellow",
+       "purple",
+       "black"
+      ]
+     },
+     {
+      "type": "alldiff",
+      "vars": [
+       "bird",
+       "dog",
+       "hamster",
+       "turtle",
+       "fish"
+      ]
+     },
+     {
+      "type": "lt",
+      "a": "yellow",
+      "b": "hamster"
+     },
+     {
+      "type": "eq",
+      "a": "red",
+      "b": "fish"
+     },
+     {
+      "type": "offset",
+      "a": "turtle",
+      "b": "red",
+      "k": 1
+     },
+     {
+      "type": "offset",
+      "a": "Vera",
+      "b": "Lucia",
+      "k": 1
+     },
+     {
+      "type": "next_to",
+      "a": "Lucia",
+      "b": "turtle"
+     },
+     {
+      "type": "offset",
+      "a": "yellow",
+      "b": "Lucia",
+      "k": 1
+     },
+     {
+      "type": "neq",
+      "a": "purple",
+      "b": "dog"
+     },
+     {
+      "type": "offset",
+      "a": "Lucia",
+      "b": "Ben",
+      "k": 1
+     },
+     {
+      "type": "neq",
+      "a": "Raul",
+      "b": "black"
+     },
+     {
+      "type": "lt",
+      "a": "fish",
+      "b": "black"
+     },
+     {
+      "type": "lt",
+      "a": "purple",
+      "b": "Ben"
+     }
+    ]
+   },
+   "gold": {
+    "Paula": 5,
+    "Lucia": 3,
+    "Vera": 4,
+    "Raul": 1,
+    "Ben": 2,
+    "orange": 2,
+    "red": 3,
+    "yellow": 4,
+    "purple": 1,
+    "black": 5,
+    "bird": 1,
+    "dog": 2,
+    "hamster": 5,
+    "turtle": 4,
+    "fish": 3
+   }
+  },
+  {
+   "id": "L4-05",
+   "level": 4,
+   "n_houses": 5,
+   "n_vars": 15,
+   "n_clues": 11,
+   "n_constraints": 14,
+   "plain_bt_calls": 384,
+   "groups": {
+    "person": [
+     "Hugo",
+     "Tomas",
+     "Dev",
+     "Elena",
+     "Jon"
+    ],
+    "colour": [
+     "red",
+     "white",
+     "orange",
+     "purple",
+     "blue"
+    ],
+    "pet": [
+     "horse",
+     "turtle",
+     "dog",
+     "fish",
+     "cat"
+    ]
+   },
+   "text": "Five houses stand in a row, numbered 1 to 5 from left to right. Each house has a different owner, a different colour and a different pet.\nOwners: Hugo, Tomas, Dev, Elena, Jon.\nColours: red, white, orange, purple, blue.\nPets: horse, turtle, dog, fish, cat.\nClues:\n1. The purple house is immediately to the left of the house with the horse.\n2. Elena's house is immediately to the left of the white house.\n3. Tomas lives in the blue house.\n4. Elena does not own the turtle.\n5. The red house is immediately to the left of Dev's house.\n6. The orange house is somewhere to the left of the blue house.\n7. The purple house is somewhere to the left of Hugo's house.\n8. The house with the horse and the house with the fish are next to each other.\n9. The white house is somewhere to the left of the house with the dog.\n10. The fish does not live in the purple house.\n11. The red house is somewhere to the left of Jon's house.\nGive the house number of every owner, every colour and every pet.",
+   "clues": [
+    {
+     "kind": "right_next",
+     "x": "purple",
+     "y": "horse"
+    },
+    {
+     "kind": "right_next",
+     "x": "Elena",
+     "y": "white"
+    },
+    {
+     "kind": "same",
+     "x": "Tomas",
+     "y": "blue"
+    },
+    {
+     "kind": "differ",
+     "x": "Elena",
+     "y": "turtle"
+    },
+    {
+     "kind": "right_next",
+     "x": "red",
+     "y": "Dev"
+    },
+    {
+     "kind": "left_of",
+     "x": "orange",
+     "y": "blue"
+    },
+    {
+     "kind": "left_of",
+     "x": "purple",
+     "y": "Hugo"
+    },
+    {
+     "kind": "next_to",
+     "x": "horse",
+     "y": "fish"
+    },
+    {
+     "kind": "left_of",
+     "x": "white",
+     "y": "dog"
+    },
+    {
+     "kind": "differ",
+     "x": "purple",
+     "y": "fish"
+    },
+    {
+     "kind": "left_of",
+     "x": "red",
+     "y": "Jon"
+    }
+   ],
+   "spec": {
+    "variables": {
+     "Hugo": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "Tomas": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "Dev": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "Elena": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "Jon": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "red": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "white": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "orange": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "purple": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "blue": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "horse": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "turtle": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "dog": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "fish": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "cat": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ]
+    },
+    "constraints": [
+     {
+      "type": "alldiff",
+      "vars": [
+       "Hugo",
+       "Tomas",
+       "Dev",
+       "Elena",
+       "Jon"
+      ]
+     },
+     {
+      "type": "alldiff",
+      "vars": [
+       "red",
+       "white",
+       "orange",
+       "purple",
+       "blue"
+      ]
+     },
+     {
+      "type": "alldiff",
+      "vars": [
+       "horse",
+       "turtle",
+       "dog",
+       "fish",
+       "cat"
+      ]
+     },
+     {
+      "type": "offset",
+      "a": "horse",
+      "b": "purple",
+      "k": 1
+     },
+     {
+      "type": "offset",
+      "a": "white",
+      "b": "Elena",
+      "k": 1
+     },
+     {
+      "type": "eq",
+      "a": "Tomas",
+      "b": "blue"
+     },
+     {
+      "type": "neq",
+      "a": "Elena",
+      "b": "turtle"
+     },
+     {
+      "type": "offset",
+      "a": "Dev",
+      "b": "red",
+      "k": 1
+     },
+     {
+      "type": "lt",
+      "a": "orange",
+      "b": "blue"
+     },
+     {
+      "type": "lt",
+      "a": "purple",
+      "b": "Hugo"
+     },
+     {
+      "type": "next_to",
+      "a": "horse",
+      "b": "fish"
+     },
+     {
+      "type": "lt",
+      "a": "white",
+      "b": "dog"
+     },
+     {
+      "type": "neq",
+      "a": "purple",
+      "b": "fish"
+     },
+     {
+      "type": "lt",
+      "a": "red",
+      "b": "Jon"
+     }
+    ]
+   },
+   "gold": {
+    "Hugo": 4,
+    "Tomas": 5,
+    "Dev": 2,
+    "Elena": 1,
+    "Jon": 3,
+    "red": 1,
+    "white": 2,
+    "orange": 4,
+    "purple": 3,
+    "blue": 5,
+    "horse": 4,
+    "turtle": 2,
+    "dog": 3,
+    "fish": 5,
+    "cat": 1
+   }
+  },
+  {
+   "id": "L4-06",
+   "level": 4,
+   "n_houses": 5,
+   "n_vars": 15,
+   "n_clues": 12,
+   "n_constraints": 15,
+   "plain_bt_calls": 824,
+   "groups": {
+    "person": [
+     "Raul",
+     "Hugo",
+     "Kai",
+     "Elena",
+     "Carla"
+    ],
+    "colour": [
+     "red",
+     "orange",
+     "yellow",
+     "blue",
+     "green"
+    ],
+    "pet": [
+     "hamster",
+     "horse",
+     "bird",
+     "rabbit",
+     "turtle"
+    ]
+   },
+   "text": "Five houses stand in a row, numbered 1 to 5 from left to right. Each house has a different owner, a different colour and a different pet.\nOwners: Raul, Hugo, Kai, Elena, Carla.\nColours: red, orange, yellow, blue, green.\nPets: hamster, horse, bird, rabbit, turtle.\nClues:\n1. Hugo's house and the green house are next to each other.\n2. The house with the hamster is immediately to the left of the house with the rabbit.\n3. Raul does not own the turtle.\n4. The green house is somewhere to the left of Kai's house.\n5. The house with the bird is somewhere to the left of Carla's house.\n6. Raul's house is immediately to the left of Elena's house.\n7. Kai's house and the yellow house are next to each other.\n8. The green house and the house with the rabbit are next to each other.\n9. Carla does not live in the orange house.\n10. The red house is somewhere to the left of the house with the bird.\n11. Hugo's house is somewhere to the left of the house with the horse.\n12. The horse does not live in the yellow house.\nGive the house number of every owner, every colour and every pet.",
+   "clues": [
+    {
+     "kind": "next_to",
+     "x": "Hugo",
+     "y": "green"
+    },
+    {
+     "kind": "right_next",
+     "x": "hamster",
+     "y": "rabbit"
+    },
+    {
+     "kind": "differ",
+     "x": "Raul",
+     "y": "turtle"
+    },
+    {
+     "kind": "left_of",
+     "x": "green",
+     "y": "Kai"
+    },
+    {
+     "kind": "left_of",
+     "x": "bird",
+     "y": "Carla"
+    },
+    {
+     "kind": "right_next",
+     "x": "Raul",
+     "y": "Elena"
+    },
+    {
+     "kind": "next_to",
+     "x": "Kai",
+     "y": "yellow"
+    },
+    {
+     "kind": "next_to",
+     "x": "green",
+     "y": "rabbit"
+    },
+    {
+     "kind": "differ",
+     "x": "Carla",
+     "y": "orange"
+    },
+    {
+     "kind": "left_of",
+     "x": "red",
+     "y": "bird"
+    },
+    {
+     "kind": "left_of",
+     "x": "Hugo",
+     "y": "horse"
+    },
+    {
+     "kind": "differ",
+     "x": "yellow",
+     "y": "horse"
+    }
+   ],
+   "spec": {
+    "variables": {
+     "Raul": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "Hugo": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "Kai": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "Elena": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "Carla": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "red": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "orange": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "yellow": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "blue": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "green": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "hamster": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "horse": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "bird": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "rabbit": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "turtle": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ]
+    },
+    "constraints": [
+     {
+      "type": "alldiff",
+      "vars": [
+       "Raul",
+       "Hugo",
+       "Kai",
+       "Elena",
+       "Carla"
+      ]
+     },
+     {
+      "type": "alldiff",
+      "vars": [
+       "red",
+       "orange",
+       "yellow",
+       "blue",
+       "green"
+      ]
+     },
+     {
+      "type": "alldiff",
+      "vars": [
+       "hamster",
+       "horse",
+       "bird",
+       "rabbit",
+       "turtle"
+      ]
+     },
+     {
+      "type": "next_to",
+      "a": "Hugo",
+      "b": "green"
+     },
+     {
+      "type": "offset",
+      "a": "rabbit",
+      "b": "hamster",
+      "k": 1
+     },
+     {
+      "type": "neq",
+      "a": "Raul",
+      "b": "turtle"
+     },
+     {
+      "type": "lt",
+      "a": "green",
+      "b": "Kai"
+     },
+     {
+      "type": "lt",
+      "a": "bird",
+      "b": "Carla"
+     },
+     {
+      "type": "offset",
+      "a": "Elena",
+      "b": "Raul",
+      "k": 1
+     },
+     {
+      "type": "next_to",
+      "a": "Kai",
+      "b": "yellow"
+     },
+     {
+      "type": "next_to",
+      "a": "green",
+      "b": "rabbit"
+     },
+     {
+      "type": "neq",
+      "a": "Carla",
+      "b": "orange"
+     },
+     {
+      "type": "lt",
+      "a": "red",
+      "b": "bird"
+     },
+     {
+      "type": "lt",
+      "a": "Hugo",
+      "b": "horse"
+     },
+     {
+      "type": "neq",
+      "a": "yellow",
+      "b": "horse"
+     }
+    ]
+   },
+   "gold": {
+    "Raul": 2,
+    "Hugo": 1,
+    "Kai": 4,
+    "Elena": 3,
+    "Carla": 5,
+    "red": 1,
+    "orange": 4,
+    "yellow": 3,
+    "blue": 5,
+    "green": 2,
+    "hamster": 2,
+    "horse": 5,
+    "bird": 4,
+    "rabbit": 3,
+    "turtle": 1
+   }
+  },
+  {
+   "id": "L4-07",
+   "level": 4,
+   "n_houses": 5,
+   "n_vars": 15,
+   "n_clues": 10,
+   "n_constraints": 13,
+   "plain_bt_calls": 784,
+   "groups": {
+    "person": [
+     "Felix",
+     "Iris",
+     "Elena",
+     "Vera",
+     "Mateo"
+    ],
+    "colour": [
+     "red",
+     "orange",
+     "yellow",
+     "white",
+     "blue"
+    ],
+    "pet": [
+     "fish",
+     "turtle",
+     "bird",
+     "horse",
+     "cat"
+    ]
+   },
+   "text": "Five houses stand in a row, numbered 1 to 5 from left to right. Each house has a different owner, a different colour and a different pet.\nOwners: Felix, Iris, Elena, Vera, Mateo.\nColours: red, orange, yellow, white, blue.\nPets: fish, turtle, bird, horse, cat.\nClues:\n1. The house with the turtle is immediately to the left of the orange house.\n2. Felix's house is immediately to the left of Mateo's house.\n3. Vera does not live in the red house.\n4. Felix's house and Iris's house are next to each other.\n5. The house with the bird is somewhere to the left of Elena's house.\n6. The red house and the blue house are next to each other.\n7. Iris's house and the house with the bird are next to each other.\n8. The house with the cat is somewhere to the left of the house with the turtle.\n9. The blue house is immediately to the left of the yellow house.\n10. The house with the horse is somewhere to the left of Iris's house.\nGive the house number of every owner, every colour and every pet.",
+   "clues": [
+    {
+     "kind": "right_next",
+     "x": "turtle",
+     "y": "orange"
+    },
+    {
+     "kind": "right_next",
+     "x": "Felix",
+     "y": "Mateo"
+    },
+    {
+     "kind": "differ",
+     "x": "Vera",
+     "y": "red"
+    },
+    {
+     "kind": "next_to",
+     "x": "Felix",
+     "y": "Iris"
+    },
+    {
+     "kind": "left_of",
+     "x": "bird",
+     "y": "Elena"
+    },
+    {
+     "kind": "next_to",
+     "x": "red",
+     "y": "blue"
+    },
+    {
+     "kind": "next_to",
+     "x": "Iris",
+     "y": "bird"
+    },
+    {
+     "kind": "left_of",
+     "x": "cat",
+     "y": "turtle"
+    },
+    {
+     "kind": "right_next",
+     "x": "blue",
+     "y": "yellow"
+    },
+    {
+     "kind": "left_of",
+     "x": "horse",
+     "y": "Iris"
+    }
+   ],
+   "spec": {
+    "variables": {
+     "Felix": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "Iris": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "Elena": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "Vera": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "Mateo": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "red": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "orange": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "yellow": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "white": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "blue": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "fish": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "turtle": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "bird": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "horse": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "cat": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ]
+    },
+    "constraints": [
+     {
+      "type": "alldiff",
+      "vars": [
+       "Felix",
+       "Iris",
+       "Elena",
+       "Vera",
+       "Mateo"
+      ]
+     },
+     {
+      "type": "alldiff",
+      "vars": [
+       "red",
+       "orange",
+       "yellow",
+       "white",
+       "blue"
+      ]
+     },
+     {
+      "type": "alldiff",
+      "vars": [
+       "fish",
+       "turtle",
+       "bird",
+       "horse",
+       "cat"
+      ]
+     },
+     {
+      "type": "offset",
+      "a": "orange",
+      "b": "turtle",
+      "k": 1
+     },
+     {
+      "type": "offset",
+      "a": "Mateo",
+      "b": "Felix",
+      "k": 1
+     },
+     {
+      "type": "neq",
+      "a": "Vera",
+      "b": "red"
+     },
+     {
+      "type": "next_to",
+      "a": "Felix",
+      "b": "Iris"
+     },
+     {
+      "type": "lt",
+      "a": "bird",
+      "b": "Elena"
+     },
+     {
+      "type": "next_to",
+      "a": "red",
+      "b": "blue"
+     },
+     {
+      "type": "next_to",
+      "a": "Iris",
+      "b": "bird"
+     },
+     {
+      "type": "lt",
+      "a": "cat",
+      "b": "turtle"
+     },
+     {
+      "type": "offset",
+      "a": "yellow",
+      "b": "blue",
+      "k": 1
+     },
+     {
+      "type": "lt",
+      "a": "horse",
+      "b": "Iris"
+     }
+    ]
+   },
+   "gold": {
+    "Felix": 3,
+    "Iris": 2,
+    "Elena": 5,
+    "Vera": 1,
+    "Mateo": 4,
+    "red": 2,
+    "orange": 5,
+    "yellow": 4,
+    "white": 1,
+    "blue": 3,
+    "fish": 5,
+    "turtle": 4,
+    "bird": 3,
+    "horse": 1,
+    "cat": 2
+   }
+  },
+  {
+   "id": "L4-08",
+   "level": 4,
+   "n_houses": 5,
+   "n_vars": 15,
+   "n_clues": 11,
+   "n_constraints": 14,
+   "plain_bt_calls": 69,
+   "groups": {
+    "person": [
+     "Raul",
+     "Dev",
+     "Iris",
+     "Kai",
+     "Tomas"
+    ],
+    "colour": [
+     "red",
+     "black",
+     "yellow",
+     "orange",
+     "white"
+    ],
+    "pet": [
+     "turtle",
+     "dog",
+     "cat",
+     "rabbit",
+     "hamster"
+    ]
+   },
+   "text": "Five houses stand in a row, numbered 1 to 5 from left to right. Each house has a different owner, a different colour and a different pet.\nOwners: Raul, Dev, Iris, Kai, Tomas.\nColours: red, black, yellow, orange, white.\nPets: turtle, dog, cat, rabbit, hamster.\nClues:\n1. The orange house is somewhere to the left of the house with the dog.\n2. The house with the hamster is immediately to the left of the house with the dog.\n3. Iris's house is somewhere to the left of the house with the cat.\n4. The dog lives in the yellow house.\n5. Iris's house is not house 4.\n6. The house with the turtle is immediately to the left of Kai's house.\n7. Raul's house is somewhere to the left of Iris's house.\n8. Iris's house and Tomas's house are next to each other.\n9. The white house is somewhere to the left of the black house.\n10. Dev owns the hamster.\n11. Raul lives in the red house.\nGive the house number of every owner, every colour and every pet.",
+   "clues": [
+    {
+     "kind": "left_of",
+     "x": "orange",
+     "y": "dog"
+    },
+    {
+     "kind": "right_next",
+     "x": "hamster",
+     "y": "dog"
+    },
+    {
+     "kind": "left_of",
+     "x": "Iris",
+     "y": "cat"
+    },
+    {
+     "kind": "same",
+     "x": "yellow",
+     "y": "dog"
+    },
+    {
+     "kind": "not_at",
+     "x": "Iris",
+     "y": 4
+    },
+    {
+     "kind": "right_next",
+     "x": "turtle",
+     "y": "Kai"
+    },
+    {
+     "kind": "left_of",
+     "x": "Raul",
+     "y": "Iris"
+    },
+    {
+     "kind": "next_to",
+     "x": "Iris",
+     "y": "Tomas"
+    },
+    {
+     "kind": "left_of",
+     "x": "white",
+     "y": "black"
+    },
+    {
+     "kind": "same",
+     "x": "Dev",
+     "y": "hamster"
+    },
+    {
+     "kind": "same",
+     "x": "Raul",
+     "y": "red"
+    }
+   ],
+   "spec": {
+    "variables": {
+     "Raul": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "Dev": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "Iris": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "Kai": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "Tomas": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "red": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "black": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "yellow": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "orange": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "white": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "turtle": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "dog": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "cat": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "rabbit": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "hamster": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ]
+    },
+    "constraints": [
+     {
+      "type": "alldiff",
+      "vars": [
+       "Raul",
+       "Dev",
+       "Iris",
+       "Kai",
+       "Tomas"
+      ]
+     },
+     {
+      "type": "alldiff",
+      "vars": [
+       "red",
+       "black",
+       "yellow",
+       "orange",
+       "white"
+      ]
+     },
+     {
+      "type": "alldiff",
+      "vars": [
+       "turtle",
+       "dog",
+       "cat",
+       "rabbit",
+       "hamster"
+      ]
+     },
+     {
+      "type": "lt",
+      "a": "orange",
+      "b": "dog"
+     },
+     {
+      "type": "offset",
+      "a": "dog",
+      "b": "hamster",
+      "k": 1
+     },
+     {
+      "type": "lt",
+      "a": "Iris",
+      "b": "cat"
+     },
+     {
+      "type": "eq",
+      "a": "yellow",
+      "b": "dog"
+     },
+     {
+      "type": "neq",
+      "a": "Iris",
+      "b": 4
+     },
+     {
+      "type": "offset",
+      "a": "Kai",
+      "b": "turtle",
+      "k": 1
+     },
+     {
+      "type": "lt",
+      "a": "Raul",
+      "b": "Iris"
+     },
+     {
+      "type": "next_to",
+      "a": "Iris",
+      "b": "Tomas"
+     },
+     {
+      "type": "lt",
+      "a": "white",
+      "b": "black"
+     },
+     {
+      "type": "eq",
+      "a": "Dev",
+      "b": "hamster"
+     },
+     {
+      "type": "eq",
+      "a": "Raul",
+      "b": "red"
+     }
+    ]
+   },
+   "gold": {
+    "Raul": 1,
+    "Dev": 2,
+    "Iris": 3,
+    "Kai": 5,
+    "Tomas": 4,
+    "red": 1,
+    "black": 5,
+    "yellow": 3,
+    "orange": 2,
+    "white": 4,
+    "turtle": 4,
+    "dog": 3,
+    "cat": 5,
+    "rabbit": 1,
+    "hamster": 2
+   }
+  },
+  {
+   "id": "L4-09",
+   "level": 4,
+   "n_houses": 5,
+   "n_vars": 15,
+   "n_clues": 14,
+   "n_constraints": 17,
+   "plain_bt_calls": 589,
+   "groups": {
+    "person": [
+     "Omar",
+     "Ana",
+     "Tomas",
+     "Jon",
+     "Carla"
+    ],
+    "colour": [
+     "orange",
+     "green",
+     "blue",
+     "purple",
+     "red"
+    ],
+    "pet": [
+     "fish",
+     "hamster",
+     "dog",
+     "horse",
+     "turtle"
+    ]
+   },
+   "text": "Five houses stand in a row, numbered 1 to 5 from left to right. Each house has a different owner, a different colour and a different pet.\nOwners: Omar, Ana, Tomas, Jon, Carla.\nColours: orange, green, blue, purple, red.\nPets: fish, hamster, dog, horse, turtle.\nClues:\n1. Jon does not own the turtle.\n2. The red house and the house with the dog are next to each other.\n3. Tomas does not live in the purple house.\n4. Omar's house and Ana's house are next to each other.\n5. Omar's house and the blue house are next to each other.\n6. The green house is immediately to the left of the house with the fish.\n7. Jon's house is somewhere to the left of Ana's house.\n8. Ana's house is somewhere to the left of the house with the fish.\n9. Omar's house and the house with the dog are next to each other.\n10. The purple house is somewhere to the left of the house with the hamster.\n11. Ana's house is somewhere to the left of Omar's house.\n12. The blue house and the house with the hamster are next to each other.\n13. The house with the dog is somewhere to the left of Carla's house.\n14. The house with the hamster is immediately to the left of the orange house.\nGive the house number of every owner, every colour and every pet.",
+   "clues": [
+    {
+     "kind": "differ",
+     "x": "Jon",
+     "y": "turtle"
+    },
+    {
+     "kind": "next_to",
+     "x": "red",
+     "y": "dog"
+    },
+    {
+     "kind": "differ",
+     "x": "Tomas",
+     "y": "purple"
+    },
+    {
+     "kind": "next_to",
+     "x": "Omar",
+     "y": "Ana"
+    },
+    {
+     "kind": "next_to",
+     "x": "Omar",
+     "y": "blue"
+    },
+    {
+     "kind": "right_next",
+     "x": "green",
+     "y": "fish"
+    },
+    {
+     "kind": "left_of",
+     "x": "Jon",
+     "y": "Ana"
+    },
+    {
+     "kind": "left_of",
+     "x": "Ana",
+     "y": "fish"
+    },
+    {
+     "kind": "next_to",
+     "x": "Omar",
+     "y": "dog"
+    },
+    {
+     "kind": "left_of",
+     "x": "purple",
+     "y": "hamster"
+    },
+    {
+     "kind": "left_of",
+     "x": "Ana",
+     "y": "Omar"
+    },
+    {
+     "kind": "next_to",
+     "x": "blue",
+     "y": "hamster"
+    },
+    {
+     "kind": "left_of",
+     "x": "dog",
+     "y": "Carla"
+    },
+    {
+     "kind": "right_next",
+     "x": "hamster",
+     "y": "orange"
+    }
+   ],
+   "spec": {
+    "variables": {
+     "Omar": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "Ana": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "Tomas": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "Jon": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "Carla": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "orange": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "green": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "blue": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "purple": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "red": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "fish": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "hamster": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "dog": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "horse": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "turtle": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ]
+    },
+    "constraints": [
+     {
+      "type": "alldiff",
+      "vars": [
+       "Omar",
+       "Ana",
+       "Tomas",
+       "Jon",
+       "Carla"
+      ]
+     },
+     {
+      "type": "alldiff",
+      "vars": [
+       "orange",
+       "green",
+       "blue",
+       "purple",
+       "red"
+      ]
+     },
+     {
+      "type": "alldiff",
+      "vars": [
+       "fish",
+       "hamster",
+       "dog",
+       "horse",
+       "turtle"
+      ]
+     },
+     {
+      "type": "neq",
+      "a": "Jon",
+      "b": "turtle"
+     },
+     {
+      "type": "next_to",
+      "a": "red",
+      "b": "dog"
+     },
+     {
+      "type": "neq",
+      "a": "Tomas",
+      "b": "purple"
+     },
+     {
+      "type": "next_to",
+      "a": "Omar",
+      "b": "Ana"
+     },
+     {
+      "type": "next_to",
+      "a": "Omar",
+      "b": "blue"
+     },
+     {
+      "type": "offset",
+      "a": "fish",
+      "b": "green",
+      "k": 1
+     },
+     {
+      "type": "lt",
+      "a": "Jon",
+      "b": "Ana"
+     },
+     {
+      "type": "lt",
+      "a": "Ana",
+      "b": "fish"
+     },
+     {
+      "type": "next_to",
+      "a": "Omar",
+      "b": "dog"
+     },
+     {
+      "type": "lt",
+      "a": "purple",
+      "b": "hamster"
+     },
+     {
+      "type": "lt",
+      "a": "Ana",
+      "b": "Omar"
+     },
+     {
+      "type": "next_to",
+      "a": "blue",
+      "b": "hamster"
+     },
+     {
+      "type": "lt",
+      "a": "dog",
+      "b": "Carla"
+     },
+     {
+      "type": "offset",
+      "a": "orange",
+      "b": "hamster",
+      "k": 1
+     }
+    ]
+   },
+   "gold": {
+    "Omar": 4,
+    "Ana": 3,
+    "Tomas": 2,
+    "Jon": 1,
+    "Carla": 5,
+    "orange": 5,
+    "green": 4,
+    "blue": 3,
+    "purple": 1,
+    "red": 2,
+    "fish": 5,
+    "hamster": 4,
+    "dog": 3,
+    "horse": 1,
+    "turtle": 2
+   }
+  },
+  {
+   "id": "L4-10",
+   "level": 4,
+   "n_houses": 5,
+   "n_vars": 15,
+   "n_clues": 11,
+   "n_constraints": 14,
+   "plain_bt_calls": 216,
+   "groups": {
+    "person": [
+     "Elena",
+     "Iris",
+     "Raul",
+     "Jon",
+     "Ana"
+    ],
+    "colour": [
+     "orange",
+     "purple",
+     "yellow",
+     "blue",
+     "black"
+    ],
+    "pet": [
+     "bird",
+     "turtle",
+     "rabbit",
+     "fish",
+     "horse"
+    ]
+   },
+   "text": "Five houses stand in a row, numbered 1 to 5 from left to right. Each house has a different owner, a different colour and a different pet.\nOwners: Elena, Iris, Raul, Jon, Ana.\nColours: orange, purple, yellow, blue, black.\nPets: bird, turtle, rabbit, fish, horse.\nClues:\n1. Elena's house is somewhere to the left of the house with the turtle.\n2. The house with the fish is immediately to the left of Elena's house.\n3. The black house and the house with the turtle are next to each other.\n4. The house with the horse is somewhere to the left of the yellow house.\n5. The rabbit lives in the purple house.\n6. Iris's house is somewhere to the left of Elena's house.\n7. Raul's house is not house 3.\n8. The house with the turtle is somewhere to the left of the yellow house.\n9. Raul's house and the purple house are next to each other.\n10. The orange house is immediately to the left of the purple house.\n11. The orange house is somewhere to the left of Ana's house.\nGive the house number of every owner, every colour and every pet.",
+   "clues": [
+    {
+     "kind": "left_of",
+     "x": "Elena",
+     "y": "turtle"
+    },
+    {
+     "kind": "right_next",
+     "x": "fish",
+     "y": "Elena"
+    },
+    {
+     "kind": "next_to",
+     "x": "black",
+     "y": "turtle"
+    },
+    {
+     "kind": "left_of",
+     "x": "horse",
+     "y": "yellow"
+    },
+    {
+     "kind": "same",
+     "x": "purple",
+     "y": "rabbit"
+    },
+    {
+     "kind": "left_of",
+     "x": "Iris",
+     "y": "Elena"
+    },
+    {
+     "kind": "not_at",
+     "x": "Raul",
+     "y": 3
+    },
+    {
+     "kind": "left_of",
+     "x": "turtle",
+     "y": "yellow"
+    },
+    {
+     "kind": "next_to",
+     "x": "Raul",
+     "y": "purple"
+    },
+    {
+     "kind": "right_next",
+     "x": "orange",
+     "y": "purple"
+    },
+    {
+     "kind": "left_of",
+     "x": "orange",
+     "y": "Ana"
+    }
+   ],
+   "spec": {
+    "variables": {
+     "Elena": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "Iris": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "Raul": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "Jon": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "Ana": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "orange": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "purple": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "yellow": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "blue": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "black": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "bird": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "turtle": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "rabbit": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "fish": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "horse": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ]
+    },
+    "constraints": [
+     {
+      "type": "alldiff",
+      "vars": [
+       "Elena",
+       "Iris",
+       "Raul",
+       "Jon",
+       "Ana"
+      ]
+     },
+     {
+      "type": "alldiff",
+      "vars": [
+       "orange",
+       "purple",
+       "yellow",
+       "blue",
+       "black"
+      ]
+     },
+     {
+      "type": "alldiff",
+      "vars": [
+       "bird",
+       "turtle",
+       "rabbit",
+       "fish",
+       "horse"
+      ]
+     },
+     {
+      "type": "lt",
+      "a": "Elena",
+      "b": "turtle"
+     },
+     {
+      "type": "offset",
+      "a": "Elena",
+      "b": "fish",
+      "k": 1
+     },
+     {
+      "type": "next_to",
+      "a": "black",
+      "b": "turtle"
+     },
+     {
+      "type": "lt",
+      "a": "horse",
+      "b": "yellow"
+     },
+     {
+      "type": "eq",
+      "a": "purple",
+      "b": "rabbit"
+     },
+     {
+      "type": "lt",
+      "a": "Iris",
+      "b": "Elena"
+     },
+     {
+      "type": "neq",
+      "a": "Raul",
+      "b": 3
+     },
+     {
+      "type": "lt",
+      "a": "turtle",
+      "b": "yellow"
+     },
+     {
+      "type": "next_to",
+      "a": "Raul",
+      "b": "purple"
+     },
+     {
+      "type": "offset",
+      "a": "purple",
+      "b": "orange",
+      "k": 1
+     },
+     {
+      "type": "lt",
+      "a": "orange",
+      "b": "Ana"
+     }
+    ]
+   },
+   "gold": {
+    "Elena": 2,
+    "Iris": 1,
+    "Raul": 5,
+    "Jon": 3,
+    "Ana": 4,
+    "orange": 3,
+    "purple": 4,
+    "yellow": 5,
+    "blue": 1,
+    "black": 2,
+    "bird": 5,
+    "turtle": 3,
+    "rabbit": 4,
+    "fish": 1,
+    "horse": 2
+   }
+  }
+ ]
+}
