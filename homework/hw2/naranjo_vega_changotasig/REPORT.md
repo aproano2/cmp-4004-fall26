@@ -1,162 +1,134 @@
 # Homework 2 — The Formalizer
 
 **CMP-4004 · Inteligencia Artificial · USFQ**
-**Equipo:** Diego Changotasig (Integrante 1: dataset, ground truth y brazo A) · [Integrante 2: brazos B y B′] ·
-[Integrante 3: brazo C, evaluación y análisis]
+**Equipo:** Diego Changotasig (Integrante 1: dataset, ground truth y brazo A), Nicolas Naranjo (Integrante 2: brazos B y B′) y Andrés Vega (Integrante 3: brazo C, evaluación y análisis)
 **Formalismo:** Constraint Satisfaction Problems (CSP)
-**Modelo previsto para B, B′ y C:** Ollama local `qwen2.5:3b` (3,1 mil millones de parámetros,
-Q4_K_M), temperatura 0 y semilla 0. Confirmar la misma versión y configuración en el equipo de C.
-**Estado:** borrador con resultados de B y B′; C y análisis conjunto pendientes · límite: 2 500 palabras.
+**Modelo de B, B′ y C:** Ollama local **`qwen2.5:3b` (3,1 mil millones de parámetros, Q4_K_M,
+digest `357c53fb659c…`)**, temperatura 0, semilla 0 y 4096 tokens de salida. Un modelo tan pequeño
+condiciona todos los resultados. B/B′ y C se ejecutaron en equipos distintos (C: Ryzen 9 6900HX,
+RTX 3080 Ti Laptop, Ollama 0.30.5).
 
-## 0. Objetivo y protocolo experimental
+## 0. Protocolo experimental
 
-El objetivo es comparar dos formas de resolver problemas escritos en lenguaje natural: que el LLM responda
-directamente, o que traduzca el problema a un modelo CSP para que lo resuelva un solver. Se comparan cuatro
-brazos sobre **los mismos 20 problemas**:
+Cuatro brazos sobre **los mismos 20 problemas**:
 
 | Brazo | Procedimiento |
 |---|---|
 | **A — Manual + solver** | Modelo CSP escrito y revisado a mano → solver. |
 | **B — LLM → CSP → solver** | El LLM escribe el modelo desde el enunciado → solver. Un intento. |
-| **B′ — B + refinamiento** | Si el solver falla, el LLM recibe **solo el mensaje de error del solver** y reintenta, hasta 3 veces. |
+| **B′ — B + refinamiento** | Si el solver falla, el LLM recibe **solo el mensaje de error** y reintenta, hasta 3 veces. |
 | **C — LLM directo** | El LLM responde sin solver. |
 
-**Protocolo común.** A, B y B′ usan el mismo solver (`code/csp_spec.py`); C no usa solver.
-Todos usan el mismo formato de resultados y regla de calificación (`code/results_schema.py`). Por cada instancia se registra:
-
-- resultado: correcto / incorrecto / sin respuesta;
-- tiempo total, tiempo del LLM y tiempo del solver;
-- tokens;
-- costo.
-
-Si el solver encuentra varias soluciones, el brazo devuelve la primera y se califica. Si no hay solución, se
-agota el tiempo o el modelo es inválido, cuenta como sin respuesta. Los LLM reciben `statement` y
-`answer_format` de `problems/public/problems.json`; nunca la dificultad ni el ground truth.
-Se muestra `answer_format` a B y C, con variables y dominios: esto simplifica la traducción y debe
-considerarse en §7. Protocolo inicial: temperatura 0, semilla 0, una ejecución por instancia; la
-variación entre instancias no mide varianza entre generaciones. Si hay tiempo, ejecutar semillas
-adicionales con temperatura mayor y reportarlas por separado. El prompt de B está en `code/arm_b.py`;
-C debe guardar su propio prompt y usar el mismo modelo, configuración y presupuesto de salida (4096 tokens).
-Ollama puede ejecutarse en equipos distintos; registrar hardware y versión para interpretar tiempos.
-
-Para B′ se parte de la salida inicial de B y solo se reintenta tras error de JSON/especificación o
-`unsat`, hasta tres refinamientos. `multiple` devuelve la primera solución, igual que A, sin reintento;
-es una alerta, no una prueba por sí sola de que la traducción es incorrecta. Timeout se registra sin
-reintento. Los modelos válidos pero incorrectos pueden pasar sin señal del solver.
+A, B y B′ usan el mismo solver (`code/csp_spec.py`). Todos los brazos comparten el formato de
+resultados y la regla de calificación (`code/results_schema.py`). Por instancia se registra:
+correcto / incorrecto / sin respuesta, tiempo total, tiempo del LLM, tiempo del solver, tokens y
+costo. Si hay varias soluciones (`multiple`), se califica la primera. `unsat`, `timeout` y un
+modelo inválido cuentan como sin respuesta. Los LLM reciben solo `statement` y `answer_format`
+públicos, nunca la dificultad ni el ground truth. B′ reintenta solo tras un error de JSON o de
+especificación, o tras `unsat`. C usa el mismo modelo, la misma configuración y la misma caché que B
+(`README_B.md`, `README_C.md`).
 
 ## 1. Dataset, formalización y ground truth (Integrante 1)
 
-El dataset tiene **20 problemas de Ingeniería Industrial**: **7 fáciles (F01–F07), 7 intermedios (M08–M14) y
-6 difíciles (D15–D20)**. Cubren producción, logística, inventarios, mantenimiento, asignación de recursos y
-turnos. Los enunciados, los modelos CSP y el solucionador se generaron con asistencia de IA (Claude) y los
-revisé manualmente uno por uno (detalle en `AI_LOG.md`).
+**20 problemas de Ingeniería Industrial**: **7 fáciles (F01–F07), 7 intermedios (M08–M14) y 6
+difíciles (D15–D20)**, de producción, logística, inventarios, mantenimiento, asignación y turnos.
+Los generó Claude y los revisé a mano uno por uno (`AI_LOG.md`). Las restricciones incluyen
+`alldiff`, precedencias, adyacencia, capacidades ponderadas, conteos e implicaciones. La
+dificultad crece a la vez en número de variables, número y tipo de restricciones y longitud de la
+deducción.
 
-Cada problema es un CSP con variables discretas, dominios finitos y restricciones explícitas: `alldiff`,
-precedencias, igualdades y desigualdades, adyacencia, capacidades ponderadas, conteos e implicaciones. La
-dificultad crece en tres ejes a la vez: número de variables, número y tipo de restricciones, y longitud de la
-cadena de deducción.
-
-| Dificultad | Variables | Restricciones atómicas | Espacio de búsqueda | Mediana de nodos (backtracking) |
+| Dificultad | Variables | Restricciones atómicas | Espacio de búsqueda | Mediana de nodos |
 |---|---:|---:|---:|---:|
 | Fácil | 3–4 | 4–10 | 27–256 | 5 |
 | Intermedia | 5–6 | 7–12 | 243–46 656 | 7 |
 | Difícil | 7–9 | 9–23 | 6 561–2 097 152 | 42 |
 
-Los nodos explorados no crecen siempre con el espacio de búsqueda. D15 tiene 2 097 152 combinaciones, pero el
-backtracking demuestra la unicidad en 10 nodos porque sus restricciones podan mucho. Las métricas por problema
-están en `problems/difficulty_metrics.csv`.
-
-El solucionador (`code/csp_spec.py`) usa backtracking con selección **MRV** (desempate por grado),
-**consistencia de nodo** y un **forward checking limitado** a las restricciones a las que les falta una sola
-variable. **No** aplica AC-3. El modelo es un JSON de expresiones que se validan antes de ejecutarse, lo que
-permite correr modelos escritos por el LLM.
-
-**Verificación.** `code/verify_ground_truth.py` comprueba que cada solución guardada cumple todas las
-restricciones y que es **única** según dos métodos independientes, backtracking completo y fuerza bruta.
-También comprueba que cada regla del enunciado esté codificada y que los archivos públicos no incluyan datos
-privados. Resultado: **20/20** (`results/ground_truth_check.csv`).
-
-**Revisión manual.** La verificación automática solo prueba la corrección respecto de las restricciones
-*codificadas*. Por eso revisé a mano los 20 problemas: comparé cada regla con su expresión y seguí cada
-deducción. Registré `manual_review: "OK"` y mis notas en `ground_truth.json`. Por ejemplo:
-
-- En **M10** comprobé que las cargas respetan las capacidades (V1 8/10, V2 6/8, V3 6/6 t).
-- En **D16** comprobé que se cumplen a la vez las capacidades (8/8, 8/8, 6/6 h), los pedidos agrupados y la
-  condición lógica.
-
-La revisión no encontró errores, así que ningún modelo ni ninguna solución cambió.
+El solver usa backtracking con **MRV** (desempate por grado), consistencia de nodo y *forward
+checking* limitado. **No** aplica AC-3. Las expresiones se validan antes de ejecutarse, lo que
+permite correr modelos escritos por el LLM. `verify_ground_truth.py` comprueba que cada solución
+cumple todas las restricciones y es **única**, por backtracking y por fuerza bruta: **20/20**.
+Como eso solo prueba la corrección respecto de las restricciones *codificadas*, revisé además cada
+regla frente a su expresión (por ejemplo, las capacidades de M10 y D16). No encontré errores.
 
 ## 2. Duel Scorecard
 
 | Métrica | A: manual + solver | B: LLM + solver | B′: refinamiento | C: LLM directo |
 |---|---|---|---|---|
-| Correctas / 20 | **20/20** | **0/20** | **0/20** | [PENDIENTE] |
-| Incorrectas / sin respuesta | 0 / 0 | 5 / 15 | 5 / 15 | [PENDIENTE] |
-| Tiempo por instancia, mediana (Q1–Q3) | 0,47 ms (0,25–0,67) | 32,42 s (22,90–50,04) | 162,58 s (68,02–239,27) | [PENDIENTE] |
-| Tiempo del solver, mediana (Q1–Q3) | 0,08 ms (0,06–0,20) | 0,35 ms (0,16–0,59) | 0,35 ms (0,25–0,63) | — |
-| Tiempo del LLM, mediana | — | 32,42 s | 162,58 s | [PENDIENTE] |
-| Tokens totales por instancia, mediana (Q1–Q3) | 0 | 912,5 (765,5–1183,75) | 6556,5 (3452,75–8663,25) | [PENDIENTE] |
-| Fallos detectables sin ground truth | — (sin fallos) | 15 errores; 4 alertas de multiplicidad (§4) | 15 errores; 4 alertas de multiplicidad | [PENDIENTE] |
-| Costo por respuesta correcta | 0 USD (+ tiempo humano, §6) | No definido (0 correctas) | No definido (0 correctas) | [PENDIENTE] |
+| Correctas / 20 | **20/20** | **0/20** | **0/20** | **3/20** (T=0,7: 6 % ± 2,2 %, 5 semillas) |
+| Incorrectas / sin respuesta | 0 / 0 | 5 / 15 | 5 / 15 | 17 / 0 |
+| Tiempo por instancia, mediana (Q1–Q3) | 0,47 ms (0,25–0,67) | 32,42 s (22,90–50,04) | 162,58 s (68,02–239,27) | 2,78 s (2,69–2,90)* |
+| Tiempo del solver, mediana | 0,08 ms | 0,35 ms | 0,35 ms | — |
+| Tokens por instancia, mediana | 0 | 912,5 | 6556,5 | 544,5 |
+| Fallos detectables sin ground truth | — | 15 de 20; 4 alertas `multiple` | 15 de 20; 4 alertas `multiple` | **2 de 17**; 15 silenciosos |
+| Costo por respuesta correcta | 0 USD (+ tiempo humano) | No definido (0 correctas) | No definido (0 correctas) | 0,0012 USD |
 
-Los tiempos de A son la mediana de 5 ejecuciones por problema (`results/arm_a.csv`; `python code/arm_a.py`).
-**A obtiene 20/20 por construcción**, porque su modelo es el mismo que produce el ground truth. Ese número solo
-tiene valor gracias a la revisión manual de la §1. Si B supera a A en algún problema, primero hay que sospechar
-del modelo manual (ver `hw2.md`).
+\* Equipo distinto al de B/B′: los segundos son orientativos; los tokens sí son comparables. Tabla
+completa en `results/scorecard.csv` (`python code/evaluation.py`).
 
-B/B′: `results/arm_b_complete.jsonl`, `results/arm_b.csv` y `results/arm_b_refined.csv`.
-Cuartiles calculados por interpolación inclusiva. La medida del solver incluye validación y
-parseo; en A el tiempo de solver solo mide búsqueda, de modo que no son estrictamente iguales.
-El tiempo de B/B′ suma los tiempos originales por intento, no incluye carga inicial ni escritura
-de resultados, y al reutilizar caché conserva la latencia original. Parte de la ejecución original
-se interrumpió; se conservaron las respuestas válidas y se reintentaron fallos de infraestructura
-con 600 s de timeout (originalmente 300 s). No se cuentan los intentos fallidos de infraestructura
-en la latencia de la ejecución final; el archivo interrumpido se conserva para transparencia.
-
-**Interpretación:** [PENDIENTE — Integrante 3.]
+**A obtiene 20/20 por construcción**, porque su modelo es el mismo que produce el ground truth;
+el número vale por la revisión manual de la §1. Con este modelo de 3B, ningún brazo LLM se acerca a
+A. C es el único que acierta algo, pero en parte por suerte: con T=0,7 baja a 6 % ± 2,2 %, y uno de
+sus tres aciertos (M14) coincide con el orden 1…6 que el modelo suele copiar. La diferencia clave
+no es la precisión sino **cómo falla cada brazo**: B no responde en 15 casos y lo avisa; C siempre
+entrega una respuesta bien formada, también cuando es incorrecta.
 
 ## 3. Precisión vs. dificultad
 
-[PENDIENTE — Integrante 3.] B y B′: 0/7 fácil, 0/7 intermedio, 0/6 difícil. Completar A y C
-y graficar la precisión de cada brazo por nivel sobre los mismos 20 problemas.
+| Brazo | Fácil (7) | Intermedio (7) | Difícil (6) |
+|---|---:|---:|---:|
+| A | 7/7 | 7/7 | 6/6 |
+| B y B′ | 0/7 | 0/7 | 0/6 |
+| C, T=0 | 2/7 (29 %) | 1/7 (14 %) | 0/6 |
+| C, T=0,7 (media ± d.e., 5 semillas) | 9 % ± 13 % | 9 % ± 8 % | 0 % ± 0 % |
 
-- `fig/accuracy_vs_difficulty.png`: precisión de los cuatro brazos por nivel (figura obligatoria).
-- `fig/latency_by_arm.png`: tiempo total por brazo, separando el tiempo del LLM y el del solver.
-- `fig/errors_by_category.png`: fallos de B por categoría de la taxonomía.
+![Precisión vs. dificultad](fig/accuracy_vs_difficulty.png)
 
-No se incluirá ninguna figura sin datos medidos.
+C baja con la dificultad y llega a 0 en el nivel difícil con todas las semillas. B y B′ están en 0
+en todos los niveles. La variación de C entre semillas (8–13 puntos sobre 7 problemas) muestra que
+**una sola ejecución con T=0 no basta** para afirmar que C supera a B por margen.
+
+![Latencia](fig/latency_by_arm.png)
+
+El solver (0,1–0,4 ms) es unas cinco órdenes de magnitud más rápido que el LLM. Todo el costo
+temporal de B/B′ es generación, y en B′ crece con cada iteración porque el historial se acumula.
+
+![Fallos por señal](fig/errors_by_category.png)
 
 ## 4. Taxonomía de errores
 
-Se clasifican **todos** los fallos de B. El detalle de cada uno, con
-la salida del modelo, va en `taxonomy.md`. La columna de detección se llena con *nuestros* datos, no solo con
-la expectativa de `hw2.md`.
+Se clasifican **todos** los fallos de B; el detalle, con la salida del modelo, está en
+`taxonomy.md`. La columna de detección se llenó con *nuestros* datos.
 
-| Categoría (fallo de B) | Señal en nuestro sistema | ¿Detectable sin ground truth? | Casos |
+| Categoría (fallo de B) | Señal | ¿Detectable sin ground truth? | Casos |
 |---|---|---|---:|
-| Sintaxis o especificación inválida | `SpecError` / JSON que no se puede leer | Sí | 10 |
-| Modelo declarado insatisfacible | `solver_status = unsat` | Sí | 5 |
-| Múltiples soluciones y respuesta incorrecta | `solver_status = multiple` | Señal observable; no prueba por sí sola un fallo | 4 |
-| Modelo único del problema equivocado | `unique`, pero respuesta incorrecta | No por señal del solver | 1 |
-| Error de aridad o alcance | Puede aparecer en otras categorías | A veces; solapado, no sumar | Ver `taxonomy.md` |
-| Timeout del solver | `solver_status = timeout` | Sí | 0 |
+| Sintaxis o especificación inválida | `SpecError` / JSON ilegible | Sí | 10 |
+| Sobre-restringido | `unsat` | Sí | 5 |
+| Sub-restringido, respuesta incorrecta | `multiple` | Alerta observable, no prueba por sí sola un fallo | 4 |
+| Modelo del problema equivocado | `unique` incorrecto | **No** | 1 |
+| Aridad o alcance | Dentro de otras categorías | A veces (solapado, no se suma) | — |
+| Timeout del solver | `timeout` | Sí | 0 |
 
-**Ejemplos literales de B, primer intento** (salidas completas en JSONL):
+**Ejemplos literales de B (primer intento):**
 
-1. F01 (`unsat`): `"expr": "OP1 + OP2 + OP3 == 3"` suma cadenas de máquinas y las compara con un número.
-2. F04 (`unique` incorrecto): `"expr": "not (PINTURA == INSPECCION + 1)"` invierte la precedencia prohibida.
+1. F01 (`unsat`): `"expr": "OP1 + OP2 + OP3 == 3"` suma nombres de máquinas y compara el resultado con un número.
+2. F04 (`unique` incorrecto): `"expr": "not (PINTURA == INSPECCION + 1)"` invierte la precedencia prohibida. Es silencioso.
 3. F06 (`spec_error`): `"expr": "ELENA != LOTE2"` usa un valor como si fuera una variable.
-4. M13 (`unsat`): `"expr": "MOTOR != 1"`, `"expr": "MOTOR != 2"` y `"expr": "MOTOR != 3"` eliminan todo el dominio.
-5. D16 (`unsat`): `"expr": "P2 + P5 == 1"` es imposible cuando ambos valores son como mínimo 1.
+4. M13 (`unsat`): `"MOTOR != 1"`, `"MOTOR != 2"` y `"MOTOR != 3"` eliminan todo el dominio.
+5. D16 (`unsat`): `"expr": "P2 + P5 == 1"` es imposible, porque ambos valores son como mínimo 1.
 
-En F01 y M11, el evaluador de expresiones puede convertir errores de tipo en restricciones falsas;
-la señal `unsat` no demuestra por sí sola una sobre-restricción semántica. F04 muestra una
-respuesta incorrecta sin alerta de sintaxis ni multiplicidad. Los cuatro `multiple` son alertas
-observables, no diagnósticos automáticos de incorrección.
+En F01 y M11, el evaluador convierte errores de tipo en restricciones falsas, así que `unsat` no
+siempre indica una sobre-restricción semántica.
 
-**Comparación con C:** [PENDIENTE: de las respuestas incorrectas de C, ¿cuántas eran detectables sin ground
-truth? Contrastar con B y explicar la consecuencia de ingeniería: una arquitectura cuyos fallos se anuncian
-solos se puede desplegar; una cuyos fallos son silenciosos, no.]
+**Comparación con C.** C falla 17 veces y **solo 2 de esos fallos (12 %) son detectables sin ground
+truth** (D15 y D18, con valores fuera del dominio público). Los otros 15 son JSON válidos con
+valores permitidos, indistinguibles de un acierto. En B, **15 de 20 fallos se anuncian solos**, 4
+dejan la alerta `multiple` y solo 1 es silencioso. Los fallos silenciosos son **1/20 en B frente a
+15/17 en C**. Además, las respuestas incorrectas de C violan una mediana de 2 restricciones, y 4 de
+20 solo repiten el orden de los dominios (F01 = CNC, TORNO, FRESADORA; F02 = 1, 2, 3).
+
+**Consecuencia de ingeniería:** con B, un operador sabe *cuándo* no confiar, porque el fallo trae
+su aviso y el caso se deriva a una persona. Con C, el 88 % de los errores llega con la apariencia de
+un acierto, así que la única defensa es revisar todo a mano, lo que equivale a no automatizar.
 
 ## 5. Análisis del refinamiento (B′)
 
@@ -165,83 +137,101 @@ B′ recibe solo el error del solver, nunca el ground truth.
 | Iteraciones hasta acertar | Casos |
 |---|---:|
 | Correcto en el primer intento (igual que B) | 0 |
-| Corregido tras 1 refinamiento | 0 |
-| Corregido tras 2 refinamientos | 0 |
-| Corregido tras 3 refinamientos | 0 |
+| Corregido tras 1, 2 o 3 refinamientos | 0 |
 | No alcanzó respuesta correcta | 20/20 (100 %) |
 
-**Discusión:** 15 casos recibieron tres refinamientos y terminaron con `spec_error`; cinco no
-fueron refinados (cuatro `multiple`, un `unique`) por el protocolo. Por tanto no se puede afirmar
-que los 20 hayan agotado tres rondas. Ninguno se corrigió en una ronda, así que no hay grupo de
-éxitos rápidos con el cual comparar cualitativamente. En F01, por ejemplo, tras `unsat` las
-respuestas de reparación añadieron prosa y Markdown, rechazados por el parser; el CSP interno
-seguía conteniendo la suma inválida. La mejora de precisión B′ − B fue **0 puntos porcentuales**.
+Quince casos recibieron tres refinamientos y terminaron con `spec_error`. Los otros cinco no se
+refinaron por protocolo (cuatro `multiple` y un `unique`). Ninguno se corrigió, así que no hay un
+grupo de éxitos rápidos con el cual comparar. El patrón es el mismo en todas las rondas: **43 de 45
+respuestas de reparación añadieron prosa y Markdown**, que el parser rechazó, y el CSP de dentro
+conservaba el error original (en F01, la suma de cadenas). **B′ − B = 0 puntos porcentuales**: con
+este modelo y este mensaje de error, la retroalimentación del solver no fue una señal aprovechable.
 
 ## 6. Costo por respuesta correcta
 
-[PENDIENTE — Integrante 3.]
+**Costo por correcta = costo total del brazo / respuestas correctas**, contando todos los intentos.
+Tarifa equivalente: Together AI, *Qwen2.5 7B Instruct Turbo*, 0,30 USD por millón de tokens de
+entrada y 0,30 USD por millón de salida (together.ai/pricing, consultado el 2026-11-17). No hay
+tarifa publicada para el modelo de 3B, así que es una **cota superior**.
 
-**Costo por respuesta correcta = costo total del brazo / número de respuestas correctas.**
+| Brazo | Tokens entrada / salida | Costo total | Correctas | **Costo por correcta** | Segundos de LLM por correcta |
+|---|---|---:|---:|---:|---:|
+| A | 0 / 0 | 0 USD (+ 2 h humanas) | 20 | 0 USD (+ 6 min humanos) | 0,0005 s |
+| B | 12 114 / 18 067 | 0,0091 USD | 0 | **no definido (∞)** | ∞ (1751 s en total) |
+| B′ | 75 634 / 43 766 | 0,0358 USD | 0 | **no definido (∞)** | ∞ (4032 s en total) |
+| C | 10 788 / 899 | 0,0035 USD | 3 | **0,0012 USD** | 18,6 s |
 
-En esta ejecución el denominador es cero en B y B′, por lo que el costo y el tiempo por
-respuesta correcta **no están definidos**. No son 0 USD. B consumió 12 114 tokens de entrada,
-18 067 de salida y 1751,32 s medidos; B′ consumió 75 634 de entrada, 43 766 de salida y
-4031,75 s. Las cifras B′ incluyen el primer intento compartido con B: son costos hipotéticos
-de cada brazo por separado, no deben sumarse como si se hubieran ejecutado independientemente.
-La tarifa equivalente del proveedor, su fuente y fecha quedan pendientes; los CSV dejan el
-costo vacío hasta proporcionarla.
-
-Se cuenta el costo de todos los intentos, incluidos los fallidos y las iteraciones de B′. El costo se calcula
-como tokens × precio. Si el modelo es local, se usa el precio por token equivalente de un proveedor alojado
-(Groq o Together AI), como pide la tarea, indicando la tarifa y la fecha. Además se reportan los segundos por
-respuesta correcta.
-
-Para **A**, el costo de cómputo es 0 USD y unos milisegundos, pero escribir y revisar los 20 modelos a mano
-tuvo un costo humano fijo de **2 Horas**.
+B′ incluye el primer intento de B. B gasta 2,6 veces lo que C y B′ 10 veces, sin ningún acierto.
+**C es el único brazo LLM con un costo por correcta finito**, aunque inflado por M14: sin ese caso,
+0,0018 USD. En dinero todos los brazos son despreciables a esta escala; lo decisivo es el
+denominador. A tiene un costo humano fijo de unas 2 horas, que no escala a problemas nuevos.
 
 ## 7. Dónde pudimos ser injustos
 
-- **A tiene ventaja estructural.** Su modelo ya está hecho y revisado, mientras que B tiene que inferirlo, así
-  que la comparación mide también el costo de formular el problema. Además, A saca 100 % por construcción
-  (§2) y no se le carga el tiempo humano (§6).
-- **El dataset lo generó un LLM.** Claude escribió los enunciados y los modelos, y una sola persona del equipo
-  los revisó a mano. Si B o C usan un modelo de la misma familia, la redacción podría favorecerlo.
-- **Los problemas están ajustados para tener una sola solución.** Se agregaron reglas hasta que el solver
-  encontrara una única solución. Esto puede producir reglas algo artificiales y favorece a los brazos con
-  solver frente a enunciados reales, que suelen ser ambiguos.
-- **El formato de expresiones es nuestro.** El LLM de B debe aprender un formato que no conoce de su
-  entrenamiento. Parte de los errores de sintaxis pueden deberse al formato y no a la capacidad de formalizar.
-- **`answer_format`.** Si se da al LLM, recibe las variables y los dominios, y a B solo le queda traducir las
-  restricciones. [PENDIENTE: decisión tomada.]
-- [PENDIENTE — equipo: sesgos observados al ejecutar B, B′ y C, como el presupuesto de tokens, la temperatura y
-  la cantidad de repeticiones.]
+- **A tiene ventaja estructural:** su modelo ya está hecho y revisado, saca 100 % por construcción
+  y no se le carga el tiempo humano.
+- **Dataset generado por un LLM** (Claude) y revisado por una sola persona. Además, se añadieron
+  reglas hasta lograr una solución única, lo que puede dar reglas artificiales y favorecer a los
+  brazos con solver frente a enunciados reales y ambiguos.
+- **El formato de expresiones es nuestro:** B debe usar un formato que no vio en su entrenamiento.
+  Parte de los `spec_error` mide el formato, no la capacidad de formalizar.
+- **`answer_format` se mostró a B, B′ y C por igual.** Eso favorece a los brazos LLM, porque B
+  solo tiene que traducir las restricciones.
+- **Ventajas de C:** su prompt se ajustó una vez tras un piloto que mostró un error de formato (el
+  modelo copiaba `answer_format`), y la v2 le da un esqueleto que B no tiene. Además, C solo elige
+  valores mientras B escribe un programa completo, y M14 cuenta como acierto aunque coincide con el
+  orden por defecto.
+- **Parser estricto en B′ y tolerante en C.** Comprobamos, sin modificar los resultados de B, qué
+  pasaría si B′ usara el parser de C: 4 casos pasarían a `multiple`, pero los 4 siguen siendo
+  incorrectos. **B′ seguiría en 0/20**; la asimetría solo infla `spec_error`.
+- **Retroalimentación pobre:** tras `unsat`, B′ solo recibe `solver returned unsat`, sin saber qué
+  restricciones chocan. Nuestro 0 % de mejora mide *este* mensaje, no la idea en general.
+- **Varianza y presupuesto:** solo C tiene réplicas, así que el 0/20 de B no tiene barra de error.
+  Tres salidas de B se cortaron por `length`, con un contexto de Ollama de 4096 tokens (no se fijó
+  `num_ctx`).
+- **Un solo modelo, y muy pequeño.** Con un modelo mayor, B podría superar a C; nuestros datos no
+  permiten afirmar ni negar eso.
 
 ## 8. Recomendación de despliegue y monitoreo
 
-[PENDIENTE — equipo, con los números de §2–§6.] ¿Qué brazo pondríamos en producción en una planta real y con
-qué monitoreo? Se debe defender con nuestras cifras de precisión, de fallos detectables sin ground truth, de
-latencia y de costo por respuesta correcta. Monitoreo mínimo a considerar:
+**No desplegaríamos ningún brazo LLM con `qwen2.5:3b` sin supervisión.** Para problemas
+recurrentes (asignaciones y turnos con la misma estructura) desplegaríamos **A**: unos 6 minutos de
+trabajo humano por problema, solver en milisegundos y 20/20.
 
-- alertas cuando el solver devuelve `unsat`, `multiple`, `timeout` o un error de sintaxis;
-- revisión humana de esos casos;
-- muestreo periódico de respuestas `unique` para detectar modelos del problema equivocado, que no dan señal.
+Para enunciados nuevos con un LLM elegiríamos la **arquitectura B, como filtro y con un modelo más
+capaz**, nunca C. Lo decisivo no es la precisión (0/20 frente a 3/20, diferencia que se reduce a 6 %
+± 2,2 % con las réplicas), sino **qué pasa cuando falla**:
 
-## 9. Reproducibilidad y entregables
+| Si se acepta automáticamente… | Incorrectas entregadas en silencio | Derivadas a una persona |
+|---|---:|---:|
+| B, solo cuando el solver dice `unique` | **1/20** (F04) | 19/20 |
+| C, cualquier respuesta con formato válido | **15/20** | 2/20 |
+
+El costo de C (0,0012 USD por correcta) es engañoso: con 15 de cada 17 errores silenciosos, habría
+que revisar todo a mano. B concentra la revisión en los casos marcados; con el modelo de 3B serían
+casi todos, por eso el modelo debe cambiar antes de desplegar.
+
+**Monitoreo para B:**
+
+1. **Compuerta por estado del solver:** solo `unique` se entrega automáticamente; `spec_error`,
+   `unsat`, `multiple` y `timeout` van a una persona. Alerta si la tasa supera la de referencia
+   (hoy, 95 %).
+2. **Auditoría por muestreo de `unique`**, la única categoría silenciosa (F04).
+3. **Conjunto canario:** volver a ejecutar estos 20 problemas en cada cambio de modelo, prompt u
+   Ollama, y bloquear el cambio si la precisión baja.
+4. **Registro completo** de prompt, salida, estado, tokens y latencia (como `.llm_cache/`).
+5. **Revisión del modelo generado:** claves completas y ausencia de reglas triviales (`X != X`,
+   sumas imposibles), que en nuestros datos anticipan `unsat`.
+
+## 9. Reproducibilidad
 
 ```bash
-python code/export_problem_files.py   # regenera problems/public/, formulations.md, difficulty_metrics.csv
 python code/verify_ground_truth.py    # 20/20 → results/ground_truth_check.csv
-python code/arm_a.py                  # brazo A, 20/20 → results/arm_a.csv
-python code/arm_b.py --timeout 600 --out results/arm_b_new.jsonl  # no sobrescribe resultados
-python code/evaluate_b.py results/arm_b_new.jsonl --out-dir results/new_evaluation
+python code/arm_a.py                  # → results/arm_a.csv
+python code/arm_b.py --timeout 600 --out results/arm_b_new.jsonl && python code/evaluate_b.py results/arm_b_new.jsonl --out-dir results/new
+python code/arm_c.py --out results/arm_c_new.jsonl && python code/evaluate_c.py results/arm_c_new.jsonl --out results/new/arm_c.csv
+python code/evaluation.py             # scorecard, varianza y fig/*.png
 ```
 
-| Entregable | Estado |
-|---|---|
-| `problems/` (20 problemas, ground truth revisado, `README.md`) | Listo |
-| `code/csp_spec.py`, `export_problem_files.py`, `verify_ground_truth.py` | Listo |
-| `code/results_schema.py` (formato común y calificación), `code/arm_a.py` | Listo |
-| `results/ground_truth_check.csv`, `results/arm_a.csv` | Listo |
-| `code/arm_b.py`, `code/evaluate_b.py`, `.llm_cache/`, `results/arm_b*.csv` | Ejecución y análisis de B/B′ completos; confirmar inclusión de la caché en la entrega |
-| `code/arm_c.py`, `code/evaluation.py`, `results/arm_c.csv`, `fig/*.png` (≥ 3), `taxonomy.md` | [PENDIENTE — Integrante 3] |
-| `AI_LOG.md` | Integrante 1 listo (faltan sus campos «¿Lo entendí?»); integrantes 2 y 3 pendientes |
+Detalle de B/B′ y C en `README_B.md` y `README_C.md`. Las salidas completas de los LLM están en
+`.llm_cache/` y `results/*.jsonl`.

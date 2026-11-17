@@ -19,15 +19,20 @@ El uso del LLM **como sujeto del experimento** en los brazos B, B′ y C se docu
 
 ---
 
-## Integrante 2 — [nombre]
+## Integrante 2 — Nicolas Naranjo
 
 | N.º y actividad | Herramienta | ¿Qué pedí? | ¿Qué obtuve? | ¿Qué hice con ello? | ¿Lo entendí? |
 |---|---|---|---|---|---|
 | Brazos B y B′ | OpenCode (GPT-6.1 Terra) | Implementar B y B′ con Ollama, ejecutar los problemas y analizar los fallos. | Código, resultados, clasificación de los 20 fallos y borrador del informe. | Pendiente: revisar código, datos y análisis antes de entregar. | Pendiente: completar personalmente después de revisar. |
 
-## Integrante 3 — [nombre]
+## Integrante 3 — Andrés Vega
 
-[Pendiente: entradas del brazo C, la evaluación, las figuras y la taxonomía, con el mismo formato.]
+| N.º y actividad | Herramienta | ¿Qué pedí? | ¿Qué obtuve? | ¿Qué hice con ello? | ¿Lo entendí? |
+|---|---|---|---|---|---|
+| **1. Brazo C** | Claude Code (Claude Opus 5.5) | Implementar el brazo C con el acuerdo de `README_B.md`: mismo modelo, misma configuración, misma caché y sin ground truth. | `code/arm_c.py`, `code/evaluate_c.py`, `code/test_arm_c.py` y `README_C.md`. El piloto v1 reveló que el modelo copiaba la estructura de `answer_format`; Claude propuso la v2, que añade un esqueleto con las claves públicas, antes de la ejecución completa. | Ejecuté el piloto, la corrida completa (T=0) y 5 semillas con T=0,7. Conservé el piloto v1 en `results/`. | Si. Entendí que para la parte C tuve que basarme en la parte B para seguir la misma estructura. |
+| **2. Evaluación conjunta y figuras** | Claude Code (Claude Opus 5.5) | Scorecard de los cuatro brazos, precisión por dificultad, varianza, costo por respuesta correcta y figuras. | `code/evaluation.py`, `results/scorecard.csv`, `accuracy_by_difficulty.csv`, `variance_summary.csv`, `c_failure_analysis.csv` y `fig/*.png` (3 figuras). | Revisé las figuras y las cifras frente a los CSV. | Si. |
+| **3. Tarifa equivalente** | Claude Code (búsqueda web) | Precio por token de un proveedor alojado para un Qwen2.5 pequeño. | Together AI, *Qwen2.5 7B Instruct Turbo*: 0,30 USD por millón de tokens de entrada y 0,30 USD por millón de salida (together.ai/pricing, consultado el 2026-11-17). No hay tarifa publicada para el modelo de 3B. | Lo usé como cota superior y lo declaré en §6. | Si. Entiendo que la sección 5 lo menciona y Claude lo realizó. |
+| **4. Secciones del informe** | Claude Code (Claude Opus 5.5) | Completar las partes de C y de la evaluación en `REPORT.md` (columna C de §2, §3, comparación de §4, §6, §7 y §8) y la sección de C en `taxonomy.md`, con los datos medidos. | Borrador de esas secciones con cifras tomadas de los CSV. Para §7, Claude analizó en modo solo lectura las respuestas de B′ (43/45 venían en Markdown; con un parser tolerante B′ seguiría en 0/20). No se modificó ningún archivo de B/B′. | Revisar que tenga coherencia y corregir detalles menores | Si. |
 
 ---
 

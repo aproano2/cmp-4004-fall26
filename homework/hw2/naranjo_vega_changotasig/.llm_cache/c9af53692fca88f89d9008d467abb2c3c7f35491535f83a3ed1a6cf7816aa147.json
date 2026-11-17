@@ -1,0 +1,23 @@
+{
+  "request": {
+    "model": "qwen2.5:3b",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Resuelve el siguiente problema razonando internamente.\nDevuelve solo un objeto JSON válido, sin Markdown ni explicaciones.\nLa respuesta NO repite answer_format: es un objeto plano con exactamente estas claves,\nreemplazando cada \"?\" por uno de los valores permitidos para esa clave:\n{\"C1\": \"?\", \"C2\": \"?\", \"C3\": \"?\"}\n\nEnunciado:\nUn centro de distribución recibe a la misma hora tres camiones: C1 (refrigerado), C2 (carga a granel) y C3 (paquetería). Hay tres muelles numerados 1, 2 y 3, ubicados uno junto al otro en ese orden, de modo que los muelles 1 y 2 son vecinos, y los muelles 2 y 3 también.\n\nReglas:\n1. Cada muelle atiende exactamente a un camión.\n2. Solo los muelles 1 y 3 tienen conexión eléctrica para equipos de frío, y el camión refrigerado C1 la necesita.\n3. El camión de granel C2 necesita la rampa niveladora, que no existe en el muelle 3.\n4. C3 debe quedar en un muelle vecino al de C1, porque ambos comparten el mismo montacargas.\n\nPregunta: ¿En qué muelle (1, 2 o 3) se descarga cada camión (C1, C2 y C3)?\n\nanswer_format (claves y valores permitidos):\n{\"keys\": [\"C1\", \"C2\", \"C3\"], \"allowed_values\": {\"C1\": [1, 2, 3], \"C2\": [1, 2, 3], \"C3\": [1, 2, 3]}}\n"
+      }
+    ],
+    "stream": false,
+    "options": {
+      "temperature": 0.7,
+      "seed": 3,
+      "num_predict": 4096
+    }
+  },
+  "text": "{\"C1\": 1, \"C2\": 2, \"C3\": 3}",
+  "llm_s": 2.4680020000014338,
+  "tokens_in": 412,
+  "tokens_out": 22,
+  "done_reason": "stop",
+  "model": "qwen2.5:3b"
+}

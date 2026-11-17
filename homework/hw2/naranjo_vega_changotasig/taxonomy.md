@@ -111,3 +111,50 @@ De 20 fallos, 15 se anuncian como error/`unsat`; otros cuatro producen la alerta
 Los errores de alcance/uso de funciones también aparecen en otras categorías; no se suman
 otra vez. El solver trata algunos errores de tipo durante la evaluación como restricción
 falsa; por eso no todo `unsat` debe interpretarse como sobre-restricción semántica pura.
+
+---
+
+# Fallos del brazo C (LLM directo) y su detectabilidad
+
+**Ejecución principal:** `qwen2.5:3b`, T=0, semilla 0 (`results/arm_c_raw.jsonl`, campo `text`).
+C acierta 3/20 (F05, F07, M14) y falla 17, todos con una respuesta en formato válido: no hubo
+ningún `no_answer`. Sin ground truth, la única verificación posible en C es comparar la respuesta
+con el `answer_format` público (claves completas y valores permitidos). El análisis posterior,
+que sí usa el ground truth, está en `results/c_failure_analysis.csv`: cuántas variables acertó y
+cuántas restricciones del modelo manual viola cada respuesta.
+
+| Señal sin ground truth | Casos | IDs |
+|---|---:|---|
+| Valor fuera del dominio permitido (`format_errors`) | 2 | D15, D18 |
+| Ninguna: JSON válido, claves completas, valores permitidos | 15 | F01, F02, F03, F04, F06, M08, M09, M10, M11, M12, M13, D16, D17, D19, D20 |
+
+**Detectables sin ground truth: 2/17 (12 %). Silenciosos: 15/17 (88 %).** En B fueron 15/20
+anunciados por el parser o el solver, 4 con alerta `multiple` y 1 silencioso (F04).
+
+## Ejemplos literales (salida completa de C)
+
+1. **F01, eco del dominio:** `{"OP1": "CNC", "OP2": "TORNO", "OP3": "FRESADORA"}`. Copia en orden
+   los valores de `allowed_values`. Viola R2 (OP2 no puede ir al torno) y R4 (OP3 no puede ir a la
+   fresadora): 0/3 variables. Nada en la respuesta lo delata.
+2. **F02, eco de posiciones:** `{"C1": 1, "C2": 2, "C3": 3}`. Asigna 1, 2, 3 en orden y viola la
+   regla de adyacencia R4. Lo mismo pasa en F04 (`1, 2, 3, 4`) y en M14 (`1…6`). **M14 es
+   "correcto" porque su solución coincide con el orden identidad**: es un acierto por coincidencia,
+   no por razonamiento. Contarlo como acierto infla la precisión de C.
+3. **M11, contradicción interna invisible:** `{"GENERADOR": 2, "TABLERO": 3, "COMPRESOR": 1,
+   "SECADOR": 1, "HORNO": 2}`. Viola R5 y acierta 1/5 variables. Sin un modelo formal no hay nada
+   contra qué comprobarlo.
+4. **D18, el único tipo de error que se anuncia:** `{"TORNO1": 2, "TORNO2": 4, "FRESA1": 5,
+   "FRESA2": 3, "PRENSA": 6, "COMPRESOR": 7, "GRUA": 8}`. Continúa la secuencia 6, 7, 8 fuera del
+   dominio permitido, y por eso `format_errors` lo detecta. D15 (`"C2": 8`) es igual.
+5. **D17, completamente equivocado y con aspecto plausible:** ocho turnos asignados con valores
+   válidos, 0/8 variables correctas y 6 restricciones violadas. Un usuario no podría distinguirlo
+   de una respuesta correcta.
+
+## Patrón cualitativo
+
+- **Eco del orden:** 4 de 20 respuestas reproducen el orden de los valores permitidos o la
+  secuencia 1…n (F01, F02, F04, M14). El modelo no resuelve el problema; rellena el esqueleto.
+- **Errores "cerca":** las respuestas incorrectas violan una mediana de 2 restricciones del modelo
+  manual (entre 1 y 6), y en M09 acierta 5/6 variables. Son errores pequeños y plausibles, que
+  justamente por eso resultan peligrosos al ser silenciosos.
+- **Con más dificultad no aparecen más señales**, salvo los valores fuera de rango en D15 y D18.
