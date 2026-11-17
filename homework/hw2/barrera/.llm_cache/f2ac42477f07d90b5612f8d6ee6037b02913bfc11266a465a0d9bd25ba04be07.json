@@ -1,0 +1,23 @@
+{
+ "text": "{\n  \"Ben\": 1,\n  \"blue\": 1,\n  \"Gina\": 4,\n  \"green\": 4,\n  \"Kai\": 3,\n  \"black\": 3,\n  \"Mateo\": 2,\n  \"purple\": 2,\n  \"Paula\": 5,\n  \"red\": 5\n}",
+ "status": "ok",
+ "tokens_in": 379,
+ "tokens_out": 77,
+ "ollama_total_s": 0.999,
+ "done_reason": "stop",
+ "backend": "ollama",
+ "model": "qwen2.5:3b",
+ "temperature": 0.7,
+ "seed": 1,
+ "messages": [
+  {
+   "role": "system",
+   "content": "You are good at solving logic puzzles."
+  },
+  {
+   "role": "user",
+   "content": "Solve the puzzle. You may reason briefly first. End your reply with one JSON object that maps every person, colour and pet to its house number.\n\nExample puzzle:\nThree houses stand in a row, numbered 1 to 3 from left to right. Each house has a different owner and a different colour.\nOwners: Zoe, Yuri, Xena.\nColours: pink, grey, brown.\nClues:\n1. Zoe lives in the grey house.\n2. The pink house is immediately to the left of Yuri's house.\n3. Xena's house is not house 1.\nGive the house number of every owner and every colour.\n\nExample final answer:\n{\"Zoe\": 1, \"grey\": 1, \"Xena\": 2, \"pink\": 2, \"Yuri\": 3, \"brown\": 3}\n\nPuzzle:\nFive houses stand in a row, numbered 1 to 5 from left to right. Each house has a different owner and a different colour.\nOwners: Ben, Mateo, Kai, Paula, Gina.\nColours: blue, purple, black, red, green.\nClues:\n1. Paula's house is somewhere to the left of Kai's house.\n2. The black house and the green house are next to each other.\n3. Mateo's house is immediately to the left of the black house.\n4. Ben's house and the blue house are next to each other.\n5. Paula's house is not house 2.\n6. The red house is somewhere to the left of the black house.\n7. Kai's house is somewhere to the left of Ben's house.\n8. Gina's house is house 4.\nGive the house number of every owner and every colour."
+  }
+ ],
+ "latency_s": 1.016
+}
