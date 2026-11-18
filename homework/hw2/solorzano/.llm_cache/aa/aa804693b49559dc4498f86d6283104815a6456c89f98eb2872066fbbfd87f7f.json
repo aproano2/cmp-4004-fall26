@@ -1,0 +1,15 @@
+{
+  "text": "{\n  \"Fern\": \"3\",\n  \"Cactus\": \"2\",\n  \"Orchid\": \"1\",\n  \"Ivy\": \"4\"\n}",
+  "backend": "ollama",
+  "model": "qwen2.5:3b",
+  "prompt": "Solve this puzzle directly. Return only one flat JSON object mapping every named entity or cell to its answer. Do not show your reasoning.\n\nPuzzle:\nA florist places four plants -- Fern, Cactus, Orchid, Ivy -- on a rack with shelves numbered 1 to 4, one plant per shelf. Shelf 1 is the top shelf and shelf 4 is the bottom shelf. Ivy sits on the bottom shelf. Cactus is not on shelf 1 and not on shelf 2. Fern is not on shelf 2.",
+  "temperature": 0.0,
+  "seed": 2,
+  "elapsed": 2.799893900000825,
+  "meta": {
+    "eval_count": 36,
+    "prompt_eval_count": 140,
+    "total_duration": 758786900
+  },
+  "cached_at": "2026-11-17T10:23:38"
+}

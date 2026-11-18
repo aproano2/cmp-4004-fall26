@@ -1,0 +1,82 @@
+id,arm,level,result,signal,wall_clock_s,llm_time_s,solver_time_s,tokens_in,tokens_out,model_duration_s,cached,model,seed,temperature,answer,error,model_output
+q15,B,easy,correct,none,5.505484,5.499274,5.5e-05,296,172,3.423508,False,qwen2.5:3b,1,0.0,"{""Atlas"": 2, ""Botany"": 4, ""Chemistry"": 1, ""Drama"": 3}",,"{
+  ""variables"": {
+    ""Atlas"": [1, 2, 3, 4],
+    ""Botany"": [1, 2, 3, 4],
+    ""Chemistry"": [1, 2, 3, 4],
+    ""Drama"": [1, 2, 3, 4]
+  },
+  ""constraints"": [
+    {""type"": ""alldiff"", ""vars"": [""Atlas"", ""Botany"", ""Chemistry"", ""Drama""]},
+    {""type"": ""eq"", ""a"": ""Atlas"", ""b"": 2},
+    {""type"": ""eq"", ""a"": ""Botany"", ""b"": 4},
+    {""type"": ""neq"", ""a"": ""Chemistry"", ""b"": 3}
+  ]
+}"
+q15,C,easy,correct,none,2.799574,2.793698,0.0,129,34,0.757889,False,qwen2.5:3b,1,0.0,"{""Atlas"": 2, ""Botany"": 4, ""Chemistry"": 1, ""Drama"": 3}",,"{
+  ""Atlas"": 2,
+  ""Botany"": 4,
+  ""Chemistry"": 1,
+  ""Drama"": 3
+}"
+q16,B,easy,incorrect,none,4.146353,4.140473,3.3e-05,293,105,2.105357,False,qwen2.5:3b,1,0.0,"{""Arm"": ""3"", ""Camera"": ""1"", ""Drone"": ""4"", ""Engine"": ""2""}",,"{""variables"":{""Arm"":[""1"",""2"",""3"",""4""],""Camera"":[""1"",""2"",""3"",""4""],""Drone"":[""1"",""2"",""3"",""4""],""Engine"":[""1"",""2"",""3"",""4""]},""constraints"":[{""type"":""alldiff"",""vars"":[""Arm"",""Camera"",""Drone"",""Engine""]},{""type"":""eq"",""a"":""Arm"",""b"":""3""},{""type"":""eq"",""a"":""Camera"",""b"":""1""},{""type"":""neq"",""a"":""Drone"",""b"":""2""}]}"
+q16,C,easy,correct,none,2.732276,2.728433,0.0,126,32,0.690127,False,qwen2.5:3b,1,0.0,"{""Arm"": 3, ""Camera"": 1, ""Drone"": 4, ""Engine"": 2}",,"{
+  ""Arm"": 3,
+  ""Camera"": 1,
+  ""Drone"": 4,
+  ""Engine"": 2
+}"
+q17,B,medium,incorrect,none,5.133431,5.127572,2.6e-05,305,160,3.079685,False,qwen2.5:3b,1,0.0,"{""Aster"": ""4"", ""Birch"": ""1"", ""Cedar"": ""5"", ""Dahlia"": ""3"", ""Elm"": ""2""}",,"{""variables"":{""Aster"":[""1"",""2"",""3"",""4"",""5""],""Birch"":[""1"",""2"",""3"",""4"",""5""],""Cedar"":[""1"",""2"",""3"",""4"",""5""],""Dahlia"":[""1"",""2"",""3"",""4"",""5""],""Elm"":[""1"",""2"",""3"",""4"",""5""]},""constraints"":[{""type"":""alldiff"",""vars"":[""Aster"",""Birch"",""Cedar"",""Dahlia"",""Elm""]},{""type"":""eq"",""a"":""Aster"",""b"":""4""},{""type"":""eq"",""a"":""Birch"",""b"":""1""},{""type"":""eq"",""a"":""Cedar"",""b"":""5""}],""additional_constraints"":[{""type"":""neq"",""a"":""Dahlia"",""b"":""3""}]}"
+q17,C,medium,correct,none,3.056353,3.051986,0.0,138,45,1.007892,False,qwen2.5:3b,1,0.0,"{""Aster"": 4, ""Birch"": 1, ""Cedar"": 5, ""Dahlia"": 2, ""Elm"": 3}",,"{
+  ""Aster"": 4,
+  ""Birch"": 1,
+  ""Cedar"": 5,
+  ""Dahlia"": 2,
+  ""Elm"": 3
+}"
+q18,B,medium,correct,none,5.793196,5.78409,3.6e-05,318,191,3.740982,False,qwen2.5:3b,1,0.0,"{""Ava"": 5, ""Bela"": 2, ""Cora"": 4, ""Dina"": 1, ""Eli"": 6, ""Fina"": 3}",,"{""variables"":{""Ava"":[1,2,3,4,5,6],""Bela"":[1,2,3,4,5,6],""Cora"":[1,2,3,4,5,6],""Dina"":[1,2,3,4,5,6],""Eli"":[1,2,3,4,5,6],""Fina"":[1,2,3,4,5,6]},""constraints"":[{""type"":""alldiff"",""vars"":[""Ava"",""Bela"",""Cora"",""Dina"",""Eli"",""Fina""]},{""type"":""eq"",""a"":""Ava"",""b"":5},{""type"":""eq"",""a"":""Bela"",""b"":2},{""type"":""eq"",""a"":""Cora"",""b"":4},{""type"":""eq"",""a"":""Dina"",""b"":1},{""type"":""neq"",""a"":""Eli"",""b"":3}]}"
+q18,C,medium,incorrect,none,3.146785,3.139097,0.0,151,55,1.125066,False,qwen2.5:3b,1,0.0,"{""Ava"": 5, ""Bela"": 2, ""Cora"": 4, ""Dina"": 1, ""Eli"": 3, ""Fina"": 6}",,"```json
+{
+  ""Ava"": 5,
+  ""Bela"": 2,
+  ""Cora"": 4,
+  ""Dina"": 1,
+  ""Eli"": 3,
+  ""Fina"": 6
+}
+```"
+q19,B,hard,incorrect,none,4.639753,4.635303,0.000125,320,134,2.604649,False,qwen2.5:3b,1,0.0,"{""Amber"": 3, ""Bronze"": 7, ""Coral"": 1, ""Diamond"": 5, ""Emerald"": 2, ""Flint"": 4, ""Garnet"": 6}",,"{
+  ""variables"": {
+    ""Amber"": [3],
+    ""Bronze"": [7],
+    ""Coral"": [1],
+    ""Diamond"": [5],
+    ""Emerald"": [2],
+    ""Flint"": [4, 6],
+    ""Garnet"": [1, 2, 3, 4, 5, 6, 7]
+  },
+  ""constraints"": [
+    {""type"": ""alldiff"", ""vars"": [""Amber"", ""Bronze"", ""Coral"", ""Diamond"", ""Emerald"", ""Flint"", ""Garnet""]}
+  ]
+}"
+q19,C,hard,correct,none,3.406448,3.399854,0.0,153,63,1.358723,False,qwen2.5:3b,1,0.0,"{""Amber"": 3, ""Bronze"": 7, ""Coral"": 1, ""Diamond"": 5, ""Emerald"": 2, ""Flint"": 6, ""Garnet"": 4}",,"```json
+{
+  ""Amber"": 3,
+  ""Bronze"": 7,
+  ""Coral"": 1,
+  ""Diamond"": 5,
+  ""Emerald"": 2,
+  ""Flint"": 6,
+  ""Garnet"": 4
+}
+```"
+q20,B,hard,incorrect,none,7.243639,7.236362,0.000115,342,272,5.186339,False,qwen2.5:3b,1,0.0,"{""Aquila"": ""8"", ""Boreal"": ""3"", ""Cygnus"": ""6"", ""Draco"": ""1"", ""Equuleus"": ""7"", ""Fornax"": ""2"", ""Gemini"": ""5""}",,"{""variables"":{""Aquila"":[""1"",""2"",""3"",""4"",""5"",""6"",""7"",""8""],""Boreal"":[""1"",""2"",""3"",""4"",""5"",""6"",""7"",""8""],""Cygnus"":[""1"",""2"",""3"",""4"",""5"",""6"",""7"",""8""],""Draco"":[""1"",""2"",""3"",""4"",""5"",""6"",""7"",""8""],""Equuleus"":[""1"",""2"",""3"",""4"",""5"",""6"",""7"",""8""],""Fornax"":[""1"",""2"",""3"",""4"",""5"",""6"",""7"",""8""],""Gemini"":[""1"",""2"",""3"",""4"",""5"",""6"",""7"",""8""]},""constraints"":[{""type"":""alldiff"",""vars"":[""Aquila"",""Boreal"",""Cygnus"",""Draco"",""Equuleus"",""Fornax"",""Gemini""]},{""type"":""eq"",""a"":""Aquila"",""b"":""8""},{""type"":""eq"",""a"":""Boreal"",""b"":""3""},{""type"":""eq"",""a"":""Cygnus"",""b"":""6""},{""type"":""eq"",""a"":""Draco"",""b"":""1""},{""type"":""eq"",""a"":""Equuleus"",""b"":""7""},{""type"":""eq"",""a"":""Fornax"",""b"":""2""},{""type"":""neq"",""a"":""Gemini"",""b"":""4""}]}"
+q20,C,hard,incorrect,none,3.30366,3.298448,0.0,175,62,1.249777,False,qwen2.5:3b,1,0.0,"{""Aquila"": 8, ""Boreal"": 3, ""Cygnus"": 6, ""Draco"": 1, ""Equuleus"": 7, ""Fornax"": 2, ""Gemini"": 5}",,"{
+  ""Aquila"": 8,
+  ""Boreal"": 3,
+  ""Cygnus"": 6,
+  ""Draco"": 1,
+  ""Equuleus"": 7,
+  ""Fornax"": 2,
+  ""Gemini"": 5
+}"

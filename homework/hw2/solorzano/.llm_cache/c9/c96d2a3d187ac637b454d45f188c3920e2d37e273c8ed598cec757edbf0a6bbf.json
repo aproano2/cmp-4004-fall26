@@ -1,0 +1,15 @@
+{
+  "text": "{\n  \"Aster\": 4,\n  \"Birch\": 1,\n  \"Cedar\": 5,\n  \"Dahlia\": 2,\n  \"Elm\": 3\n}",
+  "backend": "ollama",
+  "model": "qwen2.5:3b",
+  "prompt": "Solve this puzzle directly. Return only one flat JSON object mapping every named entity or cell to its answer. Do not show your reasoning.\n\nPuzzle:\nAt the science fair booths, 5 teams (Aster, Birch, Cedar, Dahlia, Elm) must be assigned to different numbered booths from 1 to 5; each booth is used exactly once. Aster uses booth 4. Birch uses booth 1. Cedar uses booth 5. Dahlia does not use booth 3. Which booth is assigned to each team?",
+  "temperature": 0.0,
+  "seed": 2,
+  "elapsed": 2.9640557000002445,
+  "meta": {
+    "eval_count": 45,
+    "prompt_eval_count": 138,
+    "total_duration": 931314300
+  },
+  "cached_at": "2026-11-17T10:26:02"
+}

@@ -1,0 +1,232 @@
+id,category,detectable_without_gold,model_output,error,answer
+q02,Solvable but incorrect: semantic / underconstrained / type error — manual review,no / sometimes,"{
+  ""variables"": {
+    ""Fern"": [""1"", ""2"", ""3"", ""4""],
+    ""Cactus"": [""1"", ""2"", ""3"", ""4""],
+    ""Orchid"": [""1"", ""2"", ""3"", ""4""],
+    ""Ivy"": [""1"", ""2"", ""3"", ""4""]
+  },
+  ""constraints"": [
+    {""type"": ""alldiff"", ""vars"": [""Fern"", ""Cactus"", ""Orchid"", ""Ivy""]},
+    {""type"": ""neq"", ""a"": ""Cactus"", ""b"": ""1""},
+    {""type"": ""neq"", ""a"": ""Cactus"", ""b"": ""2""},
+    {""type"": ""neq"", ""a"": ""Fern"", ""b"": ""2""},
+    {""type"": ""eq"", ""a"": ""Ivy"", ""b"": ""4""}
+  ]
+}",,"{""Ivy"": ""4"", ""Cactus"": ""3"", ""Fern"": ""1"", ""Orchid"": ""2""}"
+q03,Over-constrained (unsat),yes,"{
+  ""variables"": {
+    ""Room1"": [""cream""],
+    ""Room2"": [""mint"", ""sky""],
+    ""Room3"": [""cream"", ""mint""],
+    ""Room4"": [""cream"", ""mint"", ""sky""],
+    ""Room5"": [""cream"", ""mint"", ""sky""]
+  },
+  ""constraints"": [
+    {""type"": ""alldiff"", ""vars"": [""Room1"", ""Room2""]},
+    {""type"": ""neq"", ""a"": ""Room1"", ""b"": ""sky""},
+    {""type"": ""neq"", ""a"": ""Room2"", ""b"": ""Room1""},
+    {""type"": ""neq"", ""a"": ""Room3"", ""b"": ""cream""},
+    {""type"": ""neq"", ""a"": ""Room3"", ""b"": ""mint""},
+    {""type"": ""neq"", ""a"": ""Room4"", ""b"": ""mint""},
+    {""type"": ""neq"", ""a"": ""Room5"", ""b"": ""sky""},
+    {""type"": ""neq"", ""a"": ""Room5"", ""b"": ""Room4""},
+    {""type"": ""neq"", ""a"": ""Room4"", ""b"": ""Room3""}
+  ]
+}",no solution,
+q04,Solvable but incorrect: semantic / underconstrained / type error — manual review,no / sometimes,"{
+  ""variables"": {
+    ""Hana"": [""1"", ""2"", ""3"", ""4"", ""5""],
+    ""Ivo"": [""1"", ""2"", ""3"", ""4"", ""5"", ""6""],
+    ""Jun"": [""1""],
+    ""Kai"": [""1"", ""2"", ""3"", ""4"", ""5"", ""6""],
+    ""Lia"": [""2"", ""3"", ""4"", ""5"", ""6""],
+    ""Moe"": [""1"", ""2"", ""3"", ""4"", ""5"", ""6""]
+  },
+  ""constraints"": [
+    {""type"": ""alldiff"", ""vars"": [""Hana"", ""Ivo"", ""Jun"", ""Kai"", ""Lia"", ""Moe""]},
+    {""type"": ""neq"", ""a"": ""Hana"", ""b"": ""4""},
+    {""type"": ""neq"", ""a"": ""Hana"", ""b"": ""5""},
+    {""type"": ""neq"", ""a"": ""Lia"", ""b"": ""3""},
+    {""type"": ""neq"", ""a"": ""Lia"", ""b"": ""4""},
+    {""type"": ""neq"", ""a"": ""Lia"", ""b"": ""5""},
+    {""type"": ""neq"", ""a"": ""Moe"", ""b"": ""4""}
+  ]
+}",,"{""Jun"": ""1"", ""Hana"": ""2"", ""Lia"": ""6"", ""Moe"": ""5"", ""Ivo"": ""4"", ""Kai"": ""3""}"
+q05,Over-constrained (unsat),yes,"{
+  ""variables"": {
+    ""Ann"": [1, 2],
+    ""Ben"": [1, 2],
+    ""Cat"": [1],
+    ""Dan"": [2, 3],
+    ""Eve"": [2, 3],
+    ""Fay"": [2, 3]
+  },
+  ""constraints"": [
+    {""type"": ""alldiff"", ""vars"": [""Ann"", ""Ben"", ""Cat"", ""Dan"", ""Eve"", ""Fay""]}
+  ]
+}",no solution,
+q06,Solvable but incorrect: semantic / underconstrained / type error — manual review,no / sometimes,"{
+  ""variables"": {
+    ""R1C1"": [""1""],
+    ""R1C2"": [""1"", ""2"", ""3"", ""4""],
+    ""R1C3"": [""1"", ""2"", ""3"", ""4""],
+    ""R1C4"": [""1"", ""2"", ""3"", ""4""],
+    ""R2C1"": [""1"", ""2"", ""3"", ""4""],
+    ""R2C2"": [""4""],
+    ""R2C3"": [""1"", ""2"", ""3"", ""4""],
+    ""R2C4"": [""2""],
+    ""R3C1"": [""1"", ""2"", ""3"", ""4""],
+    ""R3C2"": [""1"", ""2"", ""3"", ""4""],
+    ""R3C3"": [""4""],
+    ""R3C4"": [""3""],
+    ""R4C1"": [""4""],
+    ""R4C2"": [""1"", ""2"", ""3"", ""4""],
+    ""R4C3"": [""1"", ""2"", ""3"", ""4""],
+    ""R4C4"": [""1"", ""2"", ""3"", ""4""]
+  },
+  ""constraints"": [
+    {""type"": ""eq"", ""a"": ""R1C1"", ""b"": ""1""},
+    {""type"": ""eq"", ""a"": ""R2C2"", ""b"": ""4""},
+    {""type"": ""eq"", ""a"": ""R2C4"", ""b"": ""2""},
+    {""type"": ""eq"", ""a"": ""R3C3"", ""b"": ""4""},
+    {""type"": ""eq"", ""a"": ""R3C4"", ""b"": ""3""},
+    {""type"": ""eq"", ""a"": ""R4C1"", ""b"": ""4""}
+  ]
+}",,"{""R1C1"": ""1"", ""R2C2"": ""4"", ""R2C4"": ""2"", ""R3C3"": ""4"", ""R3C4"": ""3"", ""R4C1"": ""4"", ""R1C2"": ""4"", ""R1C3"": ""4"", ""R1C4"": ""4"", ""R2C1"": ""4"", ""R2C3"": ""4"", ""R3C1"": ""4"", ""R3C2"": ""4"", ""R4C2"": ""4"", ""R4C3"": ""4"", ""R4C4"": ""4""}"
+q07,Over-constrained (unsat),yes,"{
+  ""variables"": {
+    ""Arden"": [""1""],
+    ""Brook"": [""2""],
+    ""Cliff"": [""3""],
+    ""Dale"": [""1"",""2"",""3"",""4""],
+    ""Elm"": [""1"",""2"",""3"",""4""],
+    ""Fern"": [""1"",""2"",""3"",""4""],
+    ""Glen"": [""1"",""2"",""3"",""4""],
+    ""Heath"": [""1"",""2"",""3"",""4""]
+  },
+  ""constraints"": [
+    {""type"":""alldiff"",""vars"":[""Arden"",""Brook"",""Cliff"",""Dale""]},
+    {""type"":""alldiff"",""vars"":[""Arden"",""Brook"",""Cliff"",""Elm""]},
+    {""type"":""alldiff"",""vars"":[""Arden"",""Brook"",""Cliff"",""Fern""]},
+    {""type"":""alldiff"",""vars"":[""Arden"",""Brook"",""Cliff"",""Glen""]},
+    {""type"":""alldiff"",""vars"":[""Arden"",""Brook"",""Dale""]},
+    {""type"":""alldiff"",""vars"":[""Arden"",""Cliff"",""Dale""]},
+    {""type"":""alldiff"",""vars"":[""Arden"",""Elm"",""Dale""]},
+    {""type"":""alldiff"",""vars"":[""Arden"",""Fern"",""Dale""]},
+    {""type"":""alldiff"",""vars"":[""Arden"",""Glen"",""Dale""]},
+    {""type"":""alldiff"",""vars"":[""Brook"",""Cliff"",""Dale""]},
+    {""type"":""alldiff"",""vars"":[""Brook"",""Elm"",""Dale""]},
+    {""type"":""alldiff"",""vars"":[""Brook"",""Fern"",""Dale""]},
+    {""type"":""alldiff"",""vars"":[""Brook"",""Glen"",""Dale""]},
+    {""type"":""alldiff"",""vars"":[""Cliff"",""Dale""]},
+    {""type"":""alldiff"",""vars"":[""Elm"",""Fern"",""Dale""]},
+    {""type"":""alldiff"",""vars"":[""Elm"",""Glen"",""Dale""]},
+    {""type"":""alldiff"",""vars"":[""Fern"",""Glen"",""Dale""]},
+    {""type"":""alldiff"",""vars"":[""Heath"",""Elm"",""Dale""]},
+    {""type"":""alldiff"",""vars"":[""Heath"",""Fern"",""Dale""]},
+    {""type"":""alldiff"",""vars"":[""Heath"",""Glen"",""Dale""]}
+  ]
+}",no solution,
+q08,Solvable but incorrect: semantic / underconstrained / type error — manual review,no / sometimes,"{
+  ""variables"": {
+    ""Aspen"": [""1"", ""2"", ""3"", ""4""],
+    ""Bell"": [""1"", ""2"", ""3"", ""4""],
+    ""Coin"": [""4""],
+    ""Drum"": [""1"", ""2"", ""3"", ""4""]
+  },
+  ""constraints"": [
+    {""type"": ""alldiff"", ""vars"": [""Aspen"", ""Bell"", ""Coin"", ""Drum""]}
+  ]
+}",,"{""Coin"": ""4"", ""Aspen"": ""2"", ""Bell"": ""1"", ""Drum"": ""3""}"
+q10,Solvable but incorrect: semantic / underconstrained / type error — manual review,no / sometimes,"{
+  ""variables"": {
+    ""Alder"": [""1"", ""2"", ""3"", ""4"", ""5""],
+    ""Birch"": [""1"", ""2"", ""3"", ""4"", ""5""],
+    ""Cedar"": [""1"", ""2"", ""3"", ""4"", ""5""],
+    ""Dune"": [""1"", ""2"", ""3"", ""4"", ""5""],
+    ""Elm"": [""1"", ""2"", ""3"", ""4"", ""5""]
+  },
+  ""constraints"": [
+    {""type"": ""alldiff"", ""vars"": [""Alder"", ""Birch"", ""Cedar"", ""Dune"", ""Elm""]},
+    {""type"": ""neq"", ""a"": ""Cedar"", ""b"": ""1""},
+    {""type"": ""neq"", ""a"": ""Cedar"", ""b"": ""2""},
+    {""type"": ""neq"", ""a"": ""Cedar"", ""b"": ""4""},
+    {""type"": ""neq"", ""a"": ""Birch"", ""b"": ""1""},
+    {""type"": ""neq"", ""a"": ""Birch"", ""b"": ""4""},
+    {""type"": ""neq"", ""a"": ""Alder"", ""b"": ""4""},
+    {""type"": ""eq"", ""a"": ""Elm"", ""b"": ""5""}
+  ]
+}",,"{""Elm"": ""5"", ""Cedar"": ""3"", ""Birch"": ""2"", ""Alder"": ""1"", ""Dune"": ""4""}"
+q11,Over-constrained (unsat),yes,"{
+  ""variables"": {
+    ""A"": [""1"", ""2"", ""3""],
+    ""B"": [""1"", ""2"", ""3""],
+    ""C"": [""1"", ""2"", ""3""],
+    ""D"": [""1"", ""2"", ""3""],
+    ""E"": [""1"", ""2"", ""3""],
+    ""F"": [""1"", ""2"", ""3""]
+  },
+  ""constraints"": [
+    {""type"": ""alldiff"", ""vars"": [""A"", ""B"", ""C"", ""D"", ""E"", ""F""]},
+    {""type"": ""eq"", ""a"": ""A"", ""b"": ""1""},
+    {""type"": ""eq"", ""a"": ""B"", ""b"": ""2""}
+  ]
+}",no solution,
+q12,Over-constrained (unsat),yes,"{
+  ""variables"": {
+    ""Ava"": [1],
+    ""Ben"": [2, 3],
+    ""Cai"": [2, 3],
+    ""Dia"": [1, 2, 3],
+    ""Eli"": [1, 2, 3],
+    ""Fox"": [1, 2, 3]
+  },
+  ""constraints"": [
+    {""type"": ""alldiff"", ""vars"": [""Ava"", ""Ben"", ""Cai"", ""Dia"", ""Eli"", ""Fox""]},
+    {""type"": ""eq"", ""a"": ""Ava"", ""b"": 1},
+    {""type"": ""neq"", ""a"": ""Ava"", ""b"": 2},
+    {""type"": ""neq"", ""a"": ""Dia"", ""b"": 1},
+    {""type"": ""neq"", ""a"": ""Dia"", ""b"": 2},
+    {""type"": ""neq"", ""a"": ""Eli"", ""b"": 1},
+    {""type"": ""neq"", ""a"": ""Eli"", ""b"": 2},
+    {""type"": ""neq"", ""a"": ""Fox"", ""b"": 2},
+    {""type"": ""neq"", ""a"": ""Fox"", ""b"": 3},
+    {""type"": ""eq"", ""a"": ""Dia"", ""b"": 1},
+    {""type"": ""neq"", ""a"": ""Ben"", ""b"": 3},
+    {""type"": ""neq"", ""a"": ""Eli"", ""b"": 1},
+    {""type"": ""neq"", ""a"": ""Fox"", ""b"": 1}
+  ]
+}",no solution,
+q13,Over-constrained (unsat),yes,"{
+  ""variables"": {
+    ""MorningA"": [""1""],
+    ""MorningB"": [""2""],
+    ""MorningC"": [""3""],
+    ""MorningD"": [""4""],
+    ""AfternoonE"": [""1"", ""2"", ""3"", ""4""],
+    ""AfternoonF"": [""1"", ""2"", ""3"", ""4""],
+    ""AfternoonG"": [""1"", ""2"", ""3"", ""4""]
+  },
+  ""constraints"": [
+    {""type"": ""alldiff"", ""vars"": [""MorningA"", ""MorningB"", ""MorningC"", ""MorningD""]},
+    {""type"": ""eq"", ""a"": ""AfternoonE"", ""b"": ""1""},
+    {""type"": ""eq"", ""a"": ""AfternoonE"", ""b"": ""2""},
+    {""type"": ""eq"", ""a"": ""AfternoonE"", ""b"": ""3""},
+    {""type"": ""eq"", ""a"": ""AfternoonE"", ""b"": ""4""},
+    {""type"": ""neq"", ""a"": ""AfternoonE"", ""b"": ""MorningA""},
+    {""type"": ""neq"", ""a"": ""AfternoonE"", ""b"": ""MorningB""},
+    {""type"": ""neq"", ""a"": ""AfternoonE"", ""b"": ""MorningC""},
+    {""type"": ""neq"", ""a"": ""AfternoonE"", ""b"": ""MorningD""},
+    {""type"": ""alldiff"", ""vars"": [""AfternoonF"", ""MorningB"", ""MorningC"", ""MorningD""]},
+    {""type"": ""neq"", ""a"": ""AfternoonF"", ""b"": ""MorningB""},
+    {""type"": ""neq"", ""a"": ""AfternoonF"", ""b"": ""MorningC""},
+    {""type"": ""neq"", ""a"": ""AfternoonF"", ""b"": ""MorningD""},
+    {""type"": ""alldiff"", ""vars"": [""AfternoonG"", ""MorningA"", ""MorningC"", ""MorningD""]}
+  ]
+}",no solution,
+q14,Over-constrained (unsat),yes,"{""variables"":{""R1C1"":[1],""R1C2"":[2],""R1C3"":[3],""R2C1"":[2],""R2C2"":[3],""R2C3"":[1],""R3C1"":[3],""R3C2"":[1],""R3C3"":[2]}, ""constraints"":[{""type"":""alldiff"",""vars"":[""R1C1"",""R2C1"",""R3C1"",""R1C2"",""R2C2"",""R3C2"",""R1C3"",""R2C3"",""R3C3""]},{""type"":""alldiff"",""vars"":[""R1C1"",""R2C1"",""R3C1"",""R1C2"",""R2C2"",""R3C2"",""R1C3"",""R2C3"",""R3C3""]}]}",no solution,
+q17,Solvable but incorrect: semantic / underconstrained / type error — manual review,no / sometimes,"{""variables"":{""Aster"":[""1"",""2"",""3"",""4"",""5""],""Birch"":[""1"",""2"",""3"",""4"",""5""],""Cedar"":[""1"",""2"",""3"",""4"",""5""],""Dahlia"":[""1"",""2"",""3"",""4"",""5""],""Elm"":[""1"",""2"",""3"",""4"",""5""]},""constraints"":[{""type"":""alldiff"",""vars"":[""Aster"",""Birch"",""Cedar"",""Dahlia"",""Elm""]},{""type"":""eq"",""a"":""Aster"",""b"":""4""}],""given"":{""Birch"":""1"",""Cedar"":""5""}}",,"{""Aster"": ""4"", ""Birch"": ""2"", ""Cedar"": ""1"", ""Dahlia"": ""5"", ""Elm"": ""3""}"
+q18,Solvable but incorrect: semantic / underconstrained / type error — manual review,no / sometimes,"{""variables"":{""Ava"":[1,2,3,4,5,6],""Bela"":[1,2,3,4,5,6],""Cora"":[1,2,3,4,5,6],""Dina"":[1,2,3,4,5,6],""Eli"":[1,2,3,4,5,6],""Fina"":[1,2,3,4,5,6]},""constraints"":[{""type"":""alldiff"",""vars"":[""Ava"",""Bela"",""Cora"",""Dina"",""Eli"",""Fina""]},{""type"":""eq"",""a"":""Ava"",""b"":5}]}",,"{""Ava"": 5, ""Bela"": 1, ""Cora"": 2, ""Dina"": 3, ""Eli"": 4, ""Fina"": 6}"
+q19,Malformed syntax/schema,yes,"{""variables"":{""Amber"":[3],""Bronze"":[7],""Coral"":[1],""Diamond"":[5],""Emerald"":[2],""Flint"":[4,6],""Garnet"":[1,2,3,4,5,6,7]""},""constraints"":[{""type"":""alldiff"",""vars"":[""Amber"",""Bronze"",""Coral"",""Diamond"",""Emerald""]},{""type"":""eq"",""a"":""Amber"",""b"":3},{""type"":""eq"",""a"":""Bronze"",""b"":7},{""type"":""eq"",""a"":""Coral"",""b"":1},{""type"":""eq"",""a"":""Diamond"",""b"":5},{""type"":""eq"",""a"":""Emerald"",""b"":2},{""type"":""neq"",""a"":""Flint"",""b"":4}]}","invalid JSON: Expecting ',' delimiter: line 1 column 118 (char 117)",
+q20,Solvable but incorrect: semantic / underconstrained / type error — manual review,no / sometimes,"{""variables"":{""Aquila"":[""1"",""2"",""3"",""4"",""5"",""6"",""7"",""8""],""Boreal"":[""1"",""2"",""3"",""4"",""5"",""6"",""7"",""8""],""Cygnus"":[""1"",""2"",""3"",""4"",""5"",""6"",""7"",""8""],""Draco"":[""1"",""2"",""3"",""4"",""5"",""6"",""7"",""8""],""Equuleus"":[""1"",""2"",""3"",""4"",""5"",""6"",""7"",""8""],""Fornax"":[""1"",""2"",""3"",""4"",""5"",""6"",""7"",""8""],""Gemini"":[""1"",""2"",""3"",""4"",""5"",""6"",""7"",""8""]},""constraints"":[{""type"":""alldiff"",""vars"":[""Aquila"",""Boreal"",""Cygnus"",""Draco"",""Equuleus"",""Fornax"",""Gemini""]},{""type"":""eq"",""a"":""Aquila"",""b"":""8""},{""type"":""eq"",""a"":""Boreal"",""b"":""3""},{""type"":""eq"",""a"":""Cygnus"",""b"":""6""},{""type"":""eq"",""a"":""Draco"",""b"":""1""},{""type"":""eq"",""a"":""Equuleus"",""b"":""7""},{""type"":""eq"",""a"":""Fornax"",""b"":""2""}]}",,"{""Aquila"": ""8"", ""Boreal"": ""3"", ""Cygnus"": ""6"", ""Draco"": ""1"", ""Equuleus"": ""7"", ""Fornax"": ""2"", ""Gemini"": ""5""}"

@@ -1,0 +1,15 @@
+{
+  "text": "{\n  \"Atlas\": 2,\n  \"Botany\": 4,\n  \"Chemistry\": 1,\n  \"Drama\": 3\n}",
+  "backend": "ollama",
+  "model": "qwen2.5:3b",
+  "prompt": "Solve this puzzle directly. Return only one flat JSON object mapping every named entity or cell to its answer. Do not show your reasoning.\n\nPuzzle:\nAt the library shelves, 4 books (Atlas, Botany, Chemistry, Drama) must be assigned to different numbered shelfs from 1 to 4; each shelf is used exactly once. Atlas uses shelf 2. Botany uses shelf 4. Chemistry does not use shelf 3. Which shelf is assigned to each book?",
+  "temperature": 0.0,
+  "seed": 0,
+  "elapsed": 5.302610899991123,
+  "meta": {
+    "eval_count": 34,
+    "prompt_eval_count": 129,
+    "total_duration": 3265001100
+  },
+  "cached_at": "2026-11-15T23:15:56"
+}

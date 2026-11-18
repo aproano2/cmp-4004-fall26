@@ -1,0 +1,15 @@
+{
+  "text": "{\"variables\":{\"Atlas\":[\"1\",\"2\"],\"Botany\":[\"1\",\"2\",\"3\",\"4\"],\"Chemistry\":[\"1\",\"2\",\"3\",\"4\"],\"Drama\":[\"1\",\"2\",\"3\",\"4\"]},\"constraints\":[{\"type\":\"alldiff\",\"vars\":[\"Atlas\",\"Botany\",\"Chemistry\",\"Drama\"]},{\"type\":\"eq\",\"a\":\"Atlas\",\"b\":\"2\"},{\"type\":\"eq\",\"a\":\"Botany\",\"b\":\"4\"}],\"allowedValues\":{\"Chemistry\":[\"1\",\"3\",\"4\"]}}",
+  "backend": "ollama",
+  "model": "qwen2.5:3b",
+  "prompt": "Translate the puzzle into a CSP. Output only a JSON object; do not solve it.\nEach variable is one named person, object, room or cell whose value must be found. Map each variable name to a flat list of allowed values, with no nested lists. Do not create variables named 'name', 'value', or 'domain'.\nUse only these constraints: {\"type\":\"alldiff\",\"vars\":[\"A\",\"B\"]}, {\"type\":\"eq\",\"a\":\"A\",\"b\":\"red\"}, {\"type\":\"neq\",\"a\":\"A\",\"b\":\"B\"}. For neq, b may also be a domain value. Keep numeric values as numbers.\nExample: 'Ana and Bo choose different colours, red or blue. Ana chooses red.'\n{\"variables\":{\"Ana\":[\"red\",\"blue\"],\"Bo\":[\"red\",\"blue\"]},\"constraints\":[{\"type\":\"alldiff\",\"vars\":[\"Ana\",\"Bo\"]},{\"type\":\"eq\",\"a\":\"Ana\",\"b\":\"red\"}]}\nPuzzle:\nAt the library shelves, 4 books (Atlas, Botany, Chemistry, Drama) must be assigned to different numbered shelfs from 1 to 4; each shelf is used exactly once. Atlas uses shelf 2. Botany uses shelf 4. Chemistry does not use shelf 3. Which shelf is assigned to each book?",
+  "temperature": 0.0,
+  "seed": 2,
+  "elapsed": 4.289716499999486,
+  "meta": {
+    "eval_count": 105,
+    "prompt_eval_count": 296,
+    "total_duration": 2213818300
+  },
+  "cached_at": "2026-11-17T10:25:45"
+}

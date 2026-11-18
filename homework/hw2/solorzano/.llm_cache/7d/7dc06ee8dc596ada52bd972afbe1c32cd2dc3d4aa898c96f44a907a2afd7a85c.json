@@ -1,0 +1,15 @@
+{
+  "text": "{\n  \"variables\": {\n    \"Alder\": [\"1\", \"2\", \"3\", \"4\", \"5\"],\n    \"Birch\": [\"1\", \"2\", \"3\", \"4\", \"5\"],\n    \"Cedar\": [\"1\", \"2\", \"3\", \"4\", \"5\"],\n    \"Dune\": [\"1\", \"2\", \"3\", \"4\", \"5\"],\n    \"Elm\": [\"1\", \"2\", \"3\", \"4\", \"5\"]\n  },\n  \"constraints\": [\n    {\"type\": \"alldiff\", \"vars\": [\"Alder\", \"Birch\", \"Cedar\", \"Dune\", \"Elm\"]},\n    {\"type\": \"neq\", \"a\": \"Cedar\", \"b\": \"1\"},\n    {\"type\": \"neq\", \"a\": \"Cedar\", \"b\": \"2\"},\n    {\"type\": \"neq\", \"a\": \"Cedar\", \"b\": \"4\"},\n    {\"type\": \"neq\", \"a\": \"Birch\", \"b\": \"1\"},\n    {\"type\": \"neq\", \"a\": \"Birch\", \"b\": \"4\"},\n    {\"type\": \"neq\", \"a\": \"Alder\", \"b\": \"4\"},\n    {\"type\": \"eq\", \"a\": \"Elm\", \"b\": \"5\"}\n  ]\n}",
+  "backend": "ollama",
+  "model": "qwen2.5:3b",
+  "prompt": "Translate the puzzle into a CSP. Output only a JSON object; do not solve it.\nEach variable is one named person, object, room or cell whose value must be found. Map each variable name to a flat list of allowed values, with no nested lists. Do not create variables named 'name', 'value', or 'domain'.\nUse only these constraints: {\"type\":\"alldiff\",\"vars\":[\"A\",\"B\"]}, {\"type\":\"eq\",\"a\":\"A\",\"b\":\"red\"}, {\"type\":\"neq\",\"a\":\"A\",\"b\":\"B\"}. For neq, b may also be a domain value. Keep numeric values as numbers.\nExample: 'Ana and Bo choose different colours, red or blue. Ana chooses red.'\n{\"variables\":{\"Ana\":[\"red\",\"blue\"],\"Bo\":[\"red\",\"blue\"]},\"constraints\":[{\"type\":\"alldiff\",\"vars\":[\"Ana\",\"Bo\"]},{\"type\":\"eq\",\"a\":\"Ana\",\"b\":\"red\"}]}\nPuzzle:\nFive short courses, Alder, Birch, Cedar, Dune and Elm, take place on days 1 to 5, with exactly one course per day. Elm takes place on day 5. Cedar is not on day 1, day 2 or day 4. Birch is not on day 1 or day 4. Alder is not on day 4. On which day is each course?",
+  "temperature": 0.0,
+  "seed": 0,
+  "elapsed": 10.397251600000118,
+  "meta": {
+    "eval_count": 300,
+    "prompt_eval_count": 312,
+    "total_duration": 8347472200
+  },
+  "cached_at": "2026-11-15T06:26:52"
+}

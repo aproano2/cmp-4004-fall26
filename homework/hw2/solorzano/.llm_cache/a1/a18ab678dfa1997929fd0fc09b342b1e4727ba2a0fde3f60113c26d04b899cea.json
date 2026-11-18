@@ -1,0 +1,15 @@
+{
+  "text": "{\n  \"Arden\": 1,\n  \"Brook\": 2,\n  \"Cliff\": 3,\n  \"Dale\": 4,\n  \"Elm\": 4,\n  \"Fern\": 4,\n  \"Glen\": 4,\n  \"Heath\": 4\n}",
+  "backend": "ollama",
+  "model": "qwen2.5:3b",
+  "prompt": "Solve this puzzle directly. Return only one flat JSON object mapping every named entity or cell to its answer. Do not show your reasoning.\n\nPuzzle:\nEight radio stations are located in the towns of Arden, Brook, Cliff, Dale, Elm, Fern, Glen and Heath. Each station broadcasts on one of four channels: 1, 2, 3 or 4. Several stations may share a channel, but two stations whose signals overlap must use different channels. The overlapping pairs are: Arden-Brook, Arden-Cliff, Arden-Dale, Brook-Cliff, Brook-Dale, Cliff-Dale, Elm-Brook, Elm-Cliff, Elm-Dale, Fern-Cliff, Fern-Dale, Fern-Elm, Glen-Dale, Glen-Elm, Glen-Fern, Heath-Elm, Heath-Fern, Heath-Glen. No other pairs overlap. The Heath station has the tallest antenna in the region. Arden broadcasts on channel 1, Brook on channel 2, and Cliff uses channel 3.",
+  "temperature": 0.0,
+  "seed": 1,
+  "elapsed": 3.556344899998294,
+  "meta": {
+    "eval_count": 67,
+    "prompt_eval_count": 251,
+    "total_duration": 1494129200
+  },
+  "cached_at": "2026-11-17T10:21:22"
+}
