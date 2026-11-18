@@ -1,0 +1,7 @@
+category,a_priori_detectable_without_gt,count_B,announced_by_solver,silent
+Malformed syntax (won't parse),yes,0,0,0
+"Valid syntax, over-constrained (UNSAT)",yes,28,28,0
+"Valid syntax, under-constrained (premise dropped, wrong solution returned)",no,2,0,2
+Valid model of the wrong problem (hallucinated / altered premises),no,4,0,4
+Quantifier scope / arity error,yes,2,2,0
+Solver timeout,yes,0,0,0

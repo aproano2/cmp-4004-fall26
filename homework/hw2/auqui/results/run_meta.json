@@ -1,0 +1,16 @@
+{
+  "model": "allam-2-7b",
+  "base_url": "https://api.groq.com/openai/v1",
+  "temperature": 0.7,
+  "repeats": 3,
+  "provider": "Groq",
+  "size": "7B",
+  "date": "2026-11-17",
+  "arms": [
+    "A",
+    "B",
+    "Bprime",
+    "C"
+  ],
+  "infra_errors": 0
+}

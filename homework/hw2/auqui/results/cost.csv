@@ -1,0 +1,5 @@
+arm,runs,correct,total_tokens,total_cost_usd,cost_per_correct_usd,tokens_per_correct,pricing_source
+A,20,20,0,0.000000,0.000000,0.0,no LLM tokens
+B,60,24,45546,0.002879,0.000120,1897.8,Groq / allam-2-7b (tarifa proxy de llama-3.1-8b-instant (8B) en Groq: allam-2-7b no tiene precio publicado)
+Bprime,60,24,128825,0.007651,0.000319,5367.7,Groq / allam-2-7b (tarifa proxy de llama-3.1-8b-instant (8B) en Groq: allam-2-7b no tiene precio publicado)
+C,60,21,30317,0.001796,0.000086,1443.7,Groq / allam-2-7b (tarifa proxy de llama-3.1-8b-instant (8B) en Groq: allam-2-7b no tiene precio publicado)

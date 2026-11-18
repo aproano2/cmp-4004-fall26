@@ -1,0 +1,5 @@
+outcome,count,fraction_of_Bprime_runs
+solver-accepted at iteration 1,30,0.500
+solver-accepted at iteration 2,6,0.100
+solver-accepted at iteration 3,2,0.033
+never accepted (no answer after 3),22,0.367
