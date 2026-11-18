@@ -1,0 +1,15 @@
+{
+  "text": "{\n  \"Room1\": \"cream\",\n  \"Room2\": \"mint\",\n  \"Room3\": \"sky\",\n  \"Room4\": \"cream\",\n  \"Room5\": \"mint\"\n}",
+  "backend": "ollama",
+  "model": "qwen2.5:3b",
+  "prompt": "Solve this puzzle directly. Return only one flat JSON object mapping every named entity or cell to its answer. Do not show your reasoning.\n\nPuzzle:\nFive rooms in a hallway, Room1 to Room5, are each painted one colour: cream, mint, or sky. Colours may repeat. Room1 is cream. Room2 is not the same colour as Room1, and Room2 is not sky. Room3 is neither cream nor mint. Room4 is a different colour from Room3, and Room4 is not mint. Room5 is a different colour from Room4, and Room5 is not sky.",
+  "temperature": 0.0,
+  "seed": 1,
+  "elapsed": 3.0027405000000726,
+  "meta": {
+    "eval_count": 43,
+    "prompt_eval_count": 155,
+    "total_duration": 923813700
+  },
+  "cached_at": "2026-11-17T10:20:33"
+}

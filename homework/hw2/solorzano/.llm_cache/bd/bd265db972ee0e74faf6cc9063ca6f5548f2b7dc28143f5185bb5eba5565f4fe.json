@@ -1,0 +1,15 @@
+{
+  "text": "```json\n{\n  \"Amber\": 3,\n  \"Bronze\": 7,\n  \"Coral\": 1,\n  \"Diamond\": 5,\n  \"Emerald\": 2,\n  \"Flint\": 6,\n  \"Garnet\": 4\n}\n```",
+  "backend": "ollama",
+  "model": "qwen2.5:3b",
+  "prompt": "Solve this puzzle directly. Return only one flat JSON object mapping every named entity or cell to its answer. Do not show your reasoning.\n\nPuzzle:\nAt the museum exhibition rooms, 7 artifacts (Amber, Bronze, Coral, Diamond, Emerald, Flint, Garnet) must be assigned to different numbered rooms from 1 to 7; each room is used exactly once. Amber uses room 3. Bronze uses room 7. Coral uses room 1. Diamond uses room 5. Emerald uses room 2. Flint does not use room 4. Which room is assigned to each artifact?",
+  "temperature": 0.0,
+  "seed": 1,
+  "elapsed": 3.399853799999619,
+  "meta": {
+    "eval_count": 63,
+    "prompt_eval_count": 153,
+    "total_duration": 1358722500
+  },
+  "cached_at": "2026-11-17T10:23:10"
+}

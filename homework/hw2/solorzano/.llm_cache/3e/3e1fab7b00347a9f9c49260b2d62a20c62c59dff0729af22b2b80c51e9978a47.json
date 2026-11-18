@@ -1,0 +1,15 @@
+{
+  "text": "{\n  \"Alder\": 3,\n  \"Birch\": 2,\n  \"Cedar\": 5,\n  \"Dune\": 1,\n  \"Elm\": 5\n}",
+  "backend": "ollama",
+  "model": "qwen2.5:3b",
+  "prompt": "Solve this puzzle directly. Return only one flat JSON object mapping every named entity or cell to its answer. Do not show your reasoning.\n\nPuzzle:\nFive short courses, Alder, Birch, Cedar, Dune and Elm, take place on days 1 to 5, with exactly one course per day. Elm takes place on day 5. Cedar is not on day 1, day 2 or day 4. Birch is not on day 1 or day 4. Alder is not on day 4. On which day is each course?",
+  "temperature": 0.0,
+  "seed": 0,
+  "elapsed": 3.4478209999999763,
+  "meta": {
+    "eval_count": 44,
+    "prompt_eval_count": 145,
+    "total_duration": 1387157200
+  },
+  "cached_at": "2026-11-15T06:26:56"
+}

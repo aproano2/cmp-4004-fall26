@@ -1,0 +1,15 @@
+{
+  "text": "{\n  \"variables\": {\n    \"Ann\": [1, 2],\n    \"Ben\": [1, 2],\n    \"Cat\": [1],\n    \"Dan\": [2, 3],\n    \"Eve\": [2, 3],\n    \"Fay\": [2, 3]\n  },\n  \"constraints\": [\n    {\"type\": \"alldiff\", \"vars\": [\"Ann\", \"Ben\", \"Cat\", \"Dan\", \"Eve\", \"Fay\"]}\n  ]\n}",
+  "backend": "ollama",
+  "model": "qwen2.5:3b",
+  "prompt": "Translate the puzzle into a CSP. Output only a JSON object; do not solve it.\nEach variable is one named person, object, room or cell whose value must be found. Map each variable name to a flat list of allowed values, with no nested lists. Do not create variables named 'name', 'value', or 'domain'.\nUse only these constraints: {\"type\":\"alldiff\",\"vars\":[\"A\",\"B\"]}, {\"type\":\"eq\",\"a\":\"A\",\"b\":\"red\"}, {\"type\":\"neq\",\"a\":\"A\",\"b\":\"B\"}. For neq, b may also be a domain value. Keep numeric values as numbers.\nExample: 'Ana and Bo choose different colours, red or blue. Ana chooses red.'\n{\"variables\":{\"Ana\":[\"red\",\"blue\"],\"Bo\":[\"red\",\"blue\"]},\"constraints\":[{\"type\":\"alldiff\",\"vars\":[\"Ana\",\"Bo\"]},{\"type\":\"eq\",\"a\":\"Ana\",\"b\":\"red\"}]}\nPuzzle:\nAt a dinner, six guests sit at two round tables. Ann, Ben and Cat sit at Table 1; Dan, Eve and Fay sit at Table 2. Each table has seats numbered 1, 2 and 3, and the three guests at the same table take different seats. Cat sits in seat 1. Ann is not in seat 3. Dan's seat number is different from Cat's seat number. Eve's seat number is different from Ann's. Fay's seat number is different from Ben's. Dan is not in seat 3.",
+  "temperature": 0.0,
+  "seed": 0,
+  "elapsed": 5.239677900004608,
+  "meta": {
+    "eval_count": 108,
+    "prompt_eval_count": 342,
+    "total_duration": 3210794000
+  },
+  "cached_at": "2026-11-14T22:53:41"
+}

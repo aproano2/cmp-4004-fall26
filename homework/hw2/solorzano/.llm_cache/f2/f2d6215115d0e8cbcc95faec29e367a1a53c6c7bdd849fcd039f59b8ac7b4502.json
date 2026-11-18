@@ -1,0 +1,15 @@
+{
+  "text": "{\n  \"Arm\": 3,\n  \"Camera\": 1,\n  \"Drone\": 4,\n  \"Engine\": 2\n}",
+  "backend": "ollama",
+  "model": "qwen2.5:3b",
+  "prompt": "Solve this puzzle directly. Return only one flat JSON object mapping every named entity or cell to its answer. Do not show your reasoning.\n\nPuzzle:\nAt the robotics stations, 4 robots (Arm, Camera, Drone, Engine) must be assigned to different numbered stations from 1 to 4; each station is used exactly once. Arm uses station 3. Camera uses station 1. Drone does not use station 2. Which station is assigned to each robot?",
+  "temperature": 0.0,
+  "seed": 0,
+  "elapsed": 4.811574699997436,
+  "meta": {
+    "eval_count": 32,
+    "prompt_eval_count": 126,
+    "total_duration": 2754681000
+  },
+  "cached_at": "2026-11-15T23:16:14"
+}

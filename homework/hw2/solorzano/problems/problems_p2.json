@@ -1,0 +1,68 @@
+{
+  "difficulty_rule": "Same as P1: easy has at most 4 variables, medium has 5 or 6, hard has 7 or more.",
+  "puzzles": [
+    {
+      "id": "q08",
+      "level": "easy",
+      "family": "museum rooms, all different",
+      "puzzle": "Four museum pieces, Aspen, Bell, Coin and Drum, are placed in rooms 1 to 4, one piece per room. Coin is in room 4. Bell is in neither room 1 nor room 3. Aspen is not in room 2. Drum is not in room 1. Which room contains each piece?",
+      "gold": {"Aspen": 1, "Bell": 2, "Coin": 4, "Drum": 3},
+      "derivation": ["Coin is in 4. Bell cannot be 1 or 3, so Bell is in 2.", "The remaining rooms are 1 and 3. Drum cannot be in 1, so Drum is in 3 and Aspen is in 1."],
+      "traps": ["Neither 1 nor 3 requires two exclusions.", "One piece per room means all four rooms differ."]
+    },
+    {
+      "id": "q09",
+      "level": "easy",
+      "family": "antenna frequencies, repetition allowed",
+      "puzzle": "Four antennas, Birch, Cedar, Delta and Elm, each use one frequency: red, blue or green. Frequencies may be reused. Birch uses red. Cedar uses a different frequency from Birch and does not use green. Delta uses a different frequency from Cedar and does not use red. Elm uses a different frequency from Delta and does not use blue. What does each antenna use?",
+      "gold": {"Birch": "red", "Cedar": "blue", "Delta": "green", "Elm": "red"},
+      "derivation": ["Birch is red. Cedar is neither red nor green, so Cedar is blue.", "Delta is neither blue nor red, so Delta is green.", "Elm differs from green and is not blue, so Elm is red."],
+      "traps": ["The domain has three values for four antennas, so a global alldiff would make it unsatisfiable."]
+    },
+    {
+      "id": "q10",
+      "level": "medium",
+      "family": "five courses on different days",
+      "puzzle": "Five short courses, Alder, Birch, Cedar, Dune and Elm, take place on days 1 to 5, with exactly one course per day. Elm takes place on day 5. Cedar is not on day 1, day 2 or day 4. Birch is not on day 1 or day 4. Alder is not on day 4. On which day is each course?",
+      "gold": {"Alder": 1, "Birch": 2, "Cedar": 3, "Dune": 4, "Elm": 5},
+      "derivation": ["Elm is on 5. Cedar cannot be on 1, 2 or 4, so Cedar is on 3.", "Birch cannot be on 1 or 4, so Birch is on 2.", "Only 1 and 4 remain. Alder cannot be on 4, so Alder is on 1 and Dune is on 4."],
+      "traps": ["Exactly one course per day requires alldiff.", "Several negative clues must be kept separately."]
+    },
+    {
+      "id": "q11",
+      "level": "medium",
+      "family": "sensor channel graph",
+      "puzzle": "Six sensors A, B, C, D, E and F each choose channel 1, 2 or 3. Channels may repeat unless two sensors interfere. The interfering pairs are A-B, A-C, B-C, D-A, D-C, E-B, E-D, E-A, F-C, F-E and F-B. No other pairs interfere. A uses channel 1 and B uses channel 2. Which channel does each sensor use?",
+      "gold": {"A": 1, "B": 2, "C": 3, "D": 2, "E": 3, "F": 1},
+      "derivation": ["A and B use 1 and 2. C interferes with both, so C uses 3.", "D differs from A and C, so D uses 2.", "E differs from B, D and A, so E uses 3.", "F differs from C, E and B, so F uses 1."],
+      "traps": ["Only listed pairs must differ.", "A global alldiff over six sensors and three channels is impossible."]
+    },
+    {
+      "id": "q12",
+      "level": "medium",
+      "family": "two training groups, lanes reused",
+      "puzzle": "Six runners train in two groups. Ava, Ben and Cai are in group 1; Dia, Eli and Fox are in group 2. Each group uses lanes 1, 2 and 3 once, but the two groups may reuse the same lane numbers. Ava takes lane 1. Ben does not take lane 3. Dia's lane differs from Ava's and Dia does not take lane 2. Eli's lane differs from Cai's and Eli does not take lane 1. Fox's lane differs from Ben's. Which lane does each runner take?",
+      "gold": {"Ava": 1, "Ben": 2, "Cai": 3, "Dia": 3, "Eli": 2, "Fox": 1},
+      "derivation": ["In group 1, Ava is 1, Ben cannot be 3, so Ben is 2 and Cai is 3.", "Dia differs from Ava and cannot be 2, so Dia is 3.", "Eli differs from Cai and cannot be 1, so Eli is 2. Fox takes the remaining lane 1."],
+      "traps": ["There are two alldiff groups, not one global alldiff.", "Cross-group comparisons refer to lane numbers."]
+    },
+    {
+      "id": "q13",
+      "level": "hard",
+      "family": "morning and afternoon workshops",
+      "puzzle": "Seven workshops use rooms numbered 1 to 4. MorningA, MorningB, MorningC and MorningD happen at the same time and must use four different rooms. AfternoonE, AfternoonF and AfternoonG also happen at the same time and must use different rooms, but an afternoon workshop may reuse a morning room. MorningA uses room 1, MorningB room 2 and MorningC room 3. AfternoonE must use a room different from MorningA, MorningB and MorningC. AfternoonF must differ from MorningB, MorningC and MorningD. AfternoonG must differ from MorningA, MorningC and MorningD. Which room does each workshop use?",
+      "gold": {"MorningA": 1, "MorningB": 2, "MorningC": 3, "MorningD": 4, "AfternoonE": 4, "AfternoonF": 1, "AfternoonG": 2},
+      "derivation": ["The four morning rooms differ, so MorningD uses 4.", "AfternoonE differs from rooms 1, 2 and 3, so it uses 4.", "AfternoonF differs from rooms 2, 3 and 4, so it uses 1.", "AfternoonG differs from rooms 1, 3 and 4, so it uses 2."],
+      "traps": ["The two alldiff constraints are separate.", "The nine cross-time comparisons must refer to the correct workshop names."]
+    },
+    {
+      "id": "q14",
+      "level": "hard",
+      "family": "3 by 3 Latin grid",
+      "puzzle": "Fill a 3x3 grid with the numbers 1, 2 and 3. Name the nine cells R1C1, R1C2, R1C3, R2C1, R2C2, R2C3, R3C1, R3C2 and R3C3, where R is the row and C is the column. Each row contains 1, 2 and 3 exactly once, and each column also contains 1, 2 and 3 exactly once. The given cells are R1C1 = 1, R1C2 = 2, R2C1 = 2 and R2C2 = 3. What number goes in every cell?",
+      "gold": {"R1C1": 1, "R1C2": 2, "R1C3": 3, "R2C1": 2, "R2C2": 3, "R2C3": 1, "R3C1": 3, "R3C2": 1, "R3C3": 2},
+      "derivation": ["Rows 1 and 2 force R1C3 = 3 and R2C3 = 1.", "Columns 1 and 2 then force R3C1 = 3 and R3C2 = 1.", "Row 3 needs 2 in R3C3."],
+      "traps": ["All six row and column groups must be represented.", "The row and column names cannot be swapped."]
+    }
+  ]
+}

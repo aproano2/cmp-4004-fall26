@@ -1,0 +1,15 @@
+{
+  "text": "{\"variables\":{\"Birch\":[\"red\"],\"Cedar\":[\"red\",\"blue\",\"green\"],\"Delta\":[\"red\",\"blue\",\"green\"],\"Elm\":[\"red\",\"blue\",\"green\"]},\"constraints\":[{\"type\":\"alldiff\",\"vars\":[\"Birch\",\"Cedar\"]},{\"type\":\"eq\",\"a\":\"Birch\",\"b\":\"red\"},{\"type\":\"neq\",\"a\":\"Cedar\",\"b\":\"Birch\"},{\"type\":\"neq\",\"a\":\"Cedar\",\"b\":\"green\"},{\"type\":\"neq\",\"a\":\"Delta\",\"b\":\"Cedar\"},{\"type\":\"neq\",\"a\":\"Delta\",\"b\":\"red\"},{\"type\":\"neq\",\"a\":\"Elm\",\"b\":\"Delta\"},{\"type\":\"neq\",\"a\":\"Elm\",\"b\":\"blue\"}]}",
+  "backend": "ollama",
+  "model": "qwen2.5:3b",
+  "prompt": "Translate the puzzle into a CSP. Output only a JSON object; do not solve it.\nEach variable is one named person, object, room or cell whose value must be found. Map each variable name to a flat list of allowed values, with no nested lists. Do not create variables named 'name', 'value', or 'domain'.\nUse only these constraints: {\"type\":\"alldiff\",\"vars\":[\"A\",\"B\"]}, {\"type\":\"eq\",\"a\":\"A\",\"b\":\"red\"}, {\"type\":\"neq\",\"a\":\"A\",\"b\":\"B\"}. For neq, b may also be a domain value. Keep numeric values as numbers.\nExample: 'Ana and Bo choose different colours, red or blue. Ana chooses red.'\n{\"variables\":{\"Ana\":[\"red\",\"blue\"],\"Bo\":[\"red\",\"blue\"]},\"constraints\":[{\"type\":\"alldiff\",\"vars\":[\"Ana\",\"Bo\"]},{\"type\":\"eq\",\"a\":\"Ana\",\"b\":\"red\"}]}\nPuzzle:\nFour antennas, Birch, Cedar, Delta and Elm, each use one frequency: red, blue or green. Frequencies may be reused. Birch uses red. Cedar uses a different frequency from Birch and does not use green. Delta uses a different frequency from Cedar and does not use red. Elm uses a different frequency from Delta and does not use blue. What does each antenna use?",
+  "temperature": 0.0,
+  "seed": 0,
+  "elapsed": 6.397559400000091,
+  "meta": {
+    "eval_count": 155,
+    "prompt_eval_count": 304,
+    "total_duration": 4377613200
+  },
+  "cached_at": "2026-11-15T06:26:39"
+}

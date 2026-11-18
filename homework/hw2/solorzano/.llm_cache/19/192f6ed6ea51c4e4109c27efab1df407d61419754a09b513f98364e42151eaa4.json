@@ -1,0 +1,15 @@
+{
+  "text": "{\n  \"Ann\": 2,\n  \"Ben\": 3,\n  \"Cat\": 1,\n  \"Dan\": 2,\n  \"Eve\": 1,\n  \"Fay\": 3\n}",
+  "backend": "ollama",
+  "model": "qwen2.5:3b",
+  "prompt": "Solve this puzzle directly. Return only one flat JSON object mapping every named entity or cell to its answer. Do not show your reasoning.\n\nPuzzle:\nAt a dinner, six guests sit at two round tables. Ann, Ben and Cat sit at Table 1; Dan, Eve and Fay sit at Table 2. Each table has seats numbered 1, 2 and 3, and the three guests at the same table take different seats. Cat sits in seat 1. Ann is not in seat 3. Dan's seat number is different from Cat's seat number. Eve's seat number is different from Ann's. Fay's seat number is different from Ben's. Dan is not in seat 3.",
+  "temperature": 0.0,
+  "seed": 2,
+  "elapsed": 3.066335200001049,
+  "meta": {
+    "eval_count": 47,
+    "prompt_eval_count": 175,
+    "total_duration": 999515600
+  },
+  "cached_at": "2026-11-17T10:24:07"
+}

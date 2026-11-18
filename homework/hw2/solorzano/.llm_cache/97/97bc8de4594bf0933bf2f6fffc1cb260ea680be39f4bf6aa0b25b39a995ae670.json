@@ -1,0 +1,15 @@
+{
+  "text": "{\"variables\":{\"Aquila\":[\"1\",\"2\",\"3\",\"4\",\"5\",\"6\",\"7\",\"8\"],\"Boreal\":[\"1\",\"2\",\"3\",\"4\",\"5\",\"6\",\"7\",\"8\"],\"Cygnus\":[\"1\",\"2\",\"3\",\"4\",\"5\",\"6\",\"7\",\"8\"],\"Draco\":[\"1\",\"2\",\"3\",\"4\",\"5\",\"6\",\"7\",\"8\"],\"Equuleus\":[\"1\",\"2\",\"3\",\"4\",\"5\",\"6\",\"7\",\"8\"],\"Fornax\":[\"1\",\"2\",\"3\",\"4\",\"5\",\"6\",\"7\",\"8\"],\"Gemini\":[\"1\",\"2\",\"3\",\"4\",\"5\",\"6\",\"7\",\"8\"]},\"constraints\":[{\"type\":\"alldiff\",\"vars\":[\"Aquila\",\"Boreal\",\"Cygnus\",\"Draco\",\"Equuleus\",\"Fornax\",\"Gemini\"]},{\"type\":\"eq\",\"a\":\"Aquila\",\"b\":\"8\"},{\"type\":\"eq\",\"a\":\"Boreal\",\"b\":\"3\"},{\"type\":\"eq\",\"a\":\"Cygnus\",\"b\":\"6\"},{\"type\":\"eq\",\"a\":\"Draco\",\"b\":\"1\"},{\"type\":\"eq\",\"a\":\"Equuleus\",\"b\":\"7\"},{\"type\":\"eq\",\"a\":\"Fornax\",\"b\":\"2\"},{\"type\":\"neq\",\"a\":\"Gemini\",\"b\":\"4\"}]}",
+  "backend": "ollama",
+  "model": "qwen2.5:3b",
+  "prompt": "Translate the puzzle into a CSP. Output only a JSON object; do not solve it.\nEach variable is one named person, object, room or cell whose value must be found. Map each variable name to a flat list of allowed values, with no nested lists. Do not create variables named 'name', 'value', or 'domain'.\nUse only these constraints: {\"type\":\"alldiff\",\"vars\":[\"A\",\"B\"]}, {\"type\":\"eq\",\"a\":\"A\",\"b\":\"red\"}, {\"type\":\"neq\",\"a\":\"A\",\"b\":\"B\"}. For neq, b may also be a domain value. Keep numeric values as numbers.\nExample: 'Ana and Bo choose different colours, red or blue. Ana chooses red.'\n{\"variables\":{\"Ana\":[\"red\",\"blue\"],\"Bo\":[\"red\",\"blue\"]},\"constraints\":[{\"type\":\"alldiff\",\"vars\":[\"Ana\",\"Bo\"]},{\"type\":\"eq\",\"a\":\"Ana\",\"b\":\"red\"}]}\nPuzzle:\nAt the satellite tracking windows, 8 satellites (Aquila, Boreal, Cygnus, Draco, Equuleus, Fornax, Gemini, Hydra) must be assigned to different numbered windows from 1 to 8; each window is used exactly once. Aquila uses window 8. Boreal uses window 3. Cygnus uses window 6. Draco uses window 1. Equuleus uses window 7. Fornax uses window 2. Gemini does not use window 4. Which window is assigned to each satellite?",
+  "temperature": 0.0,
+  "seed": 2,
+  "elapsed": 7.193528499999957,
+  "meta": {
+    "eval_count": 272,
+    "prompt_eval_count": 342,
+    "total_duration": 5126592800
+  },
+  "cached_at": "2026-11-17T10:26:28"
+}

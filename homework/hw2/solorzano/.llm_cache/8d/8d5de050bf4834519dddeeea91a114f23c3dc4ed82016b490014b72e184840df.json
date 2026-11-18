@@ -1,0 +1,15 @@
+{
+  "text": "{\n  \"Ava\": 5,\n  \"Bela\": 2,\n  \"Cora\": 4,\n  \"Dina\": 1,\n  \"Eli\": 3,\n  \"Fina\": 6\n}",
+  "backend": "ollama",
+  "model": "qwen2.5:3b",
+  "prompt": "Solve this puzzle directly. Return only one flat JSON object mapping every named entity or cell to its answer. Do not show your reasoning.\n\nPuzzle:\nAt the conference presentation slots, 6 speakers (Ava, Bela, Cora, Dina, Eli, Fina) must be assigned to different numbered slots from 1 to 6; each slot is used exactly once. Ava uses slot 5. Bela uses slot 2. Cora uses slot 4. Dina uses slot 1. Eli does not use slot 3. Which slot is assigned to each speaker?",
+  "temperature": 0.0,
+  "seed": 0,
+  "elapsed": 6.313913999998476,
+  "meta": {
+    "eval_count": 51,
+    "prompt_eval_count": 151,
+    "total_duration": 4265552100
+  },
+  "cached_at": "2026-11-15T23:16:50"
+}
