@@ -1,0 +1,2 @@
+provider,model,input_usd_per_million_tokens,output_usd_per_million_tokens,notes
+Groq,allam-2-7b,0.05,0.08,tarifa proxy de llama-3.1-8b-instant (8B) en Groq: allam-2-7b no tiene precio publicado

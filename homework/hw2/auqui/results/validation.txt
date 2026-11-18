@@ -1,0 +1,21 @@
+P01 easy   vars=5 edges=6 clues=0  prompt<->model OK
+P02 easy   vars=4 edges=5 clues=0  prompt<->model OK
+P03 easy   vars=5 edges=6 clues=0  prompt<->model OK
+P04 easy   vars=4 edges=5 clues=0  prompt<->model OK
+P05 easy   vars=5 edges=6 clues=0  prompt<->model OK
+P06 easy   vars=4 edges=5 clues=0  prompt<->model OK
+P07 medium vars=7 edges=12 clues=0  prompt<->model OK
+P08 medium vars=6 edges=11 clues=0  prompt<->model OK
+P09 medium vars=7 edges=12 clues=0  prompt<->model OK
+P10 medium vars=6 edges=11 clues=0  prompt<->model OK
+P11 medium vars=7 edges=12 clues=0  prompt<->model OK
+P12 medium vars=6 edges=11 clues=0  prompt<->model OK
+P13 medium vars=7 edges=12 clues=0  prompt<->model OK
+P14 hard   vars=8 edges=19 clues=2  prompt<->model OK
+P15 hard   vars=9 edges=20 clues=2  prompt<->model OK
+P16 hard   vars=8 edges=19 clues=2  prompt<->model OK
+P17 hard   vars=9 edges=20 clues=2  prompt<->model OK
+P18 hard   vars=8 edges=19 clues=2  prompt<->model OK
+P19 hard   vars=9 edges=20 clues=2  prompt<->model OK
+P20 hard   vars=8 edges=19 clues=2  prompt<->model OK
+DATASET VALID. 20 instances, difficulty {'easy': 6, 'medium': 7, 'hard': 7}; ground truth matches prompt text, is satisfiable, witness valid.
