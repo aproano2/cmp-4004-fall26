@@ -1,0 +1,83 @@
+{
+  "call": {
+    "provider": "ollama",
+    "model": "llama3.1:latest",
+    "base_url": "http://localhost:11434",
+    "prompt_version": "sat-v1",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Traduce todas las reglas a CNF proposicional sin resolverlas. Responde exclusivamente con un objeto JSON {\"clauses\":[[1,-2],[3]]}. Cada lista interior es una disyunción; la lista exterior es una conjunción. Usa enteros positivos para variables y negativos para negaciones, exclusivamente del mapa dado. No añadas variables ni premisas. Una cláusula vacía significa falso; una lista sin cláusulas significa verdadero. No incluyas markdown ni explicación."
+      },
+      {
+        "role": "user",
+        "content": "{\"problem\": \"Para una muestra escolar puedes incluir estos materiales: carteles, maquetas, folletos, fotos. Debes elegir carteles. Si eliges carteles, también debes elegir maquetas. No puedes elegir a la vez maquetas y folletos. Debes elegir al menos una de estas opciones: folletos o fotos. No puedes elegir fotos. ¿Existe una selección que cumpla todas las reglas?\", \"variables\": {\"carteles\": 1, \"maquetas\": 2, \"folletos\": 3, \"fotos\": 4}}"
+      }
+    ],
+    "parameters": {
+      "temperature": 0.0,
+      "max_tokens": 2048,
+      "seed": 20261119
+    },
+    "repeat": 1,
+    "problem_id": "sat_04",
+    "arm": "B",
+    "iteration": 0,
+    "call_id": "b1d199d2547e2163925bf0beeddc1520007509f05edda697dc926a866f201863",
+    "raw": "{\n\"clauses\":[\n    [-1],\n    [1, 2],\n    [-2, 3],\n    [-3, -4],\n    [-4]\n]}",
+    "model_size": "8.0B; Q4_K_M",
+    "reported_model": "llama3.1:latest",
+    "response_id": "",
+    "input_tokens": 266,
+    "output_tokens": 37,
+    "token_source": "provider",
+    "llm_time_seconds": 65.92134010900008,
+    "access_seconds": 65.92134010900008,
+    "cache_hit": false,
+    "estimated_cost_usd": null,
+    "charged_cost_usd": null,
+    "error_category": "",
+    "error_message": "",
+    "timestamp": "2026-11-19T04:29:07.950956+00:00"
+  },
+  "iteration": 0,
+  "predicted_status": "SAT",
+  "solver_status": "SAT",
+  "solver_time_seconds": 0.00042503799886617344,
+  "clauses": [
+    [
+      -1
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      -2,
+      3
+    ],
+    [
+      -3,
+      -4
+    ],
+    [
+      -4
+    ]
+  ],
+  "error_category": "",
+  "error_message": "",
+  "warnings": [],
+  "assignment": {
+    "1": false,
+    "2": true,
+    "3": true,
+    "4": false
+  },
+  "solver_stats": {
+    "calls": 1,
+    "propagations": 4
+  },
+  "detectable_error": false,
+  "processing_seconds": 0.000695945000188658,
+  "parse_validation_seconds": 0.0002709070013224846
+}

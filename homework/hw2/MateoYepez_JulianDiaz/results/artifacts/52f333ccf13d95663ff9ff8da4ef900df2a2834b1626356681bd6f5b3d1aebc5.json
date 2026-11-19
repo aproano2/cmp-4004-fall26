@@ -1,0 +1,100 @@
+{
+  "row": {
+    "run_id": "52f333ccf13d95663ff9ff8da4ef900df2a2834b1626356681bd6f5b3d1aebc5",
+    "problem_id": "sat_16",
+    "difficulty": "hard",
+    "arm": "C",
+    "repeat": 0,
+    "provider": "ollama",
+    "model": "llama3.1:latest",
+    "model_size": "8.0B; Q4_K_M",
+    "temperature": 0.0,
+    "expected_status": "UNSAT",
+    "predicted_status": "UNSAT",
+    "correctness": "correct",
+    "taxonomy_category": "",
+    "error_category": "",
+    "detectable_error": false,
+    "error_message": "",
+    "llm_time_seconds": 108.59796272499989,
+    "solver_time_seconds": 0.0,
+    "parse_validation_seconds": 0.00016754399985074997,
+    "wall_clock_seconds": 108.6012864839995,
+    "pipeline_time_seconds": 108.59813026899974,
+    "cache_access_seconds": 0,
+    "input_tokens": 236,
+    "output_tokens": 140,
+    "total_tokens": 376,
+    "token_source": "provider",
+    "estimated_cost_usd": null,
+    "charged_cost_usd": null,
+    "solver_status": "NOT_RUN",
+    "refinement_iterations": 0,
+    "final_iteration": 0,
+    "refinement_time_seconds": 0,
+    "cache_hit": false,
+    "initial_call_id": "b76949c8256f9d21bbe710eff7d047b35f060588bac14679996f34341bf9bb3e",
+    "observable_convergence": true,
+    "convergence": "",
+    "timestamp": "2026-11-19T03:58:10.655205+00:00",
+    "campaign_id": "301f830d833670aec538771d704e1b1bdc5f43afd783784248e3a58abd1766e8",
+    "paired_checkpoint_reused": false
+  },
+  "attempts": [
+    {
+      "call": {
+        "provider": "ollama",
+        "model": "llama3.1:latest",
+        "base_url": "http://localhost:11434",
+        "prompt_version": "sat-v1",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Resuelve el problema de satisfacibilidad. Responde exclusivamente con JSON: {\"answer\":\"SAT\" o \"UNSAT\", \"explanation\":\"justificación breve\"}."
+          },
+          {
+            "role": "user",
+            "content": "Para una exposición puedes instalar estos elementos: panel, vitrina, proyector, pantalla, altavoz, micrófono, tarima, cortina. Debes elegir al menos una de estas opciones: panel o vitrina. Si eliges panel, también debes elegir proyector. Si eliges vitrina, también debes elegir pantalla. Si eliges proyector, también debes elegir altavoz. Si eliges pantalla, también debes elegir micrófono. Si eliges altavoz, también debes elegir tarima. Si eliges micrófono, también debes elegir tarima. Si eliges tarima, también debes elegir cortina. No puedes elegir a la vez proyector y pantalla. No puedes elegir cortina. ¿Existe una selección que cumpla todas las reglas?"
+          }
+        ],
+        "parameters": {
+          "temperature": 0.0,
+          "max_tokens": 2048,
+          "seed": 20261118
+        },
+        "repeat": 0,
+        "problem_id": "sat_16",
+        "arm": "C",
+        "iteration": 0,
+        "call_id": "b76949c8256f9d21bbe710eff7d047b35f060588bac14679996f34341bf9bb3e",
+        "raw": "{\"answer\":\"UNSAT\", \"explanation\":\"No se puede elegir el altavoz porque no se puede elegir al mismo tiempo el proyector y la pantalla, pero si se elige el proyector también debe elegirse el altavoz. Además, si se elige el micrófono también debe elegirse la tarima, pero si se elige el altavoz también debe elegirse la tarima, por lo que no se puede elegir al mismo tiempo el micrófono y el altavoz. Finalmente, si se elige la tarima también debe elegirse la cortina, pero no se puede elegir la cortina.\"}",
+        "model_size": "8.0B; Q4_K_M",
+        "reported_model": "llama3.1:latest",
+        "response_id": "",
+        "input_tokens": 236,
+        "output_tokens": 140,
+        "token_source": "provider",
+        "llm_time_seconds": 108.59796272499989,
+        "access_seconds": 108.59796272499989,
+        "cache_hit": false,
+        "estimated_cost_usd": null,
+        "charged_cost_usd": null,
+        "error_category": "",
+        "error_message": "",
+        "timestamp": "2026-11-19T03:58:10.651984+00:00"
+      },
+      "iteration": 0,
+      "predicted_status": "UNSAT",
+      "solver_status": "NOT_RUN",
+      "solver_time_seconds": 0.0,
+      "clauses": null,
+      "error_category": "",
+      "error_message": "",
+      "warnings": [],
+      "assignment": null,
+      "detectable_error": false,
+      "processing_seconds": 0.00016754399985074997,
+      "parse_validation_seconds": 0.00016754399985074997
+    }
+  ]
+}

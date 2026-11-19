@@ -1,0 +1,100 @@
+{
+  "row": {
+    "run_id": "40f7901a650054954f1161bf627c3ff7c8b85935bc747e7f2a869d7b466f246b",
+    "problem_id": "sat_09",
+    "difficulty": "medium",
+    "arm": "C",
+    "repeat": 1,
+    "provider": "ollama",
+    "model": "llama3.1:latest",
+    "model_size": "8.0B; Q4_K_M",
+    "temperature": 0.0,
+    "expected_status": "SAT",
+    "predicted_status": "SAT",
+    "correctness": "correct",
+    "taxonomy_category": "",
+    "error_category": "",
+    "detectable_error": false,
+    "error_message": "",
+    "llm_time_seconds": 49.93264861700118,
+    "solver_time_seconds": 0.0,
+    "parse_validation_seconds": 0.00020778100042662118,
+    "wall_clock_seconds": 49.93626845000108,
+    "pipeline_time_seconds": 49.932856398001604,
+    "cache_access_seconds": 0,
+    "input_tokens": 185,
+    "output_tokens": 21,
+    "total_tokens": 206,
+    "token_source": "provider",
+    "estimated_cost_usd": null,
+    "charged_cost_usd": null,
+    "solver_status": "NOT_RUN",
+    "refinement_iterations": 0,
+    "final_iteration": 0,
+    "refinement_time_seconds": 0,
+    "cache_hit": false,
+    "initial_call_id": "a0d0a38d3d80d8415cf5d9772c4a085001bc5b31f56b718fc543fad21793652a",
+    "observable_convergence": true,
+    "convergence": "",
+    "timestamp": "2026-11-19T04:40:44.747710+00:00",
+    "campaign_id": "301f830d833670aec538771d704e1b1bdc5f43afd783784248e3a58abd1766e8",
+    "paired_checkpoint_reused": false
+  },
+  "attempts": [
+    {
+      "call": {
+        "provider": "ollama",
+        "model": "llama3.1:latest",
+        "base_url": "http://localhost:11434",
+        "prompt_version": "sat-v1",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Resuelve el problema de satisfacibilidad. Responde exclusivamente con JSON: {\"answer\":\"SAT\" o \"UNSAT\", \"explanation\":\"justificación breve\"}."
+          },
+          {
+            "role": "user",
+            "content": "Para un boletín puedes incluir estas secciones: portada, entrevista, reseña, agenda, fotos, editorial. No puedes elegir portada. Debes elegir al menos una de estas opciones: portada, entrevista o reseña. No puedes elegir a la vez entrevista y reseña. Si eliges entrevista, también debes elegir agenda. Si eliges reseña, también debes elegir fotos. Si eliges agenda, también debes elegir editorial. Si eliges fotos, también debes elegir editorial. ¿Existe una selección que cumpla todas las reglas?"
+          }
+        ],
+        "parameters": {
+          "temperature": 0.0,
+          "max_tokens": 2048,
+          "seed": 20261119
+        },
+        "repeat": 1,
+        "problem_id": "sat_09",
+        "arm": "C",
+        "iteration": 0,
+        "call_id": "a0d0a38d3d80d8415cf5d9772c4a085001bc5b31f56b718fc543fad21793652a",
+        "raw": "{\"answer\":\"SAT\",\"explanation\":\"Se puede elegir portada y reseña.\"}",
+        "model_size": "8.0B; Q4_K_M",
+        "reported_model": "llama3.1:latest",
+        "response_id": "",
+        "input_tokens": 185,
+        "output_tokens": 21,
+        "token_source": "provider",
+        "llm_time_seconds": 49.93264861700118,
+        "access_seconds": 49.93264861700118,
+        "cache_hit": false,
+        "estimated_cost_usd": null,
+        "charged_cost_usd": null,
+        "error_category": "",
+        "error_message": "",
+        "timestamp": "2026-11-19T04:40:44.744183+00:00"
+      },
+      "iteration": 0,
+      "predicted_status": "SAT",
+      "solver_status": "NOT_RUN",
+      "solver_time_seconds": 0.0,
+      "clauses": null,
+      "error_category": "",
+      "error_message": "",
+      "warnings": [],
+      "assignment": null,
+      "detectable_error": false,
+      "processing_seconds": 0.00020778100042662118,
+      "parse_validation_seconds": 0.00020778100042662118
+    }
+  ]
+}

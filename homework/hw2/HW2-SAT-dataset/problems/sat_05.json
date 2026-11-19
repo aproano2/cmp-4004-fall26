@@ -1,0 +1,38 @@
+{
+  "id": "sat_05",
+  "difficulty": "easy",
+  "prompt": "Para una excursión puedes llevar estos artículos: mapa, brújula, GPS, linterna. Debes elegir al menos una de estas opciones: mapa o GPS. No puedes elegir GPS. Si eliges mapa, también debes elegir brújula. No puedes elegir a la vez brújula y linterna. ¿Existe una selección que cumpla todas las reglas?",
+  "variables": {
+    "mapa": 1,
+    "brújula": 2,
+    "GPS": 3,
+    "linterna": 4
+  },
+  "clauses": [
+    [
+      1,
+      3
+    ],
+    [
+      -3
+    ],
+    [
+      -1,
+      2
+    ],
+    [
+      -2,
+      -4
+    ]
+  ],
+  "ground_truth": {
+    "status": "SAT",
+    "witness": {
+      "mapa": true,
+      "brújula": true,
+      "GPS": false,
+      "linterna": false
+    },
+    "reasoning": "Elegir mapa, brújula y dejar fuera las demás opciones cumple todas las reglas."
+  }
+}

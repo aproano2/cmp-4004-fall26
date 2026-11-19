@@ -1,0 +1,208 @@
+{
+  "row": {
+    "run_id": "1d8473b338ba41e79ca9c989564498be7c62af4561c094ff41ef1ed715f1dd30",
+    "problem_id": "sat_09",
+    "difficulty": "medium",
+    "arm": "B",
+    "repeat": 1,
+    "provider": "ollama",
+    "model": "llama3.1:latest",
+    "model_size": "8.0B; Q4_K_M",
+    "temperature": 0.0,
+    "expected_status": "SAT",
+    "predicted_status": "SAT",
+    "correctness": "correct",
+    "taxonomy_category": "Valid model of the wrong problem",
+    "semantic_category": "Valid model of the wrong problem",
+    "reference_solutions": 4,
+    "generated_solutions": 6,
+    "lost_solutions": 2,
+    "added_solutions": 4,
+    "lost_counterexample": {
+      "1": false,
+      "2": false,
+      "3": true,
+      "4": false,
+      "5": true,
+      "6": true
+    },
+    "added_counterexample": {
+      "1": false,
+      "2": false,
+      "3": true,
+      "4": true,
+      "5": false,
+      "6": true
+    },
+    "missing_clauses": [
+      [
+        -5,
+        6
+      ],
+      [
+        -4,
+        6
+      ],
+      [
+        -3,
+        5
+      ],
+      [
+        -2,
+        4
+      ],
+      [
+        1,
+        2,
+        3
+      ]
+    ],
+    "extra_clauses": [
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        4
+      ],
+      [
+        3,
+        5
+      ],
+      [
+        4,
+        6
+      ],
+      [
+        5,
+        6
+      ]
+    ],
+    "review_note": "Set inclusion is exhaustive evidence; clause differences alone do not identify linguistic causes. Quantifier/arity category is not applicable to propositional syntax.",
+    "error_category": "semantic_error",
+    "detectable_error": false,
+    "error_message": "",
+    "llm_time_seconds": 82.12942099800057,
+    "solver_time_seconds": 0.0005267390006338246,
+    "parse_validation_seconds": 0.0003625189983722521,
+    "wall_clock_seconds": 82.13505579500088,
+    "pipeline_time_seconds": 82.13031025599958,
+    "cache_access_seconds": 0,
+    "input_tokens": 313,
+    "output_tokens": 48,
+    "total_tokens": 361,
+    "token_source": "provider",
+    "estimated_cost_usd": null,
+    "charged_cost_usd": null,
+    "solver_status": "SAT",
+    "refinement_iterations": 0,
+    "final_iteration": 0,
+    "refinement_time_seconds": 0,
+    "cache_hit": false,
+    "initial_call_id": "37db8cfef027af7d127e54018754e2a6ee8b7d4fdba2b4f5cf897c38e4a8aaed",
+    "observable_convergence": true,
+    "convergence": "",
+    "timestamp": "2026-11-19T04:39:54.740496+00:00",
+    "campaign_id": "301f830d833670aec538771d704e1b1bdc5f43afd783784248e3a58abd1766e8",
+    "paired_checkpoint_reused": false
+  },
+  "attempts": [
+    {
+      "call": {
+        "provider": "ollama",
+        "model": "llama3.1:latest",
+        "base_url": "http://localhost:11434",
+        "prompt_version": "sat-v1",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Traduce todas las reglas a CNF proposicional sin resolverlas. Responde exclusivamente con un objeto JSON {\"clauses\":[[1,-2],[3]]}. Cada lista interior es una disyunción; la lista exterior es una conjunción. Usa enteros positivos para variables y negativos para negaciones, exclusivamente del mapa dado. No añadas variables ni premisas. Una cláusula vacía significa falso; una lista sin cláusulas significa verdadero. No incluyas markdown ni explicación."
+          },
+          {
+            "role": "user",
+            "content": "{\"problem\": \"Para un boletín puedes incluir estas secciones: portada, entrevista, reseña, agenda, fotos, editorial. No puedes elegir portada. Debes elegir al menos una de estas opciones: portada, entrevista o reseña. No puedes elegir a la vez entrevista y reseña. Si eliges entrevista, también debes elegir agenda. Si eliges reseña, también debes elegir fotos. Si eliges agenda, también debes elegir editorial. Si eliges fotos, también debes elegir editorial. ¿Existe una selección que cumpla todas las reglas?\", \"variables\": {\"portada\": 1, \"entrevista\": 2, \"reseña\": 3, \"agenda\": 4, \"fotos\": 5, \"editorial\": 6}}"
+          }
+        ],
+        "parameters": {
+          "temperature": 0.0,
+          "max_tokens": 2048,
+          "seed": 20261119
+        },
+        "repeat": 1,
+        "problem_id": "sat_09",
+        "arm": "B",
+        "iteration": 0,
+        "call_id": "37db8cfef027af7d127e54018754e2a6ee8b7d4fdba2b4f5cf897c38e4a8aaed",
+        "raw": "{\n\"clauses\":[\n    [-1],\n    [2,3],\n    [-2,-3],\n    [2,4],\n    [3,5],\n    [4,6],\n    [5,6]\n]}",
+        "model_size": "8.0B; Q4_K_M",
+        "reported_model": "llama3.1:latest",
+        "response_id": "",
+        "input_tokens": 313,
+        "output_tokens": 48,
+        "token_source": "provider",
+        "llm_time_seconds": 82.12942099800057,
+        "access_seconds": 82.12942099800057,
+        "cache_hit": false,
+        "estimated_cost_usd": null,
+        "charged_cost_usd": null,
+        "error_category": "",
+        "error_message": "",
+        "timestamp": "2026-11-19T04:39:54.734810+00:00"
+      },
+      "iteration": 0,
+      "predicted_status": "SAT",
+      "solver_status": "SAT",
+      "solver_time_seconds": 0.0005267390006338246,
+      "clauses": [
+        [
+          -1
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          -2,
+          -3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "error_category": "",
+      "error_message": "",
+      "warnings": [],
+      "assignment": {
+        "1": false,
+        "2": true,
+        "3": false,
+        "4": true,
+        "5": true,
+        "6": true
+      },
+      "solver_stats": {
+        "calls": 2,
+        "propagations": 2,
+        "pure": 3,
+        "decisions": 1
+      },
+      "detectable_error": false,
+      "processing_seconds": 0.0008892579990060767,
+      "parse_validation_seconds": 0.0003625189983722521
+    }
+  ]
+}

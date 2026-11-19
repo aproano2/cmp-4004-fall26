@@ -1,0 +1,100 @@
+{
+  "row": {
+    "run_id": "1b78ba6beb7dc8766c06cef80e6c7a0c99bfb1e6fa852e35c2ad02550d95d8e3",
+    "problem_id": "sat_15",
+    "difficulty": "hard",
+    "arm": "C",
+    "repeat": 0,
+    "provider": "ollama",
+    "model": "llama3.1:latest",
+    "model_size": "8.0B; Q4_K_M",
+    "temperature": 0.0,
+    "expected_status": "SAT",
+    "predicted_status": "UNSAT",
+    "correctness": "incorrect",
+    "taxonomy_category": "Wrong SAT/UNSAT result",
+    "error_category": "semantic_error",
+    "detectable_error": false,
+    "error_message": "",
+    "llm_time_seconds": 61.33841714099981,
+    "solver_time_seconds": 0.0,
+    "parse_validation_seconds": 0.00023427599990100134,
+    "wall_clock_seconds": 61.341272732001016,
+    "pipeline_time_seconds": 61.33865141699971,
+    "cache_access_seconds": 0,
+    "input_tokens": 229,
+    "output_tokens": 63,
+    "total_tokens": 292,
+    "token_source": "provider",
+    "estimated_cost_usd": null,
+    "charged_cost_usd": null,
+    "solver_status": "NOT_RUN",
+    "refinement_iterations": 0,
+    "final_iteration": 0,
+    "refinement_time_seconds": 0,
+    "cache_hit": false,
+    "initial_call_id": "cffd8fba9166b3c8c4a74eee687eb0601a0fe90fc3dbc494c42c1e3f3558f2a2",
+    "observable_convergence": true,
+    "convergence": "",
+    "timestamp": "2026-11-19T03:53:26.878193+00:00",
+    "campaign_id": "301f830d833670aec538771d704e1b1bdc5f43afd783784248e3a58abd1766e8",
+    "paired_checkpoint_reused": false
+  },
+  "attempts": [
+    {
+      "call": {
+        "provider": "ollama",
+        "model": "llama3.1:latest",
+        "base_url": "http://localhost:11434",
+        "prompt_version": "sat-v1",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Resuelve el problema de satisfacibilidad. Responde exclusivamente con JSON: {\"answer\":\"SAT\" o \"UNSAT\", \"explanation\":\"justificación breve\"}."
+          },
+          {
+            "role": "user",
+            "content": "Para una exposición puedes instalar estos elementos: panel, vitrina, proyector, pantalla, altavoz, micrófono, tarima, cortina. Debes elegir al menos una de estas opciones: panel o vitrina. Si eliges panel, también debes elegir proyector. Si eliges vitrina, también debes elegir pantalla. Si eliges proyector, también debes elegir altavoz. Si eliges pantalla, también debes elegir micrófono. Si eliges altavoz, también debes elegir tarima. Si eliges micrófono, también debes elegir tarima. Si eliges tarima, también debes elegir cortina. No puedes elegir a la vez proyector y pantalla. ¿Existe una selección que cumpla todas las reglas?"
+          }
+        ],
+        "parameters": {
+          "temperature": 0.0,
+          "max_tokens": 2048,
+          "seed": 20261118
+        },
+        "repeat": 0,
+        "problem_id": "sat_15",
+        "arm": "C",
+        "iteration": 0,
+        "call_id": "cffd8fba9166b3c8c4a74eee687eb0601a0fe90fc3dbc494c42c1e3f3558f2a2",
+        "raw": "{\"answer\":\"UNSAT\",\"explanation\":\"No se puede elegir al mismo tiempo un panel y una vitrina, pero si se elige una vitrina también se debe elegir una pantalla, lo cual no es posible ya que no se puede elegir a la vez proyector y pantalla.\"}",
+        "model_size": "8.0B; Q4_K_M",
+        "reported_model": "llama3.1:latest",
+        "response_id": "",
+        "input_tokens": 229,
+        "output_tokens": 63,
+        "token_source": "provider",
+        "llm_time_seconds": 61.33841714099981,
+        "access_seconds": 61.33841714099981,
+        "cache_hit": false,
+        "estimated_cost_usd": null,
+        "charged_cost_usd": null,
+        "error_category": "",
+        "error_message": "",
+        "timestamp": "2026-11-19T03:53:26.875421+00:00"
+      },
+      "iteration": 0,
+      "predicted_status": "UNSAT",
+      "solver_status": "NOT_RUN",
+      "solver_time_seconds": 0.0,
+      "clauses": null,
+      "error_category": "",
+      "error_message": "",
+      "warnings": [],
+      "assignment": null,
+      "detectable_error": false,
+      "processing_seconds": 0.00023427599990100134,
+      "parse_validation_seconds": 0.00023427599990100134
+    }
+  ]
+}

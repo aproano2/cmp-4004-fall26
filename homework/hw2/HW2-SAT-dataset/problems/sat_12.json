@@ -1,0 +1,51 @@
+{
+  "id": "sat_12",
+  "difficulty": "medium",
+  "prompt": "Para un almuerzo puedes ofrecer estos platos y bebidas: sopa, ensalada, pasta, arroz, jugo, agua. Debes elegir al menos una de estas opciones: sopa o ensalada. No puedes elegir a la vez sopa y ensalada. Si eliges sopa, también debes elegir pasta. Si eliges ensalada, también debes elegir arroz. No puedes elegir a la vez pasta y jugo. No puedes elegir a la vez arroz y jugo. Debes elegir al menos una de estas opciones: jugo o agua. No puedes elegir agua. ¿Existe una selección que cumpla todas las reglas?",
+  "variables": {
+    "sopa": 1,
+    "ensalada": 2,
+    "pasta": 3,
+    "arroz": 4,
+    "jugo": 5,
+    "agua": 6
+  },
+  "clauses": [
+    [
+      1,
+      2
+    ],
+    [
+      -1,
+      -2
+    ],
+    [
+      -1,
+      3
+    ],
+    [
+      -2,
+      4
+    ],
+    [
+      -3,
+      -5
+    ],
+    [
+      -4,
+      -5
+    ],
+    [
+      5,
+      6
+    ],
+    [
+      -6
+    ]
+  ],
+  "ground_truth": {
+    "status": "UNSAT",
+    "witness": null,
+    "reasoning": "La sopa obliga a servir pasta y la ensalada obliga a servir arroz. Debes elegir sopa o ensalada, y tanto la pasta como el arroz excluyen el jugo. Por lo tanto, entre jugo y agua debes servir agua. La última regla prohíbe elegir agua, así que las reglas se contradicen."
+  }
+}

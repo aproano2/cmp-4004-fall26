@@ -1,0 +1,106 @@
+{
+  "call": {
+    "provider": "ollama",
+    "model": "llama3.1:latest",
+    "base_url": "http://localhost:11434",
+    "prompt_version": "sat-v1",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Traduce todas las reglas a CNF proposicional sin resolverlas. Responde exclusivamente con un objeto JSON {\"clauses\":[[1,-2],[3]]}. Cada lista interior es una disyunción; la lista exterior es una conjunción. Usa enteros positivos para variables y negativos para negaciones, exclusivamente del mapa dado. No añadas variables ni premisas. Una cláusula vacía significa falso; una lista sin cláusulas significa verdadero. No incluyas markdown ni explicación."
+      },
+      {
+        "role": "user",
+        "content": "{\"problem\": \"Para un boletín puedes incluir estas secciones: portada, entrevista, reseña, agenda, fotos, editorial. No puedes elegir portada. Debes elegir al menos una de estas opciones: portada, entrevista o reseña. No puedes elegir a la vez entrevista y reseña. Si eliges entrevista, también debes elegir agenda. Si eliges reseña, también debes elegir fotos. Si eliges agenda, también debes elegir editorial. Si eliges fotos, también debes elegir editorial. No puedes elegir editorial. ¿Existe una selección que cumpla todas las reglas?\", \"variables\": {\"portada\": 1, \"entrevista\": 2, \"reseña\": 3, \"agenda\": 4, \"fotos\": 5, \"editorial\": 6}}"
+      }
+    ],
+    "parameters": {
+      "temperature": 0.0,
+      "max_tokens": 2048,
+      "seed": 20261118
+    },
+    "repeat": 0,
+    "problem_id": "sat_10",
+    "arm": "B",
+    "iteration": 0,
+    "call_id": "54eacfb3ef29fd1135dbeaadf518ee2c2e423cd48ac25514a472d49b36589d4b",
+    "raw": "{\n\"clauses\":[\n    [-1],\n    [2,3],\n    [-2,-3],\n    [2,4],\n    [-2,-4],\n    [3,5],\n    [-3,-5],\n    [4,-6],\n    [-4,-6],\n    [-6]\n]}",
+    "model_size": "8.0B; Q4_K_M",
+    "reported_model": "llama3.1:latest",
+    "response_id": "",
+    "input_tokens": 319,
+    "output_tokens": 64,
+    "token_source": "provider",
+    "llm_time_seconds": 112.85827578699991,
+    "access_seconds": 112.85827578699991,
+    "cache_hit": false,
+    "estimated_cost_usd": null,
+    "charged_cost_usd": null,
+    "error_category": "",
+    "error_message": "",
+    "timestamp": "2026-11-19T02:27:08.829133+00:00"
+  },
+  "iteration": 0,
+  "predicted_status": "SAT",
+  "solver_status": "SAT",
+  "solver_time_seconds": 0.0005344070000319334,
+  "clauses": [
+    [
+      -1
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      -2,
+      -3
+    ],
+    [
+      2,
+      4
+    ],
+    [
+      -2,
+      -4
+    ],
+    [
+      3,
+      5
+    ],
+    [
+      -3,
+      -5
+    ],
+    [
+      4,
+      -6
+    ],
+    [
+      -4,
+      -6
+    ],
+    [
+      -6
+    ]
+  ],
+  "error_category": "",
+  "error_message": "",
+  "warnings": [],
+  "assignment": {
+    "1": false,
+    "2": true,
+    "3": false,
+    "4": false,
+    "5": true,
+    "6": false
+  },
+  "solver_stats": {
+    "calls": 2,
+    "propagations": 5,
+    "decisions": 1
+  },
+  "detectable_error": false,
+  "processing_seconds": 0.0008818910000627511,
+  "parse_validation_seconds": 0.0003474840000308177
+}

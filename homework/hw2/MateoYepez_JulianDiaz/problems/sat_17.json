@@ -1,0 +1,68 @@
+{
+  "id": "sat_17",
+  "difficulty": "hard",
+  "prompt": "Para una campaña puedes usar estos canales y materiales: correo, afiches, radio, video, encuesta, volantes, registro, informe. Debes elegir al menos una de estas opciones: correo, afiches o radio. No puedes elegir a la vez correo y afiches. Si eliges correo, también debes elegir video. Si eliges afiches, también debes elegir encuesta. Si eliges radio, también debes elegir volantes. No puedes elegir a la vez video y registro. No puedes elegir a la vez encuesta y registro. No puedes elegir a la vez volantes y registro. Debes elegir al menos una de estas opciones: registro o informe. ¿Existe una selección que cumpla todas las reglas?",
+  "variables": {
+    "correo": 1,
+    "afiches": 2,
+    "radio": 3,
+    "video": 4,
+    "encuesta": 5,
+    "volantes": 6,
+    "registro": 7,
+    "informe": 8
+  },
+  "clauses": [
+    [
+      1,
+      2,
+      3
+    ],
+    [
+      -1,
+      -2
+    ],
+    [
+      -1,
+      4
+    ],
+    [
+      -2,
+      5
+    ],
+    [
+      -3,
+      6
+    ],
+    [
+      -4,
+      -7
+    ],
+    [
+      -5,
+      -7
+    ],
+    [
+      -6,
+      -7
+    ],
+    [
+      7,
+      8
+    ]
+  ],
+  "ground_truth": {
+    "status": "SAT",
+    "witness": {
+      "correo": false,
+      "afiches": false,
+      "radio": true,
+      "video": false,
+      "encuesta": false,
+      "volantes": true,
+      "registro": false,
+      "informe": true
+    },
+    "reasoning": "Elegir radio, volantes, informe y dejar fuera las demás opciones cumple todas las reglas."
+  }
+}
