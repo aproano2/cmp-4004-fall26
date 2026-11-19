@@ -1,0 +1,5 @@
+﻿arm,n,strict_correct,strict_accuracy,type_normalized_correct,type_normalized_accuracy,type_mismatch_ids
+A,20,20,1.0,20,1.0,
+B,20,4,0.2,6,0.3,"q02,q10"
+Bprime,20,4,0.2,6,0.3,"q02,q10"
+C,20,7,0.35,7,0.35,

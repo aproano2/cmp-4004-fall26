@@ -1,0 +1,8 @@
+id,arm,level,result,wall_clock_s,llm_time_s,solver_time_s,tokens_in,tokens_out,solver_calls
+q08,A,easy,correct,6.9e-05,0.0,3.7e-05,0,0,4
+q09,A,easy,correct,4.6e-05,0.0,2.1e-05,0,0,4
+q10,A,medium,correct,5e-05,0.0,2.5e-05,0,0,5
+q11,A,medium,correct,7.8e-05,0.0,3.6e-05,0,0,5
+q12,A,medium,correct,7.4e-05,0.0,3.4e-05,0,0,6
+q13,A,hard,correct,7.6e-05,0.0,4e-05,0,0,5
+q14,A,hard,correct,8.4e-05,0.0,3.9e-05,0,0,6

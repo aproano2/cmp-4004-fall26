@@ -1,0 +1,113 @@
+{ "difficulty_rule": "Level by number of variables V: easy V<=4, medium 5<=V<=6, hard V>=7. Secondary metrics (number of constraints C, log10 search space, solver calls) are computed by validate_problems.py and written to difficulty_p1.csv.",
+  "puzzles": [
+    {
+      "id": "q01",
+      "level": "easy",
+      "family": "permutation (alldiff + unary exclusions)",
+      "puzzle": "Four coworkers -- Dana, Eric, Fay, Gus -- each order a different drink: coffee, tea, juice, or water. Dana orders tea. Eric orders neither coffee nor water. Fay does not order water. Gus does not order juice.",
+      "gold": {"Dana": "tea", "Eric": "juice", "Fay": "coffee", "Gus": "water"},
+      "derivation": [
+        "Dana = tea (given).",
+        "Eric is not coffee, not water, and tea is taken -> Eric = juice.",
+        "Fay is not water; tea and juice are taken -> Fay = coffee.",
+        "Gus takes the remaining drink -> Gus = water (consistent with 'not juice')."
+      ],
+      "traps": ["'neither ... nor' must become two separate neq constraints"]
+    },
+    {
+      "id": "q02",
+      "level": "easy",
+      "family": "permutation (alldiff + pin + exclusions)",
+      "puzzle": "A florist places four plants -- Fern, Cactus, Orchid, Ivy -- on a rack with shelves numbered 1 to 4, one plant per shelf. Shelf 1 is the top shelf and shelf 4 is the bottom shelf. Ivy sits on the bottom shelf. Cactus is not on shelf 1 and not on shelf 2. Fern is not on shelf 2.",
+      "gold": {"Fern": 1, "Cactus": 3, "Orchid": 2, "Ivy": 4},
+      "derivation": [
+        "'Bottom shelf' is shelf 4 -> Ivy = 4.",
+        "Cactus is not 1, not 2, and 4 is taken -> Cactus = 3.",
+        "Fern is not 2; 3 and 4 are taken -> Fern = 1.",
+        "Orchid takes the remaining shelf -> Orchid = 2."
+      ],
+      "traps": ["'bottom shelf' must be mapped to the value 4 (indirect reference)", "domain values are integers, not strings"]
+    },
+    {
+      "id": "q03",
+      "level": "medium",
+      "family": "chain colouring, repeats allowed (no alldiff)",
+      "puzzle": "Five rooms in a hallway, Room1 to Room5, are each painted one colour: cream, mint, or sky. Colours may repeat. Room1 is cream. Room2 is not the same colour as Room1, and Room2 is not sky. Room3 is neither cream nor mint. Room4 is a different colour from Room3, and Room4 is not mint. Room5 is a different colour from Room4, and Room5 is not sky.",
+      "gold": {"Room1": "cream", "Room2": "mint", "Room3": "sky", "Room4": "cream", "Room5": "mint"},
+      "derivation": [
+        "Room1 = cream (given).",
+        "Room2 differs from Room1 (not cream) and is not sky -> Room2 = mint.",
+        "Room3 is neither cream nor mint -> Room3 = sky.",
+        "Room4 differs from Room3 (not sky) and is not mint -> Room4 = cream.",
+        "Room5 differs from Room4 (not cream) and is not sky -> Room5 = mint."
+      ],
+      "traps": ["colours repeat: adding an alldiff over 5 rooms with 3 colours makes the model UNSAT", "mix of variable-variable neq ('different from Room3') and variable-value neq ('not mint')"]
+    },
+    {
+      "id": "q04",
+      "level": "medium",
+      "family": "permutation / ranking (alldiff + pins + exclusions)",
+      "puzzle": "Six students -- Hana, Ivo, Jun, Kai, Lia, Moe -- finished a quiz in positions 1 to 6, with no ties. Jun finished first. Ivo finished last. Lia was not third, not fourth and not fifth. Hana was neither fourth nor fifth. Moe was not fourth.",
+      "gold": {"Hana": 3, "Ivo": 6, "Jun": 1, "Kai": 4, "Lia": 2, "Moe": 5},
+      "derivation": [
+        "Jun = 1 ('first'); Ivo = 6 ('last' among 6 positions).",
+        "Lia is not 3, 4 or 5; 1 and 6 are taken -> Lia = 2.",
+        "Hana is not 4 or 5; 1, 2, 6 are taken -> Hana = 3.",
+        "Moe is not 4; remaining {4, 5} -> Moe = 5.",
+        "Kai takes the remaining position -> Kai = 4."
+      ],
+      "traps": ["'last' must be resolved to 6 from the problem size", "'no ties' is the only cue for alldiff", "ordinal words (first, third...) must become integers"]
+    },
+    {
+      "id": "q05",
+      "level": "medium",
+      "family": "two alldiff groups + cross-group neq",
+      "puzzle": "At a dinner, six guests sit at two round tables. Ann, Ben and Cat sit at Table 1; Dan, Eve and Fay sit at Table 2. Each table has seats numbered 1, 2 and 3, and the three guests at the same table take different seats. Cat sits in seat 1. Ann is not in seat 3. Dan's seat number is different from Cat's seat number. Eve's seat number is different from Ann's. Fay's seat number is different from Ben's. Dan is not in seat 3.",
+      "gold": {"Ann": 2, "Ben": 3, "Cat": 1, "Dan": 2, "Eve": 3, "Fay": 1},
+      "derivation": [
+        "Table 1: Cat = 1; Ann is not 3 -> Ann = 2; Ben = 3.",
+        "Dan differs from Cat (not 1) and is not 3 -> Dan = 2.",
+        "Fay differs from Ben (not 3); 2 is taken by Dan at Table 2 -> Fay = 1.",
+        "Eve takes the remaining Table-2 seat -> Eve = 3 (consistent with 'different from Ann' = 2)."
+      ],
+      "traps": ["alldiff is per table, NOT over all six guests (one alldiff of 6 vars over 3 values is UNSAT)", "cross-table constraints are variable-variable neq", "'round tables' is irrelevant detail"]
+    },
+    {
+      "id": "q06",
+      "level": "hard",
+      "family": "4x4 mini-sudoku (12 alldiff groups + givens)",
+      "puzzle": "Solve a 4x4 mini-sudoku. Name each cell RxCy, where x is the row (1 to 4, top to bottom) and y is the column (1 to 4, left to right); for example R2C3 is row 2, column 3. The sixteen cells are R1C1, R1C2, R1C3, R1C4, R2C1, R2C2, R2C3, R2C4, R3C1, R3C2, R3C3, R3C4, R4C1, R4C2, R4C3 and R4C4. Every cell holds a number from 1 to 4. Each row, each column, and each of the four 2x2 boxes (rows 1-2 with columns 1-2, rows 1-2 with columns 3-4, rows 3-4 with columns 1-2, rows 3-4 with columns 3-4) contains every number exactly once. The given clues are: R1C1 is 1, R2C2 is 4, R2C4 is 2, R3C3 is 4, R3C4 is 3, R4C1 is 4.",
+      "gold": {
+        "R1C1": 1, "R1C2": 2, "R1C3": 3, "R1C4": 4,
+        "R2C1": 3, "R2C2": 4, "R2C3": 1, "R2C4": 2,
+        "R3C1": 2, "R3C2": 1, "R3C3": 4, "R3C4": 3,
+        "R4C1": 4, "R4C2": 3, "R4C3": 2, "R4C4": 1
+      },
+      "derivation": [
+        "Row 2 holds 4 and 2 -> R2C1, R2C3 in {1,3}. Column 1 already has 1 (R1C1) -> R2C1 = 3, R2C3 = 1.",
+        "Top-left box has 1, 3, 4 -> R1C2 = 2.",
+        "Row 3 holds 4 and 3 -> R3C1, R3C2 in {1,2}. Column 1 has 1 -> R3C1 = 2, R3C2 = 1.",
+        "Column 2 has 2, 4, 1 -> R4C2 = 3.",
+        "Column 4 has 2, 3 -> R1C4, R4C4 in {1,4}. Row 4 has 4 -> R4C4 = 1, R1C4 = 4.",
+        "Row 1 is 1, 2, _, 4 -> R1C3 = 3. Row 4 is 4, 3, _, 1 -> R4C3 = 2."
+      ],
+      "traps": ["16 variables and 12 alldiff groups: easy to drop a group (under-constrained) or put wrong cells in a box (arity/scope error)", "variable names must follow the RxCy convention"]
+    },
+    {
+      "id": "q07",
+      "level": "hard",
+      "family": "graph colouring / channel assignment (18 edges, repeats allowed)",
+      "puzzle": "Eight radio stations are located in the towns of Arden, Brook, Cliff, Dale, Elm, Fern, Glen and Heath. Each station broadcasts on one of four channels: 1, 2, 3 or 4. Several stations may share a channel, but two stations whose signals overlap must use different channels. The overlapping pairs are: Arden-Brook, Arden-Cliff, Arden-Dale, Brook-Cliff, Brook-Dale, Cliff-Dale, Elm-Brook, Elm-Cliff, Elm-Dale, Fern-Cliff, Fern-Dale, Fern-Elm, Glen-Dale, Glen-Elm, Glen-Fern, Heath-Elm, Heath-Fern, Heath-Glen. No other pairs overlap. The Heath station has the tallest antenna in the region. Arden broadcasts on channel 1, Brook on channel 2, and Cliff uses channel 3.",
+      "gold": {"Arden": 1, "Brook": 2, "Cliff": 3, "Dale": 4, "Elm": 1, "Fern": 2, "Glen": 3, "Heath": 4},
+      "derivation": [
+        "Arden = 1, Brook = 2, Cliff = 3 (given).",
+        "Dale overlaps Arden, Brook, Cliff -> Dale = 4.",
+        "Elm overlaps Brook, Cliff, Dale (2, 3, 4) -> Elm = 1.",
+        "Fern overlaps Cliff, Dale, Elm (3, 4, 1) -> Fern = 2.",
+        "Glen overlaps Dale, Elm, Fern (4, 1, 2) -> Glen = 3.",
+        "Heath overlaps Elm, Fern, Glen (1, 2, 3) -> Heath = 4."
+      ],
+      "traps": ["channels repeat: an alldiff over 8 stations with 4 channels is UNSAT", "18 edges to transcribe: dropping one makes the model under-constrained (silent wrong answer possible)", "'tallest antenna' is a distractor premise", "three different phrasings for the pins ('broadcasts on', 'on', 'uses')"]
+    }
+  ]
+}
