@@ -1,0 +1,23 @@
+section,key,value
+attempts_to_success,1,0
+attempts_to_success,2,0
+attempts_to_success,3,0
+never_converged,,60
+attempt1_failed,,60
+fixed_in_rounds_2_3,,0
+"first_failure_category:Valid syntax, under-constrained — caught by decoder (vertex without exactly one colour)",fixed,0
+"first_failure_category:Valid syntax, under-constrained — caught by decoder (vertex without exactly one colour)",never,18
+"first_failure_category:Arity / index error (invalid literal, var count or schema)",fixed,0
+"first_failure_category:Arity / index error (invalid literal, var count or schema)",never,30
+first_failure_category:Malformed syntax (won't parse),fixed,0
+first_failure_category:Malformed syntax (won't parse),never,7
+"first_failure_category:Valid syntax, under-constrained (wrong solution returned) — silent",fixed,0
+"first_failure_category:Valid syntax, under-constrained (wrong solution returned) — silent",never,4
+"first_failure_category:Valid syntax, over-constrained (UNSAT)",fixed,0
+"first_failure_category:Valid syntax, over-constrained (UNSAT)",never,1
+final_category_of_never_converged,"Valid syntax, under-constrained — caught by decoder (vertex without exactly one colour)",9
+final_category_of_never_converged,Malformed syntax (won't parse),24
+final_category_of_never_converged,"Arity / index error (invalid literal, var count or schema)",22
+final_category_of_never_converged,"Valid syntax, under-constrained (wrong solution returned) — silent",4
+final_category_of_never_converged,"Valid syntax, over-constrained (UNSAT)",1
+never_converged_same_category_every_attempt,,32

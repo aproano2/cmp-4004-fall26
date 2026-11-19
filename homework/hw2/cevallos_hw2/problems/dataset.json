@@ -1,0 +1,1634 @@
+[
+ {
+  "id": "P01",
+  "difficulty": "easy",
+  "difficulty_metric": {
+   "vertices": 4,
+   "boolean_variables": 12,
+   "edges": 4,
+   "reference_clauses": 28
+  },
+  "vertices": [
+   "A",
+   "B",
+   "C",
+   "D"
+  ],
+  "colors": [
+   "rojo",
+   "azul",
+   "verde"
+  ],
+  "edges": [
+   [
+    "A",
+    "B"
+   ],
+   [
+    "A",
+    "D"
+   ],
+   [
+    "B",
+    "C"
+   ],
+   [
+    "C",
+    "D"
+   ]
+  ],
+  "ground_truth": {
+   "A": "rojo",
+   "B": "azul",
+   "C": "verde",
+   "D": "azul"
+  },
+  "prompt_es": "Colorea el grafo no dirigido con 4 vértices (A, B, C, D) usando exactamente uno de estos colores por vértice: rojo, azul y verde. Los vértices conectados por una arista deben tener colores distintos. Aristas: A-B, A-D, B-C, C-D. Encuentra una asignación válida para todos los vértices."
+ },
+ {
+  "id": "P02",
+  "difficulty": "easy",
+  "difficulty_metric": {
+   "vertices": 5,
+   "boolean_variables": 15,
+   "edges": 4,
+   "reference_clauses": 32
+  },
+  "vertices": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "colors": [
+   "rojo",
+   "azul",
+   "verde"
+  ],
+  "edges": [
+   [
+    "A",
+    "B"
+   ],
+   [
+    "B",
+    "C"
+   ],
+   [
+    "C",
+    "D"
+   ],
+   [
+    "D",
+    "E"
+   ]
+  ],
+  "ground_truth": {
+   "A": "rojo",
+   "B": "azul",
+   "C": "verde",
+   "D": "azul",
+   "E": "verde"
+  },
+  "prompt_es": "Colorea el grafo no dirigido con 5 vértices (A, B, C, D, E) usando exactamente uno de estos colores por vértice: rojo, azul y verde. Los vértices conectados por una arista deben tener colores distintos. Aristas: A-B, B-C, C-D, D-E. Encuentra una asignación válida para todos los vértices."
+ },
+ {
+  "id": "P03",
+  "difficulty": "easy",
+  "difficulty_metric": {
+   "vertices": 4,
+   "boolean_variables": 12,
+   "edges": 3,
+   "reference_clauses": 25
+  },
+  "vertices": [
+   "A",
+   "B",
+   "C",
+   "D"
+  ],
+  "colors": [
+   "rojo",
+   "azul",
+   "verde"
+  ],
+  "edges": [
+   [
+    "A",
+    "B"
+   ],
+   [
+    "A",
+    "D"
+   ],
+   [
+    "B",
+    "C"
+   ]
+  ],
+  "ground_truth": {
+   "A": "rojo",
+   "B": "azul",
+   "C": "verde",
+   "D": "verde"
+  },
+  "prompt_es": "Colorea el grafo no dirigido con 4 vértices (A, B, C, D) usando exactamente uno de estos colores por vértice: rojo, azul y verde. Los vértices conectados por una arista deben tener colores distintos. Aristas: A-B, A-D, B-C. Encuentra una asignación válida para todos los vértices."
+ },
+ {
+  "id": "P04",
+  "difficulty": "easy",
+  "difficulty_metric": {
+   "vertices": 5,
+   "boolean_variables": 15,
+   "edges": 2,
+   "reference_clauses": 26
+  },
+  "vertices": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "colors": [
+   "rojo",
+   "azul",
+   "verde"
+  ],
+  "edges": [
+   [
+    "A",
+    "B"
+   ],
+   [
+    "B",
+    "C"
+   ]
+  ],
+  "ground_truth": {
+   "A": "rojo",
+   "B": "azul",
+   "C": "verde",
+   "D": "verde",
+   "E": "verde"
+  },
+  "prompt_es": "Colorea el grafo no dirigido con 5 vértices (A, B, C, D, E) usando exactamente uno de estos colores por vértice: rojo, azul y verde. Los vértices conectados por una arista deben tener colores distintos. Aristas: A-B, B-C. Encuentra una asignación válida para todos los vértices."
+ },
+ {
+  "id": "P05",
+  "difficulty": "easy",
+  "difficulty_metric": {
+   "vertices": 5,
+   "boolean_variables": 15,
+   "edges": 3,
+   "reference_clauses": 29
+  },
+  "vertices": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "colors": [
+   "rojo",
+   "azul",
+   "verde"
+  ],
+  "edges": [
+   [
+    "A",
+    "B"
+   ],
+   [
+    "A",
+    "E"
+   ],
+   [
+    "B",
+    "C"
+   ]
+  ],
+  "ground_truth": {
+   "A": "rojo",
+   "B": "azul",
+   "C": "verde",
+   "D": "verde",
+   "E": "verde"
+  },
+  "prompt_es": "Colorea el grafo no dirigido con 5 vértices (A, B, C, D, E) usando exactamente uno de estos colores por vértice: rojo, azul y verde. Los vértices conectados por una arista deben tener colores distintos. Aristas: A-B, A-E, B-C. Encuentra una asignación válida para todos los vértices."
+ },
+ {
+  "id": "P06",
+  "difficulty": "easy",
+  "difficulty_metric": {
+   "vertices": 6,
+   "boolean_variables": 18,
+   "edges": 4,
+   "reference_clauses": 36
+  },
+  "vertices": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E",
+   "F"
+  ],
+  "colors": [
+   "rojo",
+   "azul",
+   "verde"
+  ],
+  "edges": [
+   [
+    "A",
+    "B"
+   ],
+   [
+    "B",
+    "C"
+   ],
+   [
+    "D",
+    "E"
+   ],
+   [
+    "E",
+    "F"
+   ]
+  ],
+  "ground_truth": {
+   "A": "rojo",
+   "B": "azul",
+   "C": "verde",
+   "D": "verde",
+   "E": "azul",
+   "F": "verde"
+  },
+  "prompt_es": "Colorea el grafo no dirigido con 6 vértices (A, B, C, D, E, F) usando exactamente uno de estos colores por vértice: rojo, azul y verde. Los vértices conectados por una arista deben tener colores distintos. Aristas: A-B, B-C, D-E, E-F. Encuentra una asignación válida para todos los vértices."
+ },
+ {
+  "id": "P07",
+  "difficulty": "medium",
+  "difficulty_metric": {
+   "vertices": 6,
+   "boolean_variables": 18,
+   "edges": 6,
+   "reference_clauses": 42
+  },
+  "vertices": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E",
+   "F"
+  ],
+  "colors": [
+   "rojo",
+   "azul",
+   "verde"
+  ],
+  "edges": [
+   [
+    "A",
+    "B"
+   ],
+   [
+    "A",
+    "C"
+   ],
+   [
+    "A",
+    "D"
+   ],
+   [
+    "A",
+    "E"
+   ],
+   [
+    "B",
+    "C"
+   ],
+   [
+    "C",
+    "D"
+   ]
+  ],
+  "ground_truth": {
+   "A": "rojo",
+   "B": "azul",
+   "C": "verde",
+   "D": "azul",
+   "E": "azul",
+   "F": "azul"
+  },
+  "prompt_es": "Colorea el grafo no dirigido con 6 vértices (A, B, C, D, E, F) usando exactamente uno de estos colores por vértice: rojo, azul y verde. Los vértices conectados por una arista deben tener colores distintos. Aristas: A-B, A-C, A-D, A-E, B-C, C-D. Encuentra una asignación válida para todos los vértices."
+ },
+ {
+  "id": "P08",
+  "difficulty": "medium",
+  "difficulty_metric": {
+   "vertices": 6,
+   "boolean_variables": 18,
+   "edges": 6,
+   "reference_clauses": 42
+  },
+  "vertices": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E",
+   "F"
+  ],
+  "colors": [
+   "rojo",
+   "azul",
+   "verde"
+  ],
+  "edges": [
+   [
+    "A",
+    "B"
+   ],
+   [
+    "A",
+    "E"
+   ],
+   [
+    "B",
+    "C"
+   ],
+   [
+    "B",
+    "D"
+   ],
+   [
+    "C",
+    "D"
+   ],
+   [
+    "D",
+    "E"
+   ]
+  ],
+  "ground_truth": {
+   "A": "rojo",
+   "B": "azul",
+   "C": "verde",
+   "D": "rojo",
+   "E": "verde",
+   "F": "verde"
+  },
+  "prompt_es": "Colorea el grafo no dirigido con 6 vértices (A, B, C, D, E, F) usando exactamente uno de estos colores por vértice: rojo, azul y verde. Los vértices conectados por una arista deben tener colores distintos. Aristas: A-B, A-E, B-C, B-D, C-D, D-E. Encuentra una asignación válida para todos los vértices."
+ },
+ {
+  "id": "P09",
+  "difficulty": "medium",
+  "difficulty_metric": {
+   "vertices": 7,
+   "boolean_variables": 21,
+   "edges": 11,
+   "reference_clauses": 61
+  },
+  "vertices": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E",
+   "F",
+   "G"
+  ],
+  "colors": [
+   "rojo",
+   "azul",
+   "verde"
+  ],
+  "edges": [
+   [
+    "A",
+    "B"
+   ],
+   [
+    "A",
+    "E"
+   ],
+   [
+    "B",
+    "C"
+   ],
+   [
+    "B",
+    "G"
+   ],
+   [
+    "C",
+    "D"
+   ],
+   [
+    "C",
+    "F"
+   ],
+   [
+    "C",
+    "G"
+   ],
+   [
+    "D",
+    "E"
+   ],
+   [
+    "D",
+    "F"
+   ],
+   [
+    "E",
+    "G"
+   ],
+   [
+    "F",
+    "G"
+   ]
+  ],
+  "ground_truth": {
+   "A": "rojo",
+   "B": "azul",
+   "C": "verde",
+   "D": "rojo",
+   "E": "azul",
+   "F": "azul",
+   "G": "rojo"
+  },
+  "prompt_es": "Colorea el grafo no dirigido con 7 vértices (A, B, C, D, E, F, G) usando exactamente uno de estos colores por vértice: rojo, azul y verde. Los vértices conectados por una arista deben tener colores distintos. Aristas: A-B, A-E, B-C, B-G, C-D, C-F, C-G, D-E, D-F, E-G, F-G. Encuentra una asignación válida para todos los vértices."
+ },
+ {
+  "id": "P10",
+  "difficulty": "medium",
+  "difficulty_metric": {
+   "vertices": 7,
+   "boolean_variables": 21,
+   "edges": 10,
+   "reference_clauses": 58
+  },
+  "vertices": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E",
+   "F",
+   "G"
+  ],
+  "colors": [
+   "rojo",
+   "azul",
+   "verde"
+  ],
+  "edges": [
+   [
+    "A",
+    "B"
+   ],
+   [
+    "A",
+    "C"
+   ],
+   [
+    "A",
+    "F"
+   ],
+   [
+    "B",
+    "C"
+   ],
+   [
+    "B",
+    "E"
+   ],
+   [
+    "C",
+    "E"
+   ],
+   [
+    "D",
+    "E"
+   ],
+   [
+    "D",
+    "F"
+   ],
+   [
+    "E",
+    "F"
+   ],
+   [
+    "F",
+    "G"
+   ]
+  ],
+  "ground_truth": {
+   "A": "rojo",
+   "B": "azul",
+   "C": "verde",
+   "D": "verde",
+   "E": "rojo",
+   "F": "azul",
+   "G": "verde"
+  },
+  "prompt_es": "Colorea el grafo no dirigido con 7 vértices (A, B, C, D, E, F, G) usando exactamente uno de estos colores por vértice: rojo, azul y verde. Los vértices conectados por una arista deben tener colores distintos. Aristas: A-B, A-C, A-F, B-C, B-E, C-E, D-E, D-F, E-F, F-G. Encuentra una asignación válida para todos los vértices."
+ },
+ {
+  "id": "P11",
+  "difficulty": "medium",
+  "difficulty_metric": {
+   "vertices": 7,
+   "boolean_variables": 21,
+   "edges": 8,
+   "reference_clauses": 52
+  },
+  "vertices": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E",
+   "F",
+   "G"
+  ],
+  "colors": [
+   "rojo",
+   "azul",
+   "verde"
+  ],
+  "edges": [
+   [
+    "A",
+    "B"
+   ],
+   [
+    "B",
+    "C"
+   ],
+   [
+    "B",
+    "G"
+   ],
+   [
+    "C",
+    "D"
+   ],
+   [
+    "D",
+    "E"
+   ],
+   [
+    "D",
+    "G"
+   ],
+   [
+    "E",
+    "F"
+   ],
+   [
+    "E",
+    "G"
+   ]
+  ],
+  "ground_truth": {
+   "A": "rojo",
+   "B": "azul",
+   "C": "verde",
+   "D": "azul",
+   "E": "verde",
+   "F": "rojo",
+   "G": "rojo"
+  },
+  "prompt_es": "Colorea el grafo no dirigido con 7 vértices (A, B, C, D, E, F, G) usando exactamente uno de estos colores por vértice: rojo, azul y verde. Los vértices conectados por una arista deben tener colores distintos. Aristas: A-B, B-C, B-G, C-D, D-E, D-G, E-F, E-G. Encuentra una asignación válida para todos los vértices."
+ },
+ {
+  "id": "P12",
+  "difficulty": "medium",
+  "difficulty_metric": {
+   "vertices": 8,
+   "boolean_variables": 24,
+   "edges": 9,
+   "reference_clauses": 59
+  },
+  "vertices": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E",
+   "F",
+   "G",
+   "H"
+  ],
+  "colors": [
+   "rojo",
+   "azul",
+   "verde"
+  ],
+  "edges": [
+   [
+    "A",
+    "B"
+   ],
+   [
+    "B",
+    "C"
+   ],
+   [
+    "C",
+    "D"
+   ],
+   [
+    "C",
+    "F"
+   ],
+   [
+    "D",
+    "E"
+   ],
+   [
+    "D",
+    "F"
+   ],
+   [
+    "E",
+    "G"
+   ],
+   [
+    "F",
+    "G"
+   ],
+   [
+    "G",
+    "H"
+   ]
+  ],
+  "ground_truth": {
+   "A": "rojo",
+   "B": "azul",
+   "C": "verde",
+   "D": "azul",
+   "E": "rojo",
+   "F": "rojo",
+   "G": "verde",
+   "H": "rojo"
+  },
+  "prompt_es": "Colorea el grafo no dirigido con 8 vértices (A, B, C, D, E, F, G, H) usando exactamente uno de estos colores por vértice: rojo, azul y verde. Los vértices conectados por una arista deben tener colores distintos. Aristas: A-B, B-C, C-D, C-F, D-E, D-F, E-G, F-G, G-H. Encuentra una asignación válida para todos los vértices."
+ },
+ {
+  "id": "P13",
+  "difficulty": "medium",
+  "difficulty_metric": {
+   "vertices": 8,
+   "boolean_variables": 24,
+   "edges": 11,
+   "reference_clauses": 65
+  },
+  "vertices": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E",
+   "F",
+   "G",
+   "H"
+  ],
+  "colors": [
+   "rojo",
+   "azul",
+   "verde"
+  ],
+  "edges": [
+   [
+    "A",
+    "B"
+   ],
+   [
+    "A",
+    "F"
+   ],
+   [
+    "A",
+    "G"
+   ],
+   [
+    "B",
+    "C"
+   ],
+   [
+    "C",
+    "D"
+   ],
+   [
+    "C",
+    "H"
+   ],
+   [
+    "D",
+    "E"
+   ],
+   [
+    "E",
+    "F"
+   ],
+   [
+    "E",
+    "H"
+   ],
+   [
+    "F",
+    "G"
+   ],
+   [
+    "G",
+    "H"
+   ]
+  ],
+  "ground_truth": {
+   "A": "rojo",
+   "B": "azul",
+   "C": "verde",
+   "D": "azul",
+   "E": "verde",
+   "F": "azul",
+   "G": "verde",
+   "H": "rojo"
+  },
+  "prompt_es": "Colorea el grafo no dirigido con 8 vértices (A, B, C, D, E, F, G, H) usando exactamente uno de estos colores por vértice: rojo, azul y verde. Los vértices conectados por una arista deben tener colores distintos. Aristas: A-B, A-F, A-G, B-C, C-D, C-H, D-E, E-F, E-H, F-G, G-H. Encuentra una asignación válida para todos los vértices."
+ },
+ {
+  "id": "P14",
+  "difficulty": "hard",
+  "difficulty_metric": {
+   "vertices": 8,
+   "boolean_variables": 24,
+   "edges": 14,
+   "reference_clauses": 74
+  },
+  "vertices": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E",
+   "F",
+   "G",
+   "H"
+  ],
+  "colors": [
+   "rojo",
+   "azul",
+   "verde"
+  ],
+  "edges": [
+   [
+    "A",
+    "B"
+   ],
+   [
+    "A",
+    "C"
+   ],
+   [
+    "A",
+    "F"
+   ],
+   [
+    "B",
+    "C"
+   ],
+   [
+    "B",
+    "D"
+   ],
+   [
+    "B",
+    "E"
+   ],
+   [
+    "B",
+    "F"
+   ],
+   [
+    "B",
+    "G"
+   ],
+   [
+    "C",
+    "D"
+   ],
+   [
+    "C",
+    "G"
+   ],
+   [
+    "D",
+    "E"
+   ],
+   [
+    "D",
+    "F"
+   ],
+   [
+    "E",
+    "G"
+   ],
+   [
+    "F",
+    "G"
+   ]
+  ],
+  "ground_truth": {
+   "A": "rojo",
+   "B": "azul",
+   "C": "verde",
+   "D": "rojo",
+   "E": "verde",
+   "F": "verde",
+   "G": "rojo",
+   "H": "rojo"
+  },
+  "prompt_es": "Colorea el grafo no dirigido con 8 vértices (A, B, C, D, E, F, G, H) usando exactamente uno de estos colores por vértice: rojo, azul y verde. Los vértices conectados por una arista deben tener colores distintos. Aristas: A-B, A-C, A-F, B-C, B-D, B-E, B-F, B-G, C-D, C-G, D-E, D-F, E-G, F-G. Encuentra una asignación válida para todos los vértices."
+ },
+ {
+  "id": "P15",
+  "difficulty": "hard",
+  "difficulty_metric": {
+   "vertices": 8,
+   "boolean_variables": 24,
+   "edges": 16,
+   "reference_clauses": 80
+  },
+  "vertices": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E",
+   "F",
+   "G",
+   "H"
+  ],
+  "colors": [
+   "rojo",
+   "azul",
+   "verde"
+  ],
+  "edges": [
+   [
+    "A",
+    "B"
+   ],
+   [
+    "A",
+    "D"
+   ],
+   [
+    "A",
+    "E"
+   ],
+   [
+    "A",
+    "F"
+   ],
+   [
+    "B",
+    "C"
+   ],
+   [
+    "B",
+    "E"
+   ],
+   [
+    "C",
+    "D"
+   ],
+   [
+    "C",
+    "G"
+   ],
+   [
+    "C",
+    "H"
+   ],
+   [
+    "D",
+    "E"
+   ],
+   [
+    "D",
+    "G"
+   ],
+   [
+    "E",
+    "F"
+   ],
+   [
+    "E",
+    "G"
+   ],
+   [
+    "E",
+    "H"
+   ],
+   [
+    "F",
+    "G"
+   ],
+   [
+    "G",
+    "H"
+   ]
+  ],
+  "ground_truth": {
+   "A": "rojo",
+   "B": "azul",
+   "C": "verde",
+   "D": "azul",
+   "E": "verde",
+   "F": "azul",
+   "G": "rojo",
+   "H": "azul"
+  },
+  "prompt_es": "Colorea el grafo no dirigido con 8 vértices (A, B, C, D, E, F, G, H) usando exactamente uno de estos colores por vértice: rojo, azul y verde. Los vértices conectados por una arista deben tener colores distintos. Aristas: A-B, A-D, A-E, A-F, B-C, B-E, C-D, C-G, C-H, D-E, D-G, E-F, E-G, E-H, F-G, G-H. Encuentra una asignación válida para todos los vértices."
+ },
+ {
+  "id": "P16",
+  "difficulty": "hard",
+  "difficulty_metric": {
+   "vertices": 9,
+   "boolean_variables": 27,
+   "edges": 21,
+   "reference_clauses": 99
+  },
+  "vertices": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E",
+   "F",
+   "G",
+   "H",
+   "I"
+  ],
+  "colors": [
+   "rojo",
+   "azul",
+   "verde"
+  ],
+  "edges": [
+   [
+    "A",
+    "B"
+   ],
+   [
+    "A",
+    "D"
+   ],
+   [
+    "A",
+    "E"
+   ],
+   [
+    "A",
+    "G"
+   ],
+   [
+    "A",
+    "I"
+   ],
+   [
+    "B",
+    "C"
+   ],
+   [
+    "B",
+    "D"
+   ],
+   [
+    "B",
+    "F"
+   ],
+   [
+    "B",
+    "H"
+   ],
+   [
+    "C",
+    "E"
+   ],
+   [
+    "C",
+    "G"
+   ],
+   [
+    "C",
+    "H"
+   ],
+   [
+    "D",
+    "E"
+   ],
+   [
+    "D",
+    "G"
+   ],
+   [
+    "D",
+    "H"
+   ],
+   [
+    "E",
+    "F"
+   ],
+   [
+    "E",
+    "H"
+   ],
+   [
+    "F",
+    "G"
+   ],
+   [
+    "F",
+    "H"
+   ],
+   [
+    "G",
+    "H"
+   ],
+   [
+    "H",
+    "I"
+   ]
+  ],
+  "ground_truth": {
+   "A": "rojo",
+   "B": "azul",
+   "C": "verde",
+   "D": "verde",
+   "E": "azul",
+   "F": "verde",
+   "G": "azul",
+   "H": "rojo",
+   "I": "azul"
+  },
+  "prompt_es": "Colorea el grafo no dirigido con 9 vértices (A, B, C, D, E, F, G, H, I) usando exactamente uno de estos colores por vértice: rojo, azul y verde. Los vértices conectados por una arista deben tener colores distintos. Aristas: A-B, A-D, A-E, A-G, A-I, B-C, B-D, B-F, B-H, C-E, C-G, C-H, D-E, D-G, D-H, E-F, E-H, F-G, F-H, G-H, H-I. Encuentra una asignación válida para todos los vértices."
+ },
+ {
+  "id": "P17",
+  "difficulty": "hard",
+  "difficulty_metric": {
+   "vertices": 9,
+   "boolean_variables": 27,
+   "edges": 25,
+   "reference_clauses": 111
+  },
+  "vertices": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E",
+   "F",
+   "G",
+   "H",
+   "I"
+  ],
+  "colors": [
+   "rojo",
+   "azul",
+   "verde"
+  ],
+  "edges": [
+   [
+    "A",
+    "B"
+   ],
+   [
+    "A",
+    "C"
+   ],
+   [
+    "A",
+    "E"
+   ],
+   [
+    "A",
+    "F"
+   ],
+   [
+    "A",
+    "G"
+   ],
+   [
+    "A",
+    "H"
+   ],
+   [
+    "A",
+    "I"
+   ],
+   [
+    "B",
+    "C"
+   ],
+   [
+    "B",
+    "F"
+   ],
+   [
+    "B",
+    "H"
+   ],
+   [
+    "C",
+    "D"
+   ],
+   [
+    "C",
+    "E"
+   ],
+   [
+    "C",
+    "G"
+   ],
+   [
+    "C",
+    "I"
+   ],
+   [
+    "D",
+    "E"
+   ],
+   [
+    "D",
+    "F"
+   ],
+   [
+    "D",
+    "G"
+   ],
+   [
+    "D",
+    "H"
+   ],
+   [
+    "D",
+    "I"
+   ],
+   [
+    "E",
+    "F"
+   ],
+   [
+    "E",
+    "H"
+   ],
+   [
+    "F",
+    "G"
+   ],
+   [
+    "F",
+    "I"
+   ],
+   [
+    "G",
+    "H"
+   ],
+   [
+    "H",
+    "I"
+   ]
+  ],
+  "ground_truth": {
+   "A": "rojo",
+   "B": "azul",
+   "C": "verde",
+   "D": "rojo",
+   "E": "azul",
+   "F": "verde",
+   "G": "azul",
+   "H": "verde",
+   "I": "azul"
+  },
+  "prompt_es": "Colorea el grafo no dirigido con 9 vértices (A, B, C, D, E, F, G, H, I) usando exactamente uno de estos colores por vértice: rojo, azul y verde. Los vértices conectados por una arista deben tener colores distintos. Aristas: A-B, A-C, A-E, A-F, A-G, A-H, A-I, B-C, B-F, B-H, C-D, C-E, C-G, C-I, D-E, D-F, D-G, D-H, D-I, E-F, E-H, F-G, F-I, G-H, H-I. Encuentra una asignación válida para todos los vértices."
+ },
+ {
+  "id": "P18",
+  "difficulty": "hard",
+  "difficulty_metric": {
+   "vertices": 10,
+   "boolean_variables": 30,
+   "edges": 23,
+   "reference_clauses": 109
+  },
+  "vertices": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E",
+   "F",
+   "G",
+   "H",
+   "I",
+   "J"
+  ],
+  "colors": [
+   "rojo",
+   "azul",
+   "verde"
+  ],
+  "edges": [
+   [
+    "A",
+    "B"
+   ],
+   [
+    "A",
+    "F"
+   ],
+   [
+    "A",
+    "H"
+   ],
+   [
+    "B",
+    "C"
+   ],
+   [
+    "B",
+    "D"
+   ],
+   [
+    "B",
+    "F"
+   ],
+   [
+    "B",
+    "G"
+   ],
+   [
+    "B",
+    "J"
+   ],
+   [
+    "C",
+    "D"
+   ],
+   [
+    "C",
+    "H"
+   ],
+   [
+    "C",
+    "J"
+   ],
+   [
+    "D",
+    "F"
+   ],
+   [
+    "D",
+    "H"
+   ],
+   [
+    "D",
+    "I"
+   ],
+   [
+    "E",
+    "F"
+   ],
+   [
+    "E",
+    "H"
+   ],
+   [
+    "F",
+    "G"
+   ],
+   [
+    "F",
+    "H"
+   ],
+   [
+    "F",
+    "I"
+   ],
+   [
+    "F",
+    "J"
+   ],
+   [
+    "G",
+    "H"
+   ],
+   [
+    "H",
+    "J"
+   ],
+   [
+    "I",
+    "J"
+   ]
+  ],
+  "ground_truth": {
+   "A": "rojo",
+   "B": "azul",
+   "C": "verde",
+   "D": "rojo",
+   "E": "rojo",
+   "F": "verde",
+   "G": "rojo",
+   "H": "azul",
+   "I": "azul",
+   "J": "rojo"
+  },
+  "prompt_es": "Colorea el grafo no dirigido con 10 vértices (A, B, C, D, E, F, G, H, I, J) usando exactamente uno de estos colores por vértice: rojo, azul y verde. Los vértices conectados por una arista deben tener colores distintos. Aristas: A-B, A-F, A-H, B-C, B-D, B-F, B-G, B-J, C-D, C-H, C-J, D-F, D-H, D-I, E-F, E-H, F-G, F-H, F-I, F-J, G-H, H-J, I-J. Encuentra una asignación válida para todos los vértices."
+ },
+ {
+  "id": "P19",
+  "difficulty": "hard",
+  "difficulty_metric": {
+   "vertices": 10,
+   "boolean_variables": 30,
+   "edges": 25,
+   "reference_clauses": 115
+  },
+  "vertices": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E",
+   "F",
+   "G",
+   "H",
+   "I",
+   "J"
+  ],
+  "colors": [
+   "rojo",
+   "azul",
+   "verde"
+  ],
+  "edges": [
+   [
+    "A",
+    "B"
+   ],
+   [
+    "A",
+    "C"
+   ],
+   [
+    "A",
+    "D"
+   ],
+   [
+    "A",
+    "F"
+   ],
+   [
+    "A",
+    "G"
+   ],
+   [
+    "A",
+    "H"
+   ],
+   [
+    "A",
+    "I"
+   ],
+   [
+    "B",
+    "C"
+   ],
+   [
+    "B",
+    "E"
+   ],
+   [
+    "B",
+    "J"
+   ],
+   [
+    "C",
+    "E"
+   ],
+   [
+    "C",
+    "G"
+   ],
+   [
+    "C",
+    "I"
+   ],
+   [
+    "D",
+    "E"
+   ],
+   [
+    "D",
+    "F"
+   ],
+   [
+    "D",
+    "G"
+   ],
+   [
+    "D",
+    "I"
+   ],
+   [
+    "E",
+    "F"
+   ],
+   [
+    "E",
+    "I"
+   ],
+   [
+    "E",
+    "J"
+   ],
+   [
+    "F",
+    "H"
+   ],
+   [
+    "F",
+    "J"
+   ],
+   [
+    "G",
+    "H"
+   ],
+   [
+    "H",
+    "I"
+   ],
+   [
+    "I",
+    "J"
+   ]
+  ],
+  "ground_truth": {
+   "A": "rojo",
+   "B": "azul",
+   "C": "verde",
+   "D": "verde",
+   "E": "rojo",
+   "F": "azul",
+   "G": "azul",
+   "H": "verde",
+   "I": "azul",
+   "J": "verde"
+  },
+  "prompt_es": "Colorea el grafo no dirigido con 10 vértices (A, B, C, D, E, F, G, H, I, J) usando exactamente uno de estos colores por vértice: rojo, azul y verde. Los vértices conectados por una arista deben tener colores distintos. Aristas: A-B, A-C, A-D, A-F, A-G, A-H, A-I, B-C, B-E, B-J, C-E, C-G, C-I, D-E, D-F, D-G, D-I, E-F, E-I, E-J, F-H, F-J, G-H, H-I, I-J. Encuentra una asignación válida para todos los vértices."
+ },
+ {
+  "id": "P20",
+  "difficulty": "hard",
+  "difficulty_metric": {
+   "vertices": 10,
+   "boolean_variables": 30,
+   "edges": 22,
+   "reference_clauses": 106
+  },
+  "vertices": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E",
+   "F",
+   "G",
+   "H",
+   "I",
+   "J"
+  ],
+  "colors": [
+   "rojo",
+   "azul",
+   "verde"
+  ],
+  "edges": [
+   [
+    "A",
+    "B"
+   ],
+   [
+    "A",
+    "C"
+   ],
+   [
+    "A",
+    "F"
+   ],
+   [
+    "A",
+    "H"
+   ],
+   [
+    "B",
+    "C"
+   ],
+   [
+    "B",
+    "D"
+   ],
+   [
+    "B",
+    "E"
+   ],
+   [
+    "B",
+    "G"
+   ],
+   [
+    "C",
+    "D"
+   ],
+   [
+    "C",
+    "H"
+   ],
+   [
+    "C",
+    "J"
+   ],
+   [
+    "D",
+    "E"
+   ],
+   [
+    "D",
+    "H"
+   ],
+   [
+    "E",
+    "H"
+   ],
+   [
+    "E",
+    "J"
+   ],
+   [
+    "F",
+    "G"
+   ],
+   [
+    "F",
+    "H"
+   ],
+   [
+    "F",
+    "J"
+   ],
+   [
+    "G",
+    "H"
+   ],
+   [
+    "G",
+    "I"
+   ],
+   [
+    "H",
+    "I"
+   ],
+   [
+    "I",
+    "J"
+   ]
+  ],
+  "ground_truth": {
+   "A": "rojo",
+   "B": "azul",
+   "C": "verde",
+   "D": "rojo",
+   "E": "verde",
+   "F": "verde",
+   "G": "rojo",
+   "H": "azul",
+   "I": "verde",
+   "J": "azul"
+  },
+  "prompt_es": "Colorea el grafo no dirigido con 10 vértices (A, B, C, D, E, F, G, H, I, J) usando exactamente uno de estos colores por vértice: rojo, azul y verde. Los vértices conectados por una arista deben tener colores distintos. Aristas: A-B, A-C, A-F, A-H, B-C, B-D, B-E, B-G, C-D, C-H, C-J, D-E, D-H, E-H, E-J, F-G, F-H, F-J, G-H, G-I, H-I, I-J. Encuentra una asignación válida para todos los vértices."
+ }
+]

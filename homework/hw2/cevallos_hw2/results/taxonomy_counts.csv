@@ -1,0 +1,6 @@
+category,detectable_without_ground_truth,count
+"Arity / index error (invalid literal, var count or schema)",Yes,30
+"Valid syntax, under-constrained — caught by decoder (vertex without exactly one colour)",Yes (decoder),18
+Malformed syntax (won't parse),Yes,7
+"Valid syntax, under-constrained (wrong solution returned) — silent",No (needs a verifier / reference),4
+"Valid syntax, over-constrained (UNSAT)",Yes,1

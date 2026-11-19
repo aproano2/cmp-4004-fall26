@@ -1,0 +1,5 @@
+arm,wrong_total,announced_by_pipeline,silent,frac_announced
+A — Hand,0,0,0,n/a
+B — Hybrid,60,56,4,0.933
+B′ — Refinement,60,56,4,0.933
+C — Direct,38,5,33,0.132
