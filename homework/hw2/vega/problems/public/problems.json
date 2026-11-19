@@ -1,0 +1,1034 @@
+{
+ "_readme": "Enunciados PUBLICOS de HW2 (20 problemas CSP de Ingeniería Industrial). Esto es lo único que pueden ver los brazos B, B' y C. 'answer_format' lista las claves y valores permitidos de la respuesta; decidan como equipo si se muestra al LLM (y háganlo igual en B y en C).",
+ "problems": [
+  {
+   "id": "F01",
+   "title": "Asignación de órdenes a máquinas",
+   "area": "Producción",
+   "difficulty": "facil",
+   "statement": "Un taller metalmecánico debe procesar hoy tres órdenes de producción: OP1 (un eje de acero), OP2 (una brida de aluminio con ranuras) y OP3 (una carcasa de polímero). Dispone de tres máquinas: un centro CNC, un torno y una fresadora. Cada orden se procesa completa en una sola máquina.\n\nReglas:\n1. Cada máquina procesa exactamente una orden y cada orden va a exactamente una máquina.\n2. El torno no puede hacer ranuras, por lo que la OP2 no puede asignarse al torno.\n3. El torno está calibrado solo para metales, por lo que la OP3 no puede asignarse al torno.\n4. La sujeción de la fresadora no es compatible con la carcasa de polímero, por lo que la OP3 no puede asignarse a la fresadora.\n\nPregunta: ¿Qué máquina procesa cada orden (OP1, OP2 y OP3)?",
+   "answer_format": {
+    "keys": [
+     "OP1",
+     "OP2",
+     "OP3"
+    ],
+    "allowed_values": {
+     "OP1": [
+      "CNC",
+      "TORNO",
+      "FRESADORA"
+     ],
+     "OP2": [
+      "CNC",
+      "TORNO",
+      "FRESADORA"
+     ],
+     "OP3": [
+      "CNC",
+      "TORNO",
+      "FRESADORA"
+     ]
+    }
+   }
+  },
+  {
+   "id": "F02",
+   "title": "Asignación de muelles de carga",
+   "area": "Logística",
+   "difficulty": "facil",
+   "statement": "Un centro de distribución recibe a la misma hora tres camiones: C1 (refrigerado), C2 (carga a granel) y C3 (paquetería). Hay tres muelles numerados 1, 2 y 3, ubicados uno junto al otro en ese orden, de modo que los muelles 1 y 2 son vecinos, y los muelles 2 y 3 también.\n\nReglas:\n1. Cada muelle atiende exactamente a un camión.\n2. Solo los muelles 1 y 3 tienen conexión eléctrica para equipos de frío, y el camión refrigerado C1 la necesita.\n3. El camión de granel C2 necesita la rampa niveladora, que no existe en el muelle 3.\n4. C3 debe quedar en un muelle vecino al de C1, porque ambos comparten el mismo montacargas.\n\nPregunta: ¿En qué muelle (1, 2 o 3) se descarga cada camión (C1, C2 y C3)?",
+   "answer_format": {
+    "keys": [
+     "C1",
+     "C2",
+     "C3"
+    ],
+    "allowed_values": {
+     "C1": [
+      1,
+      2,
+      3
+     ],
+     "C2": [
+      1,
+      2,
+      3
+     ],
+     "C3": [
+      1,
+      2,
+      3
+     ]
+    }
+   }
+  },
+  {
+   "id": "F03",
+   "title": "Calendario de mantenimiento preventivo",
+   "area": "Mantenimiento",
+   "difficulty": "facil",
+   "statement": "La jefatura de mantenimiento de una planta de alimentos debe programar el mantenimiento preventivo de cuatro equipos: el compresor, la caldera, la banda transportadora y la prensa. Hay cuatro días disponibles, numerados del 1 (lunes) al 4 (jueves), y la cuadrilla atiende exactamente un equipo por día.\n\nReglas:\n1. Cada equipo recibe mantenimiento en un día distinto (uno por día).\n2. La prensa es neumática, por lo que el compresor debe revisarse en un día anterior al de la prensa.\n3. La caldera no puede detenerse el día 1 por un pedido urgente.\n4. La banda debe revisarse exactamente el día siguiente al de la caldera, porque usa el mismo electricista.\n5. La prensa no puede revisarse el día 4, porque ese día se usa para una auditoría.\n\nPregunta: ¿Qué día (1 a 4) recibe mantenimiento cada equipo?",
+   "answer_format": {
+    "keys": [
+     "COMPRESOR",
+     "CALDERA",
+     "BANDA",
+     "PRENSA"
+    ],
+    "allowed_values": {
+     "COMPRESOR": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "CALDERA": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "BANDA": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "PRENSA": [
+      1,
+      2,
+      3,
+      4
+     ]
+    }
+   }
+  },
+  {
+   "id": "F04",
+   "title": "Secuencia de operaciones en una estación",
+   "area": "Producción",
+   "difficulty": "facil",
+   "statement": "En una estación de fabricación de soportes metálicos se realizan cuatro operaciones, una después de otra, ocupando las posiciones 1, 2, 3 y 4 de la secuencia (1 es la primera): corte, soldadura, pintura e inspección.\n\nReglas:\n1. Cada operación ocupa una posición distinta.\n2. El corte debe realizarse antes que la soldadura.\n3. La soldadura debe realizarse antes que la pintura.\n4. La inspección debe hacerse después de la soldadura.\n5. La inspección no puede ir inmediatamente después de la pintura, porque la pintura aún estaría húmeda.\n\nPregunta: ¿En qué posición (1 a 4) se realiza cada operación?",
+   "answer_format": {
+    "keys": [
+     "CORTE",
+     "SOLDADURA",
+     "PINTURA",
+     "INSPECCION"
+    ],
+    "allowed_values": {
+     "CORTE": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "SOLDADURA": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "PINTURA": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "INSPECCION": [
+      1,
+      2,
+      3,
+      4
+     ]
+    }
+   }
+  },
+  {
+   "id": "F05",
+   "title": "Ubicación de productos en zonas del almacén",
+   "area": "Inventarios",
+   "difficulty": "facil",
+   "statement": "Un almacén tiene tres zonas: A (con ventilación forzada), B (estándar) y C (refrigerada). Hay que ubicar cuatro productos: ácido, alimento, solvente y papel. Cada producto se guarda completo en una sola zona.\n\nReglas:\n1. Cada zona puede contener como máximo dos de estos productos.\n2. El alimento debe guardarse en la zona refrigerada.\n3. Ni el ácido ni el solvente pueden compartir zona con el alimento.\n4. El ácido y el solvente reaccionan entre sí y no pueden compartir zona.\n5. El solvente es volátil y debe guardarse en la zona con ventilación forzada.\n6. El papel no puede ir en la zona refrigerada (absorbe humedad) ni compartir zona con el solvente (es inflamable).\n\nPregunta: ¿En qué zona (A, B o C) se guarda cada producto?",
+   "answer_format": {
+    "keys": [
+     "ACIDO",
+     "ALIMENTO",
+     "SOLVENTE",
+     "PAPEL"
+    ],
+    "allowed_values": {
+     "ACIDO": [
+      "A",
+      "B",
+      "C"
+     ],
+     "ALIMENTO": [
+      "A",
+      "B",
+      "C"
+     ],
+     "SOLVENTE": [
+      "A",
+      "B",
+      "C"
+     ],
+     "PAPEL": [
+      "A",
+      "B",
+      "C"
+     ]
+    }
+   }
+  },
+  {
+   "id": "F06",
+   "title": "Asignación de inspectores de calidad",
+   "area": "Asignación de recursos",
+   "difficulty": "facil",
+   "statement": "Tres inspectores de calidad, Rosa, Pablo y Elena, deben revisar cuatro lotes recibidos hoy. LOTE1 y LOTE3 son de componentes eléctricos, LOTE2 es de insumos alimenticios y LOTE4 es metalmecánico. Rosa está certificada en eléctricos y metalmecánica; Pablo en alimentos y metalmecánica; Elena en eléctricos y alimentos. Cada lote es revisado por un solo inspector.\n\nReglas:\n1. Cada lote solo puede ser revisado por un inspector certificado en su tipo de producto.\n2. Los dos lotes eléctricos deben ser revisados por inspectores distintos.\n3. Elena no puede revisar el LOTE2 por conflicto de interés con el proveedor.\n4. El LOTE1 y el LOTE4 vienen del mismo proveedor y deben ser revisados por el mismo inspector.\n\nPregunta: ¿Qué inspector revisa cada lote (LOTE1 a LOTE4)?",
+   "answer_format": {
+    "keys": [
+     "LOTE1",
+     "LOTE2",
+     "LOTE3",
+     "LOTE4"
+    ],
+    "allowed_values": {
+     "LOTE1": [
+      "ROSA",
+      "PABLO",
+      "ELENA"
+     ],
+     "LOTE2": [
+      "ROSA",
+      "PABLO",
+      "ELENA"
+     ],
+     "LOTE3": [
+      "ROSA",
+      "PABLO",
+      "ELENA"
+     ],
+     "LOTE4": [
+      "ROSA",
+      "PABLO",
+      "ELENA"
+     ]
+    }
+   }
+  },
+  {
+   "id": "F07",
+   "title": "Asignación de operarios a turnos",
+   "area": "Turnos de trabajo",
+   "difficulty": "facil",
+   "statement": "Una planta de envasado opera en tres turnos: mañana, tarde y noche. Cuatro operarios, Ana, Bruno, Carla y Diego, deben asignarse cada uno a exactamente un turno para la próxima semana.\n\nReglas:\n1. Cada turno debe tener al menos un operario.\n2. Ana y Bruno no pueden estar en el mismo turno.\n3. Carla no trabaja de noche.\n4. Diego está en entrenamiento y debe estar en el mismo turno que Carla.\n5. Bruno no puede trabajar en el turno de la mañana.\n6. Ana no puede trabajar de noche.\n7. Diego no puede trabajar en el turno de la tarde.\n\nPregunta: ¿En qué turno (mañana, tarde o noche) trabaja cada operario?",
+   "answer_format": {
+    "keys": [
+     "ANA",
+     "BRUNO",
+     "CARLA",
+     "DIEGO"
+    ],
+    "allowed_values": {
+     "ANA": [
+      "MANANA",
+      "TARDE",
+      "NOCHE"
+     ],
+     "BRUNO": [
+      "MANANA",
+      "TARDE",
+      "NOCHE"
+     ],
+     "CARLA": [
+      "MANANA",
+      "TARDE",
+      "NOCHE"
+     ],
+     "DIEGO": [
+      "MANANA",
+      "TARDE",
+      "NOCHE"
+     ]
+    }
+   }
+  },
+  {
+   "id": "M08",
+   "title": "Secuenciación de pedidos en una inyectora",
+   "area": "Producción",
+   "difficulty": "intermedio",
+   "statement": "Una inyectora de plásticos debe procesar cinco pedidos, P1 a P5, uno tras otro. Cada pedido ocupa una posición de la secuencia del día, de la 1 (primera) a la 5 (última).\n\nReglas:\n1. Cada pedido ocupa una posición distinta.\n2. P2 es urgente y debe ir en una de las dos primeras posiciones.\n3. P3 reutiliza el molde que se ajusta durante P1, así que P1 debe ir antes que P3.\n4. P4 y P5 usan el mismo colorante y deben ir en posiciones consecutivas (en cualquier orden).\n5. P3 debe ir antes que P5.\n6. La materia prima de P1 llega tarde, por lo que P1 no puede ir en la posición 1.\n7. P5 requiere una limpieza posterior larga, por lo que no puede ser el último pedido del día.\n\nPregunta: ¿En qué posición (1 a 5) se procesa cada pedido?",
+   "answer_format": {
+    "keys": [
+     "P1",
+     "P2",
+     "P3",
+     "P4",
+     "P5"
+    ],
+    "allowed_values": {
+     "P1": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "P2": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "P3": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "P4": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "P5": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ]
+    }
+   }
+  },
+  {
+   "id": "M09",
+   "title": "Asignación de operarios a estaciones de trabajo",
+   "area": "Asignación de recursos",
+   "difficulty": "intermedio",
+   "statement": "Una línea de ensamble de electrodomésticos tiene tres estaciones: ENSAMBLE, EMPAQUE y CONTROL (control de calidad). Seis operarios, Ana, Beto, Caro, Dani, Edu y Fer, deben asignarse cada uno a exactamente una estación. Solo Ana, Beto y Dani tienen la certificación de control de calidad.\n\nReglas:\n1. Cada estación debe tener exactamente dos operarios.\n2. En CONTROL solo pueden trabajar operarios certificados.\n3. Ana y Beto son supervisores de relevo y no pueden estar en la misma estación.\n4. Edu y Fer son nuevos y no pueden estar en la misma estación.\n5. Caro es la tutora de Edu y debe estar en la misma estación que él.\n6. Dani tiene una restricción médica y no puede trabajar en EMPAQUE.\n7. Ana y Fer no pueden estar en la misma estación.\n8. Beto no tiene el curso de la máquina de ensamble, así que no puede trabajar en ENSAMBLE.\n\nPregunta: ¿En qué estación trabaja cada operario?",
+   "answer_format": {
+    "keys": [
+     "ANA",
+     "BETO",
+     "CARO",
+     "DANI",
+     "EDU",
+     "FER"
+    ],
+    "allowed_values": {
+     "ANA": [
+      "ENSAMBLE",
+      "EMPAQUE",
+      "CONTROL"
+     ],
+     "BETO": [
+      "ENSAMBLE",
+      "EMPAQUE",
+      "CONTROL"
+     ],
+     "CARO": [
+      "ENSAMBLE",
+      "EMPAQUE",
+      "CONTROL"
+     ],
+     "DANI": [
+      "ENSAMBLE",
+      "EMPAQUE",
+      "CONTROL"
+     ],
+     "EDU": [
+      "ENSAMBLE",
+      "EMPAQUE",
+      "CONTROL"
+     ],
+     "FER": [
+      "ENSAMBLE",
+      "EMPAQUE",
+      "CONTROL"
+     ]
+    }
+   }
+  },
+  {
+   "id": "M10",
+   "title": "Asignación de clientes a vehículos de reparto",
+   "area": "Logística",
+   "difficulty": "intermedio",
+   "statement": "Una distribuidora debe atender mañana a cinco clientes con tres vehículos. Capacidades: V1 = 10 toneladas, V2 = 8 toneladas y V3 = 6 toneladas. Demandas: C1 = 6 t, C2 = 3 t, C3 = 5 t, C4 = 2 t y C5 = 4 t. Cada cliente es atendido completo por un solo vehículo. Solo V1 tiene equipo de refrigeración.\n\nReglas:\n1. La carga total asignada a cada vehículo no puede superar su capacidad.\n2. El pedido de C2 es perecible y requiere refrigeración.\n3. C4 está en el centro histórico, donde solo puede circular V3.\n4. C1 y C3 están en direcciones opuestas de la ciudad y no pueden ir en el mismo vehículo.\n5. C2 y C3 son sucursales de la misma cadena y deben ser atendidas por el mismo vehículo.\n6. Los tres vehículos deben salir con al menos un cliente.\n\nPregunta: ¿Qué vehículo (V1, V2 o V3) atiende a cada cliente?",
+   "answer_format": {
+    "keys": [
+     "C1",
+     "C2",
+     "C3",
+     "C4",
+     "C5"
+    ],
+    "allowed_values": {
+     "C1": [
+      "V1",
+      "V2",
+      "V3"
+     ],
+     "C2": [
+      "V1",
+      "V2",
+      "V3"
+     ],
+     "C3": [
+      "V1",
+      "V2",
+      "V3"
+     ],
+     "C4": [
+      "V1",
+      "V2",
+      "V3"
+     ],
+     "C5": [
+      "V1",
+      "V2",
+      "V3"
+     ]
+    }
+   }
+  },
+  {
+   "id": "M11",
+   "title": "Programa de mantenimiento con capacidad limitada",
+   "area": "Mantenimiento",
+   "difficulty": "intermedio",
+   "statement": "Una planta textil debe dar mantenimiento a cinco equipos durante una parada de tres días (días 1, 2 y 3): el generador, el tablero eléctrico, el compresor, el secador de aire y el horno de termofijado. Cada equipo se atiende completo en un solo día.\n\nReglas:\n1. La cuadrilla puede atender como máximo dos equipos por día.\n2. El generador debe atenderse en un día anterior al del tablero, porque es la energía de respaldo durante esa intervención.\n3. El compresor y el secador forman el mismo sistema neumático y se atienden el mismo día.\n4. El horno no puede atenderse el día 1 porque todavía estará caliente.\n5. El tablero no puede atenderse el día 3, porque ese día llega el inspector eléctrico externo para certificarlo ya reparado.\n\nPregunta: ¿Qué día (1, 2 o 3) se atiende cada equipo?",
+   "answer_format": {
+    "keys": [
+     "GENERADOR",
+     "TABLERO",
+     "COMPRESOR",
+     "SECADOR",
+     "HORNO"
+    ],
+    "allowed_values": {
+     "GENERADOR": [
+      1,
+      2,
+      3
+     ],
+     "TABLERO": [
+      1,
+      2,
+      3
+     ],
+     "COMPRESOR": [
+      1,
+      2,
+      3
+     ],
+     "SECADOR": [
+      1,
+      2,
+      3
+     ],
+     "HORNO": [
+      1,
+      2,
+      3
+     ]
+    }
+   }
+  },
+  {
+   "id": "M12",
+   "title": "Días libres del personal de bodega",
+   "area": "Turnos de trabajo",
+   "difficulty": "intermedio",
+   "statement": "Una bodega trabaja de lunes a viernes (días 1 = lunes a 5 = viernes). Cada uno de sus cinco trabajadores, Luis, María, Jorge, Sofía y Pedro, tiene exactamente un día libre a la semana. Jorge y Sofía son los únicos operadores de montacargas.\n\nReglas:\n1. Para mantener la cobertura, no puede haber dos trabajadores libres el mismo día.\n2. Los días libres de los dos operadores de montacargas no pueden ser consecutivos ni iguales (debe haber al menos un día entre ellos).\n3. María estudia y su día libre debe ser lunes o viernes.\n4. Pedro es el encargado de recepción y no puede librar ni lunes ni viernes, que son días de mayor recepción.\n5. Luis debe librar un día anterior al de Pedro.\n6. Sofía libra después que Jorge.\n7. María libra el día inmediatamente posterior al de Sofía.\n8. Luis no puede librar el lunes, porque ese día hace el inventario semanal.\n\nPregunta: ¿Qué día de la semana (1 a 5) libra cada trabajador?",
+   "answer_format": {
+    "keys": [
+     "LUIS",
+     "MARIA",
+     "JORGE",
+     "SOFIA",
+     "PEDRO"
+    ],
+    "allowed_values": {
+     "LUIS": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "MARIA": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "JORGE": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "SOFIA": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "PEDRO": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ]
+    }
+   }
+  },
+  {
+   "id": "M13",
+   "title": "Ubicación de productos en una estantería",
+   "area": "Inventarios",
+   "difficulty": "intermedio",
+   "statement": "En una bodega de repuestos hay una estantería de tres niveles: nivel 1 (piso), nivel 2 (altura de la cintura) y nivel 3 (alto). Deben ubicarse seis productos: motor, tornillos, cable, pintura, filtros y guantes. El motor y la pintura pesan más de 20 kg, y los tornillos y los guantes son los de mayor rotación.\n\nReglas:\n1. Cada nivel tiene espacio para exactamente dos productos.\n2. Los productos de más de 20 kg no pueden ir en el nivel 3.\n3. Los dos productos de mayor rotación no pueden ir en el nivel 3.\n4. La pintura es líquida y no puede estar en un nivel superior al del cable, para no gotear sobre él.\n5. El motor y la pintura no pueden compartir nivel (no caben juntos).\n6. Los tornillos y los guantes no pueden compartir nivel, para separar los dos puntos de mayor tránsito.\n7. La pintura no puede compartir nivel con los guantes, para evitar que se manchen.\n8. Los tornillos no van en el nivel 1, para evitar que el operario se agache con tanta frecuencia.\n\nPregunta: ¿En qué nivel (1, 2 o 3) se ubica cada producto?",
+   "answer_format": {
+    "keys": [
+     "MOTOR",
+     "TORNILLOS",
+     "CABLE",
+     "PINTURA",
+     "FILTROS",
+     "GUANTES"
+    ],
+    "allowed_values": {
+     "MOTOR": [
+      1,
+      2,
+      3
+     ],
+     "TORNILLOS": [
+      1,
+      2,
+      3
+     ],
+     "CABLE": [
+      1,
+      2,
+      3
+     ],
+     "PINTURA": [
+      1,
+      2,
+      3
+     ],
+     "FILTROS": [
+      1,
+      2,
+      3
+     ],
+     "GUANTES": [
+      1,
+      2,
+      3
+     ]
+    }
+   }
+  },
+  {
+   "id": "M14",
+   "title": "Distribución en planta de departamentos",
+   "area": "Producción",
+   "difficulty": "intermedio",
+   "statement": "Se va a redistribuir una nave industrial con seis espacios en línea recta, numerados del 1 al 6; dos espacios son vecinos si sus números difieren en 1. Deben ubicarse seis departamentos: recepción, corte, soldadura, ensamble, pintura y despacho, uno por espacio.\n\nReglas:\n1. Cada departamento ocupa un espacio distinto.\n2. Recepción y despacho deben estar en los dos extremos de la nave (espacios 1 y 6, en cualquier orden).\n3. Corte debe estar junto a recepción, porque recibe la materia prima.\n4. Soldadura debe estar junto a corte.\n5. Pintura no puede estar junto a corte ni junto a soldadura, por el riesgo de chispas.\n6. Ensamble debe estar junto a pintura.\n7. La toma de corriente trifásica que necesita corte solo existe en los espacios 1, 2 y 3.\n\nPregunta: ¿En qué espacio (1 a 6) queda cada departamento?",
+   "answer_format": {
+    "keys": [
+     "RECEPCION",
+     "CORTE",
+     "SOLDADURA",
+     "ENSAMBLE",
+     "PINTURA",
+     "DESPACHO"
+    ],
+    "allowed_values": {
+     "RECEPCION": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+     ],
+     "CORTE": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+     ],
+     "SOLDADURA": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+     ],
+     "ENSAMBLE": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+     ],
+     "PINTURA": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+     ],
+     "DESPACHO": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+     ]
+    }
+   }
+  },
+  {
+   "id": "D15",
+   "title": "Programación de un taller de fabricación (job shop)",
+   "area": "Producción",
+   "difficulty": "dificil",
+   "statement": "Un taller debe fabricar hoy tres pedidos, A, B y C, durante una jornada de 8 horas (las horas se cuentan desde 0, inicio de la jornada, hasta 8, fin de la jornada). Cada operación empieza en una hora entera y se ejecuta sin interrupción. Las operaciones son:\n- A1: corte de A, 2 h; A2: doblado de A, 1 h.\n- B1: corte de B, 1 h; B2: doblado de B, 2 h.\n- C1: corte de C, 2 h; C2: doblado de C, 2 h; C3: pintura de C, 1 h.\nHay una sola cortadora, una sola dobladora y una sola cabina de pintura. La pregunta es la hora de inicio de cada operación.\n\nReglas:\n1. Dentro de cada pedido, una operación solo puede empezar cuando terminó la anterior (A1 antes que A2; B1 antes que B2; C1 antes que C2 y C2 antes que C3).\n2. La cortadora solo puede hacer una operación a la vez (A1, B1 y C1 no pueden solaparse).\n3. La dobladora solo puede hacer una operación a la vez (A2, B2 y C2 no pueden solaparse).\n4. Todas las operaciones deben terminar a más tardar en la hora 8 (fin de la jornada).\n5. El doblado de B requiere cambiar el dado de la dobladora, por lo que B2 solo puede empezar después de que termine A2.\n6. La pintura de C debe empezar exactamente cuando termina su doblado (C2), para que la pieza no se oxide.\n7. La cabina de pintura está ocupada por otro cliente hasta la hora 7, así que C3 no puede empezar antes de la hora 7.\n\nPregunta: ¿A qué hora (0 a 7) empieza cada operación (A1, A2, B1, B2, C1, C2, C3)?",
+   "answer_format": {
+    "keys": [
+     "A1",
+     "A2",
+     "B1",
+     "B2",
+     "C1",
+     "C2",
+     "C3"
+    ],
+    "allowed_values": {
+     "A1": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+     ],
+     "A2": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+     ],
+     "B1": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+     ],
+     "B2": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+     ],
+     "C1": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+     ],
+     "C2": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+     ],
+     "C3": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+     ]
+    }
+   }
+  },
+  {
+   "id": "D16",
+   "title": "Asignación de pedidos a líneas de producción con capacidad",
+   "area": "Producción",
+   "difficulty": "dificil",
+   "statement": "Una planta de envases tiene tres líneas de producción: L1 y L2, con 8 horas disponibles cada una, y L3, con 6 horas disponibles. Debe asignar ocho pedidos, cada uno completo a una sola línea. Duración de cada pedido: P1 = 4 h, P2 = 3 h, P3 = 2 h, P4 = 5 h, P5 = 3 h, P6 = 2 h, P7 = 1 h y P8 = 2 h. P3 y P6 son envases para alimentos; P7 usa un recubrimiento con lubricante industrial.\n\nReglas:\n1. La suma de las duraciones de los pedidos asignados a una línea no puede superar las horas disponibles de esa línea.\n2. L3 es una línea pequeña y no puede procesar pedidos de más de 3 horas.\n3. P2 y P5 son del mismo cliente y deben producirse en la misma línea.\n4. Los envases para alimentos no pueden producirse en la misma línea que P7.\n5. Si P1 se asigna a L1, entonces P8 debe asignarse a L3.\n\nPregunta: ¿A qué línea (L1, L2 o L3) se asigna cada pedido (P1 a P8)?",
+   "answer_format": {
+    "keys": [
+     "P1",
+     "P2",
+     "P3",
+     "P4",
+     "P5",
+     "P6",
+     "P7",
+     "P8"
+    ],
+    "allowed_values": {
+     "P1": [
+      "L1",
+      "L2",
+      "L3"
+     ],
+     "P2": [
+      "L1",
+      "L2",
+      "L3"
+     ],
+     "P3": [
+      "L1",
+      "L2",
+      "L3"
+     ],
+     "P4": [
+      "L1",
+      "L2",
+      "L3"
+     ],
+     "P5": [
+      "L1",
+      "L2",
+      "L3"
+     ],
+     "P6": [
+      "L1",
+      "L2",
+      "L3"
+     ],
+     "P7": [
+      "L1",
+      "L2",
+      "L3"
+     ],
+     "P8": [
+      "L1",
+      "L2",
+      "L3"
+     ]
+    }
+   }
+  },
+  {
+   "id": "D17",
+   "title": "Programación de turnos con habilidades y cobertura",
+   "area": "Turnos de trabajo",
+   "difficulty": "dificil",
+   "statement": "Una planta química opera en tres turnos: mañana, tarde y noche. Ocho técnicos deben asignarse cada uno a exactamente un turno: Andrés, Beatriz, Carlos, Diana, Esteban, Fabiola, Gabriel y Helena. Andrés y Beatriz son supervisores; Carlos, Fabiola y Helena son los únicos electricistas.\n\nReglas:\n1. La mañana y la tarde deben tener exactamente tres técnicos cada una, y la noche exactamente dos.\n2. Cada turno debe tener exactamente un electricista.\n3. Los dos supervisores no pueden estar en el mismo turno.\n4. El turno de noche debe tener al menos un supervisor.\n5. Diana y Esteban comparten transporte y deben estar en el mismo turno.\n6. Gabriel tiene clases por la mañana y no puede trabajar en ese turno.\n7. Si Helena trabaja de noche, entonces Andrés también debe trabajar de noche.\n8. Fabiola no puede trabajar de noche.\n9. Beatriz no puede trabajar en la tarde.\n10. Fabiola está capacitando a Diana, así que ambas deben estar en el mismo turno.\n\nPregunta: ¿En qué turno (mañana, tarde o noche) trabaja cada técnico?",
+   "answer_format": {
+    "keys": [
+     "ANDRES",
+     "BEATRIZ",
+     "CARLOS",
+     "DIANA",
+     "ESTEBAN",
+     "FABIOLA",
+     "GABRIEL",
+     "HELENA"
+    ],
+    "allowed_values": {
+     "ANDRES": [
+      "MANANA",
+      "TARDE",
+      "NOCHE"
+     ],
+     "BEATRIZ": [
+      "MANANA",
+      "TARDE",
+      "NOCHE"
+     ],
+     "CARLOS": [
+      "MANANA",
+      "TARDE",
+      "NOCHE"
+     ],
+     "DIANA": [
+      "MANANA",
+      "TARDE",
+      "NOCHE"
+     ],
+     "ESTEBAN": [
+      "MANANA",
+      "TARDE",
+      "NOCHE"
+     ],
+     "FABIOLA": [
+      "MANANA",
+      "TARDE",
+      "NOCHE"
+     ],
+     "GABRIEL": [
+      "MANANA",
+      "TARDE",
+      "NOCHE"
+     ],
+     "HELENA": [
+      "MANANA",
+      "TARDE",
+      "NOCHE"
+     ]
+    }
+   }
+  },
+  {
+   "id": "D18",
+   "title": "Plan semanal de mantenimiento de equipos",
+   "area": "Mantenimiento",
+   "difficulty": "dificil",
+   "statement": "Un taller de manufactura debe programar el mantenimiento de siete equipos en una semana laboral de cinco días (día 1 = lunes, ..., día 5 = viernes): dos tornos de la línea A (TORNO1 y TORNO2), dos fresadoras de la línea B (FRESA1 y FRESA2), una prensa, un compresor y un puente grúa. Cada equipo se atiende completo en un solo día.\n\nReglas:\n1. Se pueden atender como máximo dos equipos por día.\n2. El lunes (día 1) y el miércoles (día 3) hay capacitación del personal, así que esos días se atiende como máximo un equipo.\n3. Para no detener una línea completa, dos equipos de la misma línea no pueden atenderse el mismo día.\n4. La prensa se desmonta con el puente grúa recién revisado, así que la prensa se atiende exactamente el día siguiente al de la grúa.\n5. La prensa fabrica los bujes de repuesto de los tornos, así que ambos tornos se atienden en días posteriores al de la prensa.\n6. Los dos tornos usan el mismo kit de repuestos y se atienden en días consecutivos, primero TORNO1 y luego TORNO2.\n7. Los tornos deben estar operativos el viernes, así que ninguno puede atenderse el día 5.\n8. Tornos y fresadoras los atiende el mismo mecánico, así que ninguna fresadora puede atenderse el mismo día que un torno.\n9. Las fresadoras se prueban con aire comprimido, así que ninguna puede atenderse el mismo día que el compresor.\n10. El compresor y la prensa usan al mismo electricista, así que no pueden atenderse el mismo día.\n11. FRESA1 es la de mayor uso y debe atenderse antes que FRESA2.\n\nPregunta: ¿Qué día (1 a 5) recibe mantenimiento cada equipo?",
+   "answer_format": {
+    "keys": [
+     "TORNO1",
+     "TORNO2",
+     "FRESA1",
+     "FRESA2",
+     "PRENSA",
+     "COMPRESOR",
+     "GRUA"
+    ],
+    "allowed_values": {
+     "TORNO1": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "TORNO2": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "FRESA1": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "FRESA2": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "PRENSA": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "COMPRESOR": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "GRUA": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ]
+    }
+   }
+  },
+  {
+   "id": "D19",
+   "title": "Plan maestro de producción por semanas",
+   "area": "Producción",
+   "difficulty": "dificil",
+   "statement": "Una fábrica de muebles debe programar nueve lotes (L1 a L9) en las próximas tres semanas (semanas 1, 2 y 3). Cada lote se produce completo en una sola semana. Horas requeridas: L1 = 10, L2 = 8, L3 = 12, L4 = 6, L5 = 10, L6 = 8, L7 = 14, L8 = 6 y L9 = 6. La planta dispone de 30 horas por semana. L1 fabrica los componentes que luego se ensamblan en L5. L2 y L6 pertenecen a la misma familia de productos (mismo acabado).\n\nReglas:\n1. Las horas totales de los lotes de una misma semana no pueden superar 30.\n2. L3 debe entregarse al final de la semana 1.\n3. L7 debe entregarse a más tardar al final de la semana 2.\n4. Los componentes de L1 deben producirse en una semana anterior a la del ensamble L5.\n5. L2 y L6 deben producirse en la misma semana para aprovechar la preparación del acabado.\n6. Por los cambios de formato, en cada semana se pueden producir como máximo cuatro lotes.\n7. L8 usa los moldes que se fabrican en L4, así que L4 debe producirse en una semana anterior a la de L8.\n8. L9 es la versión de exportación de L4 y debe producirse en la misma semana que L4.\n\nPregunta: ¿En qué semana (1, 2 o 3) se produce cada lote (L1 a L9)?",
+   "answer_format": {
+    "keys": [
+     "L1",
+     "L2",
+     "L3",
+     "L4",
+     "L5",
+     "L6",
+     "L7",
+     "L8",
+     "L9"
+    ],
+    "allowed_values": {
+     "L1": [
+      1,
+      2,
+      3
+     ],
+     "L2": [
+      1,
+      2,
+      3
+     ],
+     "L3": [
+      1,
+      2,
+      3
+     ],
+     "L4": [
+      1,
+      2,
+      3
+     ],
+     "L5": [
+      1,
+      2,
+      3
+     ],
+     "L6": [
+      1,
+      2,
+      3
+     ],
+     "L7": [
+      1,
+      2,
+      3
+     ],
+     "L8": [
+      1,
+      2,
+      3
+     ],
+     "L9": [
+      1,
+      2,
+      3
+     ]
+    }
+   }
+  },
+  {
+   "id": "D20",
+   "title": "Programación de ventanas en un centro de cross-docking",
+   "area": "Logística",
+   "difficulty": "dificil",
+   "statement": "Un centro de cross-docking tiene dos muelles y cuatro ventanas horarias consecutivas (1, 2, 3 y 4). Ocho camiones, T1 a T8, deben recibir cada uno una ventana. T1 y T2 son refrigerados. T3 trae componentes que luego recoge T6. T4 y T5 se transfieren carga directamente de uno a otro.\n\nReglas:\n1. Como hay dos muelles, en cada ventana pueden atenderse como máximo dos camiones.\n2. Los camiones refrigerados deben atenderse en las ventanas 1 o 2.\n3. T6 recoge lo que trae T3, así que T6 debe atenderse en una ventana posterior a la de T3.\n4. T4 y T5 deben atenderse en la misma ventana para hacer la transferencia directa.\n5. T7 llega desde otra ciudad y solo puede atenderse en las ventanas 3 o 4.\n6. Si T8 se atiende en la ventana 1, entonces T2 debe atenderse en la ventana 2.\n7. Los dos refrigerados no pueden atenderse en la misma ventana, porque solo hay una toma de frío.\n8. T6 debe atenderse exactamente en la ventana siguiente a la de T3, para que la mercadería no espere en el andén.\n9. T8 debe atenderse en una ventana anterior a la de T7.\n\nPregunta: ¿En qué ventana (1 a 4) se atiende cada camión (T1 a T8)?",
+   "answer_format": {
+    "keys": [
+     "T1",
+     "T2",
+     "T3",
+     "T4",
+     "T5",
+     "T6",
+     "T7",
+     "T8"
+    ],
+    "allowed_values": {
+     "T1": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "T2": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "T3": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "T4": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "T5": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "T6": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "T7": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "T8": [
+      1,
+      2,
+      3,
+      4
+     ]
+    }
+   }
+  }
+ ]
+}
