@@ -1,0 +1,2 @@
+arm,temperature,seeds,acc_mean,acc_sd,acc_min,acc_max,problems_ever_correct,acc_facil_mean,acc_facil_sd,acc_intermedio_mean,acc_intermedio_sd,acc_dificil_mean,acc_dificil_sd
+C,0.7,5,0.060000000000000005,0.022360679774997897,0.05,0.1,3,0.08571428571428572,0.12777531299998798,0.08571428571428572,0.07824607964359516,0.0,0.0

@@ -1,0 +1,21 @@
+id,difficulty,n_variables,domain_size,search_space,n_rules_nl,n_constraints,max_arity,constraint_types,solver_nodes
+F01,facil,3,3,27,4,4,3,todos-distintos;unaria (restricción de dominio),4
+F02,facil,3,3,27,4,4,3,distancia/adyacencia;todos-distintos;unaria (restricción de dominio),5
+F03,facil,4,4,256,5,5,4,igualdad (agrupación);precedencia/orden;todos-distintos;unaria (restricción de dominio),7
+F04,facil,4,4,256,5,5,4,exclusión (≠);precedencia/orden;todos-distintos,7
+F05,facil,4,3,81,6,10,4,conteo/cobertura;exclusión (≠);unaria (restricción de dominio),5
+F06,facil,4,3,81,4,7,2,exclusión (≠);igualdad (agrupación);unaria (restricción de dominio),5
+F07,facil,4,3,81,7,9,4,conteo/cobertura;exclusión (≠);igualdad (agrupación);unaria (restricción de dominio),8
+M08,intermedio,5,5,3125,7,7,5,distancia/adyacencia;precedencia/orden;todos-distintos;unaria (restricción de dominio),15
+M09,intermedio,6,3,729,8,12,6,conteo/cobertura;exclusión (≠);igualdad (agrupación);unaria (restricción de dominio),13
+M10,intermedio,5,3,243,6,10,5,capacidad ponderada;conteo/cobertura;exclusión (≠);igualdad (agrupación);unaria (restricción de dominio),6
+M11,intermedio,5,3,243,5,7,5,conteo/cobertura;igualdad (agrupación);precedencia/orden;unaria (restricción de dominio),7
+M12,intermedio,5,5,3125,8,8,5,distancia/adyacencia;igualdad (agrupación);precedencia/orden;todos-distintos;unaria (restricción de dominio),7
+M13,intermedio,6,3,729,8,12,6,conteo/cobertura;exclusión (≠);precedencia/orden;unaria (restricción de dominio),7
+M14,intermedio,6,6,46656,7,8,6,distancia/adyacencia;todos-distintos;unaria (restricción de dominio),10
+D15,dificil,7,8,2097152,7,16,2,disyuntiva (no solapamiento);igualdad (agrupación);precedencia/orden;unaria (restricción de dominio),10
+D16,dificil,8,3,6561,5,9,8,capacidad ponderada;condicional;exclusión (≠);igualdad (agrupación);unaria (restricción de dominio),166
+D17,dificil,8,3,6561,10,12,8,condicional;conteo/cobertura;exclusión (≠);igualdad (agrupación);todos-distintos;unaria (restricción de dominio),34
+D18,dificil,7,5,78125,11,23,7,conteo/cobertura;exclusión (≠);igualdad (agrupación);precedencia/orden;unaria (restricción de dominio),11
+D19,dificil,9,3,19683,8,12,9,capacidad ponderada;conteo/cobertura;igualdad (agrupación);precedencia/orden;unaria (restricción de dominio),50
+D20,dificil,8,4,65536,9,13,8,condicional;conteo/cobertura;exclusión (≠);igualdad (agrupación);precedencia/orden;unaria (restricción de dominio),67
