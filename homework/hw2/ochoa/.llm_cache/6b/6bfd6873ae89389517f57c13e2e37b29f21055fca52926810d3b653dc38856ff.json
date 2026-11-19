@@ -1,0 +1,15 @@
+{
+  "text": "{\"Align\": 18, \"Caption\": 17, \"Drill\": 15, \"Dust\": 19, \"Inspect\": 9, \"Level\": 16, \"Light\": 17, \"Measure\": 14, \"Mount\": 13, \"Open\": 19, \"Photograph\": 18, \"Place\": 10, \"Register\": 14, \"Review\": 18, \"Seal\": 19, \"Sign\": 19, \"Test\": 18, \"Unload\": 13, \"Unwrap\": 9, \"Wire\": 17}",
+  "backend": "ollama",
+  "model": "qwen2.5:7b",
+  "prompt": "You are solving a logic puzzle. Read all the clues carefully.\n\nA museum is assigning time slots for an installation day. Schedule these 20 activities in slots 1 to 20, with exactly one activity per slot: Align, Caption, Drill, Dust, Inspect, Level, Light, Measure, Mount, Open, Photograph, Place, Register, Review, Seal, Sign, Test, Unload, Unwrap, Wire.\n1. Register is scheduled immediately after Unload.\n2. Measure is scheduled immediately after Register.\n3. Mount is scheduled immediately after Drill.\n4. Level is scheduled immediately after Mount.\n5. Test is scheduled immediately after Wire.\n6. Inspect is scheduled immediately after Unwrap.\n7. Place is scheduled immediately after Inspect.\n8. Align is scheduled immediately after Place.\n9. Light is scheduled immediately after Caption.\n10. Photograph is scheduled immediately after Light.\n11. Seal is scheduled immediately after Dust.\n12. Sign is scheduled immediately after Review.\n13. Open is scheduled immediately after Sign.\n14. Unwrap is in slot 9.\n15. Measure takes place before Drill.\n16. Level takes place before Wire.\n17. Test takes place before Unwrap.\n18. Caption is immediately after Align.\n19. Photograph takes place before Dust.\n20. Seal takes place before Review.\nFor each named activity, give its slot number.\n\nRequired output format:\nVariables to report: Align, Caption, Drill, Dust, Inspect, Level, Light, Measure, Mount, Open, Photograph, Place, Register, Review, Seal, Sign, Test, Unload, Unwrap, Wire\nPossible values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20\nReply with ONE JSON object that maps every listed variable to its value, e.g. {\"Ana\": 1, \"Bruno\": 2}.\n\nReply with ONLY the JSON, no markdown and no extra text.",
+  "temperature": 0.7,
+  "seed": 1,
+  "elapsed": 3.783531299995957,
+  "meta": {
+    "eval_count": 144,
+    "prompt_eval_count": 488,
+    "total_duration": 1753971400
+  },
+  "cached_at": "2026-11-18T20:05:11"
+}

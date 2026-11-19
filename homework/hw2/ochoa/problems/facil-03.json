@@ -1,0 +1,87 @@
+{
+  "id": "facil-03",
+  "nivel": "facil",
+  "familia": "coloreo",
+  "enunciado": "A trail map shows six areas of a canyon. Color each region with red, green or blue. A region pair separated by a dash denotes a direct link. Linked regions must have different colors. The links work both ways. The regions are Cliff, Dune, Ford, Gorge, Marsh, Rim.\n1. Rim is red.\n2. Ford is green.\n3. Ford–Gorge, Ford–Marsh, Ford–Rim.\n4. Gorge–Rim.\n5. Dune–Ford, Dune–Gorge, Dune–Marsh.\n6. Cliff–Dune, Cliff–Marsh.\nFor each named region, give its color.",
+  "formato_respuesta": {
+    "variables": ["Rim", "Ford", "Gorge", "Dune", "Marsh", "Cliff"],
+    "valores": ["red", "green", "blue"]
+  },
+  "modelo_mano": {
+    "variables": {
+      "Rim": ["red", "green", "blue"],
+      "Ford": ["red", "green", "blue"],
+      "Gorge": ["red", "green", "blue"],
+      "Dune": ["red", "green", "blue"],
+      "Marsh": ["red", "green", "blue"],
+      "Cliff": ["red", "green", "blue"]
+    },
+    "constraints": [
+      {
+        "type": "eq",
+        "a": "Rim",
+        "b": "red"
+      },
+      {
+        "type": "eq",
+        "a": "Ford",
+        "b": "green"
+      },
+      {
+        "type": "neq",
+        "a": "Cliff",
+        "b": "Dune"
+      },
+      {
+        "type": "neq",
+        "a": "Cliff",
+        "b": "Marsh"
+      },
+      {
+        "type": "neq",
+        "a": "Dune",
+        "b": "Ford"
+      },
+      {
+        "type": "neq",
+        "a": "Dune",
+        "b": "Gorge"
+      },
+      {
+        "type": "neq",
+        "a": "Dune",
+        "b": "Marsh"
+      },
+      {
+        "type": "neq",
+        "a": "Ford",
+        "b": "Gorge"
+      },
+      {
+        "type": "neq",
+        "a": "Ford",
+        "b": "Marsh"
+      },
+      {
+        "type": "neq",
+        "a": "Ford",
+        "b": "Rim"
+      },
+      {
+        "type": "neq",
+        "a": "Gorge",
+        "b": "Rim"
+      }
+    ]
+  },
+  "gold": {
+    "Rim": "red",
+    "Ford": "green",
+    "Gorge": "blue",
+    "Dune": "red",
+    "Marsh": "blue",
+    "Cliff": "green"
+  },
+  "verificacion_manual": "Fijamos Rim=red y Ford=green por las dos primeras pistas. Cada región queda forzada por los dos vecinos ya fijados que aparecen entre paréntesis: Gorge=blue (Rim/Ford), Dune=red (Ford/Gorge). Repetimos la misma deducción con Marsh=blue (Ford/Dune), Cliff=green (Dune/Marsh). Los colores de los extremos difieren también en todas las aristas restantes.",
+  "fuente": "Inventado para el HW2 con asistencia de Codex (ver AI_LOG.md)."
+}

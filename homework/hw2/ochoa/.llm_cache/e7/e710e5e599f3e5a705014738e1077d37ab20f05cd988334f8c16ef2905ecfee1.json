@@ -1,0 +1,15 @@
+{
+  "text": "{\n    \"Azure\": 5,\n    \"Baggage\": 4,\n    \"Bruno\": 2,\n    \"Camera\": 1,\n    \"Clock\": 3,\n    \"Crane\": 2,\n    \"Cream\": 1,\n    \"Dining\": 3,\n    \"Eagle\": 1,\n    \"Elsa\": 3,\n    \"Falcon\": 2,\n    \"Heron\": 5,\n    \"Ivan\": 3,\n    \"Lantern\": 4,\n    \"Lina\": 5,\n    \"Mail\": 2,\n    \"Mara\": 3,\n    \"Observation\": 5,\n    \"Olive\": 4,\n    \"Pink\": 5,\n    \"Radio\": 3,\n    \"Rust\": 1,\n    \"Sleeper\": 4,\n    \"Swan\": 5,\n    \"Trunk\": 1\n}",
+  "backend": "ollama",
+  "model": "qwen2.5:3b",
+  "prompt": "You are solving a logic puzzle. Read all the clues carefully.\n\nA railway museum orders five carriages along a straight platform. There are 5 positions numbered 1 to 5 from left to right. Each position has exactly one item from each list, and each listed item appears once. Guides: Bruno, Elsa, Ivan, Lina, Mara. Carriage types: Baggage, Dining, Mail, Observation, Sleeper. Paint colors: Azure, Cream, Olive, Pink, Rust. Exhibits: Camera, Clock, Lantern, Radio, Trunk. Bird emblems: Crane, Eagle, Falcon, Heron, Swan.\n1. Mara is immediately to the right of Bruno.\n2. Elsa is in position 3.\n3. Ivan is somewhere to the right of Elsa.\n4. Bruno is somewhere to the left of Elsa.\n5. Ivan is somewhere to the left of Lina.\n6. Dining is at the same position as Mara.\n7. Mail is next to Dining.\n8. Mail is somewhere to the left of Dining.\n9. Baggage is immediately to the right of Sleeper.\n10. Observation is somewhere to the right of Baggage.\n11. Pink is at the same position as Baggage.\n12. Azure is immediately to the left of Pink.\n13. Cream is somewhere to the left of Rust.\n14. Rust is somewhere to the left of Azure.\n15. Clock is at the same position as Rust.\n16. Radio is next to Clock.\n17. Radio is somewhere to the left of Clock.\n18. Trunk is immediately to the right of Lantern.\n19. Camera is somewhere to the right of Trunk.\n20. Swan is at the same position as Trunk.\n21. Crane is immediately to the left of Swan.\n22. Eagle is somewhere to the left of Falcon.\n23. Falcon is somewhere to the left of Crane.\nFor every listed item, give its position number.\n\nRequired output format:\nVariables to report: Azure, Baggage, Bruno, Camera, Clock, Crane, Cream, Dining, Eagle, Elsa, Falcon, Heron, Ivan, Lantern, Lina, Mail, Mara, Observation, Olive, Pink, Radio, Rust, Sleeper, Swan, Trunk\nPossible values: 1, 2, 3, 4, 5\nReply with ONE JSON object that maps every listed variable to its value, e.g. {\"Ana\": 1, \"Bruno\": 2}.\n\nReply with ONLY the JSON, no markdown and no extra text.",
+  "temperature": 0.7,
+  "seed": 1,
+  "elapsed": 10.600613200003863,
+  "meta": {
+    "eval_count": 198,
+    "prompt_eval_count": 560,
+    "total_duration": 8542391300
+  },
+  "cached_at": "2026-11-18T08:30:56"
+}

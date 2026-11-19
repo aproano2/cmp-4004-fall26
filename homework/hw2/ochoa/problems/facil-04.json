@@ -1,0 +1,86 @@
+{
+  "id": "facil-04",
+  "nivel": "facil",
+  "familia": "einstein",
+  "enunciado": "Volunteers occupy booths along a seed market. There are 4 positions numbered 1 to 4 from left to right. Each position has exactly one item from each list, and each listed item appears once. Volunteers: Ines, Marco, Nora, Pablo. Herbs: Basil, Dill, Mint, Sage.\n1. Marco is immediately to the right of Ines.\n2. Nora is in position 3.\n3. Pablo is somewhere to the right of Nora.\n4. Ines is somewhere to the left of Nora.\n5. Basil is at the same position as Marco.\n6. Mint is next to Basil.\n7. Mint is somewhere to the left of Basil.\n8. Sage is immediately to the right of Dill.\nFor every listed item, give its position number.",
+  "formato_respuesta": {
+    "variables": ["Basil", "Dill", "Ines", "Marco", "Mint", "Nora", "Pablo", "Sage"],
+    "valores": [1, 2, 3, 4]
+  },
+  "modelo_mano": {
+    "variables": {
+      "Basil": [1, 2, 3, 4],
+      "Dill": [1, 2, 3, 4],
+      "Ines": [1, 2, 3, 4],
+      "Marco": [1, 2, 3, 4],
+      "Mint": [1, 2, 3, 4],
+      "Nora": [1, 2, 3, 4],
+      "Pablo": [1, 2, 3, 4],
+      "Sage": [1, 2, 3, 4]
+    },
+    "constraints": [
+      {
+        "type": "alldiff",
+        "vars": ["Ines", "Marco", "Nora", "Pablo"]
+      },
+      {
+        "type": "alldiff",
+        "vars": ["Basil", "Dill", "Mint", "Sage"]
+      },
+      {
+        "type": "offset",
+        "a": "Marco",
+        "b": "Ines",
+        "k": 1
+      },
+      {
+        "type": "eq",
+        "a": "Nora",
+        "b": 3
+      },
+      {
+        "type": "gt",
+        "a": "Pablo",
+        "b": "Nora"
+      },
+      {
+        "type": "lt",
+        "a": "Ines",
+        "b": "Nora"
+      },
+      {
+        "type": "eq",
+        "a": "Basil",
+        "b": "Marco"
+      },
+      {
+        "type": "adj",
+        "a": "Mint",
+        "b": "Basil"
+      },
+      {
+        "type": "lt",
+        "a": "Mint",
+        "b": "Basil"
+      },
+      {
+        "type": "offset",
+        "a": "Sage",
+        "b": "Dill",
+        "k": 1
+      }
+    ]
+  },
+  "gold": {
+    "Basil": 2,
+    "Dill": 3,
+    "Ines": 1,
+    "Marco": 2,
+    "Mint": 1,
+    "Nora": 3,
+    "Pablo": 4,
+    "Sage": 4
+  },
+  "verificacion_manual": "Nora ocupa la posición 3, así que la pareja consecutiva Ines–Marco queda en 1 y 2, y Pablo ocupa la posición 4. Basil hereda 2 de Marco, Mint es su vecino izquierdo y Dill, Sage llenan lo que queda según las pistas de orden.",
+  "fuente": "Inventado para el HW2 con asistencia de Codex (ver AI_LOG.md)."
+}

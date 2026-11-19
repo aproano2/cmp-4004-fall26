@@ -1,0 +1,15 @@
+{
+  "text": "{\"Delta\":\"blue\",\"Pines\":\"green\",\"Falls\":\"red\",\"Hollow\":\"red\",\"Pass\":\"red\",\"Pool\":\"red\",\"Cove\":\"red\",\"Crest\":\"red\",\"Falls\":\"red\",\"Hollow\":\"red\",\"Meadow\":\"blue\",\"Moss\":\"blue\",\"Pines\":\"green\",\"Shoal\":\"red\",\"Cove\":\"red\",\"Heath\":\"blue\",\"Hill\":\"blue\",\"Hollow\":\"red\",\"Pass\":\"red\",\"Shoal\":\"red\",\"Lagoon\":\"blue\",\"Pass\":\"red\",\"Spur\":\"blue\",\"Bank\":\"red\",\"Fen\":\"blue\",\"Pool\":\"red\",\"Moss\":\"blue\",\"Spur\":\"blue\",\"Grove\":\"blue\",\"Shoal\":\"red\",\"Spur\":\"blue\",\"Dale\":\"red\",\"Fen\":\"blue\",\"Hill\":\"blue\"}",
+  "backend": "ollama",
+  "model": "qwen2.5:7b",
+  "prompt": "You are solving a logic puzzle. Read all the clues carefully.\n\nA conservation map divides a reserve into twenty sectors. Color each region with red, green or blue. A region pair separated by a dash denotes a direct link. Linked regions must have different colors. The links work both ways. The regions are Bank, Birch, Cove, Crest, Dale, Delta, Falls, Fen, Grove, Heath, Hill, Hollow, Lagoon, Meadow, Moss, Pass, Pines, Pool, Shoal, Spur.\n1. Delta is blue.\n2. Pines is green.\n3. Delta–Falls, Delta–Hollow, Delta–Pass, Delta–Pines, Delta–Pool.\n4. Falls–Hollow, Falls–Meadow, Falls–Moss, Falls–Pines, Falls–Shoal.\n5. Hollow–Pass, Hollow–Shoal.\n6. Cove–Crest, Cove–Falls, Cove–Heath, Cove–Hill, Cove–Hollow.\n7. Crest–Heath, Crest–Hollow, Crest–Pool.\n8. Meadow–Pines.\n9. Bank–Cove, Bank–Dale, Bank–Delta, Bank–Fen, Bank–Pool.\n10. Moss–Pines, Moss–Spur.\n11. Birch–Crest, Birch–Hill, Birch–Moss.\n12. Heath–Lagoon, Heath–Pass, Heath–Shoal.\n13. Fen–Moss, Fen–Spur.\n14. Grove–Meadow, Grove–Shoal, Grove–Spur.\n15. Dale–Fen, Dale–Hill.\n16. Lagoon–Pass, Lagoon–Spur.\nFor each named region, give its color.\n\nRequired output format:\nVariables to report: Delta, Pines, Falls, Hollow, Cove, Crest, Meadow, Pool, Bank, Moss, Birch, Heath, Hill, Fen, Spur, Shoal, Grove, Dale, Pass, Lagoon\nPossible values: red, green, blue\nReply with ONE JSON object that maps every listed variable to its value, e.g. {\"Ana\": 1, \"Bruno\": 2}.\n\nReply with ONLY the JSON, no markdown and no extra text.",
+  "temperature": 0.7,
+  "seed": 0,
+  "elapsed": 4.1937884999933885,
+  "meta": {
+    "eval_count": 169,
+    "prompt_eval_count": 511,
+    "total_duration": 2158456700
+  },
+  "cached_at": "2026-11-18T20:05:19"
+}

@@ -1,0 +1,185 @@
+{
+  "id": "ej-medio-01",
+  "nivel": "medio",
+  "familia": "einstein",
+  "enunciado": "Four houses stand in a row, numbered 1 to 4 from left to right. Ana, Bruno, Carla and Diego each live in a different house. Each person keeps a different pet (cat, dog, fish, bird) and drinks a different drink (tea, coffee, milk, juice).\n1. Ana keeps the cat.\n2. The dog owner lives immediately to the left of the coffee drinker.\n3. Diego lives in house 4.\n4. The tea drinker lives in house 1.\n5. Bruno drinks milk.\n6. The fish owner lives next to Diego.\n7. Carla does not live in house 1.\nFor each person, pet and drink, give the house number.",
+  "formato_respuesta": {
+    "variables": [
+      "Ana",
+      "Bruno",
+      "Carla",
+      "Diego",
+      "Cat",
+      "Dog",
+      "Fish",
+      "Bird",
+      "Tea",
+      "Coffee",
+      "Milk",
+      "Juice"
+    ],
+    "valores": [
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  "modelo_mano": {
+    "variables": {
+      "Ana": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "Bruno": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "Carla": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "Diego": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "Cat": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "Dog": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "Fish": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "Bird": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "Tea": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "Coffee": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "Milk": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "Juice": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "constraints": [
+      {
+        "type": "alldiff",
+        "vars": [
+          "Ana",
+          "Bruno",
+          "Carla",
+          "Diego"
+        ]
+      },
+      {
+        "type": "alldiff",
+        "vars": [
+          "Cat",
+          "Dog",
+          "Fish",
+          "Bird"
+        ]
+      },
+      {
+        "type": "alldiff",
+        "vars": [
+          "Tea",
+          "Coffee",
+          "Milk",
+          "Juice"
+        ]
+      },
+      {
+        "type": "eq",
+        "a": "Ana",
+        "b": "Cat"
+      },
+      {
+        "type": "offset",
+        "a": "Coffee",
+        "b": "Dog",
+        "k": 1
+      },
+      {
+        "type": "eq",
+        "a": "Diego",
+        "b": 4
+      },
+      {
+        "type": "eq",
+        "a": "Tea",
+        "b": 1
+      },
+      {
+        "type": "eq",
+        "a": "Bruno",
+        "b": "Milk"
+      },
+      {
+        "type": "adj",
+        "a": "Fish",
+        "b": "Diego"
+      },
+      {
+        "type": "neq",
+        "a": "Carla",
+        "b": 1
+      }
+    ]
+  },
+  "gold": {
+    "Ana": 1,
+    "Bruno": 2,
+    "Carla": 3,
+    "Diego": 4,
+    "Cat": 1,
+    "Dog": 2,
+    "Fish": 3,
+    "Bird": 4,
+    "Tea": 1,
+    "Coffee": 3,
+    "Milk": 2,
+    "Juice": 4
+  },
+  "verificacion_manual": "Diego=4 y el pez vive junto a Diego, así que Fish=3. En la casa 1 se toma té; no puede ser Carla (pista 7) ni Bruno (toma leche), entonces Ana=1 y Cat=1. El perro queda en 2 o 4 y el café justo a su derecha, así que Dog=2 y Coffee=3; Bird=4. Bruno no puede estar en 3 porque ahí se toma café, entonces Bruno=2 con leche, Carla=3 y Juice=4.",
+  "fuente": "inventado (estilo acertijo de Einstein)"
+}
