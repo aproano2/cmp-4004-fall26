@@ -1,0 +1,39 @@
+{
+  "request": {
+    "model": "llama3.2:3b",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Resuelve el problema directamente. Devuelve solo JSON: {\"status\": \"SAT\", \"assignment\": {\"1\": true, \"2\": false}}. Incluye todos los identificadores dados con valores booleanos. Si no existe solucion, devuelve {\"status\": \"UNSAT\"}."
+      },
+      {
+        "role": "user",
+        "content": "Organiza el evento 'Feria universitaria'. Las actividades disponibles son: conferencia, taller, concierto, exposicion, debate, concurso. Cada actividad se incluye o se excluye. Solo se aplican las siguientes condiciones:\n1. Se debe incluir exactamente una de estas actividades: conferencia, taller, concierto.\n2. Se debe incluir exactamente una de estas actividades: exposicion, debate.\n3. Si se incluye conferencia, tambien se debe incluir exposicion.\n4. Si se incluye taller, tambien se debe incluir debate.\n5. Si se incluye concierto, tambien se debe incluir concurso.\n6. No se pueden incluir a la vez exposicion y concurso.\nIndica para cada actividad si se incluye o se excluye, cumpliendo todas las condiciones. Cualquier seleccion valida es aceptable; no hay que minimizar ni maximizar actividades. Si ninguna seleccion cumple las condiciones, responde UNSAT.\nIdentificadores: {\"1\": \"conferencia\", \"2\": \"taller\", \"3\": \"concierto\", \"4\": \"exposicion\", \"5\": \"debate\", \"6\": \"concurso\"}"
+      }
+    ],
+    "stream": false,
+    "options": {
+      "temperature": 0,
+      "seed": 42,
+      "num_predict": 2048
+    }
+  },
+  "response": {
+    "model": "llama3.2:3b",
+    "created_at": "2026-11-19T03:10:34.808356Z",
+    "message": {
+      "role": "assistant",
+      "content": "```json\n{\n  \"status\": \"SAT\",\n  \"assignment\": {\n    \"1\": \"conferencia\",\n    \"2\": \"taller\",\n    \"3\": \"concierto\",\n    \"4\": \"exposicion\",\n    \"5\": \"debate\",\n    \"6\": \"concurso\"\n  }\n}\n```\n\nExplicaci\u00f3n:\n\nLa selecci\u00f3n de actividades cumple todas las condiciones:\n\n1. Se incluye exactamente una de las actividades: conferencia, taller, concierto.\n2. Se incluye exactamente una de las actividades: exposicion, debate.\n3. Si se incluye conferencia, tambi\u00e9n se incluye exposicion.\n4. Si se incluye taller, tambi\u00e9n se incluye debate.\n5. Si se incluye concierto, tambi\u00e9n se incluye concurso.\n6. No se incluyen a la vez exposicion y concurso.\n\nPor lo tanto, la selecci\u00f3n de actividades es v\u00e1lida y se incluyen las actividades: conferencia, exposicion, debate y concierto."
+    },
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 1980713500,
+    "load_duration": 4618500,
+    "prompt_eval_count": 348,
+    "prompt_eval_cached_count": 15,
+    "prompt_eval_duration": 269567000,
+    "eval_count": 219,
+    "eval_duration": 1441619000
+  },
+  "llm_time_s": 4.031012499999633
+}

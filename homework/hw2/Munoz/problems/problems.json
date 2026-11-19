@@ -1,0 +1,349 @@
+[
+  {
+    "id": "SAT-01",
+    "title": "Encuentro musical",
+    "difficulty": "facil",
+    "n_variables": 3,
+    "n_premises": 3,
+    "n_clauses": 3,
+    "search_space": 8,
+    "variables": {
+      "1": "concierto",
+      "2": "taller",
+      "3": "exposicion"
+    },
+    "prompt": "Organiza el evento 'Encuentro musical'. Las actividades disponibles son: concierto, taller, exposicion. Cada actividad se incluye o se excluye. Solo se aplican las siguientes condiciones:\n1. Se debe incluir concierto.\n2. Si se incluye concierto, tambien se debe incluir taller.\n3. No se pueden incluir a la vez taller y exposicion.\nIndica para cada actividad si se incluye o se excluye, cumpliendo todas las condiciones. Cualquier seleccion valida es aceptable; no hay que minimizar ni maximizar actividades. Si ninguna seleccion cumple las condiciones, responde UNSAT."
+  },
+  {
+    "id": "SAT-02",
+    "title": "Jornada de debate",
+    "difficulty": "facil",
+    "n_variables": 3,
+    "n_premises": 3,
+    "n_clauses": 4,
+    "search_space": 8,
+    "variables": {
+      "1": "conferencia",
+      "2": "debate",
+      "3": "exposicion"
+    },
+    "prompt": "Organiza el evento 'Jornada de debate'. Las actividades disponibles son: conferencia, debate, exposicion. Cada actividad se incluye o se excluye. Solo se aplican las siguientes condiciones:\n1. Se debe incluir exactamente una de estas actividades: conferencia, debate.\n2. Si se incluye debate, tambien se debe incluir exposicion.\n3. No se puede incluir conferencia.\nIndica para cada actividad si se incluye o se excluye, cumpliendo todas las condiciones. Cualquier seleccion valida es aceptable; no hay que minimizar ni maximizar actividades. Si ninguna seleccion cumple las condiciones, responde UNSAT."
+  },
+  {
+    "id": "SAT-03",
+    "title": "Muestra creativa",
+    "difficulty": "facil",
+    "n_variables": 3,
+    "n_premises": 3,
+    "n_clauses": 3,
+    "search_space": 8,
+    "variables": {
+      "1": "taller",
+      "2": "exposicion",
+      "3": "concurso"
+    },
+    "prompt": "Organiza el evento 'Muestra creativa'. Las actividades disponibles son: taller, exposicion, concurso. Cada actividad se incluye o se excluye. Solo se aplican las siguientes condiciones:\n1. Se debe incluir al menos una de estas actividades: taller, exposicion; se permite incluir varias.\n2. Si se incluye taller, tambien se debe incluir concurso.\n3. No se pueden incluir a la vez exposicion y concurso.\nIndica para cada actividad si se incluye o se excluye, cumpliendo todas las condiciones. Cualquier seleccion valida es aceptable; no hay que minimizar ni maximizar actividades. Si ninguna seleccion cumple las condiciones, responde UNSAT."
+  },
+  {
+    "id": "SAT-04",
+    "title": "Festival audiovisual",
+    "difficulty": "facil",
+    "n_variables": 3,
+    "n_premises": 3,
+    "n_clauses": 4,
+    "search_space": 8,
+    "variables": {
+      "1": "cine",
+      "2": "debate",
+      "3": "concierto"
+    },
+    "prompt": "Organiza el evento 'Festival audiovisual'. Las actividades disponibles son: cine, debate, concierto. Cada actividad se incluye o se excluye. Solo se aplican las siguientes condiciones:\n1. Se incluye cine si y solo si se incluye debate.\n2. Se debe incluir al menos una de estas actividades: cine, concierto; se permite incluir varias.\n3. No se pueden incluir a la vez debate y concierto.\nIndica para cada actividad si se incluye o se excluye, cumpliendo todas las condiciones. Cualquier seleccion valida es aceptable; no hay que minimizar ni maximizar actividades. Si ninguna seleccion cumple las condiciones, responde UNSAT."
+  },
+  {
+    "id": "SAT-05",
+    "title": "Feria de aprendizaje",
+    "difficulty": "facil",
+    "n_variables": 4,
+    "n_premises": 4,
+    "n_clauses": 5,
+    "search_space": 16,
+    "variables": {
+      "1": "taller",
+      "2": "conferencia",
+      "3": "exposicion",
+      "4": "concurso"
+    },
+    "prompt": "Organiza el evento 'Feria de aprendizaje'. Las actividades disponibles son: taller, conferencia, exposicion, concurso. Cada actividad se incluye o se excluye. Solo se aplican las siguientes condiciones:\n1. Se debe incluir exactamente una de estas actividades: taller, conferencia.\n2. Si se incluye taller, tambien se debe incluir exposicion.\n3. Si se incluye conferencia, tambien se debe incluir concurso.\n4. No se puede incluir concurso.\nIndica para cada actividad si se incluye o se excluye, cumpliendo todas las condiciones. Cualquier seleccion valida es aceptable; no hay que minimizar ni maximizar actividades. Si ninguna seleccion cumple las condiciones, responde UNSAT."
+  },
+  {
+    "id": "SAT-06",
+    "title": "Encuentro comunitario",
+    "difficulty": "facil",
+    "n_variables": 4,
+    "n_premises": 4,
+    "n_clauses": 4,
+    "search_space": 16,
+    "variables": {
+      "1": "concierto",
+      "2": "exposicion",
+      "3": "debate",
+      "4": "taller"
+    },
+    "prompt": "Organiza el evento 'Encuentro comunitario'. Las actividades disponibles son: concierto, exposicion, debate, taller. Cada actividad se incluye o se excluye. Solo se aplican las siguientes condiciones:\n1. Se debe incluir al menos una de estas actividades: concierto, exposicion; se permite incluir varias.\n2. No se pueden incluir a la vez concierto y exposicion.\n3. Si se incluye debate, tambien se debe incluir concierto.\n4. Se debe incluir taller.\nIndica para cada actividad si se incluye o se excluye, cumpliendo todas las condiciones. Cualquier seleccion valida es aceptable; no hay que minimizar ni maximizar actividades. Si ninguna seleccion cumple las condiciones, responde UNSAT."
+  },
+  {
+    "id": "SAT-07",
+    "title": "Tarde cultural",
+    "difficulty": "facil",
+    "n_variables": 4,
+    "n_premises": 4,
+    "n_clauses": 4,
+    "search_space": 16,
+    "variables": {
+      "1": "cine",
+      "2": "concierto",
+      "3": "lectura",
+      "4": "exposicion"
+    },
+    "prompt": "Organiza el evento 'Tarde cultural'. Las actividades disponibles son: cine, concierto, lectura, exposicion. Cada actividad se incluye o se excluye. Solo se aplican las siguientes condiciones:\n1. Se debe incluir cine.\n2. Si se incluye cine, tambien se debe incluir concierto.\n3. Si se incluye concierto, tambien se debe incluir lectura.\n4. No se pueden incluir a la vez lectura y exposicion.\nIndica para cada actividad si se incluye o se excluye, cumpliendo todas las condiciones. Cualquier seleccion valida es aceptable; no hay que minimizar ni maximizar actividades. Si ninguna seleccion cumple las condiciones, responde UNSAT."
+  },
+  {
+    "id": "SAT-08",
+    "title": "Semana de ciencia",
+    "difficulty": "medio",
+    "n_variables": 5,
+    "n_premises": 6,
+    "n_clauses": 9,
+    "search_space": 32,
+    "variables": {
+      "1": "conferencia",
+      "2": "taller",
+      "3": "exposicion",
+      "4": "debate",
+      "5": "concurso"
+    },
+    "prompt": "Organiza el evento 'Semana de ciencia'. Las actividades disponibles son: conferencia, taller, exposicion, debate, concurso. Cada actividad se incluye o se excluye. Solo se aplican las siguientes condiciones:\n1. Se debe incluir exactamente una de estas actividades: conferencia, taller, exposicion.\n2. Si se incluye conferencia, tambien se debe incluir debate.\n3. Si se incluye taller, tambien se debe incluir concurso.\n4. No se pueden incluir a la vez debate y concurso.\n5. No se puede incluir exposicion.\n6. Se debe incluir concurso.\nIndica para cada actividad si se incluye o se excluye, cumpliendo todas las condiciones. Cualquier seleccion valida es aceptable; no hay que minimizar ni maximizar actividades. Si ninguna seleccion cumple las condiciones, responde UNSAT."
+  },
+  {
+    "id": "SAT-09",
+    "title": "Festival de artes",
+    "difficulty": "medio",
+    "n_variables": 5,
+    "n_premises": 5,
+    "n_clauses": 6,
+    "search_space": 32,
+    "variables": {
+      "1": "concierto",
+      "2": "danza",
+      "3": "teatro",
+      "4": "exposicion",
+      "5": "taller"
+    },
+    "prompt": "Organiza el evento 'Festival de artes'. Las actividades disponibles son: concierto, danza, teatro, exposicion, taller. Cada actividad se incluye o se excluye. Solo se aplican las siguientes condiciones:\n1. Se incluye concierto si y solo si se incluye danza.\n2. Se debe incluir al menos una de estas actividades: teatro, exposicion; se permite incluir varias.\n3. No se pueden incluir a la vez danza y teatro.\n4. Si se incluye exposicion, tambien se debe incluir taller.\n5. No se pueden incluir a la vez concierto y taller.\nIndica para cada actividad si se incluye o se excluye, cumpliendo todas las condiciones. Cualquier seleccion valida es aceptable; no hay que minimizar ni maximizar actividades. Si ninguna seleccion cumple las condiciones, responde UNSAT."
+  },
+  {
+    "id": "SAT-10",
+    "title": "Jornada de innovacion",
+    "difficulty": "medio",
+    "n_variables": 5,
+    "n_premises": 6,
+    "n_clauses": 6,
+    "search_space": 32,
+    "variables": {
+      "1": "taller",
+      "2": "conferencia",
+      "3": "demostracion",
+      "4": "debate",
+      "5": "concurso"
+    },
+    "prompt": "Organiza el evento 'Jornada de innovacion'. Las actividades disponibles son: taller, conferencia, demostracion, debate, concurso. Cada actividad se incluye o se excluye. Solo se aplican las siguientes condiciones:\n1. Se debe incluir al menos una de estas actividades: taller, conferencia; se permite incluir varias.\n2. Si se incluyen tanto taller como conferencia, se debe incluir demostracion.\n3. Si se incluye demostracion, tambien se debe incluir debate.\n4. No se pueden incluir a la vez debate y concurso.\n5. Se debe incluir concurso.\n6. Si se incluye conferencia, tambien se debe incluir taller.\nIndica para cada actividad si se incluye o se excluye, cumpliendo todas las condiciones. Cualquier seleccion valida es aceptable; no hay que minimizar ni maximizar actividades. Si ninguna seleccion cumple las condiciones, responde UNSAT."
+  },
+  {
+    "id": "SAT-11",
+    "title": "Encuentro literario",
+    "difficulty": "medio",
+    "n_variables": 5,
+    "n_premises": 6,
+    "n_clauses": 7,
+    "search_space": 32,
+    "variables": {
+      "1": "lectura",
+      "2": "debate",
+      "3": "taller",
+      "4": "exposicion",
+      "5": "conferencia"
+    },
+    "prompt": "Organiza el evento 'Encuentro literario'. Las actividades disponibles son: lectura, debate, taller, exposicion, conferencia. Cada actividad se incluye o se excluye. Solo se aplican las siguientes condiciones:\n1. Si se incluye lectura, debe incluirse al menos una de estas actividades: debate, taller; pueden incluirse ambas.\n2. Se debe incluir lectura.\n3. No se pueden incluir a la vez debate y taller.\n4. Se incluye taller si y solo si se incluye exposicion.\n5. Si se incluye conferencia, tambien se debe incluir debate.\n6. No se puede incluir debate.\nIndica para cada actividad si se incluye o se excluye, cumpliendo todas las condiciones. Cualquier seleccion valida es aceptable; no hay que minimizar ni maximizar actividades. Si ninguna seleccion cumple las condiciones, responde UNSAT."
+  },
+  {
+    "id": "SAT-12",
+    "title": "Feria universitaria",
+    "difficulty": "medio",
+    "n_variables": 6,
+    "n_premises": 6,
+    "n_clauses": 10,
+    "search_space": 64,
+    "variables": {
+      "1": "conferencia",
+      "2": "taller",
+      "3": "concierto",
+      "4": "exposicion",
+      "5": "debate",
+      "6": "concurso"
+    },
+    "prompt": "Organiza el evento 'Feria universitaria'. Las actividades disponibles son: conferencia, taller, concierto, exposicion, debate, concurso. Cada actividad se incluye o se excluye. Solo se aplican las siguientes condiciones:\n1. Se debe incluir exactamente una de estas actividades: conferencia, taller, concierto.\n2. Se debe incluir exactamente una de estas actividades: exposicion, debate.\n3. Si se incluye conferencia, tambien se debe incluir exposicion.\n4. Si se incluye taller, tambien se debe incluir debate.\n5. Si se incluye concierto, tambien se debe incluir concurso.\n6. No se pueden incluir a la vez exposicion y concurso.\nIndica para cada actividad si se incluye o se excluye, cumpliendo todas las condiciones. Cualquier seleccion valida es aceptable; no hay que minimizar ni maximizar actividades. Si ninguna seleccion cumple las condiciones, responde UNSAT."
+  },
+  {
+    "id": "SAT-13",
+    "title": "Jornada ambiental",
+    "difficulty": "medio",
+    "n_variables": 6,
+    "n_premises": 7,
+    "n_clauses": 8,
+    "search_space": 64,
+    "variables": {
+      "1": "taller",
+      "2": "debate",
+      "3": "exposicion",
+      "4": "documental",
+      "5": "conferencia",
+      "6": "concurso"
+    },
+    "prompt": "Organiza el evento 'Jornada ambiental'. Las actividades disponibles son: taller, debate, exposicion, documental, conferencia, concurso. Cada actividad se incluye o se excluye. Solo se aplican las siguientes condiciones:\n1. Se incluye taller si y solo si se incluye debate.\n2. Si se incluye debate, debe incluirse al menos una de estas actividades: exposicion, documental; pueden incluirse ambas.\n3. No se pueden incluir a la vez exposicion y documental.\n4. Si se incluye documental, tambien se debe incluir conferencia.\n5. No se pueden incluir a la vez conferencia y concurso.\n6. Se debe incluir taller.\n7. Se debe incluir concurso.\nIndica para cada actividad si se incluye o se excluye, cumpliendo todas las condiciones. Cualquier seleccion valida es aceptable; no hay que minimizar ni maximizar actividades. Si ninguna seleccion cumple las condiciones, responde UNSAT."
+  },
+  {
+    "id": "SAT-14",
+    "title": "Encuentro de diseno",
+    "difficulty": "medio",
+    "n_variables": 6,
+    "n_premises": 6,
+    "n_clauses": 9,
+    "search_space": 64,
+    "variables": {
+      "1": "exposicion",
+      "2": "taller",
+      "3": "conferencia",
+      "4": "debate",
+      "5": "concurso",
+      "6": "demostracion"
+    },
+    "prompt": "Organiza el evento 'Encuentro de diseno'. Las actividades disponibles son: exposicion, taller, conferencia, debate, concurso, demostracion. Cada actividad se incluye o se excluye. Solo se aplican las siguientes condiciones:\n1. Se deben incluir al menos dos de estas tres actividades: exposicion, taller, conferencia; se permite incluir las tres.\n2. Si se incluyen tanto exposicion como taller, se debe incluir debate.\n3. Si se incluye conferencia, tambien se debe incluir concurso.\n4. No se pueden incluir a la vez debate y concurso.\n5. Se incluye concurso si y solo si se incluye demostracion.\n6. No se puede incluir debate.\nIndica para cada actividad si se incluye o se excluye, cumpliendo todas las condiciones. Cualquier seleccion valida es aceptable; no hay que minimizar ni maximizar actividades. Si ninguna seleccion cumple las condiciones, responde UNSAT."
+  },
+  {
+    "id": "SAT-15",
+    "title": "Festival interdisciplinario",
+    "difficulty": "dificil",
+    "n_variables": 7,
+    "n_premises": 8,
+    "n_clauses": 12,
+    "search_space": 128,
+    "variables": {
+      "1": "concierto",
+      "2": "teatro",
+      "3": "danza",
+      "4": "taller",
+      "5": "exposicion",
+      "6": "debate",
+      "7": "conferencia"
+    },
+    "prompt": "Organiza el evento 'Festival interdisciplinario'. Las actividades disponibles son: concierto, teatro, danza, taller, exposicion, debate, conferencia. Cada actividad se incluye o se excluye. Solo se aplican las siguientes condiciones:\n1. Se debe incluir exactamente una de estas actividades: concierto, teatro, danza.\n2. Se incluye taller si y solo si se incluye exposicion.\n3. Si se incluye concierto, tambien se debe incluir taller.\n4. Si se incluye teatro, tambien se debe incluir debate.\n5. Si se incluye danza, tambien se debe incluir conferencia.\n6. No se pueden incluir a la vez debate y conferencia.\n7. Se debe incluir al menos una de estas actividades: exposicion, debate; se permite incluir varias.\n8. No se pueden incluir a la vez taller y debate.\nIndica para cada actividad si se incluye o se excluye, cumpliendo todas las condiciones. Cualquier seleccion valida es aceptable; no hay que minimizar ni maximizar actividades. Si ninguna seleccion cumple las condiciones, responde UNSAT."
+  },
+  {
+    "id": "SAT-16",
+    "title": "Congreso estudiantil",
+    "difficulty": "dificil",
+    "n_variables": 7,
+    "n_premises": 8,
+    "n_clauses": 11,
+    "search_space": 128,
+    "variables": {
+      "1": "conferencia",
+      "2": "debate",
+      "3": "taller",
+      "4": "exposicion",
+      "5": "concurso",
+      "6": "demostracion",
+      "7": "documental"
+    },
+    "prompt": "Organiza el evento 'Congreso estudiantil'. Las actividades disponibles son: conferencia, debate, taller, exposicion, concurso, demostracion, documental. Cada actividad se incluye o se excluye. Solo se aplican las siguientes condiciones:\n1. Se deben incluir al menos dos de estas tres actividades: conferencia, debate, taller; se permite incluir las tres.\n2. Si se incluyen tanto conferencia como debate, se debe incluir exposicion.\n3. Si se incluyen tanto debate como taller, se debe incluir concurso.\n4. No se pueden incluir a la vez exposicion y concurso.\n5. Se incluye concurso si y solo si se incluye demostracion.\n6. Si se incluye documental, debe incluirse al menos una de estas actividades: exposicion, demostracion; pueden incluirse ambas.\n7. Se debe incluir documental.\n8. No se puede incluir conferencia.\nIndica para cada actividad si se incluye o se excluye, cumpliendo todas las condiciones. Cualquier seleccion valida es aceptable; no hay que minimizar ni maximizar actividades. Si ninguna seleccion cumple las condiciones, responde UNSAT."
+  },
+  {
+    "id": "SAT-17",
+    "title": "Semana audiovisual",
+    "difficulty": "dificil",
+    "n_variables": 7,
+    "n_premises": 8,
+    "n_clauses": 12,
+    "search_space": 128,
+    "variables": {
+      "1": "cine",
+      "2": "debate",
+      "3": "taller",
+      "4": "exposicion",
+      "5": "concierto",
+      "6": "lectura",
+      "7": "concurso"
+    },
+    "prompt": "Organiza el evento 'Semana audiovisual'. Las actividades disponibles son: cine, debate, taller, exposicion, concierto, lectura, concurso. Cada actividad se incluye o se excluye. Solo se aplican las siguientes condiciones:\n1. Se incluye cine si y solo si se incluye debate.\n2. Se debe incluir exactamente una de estas actividades: taller, exposicion, concierto.\n3. Si se incluye debate, debe incluirse al menos una de estas actividades: taller, exposicion; pueden incluirse ambas.\n4. Si se incluye taller, tambien se debe incluir lectura.\n5. Si se incluye exposicion, tambien se debe incluir concurso.\n6. No se pueden incluir a la vez lectura y concurso.\n7. Se debe incluir cine.\n8. No se puede incluir lectura.\nIndica para cada actividad si se incluye o se excluye, cumpliendo todas las condiciones. Cualquier seleccion valida es aceptable; no hay que minimizar ni maximizar actividades. Si ninguna seleccion cumple las condiciones, responde UNSAT."
+  },
+  {
+    "id": "SAT-18",
+    "title": "Feria tecnologica",
+    "difficulty": "dificil",
+    "n_variables": 8,
+    "n_premises": 8,
+    "n_clauses": 14,
+    "search_space": 256,
+    "variables": {
+      "1": "conferencia",
+      "2": "taller",
+      "3": "demostracion",
+      "4": "exposicion",
+      "5": "debate",
+      "6": "concurso",
+      "7": "documental",
+      "8": "concierto"
+    },
+    "prompt": "Organiza el evento 'Feria tecnologica'. Las actividades disponibles son: conferencia, taller, demostracion, exposicion, debate, concurso, documental, concierto. Cada actividad se incluye o se excluye. Solo se aplican las siguientes condiciones:\n1. Se debe incluir exactamente una de estas actividades: conferencia, taller, demostracion.\n2. Se deben incluir al menos dos de estas tres actividades: exposicion, debate, concurso; se permite incluir las tres.\n3. Si se incluye conferencia, tambien se debe incluir exposicion.\n4. Si se incluye taller, tambien se debe incluir debate.\n5. Si se incluye demostracion, tambien se debe incluir concurso.\n6. Si se incluyen tanto exposicion como debate, se debe incluir documental.\n7. Se incluye documental si y solo si se incluye concierto.\n8. No se pueden incluir a la vez concurso y concierto.\nIndica para cada actividad si se incluye o se excluye, cumpliendo todas las condiciones. Cualquier seleccion valida es aceptable; no hay que minimizar ni maximizar actividades. Si ninguna seleccion cumple las condiciones, responde UNSAT."
+  },
+  {
+    "id": "SAT-19",
+    "title": "Encuentro de humanidades",
+    "difficulty": "dificil",
+    "n_variables": 8,
+    "n_premises": 9,
+    "n_clauses": 14,
+    "search_space": 256,
+    "variables": {
+      "1": "lectura",
+      "2": "debate",
+      "3": "conferencia",
+      "4": "taller",
+      "5": "exposicion",
+      "6": "teatro",
+      "7": "cine",
+      "8": "concierto"
+    },
+    "prompt": "Organiza el evento 'Encuentro de humanidades'. Las actividades disponibles son: lectura, debate, conferencia, taller, exposicion, teatro, cine, concierto. Cada actividad se incluye o se excluye. Solo se aplican las siguientes condiciones:\n1. Se incluye lectura si y solo si se incluye debate.\n2. Se debe incluir exactamente una de estas actividades: conferencia, taller, exposicion.\n3. Si se incluye debate, debe incluirse al menos una de estas actividades: conferencia, taller; pueden incluirse ambas.\n4. Si se incluyen tanto lectura como conferencia, se debe incluir teatro.\n5. Si se incluye taller, tambien se debe incluir cine.\n6. Se incluye cine si y solo si se incluye concierto.\n7. No se pueden incluir a la vez teatro y concierto.\n8. Se debe incluir lectura.\n9. No se puede incluir teatro.\nIndica para cada actividad si se incluye o se excluye, cumpliendo todas las condiciones. Cualquier seleccion valida es aceptable; no hay que minimizar ni maximizar actividades. Si ninguna seleccion cumple las condiciones, responde UNSAT."
+  },
+  {
+    "id": "SAT-20",
+    "title": "Festival de cierre",
+    "difficulty": "dificil",
+    "n_variables": 8,
+    "n_premises": 9,
+    "n_clauses": 14,
+    "search_space": 256,
+    "variables": {
+      "1": "concierto",
+      "2": "teatro",
+      "3": "danza",
+      "4": "cine",
+      "5": "debate",
+      "6": "taller",
+      "7": "exposicion",
+      "8": "concurso"
+    },
+    "prompt": "Organiza el evento 'Festival de cierre'. Las actividades disponibles son: concierto, teatro, danza, cine, debate, taller, exposicion, concurso. Cada actividad se incluye o se excluye. Solo se aplican las siguientes condiciones:\n1. Se deben incluir al menos dos de estas tres actividades: concierto, teatro, danza; se permite incluir las tres.\n2. Se debe incluir exactamente una de estas actividades: cine, debate, taller.\n3. Si se incluyen tanto concierto como teatro, se debe incluir exposicion.\n4. Si se incluyen tanto teatro como danza, se debe incluir concurso.\n5. No se pueden incluir a la vez exposicion y concurso.\n6. Si se incluye cine, tambien se debe incluir exposicion.\n7. Si se incluye debate, tambien se debe incluir concurso.\n8. Si se incluye taller, debe incluirse al menos una de estas actividades: exposicion, concurso; pueden incluirse ambas.\n9. No se puede incluir exposicion.\nIndica para cada actividad si se incluye o se excluye, cumpliendo todas las condiciones. Cualquier seleccion valida es aceptable; no hay que minimizar ni maximizar actividades. Si ninguna seleccion cumple las condiciones, responde UNSAT."
+  }
+]

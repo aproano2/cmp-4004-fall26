@@ -1,0 +1,39 @@
+{
+  "request": {
+    "model": "llama3.2:3b",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Resuelve el problema directamente. Devuelve solo JSON: {\"status\": \"SAT\", \"assignment\": {\"1\": true, \"2\": false}}. Incluye todos los identificadores dados con valores booleanos. Si no existe solucion, devuelve {\"status\": \"UNSAT\"}."
+      },
+      {
+        "role": "user",
+        "content": "Organiza el evento 'Encuentro de diseno'. Las actividades disponibles son: exposicion, taller, conferencia, debate, concurso, demostracion. Cada actividad se incluye o se excluye. Solo se aplican las siguientes condiciones:\n1. Se deben incluir al menos dos de estas tres actividades: exposicion, taller, conferencia; se permite incluir las tres.\n2. Si se incluyen tanto exposicion como taller, se debe incluir debate.\n3. Si se incluye conferencia, tambien se debe incluir concurso.\n4. No se pueden incluir a la vez debate y concurso.\n5. Se incluye concurso si y solo si se incluye demostracion.\n6. No se puede incluir debate.\nIndica para cada actividad si se incluye o se excluye, cumpliendo todas las condiciones. Cualquier seleccion valida es aceptable; no hay que minimizar ni maximizar actividades. Si ninguna seleccion cumple las condiciones, responde UNSAT.\nIdentificadores: {\"1\": \"exposicion\", \"2\": \"taller\", \"3\": \"conferencia\", \"4\": \"debate\", \"5\": \"concurso\", \"6\": \"demostracion\"}"
+      }
+    ],
+    "stream": false,
+    "options": {
+      "temperature": 0,
+      "seed": 42,
+      "num_predict": 2048
+    }
+  },
+  "response": {
+    "model": "llama3.2:3b",
+    "created_at": "2026-11-19T03:12:02.0759057Z",
+    "message": {
+      "role": "assistant",
+      "content": "```json\n{\n  \"status\": \"SAT\",\n  \"assignment\": {\n    \"1\": \"exposicion\",\n    \"2\": \"taller\",\n    \"3\": \"conferencia\",\n    \"4\": \"debate\",\n    \"5\": \"concurso\",\n    \"6\": \"demostracion\"\n  }\n}\n```\n\nExplicaci\u00f3n:\n\n1. Se incluyen exposicion y taller, por lo que se incluye debate.\n2. Se incluye conferencia, por lo que se incluye concurso.\n3. No se incluye debate, por lo que no se cumple ninguna condici\u00f3n.\n4. Se incluye concurso, por lo que se incluye demostracion.\n5. Se incluyen exposicion, taller y conferencia, por lo que se cumple todas las condiciones.\n\nNota: La respuesta es SAT porque se cumplen todas las condiciones. Si no se cumplieran las condiciones, la respuesta ser\u00eda UNSAT."
+    },
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 1357055100,
+    "load_duration": 3579800,
+    "prompt_eval_count": 347,
+    "prompt_eval_cached_count": 15,
+    "prompt_eval_duration": 180254000,
+    "eval_count": 202,
+    "eval_duration": 1097616000
+  },
+  "llm_time_s": 3.3946396999999706
+}

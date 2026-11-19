@@ -1,0 +1,39 @@
+{
+  "request": {
+    "model": "llama3.2:3b",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Resuelve el problema directamente. Devuelve solo JSON: {\"status\": \"SAT\", \"assignment\": {\"1\": true, \"2\": false}}. Incluye todos los identificadores dados con valores booleanos. Si no existe solucion, devuelve {\"status\": \"UNSAT\"}."
+      },
+      {
+        "role": "user",
+        "content": "Organiza el evento 'Muestra creativa'. Las actividades disponibles son: taller, exposicion, concurso. Cada actividad se incluye o se excluye. Solo se aplican las siguientes condiciones:\n1. Se debe incluir al menos una de estas actividades: taller, exposicion; se permite incluir varias.\n2. Si se incluye taller, tambien se debe incluir concurso.\n3. No se pueden incluir a la vez exposicion y concurso.\nIndica para cada actividad si se incluye o se excluye, cumpliendo todas las condiciones. Cualquier seleccion valida es aceptable; no hay que minimizar ni maximizar actividades. Si ninguna seleccion cumple las condiciones, responde UNSAT.\nIdentificadores: {\"1\": \"taller\", \"2\": \"exposicion\", \"3\": \"concurso\"}"
+      }
+    ],
+    "stream": false,
+    "options": {
+      "temperature": 0,
+      "seed": 42,
+      "num_predict": 2048
+    }
+  },
+  "response": {
+    "model": "llama3.2:3b",
+    "created_at": "2026-11-19T03:28:35.2017222Z",
+    "message": {
+      "role": "assistant",
+      "content": "```json\n{\n  \"status\": \"SAT\",\n  \"assignment\": {\n    \"1\": \"taller\",\n    \"2\": true,\n    \"3\": true\n  }\n}\n```\n\nExplicaci\u00f3n:\n\n* Se incluye el taller (actividad 1).\n* Se incluye la exposici\u00f3n (actividad 2).\n* Se incluye el concurso (actividad 3), pero no se puede incluir a la vez exposici\u00f3n y concurso, por lo que se excluye la exposici\u00f3n."
+    },
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 796605200,
+    "load_duration": 3590700,
+    "prompt_eval_count": 263,
+    "prompt_eval_cached_count": 86,
+    "prompt_eval_duration": 111456000,
+    "eval_count": 109,
+    "eval_duration": 637441000
+  },
+  "llm_time_s": 2.822218299999804
+}

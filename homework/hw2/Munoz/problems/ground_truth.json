@@ -1,0 +1,2203 @@
+[
+  {
+    "id": "SAT-01",
+    "status": "SAT",
+    "cnf": [
+      [
+        1
+      ],
+      [
+        -1,
+        2
+      ],
+      [
+        -2,
+        -3
+      ]
+    ],
+    "premise_cnf": [
+      {
+        "premise": "Se debe incluir concierto.",
+        "clauses": [
+          [
+            1
+          ]
+        ]
+      },
+      {
+        "premise": "Si se incluye concierto, tambien se debe incluir taller.",
+        "clauses": [
+          [
+            -1,
+            2
+          ]
+        ]
+      },
+      {
+        "premise": "No se pueden incluir a la vez taller y exposicion.",
+        "clauses": [
+          [
+            -2,
+            -3
+          ]
+        ]
+      }
+    ],
+    "witness": {
+      "1": true,
+      "2": true,
+      "3": false
+    },
+    "solution_count": 1,
+    "human_reviewed": true
+  },
+  {
+    "id": "SAT-02",
+    "status": "SAT",
+    "cnf": [
+      [
+        1,
+        2
+      ],
+      [
+        -1,
+        -2
+      ],
+      [
+        -2,
+        3
+      ],
+      [
+        -1
+      ]
+    ],
+    "premise_cnf": [
+      {
+        "premise": "Se debe incluir exactamente una de estas actividades: conferencia, debate.",
+        "clauses": [
+          [
+            1,
+            2
+          ],
+          [
+            -1,
+            -2
+          ]
+        ]
+      },
+      {
+        "premise": "Si se incluye debate, tambien se debe incluir exposicion.",
+        "clauses": [
+          [
+            -2,
+            3
+          ]
+        ]
+      },
+      {
+        "premise": "No se puede incluir conferencia.",
+        "clauses": [
+          [
+            -1
+          ]
+        ]
+      }
+    ],
+    "witness": {
+      "1": false,
+      "2": true,
+      "3": true
+    },
+    "solution_count": 1,
+    "human_reviewed": true
+  },
+  {
+    "id": "SAT-03",
+    "status": "SAT",
+    "cnf": [
+      [
+        1,
+        2
+      ],
+      [
+        -1,
+        3
+      ],
+      [
+        -2,
+        -3
+      ]
+    ],
+    "premise_cnf": [
+      {
+        "premise": "Se debe incluir al menos una de estas actividades: taller, exposicion; se permite incluir varias.",
+        "clauses": [
+          [
+            1,
+            2
+          ]
+        ]
+      },
+      {
+        "premise": "Si se incluye taller, tambien se debe incluir concurso.",
+        "clauses": [
+          [
+            -1,
+            3
+          ]
+        ]
+      },
+      {
+        "premise": "No se pueden incluir a la vez exposicion y concurso.",
+        "clauses": [
+          [
+            -2,
+            -3
+          ]
+        ]
+      }
+    ],
+    "witness": {
+      "1": false,
+      "2": true,
+      "3": false
+    },
+    "solution_count": 2,
+    "human_reviewed": true
+  },
+  {
+    "id": "SAT-04",
+    "status": "SAT",
+    "cnf": [
+      [
+        -1,
+        2
+      ],
+      [
+        -2,
+        1
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        -2,
+        -3
+      ]
+    ],
+    "premise_cnf": [
+      {
+        "premise": "Se incluye cine si y solo si se incluye debate.",
+        "clauses": [
+          [
+            -1,
+            2
+          ],
+          [
+            -2,
+            1
+          ]
+        ]
+      },
+      {
+        "premise": "Se debe incluir al menos una de estas actividades: cine, concierto; se permite incluir varias.",
+        "clauses": [
+          [
+            1,
+            3
+          ]
+        ]
+      },
+      {
+        "premise": "No se pueden incluir a la vez debate y concierto.",
+        "clauses": [
+          [
+            -2,
+            -3
+          ]
+        ]
+      }
+    ],
+    "witness": {
+      "1": false,
+      "2": false,
+      "3": true
+    },
+    "solution_count": 2,
+    "human_reviewed": true
+  },
+  {
+    "id": "SAT-05",
+    "status": "SAT",
+    "cnf": [
+      [
+        1,
+        2
+      ],
+      [
+        -1,
+        -2
+      ],
+      [
+        -1,
+        3
+      ],
+      [
+        -2,
+        4
+      ],
+      [
+        -4
+      ]
+    ],
+    "premise_cnf": [
+      {
+        "premise": "Se debe incluir exactamente una de estas actividades: taller, conferencia.",
+        "clauses": [
+          [
+            1,
+            2
+          ],
+          [
+            -1,
+            -2
+          ]
+        ]
+      },
+      {
+        "premise": "Si se incluye taller, tambien se debe incluir exposicion.",
+        "clauses": [
+          [
+            -1,
+            3
+          ]
+        ]
+      },
+      {
+        "premise": "Si se incluye conferencia, tambien se debe incluir concurso.",
+        "clauses": [
+          [
+            -2,
+            4
+          ]
+        ]
+      },
+      {
+        "premise": "No se puede incluir concurso.",
+        "clauses": [
+          [
+            -4
+          ]
+        ]
+      }
+    ],
+    "witness": {
+      "1": true,
+      "2": false,
+      "3": true,
+      "4": false
+    },
+    "solution_count": 1,
+    "human_reviewed": true
+  },
+  {
+    "id": "SAT-06",
+    "status": "SAT",
+    "cnf": [
+      [
+        1,
+        2
+      ],
+      [
+        -1,
+        -2
+      ],
+      [
+        -3,
+        1
+      ],
+      [
+        4
+      ]
+    ],
+    "premise_cnf": [
+      {
+        "premise": "Se debe incluir al menos una de estas actividades: concierto, exposicion; se permite incluir varias.",
+        "clauses": [
+          [
+            1,
+            2
+          ]
+        ]
+      },
+      {
+        "premise": "No se pueden incluir a la vez concierto y exposicion.",
+        "clauses": [
+          [
+            -1,
+            -2
+          ]
+        ]
+      },
+      {
+        "premise": "Si se incluye debate, tambien se debe incluir concierto.",
+        "clauses": [
+          [
+            -3,
+            1
+          ]
+        ]
+      },
+      {
+        "premise": "Se debe incluir taller.",
+        "clauses": [
+          [
+            4
+          ]
+        ]
+      }
+    ],
+    "witness": {
+      "1": false,
+      "2": true,
+      "3": false,
+      "4": true
+    },
+    "solution_count": 3,
+    "human_reviewed": true
+  },
+  {
+    "id": "SAT-07",
+    "status": "SAT",
+    "cnf": [
+      [
+        1
+      ],
+      [
+        -1,
+        2
+      ],
+      [
+        -2,
+        3
+      ],
+      [
+        -3,
+        -4
+      ]
+    ],
+    "premise_cnf": [
+      {
+        "premise": "Se debe incluir cine.",
+        "clauses": [
+          [
+            1
+          ]
+        ]
+      },
+      {
+        "premise": "Si se incluye cine, tambien se debe incluir concierto.",
+        "clauses": [
+          [
+            -1,
+            2
+          ]
+        ]
+      },
+      {
+        "premise": "Si se incluye concierto, tambien se debe incluir lectura.",
+        "clauses": [
+          [
+            -2,
+            3
+          ]
+        ]
+      },
+      {
+        "premise": "No se pueden incluir a la vez lectura y exposicion.",
+        "clauses": [
+          [
+            -3,
+            -4
+          ]
+        ]
+      }
+    ],
+    "witness": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false
+    },
+    "solution_count": 1,
+    "human_reviewed": true
+  },
+  {
+    "id": "SAT-08",
+    "status": "SAT",
+    "cnf": [
+      [
+        1,
+        2,
+        3
+      ],
+      [
+        -1,
+        -2
+      ],
+      [
+        -1,
+        -3
+      ],
+      [
+        -2,
+        -3
+      ],
+      [
+        -1,
+        4
+      ],
+      [
+        -2,
+        5
+      ],
+      [
+        -4,
+        -5
+      ],
+      [
+        -3
+      ],
+      [
+        5
+      ]
+    ],
+    "premise_cnf": [
+      {
+        "premise": "Se debe incluir exactamente una de estas actividades: conferencia, taller, exposicion.",
+        "clauses": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            -1,
+            -2
+          ],
+          [
+            -1,
+            -3
+          ],
+          [
+            -2,
+            -3
+          ]
+        ]
+      },
+      {
+        "premise": "Si se incluye conferencia, tambien se debe incluir debate.",
+        "clauses": [
+          [
+            -1,
+            4
+          ]
+        ]
+      },
+      {
+        "premise": "Si se incluye taller, tambien se debe incluir concurso.",
+        "clauses": [
+          [
+            -2,
+            5
+          ]
+        ]
+      },
+      {
+        "premise": "No se pueden incluir a la vez debate y concurso.",
+        "clauses": [
+          [
+            -4,
+            -5
+          ]
+        ]
+      },
+      {
+        "premise": "No se puede incluir exposicion.",
+        "clauses": [
+          [
+            -3
+          ]
+        ]
+      },
+      {
+        "premise": "Se debe incluir concurso.",
+        "clauses": [
+          [
+            5
+          ]
+        ]
+      }
+    ],
+    "witness": {
+      "1": false,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": true
+    },
+    "solution_count": 1,
+    "human_reviewed": true
+  },
+  {
+    "id": "SAT-09",
+    "status": "SAT",
+    "cnf": [
+      [
+        -1,
+        2
+      ],
+      [
+        -2,
+        1
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        -2,
+        -3
+      ],
+      [
+        -4,
+        5
+      ],
+      [
+        -1,
+        -5
+      ]
+    ],
+    "premise_cnf": [
+      {
+        "premise": "Se incluye concierto si y solo si se incluye danza.",
+        "clauses": [
+          [
+            -1,
+            2
+          ],
+          [
+            -2,
+            1
+          ]
+        ]
+      },
+      {
+        "premise": "Se debe incluir al menos una de estas actividades: teatro, exposicion; se permite incluir varias.",
+        "clauses": [
+          [
+            3,
+            4
+          ]
+        ]
+      },
+      {
+        "premise": "No se pueden incluir a la vez danza y teatro.",
+        "clauses": [
+          [
+            -2,
+            -3
+          ]
+        ]
+      },
+      {
+        "premise": "Si se incluye exposicion, tambien se debe incluir taller.",
+        "clauses": [
+          [
+            -4,
+            5
+          ]
+        ]
+      },
+      {
+        "premise": "No se pueden incluir a la vez concierto y taller.",
+        "clauses": [
+          [
+            -1,
+            -5
+          ]
+        ]
+      }
+    ],
+    "witness": {
+      "1": false,
+      "2": false,
+      "3": false,
+      "4": true,
+      "5": true
+    },
+    "solution_count": 4,
+    "human_reviewed": true
+  },
+  {
+    "id": "SAT-10",
+    "status": "SAT",
+    "cnf": [
+      [
+        1,
+        2
+      ],
+      [
+        -1,
+        -2,
+        3
+      ],
+      [
+        -3,
+        4
+      ],
+      [
+        -4,
+        -5
+      ],
+      [
+        5
+      ],
+      [
+        -2,
+        1
+      ]
+    ],
+    "premise_cnf": [
+      {
+        "premise": "Se debe incluir al menos una de estas actividades: taller, conferencia; se permite incluir varias.",
+        "clauses": [
+          [
+            1,
+            2
+          ]
+        ]
+      },
+      {
+        "premise": "Si se incluyen tanto taller como conferencia, se debe incluir demostracion.",
+        "clauses": [
+          [
+            -1,
+            -2,
+            3
+          ]
+        ]
+      },
+      {
+        "premise": "Si se incluye demostracion, tambien se debe incluir debate.",
+        "clauses": [
+          [
+            -3,
+            4
+          ]
+        ]
+      },
+      {
+        "premise": "No se pueden incluir a la vez debate y concurso.",
+        "clauses": [
+          [
+            -4,
+            -5
+          ]
+        ]
+      },
+      {
+        "premise": "Se debe incluir concurso.",
+        "clauses": [
+          [
+            5
+          ]
+        ]
+      },
+      {
+        "premise": "Si se incluye conferencia, tambien se debe incluir taller.",
+        "clauses": [
+          [
+            -2,
+            1
+          ]
+        ]
+      }
+    ],
+    "witness": {
+      "1": true,
+      "2": false,
+      "3": false,
+      "4": false,
+      "5": true
+    },
+    "solution_count": 1,
+    "human_reviewed": true
+  },
+  {
+    "id": "SAT-11",
+    "status": "SAT",
+    "cnf": [
+      [
+        -1,
+        2,
+        3
+      ],
+      [
+        1
+      ],
+      [
+        -2,
+        -3
+      ],
+      [
+        -3,
+        4
+      ],
+      [
+        -4,
+        3
+      ],
+      [
+        -5,
+        2
+      ],
+      [
+        -2
+      ]
+    ],
+    "premise_cnf": [
+      {
+        "premise": "Si se incluye lectura, debe incluirse al menos una de estas actividades: debate, taller; pueden incluirse ambas.",
+        "clauses": [
+          [
+            -1,
+            2,
+            3
+          ]
+        ]
+      },
+      {
+        "premise": "Se debe incluir lectura.",
+        "clauses": [
+          [
+            1
+          ]
+        ]
+      },
+      {
+        "premise": "No se pueden incluir a la vez debate y taller.",
+        "clauses": [
+          [
+            -2,
+            -3
+          ]
+        ]
+      },
+      {
+        "premise": "Se incluye taller si y solo si se incluye exposicion.",
+        "clauses": [
+          [
+            -3,
+            4
+          ],
+          [
+            -4,
+            3
+          ]
+        ]
+      },
+      {
+        "premise": "Si se incluye conferencia, tambien se debe incluir debate.",
+        "clauses": [
+          [
+            -5,
+            2
+          ]
+        ]
+      },
+      {
+        "premise": "No se puede incluir debate.",
+        "clauses": [
+          [
+            -2
+          ]
+        ]
+      }
+    ],
+    "witness": {
+      "1": true,
+      "2": false,
+      "3": true,
+      "4": true,
+      "5": false
+    },
+    "solution_count": 1,
+    "human_reviewed": true
+  },
+  {
+    "id": "SAT-12",
+    "status": "SAT",
+    "cnf": [
+      [
+        1,
+        2,
+        3
+      ],
+      [
+        -1,
+        -2
+      ],
+      [
+        -1,
+        -3
+      ],
+      [
+        -2,
+        -3
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        -4,
+        -5
+      ],
+      [
+        -1,
+        4
+      ],
+      [
+        -2,
+        5
+      ],
+      [
+        -3,
+        6
+      ],
+      [
+        -4,
+        -6
+      ]
+    ],
+    "premise_cnf": [
+      {
+        "premise": "Se debe incluir exactamente una de estas actividades: conferencia, taller, concierto.",
+        "clauses": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            -1,
+            -2
+          ],
+          [
+            -1,
+            -3
+          ],
+          [
+            -2,
+            -3
+          ]
+        ]
+      },
+      {
+        "premise": "Se debe incluir exactamente una de estas actividades: exposicion, debate.",
+        "clauses": [
+          [
+            4,
+            5
+          ],
+          [
+            -4,
+            -5
+          ]
+        ]
+      },
+      {
+        "premise": "Si se incluye conferencia, tambien se debe incluir exposicion.",
+        "clauses": [
+          [
+            -1,
+            4
+          ]
+        ]
+      },
+      {
+        "premise": "Si se incluye taller, tambien se debe incluir debate.",
+        "clauses": [
+          [
+            -2,
+            5
+          ]
+        ]
+      },
+      {
+        "premise": "Si se incluye concierto, tambien se debe incluir concurso.",
+        "clauses": [
+          [
+            -3,
+            6
+          ]
+        ]
+      },
+      {
+        "premise": "No se pueden incluir a la vez exposicion y concurso.",
+        "clauses": [
+          [
+            -4,
+            -6
+          ]
+        ]
+      }
+    ],
+    "witness": {
+      "1": false,
+      "2": false,
+      "3": true,
+      "4": false,
+      "5": true,
+      "6": true
+    },
+    "solution_count": 4,
+    "human_reviewed": true
+  },
+  {
+    "id": "SAT-13",
+    "status": "SAT",
+    "cnf": [
+      [
+        -1,
+        2
+      ],
+      [
+        -2,
+        1
+      ],
+      [
+        -2,
+        3,
+        4
+      ],
+      [
+        -3,
+        -4
+      ],
+      [
+        -4,
+        5
+      ],
+      [
+        -5,
+        -6
+      ],
+      [
+        1
+      ],
+      [
+        6
+      ]
+    ],
+    "premise_cnf": [
+      {
+        "premise": "Se incluye taller si y solo si se incluye debate.",
+        "clauses": [
+          [
+            -1,
+            2
+          ],
+          [
+            -2,
+            1
+          ]
+        ]
+      },
+      {
+        "premise": "Si se incluye debate, debe incluirse al menos una de estas actividades: exposicion, documental; pueden incluirse ambas.",
+        "clauses": [
+          [
+            -2,
+            3,
+            4
+          ]
+        ]
+      },
+      {
+        "premise": "No se pueden incluir a la vez exposicion y documental.",
+        "clauses": [
+          [
+            -3,
+            -4
+          ]
+        ]
+      },
+      {
+        "premise": "Si se incluye documental, tambien se debe incluir conferencia.",
+        "clauses": [
+          [
+            -4,
+            5
+          ]
+        ]
+      },
+      {
+        "premise": "No se pueden incluir a la vez conferencia y concurso.",
+        "clauses": [
+          [
+            -5,
+            -6
+          ]
+        ]
+      },
+      {
+        "premise": "Se debe incluir taller.",
+        "clauses": [
+          [
+            1
+          ]
+        ]
+      },
+      {
+        "premise": "Se debe incluir concurso.",
+        "clauses": [
+          [
+            6
+          ]
+        ]
+      }
+    ],
+    "witness": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": false,
+      "6": true
+    },
+    "solution_count": 1,
+    "human_reviewed": true
+  },
+  {
+    "id": "SAT-14",
+    "status": "SAT",
+    "cnf": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        -1,
+        -2,
+        4
+      ],
+      [
+        -3,
+        5
+      ],
+      [
+        -4,
+        -5
+      ],
+      [
+        -5,
+        6
+      ],
+      [
+        -6,
+        5
+      ],
+      [
+        -4
+      ]
+    ],
+    "premise_cnf": [
+      {
+        "premise": "Se deben incluir al menos dos de estas tres actividades: exposicion, taller, conferencia; se permite incluir las tres.",
+        "clauses": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      },
+      {
+        "premise": "Si se incluyen tanto exposicion como taller, se debe incluir debate.",
+        "clauses": [
+          [
+            -1,
+            -2,
+            4
+          ]
+        ]
+      },
+      {
+        "premise": "Si se incluye conferencia, tambien se debe incluir concurso.",
+        "clauses": [
+          [
+            -3,
+            5
+          ]
+        ]
+      },
+      {
+        "premise": "No se pueden incluir a la vez debate y concurso.",
+        "clauses": [
+          [
+            -4,
+            -5
+          ]
+        ]
+      },
+      {
+        "premise": "Se incluye concurso si y solo si se incluye demostracion.",
+        "clauses": [
+          [
+            -5,
+            6
+          ],
+          [
+            -6,
+            5
+          ]
+        ]
+      },
+      {
+        "premise": "No se puede incluir debate.",
+        "clauses": [
+          [
+            -4
+          ]
+        ]
+      }
+    ],
+    "witness": {
+      "1": false,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": true,
+      "6": true
+    },
+    "solution_count": 2,
+    "human_reviewed": true
+  },
+  {
+    "id": "SAT-15",
+    "status": "SAT",
+    "cnf": [
+      [
+        1,
+        2,
+        3
+      ],
+      [
+        -1,
+        -2
+      ],
+      [
+        -1,
+        -3
+      ],
+      [
+        -2,
+        -3
+      ],
+      [
+        -4,
+        5
+      ],
+      [
+        -5,
+        4
+      ],
+      [
+        -1,
+        4
+      ],
+      [
+        -2,
+        6
+      ],
+      [
+        -3,
+        7
+      ],
+      [
+        -6,
+        -7
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        -4,
+        -6
+      ]
+    ],
+    "premise_cnf": [
+      {
+        "premise": "Se debe incluir exactamente una de estas actividades: concierto, teatro, danza.",
+        "clauses": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            -1,
+            -2
+          ],
+          [
+            -1,
+            -3
+          ],
+          [
+            -2,
+            -3
+          ]
+        ]
+      },
+      {
+        "premise": "Se incluye taller si y solo si se incluye exposicion.",
+        "clauses": [
+          [
+            -4,
+            5
+          ],
+          [
+            -5,
+            4
+          ]
+        ]
+      },
+      {
+        "premise": "Si se incluye concierto, tambien se debe incluir taller.",
+        "clauses": [
+          [
+            -1,
+            4
+          ]
+        ]
+      },
+      {
+        "premise": "Si se incluye teatro, tambien se debe incluir debate.",
+        "clauses": [
+          [
+            -2,
+            6
+          ]
+        ]
+      },
+      {
+        "premise": "Si se incluye danza, tambien se debe incluir conferencia.",
+        "clauses": [
+          [
+            -3,
+            7
+          ]
+        ]
+      },
+      {
+        "premise": "No se pueden incluir a la vez debate y conferencia.",
+        "clauses": [
+          [
+            -6,
+            -7
+          ]
+        ]
+      },
+      {
+        "premise": "Se debe incluir al menos una de estas actividades: exposicion, debate; se permite incluir varias.",
+        "clauses": [
+          [
+            5,
+            6
+          ]
+        ]
+      },
+      {
+        "premise": "No se pueden incluir a la vez taller y debate.",
+        "clauses": [
+          [
+            -4,
+            -6
+          ]
+        ]
+      }
+    ],
+    "witness": {
+      "1": false,
+      "2": false,
+      "3": true,
+      "4": true,
+      "5": true,
+      "6": false,
+      "7": true
+    },
+    "solution_count": 4,
+    "human_reviewed": true
+  },
+  {
+    "id": "SAT-16",
+    "status": "SAT",
+    "cnf": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        -1,
+        -2,
+        4
+      ],
+      [
+        -2,
+        -3,
+        5
+      ],
+      [
+        -4,
+        -5
+      ],
+      [
+        -5,
+        6
+      ],
+      [
+        -6,
+        5
+      ],
+      [
+        -7,
+        4,
+        6
+      ],
+      [
+        7
+      ],
+      [
+        -1
+      ]
+    ],
+    "premise_cnf": [
+      {
+        "premise": "Se deben incluir al menos dos de estas tres actividades: conferencia, debate, taller; se permite incluir las tres.",
+        "clauses": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      },
+      {
+        "premise": "Si se incluyen tanto conferencia como debate, se debe incluir exposicion.",
+        "clauses": [
+          [
+            -1,
+            -2,
+            4
+          ]
+        ]
+      },
+      {
+        "premise": "Si se incluyen tanto debate como taller, se debe incluir concurso.",
+        "clauses": [
+          [
+            -2,
+            -3,
+            5
+          ]
+        ]
+      },
+      {
+        "premise": "No se pueden incluir a la vez exposicion y concurso.",
+        "clauses": [
+          [
+            -4,
+            -5
+          ]
+        ]
+      },
+      {
+        "premise": "Se incluye concurso si y solo si se incluye demostracion.",
+        "clauses": [
+          [
+            -5,
+            6
+          ],
+          [
+            -6,
+            5
+          ]
+        ]
+      },
+      {
+        "premise": "Si se incluye documental, debe incluirse al menos una de estas actividades: exposicion, demostracion; pueden incluirse ambas.",
+        "clauses": [
+          [
+            -7,
+            4,
+            6
+          ]
+        ]
+      },
+      {
+        "premise": "Se debe incluir documental.",
+        "clauses": [
+          [
+            7
+          ]
+        ]
+      },
+      {
+        "premise": "No se puede incluir conferencia.",
+        "clauses": [
+          [
+            -1
+          ]
+        ]
+      }
+    ],
+    "witness": {
+      "1": false,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": true,
+      "6": true,
+      "7": true
+    },
+    "solution_count": 1,
+    "human_reviewed": true
+  },
+  {
+    "id": "SAT-17",
+    "status": "SAT",
+    "cnf": [
+      [
+        -1,
+        2
+      ],
+      [
+        -2,
+        1
+      ],
+      [
+        3,
+        4,
+        5
+      ],
+      [
+        -3,
+        -4
+      ],
+      [
+        -3,
+        -5
+      ],
+      [
+        -4,
+        -5
+      ],
+      [
+        -2,
+        3,
+        4
+      ],
+      [
+        -3,
+        6
+      ],
+      [
+        -4,
+        7
+      ],
+      [
+        -6,
+        -7
+      ],
+      [
+        1
+      ],
+      [
+        -6
+      ]
+    ],
+    "premise_cnf": [
+      {
+        "premise": "Se incluye cine si y solo si se incluye debate.",
+        "clauses": [
+          [
+            -1,
+            2
+          ],
+          [
+            -2,
+            1
+          ]
+        ]
+      },
+      {
+        "premise": "Se debe incluir exactamente una de estas actividades: taller, exposicion, concierto.",
+        "clauses": [
+          [
+            3,
+            4,
+            5
+          ],
+          [
+            -3,
+            -4
+          ],
+          [
+            -3,
+            -5
+          ],
+          [
+            -4,
+            -5
+          ]
+        ]
+      },
+      {
+        "premise": "Si se incluye debate, debe incluirse al menos una de estas actividades: taller, exposicion; pueden incluirse ambas.",
+        "clauses": [
+          [
+            -2,
+            3,
+            4
+          ]
+        ]
+      },
+      {
+        "premise": "Si se incluye taller, tambien se debe incluir lectura.",
+        "clauses": [
+          [
+            -3,
+            6
+          ]
+        ]
+      },
+      {
+        "premise": "Si se incluye exposicion, tambien se debe incluir concurso.",
+        "clauses": [
+          [
+            -4,
+            7
+          ]
+        ]
+      },
+      {
+        "premise": "No se pueden incluir a la vez lectura y concurso.",
+        "clauses": [
+          [
+            -6,
+            -7
+          ]
+        ]
+      },
+      {
+        "premise": "Se debe incluir cine.",
+        "clauses": [
+          [
+            1
+          ]
+        ]
+      },
+      {
+        "premise": "No se puede incluir lectura.",
+        "clauses": [
+          [
+            -6
+          ]
+        ]
+      }
+    ],
+    "witness": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": false,
+      "6": false,
+      "7": true
+    },
+    "solution_count": 1,
+    "human_reviewed": true
+  },
+  {
+    "id": "SAT-18",
+    "status": "SAT",
+    "cnf": [
+      [
+        1,
+        2,
+        3
+      ],
+      [
+        -1,
+        -2
+      ],
+      [
+        -1,
+        -3
+      ],
+      [
+        -2,
+        -3
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        4,
+        6
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        -1,
+        4
+      ],
+      [
+        -2,
+        5
+      ],
+      [
+        -3,
+        6
+      ],
+      [
+        -4,
+        -5,
+        7
+      ],
+      [
+        -7,
+        8
+      ],
+      [
+        -8,
+        7
+      ],
+      [
+        -6,
+        -8
+      ]
+    ],
+    "premise_cnf": [
+      {
+        "premise": "Se debe incluir exactamente una de estas actividades: conferencia, taller, demostracion.",
+        "clauses": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            -1,
+            -2
+          ],
+          [
+            -1,
+            -3
+          ],
+          [
+            -2,
+            -3
+          ]
+        ]
+      },
+      {
+        "premise": "Se deben incluir al menos dos de estas tres actividades: exposicion, debate, concurso; se permite incluir las tres.",
+        "clauses": [
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            5,
+            6
+          ]
+        ]
+      },
+      {
+        "premise": "Si se incluye conferencia, tambien se debe incluir exposicion.",
+        "clauses": [
+          [
+            -1,
+            4
+          ]
+        ]
+      },
+      {
+        "premise": "Si se incluye taller, tambien se debe incluir debate.",
+        "clauses": [
+          [
+            -2,
+            5
+          ]
+        ]
+      },
+      {
+        "premise": "Si se incluye demostracion, tambien se debe incluir concurso.",
+        "clauses": [
+          [
+            -3,
+            6
+          ]
+        ]
+      },
+      {
+        "premise": "Si se incluyen tanto exposicion como debate, se debe incluir documental.",
+        "clauses": [
+          [
+            -4,
+            -5,
+            7
+          ]
+        ]
+      },
+      {
+        "premise": "Se incluye documental si y solo si se incluye concierto.",
+        "clauses": [
+          [
+            -7,
+            8
+          ],
+          [
+            -8,
+            7
+          ]
+        ]
+      },
+      {
+        "premise": "No se pueden incluir a la vez concurso y concierto.",
+        "clauses": [
+          [
+            -6,
+            -8
+          ]
+        ]
+      }
+    ],
+    "witness": {
+      "1": false,
+      "2": false,
+      "3": true,
+      "4": false,
+      "5": true,
+      "6": true,
+      "7": false,
+      "8": false
+    },
+    "solution_count": 6,
+    "human_reviewed": true
+  },
+  {
+    "id": "SAT-19",
+    "status": "SAT",
+    "cnf": [
+      [
+        -1,
+        2
+      ],
+      [
+        -2,
+        1
+      ],
+      [
+        3,
+        4,
+        5
+      ],
+      [
+        -3,
+        -4
+      ],
+      [
+        -3,
+        -5
+      ],
+      [
+        -4,
+        -5
+      ],
+      [
+        -2,
+        3,
+        4
+      ],
+      [
+        -1,
+        -3,
+        6
+      ],
+      [
+        -4,
+        7
+      ],
+      [
+        -7,
+        8
+      ],
+      [
+        -8,
+        7
+      ],
+      [
+        -6,
+        -8
+      ],
+      [
+        1
+      ],
+      [
+        -6
+      ]
+    ],
+    "premise_cnf": [
+      {
+        "premise": "Se incluye lectura si y solo si se incluye debate.",
+        "clauses": [
+          [
+            -1,
+            2
+          ],
+          [
+            -2,
+            1
+          ]
+        ]
+      },
+      {
+        "premise": "Se debe incluir exactamente una de estas actividades: conferencia, taller, exposicion.",
+        "clauses": [
+          [
+            3,
+            4,
+            5
+          ],
+          [
+            -3,
+            -4
+          ],
+          [
+            -3,
+            -5
+          ],
+          [
+            -4,
+            -5
+          ]
+        ]
+      },
+      {
+        "premise": "Si se incluye debate, debe incluirse al menos una de estas actividades: conferencia, taller; pueden incluirse ambas.",
+        "clauses": [
+          [
+            -2,
+            3,
+            4
+          ]
+        ]
+      },
+      {
+        "premise": "Si se incluyen tanto lectura como conferencia, se debe incluir teatro.",
+        "clauses": [
+          [
+            -1,
+            -3,
+            6
+          ]
+        ]
+      },
+      {
+        "premise": "Si se incluye taller, tambien se debe incluir cine.",
+        "clauses": [
+          [
+            -4,
+            7
+          ]
+        ]
+      },
+      {
+        "premise": "Se incluye cine si y solo si se incluye concierto.",
+        "clauses": [
+          [
+            -7,
+            8
+          ],
+          [
+            -8,
+            7
+          ]
+        ]
+      },
+      {
+        "premise": "No se pueden incluir a la vez teatro y concierto.",
+        "clauses": [
+          [
+            -6,
+            -8
+          ]
+        ]
+      },
+      {
+        "premise": "Se debe incluir lectura.",
+        "clauses": [
+          [
+            1
+          ]
+        ]
+      },
+      {
+        "premise": "No se puede incluir teatro.",
+        "clauses": [
+          [
+            -6
+          ]
+        ]
+      }
+    ],
+    "witness": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": false,
+      "6": false,
+      "7": true,
+      "8": true
+    },
+    "solution_count": 1,
+    "human_reviewed": true
+  },
+  {
+    "id": "SAT-20",
+    "status": "SAT",
+    "cnf": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        4,
+        5,
+        6
+      ],
+      [
+        -4,
+        -5
+      ],
+      [
+        -4,
+        -6
+      ],
+      [
+        -5,
+        -6
+      ],
+      [
+        -1,
+        -2,
+        7
+      ],
+      [
+        -2,
+        -3,
+        8
+      ],
+      [
+        -7,
+        -8
+      ],
+      [
+        -4,
+        7
+      ],
+      [
+        -5,
+        8
+      ],
+      [
+        -6,
+        7,
+        8
+      ],
+      [
+        -7
+      ]
+    ],
+    "premise_cnf": [
+      {
+        "premise": "Se deben incluir al menos dos de estas tres actividades: concierto, teatro, danza; se permite incluir las tres.",
+        "clauses": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      },
+      {
+        "premise": "Se debe incluir exactamente una de estas actividades: cine, debate, taller.",
+        "clauses": [
+          [
+            4,
+            5,
+            6
+          ],
+          [
+            -4,
+            -5
+          ],
+          [
+            -4,
+            -6
+          ],
+          [
+            -5,
+            -6
+          ]
+        ]
+      },
+      {
+        "premise": "Si se incluyen tanto concierto como teatro, se debe incluir exposicion.",
+        "clauses": [
+          [
+            -1,
+            -2,
+            7
+          ]
+        ]
+      },
+      {
+        "premise": "Si se incluyen tanto teatro como danza, se debe incluir concurso.",
+        "clauses": [
+          [
+            -2,
+            -3,
+            8
+          ]
+        ]
+      },
+      {
+        "premise": "No se pueden incluir a la vez exposicion y concurso.",
+        "clauses": [
+          [
+            -7,
+            -8
+          ]
+        ]
+      },
+      {
+        "premise": "Si se incluye cine, tambien se debe incluir exposicion.",
+        "clauses": [
+          [
+            -4,
+            7
+          ]
+        ]
+      },
+      {
+        "premise": "Si se incluye debate, tambien se debe incluir concurso.",
+        "clauses": [
+          [
+            -5,
+            8
+          ]
+        ]
+      },
+      {
+        "premise": "Si se incluye taller, debe incluirse al menos una de estas actividades: exposicion, concurso; pueden incluirse ambas.",
+        "clauses": [
+          [
+            -6,
+            7,
+            8
+          ]
+        ]
+      },
+      {
+        "premise": "No se puede incluir exposicion.",
+        "clauses": [
+          [
+            -7
+          ]
+        ]
+      }
+    ],
+    "witness": {
+      "1": false,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": false,
+      "6": true,
+      "7": false,
+      "8": true
+    },
+    "solution_count": 4,
+    "human_reviewed": true
+  }
+]
