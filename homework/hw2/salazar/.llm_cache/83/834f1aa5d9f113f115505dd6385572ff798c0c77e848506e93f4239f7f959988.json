@@ -1,0 +1,15 @@
+{
+  "text": "{\n  \"Library\": \"green\",\n  \"Bridge\": \"blue\",\n  \"Arena\": \"red\",\n  \"Lab\": \"blue\",\n  \"Quad\": \"red\",\n  \"Gym\": \"red\",\n  \"Oaks\": \"red\",\n  \"Dorm\": \"green\",\n  \"Clinic\": \"blue\",\n  \"Pond\": \"green\",\n  \"Hall\": \"blue\",\n  \"Cafe\": \"green\"\n}",
+  "backend": "ollama",
+  "model": "qwen2.5:3b",
+  "prompt": "You are solving a logic puzzle. Read all the clues carefully.\n\nA campus wayfinding map marks twelve sectors. Color each region with red, green or blue. A region pair separated by a dash denotes a direct link. Linked regions must have different colors. The links work both ways. The regions are Arena, Bridge, Cafe, Clinic, Dorm, Gym, Hall, Lab, Library, Oaks, Pond, Quad.\n1. Library is green.\n2. Bridge is blue.\n3. Library–Oaks, Library–Pond.\n4. Bridge–Cafe, Bridge–Lab, Bridge–Library, Bridge–Oaks, Bridge–Quad.\n5. Arena–Bridge, Arena–Gym, Arena–Lab, Arena–Library.\n6. Lab–Quad.\n7. Gym–Lab, Gym–Pond, Gym–Quad.\n8. Dorm–Lab, Dorm–Oaks, Dorm–Pond.\n9. Clinic–Dorm, Clinic–Quad.\n10. Hall–Lab, Hall–Oaks, Hall–Pond.\n11. Cafe–Dorm, Cafe–Pond.\nFor each named region, give its color.\n\nRequired output format:\nVariables to report: Library, Bridge, Arena, Lab, Quad, Gym, Oaks, Dorm, Clinic, Pond, Hall, Cafe\nPossible values: red, green, blue\nReply with ONE JSON object that maps every listed variable to its value, e.g. {\"Ana\": 1, \"Bruno\": 2}.\n\nReply with ONLY the JSON, no markdown and no extra text.",
+  "temperature": 0.7,
+  "seed": 0,
+  "elapsed": 8.071380600005796,
+  "meta": {
+    "eval_count": 93,
+    "prompt_eval_count": 352,
+    "total_duration": 6031913800
+  },
+  "cached_at": "2026-11-18T08:26:20"
+}

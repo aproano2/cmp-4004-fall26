@@ -1,0 +1,104 @@
+{
+  "id": "ej-facil-01",
+  "nivel": "facil",
+  "familia": "einstein",
+  "enunciado": "Three houses stand in a row, numbered 1, 2 and 3 from left to right. Ana, Bruno and Carla each live in a different house, and each house is painted a different color: red, green or blue.\n1. Ana lives in the red house.\n2. Bruno lives immediately to the right of the green house.\n3. Carla lives in house 1.\n4. The blue house is not house 3.\nFor each person and each color, give the house number.",
+  "formato_respuesta": {
+    "variables": [
+      "Ana",
+      "Bruno",
+      "Carla",
+      "Red",
+      "Green",
+      "Blue"
+    ],
+    "valores": [
+      1,
+      2,
+      3
+    ]
+  },
+  "modelo_mano": {
+    "variables": {
+      "Ana": [
+        1,
+        2,
+        3
+      ],
+      "Bruno": [
+        1,
+        2,
+        3
+      ],
+      "Carla": [
+        1,
+        2,
+        3
+      ],
+      "Red": [
+        1,
+        2,
+        3
+      ],
+      "Green": [
+        1,
+        2,
+        3
+      ],
+      "Blue": [
+        1,
+        2,
+        3
+      ]
+    },
+    "constraints": [
+      {
+        "type": "alldiff",
+        "vars": [
+          "Ana",
+          "Bruno",
+          "Carla"
+        ]
+      },
+      {
+        "type": "alldiff",
+        "vars": [
+          "Red",
+          "Green",
+          "Blue"
+        ]
+      },
+      {
+        "type": "eq",
+        "a": "Ana",
+        "b": "Red"
+      },
+      {
+        "type": "offset",
+        "a": "Bruno",
+        "b": "Green",
+        "k": 1
+      },
+      {
+        "type": "eq",
+        "a": "Carla",
+        "b": 1
+      },
+      {
+        "type": "neq",
+        "a": "Blue",
+        "b": 3
+      }
+    ]
+  },
+  "gold": {
+    "Ana": 3,
+    "Bruno": 2,
+    "Carla": 1,
+    "Red": 3,
+    "Green": 1,
+    "Blue": 2
+  },
+  "verificacion_manual": "Carla=1 (pista 3). Si Green=2, Bruno=3 y Ana tendría que ser 2 (la única libre) pero Ana=Red y Red no puede ser 2 porque 2 es verde; contradicción. Entonces Green=1, Bruno=2, Ana=3=Red y Blue=2, que no es 3. Revisamos las 4 pistas con el gold: todas se cumplen.",
+  "fuente": "inventado (estilo acertijo de Einstein)"
+}

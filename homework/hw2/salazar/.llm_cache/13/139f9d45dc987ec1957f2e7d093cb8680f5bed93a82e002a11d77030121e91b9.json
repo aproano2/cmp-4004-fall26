@@ -1,0 +1,15 @@
+{
+  "text": "{\"Interview\": 4, \"Jingle\": 6, \"News\": 5, \"Quiz\": 2, \"Traffic\": 3, \"Weather\": 1}",
+  "backend": "ollama",
+  "model": "qwen2.5:3b",
+  "prompt": "You are solving a logic puzzle. Read all the clues carefully.\n\nA radio station is arranging its afternoon segments. Schedule these 6 activities in slots 1 to 6, with exactly one activity per slot: Interview, Jingle, News, Quiz, Traffic, Weather.\n1. Interview is scheduled immediately after Weather.\n2. Traffic is scheduled immediately after Jingle.\n3. News is scheduled immediately after Traffic.\n4. Jingle is not in slot 1.\n5. Jingle is not in slot 2.\n6. Jingle is not in slot 3.\n7. Interview takes place before Quiz.\nFor each named activity, give its slot number.\n\nRequired output format:\nVariables to report: Interview, Jingle, News, Quiz, Traffic, Weather\nPossible values: 1, 2, 3, 4, 5, 6\nReply with ONE JSON object that maps every listed variable to its value, e.g. {\"Ana\": 1, \"Bruno\": 2}.\n\nReply with ONLY the JSON, no markdown and no extra text.",
+  "temperature": 0.7,
+  "seed": 1,
+  "elapsed": 6.480464000000211,
+  "meta": {
+    "eval_count": 38,
+    "prompt_eval_count": 249,
+    "total_duration": 4443632000
+  },
+  "cached_at": "2026-11-18T08:23:33"
+}

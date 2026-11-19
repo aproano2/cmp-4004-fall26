@@ -1,0 +1,114 @@
+{
+  "id": "medio-07",
+  "nivel": "medio",
+  "familia": "einstein",
+  "enunciado": "A waterfront rescue festival has tents along the boardwalk. There are 4 positions numbered 1 to 4 from left to right. Each position has exactly one item from each list, and each listed item appears once. Hosts: Ari, Beto, Celia, Dora. Markers: Beacon, Bell, Flag, Kite. Mascots: Otter, Puffin, Seal, Turtle.\n1. Dora is in position 1.\n2. Ari is next to Dora.\n3. Celia is immediately to the right of Beto.\n4. Flag is at the same position as Ari.\n5. Kite is next to Flag.\n6. Kite is somewhere to the left of Flag.\n7. Bell is immediately to the right of Beacon.\n8. Puffin is at the same position as Bell.\n9. Seal is immediately to the left of Puffin.\n10. Turtle is somewhere to the left of Otter.\n11. Otter is somewhere to the left of Seal.\nFor every listed item, give its position number.",
+  "formato_respuesta": {
+    "variables": ["Ari", "Beacon", "Bell", "Beto", "Celia", "Dora", "Flag", "Kite", "Otter", "Puffin", "Seal", "Turtle"],
+    "valores": [1, 2, 3, 4]
+  },
+  "modelo_mano": {
+    "variables": {
+      "Ari": [1, 2, 3, 4],
+      "Beacon": [1, 2, 3, 4],
+      "Bell": [1, 2, 3, 4],
+      "Beto": [1, 2, 3, 4],
+      "Celia": [1, 2, 3, 4],
+      "Dora": [1, 2, 3, 4],
+      "Flag": [1, 2, 3, 4],
+      "Kite": [1, 2, 3, 4],
+      "Otter": [1, 2, 3, 4],
+      "Puffin": [1, 2, 3, 4],
+      "Seal": [1, 2, 3, 4],
+      "Turtle": [1, 2, 3, 4]
+    },
+    "constraints": [
+      {
+        "type": "alldiff",
+        "vars": ["Ari", "Beto", "Celia", "Dora"]
+      },
+      {
+        "type": "alldiff",
+        "vars": ["Beacon", "Bell", "Flag", "Kite"]
+      },
+      {
+        "type": "alldiff",
+        "vars": ["Otter", "Puffin", "Seal", "Turtle"]
+      },
+      {
+        "type": "eq",
+        "a": "Dora",
+        "b": 1
+      },
+      {
+        "type": "adj",
+        "a": "Ari",
+        "b": "Dora"
+      },
+      {
+        "type": "offset",
+        "a": "Celia",
+        "b": "Beto",
+        "k": 1
+      },
+      {
+        "type": "eq",
+        "a": "Flag",
+        "b": "Ari"
+      },
+      {
+        "type": "adj",
+        "a": "Kite",
+        "b": "Flag"
+      },
+      {
+        "type": "lt",
+        "a": "Kite",
+        "b": "Flag"
+      },
+      {
+        "type": "offset",
+        "a": "Bell",
+        "b": "Beacon",
+        "k": 1
+      },
+      {
+        "type": "eq",
+        "a": "Puffin",
+        "b": "Bell"
+      },
+      {
+        "type": "offset",
+        "a": "Puffin",
+        "b": "Seal",
+        "k": 1
+      },
+      {
+        "type": "lt",
+        "a": "Turtle",
+        "b": "Otter"
+      },
+      {
+        "type": "lt",
+        "a": "Otter",
+        "b": "Seal"
+      }
+    ]
+  },
+  "gold": {
+    "Ari": 2,
+    "Beacon": 3,
+    "Bell": 4,
+    "Beto": 3,
+    "Celia": 4,
+    "Dora": 1,
+    "Flag": 2,
+    "Kite": 1,
+    "Otter": 2,
+    "Puffin": 4,
+    "Seal": 3,
+    "Turtle": 1
+  },
+  "verificacion_manual": "Dora fija la posición 1 y su vecino Ari queda en 2. Desde ahí el bloque Beto–Celia llenan las posiciones restantes. Flag hereda 2 de Ari, Kite es su vecino izquierdo y Beacon, Bell llenan lo que queda según las pistas de orden. Puffin hereda 4 de Bell y Seal queda en 3. Turtle y Otter llenan 1 y 2 en ese orden.",
+  "fuente": "Inventado para el HW2 con asistencia de Codex (ver AI_LOG.md)."
+}

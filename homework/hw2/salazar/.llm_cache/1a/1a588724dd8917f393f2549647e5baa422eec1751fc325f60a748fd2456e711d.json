@@ -1,0 +1,15 @@
+{
+  "text": "{\"Switch\":\"green\",\"Signal\":\"red\",\"Tunnel\":\"blue\",\"Siding\":\"blue\",\"Track\":\"blue\",\"Cabin\":\"green\",\"Platform\":\"blue\",\"Tower\":\"green\",\"Viaduct\":\"green\",\"Furnace\":\"blue\",\"Gate\":\"green\",\"Station\":\"blue\",\"Loop\":\"green\",\"Workshop\":\"green\",\"Relay\":\"green\",\"Depot\":\"blue\",\"Crane\":\"green\",\"Fence\":\"blue\",\"Point\":\"green\",\"Bridge\":\"green\",\"Trench\":\"green\",\"Shed\":\"green\",\"Ramp\":\"green\",\"Gantry\":\"blue\",\"Lane\":\"green\"}",
+  "backend": "ollama",
+  "model": "qwen2.5:7b",
+  "prompt": "You are solving a logic puzzle. Read all the clues carefully.\n\nA utility map divides a rail yard into twenty-five work zones. Color each region with red, green or blue. A region pair separated by a dash denotes a direct link. Linked regions must have different colors. The links work both ways. The regions are Bridge, Cabin, Crane, Depot, Fence, Furnace, Gantry, Gate, Lane, Loop, Platform, Point, Ramp, Relay, Shed, Siding, Signal, Station, Switch, Tower, Track, Trench, Tunnel, Viaduct, Workshop.\n1. Switch is green.\n2. Signal is red.\n3. Switch–Tunnel.\n4. Signal–Switch, Signal–Tower, Signal–Tunnel, Signal–Workshop.\n5. Siding–Switch, Siding–Track, Siding–Tunnel, Siding–Viaduct.\n6. Track–Tunnel.\n7. Cabin–Crane, Cabin–Signal, Cabin–Track.\n8. Platform–Switch, Platform–Tunnel.\n9. Tower–Track, Tower–Viaduct, Tower–Workshop.\n10. Furnace–Point, Furnace–Signal, Furnace–Station, Furnace–Tunnel.\n11. Gate–Signal, Gate–Switch, Gate–Trench.\n12. Station–Tower.\n13. Loop–Tower, Loop–Viaduct.\n14. Relay–Station, Relay–Track, Relay–Trench.\n15. Depot–Furnace, Depot–Gantry, Depot–Signal.\n16. Crane–Fence, Crane–Gate, Crane–Platform.\n17. Fence–Gantry, Fence–Point, Fence–Relay, Fence–Tower.\n18. Bridge–Relay, Bridge–Trench, Bridge–Viaduct, Bridge–Workshop.\n19. Shed–Signal, Shed–Viaduct, Shed–Workshop.\n20. Ramp–Relay, Ramp–Switch.\n21. Gantry–Siding.\n22. Lane–Ramp, Lane–Track, Lane–Trench.\nFor each named region, give its color.\n\nRequired output format:\nVariables to report: Switch, Signal, Tunnel, Siding, Track, Cabin, Platform, Tower, Viaduct, Furnace, Gate, Station, Loop, Workshop, Relay, Depot, Crane, Fence, Point, Bridge, Trench, Shed, Ramp, Gantry, Lane\nPossible values: red, green, blue\nReply with ONE JSON object that maps every listed variable to its value, e.g. {\"Ana\": 1, \"Bruno\": 2}.\n\nReply with ONLY the JSON, no markdown and no extra text.",
+  "temperature": 0.7,
+  "seed": 1,
+  "elapsed": 3.4895882999990135,
+  "meta": {
+    "eval_count": 118,
+    "prompt_eval_count": 600,
+    "total_duration": 1440144500
+  },
+  "cached_at": "2026-11-18T20:05:59"
+}
