@@ -1,0 +1,12 @@
+{
+  "id": "sat_01",
+  "difficulty": "easy",
+  "prompt": "Un club universitario debe elegir qué equipos enviará a una feria: Arte, Fotografía, Robótica y Danza. Debe enviar al menos uno de Arte y Fotografía. Si envía Arte, también debe enviar Robótica. No puede enviar a la vez Robótica y Danza. Danza debe asistir. ¿Existe una selección que cumpla todas las reglas?",
+  "variables": {"arte": 1, "fotografia": 2, "robotica": 3, "danza": 4},
+  "clauses": [[1, 2], [-1, 3], [-3, -4], [4]],
+  "ground_truth": {
+    "status": "SAT",
+    "witness": {"arte": false, "fotografia": true, "robotica": false, "danza": true},
+    "reasoning": "Danza debe asistir, así que Robótica queda fuera. Sin Robótica, Arte tampoco puede asistir. Fotografía debe asistir para cumplir la primera regla. Enviar a Fotografía y Danza satisface las cuatro reglas."
+  }
+}
