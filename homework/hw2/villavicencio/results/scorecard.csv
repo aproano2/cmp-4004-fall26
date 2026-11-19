@@ -1,0 +1,19 @@
+metric,A — Hand,B — Hybrid,B′ — Refinement,C — Direct
+N (problem×run),60,60,60,60
+correct,60,0,0,22
+incorrect,0,4,4,33
+no-answer,0,56,56,5
+accuracy,1.0,0.0,0.0,0.3667
+ci95_lo,0.9398,0.0,0.0,0.2562
+ci95_hi,1.0,0.0602,0.0602,0.4932
+std_across_runs,0.0,0.0,0.0,0.0236
+accuracy_when_answered,1.0,0.0,0.0,0.4
+wrong_announced,0,56,56,5
+wrong_silent,0,4,4,33
+silent_wrong_rate,0.0,0.0667,0.0667,0.55
+mean_wall_s,0.0004,31.8987,142.5932,2.7422
+mean_llm_s,0.0,31.8969,142.5891,2.7409
+mean_solver_s,0.0003,0.0001,0.0001,0.0
+mean_prompt_tokens,0.0,471.8,3575.95,234.4
+mean_completion_tokens,0.0,826.25,3384.9833,56.6
+mean_attempts,1.0,1.0,2.8667,1.0

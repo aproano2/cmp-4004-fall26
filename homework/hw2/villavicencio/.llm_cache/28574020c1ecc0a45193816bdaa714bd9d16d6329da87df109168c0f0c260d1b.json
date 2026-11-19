@@ -1,0 +1,11 @@
+{
+  "response": "{\"colors\": {\"A\": \"rojo\", \"B\": \"azul\", \"C\": \"verde\", \"D\": \"azul\", \"E\": \"rojo\", \"F\": \"azul\", \"G\": \"rojo\", \"H\": \"verde\"}}",
+  "prompt_tokens": 250,
+  "completion_tokens": 60,
+  "done_reason": "stop",
+  "llm_time_s": 2.254672250011936,
+  "cached": false,
+  "model": "qwen2.5:3b",
+  "temperature": 0.7,
+  "seed": 2
+}

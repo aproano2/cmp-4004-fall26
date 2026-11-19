@@ -1,0 +1,1746 @@
+[
+  {
+    "problem_id": "P01",
+    "difficulty": "easy",
+    "run": 0,
+    "correct": false,
+    "attempts": 3,
+    "attempt_classes": [
+      {
+        "attempt": 1,
+        "status": "DECODE_ERROR",
+        "category": "Valid syntax, under-constrained — caught by decoder (vertex without exactly one colour)",
+        "detectable_without_ground_truth": "Yes (decoder)",
+        "subcause": "el vértice A tiene 2 colores asignados en el modelo (debe tener exactamente 1); el vértice B tiene 3 colores asignados en el modelo (debe tener exactamente 1) | falta 'al menos un color' en ['A', 'B', 'C', 'D']; falta 'a lo sumo un color' (parcial o total) en ['A', 'B', 'C', 'D']; restricción de arista omitida por completo: ['A-B', 'A-D', 'B-C', 'C-D']; 15 cláusulas extra de otro tipo (variables/índices incorrectos u otras)"
+      },
+      {
+        "attempt": 2,
+        "status": "DECODE_ERROR",
+        "category": "Valid syntax, under-constrained — caught by decoder (vertex without exactly one colour)",
+        "detectable_without_ground_truth": "Yes (decoder)",
+        "subcause": "el vértice A tiene 2 colores asignados en el modelo (debe tener exactamente 1); el vértice B tiene 3 colores asignados en el modelo (debe tener exactamente 1) | falta 'al menos un color' en ['A', 'B', 'C', 'D']; falta 'a lo sumo un color' (parcial o total) en ['A', 'B', 'C', 'D']; restricción de arista omitida por completo: ['A-B', 'A-D', 'B-C', 'C-D']; 15 cláusulas extra de otro tipo (variables/índices incorrectos u otras)"
+      },
+      {
+        "attempt": 3,
+        "status": "DECODE_ERROR",
+        "category": "Valid syntax, under-constrained — caught by decoder (vertex without exactly one colour)",
+        "detectable_without_ground_truth": "Yes (decoder)",
+        "subcause": "el vértice A tiene 2 colores asignados en el modelo (debe tener exactamente 1); el vértice B tiene 3 colores asignados en el modelo (debe tener exactamente 1) | falta 'al menos un color' en ['A', 'B', 'C', 'D']; falta 'a lo sumo un color' (parcial o total) en ['A', 'B', 'C', 'D']; restricción de arista omitida por completo: ['A-B', 'A-D', 'B-C', 'C-D']; 15 cláusulas extra de otro tipo (variables/índices incorrectos u otras)"
+      }
+    ]
+  },
+  {
+    "problem_id": "P02",
+    "difficulty": "easy",
+    "run": 0,
+    "correct": false,
+    "attempts": 3,
+    "attempt_classes": [
+      {
+        "attempt": 1,
+        "status": "DECODE_ERROR",
+        "category": "Valid syntax, under-constrained — caught by decoder (vertex without exactly one colour)",
+        "detectable_without_ground_truth": "Yes (decoder)",
+        "subcause": "el vértice A tiene 3 colores asignados en el modelo (debe tener exactamente 1); el vértice C tiene 2 colores asignados en el modelo (debe tener exactamente 1); el vértice D tiene 0 colores asignados en el modelo (debe tener exactamente 1) | falta 'al menos un color' en ['A', 'B', 'C', 'D', 'E']; falta 'a lo sumo un color' (parcial o total) en ['A', 'B', 'C', 'D', 'E']; restricción de arista omitida por completo: ['A-B', 'B-C', 'C-D', 'D-E']; 28 cláusulas extra de otro tipo (variables/índices incorrectos u otras)"
+      },
+      {
+        "attempt": 2,
+        "status": "SCHEMA_ERROR",
+        "subcause": "literal inválido en la cláusula 28: 16 (debe ser entero no nulo con |lit| <= 15)",
+        "category": "Arity / index error (invalid literal, var count or schema)",
+        "detectable_without_ground_truth": "Yes"
+      },
+      {
+        "attempt": 3,
+        "status": "PARSE_ERROR",
+        "subcause": "JSON inválido: Expecting ',' delimiter (posición 3843) [salida truncada por num_predict]",
+        "category": "Malformed syntax (won't parse)",
+        "detectable_without_ground_truth": "Yes"
+      }
+    ]
+  },
+  {
+    "problem_id": "P03",
+    "difficulty": "easy",
+    "run": 0,
+    "correct": false,
+    "attempts": 3,
+    "attempt_classes": [
+      {
+        "attempt": 1,
+        "status": "DECODE_ERROR",
+        "category": "Valid syntax, under-constrained — caught by decoder (vertex without exactly one colour)",
+        "detectable_without_ground_truth": "Yes (decoder)",
+        "subcause": "el vértice A tiene 2 colores asignados en el modelo (debe tener exactamente 1); el vértice B tiene 2 colores asignados en el modelo (debe tener exactamente 1) | falta 'al menos un color' en ['A', 'B', 'C', 'D']; falta 'a lo sumo un color' (parcial o total) en ['A', 'B', 'C', 'D']; restricción de arista omitida por completo: ['A-B', 'A-D', 'B-C']; 12 cláusulas extra de otro tipo (variables/índices incorrectos u otras)"
+      },
+      {
+        "attempt": 2,
+        "status": "DECODE_ERROR",
+        "category": "Valid syntax, under-constrained — caught by decoder (vertex without exactly one colour)",
+        "detectable_without_ground_truth": "Yes (decoder)",
+        "subcause": "el vértice A tiene 2 colores asignados en el modelo (debe tener exactamente 1); el vértice B tiene 2 colores asignados en el modelo (debe tener exactamente 1) | falta 'al menos un color' en ['A', 'B', 'C', 'D']; falta 'a lo sumo un color' (parcial o total) en ['A', 'B', 'C', 'D']; restricción de arista omitida por completo: ['A-B', 'A-D', 'B-C']; 12 cláusulas extra de otro tipo (variables/índices incorrectos u otras)"
+      },
+      {
+        "attempt": 3,
+        "status": "DECODE_ERROR",
+        "category": "Valid syntax, under-constrained — caught by decoder (vertex without exactly one colour)",
+        "detectable_without_ground_truth": "Yes (decoder)",
+        "subcause": "el vértice A tiene 2 colores asignados en el modelo (debe tener exactamente 1); el vértice B tiene 2 colores asignados en el modelo (debe tener exactamente 1) | falta 'al menos un color' en ['A', 'B', 'C', 'D']; falta 'a lo sumo un color' (parcial o total) en ['A', 'B', 'C', 'D']; restricción de arista omitida por completo: ['A-B', 'A-D', 'B-C']; 12 cláusulas extra de otro tipo (variables/índices incorrectos u otras)"
+      }
+    ]
+  },
+  {
+    "problem_id": "P04",
+    "difficulty": "easy",
+    "run": 0,
+    "correct": false,
+    "attempts": 3,
+    "attempt_classes": [
+      {
+        "attempt": 1,
+        "status": "SCHEMA_ERROR",
+        "subcause": "literal inválido en la cláusula 6: 16 (debe ser entero no nulo con |lit| <= 15)",
+        "category": "Arity / index error (invalid literal, var count or schema)",
+        "detectable_without_ground_truth": "Yes"
+      },
+      {
+        "attempt": 2,
+        "status": "DECODE_ERROR",
+        "category": "Valid syntax, under-constrained — caught by decoder (vertex without exactly one colour)",
+        "detectable_without_ground_truth": "Yes (decoder)",
+        "subcause": "el vértice B tiene 2 colores asignados en el modelo (debe tener exactamente 1); el vértice C tiene 2 colores asignados en el modelo (debe tener exactamente 1); el vértice D tiene 2 colores asignados en el modelo (debe tener exactamente 1); el vértice E tiene 2 colores asignados en el modelo (debe tener exactamente 1) | falta 'a lo sumo un color' (parcial o total) en ['A', 'B', 'C', 'D', 'E']; restricción de arista omitida por completo: ['A-B', 'B-C']; 18 cláusulas extra de otro tipo (variables/índices incorrectos u otras)"
+      },
+      {
+        "attempt": 3,
+        "status": "SCHEMA_ERROR",
+        "subcause": "literal inválido en la cláusula 24: 16 (debe ser entero no nulo con |lit| <= 15)",
+        "category": "Arity / index error (invalid literal, var count or schema)",
+        "detectable_without_ground_truth": "Yes"
+      }
+    ]
+  },
+  {
+    "problem_id": "P05",
+    "difficulty": "easy",
+    "run": 0,
+    "correct": false,
+    "attempts": 3,
+    "attempt_classes": [
+      {
+        "attempt": 1,
+        "status": "DECODE_ERROR",
+        "category": "Valid syntax, under-constrained — caught by decoder (vertex without exactly one colour)",
+        "detectable_without_ground_truth": "Yes (decoder)",
+        "subcause": "el vértice A tiene 2 colores asignados en el modelo (debe tener exactamente 1); el vértice D tiene 2 colores asignados en el modelo (debe tener exactamente 1); el vértice E tiene 2 colores asignados en el modelo (debe tener exactamente 1) | falta 'al menos un color' en ['A', 'B', 'C', 'D', 'E']; falta 'a lo sumo un color' (parcial o total) en ['A', 'B', 'C', 'D', 'E']; restricción de arista omitida por completo: ['A-B', 'A-E', 'B-C']; 65 cláusulas extra de otro tipo (variables/índices incorrectos u otras)"
+      },
+      {
+        "attempt": 2,
+        "status": "DECODE_ERROR",
+        "category": "Valid syntax, under-constrained — caught by decoder (vertex without exactly one colour)",
+        "detectable_without_ground_truth": "Yes (decoder)",
+        "subcause": "el vértice A tiene 2 colores asignados en el modelo (debe tener exactamente 1); el vértice D tiene 2 colores asignados en el modelo (debe tener exactamente 1); el vértice E tiene 2 colores asignados en el modelo (debe tener exactamente 1) | falta 'al menos un color' en ['A', 'B', 'C', 'D', 'E']; falta 'a lo sumo un color' (parcial o total) en ['A', 'B', 'C', 'D', 'E']; restricción de arista omitida por completo: ['A-B', 'A-E', 'B-C']; 65 cláusulas extra de otro tipo (variables/índices incorrectos u otras)"
+      },
+      {
+        "attempt": 3,
+        "status": "DECODE_ERROR",
+        "category": "Valid syntax, under-constrained — caught by decoder (vertex without exactly one colour)",
+        "detectable_without_ground_truth": "Yes (decoder)",
+        "subcause": "el vértice A tiene 2 colores asignados en el modelo (debe tener exactamente 1); el vértice D tiene 2 colores asignados en el modelo (debe tener exactamente 1); el vértice E tiene 2 colores asignados en el modelo (debe tener exactamente 1) | falta 'al menos un color' en ['A', 'B', 'C', 'D', 'E']; falta 'a lo sumo un color' (parcial o total) en ['A', 'B', 'C', 'D', 'E']; restricción de arista omitida por completo: ['A-B', 'A-E', 'B-C']; 65 cláusulas extra de otro tipo (variables/índices incorrectos u otras)"
+      }
+    ]
+  },
+  {
+    "problem_id": "P06",
+    "difficulty": "easy",
+    "run": 0,
+    "correct": false,
+    "attempts": 3,
+    "attempt_classes": [
+      {
+        "attempt": 1,
+        "status": "SCHEMA_ERROR",
+        "subcause": "literal inválido en la cláusula 4: 19 (debe ser entero no nulo con |lit| <= 18)",
+        "category": "Arity / index error (invalid literal, var count or schema)",
+        "detectable_without_ground_truth": "Yes"
+      },
+      {
+        "attempt": 2,
+        "status": "SCHEMA_ERROR",
+        "subcause": "literal inválido en la cláusula 8: 19 (debe ser entero no nulo con |lit| <= 18)",
+        "category": "Arity / index error (invalid literal, var count or schema)",
+        "detectable_without_ground_truth": "Yes"
+      },
+      {
+        "attempt": 3,
+        "status": "SCHEMA_ERROR",
+        "subcause": "literal inválido en la cláusula 8: 19 (debe ser entero no nulo con |lit| <= 18)",
+        "category": "Arity / index error (invalid literal, var count or schema)",
+        "detectable_without_ground_truth": "Yes"
+      }
+    ]
+  },
+  {
+    "problem_id": "P07",
+    "difficulty": "medium",
+    "run": 0,
+    "correct": false,
+    "attempts": 3,
+    "attempt_classes": [
+      {
+        "attempt": 1,
+        "status": "SCHEMA_ERROR",
+        "subcause": "literal inválido en la cláusula 4: 19 (debe ser entero no nulo con |lit| <= 18)",
+        "category": "Arity / index error (invalid literal, var count or schema)",
+        "detectable_without_ground_truth": "Yes"
+      },
+      {
+        "attempt": 2,
+        "status": "PARSE_ERROR",
+        "subcause": "JSON inválido: Expecting ',' delimiter (posición 31) [salida truncada por num_predict]",
+        "category": "Malformed syntax (won't parse)",
+        "detectable_without_ground_truth": "Yes"
+      },
+      {
+        "attempt": 3,
+        "status": "PARSE_ERROR",
+        "subcause": "JSON inválido: Expecting ',' delimiter (posición 31) [salida truncada por num_predict]",
+        "category": "Malformed syntax (won't parse)",
+        "detectable_without_ground_truth": "Yes"
+      }
+    ]
+  },
+  {
+    "problem_id": "P08",
+    "difficulty": "medium",
+    "run": 0,
+    "correct": false,
+    "attempts": 3,
+    "attempt_classes": [
+      {
+        "attempt": 1,
+        "status": "PARSE_ERROR",
+        "subcause": "JSON inválido: Expecting ',' delimiter (posición 4038) [salida truncada por num_predict]",
+        "category": "Malformed syntax (won't parse)",
+        "detectable_without_ground_truth": "Yes"
+      },
+      {
+        "attempt": 2,
+        "status": "SCHEMA_ERROR",
+        "subcause": "literal inválido en la cláusula 36: 55 (debe ser entero no nulo con |lit| <= 54)",
+        "category": "Arity / index error (invalid literal, var count or schema)",
+        "detectable_without_ground_truth": "Yes"
+      },
+      {
+        "attempt": 3,
+        "status": "PARSE_ERROR",
+        "subcause": "JSON inválido: Expecting ',' delimiter (posición 31)",
+        "category": "Malformed syntax (won't parse)",
+        "detectable_without_ground_truth": "Yes"
+      }
+    ]
+  },
+  {
+    "problem_id": "P09",
+    "difficulty": "medium",
+    "run": 0,
+    "correct": false,
+    "attempts": 3,
+    "attempt_classes": [
+      {
+        "attempt": 1,
+        "status": "PARSE_ERROR",
+        "subcause": "JSON inválido: Expecting value (posición 4014) [salida truncada por num_predict]",
+        "category": "Malformed syntax (won't parse)",
+        "detectable_without_ground_truth": "Yes"
+      },
+      {
+        "attempt": 2,
+        "status": "PARSE_ERROR",
+        "subcause": "JSON inválido: Expecting value (posición 4014) [salida truncada por num_predict]",
+        "category": "Malformed syntax (won't parse)",
+        "detectable_without_ground_truth": "Yes"
+      },
+      {
+        "attempt": 3,
+        "status": "PARSE_ERROR",
+        "subcause": "JSON inválido: Expecting value (posición 4014) [salida truncada por num_predict]",
+        "category": "Malformed syntax (won't parse)",
+        "detectable_without_ground_truth": "Yes"
+      }
+    ]
+  },
+  {
+    "problem_id": "P10",
+    "difficulty": "medium",
+    "run": 0,
+    "correct": false,
+    "attempts": 3,
+    "attempt_classes": [
+      {
+        "attempt": 1,
+        "status": "DECODE_ERROR",
+        "category": "Valid syntax, under-constrained — caught by decoder (vertex without exactly one colour)",
+        "detectable_without_ground_truth": "Yes (decoder)",
+        "subcause": "el vértice A tiene 3 colores asignados en el modelo (debe tener exactamente 1); el vértice B tiene 3 colores asignados en el modelo (debe tener exactamente 1); el vértice C tiene 3 colores asignados en el modelo (debe tener exactamente 1); el vértice D tiene 2 colores asignados en el modelo (debe tener exactamente 1); el vértice E tiene 3 colores asignados en el modelo (debe tener exactamente 1); el vértice F tiene 2 colores asignados en el modelo (debe tener exactamente 1); el vértice G tiene 2 colores asignados en el modelo (debe tener exactamente 1) | falta 'al menos un color' en ['A', 'B', 'C', 'D', 'E', 'F', 'G']; falta 'a lo sumo un color' (parcial o total) en ['A', 'B', 'C', 'D', 'E', 'F', 'G']; restricción de arista omitida por completo: ['A-B', 'A-C', 'A-F', 'B-C', 'B-E', 'C-E', 'D-E', 'D-F', 'E-F', 'F-G']; 24 cláusulas extra de otro tipo (variables/índices incorrectos u otras)"
+      },
+      {
+        "attempt": 2,
+        "status": "DECODE_ERROR",
+        "category": "Valid syntax, under-constrained — caught by decoder (vertex without exactly one colour)",
+        "detectable_without_ground_truth": "Yes (decoder)",
+        "subcause": "el vértice A tiene 3 colores asignados en el modelo (debe tener exactamente 1); el vértice B tiene 3 colores asignados en el modelo (debe tener exactamente 1); el vértice C tiene 0 colores asignados en el modelo (debe tener exactamente 1); el vértice D tiene 0 colores asignados en el modelo (debe tener exactamente 1); el vértice E tiene 0 colores asignados en el modelo (debe tener exactamente 1); el vértice F tiene 0 colores asignados en el modelo (debe tener exactamente 1); el vértice G tiene 2 colores asignados en el modelo (debe tener exactamente 1) | falta 'al menos un color' en ['B', 'C', 'D', 'E', 'F', 'G']; falta 'a lo sumo un color' (parcial o total) en ['A', 'B', 'C', 'D', 'E', 'F', 'G']; restricción de arista omitida por completo: ['A-B', 'A-C', 'A-F', 'B-C', 'B-E', 'C-E', 'D-E', 'D-F', 'E-F', 'F-G']; 23 cláusulas extra de otro tipo (variables/índices incorrectos u otras)"
+      },
+      {
+        "attempt": 3,
+        "status": "DECODE_ERROR",
+        "category": "Valid syntax, under-constrained — caught by decoder (vertex without exactly one colour)",
+        "detectable_without_ground_truth": "Yes (decoder)",
+        "subcause": "el vértice A tiene 3 colores asignados en el modelo (debe tener exactamente 1); el vértice B tiene 3 colores asignados en el modelo (debe tener exactamente 1); el vértice C tiene 0 colores asignados en el modelo (debe tener exactamente 1); el vértice D tiene 0 colores asignados en el modelo (debe tener exactamente 1); el vértice E tiene 0 colores asignados en el modelo (debe tener exactamente 1); el vértice F tiene 0 colores asignados en el modelo (debe tener exactamente 1); el vértice G tiene 2 colores asignados en el modelo (debe tener exactamente 1) | falta 'al menos un color' en ['B', 'C', 'D', 'E', 'F', 'G']; falta 'a lo sumo un color' (parcial o total) en ['A', 'B', 'C', 'D', 'E', 'F', 'G']; restricción de arista omitida por completo: ['A-B', 'A-C', 'A-F', 'B-C', 'B-E', 'C-E', 'D-E', 'D-F', 'E-F', 'F-G']; 23 cláusulas extra de otro tipo (variables/índices incorrectos u otras)"
+      }
+    ]
+  },
+  {
+    "problem_id": "P11",
+    "difficulty": "medium",
+    "run": 0,
+    "correct": false,
+    "attempts": 3,
+    "attempt_classes": [
+      {
+        "attempt": 1,
+        "status": "PARSE_ERROR",
+        "subcause": "JSON inválido: Expecting value (posición 3641) [salida truncada por num_predict]",
+        "category": "Malformed syntax (won't parse)",
+        "detectable_without_ground_truth": "Yes"
+      },
+      {
+        "attempt": 2,
+        "status": "PARSE_ERROR",
+        "subcause": "JSON inválido: Expecting ',' delimiter (posición 3639) [salida truncada por num_predict]",
+        "category": "Malformed syntax (won't parse)",
+        "detectable_without_ground_truth": "Yes"
+      },
+      {
+        "attempt": 3,
+        "status": "PARSE_ERROR",
+        "subcause": "JSON inválido: Expecting ',' delimiter (posición 3639) [salida truncada por num_predict]",
+        "category": "Malformed syntax (won't parse)",
+        "detectable_without_ground_truth": "Yes"
+      }
+    ]
+  },
+  {
+    "problem_id": "P12",
+    "difficulty": "medium",
+    "run": 0,
+    "correct": false,
+    "attempts": 3,
+    "attempt_classes": [
+      {
+        "attempt": 1,
+        "status": "SCHEMA_ERROR",
+        "subcause": "literal inválido en la cláusula 8: -25 (debe ser entero no nulo con |lit| <= 24)",
+        "category": "Arity / index error (invalid literal, var count or schema)",
+        "detectable_without_ground_truth": "Yes"
+      },
+      {
+        "attempt": 2,
+        "status": "SCHEMA_ERROR",
+        "subcause": "literal inválido en la cláusula 8: -25 (debe ser entero no nulo con |lit| <= 24)",
+        "category": "Arity / index error (invalid literal, var count or schema)",
+        "detectable_without_ground_truth": "Yes"
+      },
+      {
+        "attempt": 3,
+        "status": "SCHEMA_ERROR",
+        "subcause": "literal inválido en la cláusula 8: -25 (debe ser entero no nulo con |lit| <= 24)",
+        "category": "Arity / index error (invalid literal, var count or schema)",
+        "detectable_without_ground_truth": "Yes"
+      }
+    ]
+  },
+  {
+    "problem_id": "P13",
+    "difficulty": "medium",
+    "run": 0,
+    "correct": false,
+    "attempts": 3,
+    "attempt_classes": [
+      {
+        "attempt": 1,
+        "status": "SCHEMA_ERROR",
+        "subcause": "literal inválido en la cláusula 8: -25 (debe ser entero no nulo con |lit| <= 24)",
+        "category": "Arity / index error (invalid literal, var count or schema)",
+        "detectable_without_ground_truth": "Yes"
+      },
+      {
+        "attempt": 2,
+        "status": "SCHEMA_ERROR",
+        "subcause": "literal inválido en la cláusula 8: -25 (debe ser entero no nulo con |lit| <= 24)",
+        "category": "Arity / index error (invalid literal, var count or schema)",
+        "detectable_without_ground_truth": "Yes"
+      },
+      {
+        "attempt": 3,
+        "status": "SCHEMA_ERROR",
+        "subcause": "literal inválido en la cláusula 8: -25 (debe ser entero no nulo con |lit| <= 24)",
+        "category": "Arity / index error (invalid literal, var count or schema)",
+        "detectable_without_ground_truth": "Yes"
+      }
+    ]
+  },
+  {
+    "problem_id": "P14",
+    "difficulty": "hard",
+    "run": 0,
+    "correct": false,
+    "attempts": 1,
+    "attempt_classes": [
+      {
+        "attempt": 1,
+        "status": "SAT",
+        "category": "Valid syntax, under-constrained (wrong solution returned) — silent",
+        "detectable_without_ground_truth": "No (needs a verifier / reference)",
+        "subcause": "falta 'a lo sumo un color' (parcial o total) en ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H']; restricción de arista omitida por completo: ['A-B', 'A-C', 'A-F', 'B-C', 'B-D', 'B-E', 'B-F', 'B-G', 'C-D', 'C-G', 'D-E', 'D-F', 'E-G', 'F-G']"
+      }
+    ]
+  },
+  {
+    "problem_id": "P15",
+    "difficulty": "hard",
+    "run": 0,
+    "correct": false,
+    "attempts": 3,
+    "attempt_classes": [
+      {
+        "attempt": 1,
+        "status": "SCHEMA_ERROR",
+        "subcause": "literal inválido en la cláusula 8: -25 (debe ser entero no nulo con |lit| <= 24)",
+        "category": "Arity / index error (invalid literal, var count or schema)",
+        "detectable_without_ground_truth": "Yes"
+      },
+      {
+        "attempt": 2,
+        "status": "SCHEMA_ERROR",
+        "subcause": "literal inválido en la cláusula 8: -25 (debe ser entero no nulo con |lit| <= 24)",
+        "category": "Arity / index error (invalid literal, var count or schema)",
+        "detectable_without_ground_truth": "Yes"
+      },
+      {
+        "attempt": 3,
+        "status": "SCHEMA_ERROR",
+        "subcause": "literal inválido en la cláusula 8: -25 (debe ser entero no nulo con |lit| <= 24)",
+        "category": "Arity / index error (invalid literal, var count or schema)",
+        "detectable_without_ground_truth": "Yes"
+      }
+    ]
+  },
+  {
+    "problem_id": "P16",
+    "difficulty": "hard",
+    "run": 0,
+    "correct": false,
+    "attempts": 3,
+    "attempt_classes": [
+      {
+        "attempt": 1,
+        "status": "SCHEMA_ERROR",
+        "subcause": "literal inválido en la cláusula 12: 28 (debe ser entero no nulo con |lit| <= 27)",
+        "category": "Arity / index error (invalid literal, var count or schema)",
+        "detectable_without_ground_truth": "Yes"
+      },
+      {
+        "attempt": 2,
+        "status": "PARSE_ERROR",
+        "subcause": "JSON inválido: Expecting ',' delimiter (posición 31)",
+        "category": "Malformed syntax (won't parse)",
+        "detectable_without_ground_truth": "Yes"
+      },
+      {
+        "attempt": 3,
+        "status": "PARSE_ERROR",
+        "subcause": "JSON inválido: Expecting ',' delimiter (posición 31)",
+        "category": "Malformed syntax (won't parse)",
+        "detectable_without_ground_truth": "Yes"
+      }
+    ]
+  },
+  {
+    "problem_id": "P17",
+    "difficulty": "hard",
+    "run": 0,
+    "correct": false,
+    "attempts": 3,
+    "attempt_classes": [
+      {
+        "attempt": 1,
+        "status": "DECODE_ERROR",
+        "category": "Valid syntax, under-constrained — caught by decoder (vertex without exactly one colour)",
+        "detectable_without_ground_truth": "Yes (decoder)",
+        "subcause": "el vértice A tiene 2 colores asignados en el modelo (debe tener exactamente 1); el vértice D tiene 2 colores asignados en el modelo (debe tener exactamente 1); el vértice G tiene 2 colores asignados en el modelo (debe tener exactamente 1); el vértice I tiene 3 colores asignados en el modelo (debe tener exactamente 1) | falta 'a lo sumo un color' (parcial o total) en ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I']; restricción de arista omitida por completo: ['A-B', 'A-C', 'A-E', 'A-F', 'A-G', 'A-H', 'A-I', 'B-C', 'B-F', 'B-H', 'C-D', 'C-E', 'C-G', 'C-I', 'D-E', 'D-F', 'D-G', 'D-H', 'D-I', 'E-F', 'E-H', 'F-G', 'F-I', 'G-H', 'H-I']; 23 cláusulas extra de otro tipo (variables/índices incorrectos u otras)"
+      },
+      {
+        "attempt": 2,
+        "status": "DECODE_ERROR",
+        "category": "Valid syntax, under-constrained — caught by decoder (vertex without exactly one colour)",
+        "detectable_without_ground_truth": "Yes (decoder)",
+        "subcause": "el vértice A tiene 2 colores asignados en el modelo (debe tener exactamente 1); el vértice D tiene 2 colores asignados en el modelo (debe tener exactamente 1); el vértice F tiene 2 colores asignados en el modelo (debe tener exactamente 1); el vértice I tiene 2 colores asignados en el modelo (debe tener exactamente 1) | falta 'a lo sumo un color' (parcial o total) en ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I']; restricción de arista omitida por completo: ['A-B', 'A-C', 'A-E', 'A-F', 'A-G', 'A-H', 'A-I', 'B-C', 'B-F', 'B-H', 'C-D', 'C-E', 'C-G', 'C-I', 'D-E', 'D-F', 'D-G', 'D-H', 'D-I', 'E-F', 'E-H', 'F-G', 'F-I', 'G-H', 'H-I']; 32 cláusulas extra de otro tipo (variables/índices incorrectos u otras)"
+      },
+      {
+        "attempt": 3,
+        "status": "DECODE_ERROR",
+        "category": "Valid syntax, under-constrained — caught by decoder (vertex without exactly one colour)",
+        "detectable_without_ground_truth": "Yes (decoder)",
+        "subcause": "el vértice A tiene 2 colores asignados en el modelo (debe tener exactamente 1); el vértice D tiene 2 colores asignados en el modelo (debe tener exactamente 1); el vértice F tiene 2 colores asignados en el modelo (debe tener exactamente 1); el vértice I tiene 2 colores asignados en el modelo (debe tener exactamente 1) | falta 'a lo sumo un color' (parcial o total) en ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I']; restricción de arista omitida por completo: ['A-B', 'A-C', 'A-E', 'A-F', 'A-G', 'A-H', 'A-I', 'B-C', 'B-F', 'B-H', 'C-D', 'C-E', 'C-G', 'C-I', 'D-E', 'D-F', 'D-G', 'D-H', 'D-I', 'E-F', 'E-H', 'F-G', 'F-I', 'G-H', 'H-I']; 32 cláusulas extra de otro tipo (variables/índices incorrectos u otras)"
+      }
+    ]
+  },
+  {
+    "problem_id": "P18",
+    "difficulty": "hard",
+    "run": 0,
+    "correct": false,
+    "attempts": 1,
+    "attempt_classes": [
+      {
+        "attempt": 1,
+        "status": "SAT",
+        "category": "Valid syntax, under-constrained (wrong solution returned) — silent",
+        "detectable_without_ground_truth": "No (needs a verifier / reference)",
+        "subcause": "falta 'a lo sumo un color' (parcial o total) en ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J']; restricción de arista omitida por completo: ['A-B', 'A-F', 'A-H', 'B-C', 'B-D', 'B-F', 'B-G', 'B-J', 'C-D', 'C-H', 'C-J', 'D-F', 'D-H', 'D-I', 'E-F', 'E-H', 'F-G', 'F-H', 'F-I', 'F-J', 'G-H', 'H-J', 'I-J']"
+      }
+    ]
+  },
+  {
+    "problem_id": "P19",
+    "difficulty": "hard",
+    "run": 0,
+    "correct": false,
+    "attempts": 1,
+    "attempt_classes": [
+      {
+        "attempt": 1,
+        "status": "SAT",
+        "category": "Valid syntax, under-constrained (wrong solution returned) — silent",
+        "detectable_without_ground_truth": "No (needs a verifier / reference)",
+        "subcause": "falta 'a lo sumo un color' (parcial o total) en ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J']; restricción de arista omitida por completo: ['A-B', 'A-C', 'A-D', 'A-F', 'A-G', 'A-H', 'A-I', 'B-C', 'B-E', 'B-J', 'C-E', 'C-G', 'C-I', 'D-E', 'D-F', 'D-G', 'D-I', 'E-F', 'E-I', 'E-J', 'F-H', 'F-J', 'G-H', 'H-I', 'I-J']"
+      }
+    ]
+  },
+  {
+    "problem_id": "P20",
+    "difficulty": "hard",
+    "run": 0,
+    "correct": false,
+    "attempts": 1,
+    "attempt_classes": [
+      {
+        "attempt": 1,
+        "status": "SAT",
+        "category": "Valid syntax, under-constrained (wrong solution returned) — silent",
+        "detectable_without_ground_truth": "No (needs a verifier / reference)",
+        "subcause": "falta 'a lo sumo un color' (parcial o total) en ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J']; restricción de arista omitida por completo: ['A-B', 'A-C', 'A-F', 'A-H', 'B-C', 'B-D', 'B-E', 'B-G', 'C-D', 'C-H', 'C-J', 'D-E', 'D-H', 'E-H', 'E-J', 'F-G', 'F-H', 'F-J', 'G-H', 'G-I', 'H-I', 'I-J']"
+      }
+    ]
+  },
+  {
+    "problem_id": "P01",
+    "difficulty": "easy",
+    "run": 1,
+    "correct": false,
+    "attempts": 3,
+    "attempt_classes": [
+      {
+        "attempt": 1,
+        "status": "DECODE_ERROR",
+        "category": "Valid syntax, under-constrained — caught by decoder (vertex without exactly one colour)",
+        "detectable_without_ground_truth": "Yes (decoder)",
+        "subcause": "el vértice A tiene 3 colores asignados en el modelo (debe tener exactamente 1); el vértice B tiene 3 colores asignados en el modelo (debe tener exactamente 1); el vértice C tiene 3 colores asignados en el modelo (debe tener exactamente 1); el vértice D tiene 2 colores asignados en el modelo (debe tener exactamente 1) | falta 'a lo sumo un color' (parcial o total) en ['A', 'B', 'C', 'D']; restricción de arista omitida por completo: ['A-B', 'A-D', 'B-C', 'C-D']; 12 cláusulas extra de otro tipo (variables/índices incorrectos u otras)"
+      },
+      {
+        "attempt": 2,
+        "status": "DECODE_ERROR",
+        "category": "Valid syntax, under-constrained — caught by decoder (vertex without exactly one colour)",
+        "detectable_without_ground_truth": "Yes (decoder)",
+        "subcause": "el vértice A tiene 3 colores asignados en el modelo (debe tener exactamente 1); el vértice B tiene 3 colores asignados en el modelo (debe tener exactamente 1); el vértice C tiene 3 colores asignados en el modelo (debe tener exactamente 1); el vértice D tiene 0 colores asignados en el modelo (debe tener exactamente 1) | falta 'al menos un color' en ['A', 'B', 'C', 'D']; falta 'a lo sumo un color' (parcial o total) en ['A', 'B', 'C', 'D']; restricción de arista omitida por completo: ['A-B', 'A-D', 'B-C', 'C-D']; 15 cláusulas extra de otro tipo (variables/índices incorrectos u otras)"
+      },
+      {
+        "attempt": 3,
+        "status": "SCHEMA_ERROR",
+        "subcause": "literal inválido en la cláusula 2: 13 (debe ser entero no nulo con |lit| <= 12)",
+        "category": "Arity / index error (invalid literal, var count or schema)",
+        "detectable_without_ground_truth": "Yes"
+      }
+    ]
+  },
+  {
+    "problem_id": "P02",
+    "difficulty": "easy",
+    "run": 1,
+    "correct": false,
+    "attempts": 3,
+    "attempt_classes": [
+      {
+        "attempt": 1,
+        "status": "SCHEMA_ERROR",
+        "subcause": "literal inválido en la cláusula 5: -17 (debe ser entero no nulo con |lit| <= 15)",
+        "category": "Arity / index error (invalid literal, var count or schema)",
+        "detectable_without_ground_truth": "Yes"
+      },
+      {
+        "attempt": 2,
+        "status": "SCHEMA_ERROR",
+        "subcause": "literal inválido en la cláusula 5: -17 (debe ser entero no nulo con |lit| <= 15)",
+        "category": "Arity / index error (invalid literal, var count or schema)",
+        "detectable_without_ground_truth": "Yes"
+      },
+      {
+        "attempt": 3,
+        "status": "SCHEMA_ERROR",
+        "subcause": "literal inválido en la cláusula 5: -17 (debe ser entero no nulo con |lit| <= 15)",
+        "category": "Arity / index error (invalid literal, var count or schema)",
+        "detectable_without_ground_truth": "Yes"
+      }
+    ]
+  },
+  {
+    "problem_id": "P03",
+    "difficulty": "easy",
+    "run": 1,
+    "correct": false,
+    "attempts": 3,
+    "attempt_classes": [
+      {
+        "attempt": 1,
+        "status": "DECODE_ERROR",
+        "category": "Valid syntax, under-constrained — caught by decoder (vertex without exactly one colour)",
+        "detectable_without_ground_truth": "Yes (decoder)",
+        "subcause": "el vértice A tiene 2 colores asignados en el modelo (debe tener exactamente 1); el vértice B tiene 2 colores asignados en el modelo (debe tener exactamente 1); el vértice C tiene 2 colores asignados en el modelo (debe tener exactamente 1); el vértice D tiene 2 colores asignados en el modelo (debe tener exactamente 1) | falta 'a lo sumo un color' (parcial o total) en ['A', 'B', 'C', 'D']; restricción de arista omitida por completo: ['A-B', 'A-D', 'B-C']; 8 cláusulas extra de otro tipo (variables/índices incorrectos u otras)"
+      },
+      {
+        "attempt": 2,
+        "status": "SCHEMA_ERROR",
+        "subcause": "literal inválido en la cláusula 8: 13 (debe ser entero no nulo con |lit| <= 12)",
+        "category": "Arity / index error (invalid literal, var count or schema)",
+        "detectable_without_ground_truth": "Yes"
+      },
+      {
+        "attempt": 3,
+        "status": "SCHEMA_ERROR",
+        "subcause": "literal inválido en la cláusula 8: 13 (debe ser entero no nulo con |lit| <= 12)",
+        "category": "Arity / index error (invalid literal, var count or schema)",
+        "detectable_without_ground_truth": "Yes"
+      }
+    ]
+  },
+  {
+    "problem_id": "P04",
+    "difficulty": "easy",
+    "run": 1,
+    "correct": false,
+    "attempts": 3,
+    "attempt_classes": [
+      {
+        "attempt": 1,
+        "status": "SCHEMA_ERROR",
+        "subcause": "literal inválido en la cláusula 5: -17 (debe ser entero no nulo con |lit| <= 15)",
+        "category": "Arity / index error (invalid literal, var count or schema)",
+        "detectable_without_ground_truth": "Yes"
+      },
+      {
+        "attempt": 2,
+        "status": "SCHEMA_ERROR",
+        "subcause": "literal inválido en la cláusula 5: -17 (debe ser entero no nulo con |lit| <= 15)",
+        "category": "Arity / index error (invalid literal, var count or schema)",
+        "detectable_without_ground_truth": "Yes"
+      },
+      {
+        "attempt": 3,
+        "status": "SCHEMA_ERROR",
+        "subcause": "literal inválido en la cláusula 5: -17 (debe ser entero no nulo con |lit| <= 15)",
+        "category": "Arity / index error (invalid literal, var count or schema)",
+        "detectable_without_ground_truth": "Yes"
+      }
+    ]
+  },
+  {
+    "problem_id": "P05",
+    "difficulty": "easy",
+    "run": 1,
+    "correct": false,
+    "attempts": 3,
+    "attempt_classes": [
+      {
+        "attempt": 1,
+        "status": "SCHEMA_ERROR",
+        "subcause": "literal inválido en la cláusula 5: -17 (debe ser entero no nulo con |lit| <= 15)",
+        "category": "Arity / index error (invalid literal, var count or schema)",
+        "detectable_without_ground_truth": "Yes"
+      },
+      {
+        "attempt": 2,
+        "status": "SCHEMA_ERROR",
+        "subcause": "literal inválido en la cláusula 5: -17 (debe ser entero no nulo con |lit| <= 15)",
+        "category": "Arity / index error (invalid literal, var count or schema)",
+        "detectable_without_ground_truth": "Yes"
+      },
+      {
+        "attempt": 3,
+        "status": "SCHEMA_ERROR",
+        "subcause": "literal inválido en la cláusula 5: -17 (debe ser entero no nulo con |lit| <= 15)",
+        "category": "Arity / index error (invalid literal, var count or schema)",
+        "detectable_without_ground_truth": "Yes"
+      }
+    ]
+  },
+  {
+    "problem_id": "P06",
+    "difficulty": "easy",
+    "run": 1,
+    "correct": false,
+    "attempts": 3,
+    "attempt_classes": [
+      {
+        "attempt": 1,
+        "status": "SCHEMA_ERROR",
+        "subcause": "literal inválido en la cláusula 6: -19 (debe ser entero no nulo con |lit| <= 18)",
+        "category": "Arity / index error (invalid literal, var count or schema)",
+        "detectable_without_ground_truth": "Yes"
+      },
+      {
+        "attempt": 2,
+        "status": "PARSE_ERROR",
+        "subcause": "JSON inválido: Expecting ',' delimiter (posición 4127) [salida truncada por num_predict]",
+        "category": "Malformed syntax (won't parse)",
+        "detectable_without_ground_truth": "Yes"
+      },
+      {
+        "attempt": 3,
+        "status": "PARSE_ERROR",
+        "subcause": "JSON inválido: Expecting ',' delimiter (posición 4001)",
+        "category": "Malformed syntax (won't parse)",
+        "detectable_without_ground_truth": "Yes"
+      }
+    ]
+  },
+  {
+    "problem_id": "P07",
+    "difficulty": "medium",
+    "run": 1,
+    "correct": false,
+    "attempts": 3,
+    "attempt_classes": [
+      {
+        "attempt": 1,
+        "status": "SCHEMA_ERROR",
+        "subcause": "literal inválido en la cláusula 6: -19 (debe ser entero no nulo con |lit| <= 18)",
+        "category": "Arity / index error (invalid literal, var count or schema)",
+        "detectable_without_ground_truth": "Yes"
+      },
+      {
+        "attempt": 2,
+        "status": "PARSE_ERROR",
+        "subcause": "JSON inválido: Expecting ',' delimiter (posición 4127) [salida truncada por num_predict]",
+        "category": "Malformed syntax (won't parse)",
+        "detectable_without_ground_truth": "Yes"
+      },
+      {
+        "attempt": 3,
+        "status": "SCHEMA_ERROR",
+        "subcause": "literal inválido en la cláusula 6: -19 (debe ser entero no nulo con |lit| <= 18)",
+        "category": "Arity / index error (invalid literal, var count or schema)",
+        "detectable_without_ground_truth": "Yes"
+      }
+    ]
+  },
+  {
+    "problem_id": "P08",
+    "difficulty": "medium",
+    "run": 1,
+    "correct": false,
+    "attempts": 3,
+    "attempt_classes": [
+      {
+        "attempt": 1,
+        "status": "SCHEMA_ERROR",
+        "subcause": "literal inválido en la cláusula 6: -19 (debe ser entero no nulo con |lit| <= 18)",
+        "category": "Arity / index error (invalid literal, var count or schema)",
+        "detectable_without_ground_truth": "Yes"
+      },
+      {
+        "attempt": 2,
+        "status": "PARSE_ERROR",
+        "subcause": "JSON inválido: Expecting ',' delimiter (posición 4127) [salida truncada por num_predict]",
+        "category": "Malformed syntax (won't parse)",
+        "detectable_without_ground_truth": "Yes"
+      },
+      {
+        "attempt": 3,
+        "status": "SCHEMA_ERROR",
+        "subcause": "literal inválido en la cláusula 6: -19 (debe ser entero no nulo con |lit| <= 18)",
+        "category": "Arity / index error (invalid literal, var count or schema)",
+        "detectable_without_ground_truth": "Yes"
+      }
+    ]
+  },
+  {
+    "problem_id": "P09",
+    "difficulty": "medium",
+    "run": 1,
+    "correct": false,
+    "attempts": 3,
+    "attempt_classes": [
+      {
+        "attempt": 1,
+        "status": "SCHEMA_ERROR",
+        "subcause": "literal inválido en la cláusula 14: 22 (debe ser entero no nulo con |lit| <= 21)",
+        "category": "Arity / index error (invalid literal, var count or schema)",
+        "detectable_without_ground_truth": "Yes"
+      },
+      {
+        "attempt": 2,
+        "status": "PARSE_ERROR",
+        "subcause": "JSON inválido: Expecting value (posición 3864) [salida truncada por num_predict]",
+        "category": "Malformed syntax (won't parse)",
+        "detectable_without_ground_truth": "Yes"
+      },
+      {
+        "attempt": 3,
+        "status": "PARSE_ERROR",
+        "subcause": "JSON inválido: Expecting ',' delimiter (posición 3864) [salida truncada por num_predict]",
+        "category": "Malformed syntax (won't parse)",
+        "detectable_without_ground_truth": "Yes"
+      }
+    ]
+  },
+  {
+    "problem_id": "P10",
+    "difficulty": "medium",
+    "run": 1,
+    "correct": false,
+    "attempts": 3,
+    "attempt_classes": [
+      {
+        "attempt": 1,
+        "status": "SCHEMA_ERROR",
+        "subcause": "literal inválido en la cláusula 1: 22 (debe ser entero no nulo con |lit| <= 21)",
+        "category": "Arity / index error (invalid literal, var count or schema)",
+        "detectable_without_ground_truth": "Yes"
+      },
+      {
+        "attempt": 2,
+        "status": "SCHEMA_ERROR",
+        "subcause": "literal inválido en la cláusula 1: 22 (debe ser entero no nulo con |lit| <= 21)",
+        "category": "Arity / index error (invalid literal, var count or schema)",
+        "detectable_without_ground_truth": "Yes"
+      },
+      {
+        "attempt": 3,
+        "status": "SCHEMA_ERROR",
+        "subcause": "literal inválido en la cláusula 1: 22 (debe ser entero no nulo con |lit| <= 21)",
+        "category": "Arity / index error (invalid literal, var count or schema)",
+        "detectable_without_ground_truth": "Yes"
+      }
+    ]
+  },
+  {
+    "problem_id": "P11",
+    "difficulty": "medium",
+    "run": 1,
+    "correct": false,
+    "attempts": 3,
+    "attempt_classes": [
+      {
+        "attempt": 1,
+        "status": "SCHEMA_ERROR",
+        "subcause": "literal inválido en la cláusula 14: 22 (debe ser entero no nulo con |lit| <= 21)",
+        "category": "Arity / index error (invalid literal, var count or schema)",
+        "detectable_without_ground_truth": "Yes"
+      },
+      {
+        "attempt": 2,
+        "status": "PARSE_ERROR",
+        "subcause": "JSON inválido: Expecting value (posición 3864) [salida truncada por num_predict]",
+        "category": "Malformed syntax (won't parse)",
+        "detectable_without_ground_truth": "Yes"
+      },
+      {
+        "attempt": 3,
+        "status": "PARSE_ERROR",
+        "subcause": "JSON inválido: Expecting ',' delimiter (posición 3864) [salida truncada por num_predict]",
+        "category": "Malformed syntax (won't parse)",
+        "detectable_without_ground_truth": "Yes"
+      }
+    ]
+  },
+  {
+    "problem_id": "P12",
+    "difficulty": "medium",
+    "run": 1,
+    "correct": false,
+    "attempts": 3,
+    "attempt_classes": [
+      {
+        "attempt": 1,
+        "status": "DECODE_ERROR",
+        "category": "Valid syntax, under-constrained — caught by decoder (vertex without exactly one colour)",
+        "detectable_without_ground_truth": "Yes (decoder)",
+        "subcause": "el vértice B tiene 2 colores asignados en el modelo (debe tener exactamente 1); el vértice H tiene 0 colores asignados en el modelo (debe tener exactamente 1) | falta 'al menos un color' en ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H']; falta 'a lo sumo un color' (parcial o total) en ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H']; restricción de arista omitida por completo: ['A-B', 'B-C', 'C-D', 'C-F', 'D-E', 'D-F', 'E-G', 'F-G', 'G-H']; 9 cláusulas extra de otro tipo (variables/índices incorrectos u otras)"
+      },
+      {
+        "attempt": 2,
+        "status": "DECODE_ERROR",
+        "category": "Valid syntax, under-constrained — caught by decoder (vertex without exactly one colour)",
+        "detectable_without_ground_truth": "Yes (decoder)",
+        "subcause": "el vértice B tiene 0 colores asignados en el modelo (debe tener exactamente 1); el vértice D tiene 0 colores asignados en el modelo (debe tener exactamente 1); el vértice E tiene 0 colores asignados en el modelo (debe tener exactamente 1); el vértice G tiene 0 colores asignados en el modelo (debe tener exactamente 1); el vértice H tiene 0 colores asignados en el modelo (debe tener exactamente 1) | falta 'al menos un color' en ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H']; falta 'a lo sumo un color' (parcial o total) en ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H']; restricción de arista omitida por completo: ['A-B', 'B-C', 'C-D', 'C-F', 'D-E', 'D-F', 'E-G', 'F-G', 'G-H']; 4 cláusulas extra de otro tipo (variables/índices incorrectos u otras)"
+      },
+      {
+        "attempt": 3,
+        "status": "DECODE_ERROR",
+        "category": "Valid syntax, under-constrained — caught by decoder (vertex without exactly one colour)",
+        "detectable_without_ground_truth": "Yes (decoder)",
+        "subcause": "el vértice B tiene 0 colores asignados en el modelo (debe tener exactamente 1); el vértice D tiene 0 colores asignados en el modelo (debe tener exactamente 1); el vértice E tiene 0 colores asignados en el modelo (debe tener exactamente 1); el vértice G tiene 0 colores asignados en el modelo (debe tener exactamente 1); el vértice H tiene 0 colores asignados en el modelo (debe tener exactamente 1) | falta 'al menos un color' en ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H']; falta 'a lo sumo un color' (parcial o total) en ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H']; restricción de arista omitida por completo: ['A-B', 'B-C', 'C-D', 'C-F', 'D-E', 'D-F', 'E-G', 'F-G', 'G-H']; 3 cláusulas extra de otro tipo (variables/índices incorrectos u otras)"
+      }
+    ]
+  },
+  {
+    "problem_id": "P13",
+    "difficulty": "medium",
+    "run": 1,
+    "correct": false,
+    "attempts": 3,
+    "attempt_classes": [
+      {
+        "attempt": 1,
+        "status": "SCHEMA_ERROR",
+        "subcause": "literal inválido en la cláusula 7: -25 (debe ser entero no nulo con |lit| <= 24)",
+        "category": "Arity / index error (invalid literal, var count or schema)",
+        "detectable_without_ground_truth": "Yes"
+      },
+      {
+        "attempt": 2,
+        "status": "SCHEMA_ERROR",
+        "subcause": "literal inválido en la cláusula 7: -25 (debe ser entero no nulo con |lit| <= 24)",
+        "category": "Arity / index error (invalid literal, var count or schema)",
+        "detectable_without_ground_truth": "Yes"
+      },
+      {
+        "attempt": 3,
+        "status": "SCHEMA_ERROR",
+        "subcause": "literal inválido en la cláusula 7: -25 (debe ser entero no nulo con |lit| <= 24)",
+        "category": "Arity / index error (invalid literal, var count or schema)",
+        "detectable_without_ground_truth": "Yes"
+      }
+    ]
+  },
+  {
+    "problem_id": "P14",
+    "difficulty": "hard",
+    "run": 1,
+    "correct": false,
+    "attempts": 3,
+    "attempt_classes": [
+      {
+        "attempt": 1,
+        "status": "SCHEMA_ERROR",
+        "subcause": "literal inválido en la cláusula 1: 25 (debe ser entero no nulo con |lit| <= 24)",
+        "category": "Arity / index error (invalid literal, var count or schema)",
+        "detectable_without_ground_truth": "Yes"
+      },
+      {
+        "attempt": 2,
+        "status": "SCHEMA_ERROR",
+        "subcause": "literal inválido en la cláusula 1: 25 (debe ser entero no nulo con |lit| <= 24)",
+        "category": "Arity / index error (invalid literal, var count or schema)",
+        "detectable_without_ground_truth": "Yes"
+      },
+      {
+        "attempt": 3,
+        "status": "SCHEMA_ERROR",
+        "subcause": "literal inválido en la cláusula 1: 25 (debe ser entero no nulo con |lit| <= 24)",
+        "category": "Arity / index error (invalid literal, var count or schema)",
+        "detectable_without_ground_truth": "Yes"
+      }
+    ]
+  },
+  {
+    "problem_id": "P15",
+    "difficulty": "hard",
+    "run": 1,
+    "correct": false,
+    "attempts": 3,
+    "attempt_classes": [
+      {
+        "attempt": 1,
+        "status": "PARSE_ERROR",
+        "subcause": "JSON inválido: Expecting ',' delimiter (posición 4121) [salida truncada por num_predict]",
+        "category": "Malformed syntax (won't parse)",
+        "detectable_without_ground_truth": "Yes"
+      },
+      {
+        "attempt": 2,
+        "status": "PARSE_ERROR",
+        "subcause": "JSON inválido: Expecting ',' delimiter (posición 4121) [salida truncada por num_predict]",
+        "category": "Malformed syntax (won't parse)",
+        "detectable_without_ground_truth": "Yes"
+      },
+      {
+        "attempt": 3,
+        "status": "PARSE_ERROR",
+        "subcause": "JSON inválido: Expecting ',' delimiter (posición 4121) [salida truncada por num_predict]",
+        "category": "Malformed syntax (won't parse)",
+        "detectable_without_ground_truth": "Yes"
+      }
+    ]
+  },
+  {
+    "problem_id": "P16",
+    "difficulty": "hard",
+    "run": 1,
+    "correct": false,
+    "attempts": 3,
+    "attempt_classes": [
+      {
+        "attempt": 1,
+        "status": "SCHEMA_ERROR",
+        "subcause": "literal inválido en la cláusula 5: 28 (debe ser entero no nulo con |lit| <= 27)",
+        "category": "Arity / index error (invalid literal, var count or schema)",
+        "detectable_without_ground_truth": "Yes"
+      },
+      {
+        "attempt": 2,
+        "status": "PARSE_ERROR",
+        "subcause": "JSON inválido: Expecting ',' delimiter (posición 31)",
+        "category": "Malformed syntax (won't parse)",
+        "detectable_without_ground_truth": "Yes"
+      },
+      {
+        "attempt": 3,
+        "status": "PARSE_ERROR",
+        "subcause": "JSON inválido: Expecting ',' delimiter (posición 31)",
+        "category": "Malformed syntax (won't parse)",
+        "detectable_without_ground_truth": "Yes"
+      }
+    ]
+  },
+  {
+    "problem_id": "P17",
+    "difficulty": "hard",
+    "run": 1,
+    "correct": false,
+    "attempts": 3,
+    "attempt_classes": [
+      {
+        "attempt": 1,
+        "status": "DECODE_ERROR",
+        "category": "Valid syntax, under-constrained — caught by decoder (vertex without exactly one colour)",
+        "detectable_without_ground_truth": "Yes (decoder)",
+        "subcause": "el vértice A tiene 0 colores asignados en el modelo (debe tener exactamente 1); el vértice B tiene 0 colores asignados en el modelo (debe tener exactamente 1); el vértice C tiene 0 colores asignados en el modelo (debe tener exactamente 1); el vértice D tiene 0 colores asignados en el modelo (debe tener exactamente 1); el vértice E tiene 0 colores asignados en el modelo (debe tener exactamente 1); el vértice F tiene 0 colores asignados en el modelo (debe tener exactamente 1); el vértice G tiene 0 colores asignados en el modelo (debe tener exactamente 1); el vértice H tiene 0 colores asignados en el modelo (debe tener exactamente 1); el vértice I tiene 0 colores asignados en el modelo (debe tener exactamente 1) | falta 'al menos un color' en ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I']; falta 'a lo sumo un color' (parcial o total) en ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I']; restricción de arista omitida por completo: ['A-B', 'A-C', 'A-E', 'A-F', 'A-G', 'A-H', 'A-I', 'B-C', 'B-F', 'B-H', 'C-D', 'C-E', 'C-G', 'C-I', 'D-E', 'D-F', 'D-G', 'D-H', 'D-I', 'E-F', 'E-H', 'F-G', 'F-I', 'G-H', 'H-I']; 10 cláusulas extra de otro tipo (variables/índices incorrectos u otras)"
+      },
+      {
+        "attempt": 2,
+        "status": "PARSE_ERROR",
+        "subcause": "JSON inválido: Expecting ',' delimiter (posición 3839) [salida truncada por num_predict]",
+        "category": "Malformed syntax (won't parse)",
+        "detectable_without_ground_truth": "Yes"
+      },
+      {
+        "attempt": 3,
+        "status": "PARSE_ERROR",
+        "subcause": "JSON inválido: Expecting ',' delimiter (posición 3880) [salida truncada por num_predict]",
+        "category": "Malformed syntax (won't parse)",
+        "detectable_without_ground_truth": "Yes"
+      }
+    ]
+  },
+  {
+    "problem_id": "P18",
+    "difficulty": "hard",
+    "run": 1,
+    "correct": false,
+    "attempts": 3,
+    "attempt_classes": [
+      {
+        "attempt": 1,
+        "status": "PARSE_ERROR",
+        "subcause": "JSON inválido: Expecting ',' delimiter (posición 3619) [salida truncada por num_predict]",
+        "category": "Malformed syntax (won't parse)",
+        "detectable_without_ground_truth": "Yes"
+      },
+      {
+        "attempt": 2,
+        "status": "PARSE_ERROR",
+        "subcause": "JSON inválido: Expecting ',' delimiter (posición 3656) [salida truncada por num_predict]",
+        "category": "Malformed syntax (won't parse)",
+        "detectable_without_ground_truth": "Yes"
+      },
+      {
+        "attempt": 3,
+        "status": "PARSE_ERROR",
+        "subcause": "JSON inválido: Expecting ',' delimiter (posición 3094) [salida truncada por num_predict]",
+        "category": "Malformed syntax (won't parse)",
+        "detectable_without_ground_truth": "Yes"
+      }
+    ]
+  },
+  {
+    "problem_id": "P19",
+    "difficulty": "hard",
+    "run": 1,
+    "correct": false,
+    "attempts": 3,
+    "attempt_classes": [
+      {
+        "attempt": 1,
+        "status": "SCHEMA_ERROR",
+        "subcause": "literal inválido en la cláusula 5: -31 (debe ser entero no nulo con |lit| <= 30)",
+        "category": "Arity / index error (invalid literal, var count or schema)",
+        "detectable_without_ground_truth": "Yes"
+      },
+      {
+        "attempt": 2,
+        "status": "SCHEMA_ERROR",
+        "subcause": "literal inválido en la cláusula 5: -31 (debe ser entero no nulo con |lit| <= 30)",
+        "category": "Arity / index error (invalid literal, var count or schema)",
+        "detectable_without_ground_truth": "Yes"
+      },
+      {
+        "attempt": 3,
+        "status": "SCHEMA_ERROR",
+        "subcause": "literal inválido en la cláusula 5: -31 (debe ser entero no nulo con |lit| <= 30)",
+        "category": "Arity / index error (invalid literal, var count or schema)",
+        "detectable_without_ground_truth": "Yes"
+      }
+    ]
+  },
+  {
+    "problem_id": "P20",
+    "difficulty": "hard",
+    "run": 1,
+    "correct": false,
+    "attempts": 3,
+    "attempt_classes": [
+      {
+        "attempt": 1,
+        "status": "SCHEMA_ERROR",
+        "subcause": "literal inválido en la cláusula 5: -31 (debe ser entero no nulo con |lit| <= 30)",
+        "category": "Arity / index error (invalid literal, var count or schema)",
+        "detectable_without_ground_truth": "Yes"
+      },
+      {
+        "attempt": 2,
+        "status": "PARSE_ERROR",
+        "subcause": "JSON inválido: Expecting ',' delimiter (posición 31)",
+        "category": "Malformed syntax (won't parse)",
+        "detectable_without_ground_truth": "Yes"
+      },
+      {
+        "attempt": 3,
+        "status": "PARSE_ERROR",
+        "subcause": "JSON inválido: Expecting ',' delimiter (posición 31)",
+        "category": "Malformed syntax (won't parse)",
+        "detectable_without_ground_truth": "Yes"
+      }
+    ]
+  },
+  {
+    "problem_id": "P01",
+    "difficulty": "easy",
+    "run": 2,
+    "correct": false,
+    "attempts": 3,
+    "attempt_classes": [
+      {
+        "attempt": 1,
+        "status": "DECODE_ERROR",
+        "category": "Valid syntax, under-constrained — caught by decoder (vertex without exactly one colour)",
+        "detectable_without_ground_truth": "Yes (decoder)",
+        "subcause": "el vértice A tiene 3 colores asignados en el modelo (debe tener exactamente 1); el vértice B tiene 2 colores asignados en el modelo (debe tener exactamente 1); el vértice C tiene 2 colores asignados en el modelo (debe tener exactamente 1); el vértice D tiene 3 colores asignados en el modelo (debe tener exactamente 1) | falta 'al menos un color' en ['A', 'B', 'C', 'D']; falta 'a lo sumo un color' (parcial o total) en ['A', 'B', 'C', 'D']; restricción de arista omitida por completo: ['A-B', 'A-D', 'B-C', 'C-D']; 21 cláusulas extra de otro tipo (variables/índices incorrectos u otras)"
+      },
+      {
+        "attempt": 2,
+        "status": "DECODE_ERROR",
+        "category": "Valid syntax, under-constrained — caught by decoder (vertex without exactly one colour)",
+        "detectable_without_ground_truth": "Yes (decoder)",
+        "subcause": "el vértice A tiene 3 colores asignados en el modelo (debe tener exactamente 1); el vértice B tiene 2 colores asignados en el modelo (debe tener exactamente 1); el vértice C tiene 2 colores asignados en el modelo (debe tener exactamente 1); el vértice D tiene 2 colores asignados en el modelo (debe tener exactamente 1) | falta 'al menos un color' en ['A', 'B', 'C', 'D']; falta 'a lo sumo un color' (parcial o total) en ['A', 'B', 'C', 'D']; restricción de arista omitida por completo: ['A-B', 'A-D', 'B-C', 'C-D']; 42 cláusulas extra de otro tipo (variables/índices incorrectos u otras)"
+      },
+      {
+        "attempt": 3,
+        "status": "DECODE_ERROR",
+        "category": "Valid syntax, under-constrained — caught by decoder (vertex without exactly one colour)",
+        "detectable_without_ground_truth": "Yes (decoder)",
+        "subcause": "el vértice A tiene 3 colores asignados en el modelo (debe tener exactamente 1); el vértice B tiene 2 colores asignados en el modelo (debe tener exactamente 1); el vértice C tiene 2 colores asignados en el modelo (debe tener exactamente 1); el vértice D tiene 2 colores asignados en el modelo (debe tener exactamente 1) | falta 'al menos un color' en ['A', 'B', 'C', 'D']; falta 'a lo sumo un color' (parcial o total) en ['A', 'B', 'C', 'D']; restricción de arista omitida por completo: ['A-B', 'A-D', 'B-C', 'C-D']; 42 cláusulas extra de otro tipo (variables/índices incorrectos u otras)"
+      }
+    ]
+  },
+  {
+    "problem_id": "P02",
+    "difficulty": "easy",
+    "run": 2,
+    "correct": false,
+    "attempts": 3,
+    "attempt_classes": [
+      {
+        "attempt": 1,
+        "status": "DECODE_ERROR",
+        "category": "Valid syntax, under-constrained — caught by decoder (vertex without exactly one colour)",
+        "detectable_without_ground_truth": "Yes (decoder)",
+        "subcause": "el vértice A tiene 2 colores asignados en el modelo (debe tener exactamente 1); el vértice B tiene 2 colores asignados en el modelo (debe tener exactamente 1); el vértice C tiene 2 colores asignados en el modelo (debe tener exactamente 1) | falta 'al menos un color' en ['A', 'B', 'C', 'D', 'E']; falta 'a lo sumo un color' (parcial o total) en ['A', 'B', 'C', 'D', 'E']; restricción de arista omitida por completo: ['A-B', 'B-C', 'C-D', 'D-E']; 9 cláusulas extra de otro tipo (variables/índices incorrectos u otras)"
+      },
+      {
+        "attempt": 2,
+        "status": "DECODE_ERROR",
+        "category": "Valid syntax, under-constrained — caught by decoder (vertex without exactly one colour)",
+        "detectable_without_ground_truth": "Yes (decoder)",
+        "subcause": "el vértice A tiene 0 colores asignados en el modelo (debe tener exactamente 1); el vértice B tiene 2 colores asignados en el modelo (debe tener exactamente 1) | falta 'al menos un color' en ['A', 'B', 'C', 'D', 'E']; falta 'a lo sumo un color' (parcial o total) en ['A', 'B', 'C', 'D', 'E']; restricción de arista omitida por completo: ['A-B', 'B-C', 'C-D', 'D-E']; 9 cláusulas extra de otro tipo (variables/índices incorrectos u otras)"
+      },
+      {
+        "attempt": 3,
+        "status": "DECODE_ERROR",
+        "category": "Valid syntax, under-constrained — caught by decoder (vertex without exactly one colour)",
+        "detectable_without_ground_truth": "Yes (decoder)",
+        "subcause": "el vértice A tiene 0 colores asignados en el modelo (debe tener exactamente 1); el vértice B tiene 2 colores asignados en el modelo (debe tener exactamente 1) | falta 'al menos un color' en ['A', 'B', 'C', 'D', 'E']; falta 'a lo sumo un color' (parcial o total) en ['A', 'B', 'C', 'D', 'E']; restricción de arista omitida por completo: ['A-B', 'B-C', 'C-D', 'D-E']; 9 cláusulas extra de otro tipo (variables/índices incorrectos u otras)"
+      }
+    ]
+  },
+  {
+    "problem_id": "P03",
+    "difficulty": "easy",
+    "run": 2,
+    "correct": false,
+    "attempts": 3,
+    "attempt_classes": [
+      {
+        "attempt": 1,
+        "status": "SCHEMA_ERROR",
+        "subcause": "literal inválido en la cláusula 2: 13 (debe ser entero no nulo con |lit| <= 12)",
+        "category": "Arity / index error (invalid literal, var count or schema)",
+        "detectable_without_ground_truth": "Yes"
+      },
+      {
+        "attempt": 2,
+        "status": "SCHEMA_ERROR",
+        "subcause": "literal inválido en la cláusula 2: 13 (debe ser entero no nulo con |lit| <= 12)",
+        "category": "Arity / index error (invalid literal, var count or schema)",
+        "detectable_without_ground_truth": "Yes"
+      },
+      {
+        "attempt": 3,
+        "status": "SCHEMA_ERROR",
+        "subcause": "literal inválido en la cláusula 2: 13 (debe ser entero no nulo con |lit| <= 12)",
+        "category": "Arity / index error (invalid literal, var count or schema)",
+        "detectable_without_ground_truth": "Yes"
+      }
+    ]
+  },
+  {
+    "problem_id": "P04",
+    "difficulty": "easy",
+    "run": 2,
+    "correct": false,
+    "attempts": 3,
+    "attempt_classes": [
+      {
+        "attempt": 1,
+        "status": "DECODE_ERROR",
+        "category": "Valid syntax, under-constrained — caught by decoder (vertex without exactly one colour)",
+        "detectable_without_ground_truth": "Yes (decoder)",
+        "subcause": "el vértice A tiene 3 colores asignados en el modelo (debe tener exactamente 1); el vértice D tiene 3 colores asignados en el modelo (debe tener exactamente 1); el vértice E tiene 0 colores asignados en el modelo (debe tener exactamente 1) | falta 'al menos un color' en ['A', 'B', 'C', 'D', 'E']; falta 'a lo sumo un color' (parcial o total) en ['A', 'B', 'C', 'D', 'E']; restricción de arista omitida por completo: ['A-B', 'B-C']; 24 cláusulas extra de otro tipo (variables/índices incorrectos u otras)"
+      },
+      {
+        "attempt": 2,
+        "status": "SCHEMA_ERROR",
+        "subcause": "literal inválido en la cláusula 24: 16 (debe ser entero no nulo con |lit| <= 15)",
+        "category": "Arity / index error (invalid literal, var count or schema)",
+        "detectable_without_ground_truth": "Yes"
+      },
+      {
+        "attempt": 3,
+        "status": "SCHEMA_ERROR",
+        "subcause": "literal inválido en la cláusula 24: 16 (debe ser entero no nulo con |lit| <= 15)",
+        "category": "Arity / index error (invalid literal, var count or schema)",
+        "detectable_without_ground_truth": "Yes"
+      }
+    ]
+  },
+  {
+    "problem_id": "P05",
+    "difficulty": "easy",
+    "run": 2,
+    "correct": false,
+    "attempts": 3,
+    "attempt_classes": [
+      {
+        "attempt": 1,
+        "status": "UNSAT",
+        "category": "Valid syntax, over-constrained (UNSAT)",
+        "detectable_without_ground_truth": "Yes",
+        "subcause": "falta 'al menos un color' en ['A', 'B', 'C', 'D', 'E']; falta 'a lo sumo un color' (parcial o total) en ['A', 'B', 'C', 'D', 'E']; restricción de arista omitida por completo: ['A-B', 'A-E', 'B-C']; 18 cláusulas extra de otro tipo (variables/índices incorrectos u otras)"
+      },
+      {
+        "attempt": 2,
+        "status": "UNSAT",
+        "category": "Valid syntax, over-constrained (UNSAT)",
+        "detectable_without_ground_truth": "Yes",
+        "subcause": "falta 'al menos un color' en ['A', 'B', 'C', 'D']; falta 'a lo sumo un color' (parcial o total) en ['A', 'B', 'C', 'D', 'E']; restricción de arista omitida por completo: ['A-B', 'A-E', 'B-C']; 18 cláusulas extra de otro tipo (variables/índices incorrectos u otras)"
+      },
+      {
+        "attempt": 3,
+        "status": "UNSAT",
+        "category": "Valid syntax, over-constrained (UNSAT)",
+        "detectable_without_ground_truth": "Yes",
+        "subcause": "falta 'al menos un color' en ['A', 'B', 'C', 'D']; falta 'a lo sumo un color' (parcial o total) en ['A', 'B', 'C', 'D', 'E']; restricción de arista omitida por completo: ['A-B', 'A-E', 'B-C']; 25 cláusulas extra de otro tipo (variables/índices incorrectos u otras)"
+      }
+    ]
+  },
+  {
+    "problem_id": "P06",
+    "difficulty": "easy",
+    "run": 2,
+    "correct": false,
+    "attempts": 3,
+    "attempt_classes": [
+      {
+        "attempt": 1,
+        "status": "DECODE_ERROR",
+        "category": "Valid syntax, under-constrained — caught by decoder (vertex without exactly one colour)",
+        "detectable_without_ground_truth": "Yes (decoder)",
+        "subcause": "el vértice A tiene 2 colores asignados en el modelo (debe tener exactamente 1); el vértice D tiene 2 colores asignados en el modelo (debe tener exactamente 1) | falta 'al menos un color' en ['A', 'B', 'C', 'D', 'E', 'F']; falta 'a lo sumo un color' (parcial o total) en ['A', 'B', 'C', 'D', 'E', 'F']; restricción de arista omitida por completo: ['A-B', 'B-C', 'D-E', 'E-F']; 15 cláusulas extra de otro tipo (variables/índices incorrectos u otras)"
+      },
+      {
+        "attempt": 2,
+        "status": "DECODE_ERROR",
+        "category": "Valid syntax, under-constrained — caught by decoder (vertex without exactly one colour)",
+        "detectable_without_ground_truth": "Yes (decoder)",
+        "subcause": "el vértice A tiene 2 colores asignados en el modelo (debe tener exactamente 1); el vértice D tiene 2 colores asignados en el modelo (debe tener exactamente 1) | falta 'al menos un color' en ['A', 'B', 'C', 'D', 'E', 'F']; falta 'a lo sumo un color' (parcial o total) en ['A', 'B', 'C', 'D', 'E', 'F']; restricción de arista omitida por completo: ['A-B', 'B-C', 'D-E', 'E-F']; 15 cláusulas extra de otro tipo (variables/índices incorrectos u otras)"
+      },
+      {
+        "attempt": 3,
+        "status": "DECODE_ERROR",
+        "category": "Valid syntax, under-constrained — caught by decoder (vertex without exactly one colour)",
+        "detectable_without_ground_truth": "Yes (decoder)",
+        "subcause": "el vértice A tiene 2 colores asignados en el modelo (debe tener exactamente 1); el vértice D tiene 2 colores asignados en el modelo (debe tener exactamente 1) | falta 'al menos un color' en ['A', 'B', 'C', 'D', 'E', 'F']; falta 'a lo sumo un color' (parcial o total) en ['A', 'B', 'C', 'D', 'E', 'F']; restricción de arista omitida por completo: ['A-B', 'B-C', 'D-E', 'E-F']; 15 cláusulas extra de otro tipo (variables/índices incorrectos u otras)"
+      }
+    ]
+  },
+  {
+    "problem_id": "P07",
+    "difficulty": "medium",
+    "run": 2,
+    "correct": false,
+    "attempts": 3,
+    "attempt_classes": [
+      {
+        "attempt": 1,
+        "status": "SCHEMA_ERROR",
+        "subcause": "literal inválido en la cláusula 3: -19 (debe ser entero no nulo con |lit| <= 18)",
+        "category": "Arity / index error (invalid literal, var count or schema)",
+        "detectable_without_ground_truth": "Yes"
+      },
+      {
+        "attempt": 2,
+        "status": "SCHEMA_ERROR",
+        "subcause": "literal inválido en la cláusula 1: -19 (debe ser entero no nulo con |lit| <= 18)",
+        "category": "Arity / index error (invalid literal, var count or schema)",
+        "detectable_without_ground_truth": "Yes"
+      },
+      {
+        "attempt": 3,
+        "status": "PARSE_ERROR",
+        "subcause": "JSON inválido: Expecting ',' delimiter (posición 3775) [salida truncada por num_predict]",
+        "category": "Malformed syntax (won't parse)",
+        "detectable_without_ground_truth": "Yes"
+      }
+    ]
+  },
+  {
+    "problem_id": "P08",
+    "difficulty": "medium",
+    "run": 2,
+    "correct": false,
+    "attempts": 3,
+    "attempt_classes": [
+      {
+        "attempt": 1,
+        "status": "SCHEMA_ERROR",
+        "subcause": "literal inválido en la cláusula 3: -19 (debe ser entero no nulo con |lit| <= 18)",
+        "category": "Arity / index error (invalid literal, var count or schema)",
+        "detectable_without_ground_truth": "Yes"
+      },
+      {
+        "attempt": 2,
+        "status": "PARSE_ERROR",
+        "subcause": "JSON inválido: Expecting ',' delimiter (posición 3986) [salida truncada por num_predict]",
+        "category": "Malformed syntax (won't parse)",
+        "detectable_without_ground_truth": "Yes"
+      },
+      {
+        "attempt": 3,
+        "status": "PARSE_ERROR",
+        "subcause": "JSON inválido: Expecting value (posición 3851) [salida truncada por num_predict]",
+        "category": "Malformed syntax (won't parse)",
+        "detectable_without_ground_truth": "Yes"
+      }
+    ]
+  },
+  {
+    "problem_id": "P09",
+    "difficulty": "medium",
+    "run": 2,
+    "correct": false,
+    "attempts": 3,
+    "attempt_classes": [
+      {
+        "attempt": 1,
+        "status": "PARSE_ERROR",
+        "subcause": "JSON inválido: Expecting ',' delimiter (posición 3921) [salida truncada por num_predict]",
+        "category": "Malformed syntax (won't parse)",
+        "detectable_without_ground_truth": "Yes"
+      },
+      {
+        "attempt": 2,
+        "status": "SCHEMA_ERROR",
+        "subcause": "literal inválido en la cláusula 7: 22 (debe ser entero no nulo con |lit| <= 21)",
+        "category": "Arity / index error (invalid literal, var count or schema)",
+        "detectable_without_ground_truth": "Yes"
+      },
+      {
+        "attempt": 3,
+        "status": "PARSE_ERROR",
+        "subcause": "JSON inválido: Expecting ',' delimiter (posición 31) [salida truncada por num_predict]",
+        "category": "Malformed syntax (won't parse)",
+        "detectable_without_ground_truth": "Yes"
+      }
+    ]
+  },
+  {
+    "problem_id": "P10",
+    "difficulty": "medium",
+    "run": 2,
+    "correct": false,
+    "attempts": 3,
+    "attempt_classes": [
+      {
+        "attempt": 1,
+        "status": "DECODE_ERROR",
+        "category": "Valid syntax, under-constrained — caught by decoder (vertex without exactly one colour)",
+        "detectable_without_ground_truth": "Yes (decoder)",
+        "subcause": "el vértice A tiene 3 colores asignados en el modelo (debe tener exactamente 1); el vértice B tiene 2 colores asignados en el modelo (debe tener exactamente 1); el vértice C tiene 0 colores asignados en el modelo (debe tener exactamente 1); el vértice F tiene 0 colores asignados en el modelo (debe tener exactamente 1) | falta 'al menos un color' en ['A', 'B', 'C', 'D', 'E', 'F', 'G']; falta 'a lo sumo un color' (parcial o total) en ['A', 'B', 'C', 'D', 'E', 'F', 'G']; restricción de arista omitida por completo: ['A-B', 'A-C', 'A-F', 'B-C', 'B-E', 'C-E', 'D-E', 'D-F', 'E-F', 'F-G']; 12 cláusulas extra de otro tipo (variables/índices incorrectos u otras)"
+      },
+      {
+        "attempt": 2,
+        "status": "PARSE_ERROR",
+        "subcause": "JSON inválido: Expecting value (posición 3577) [salida truncada por num_predict]",
+        "category": "Malformed syntax (won't parse)",
+        "detectable_without_ground_truth": "Yes"
+      },
+      {
+        "attempt": 3,
+        "status": "PARSE_ERROR",
+        "subcause": "JSON inválido: Expecting ',' delimiter (posición 3581) [salida truncada por num_predict]",
+        "category": "Malformed syntax (won't parse)",
+        "detectable_without_ground_truth": "Yes"
+      }
+    ]
+  },
+  {
+    "problem_id": "P11",
+    "difficulty": "medium",
+    "run": 2,
+    "correct": false,
+    "attempts": 3,
+    "attempt_classes": [
+      {
+        "attempt": 1,
+        "status": "DECODE_ERROR",
+        "category": "Valid syntax, under-constrained — caught by decoder (vertex without exactly one colour)",
+        "detectable_without_ground_truth": "Yes (decoder)",
+        "subcause": "el vértice A tiene 3 colores asignados en el modelo (debe tener exactamente 1); el vértice B tiene 2 colores asignados en el modelo (debe tener exactamente 1); el vértice C tiene 2 colores asignados en el modelo (debe tener exactamente 1); el vértice D tiene 2 colores asignados en el modelo (debe tener exactamente 1); el vértice E tiene 2 colores asignados en el modelo (debe tener exactamente 1); el vértice F tiene 3 colores asignados en el modelo (debe tener exactamente 1) | falta 'al menos un color' en ['A', 'B', 'C', 'D', 'E', 'F', 'G']; falta 'a lo sumo un color' (parcial o total) en ['A', 'B', 'C', 'D', 'E', 'F', 'G']; restricción de arista omitida por completo: ['A-B', 'B-C', 'B-G', 'C-D', 'D-E', 'D-G', 'E-F', 'E-G']; 11 cláusulas extra de otro tipo (variables/índices incorrectos u otras)"
+      },
+      {
+        "attempt": 2,
+        "status": "DECODE_ERROR",
+        "category": "Valid syntax, under-constrained — caught by decoder (vertex without exactly one colour)",
+        "detectable_without_ground_truth": "Yes (decoder)",
+        "subcause": "el vértice A tiene 3 colores asignados en el modelo (debe tener exactamente 1); el vértice B tiene 3 colores asignados en el modelo (debe tener exactamente 1); el vértice C tiene 3 colores asignados en el modelo (debe tener exactamente 1); el vértice D tiene 3 colores asignados en el modelo (debe tener exactamente 1); el vértice E tiene 3 colores asignados en el modelo (debe tener exactamente 1); el vértice F tiene 3 colores asignados en el modelo (debe tener exactamente 1); el vértice G tiene 2 colores asignados en el modelo (debe tener exactamente 1) | falta 'al menos un color' en ['A', 'B', 'C', 'D', 'E', 'F', 'G']; falta 'a lo sumo un color' (parcial o total) en ['A', 'B', 'C', 'D', 'E', 'F', 'G']; restricción de arista omitida por completo: ['A-B', 'B-C', 'B-G', 'C-D', 'D-E', 'D-G', 'E-F', 'E-G']; 2 cláusulas extra de otro tipo (variables/índices incorrectos u otras)"
+      },
+      {
+        "attempt": 3,
+        "status": "SCHEMA_ERROR",
+        "subcause": "literal inválido en la cláusula 2: 23 (debe ser entero no nulo con |lit| <= 21)",
+        "category": "Arity / index error (invalid literal, var count or schema)",
+        "detectable_without_ground_truth": "Yes"
+      }
+    ]
+  },
+  {
+    "problem_id": "P12",
+    "difficulty": "medium",
+    "run": 2,
+    "correct": false,
+    "attempts": 3,
+    "attempt_classes": [
+      {
+        "attempt": 1,
+        "status": "SCHEMA_ERROR",
+        "subcause": "literal inválido en la cláusula 8: 25 (debe ser entero no nulo con |lit| <= 24)",
+        "category": "Arity / index error (invalid literal, var count or schema)",
+        "detectable_without_ground_truth": "Yes"
+      },
+      {
+        "attempt": 2,
+        "status": "SCHEMA_ERROR",
+        "subcause": "literal inválido en la cláusula 8: 25 (debe ser entero no nulo con |lit| <= 24)",
+        "category": "Arity / index error (invalid literal, var count or schema)",
+        "detectable_without_ground_truth": "Yes"
+      },
+      {
+        "attempt": 3,
+        "status": "PARSE_ERROR",
+        "subcause": "JSON inválido: Expecting ',' delimiter (posición 31)",
+        "category": "Malformed syntax (won't parse)",
+        "detectable_without_ground_truth": "Yes"
+      }
+    ]
+  },
+  {
+    "problem_id": "P13",
+    "difficulty": "medium",
+    "run": 2,
+    "correct": false,
+    "attempts": 3,
+    "attempt_classes": [
+      {
+        "attempt": 1,
+        "status": "SCHEMA_ERROR",
+        "subcause": "literal inválido en la cláusula 8: 25 (debe ser entero no nulo con |lit| <= 24)",
+        "category": "Arity / index error (invalid literal, var count or schema)",
+        "detectable_without_ground_truth": "Yes"
+      },
+      {
+        "attempt": 2,
+        "status": "SCHEMA_ERROR",
+        "subcause": "literal inválido en la cláusula 8: 25 (debe ser entero no nulo con |lit| <= 24)",
+        "category": "Arity / index error (invalid literal, var count or schema)",
+        "detectable_without_ground_truth": "Yes"
+      },
+      {
+        "attempt": 3,
+        "status": "SCHEMA_ERROR",
+        "subcause": "literal inválido en la cláusula 8: 25 (debe ser entero no nulo con |lit| <= 24)",
+        "category": "Arity / index error (invalid literal, var count or schema)",
+        "detectable_without_ground_truth": "Yes"
+      }
+    ]
+  },
+  {
+    "problem_id": "P14",
+    "difficulty": "hard",
+    "run": 2,
+    "correct": false,
+    "attempts": 3,
+    "attempt_classes": [
+      {
+        "attempt": 1,
+        "status": "SCHEMA_ERROR",
+        "subcause": "literal inválido en la cláusula 24: 25 (debe ser entero no nulo con |lit| <= 24)",
+        "category": "Arity / index error (invalid literal, var count or schema)",
+        "detectable_without_ground_truth": "Yes"
+      },
+      {
+        "attempt": 2,
+        "status": "PARSE_ERROR",
+        "subcause": "JSON inválido: Expecting ',' delimiter (posición 4045) [salida truncada por num_predict]",
+        "category": "Malformed syntax (won't parse)",
+        "detectable_without_ground_truth": "Yes"
+      },
+      {
+        "attempt": 3,
+        "status": "SCHEMA_ERROR",
+        "subcause": "literal inválido en la cláusula 12: 25 (debe ser entero no nulo con |lit| <= 24)",
+        "category": "Arity / index error (invalid literal, var count or schema)",
+        "detectable_without_ground_truth": "Yes"
+      }
+    ]
+  },
+  {
+    "problem_id": "P15",
+    "difficulty": "hard",
+    "run": 2,
+    "correct": false,
+    "attempts": 3,
+    "attempt_classes": [
+      {
+        "attempt": 1,
+        "status": "SCHEMA_ERROR",
+        "subcause": "literal inválido en la cláusula 8: 25 (debe ser entero no nulo con |lit| <= 24)",
+        "category": "Arity / index error (invalid literal, var count or schema)",
+        "detectable_without_ground_truth": "Yes"
+      },
+      {
+        "attempt": 2,
+        "status": "SCHEMA_ERROR",
+        "subcause": "literal inválido en la cláusula 8: 25 (debe ser entero no nulo con |lit| <= 24)",
+        "category": "Arity / index error (invalid literal, var count or schema)",
+        "detectable_without_ground_truth": "Yes"
+      },
+      {
+        "attempt": 3,
+        "status": "PARSE_ERROR",
+        "subcause": "JSON inválido: Expecting ',' delimiter (posición 31)",
+        "category": "Malformed syntax (won't parse)",
+        "detectable_without_ground_truth": "Yes"
+      }
+    ]
+  },
+  {
+    "problem_id": "P16",
+    "difficulty": "hard",
+    "run": 2,
+    "correct": false,
+    "attempts": 3,
+    "attempt_classes": [
+      {
+        "attempt": 1,
+        "status": "PARSE_ERROR",
+        "subcause": "JSON inválido: Expecting ',' delimiter (posición 3562) [salida truncada por num_predict]",
+        "category": "Malformed syntax (won't parse)",
+        "detectable_without_ground_truth": "Yes"
+      },
+      {
+        "attempt": 2,
+        "status": "PARSE_ERROR",
+        "subcause": "JSON inválido: Expecting ',' delimiter (posición 31) [salida truncada por num_predict]",
+        "category": "Malformed syntax (won't parse)",
+        "detectable_without_ground_truth": "Yes"
+      },
+      {
+        "attempt": 3,
+        "status": "PARSE_ERROR",
+        "subcause": "JSON inválido: Expecting ',' delimiter (posición 31) [salida truncada por num_predict]",
+        "category": "Malformed syntax (won't parse)",
+        "detectable_without_ground_truth": "Yes"
+      }
+    ]
+  },
+  {
+    "problem_id": "P17",
+    "difficulty": "hard",
+    "run": 2,
+    "correct": false,
+    "attempts": 3,
+    "attempt_classes": [
+      {
+        "attempt": 1,
+        "status": "DECODE_ERROR",
+        "category": "Valid syntax, under-constrained — caught by decoder (vertex without exactly one colour)",
+        "detectable_without_ground_truth": "Yes (decoder)",
+        "subcause": "el vértice A tiene 2 colores asignados en el modelo (debe tener exactamente 1); el vértice B tiene 2 colores asignados en el modelo (debe tener exactamente 1); el vértice C tiene 2 colores asignados en el modelo (debe tener exactamente 1); el vértice D tiene 2 colores asignados en el modelo (debe tener exactamente 1); el vértice E tiene 2 colores asignados en el modelo (debe tener exactamente 1); el vértice F tiene 2 colores asignados en el modelo (debe tener exactamente 1); el vértice G tiene 2 colores asignados en el modelo (debe tener exactamente 1); el vértice H tiene 2 colores asignados en el modelo (debe tener exactamente 1); el vértice I tiene 2 colores asignados en el modelo (debe tener exactamente 1) | falta 'a lo sumo un color' (parcial o total) en ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I']; restricción de arista omitida por completo: ['A-B', 'A-C', 'A-E', 'A-F', 'A-G', 'A-H', 'A-I', 'B-C', 'B-F', 'B-H', 'C-D', 'C-E', 'C-G', 'C-I', 'D-E', 'D-F', 'D-G', 'D-H', 'D-I', 'E-F', 'E-H', 'F-G', 'F-I', 'G-H', 'H-I']; 36 cláusulas extra de otro tipo (variables/índices incorrectos u otras)"
+      },
+      {
+        "attempt": 2,
+        "status": "SCHEMA_ERROR",
+        "subcause": "literal inválido en la cláusula 45: 28 (debe ser entero no nulo con |lit| <= 27)",
+        "category": "Arity / index error (invalid literal, var count or schema)",
+        "detectable_without_ground_truth": "Yes"
+      },
+      {
+        "attempt": 3,
+        "status": "PARSE_ERROR",
+        "subcause": "JSON inválido: Expecting ',' delimiter (posición 31)",
+        "category": "Malformed syntax (won't parse)",
+        "detectable_without_ground_truth": "Yes"
+      }
+    ]
+  },
+  {
+    "problem_id": "P18",
+    "difficulty": "hard",
+    "run": 2,
+    "correct": false,
+    "attempts": 3,
+    "attempt_classes": [
+      {
+        "attempt": 1,
+        "status": "DECODE_ERROR",
+        "category": "Valid syntax, under-constrained — caught by decoder (vertex without exactly one colour)",
+        "detectable_without_ground_truth": "Yes (decoder)",
+        "subcause": "el vértice A tiene 3 colores asignados en el modelo (debe tener exactamente 1); el vértice C tiene 2 colores asignados en el modelo (debe tener exactamente 1); el vértice D tiene 3 colores asignados en el modelo (debe tener exactamente 1); el vértice E tiene 2 colores asignados en el modelo (debe tener exactamente 1); el vértice G tiene 3 colores asignados en el modelo (debe tener exactamente 1); el vértice H tiene 2 colores asignados en el modelo (debe tener exactamente 1); el vértice J tiene 2 colores asignados en el modelo (debe tener exactamente 1) | falta 'a lo sumo un color' (parcial o total) en ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J']; restricción de arista omitida por completo: ['A-B', 'A-F', 'A-H', 'B-C', 'B-D', 'B-F', 'B-G', 'B-J', 'C-D', 'C-H', 'C-J', 'D-F', 'D-H', 'D-I', 'E-F', 'E-H', 'F-G', 'F-H', 'F-I', 'F-J', 'G-H', 'H-J', 'I-J']; 39 cláusulas extra de otro tipo (variables/índices incorrectos u otras)"
+      },
+      {
+        "attempt": 2,
+        "status": "SCHEMA_ERROR",
+        "subcause": "literal inválido en la cláusula 49: 31 (debe ser entero no nulo con |lit| <= 30)",
+        "category": "Arity / index error (invalid literal, var count or schema)",
+        "detectable_without_ground_truth": "Yes"
+      },
+      {
+        "attempt": 3,
+        "status": "SCHEMA_ERROR",
+        "subcause": "literal inválido en la cláusula 49: 31 (debe ser entero no nulo con |lit| <= 30)",
+        "category": "Arity / index error (invalid literal, var count or schema)",
+        "detectable_without_ground_truth": "Yes"
+      }
+    ]
+  },
+  {
+    "problem_id": "P19",
+    "difficulty": "hard",
+    "run": 2,
+    "correct": false,
+    "attempts": 3,
+    "attempt_classes": [
+      {
+        "attempt": 1,
+        "status": "SCHEMA_ERROR",
+        "subcause": "literal inválido en la cláusula 10: -31 (debe ser entero no nulo con |lit| <= 30)",
+        "category": "Arity / index error (invalid literal, var count or schema)",
+        "detectable_without_ground_truth": "Yes"
+      },
+      {
+        "attempt": 2,
+        "status": "PARSE_ERROR",
+        "subcause": "JSON inválido: Expecting ',' delimiter (posición 31)",
+        "category": "Malformed syntax (won't parse)",
+        "detectable_without_ground_truth": "Yes"
+      },
+      {
+        "attempt": 3,
+        "status": "PARSE_ERROR",
+        "subcause": "JSON inválido: Expecting ',' delimiter (posición 31)",
+        "category": "Malformed syntax (won't parse)",
+        "detectable_without_ground_truth": "Yes"
+      }
+    ]
+  },
+  {
+    "problem_id": "P20",
+    "difficulty": "hard",
+    "run": 2,
+    "correct": false,
+    "attempts": 3,
+    "attempt_classes": [
+      {
+        "attempt": 1,
+        "status": "SCHEMA_ERROR",
+        "subcause": "literal inválido en la cláusula 10: -31 (debe ser entero no nulo con |lit| <= 30)",
+        "category": "Arity / index error (invalid literal, var count or schema)",
+        "detectable_without_ground_truth": "Yes"
+      },
+      {
+        "attempt": 2,
+        "status": "PARSE_ERROR",
+        "subcause": "JSON inválido: Expecting ',' delimiter (posición 31)",
+        "category": "Malformed syntax (won't parse)",
+        "detectable_without_ground_truth": "Yes"
+      },
+      {
+        "attempt": 3,
+        "status": "PARSE_ERROR",
+        "subcause": "JSON inválido: Expecting ',' delimiter (posición 31)",
+        "category": "Malformed syntax (won't parse)",
+        "detectable_without_ground_truth": "Yes"
+      }
+    ]
+  }
+]
