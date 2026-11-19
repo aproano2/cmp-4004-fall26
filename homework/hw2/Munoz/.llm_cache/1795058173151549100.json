@@ -1,0 +1,39 @@
+{
+  "request": {
+    "model": "llama3.2:3b",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Resuelve el problema directamente. Devuelve solo JSON: {\"status\": \"SAT\", \"assignment\": {\"1\": true, \"2\": false}}. Incluye todos los identificadores dados con valores booleanos. Si no existe solucion, devuelve {\"status\": \"UNSAT\"}."
+      },
+      {
+        "role": "user",
+        "content": "Organiza el evento 'Jornada de debate'. Las actividades disponibles son: conferencia, debate, exposicion. Cada actividad se incluye o se excluye. Solo se aplican las siguientes condiciones:\n1. Se debe incluir exactamente una de estas actividades: conferencia, debate.\n2. Si se incluye debate, tambien se debe incluir exposicion.\n3. No se puede incluir conferencia.\nIndica para cada actividad si se incluye o se excluye, cumpliendo todas las condiciones. Cualquier seleccion valida es aceptable; no hay que minimizar ni maximizar actividades. Si ninguna seleccion cumple las condiciones, responde UNSAT.\nIdentificadores: {\"1\": \"conferencia\", \"2\": \"debate\", \"3\": \"exposicion\"}"
+      }
+    ],
+    "stream": false,
+    "options": {
+      "temperature": 0,
+      "seed": 42,
+      "num_predict": 2048
+    }
+  },
+  "response": {
+    "model": "llama3.2:3b",
+    "created_at": "2026-11-19T03:16:13.1506614Z",
+    "message": {
+      "role": "assistant",
+      "content": "```json\n{\n  \"status\": \"SAT\",\n  \"assignment\": {\n    \"1\": false,\n    \"2\": true,\n    \"3\": true\n  }\n}\n```\n\nExplicaci\u00f3n: La actividad \"conferencia\" se excluye porque no se puede incluir. La actividad \"debate\" se incluye porque se incluye una de las actividades permitidas y se incluye la actividad \"exposicion\"."
+    },
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 772557600,
+    "load_duration": 7653300,
+    "prompt_eval_count": 253,
+    "prompt_eval_cached_count": 86,
+    "prompt_eval_duration": 105779000,
+    "eval_count": 91,
+    "eval_duration": 634002000
+  },
+  "llm_time_s": 2.8178621000006387
+}

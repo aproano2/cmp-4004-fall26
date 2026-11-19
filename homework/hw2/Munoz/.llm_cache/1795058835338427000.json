@@ -1,0 +1,39 @@
+{
+  "request": {
+    "model": "llama3.2:3b",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Resuelve el problema directamente. Devuelve solo JSON: {\"status\": \"SAT\", \"assignment\": {\"1\": true, \"2\": false}}. Incluye todos los identificadores dados con valores booleanos. Si no existe solucion, devuelve {\"status\": \"UNSAT\"}."
+      },
+      {
+        "role": "user",
+        "content": "Organiza el evento 'Encuentro de humanidades'. Las actividades disponibles son: lectura, debate, conferencia, taller, exposicion, teatro, cine, concierto. Cada actividad se incluye o se excluye. Solo se aplican las siguientes condiciones:\n1. Se incluye lectura si y solo si se incluye debate.\n2. Se debe incluir exactamente una de estas actividades: conferencia, taller, exposicion.\n3. Si se incluye debate, debe incluirse al menos una de estas actividades: conferencia, taller; pueden incluirse ambas.\n4. Si se incluyen tanto lectura como conferencia, se debe incluir teatro.\n5. Si se incluye taller, tambien se debe incluir cine.\n6. Se incluye cine si y solo si se incluye concierto.\n7. No se pueden incluir a la vez teatro y concierto.\n8. Se debe incluir lectura.\n9. No se puede incluir teatro.\nIndica para cada actividad si se incluye o se excluye, cumpliendo todas las condiciones. Cualquier seleccion valida es aceptable; no hay que minimizar ni maximizar actividades. Si ninguna seleccion cumple las condiciones, responde UNSAT.\nIdentificadores: {\"1\": \"lectura\", \"2\": \"debate\", \"3\": \"conferencia\", \"4\": \"taller\", \"5\": \"exposicion\", \"6\": \"teatro\", \"7\": \"cine\", \"8\": \"concierto\"}"
+      }
+    ],
+    "stream": false,
+    "options": {
+      "temperature": 0,
+      "seed": 42,
+      "num_predict": 2048
+    }
+  },
+  "response": {
+    "model": "llama3.2:3b",
+    "created_at": "2026-11-19T03:27:15.3372586Z",
+    "message": {
+      "role": "assistant",
+      "content": "```json\n{\n  \"status\": \"SAT\",\n  \"assignment\": {\n    \"1\": \"lectura\",\n    \"2\": \"debate\",\n    \"3\": \"conferencia\",\n    \"4\": \"taller\",\n    \"5\": \"exposicion\",\n    \"6\": \"cine\",\n    \"7\": \"concierto\"\n  }\n}\n```\n\nExplicaci\u00f3n:\n\n1. Se incluye lectura y debate.\n2. Se incluye conferencia y taller.\n3. No se incluye teatro.\n4. Se incluye cine.\n5. No se incluye concierto.\n6. No se incluye exposici\u00f3n.\n7. Se incluye cine y concierto.\n\nNota: Esta soluci\u00f3n cumple todas las condiciones dadas."
+    },
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 1201096500,
+    "load_duration": 3575600,
+    "prompt_eval_count": 416,
+    "prompt_eval_cached_count": 5,
+    "prompt_eval_duration": 195685000,
+    "eval_count": 164,
+    "eval_duration": 925311000
+  },
+  "llm_time_s": 3.2326318999985233
+}

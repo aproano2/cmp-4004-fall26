@@ -1,0 +1,39 @@
+{
+  "request": {
+    "model": "llama3.2:3b",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Resuelve el problema directamente. Devuelve solo JSON: {\"status\": \"SAT\", \"assignment\": {\"1\": true, \"2\": false}}. Incluye todos los identificadores dados con valores booleanos. Si no existe solucion, devuelve {\"status\": \"UNSAT\"}."
+      },
+      {
+        "role": "user",
+        "content": "Organiza el evento 'Semana audiovisual'. Las actividades disponibles son: cine, debate, taller, exposicion, concierto, lectura, concurso. Cada actividad se incluye o se excluye. Solo se aplican las siguientes condiciones:\n1. Se incluye cine si y solo si se incluye debate.\n2. Se debe incluir exactamente una de estas actividades: taller, exposicion, concierto.\n3. Si se incluye debate, debe incluirse al menos una de estas actividades: taller, exposicion; pueden incluirse ambas.\n4. Si se incluye taller, tambien se debe incluir lectura.\n5. Si se incluye exposicion, tambien se debe incluir concurso.\n6. No se pueden incluir a la vez lectura y concurso.\n7. Se debe incluir cine.\n8. No se puede incluir lectura.\nIndica para cada actividad si se incluye o se excluye, cumpliendo todas las condiciones. Cualquier seleccion valida es aceptable; no hay que minimizar ni maximizar actividades. Si ninguna seleccion cumple las condiciones, responde UNSAT.\nIdentificadores: {\"1\": \"cine\", \"2\": \"debate\", \"3\": \"taller\", \"4\": \"exposicion\", \"5\": \"concierto\", \"6\": \"lectura\", \"7\": \"concurso\"}"
+      }
+    ],
+    "stream": false,
+    "options": {
+      "temperature": 0,
+      "seed": 42,
+      "num_predict": 2048
+    }
+  },
+  "response": {
+    "model": "llama3.2:3b",
+    "created_at": "2026-11-19T03:36:44.1747109Z",
+    "message": {
+      "role": "assistant",
+      "content": "```json\n{\n  \"status\": \"SAT\",\n  \"assignment\": {\n    \"1\": \"cine\",\n    \"2\": \"debate\",\n    \"3\": \"taller\",\n    \"4\": \"exposicion\",\n    \"5\": \"concierto\",\n    \"6\": \"lectura\",\n    \"7\": \"concurso\"\n  }\n}\n```\n\nExplicaci\u00f3n:\n\n1. Se incluye cine y debate.\n2. Se incluye exposicion y concierto.\n3. Se incluye taller y lectura.\n4. Se incluye exposicion y concurso.\n5. No se incluye lectura y concurso.\n6. Se incluye cine.\n7. No se incluye lectura.\n\nLas condiciones se cumplen, por lo que se selecciona todas las actividades."
+    },
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 1217623300,
+    "load_duration": 5104500,
+    "prompt_eval_count": 383,
+    "prompt_eval_cached_count": 15,
+    "prompt_eval_duration": 186353000,
+    "eval_count": 170,
+    "eval_duration": 959715000
+  },
+  "llm_time_s": 3.271015099999204
+}

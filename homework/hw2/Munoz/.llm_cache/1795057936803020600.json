@@ -1,0 +1,39 @@
+{
+  "request": {
+    "model": "llama3.2:3b",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Resuelve el problema directamente. Devuelve solo JSON: {\"status\": \"SAT\", \"assignment\": {\"1\": true, \"2\": false}}. Incluye todos los identificadores dados con valores booleanos. Si no existe solucion, devuelve {\"status\": \"UNSAT\"}."
+      },
+      {
+        "role": "user",
+        "content": "Organiza el evento 'Festival interdisciplinario'. Las actividades disponibles son: concierto, teatro, danza, taller, exposicion, debate, conferencia. Cada actividad se incluye o se excluye. Solo se aplican las siguientes condiciones:\n1. Se debe incluir exactamente una de estas actividades: concierto, teatro, danza.\n2. Se incluye taller si y solo si se incluye exposicion.\n3. Si se incluye concierto, tambien se debe incluir taller.\n4. Si se incluye teatro, tambien se debe incluir debate.\n5. Si se incluye danza, tambien se debe incluir conferencia.\n6. No se pueden incluir a la vez debate y conferencia.\n7. Se debe incluir al menos una de estas actividades: exposicion, debate; se permite incluir varias.\n8. No se pueden incluir a la vez taller y debate.\nIndica para cada actividad si se incluye o se excluye, cumpliendo todas las condiciones. Cualquier seleccion valida es aceptable; no hay que minimizar ni maximizar actividades. Si ninguna seleccion cumple las condiciones, responde UNSAT.\nIdentificadores: {\"1\": \"concierto\", \"2\": \"teatro\", \"3\": \"danza\", \"4\": \"taller\", \"5\": \"exposicion\", \"6\": \"debate\", \"7\": \"conferencia\"}"
+      }
+    ],
+    "stream": false,
+    "options": {
+      "temperature": 0,
+      "seed": 42,
+      "num_predict": 2048
+    }
+  },
+  "response": {
+    "model": "llama3.2:3b",
+    "created_at": "2026-11-19T03:12:16.8019952Z",
+    "message": {
+      "role": "assistant",
+      "content": "```json\n{\n  \"status\": \"SAT\",\n  \"assignment\": {\n    \"1\": true,\n    \"2\": false,\n    \"3\": true,\n    \"4\": false,\n    \"5\": true,\n    \"6\": false,\n    \"7\": false\n  }\n}\n```\n\nExplicaci\u00f3n:\n\n1. Se incluye concierto y se excluye teatro y danza.\n2. Se incluye exposicion y se incluye taller.\n3. No se incluye concierto, por lo que no se incluye taller.\n4. No se incluye teatro, por lo que no se incluye debate.\n5. Se incluye danza, por lo que se incluye conferencia.\n6. No se incluyen debate y conferencia.\n7. Se incluye exposicion y se incluye al menos una de las actividades: debate.\n8. No se incluyen taller y debate."
+    },
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 1340090100,
+    "load_duration": 4587200,
+    "prompt_eval_count": 396,
+    "prompt_eval_cached_count": 15,
+    "prompt_eval_duration": 163201000,
+    "eval_count": 194,
+    "eval_duration": 1142134000
+  },
+  "llm_time_s": 3.3615390000013576
+}

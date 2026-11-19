@@ -1,0 +1,39 @@
+{
+  "request": {
+    "model": "llama3.2:3b",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Traduce las condiciones del evento a CNF. No resuelvas el problema. Devuelve solo JSON: {\"clauses\": [[1, -2], [3]]}. Usa exclusivamente los identificadores dados. Un entero positivo significa incluir la actividad; uno negativo, excluirla. Cada lista es OR y el conjunto es AND. Incluye todas las condiciones, sin agregar otras."
+      },
+      {
+        "role": "user",
+        "content": "Organiza el evento 'Encuentro de diseno'. Las actividades disponibles son: exposicion, taller, conferencia, debate, concurso, demostracion. Cada actividad se incluye o se excluye. Solo se aplican las siguientes condiciones:\n1. Se deben incluir al menos dos de estas tres actividades: exposicion, taller, conferencia; se permite incluir las tres.\n2. Si se incluyen tanto exposicion como taller, se debe incluir debate.\n3. Si se incluye conferencia, tambien se debe incluir concurso.\n4. No se pueden incluir a la vez debate y concurso.\n5. Se incluye concurso si y solo si se incluye demostracion.\n6. No se puede incluir debate.\nIndica para cada actividad si se incluye o se excluye, cumpliendo todas las condiciones. Cualquier seleccion valida es aceptable; no hay que minimizar ni maximizar actividades. Si ninguna seleccion cumple las condiciones, responde UNSAT.\nIdentificadores: {\"1\": \"exposicion\", \"2\": \"taller\", \"3\": \"conferencia\", \"4\": \"debate\", \"5\": \"concurso\", \"6\": \"demostracion\"}"
+      }
+    ],
+    "stream": false,
+    "options": {
+      "temperature": 0,
+      "seed": 42,
+      "num_predict": 2048
+    }
+  },
+  "response": {
+    "model": "llama3.2:3b",
+    "created_at": "2026-11-19T03:23:47.5667028Z",
+    "message": {
+      "role": "assistant",
+      "content": "```json\n{\n  \"clauses\": [\n    [\n      {\"id\": 1, \"value\": 1},  // exposicion\n      {\"id\": 2, \"value\": 1},  // taller\n      {\"id\": 3, \"value\": 1},  // conferencia\n      {\"id\": 4, \"value\": 0},  // debate\n      {\"id\": 5, \"value\": 0},  // concurso\n      {\"id\": 6, \"value\": 0}   // demostracion\n    ],\n    [\n      {\"id\": 1, \"value\": 1},  // exposicion\n      {\"id\": 2, \"value\": 1},  // taller\n      {\"id\": 3, \"value\": 0},  // conferencia\n      {\"id\": 4, \"value\": 0},  // debate\n      {\"id\": 5, \"value\": 0},  // concurso\n      {\"id\": 6, \"value\": 0}   // demostracion\n    ],\n    [\n      {\"id\": 1, \"value\": 1},  // exposicion\n      {\"id\": 2, \"value\": 0},  // taller\n      {\"id\": 3, \"value\": 1},  // conferencia\n      {\"id\": 4, \"value\": 0},  // debate\n      {\"id\": 5, \"value\": 0},  // concurso\n      {\"id\": 6, \"value\": 0}   // demostracion\n    ],\n    [\n      {\"id\": 1, \"value\": 1},  // exposicion\n      {\"id\": 2, \"value\": 0},  // taller\n      {\"id\": 3, \"value\": 0},  // conferencia\n      {\"id\": 4, \"value\": 0},  // debate\n      {\"id\": 5, \"value\": 0},  // concurso\n      {\"id\": 6, \"value\": 0}   // demostracion\n    ],\n    [\n      {\"id\": 1, \"value\": 1},  // exposicion\n      {\"id\": 2, \"value\": 0},  // taller\n      {\"id\": 3, \"value\": 0},  // conferencia\n      {\"id\": 4, \"value\": 0},  // debate\n      {\"id\": 5, \"value\": 0},  // concurso\n      {\"id\": 6, \"value\": 1}   // demostracion\n    ],\n    [\n      {\"id\": 1, \"value\": 1},  // exposicion\n      {\"id\": 2, \"value\": 0},  // taller\n      {\"id\": 3, \"value\": 0},  // conferencia\n      {\"id\": 4, \"value\": 0},  // debate\n      {\"id\": 5, \"value\": 1},  // concurso\n      {\"id\": 6, \"value\": 0}   // demostracion\n    ],\n    [\n      {\"id\": 1, \"value\": 1},  // exposicion\n      {\"id\": 2, \"value\": 0},  // taller\n      {\"id\": 3, \"value\": 0},  // conferencia\n      {\"id\": 4, \"value\": 0},  // debate\n      {\"id\": 5, \"value\": 0},  // concurso\n      {\"id\": 6, \"value\": 0}   // demostracion\n    ],\n    [\n      {\"id\": 1, \"value\": 1},  // exposicion\n      {\"id\": 2, \"value\": 0},  // taller\n      {\"id\": 3, \"value\": 0},  // conferencia\n      {\"id\": 4, \"value\": 0},  // debate\n      {\"id\": 5, \"value\": 0},  // concurso\n      {\"id\": 6, \"value\": 0}   // demostracion\n    ],\n    [\n      {\"id\": 1, \"value\": 1},  // exposicion\n      {\"id\": 2, \"value\": 0},  // taller\n      {\"id\": 3, \"value\": 0},  // conferencia\n      {\"id\": 4, \"value\": 0},  // debate\n      {\"id\": 5, \"value\": 0},  // concurso\n      {\"id\": 6, \"value\": 0}   // demostracion\n    ],\n    [\n      {\"id\": 1, \"value\": 1},  // exposicion\n      {\"id\": 2, \"value\": 0},  // taller\n      {\"id\": 3, \"value\": 0},  // conferencia\n      {\"id\": 4, \"value\": 0},  // debate\n      {\"id\": 5, \"value\": 0},  // concurso\n      {\"id\": 6, \"value\": 0}   // demostracion\n    ],\n    [\n      {\"id\": 1, \"value\": 1},  // exposicion\n      {\"id\": 2, \"value\": 0},  // taller\n      {\"id\": 3, \"value\": 0},  // conferencia\n      {\"id\": 4, \"value\": 0},  // debate\n      {\"id\": 5, \"value\": 0},  // concurso\n      {\"id\": 6, \"value\": 0}   // demostracion\n    ],\n    [\n      {\"id\": 1, \"value\": 1},  // exposicion\n      {\"id\": 2, \"value\": 0},  // taller\n      {\"id\": 3, \"value\": 0},  // conferencia\n      {\"id\": 4, \"value\": 0},  // debate\n      {\"id\": 5, \"value\": 0},  // concurso\n      {\"id\": 6, \"value\": 0}   // demostracion\n    ],\n    [\n      {\"id\": 1, \"value\": 1},  // exposicion\n      {\"id\": 2, \"value\": 0},  // taller\n      {\"id\": 3, \"value\": 0},  // conferencia\n      {\"id\": 4, \"value\": 0},  // debate\n      {\"id\": 5, \"value\": 0},  // concurso\n      {\"id\": 6, \"value\": 0}   // demostracion\n    ],\n    [\n      {\"id\": 1, \"value\": 1},  // exposicion\n      {\"id\": 2, \"value\": 0},  // taller\n      {\"id\": 3, \"value\": 0},  // conferencia\n      {\"id\": 4, \"value\": 0},  // debate\n      {\"id\": 5, \"value\": 0},  // concurso\n      {\"id\": 6, \"value\": 0}   // demostracion\n    ],\n    [\n      {\"id\": 1, \"value\": 1},  // exposicion\n      {\"id\": 2, \"value\": 0},  // taller\n      {\"id\": 3, \"value\": 0},  // conferencia\n      {\"id\": 4, \"value\": 0},  // debate\n      {\"id\": 5, \"value\": 0},  // concurso\n      {\"id\": 6, \"value\": 0}   // demostracion\n    ],\n    [\n      {\"id\": 1, \"value\": 1},  // exposicion\n      {\"id\": 2, \"value\": 0},  // taller\n      {\"id\": 3, \"value\": 0},  // conferencia\n      {\"id\": 4, \"value\": 0},  // debate\n      {\"id\": 5, \"value\": 0},  // concurso\n      {\"id\": 6, \"value\": 0}   // demostracion\n    ],\n    [\n      {\"id\": 1, \"value\": 1},  // exposicion\n      {\"id\": 2, \"value\": 0},  // taller\n      {\"id\": 3, \"value\": 0},  // conferencia\n      {\"id\": 4, \"value\": 0},  // debate\n      {\"id\": 5, \"value\": 0},  // concurso\n      {\"id\": 6, \"value\": 0}   // demostracion\n    ],\n    [\n      {\"id\": 1, \"value\": 1},  // exposicion\n      {\"id\": 2, \"value\": 0},  // taller\n      {\"id\": 3, \"value\": 0},  // conferencia\n      {\"id\": 4, \"value\": 0},  // debate\n      {\"id\": 5, \"value\": 0},  // concurso\n      {\"id\": 6, \"value\": 0}   // demostracion\n    ],\n    [\n      {\"id\": 1, \"value\": 1},  // exposicion\n      {\"id\": 2, \"value\": 0},  // taller\n      {\"id"
+    },
+    "done": true,
+    "done_reason": "length",
+    "total_duration": 11711161000,
+    "load_duration": 4090000,
+    "prompt_eval_count": 373,
+    "prompt_eval_cached_count": 15,
+    "prompt_eval_duration": 185359000,
+    "eval_count": 2048,
+    "eval_duration": 11497724000
+  },
+  "llm_time_s": 13.743705500000942
+}

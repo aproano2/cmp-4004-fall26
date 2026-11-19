@@ -1,0 +1,39 @@
+{
+  "request": {
+    "model": "llama3.2:3b",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Resuelve el problema directamente. Devuelve solo JSON: {\"status\": \"SAT\", \"assignment\": {\"1\": true, \"2\": false}}. Incluye todos los identificadores dados con valores booleanos. Si no existe solucion, devuelve {\"status\": \"UNSAT\"}."
+      },
+      {
+        "role": "user",
+        "content": "Organiza el evento 'Congreso estudiantil'. Las actividades disponibles son: conferencia, debate, taller, exposicion, concurso, demostracion, documental. Cada actividad se incluye o se excluye. Solo se aplican las siguientes condiciones:\n1. Se deben incluir al menos dos de estas tres actividades: conferencia, debate, taller; se permite incluir las tres.\n2. Si se incluyen tanto conferencia como debate, se debe incluir exposicion.\n3. Si se incluyen tanto debate como taller, se debe incluir concurso.\n4. No se pueden incluir a la vez exposicion y concurso.\n5. Se incluye concurso si y solo si se incluye demostracion.\n6. Si se incluye documental, debe incluirse al menos una de estas actividades: exposicion, demostracion; pueden incluirse ambas.\n7. Se debe incluir documental.\n8. No se puede incluir conferencia.\nIndica para cada actividad si se incluye o se excluye, cumpliendo todas las condiciones. Cualquier seleccion valida es aceptable; no hay que minimizar ni maximizar actividades. Si ninguna seleccion cumple las condiciones, responde UNSAT.\nIdentificadores: {\"1\": \"conferencia\", \"2\": \"debate\", \"3\": \"taller\", \"4\": \"exposicion\", \"5\": \"concurso\", \"6\": \"demostracion\", \"7\": \"documental\"}"
+      }
+    ],
+    "stream": false,
+    "options": {
+      "temperature": 0,
+      "seed": 42,
+      "num_predict": 2048
+    }
+  },
+  "response": {
+    "model": "llama3.2:3b",
+    "created_at": "2026-11-19T03:24:51.8039304Z",
+    "message": {
+      "role": "assistant",
+      "content": "```json\n{\n  \"status\": \"SAT\",\n  \"assignment\": {\n    \"1\": false,\n    \"2\": false,\n    \"3\": true,\n    \"4\": false,\n    \"5\": false,\n    \"6\": false,\n    \"7\": true\n  }\n}\n```"
+    },
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 705421600,
+    "load_duration": 4080800,
+    "prompt_eval_count": 401,
+    "prompt_eval_cached_count": 15,
+    "prompt_eval_duration": 203371000,
+    "eval_count": 63,
+    "eval_duration": 408328000
+  },
+  "llm_time_s": 2.7434095999997226
+}

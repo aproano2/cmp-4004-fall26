@@ -1,0 +1,39 @@
+{
+  "request": {
+    "model": "llama3.2:3b",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Resuelve el problema directamente. Devuelve solo JSON: {\"status\": \"SAT\", \"assignment\": {\"1\": true, \"2\": false}}. Incluye todos los identificadores dados con valores booleanos. Si no existe solucion, devuelve {\"status\": \"UNSAT\"}."
+      },
+      {
+        "role": "user",
+        "content": "Organiza el evento 'Feria de aprendizaje'. Las actividades disponibles son: taller, conferencia, exposicion, concurso. Cada actividad se incluye o se excluye. Solo se aplican las siguientes condiciones:\n1. Se debe incluir exactamente una de estas actividades: taller, conferencia.\n2. Si se incluye taller, tambien se debe incluir exposicion.\n3. Si se incluye conferencia, tambien se debe incluir concurso.\n4. No se puede incluir concurso.\nIndica para cada actividad si se incluye o se excluye, cumpliendo todas las condiciones. Cualquier seleccion valida es aceptable; no hay que minimizar ni maximizar actividades. Si ninguna seleccion cumple las condiciones, responde UNSAT.\nIdentificadores: {\"1\": \"taller\", \"2\": \"conferencia\", \"3\": \"exposicion\", \"4\": \"concurso\"}"
+      }
+    ],
+    "stream": false,
+    "options": {
+      "temperature": 0,
+      "seed": 42,
+      "num_predict": 2048
+    }
+  },
+  "response": {
+    "model": "llama3.2:3b",
+    "created_at": "2026-11-19T03:17:06.7404448Z",
+    "message": {
+      "role": "assistant",
+      "content": "```json\n{\n  \"status\": \"SAT\",\n  \"assignment\": {\n    \"1\": true,\n    \"2\": false,\n    \"3\": true,\n    \"4\": false\n  }\n}\n```"
+    },
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 356230200,
+    "load_duration": 3573000,
+    "prompt_eval_count": 282,
+    "prompt_eval_cached_count": 15,
+    "prompt_eval_duration": 43041000,
+    "eval_count": 45,
+    "eval_duration": 241926000
+  },
+  "llm_time_s": 2.396603799999866
+}

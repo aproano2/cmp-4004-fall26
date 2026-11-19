@@ -1,0 +1,39 @@
+{
+  "request": {
+    "model": "llama3.2:3b",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Traduce las condiciones del evento a CNF. No resuelvas el problema. Devuelve solo JSON: {\"clauses\": [[1, -2], [3]]}. Usa exclusivamente los identificadores dados. Un entero positivo significa incluir la actividad; uno negativo, excluirla. Cada lista es OR y el conjunto es AND. Incluye todas las condiciones, sin agregar otras."
+      },
+      {
+        "role": "user",
+        "content": "Organiza el evento 'Festival interdisciplinario'. Las actividades disponibles son: concierto, teatro, danza, taller, exposicion, debate, conferencia. Cada actividad se incluye o se excluye. Solo se aplican las siguientes condiciones:\n1. Se debe incluir exactamente una de estas actividades: concierto, teatro, danza.\n2. Se incluye taller si y solo si se incluye exposicion.\n3. Si se incluye concierto, tambien se debe incluir taller.\n4. Si se incluye teatro, tambien se debe incluir debate.\n5. Si se incluye danza, tambien se debe incluir conferencia.\n6. No se pueden incluir a la vez debate y conferencia.\n7. Se debe incluir al menos una de estas actividades: exposicion, debate; se permite incluir varias.\n8. No se pueden incluir a la vez taller y debate.\nIndica para cada actividad si se incluye o se excluye, cumpliendo todas las condiciones. Cualquier seleccion valida es aceptable; no hay que minimizar ni maximizar actividades. Si ninguna seleccion cumple las condiciones, responde UNSAT.\nIdentificadores: {\"1\": \"concierto\", \"2\": \"teatro\", \"3\": \"danza\", \"4\": \"taller\", \"5\": \"exposicion\", \"6\": \"debate\", \"7\": \"conferencia\"}"
+      }
+    ],
+    "stream": false,
+    "options": {
+      "temperature": 0,
+      "seed": 42,
+      "num_predict": 2048
+    }
+  },
+  "response": {
+    "model": "llama3.2:3b",
+    "created_at": "2026-11-19T03:24:14.9150591Z",
+    "message": {
+      "role": "assistant",
+      "content": "```json\n{\n  \"clauses\": [\n    [[1], [2], [3]],\n    [[-1, -2, -3], [4]],\n    [[1], [4]],\n    [[2], [6]],\n    [[3], [7]],\n    [[-6, -7], [4]],\n    [[5], [6]],\n    [[-5, -6], [4]],\n    [[-1, -2, -3, -4, -5, -6, -7]]\n  ]\n}\n```"
+    },
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 872816700,
+    "load_duration": 4631500,
+    "prompt_eval_count": 422,
+    "prompt_eval_cached_count": 15,
+    "prompt_eval_duration": 179433000,
+    "eval_count": 112,
+    "eval_duration": 658201000
+  },
+  "llm_time_s": 2.9172098000017286
+}

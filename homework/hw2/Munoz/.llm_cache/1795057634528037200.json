@@ -1,0 +1,39 @@
+{
+  "request": {
+    "model": "llama3.2:3b",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Resuelve el problema directamente. Devuelve solo JSON: {\"status\": \"SAT\", \"assignment\": {\"1\": true, \"2\": false}}. Incluye todos los identificadores dados con valores booleanos. Si no existe solucion, devuelve {\"status\": \"UNSAT\"}."
+      },
+      {
+        "role": "user",
+        "content": "Organiza el evento 'Encuentro comunitario'. Las actividades disponibles son: concierto, exposicion, debate, taller. Cada actividad se incluye o se excluye. Solo se aplican las siguientes condiciones:\n1. Se debe incluir al menos una de estas actividades: concierto, exposicion; se permite incluir varias.\n2. No se pueden incluir a la vez concierto y exposicion.\n3. Si se incluye debate, tambien se debe incluir concierto.\n4. Se debe incluir taller.\nIndica para cada actividad si se incluye o se excluye, cumpliendo todas las condiciones. Cualquier seleccion valida es aceptable; no hay que minimizar ni maximizar actividades. Si ninguna seleccion cumple las condiciones, responde UNSAT.\nIdentificadores: {\"1\": \"concierto\", \"2\": \"exposicion\", \"3\": \"debate\", \"4\": \"taller\"}"
+      }
+    ],
+    "stream": false,
+    "options": {
+      "temperature": 0,
+      "seed": 42,
+      "num_predict": 2048
+    }
+  },
+  "response": {
+    "model": "llama3.2:3b",
+    "created_at": "2026-11-19T03:07:14.5261855Z",
+    "message": {
+      "role": "assistant",
+      "content": "```json\n{\n  \"status\": \"SAT\",\n  \"assignment\": {\n    \"1\": \"concierto\",\n    \"2\": false,\n    \"3\": false,\n    \"4\": \"taller\"\n  }\n}\n```\n\nLa selecci\u00f3n de actividades cumple todas las condiciones:\n\n1. Se incluye al menos una de las actividades de concierto y exposici\u00f3n.\n2. No se incluyen a la vez concierto y exposici\u00f3n.\n3. No se incluye debate, por lo que no se requiere concierto.\n4. Se incluye taller."
+    },
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 1027314900,
+    "load_duration": 4001100,
+    "prompt_eval_count": 288,
+    "prompt_eval_cached_count": 86,
+    "prompt_eval_duration": 135901000,
+    "eval_count": 123,
+    "eval_duration": 785512000
+  },
+  "llm_time_s": 3.075751300002594
+}
