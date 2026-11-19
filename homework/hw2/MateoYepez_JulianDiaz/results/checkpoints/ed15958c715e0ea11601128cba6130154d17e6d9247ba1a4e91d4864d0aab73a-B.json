@@ -1,0 +1,83 @@
+{
+  "call": {
+    "provider": "ollama",
+    "model": "llama3.1:latest",
+    "base_url": "http://localhost:11434",
+    "prompt_version": "sat-v1",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Traduce todas las reglas a CNF proposicional sin resolverlas. Responde exclusivamente con un objeto JSON {\"clauses\":[[1,-2],[3]]}. Cada lista interior es una disyunción; la lista exterior es una conjunción. Usa enteros positivos para variables y negativos para negaciones, exclusivamente del mapa dado. No añadas variables ni premisas. Una cláusula vacía significa falso; una lista sin cláusulas significa verdadero. No incluyas markdown ni explicación."
+      },
+      {
+        "role": "user",
+        "content": "{\"problem\": \"Para una excursión puedes llevar estos artículos: mapa, brújula, GPS, linterna. Debes elegir al menos una de estas opciones: mapa o GPS. No puedes elegir GPS. Si eliges mapa, también debes elegir brújula. No puedes elegir a la vez brújula y linterna. No puedes elegir brújula. ¿Existe una selección que cumpla todas las reglas?\", \"variables\": {\"mapa\": 1, \"brújula\": 2, \"GPS\": 3, \"linterna\": 4}}"
+      }
+    ],
+    "parameters": {
+      "temperature": 0.0,
+      "max_tokens": 2048,
+      "seed": 20261119
+    },
+    "repeat": 1,
+    "problem_id": "sat_06",
+    "arm": "B",
+    "iteration": 0,
+    "call_id": "e143680beb3161db99812c15efa085edb17470651ec5d77b576b1576a3d8a49b",
+    "raw": "{\n\"clauses\":[\n    [-1,-3],\n    [1],\n    [1,2],\n    [-2,-4],\n    [-2]\n] \n}",
+    "model_size": "8.0B; Q4_K_M",
+    "reported_model": "llama3.1:latest",
+    "response_id": "",
+    "input_tokens": 262,
+    "output_tokens": 36,
+    "token_source": "provider",
+    "llm_time_seconds": 63.6696391459991,
+    "access_seconds": 63.6696391459991,
+    "cache_hit": false,
+    "estimated_cost_usd": null,
+    "charged_cost_usd": null,
+    "error_category": "",
+    "error_message": "",
+    "timestamp": "2026-11-19T04:32:40.053125+00:00"
+  },
+  "iteration": 0,
+  "predicted_status": "SAT",
+  "solver_status": "SAT",
+  "solver_time_seconds": 0.0006454119993577478,
+  "clauses": [
+    [
+      -1,
+      -3
+    ],
+    [
+      1
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      -2,
+      -4
+    ],
+    [
+      -2
+    ]
+  ],
+  "error_category": "",
+  "error_message": "",
+  "warnings": [],
+  "assignment": {
+    "1": true,
+    "2": false,
+    "3": false,
+    "4": false
+  },
+  "solver_stats": {
+    "calls": 1,
+    "propagations": 3
+  },
+  "detectable_error": false,
+  "processing_seconds": 0.0010897829997702502,
+  "parse_validation_seconds": 0.0004443710004125023
+}

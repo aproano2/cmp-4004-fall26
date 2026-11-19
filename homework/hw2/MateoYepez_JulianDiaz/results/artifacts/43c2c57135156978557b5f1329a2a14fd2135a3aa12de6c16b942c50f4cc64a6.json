@@ -1,0 +1,100 @@
+{
+  "row": {
+    "run_id": "43c2c57135156978557b5f1329a2a14fd2135a3aa12de6c16b942c50f4cc64a6",
+    "problem_id": "sat_19",
+    "difficulty": "hard",
+    "arm": "C",
+    "repeat": 0,
+    "provider": "ollama",
+    "model": "llama3.1:latest",
+    "model_size": "8.0B; Q4_K_M",
+    "temperature": 0.0,
+    "expected_status": "SAT",
+    "predicted_status": "UNSAT",
+    "correctness": "incorrect",
+    "taxonomy_category": "Wrong SAT/UNSAT result",
+    "error_category": "semantic_error",
+    "detectable_error": false,
+    "error_message": "",
+    "llm_time_seconds": 102.50755427900003,
+    "solver_time_seconds": 0.0,
+    "parse_validation_seconds": 0.00013333300012163818,
+    "wall_clock_seconds": 102.51099184600025,
+    "pipeline_time_seconds": 102.50768761200015,
+    "cache_access_seconds": 0,
+    "input_tokens": 275,
+    "output_tokens": 143,
+    "total_tokens": 418,
+    "token_source": "provider",
+    "estimated_cost_usd": null,
+    "charged_cost_usd": null,
+    "solver_status": "NOT_RUN",
+    "refinement_iterations": 0,
+    "final_iteration": 0,
+    "refinement_time_seconds": 0,
+    "cache_hit": false,
+    "initial_call_id": "f038beb0dc8231337527d18a7e1078b1a8b7ee52ea272b2a7940f7368cd37f66",
+    "observable_convergence": true,
+    "convergence": "",
+    "timestamp": "2026-11-19T04:10:50.457121+00:00",
+    "campaign_id": "301f830d833670aec538771d704e1b1bdc5f43afd783784248e3a58abd1766e8",
+    "paired_checkpoint_reused": false
+  },
+  "attempts": [
+    {
+      "call": {
+        "provider": "ollama",
+        "model": "llama3.1:latest",
+        "base_url": "http://localhost:11434",
+        "prompt_version": "sat-v1",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Resuelve el problema de satisfacibilidad. Responde exclusivamente con JSON: {\"answer\":\"SAT\" o \"UNSAT\", \"explanation\":\"justificación breve\"}."
+          },
+          {
+            "role": "user",
+            "content": "Para un jardín puedes sembrar estas plantas: albahaca, menta, romero, tomillo, orégano, salvia, perejil, cilantro. Debes elegir al menos una de estas opciones: albahaca o menta. Debes elegir al menos una de estas opciones: romero o tomillo. No puedes elegir a la vez albahaca y romero. No puedes elegir a la vez menta y tomillo. Si eliges albahaca, también debes elegir orégano. Si eliges tomillo, también debes elegir salvia. Si eliges menta, también debes elegir perejil. Si eliges romero, también debes elegir perejil. Si eliges orégano, también debes elegir cilantro. Si eliges perejil, también debes elegir cilantro. No puedes elegir a la vez salvia y perejil. ¿Existe una selección que cumpla todas las reglas?"
+          }
+        ],
+        "parameters": {
+          "temperature": 0.0,
+          "max_tokens": 2048,
+          "seed": 20261118
+        },
+        "repeat": 0,
+        "problem_id": "sat_19",
+        "arm": "C",
+        "iteration": 0,
+        "call_id": "f038beb0dc8231337527d18a7e1078b1a8b7ee52ea272b2a7940f7368cd37f66",
+        "raw": "{\"answer\":\"UNSAT\",\"explanation\":\"La restricción de no poder elegir albahaca y romero a la vez, junto con la restricción de tener que elegir orégano si se elige albahaca y perejil si se elige romero, crea un conflicto insuperable. Si se elige albahaca, entonces también se debe elegir orégano, pero no se puede elegir romero. Si se elige romero, entonces también se debe elegir perejil, pero no se puede elegir albahaca. Esto significa que no hay una selección posible que cumpla todas las reglas.\"}",
+        "model_size": "8.0B; Q4_K_M",
+        "reported_model": "llama3.1:latest",
+        "response_id": "",
+        "input_tokens": 275,
+        "output_tokens": 143,
+        "token_source": "provider",
+        "llm_time_seconds": 102.50755427900003,
+        "access_seconds": 102.50755427900003,
+        "cache_hit": false,
+        "estimated_cost_usd": null,
+        "charged_cost_usd": null,
+        "error_category": "",
+        "error_message": "",
+        "timestamp": "2026-11-19T04:10:50.453789+00:00"
+      },
+      "iteration": 0,
+      "predicted_status": "UNSAT",
+      "solver_status": "NOT_RUN",
+      "solver_time_seconds": 0.0,
+      "clauses": null,
+      "error_category": "",
+      "error_message": "",
+      "warnings": [],
+      "assignment": null,
+      "detectable_error": false,
+      "processing_seconds": 0.00013333300012163818,
+      "parse_validation_seconds": 0.00013333300012163818
+    }
+  ]
+}

@@ -1,0 +1,428 @@
+run_id,problem_id,difficulty,arm,repeat,iteration,raw_output,solver_status,expected_status,predicted_status,detectable_error,refinement_result,correctness,taxonomy_category,error_category,semantic_category,reference_solutions,generated_solutions,lost_solutions,added_solutions,lost_counterexample,added_counterexample,missing_clauses,extra_clauses,review_note
+a71ef6eba36e15edcaa32cd52f7af9a91781f0771af7c56b2a0f76684e8379b2,sat_01,easy,B,0,0,"{
+""clauses"": [
+    [1, 2],
+    [-3, -4],
+    [-1, -3],
+    [3, -4]
+]
+}",SAT,SAT,SAT,False,initial_success,correct,Valid model of the wrong problem,semantic_error,Valid model of the wrong problem,1.0,4.0,1.0,4.0,"{1: False, 2: True, 3: False, 4: True}","{1: False, 2: True, 3: False, 4: False}","[(-1, 3), (4,)]","[(-4, 3), (-3, -1)]","Assistant post-hoc clause review: the premise Arte → Robótica requires [-1,3], but the output contains [-1,-3], reversing the consequent polarity. The mandatory Danza clause [4] is absent. Clause [3,-4] adds Danza → Robótica, which is not a supplied premise. These are explicit incorrect-negation, dropped-premise and hallucinated-constraint findings, supported by the original Spanish text."
+3b519e997913aba7a65dcfe52a39237700631abf383caefcde00e7acb7e60162,sat_01,easy,B-prime,0,0,"{
+""clauses"": [
+    [1, 2],
+    [-3, -4],
+    [-1, -3],
+    [3, -4]
+]
+}",SAT,SAT,SAT,False,initial_success,correct,Valid model of the wrong problem,semantic_error,Valid model of the wrong problem,1.0,4.0,1.0,4.0,"{1: False, 2: True, 3: False, 4: True}","{1: False, 2: True, 3: False, 4: False}","[(-1, 3), (4,)]","[(-4, 3), (-3, -1)]","Assistant post-hoc clause review: the premise Arte → Robótica requires [-1,3], but the output contains [-1,-3], reversing the consequent polarity. The mandatory Danza clause [4] is absent. Clause [3,-4] adds Danza → Robótica, which is not a supplied premise. These are explicit incorrect-negation, dropped-premise and hallucinated-constraint findings, supported by the original Spanish text."
+7d321de41272f7dc1f1b0b83c36a1342b004b6ba702ff7b14bdc194b43a395ac,sat_02,easy,B,0,0,"{
+""clauses"":[
+    [-1,-2],
+    [1,3],
+    [-1,2],
+    [-2,3],
+    [-3,4],
+    [3,-4]
+]}",SAT,UNSAT,SAT,False,silent_incorrect,incorrect,"Valid syntax, under-constrained",semantic_error,"Valid syntax, under-constrained",0.0,2.0,0.0,2.0,,"{1: False, 2: False, 3: True, 4: True}","[(-4, -3), (-1, 3), (1, 2)]","[(-4, 3), (-2, -1), (-1, 2), (1, 3)]","Assistant post-hoc clause review: at least one of cámara/trípode requires [1,2], whereas [-1,-2] expresses at most one. The required exclusion of micrófono and lámpara is [-3,-4], not generated [3,-4]. Exhaustive analysis finds two generated solutions and no reference solution. The category under-constrained follows from solution sets, not merely the wrong SAT answer."
+91a1584c1e8db23b35fb717b1bb48aaa318cdef26ff010ded2a040bd2a604195,sat_02,easy,B-prime,0,0,"{
+""clauses"":[
+    [-1,-2],
+    [1,3],
+    [-1,2],
+    [-2,3],
+    [-3,4],
+    [3,-4]
+]}",SAT,UNSAT,SAT,False,silent_incorrect,incorrect,"Valid syntax, under-constrained",semantic_error,"Valid syntax, under-constrained",0.0,2.0,0.0,2.0,,"{1: False, 2: False, 3: True, 4: True}","[(-4, -3), (-1, 3), (1, 2)]","[(-4, 3), (-2, -1), (-1, 2), (1, 3)]","Assistant post-hoc clause review: at least one of cámara/trípode requires [1,2], whereas [-1,-2] expresses at most one. The required exclusion of micrófono and lámpara is [-3,-4], not generated [3,-4]. Exhaustive analysis finds two generated solutions and no reference solution. The category under-constrained follows from solution sets, not merely the wrong SAT answer."
+49179da7b37a06ebd7ec3636863696e41a5be562c09ec4fdfe75266e3ef912de,sat_03,easy,B,0,0,"{
+""clauses"": [
+[-1],
+[1, -2],
+[-1, 2, 3],
+[-1, 2, -3],
+[-1, -2, -3],
+[-1, -2, -4],
+[1]
+] 
+}",UNSAT,SAT,UNSAT,False,silent_incorrect,incorrect,"Valid syntax, over-constrained",semantic_error,"Valid syntax, over-constrained",1.0,0.0,1.0,0.0,"{1: True, 2: True, 3: False, 4: True}",,"[(-3, -2), (-1, 2), (3, 4)]","[(-4, -2, -1), (-3, -2, -1), (-3, -1, 2), (-2, 1), (-1,), (-1, 2, 3)]","Assistant post-hoc clause review: the output contains both [-1] and [1], directly forcing carteles false and true. The text requires carteles, corresponding to [1], and does not authorize [-1]. This explicit contradictory, hallucinated negative unit clause explains why the generated model is UNSAT despite a satisfiable reference."
+122581381f4b653804845726be060bc6c7700dc94d22db2422c11e0aea3f37a4,sat_03,easy,B-prime,0,0,"{
+""clauses"": [
+[-1],
+[1, -2],
+[-1, 2, 3],
+[-1, 2, -3],
+[-1, -2, -3],
+[-1, -2, -4],
+[1]
+] 
+}",UNSAT,SAT,UNSAT,False,silent_incorrect,incorrect,"Valid syntax, over-constrained",semantic_error,"Valid syntax, over-constrained",1.0,0.0,1.0,0.0,"{1: True, 2: True, 3: False, 4: True}",,"[(-3, -2), (-1, 2), (3, 4)]","[(-4, -2, -1), (-3, -2, -1), (-3, -1, 2), (-2, 1), (-1,), (-1, 2, 3)]","Assistant post-hoc clause review: the output contains both [-1] and [1], directly forcing carteles false and true. The text requires carteles, corresponding to [1], and does not authorize [-1]. This explicit contradictory, hallucinated negative unit clause explains why the generated model is UNSAT despite a satisfiable reference."
+bfb57848a59d151d7b13af6879f6f7ba62913667eab098ab1700a6026c2bea3b,sat_04,easy,B,0,0,"{
+""clauses"":[
+    [-1],
+    [1, 2],
+    [-2, 3],
+    [-3, -4],
+    [-4]
+]}",SAT,UNSAT,SAT,False,silent_incorrect,incorrect,"Valid syntax, under-constrained",semantic_error,"Valid syntax, under-constrained",0.0,1.0,0.0,1.0,,"{1: False, 2: True, 3: True, 4: False}","[(-3, -2), (-1, 2), (1,), (3, 4)]","[(-4, -3), (-2, 3), (-1,), (1, 2)]","Assistant post-hoc clause review: the text requires carteles ([1]), but the output starts with [-1]. The exclusion of maquetas and folletos requires [-2,-3], while generated [-2,3] requires folletos when maquetas is chosen. These are identifiable polarity errors; the solution-set test establishes the resulting semantic category."
+2130fc3f124352103ec761aa574b425d8052fbe3701e83e4b594c805543a96d4,sat_04,easy,B-prime,0,0,"{
+""clauses"":[
+    [-1],
+    [1, 2],
+    [-2, 3],
+    [-3, -4],
+    [-4]
+]}",SAT,UNSAT,SAT,False,silent_incorrect,incorrect,"Valid syntax, under-constrained",semantic_error,"Valid syntax, under-constrained",0.0,1.0,0.0,1.0,,"{1: False, 2: True, 3: True, 4: False}","[(-3, -2), (-1, 2), (1,), (3, 4)]","[(-4, -3), (-2, 3), (-1,), (1, 2)]","Assistant post-hoc clause review: the text requires carteles ([1]), but the output starts with [-1]. The exclusion of maquetas and folletos requires [-2,-3], while generated [-2,3] requires folletos when maquetas is chosen. These are identifiable polarity errors; the solution-set test establishes the resulting semantic category."
+ff8bc2676f855a77f1e62e21c1c693d2e2f9bcea2b88fb0078f2bac5b1bd7960,sat_05,easy,B,0,0,"{
+""clauses"":[
+    [-1, -3],
+    [1],
+    [1, -2],
+    [-2, -4]
+]}",SAT,SAT,SAT,False,initial_success,correct,"Valid syntax, under-constrained",semantic_error,"Valid syntax, under-constrained",1.0,3.0,0.0,2.0,,"{1: True, 2: False, 3: False, 4: False}","[(-3,), (-1, 2), (1, 3)]","[(-3, -1), (-2, 1), (1,)]","Assistant post-hoc clause review: the premise mapa → brújula requires [-1,2], whereas [1,-2] encodes brújula → mapa, a reversed implication. The generated model allows mapa=true and brújula=false, which violates the original premise. Both formulas are SAT, so status accuracy hides this under-constrained translation."
+992d229e015f9c9dfa76abf1b716882e0f8f1db24fc7e7238fe1da864b133443,sat_05,easy,B-prime,0,0,"{
+""clauses"":[
+    [-1, -3],
+    [1],
+    [1, -2],
+    [-2, -4]
+]}",SAT,SAT,SAT,False,initial_success,correct,"Valid syntax, under-constrained",semantic_error,"Valid syntax, under-constrained",1.0,3.0,0.0,2.0,,"{1: True, 2: False, 3: False, 4: False}","[(-3,), (-1, 2), (1, 3)]","[(-3, -1), (-2, 1), (1,)]","Assistant post-hoc clause review: the premise mapa → brújula requires [-1,2], whereas [1,-2] encodes brújula → mapa, a reversed implication. The generated model allows mapa=true and brújula=false, which violates the original premise. Both formulas are SAT, so status accuracy hides this under-constrained translation."
+8e11296d873df23c74a1859e84ed01df6aa29bd4a9b58ba3935e2a5fc8e3d862,sat_05,easy,C,0,0,"{""answer"":""UNSAT"", ""explanation"":""No se puede elegir GPS y al mismo tiempo no elegir mapa o brújula, por lo tanto no existe una solución""}",NOT_RUN,SAT,UNSAT,False,,incorrect,Wrong SAT/UNSAT result,semantic_error,,,,,,,,,,
+dbb1035b7d76d015c85f2346a2886eed1f6ef59519f19c93661211fede444b8a,sat_06,easy,B,0,0,"{
+""clauses"":[
+    [-1,-3],
+    [1],
+    [1,2],
+    [-2,-4],
+    [-2]
+] 
+}",SAT,UNSAT,SAT,False,silent_incorrect,incorrect,"Valid syntax, under-constrained",semantic_error,"Valid syntax, under-constrained",0.0,2.0,0.0,2.0,,"{1: True, 2: False, 3: False, 4: False}","[(-3,), (-1, 2), (1, 3)]","[(-3, -1), (1,), (1, 2)]",Set inclusion is exhaustive evidence; clause differences alone do not identify linguistic causes. Quantifier/arity category is not applicable to propositional syntax.
+a22c9af2fdb46c9afd815932adc1547ce58522cdd02a1920492fd535fb46b627,sat_06,easy,B-prime,0,0,"{
+""clauses"":[
+    [-1,-3],
+    [1],
+    [1,2],
+    [-2,-4],
+    [-2]
+] 
+}",SAT,UNSAT,SAT,False,silent_incorrect,incorrect,"Valid syntax, under-constrained",semantic_error,"Valid syntax, under-constrained",0.0,2.0,0.0,2.0,,"{1: True, 2: False, 3: False, 4: False}","[(-3,), (-1, 2), (1, 3)]","[(-3, -1), (1,), (1, 2)]",Set inclusion is exhaustive evidence; clause differences alone do not identify linguistic causes. Quantifier/arity category is not applicable to propositional syntax.
+c500fc038af9652778938a1ca47df2fabef68560f6b3aa42d1ff80aae81e4483,sat_07,medium,B,0,0,"{
+""clauses"":[
+    [-1,-2],
+    [1,3],
+    [-2,3],
+    [-3,4],
+    [4,-5],
+    [-5,6]
+]}",SAT,SAT,SAT,False,initial_success,correct,Valid model of the wrong problem,semantic_error,Valid model of the wrong problem,3.0,14.0,1.0,12.0,"{1: True, 2: True, 3: True, 4: True, 5: False, 6: True}","{1: False, 2: False, 3: True, 4: True, 5: False, 6: False}","[(-5, -4), (-1, 3), (1, 2), (5, 6)]","[(-5, 4), (-5, 6), (-2, -1), (1, 3)]",Set inclusion is exhaustive evidence; clause differences alone do not identify linguistic causes. Quantifier/arity category is not applicable to propositional syntax.
+de3fddcf01bdd9216b88309463905f87336013ce8863c92f5d228e3e47aa716a,sat_07,medium,B-prime,0,0,"{
+""clauses"":[
+    [-1,-2],
+    [1,3],
+    [-2,3],
+    [-3,4],
+    [4,-5],
+    [-5,6]
+]}",SAT,SAT,SAT,False,initial_success,correct,Valid model of the wrong problem,semantic_error,Valid model of the wrong problem,3.0,14.0,1.0,12.0,"{1: True, 2: True, 3: True, 4: True, 5: False, 6: True}","{1: False, 2: False, 3: True, 4: True, 5: False, 6: False}","[(-5, -4), (-1, 3), (1, 2), (5, 6)]","[(-5, 4), (-5, 6), (-2, -1), (1, 3)]",Set inclusion is exhaustive evidence; clause differences alone do not identify linguistic causes. Quantifier/arity category is not applicable to propositional syntax.
+65faa5125141d069b8b115cabe339f597727f18439c6bc43715de34ee4d80d0c,sat_08,medium,B,0,0,"{
+""clauses"":[
+    [-1,-2],
+    [1,3],
+    [-1,2,3],
+    [-2,3],
+    [-3,4],
+    [4,5],
+    [5,-6]
+]}",SAT,UNSAT,SAT,False,silent_incorrect,incorrect,"Valid syntax, under-constrained",semantic_error,"Valid syntax, under-constrained",0.0,9.0,0.0,9.0,,"{1: False, 2: False, 3: True, 4: True, 5: False, 6: False}","[(-6,), (-5, -4), (-1, 3), (1, 2), (5, 6)]","[(-6, 5), (-2, -1), (-1, 2, 3), (1, 3), (4, 5)]",Set inclusion is exhaustive evidence; clause differences alone do not identify linguistic causes. Quantifier/arity category is not applicable to propositional syntax.
+f8f8332df8cb0bf6d19ab1c00ab6616f5a87093a1361099adadd4439012296ab,sat_08,medium,B-prime,0,0,"{
+""clauses"":[
+    [-1,-2],
+    [1,3],
+    [-1,2,3],
+    [-2,3],
+    [-3,4],
+    [4,5],
+    [5,-6]
+]}",SAT,UNSAT,SAT,False,silent_incorrect,incorrect,"Valid syntax, under-constrained",semantic_error,"Valid syntax, under-constrained",0.0,9.0,0.0,9.0,,"{1: False, 2: False, 3: True, 4: True, 5: False, 6: False}","[(-6,), (-5, -4), (-1, 3), (1, 2), (5, 6)]","[(-6, 5), (-2, -1), (-1, 2, 3), (1, 3), (4, 5)]",Set inclusion is exhaustive evidence; clause differences alone do not identify linguistic causes. Quantifier/arity category is not applicable to propositional syntax.
+76b85a79b72861204761f9379e5206aacfa2242a9e4e9a83c5483e8d4b0a3e12,sat_09,medium,B,0,0,"{
+""clauses"":[
+    [-1],
+    [2,3],
+    [-2,-3],
+    [2,4],
+    [3,5],
+    [4,6],
+    [5,6]
+]}",SAT,SAT,SAT,False,initial_success,correct,Valid model of the wrong problem,semantic_error,Valid model of the wrong problem,4.0,6.0,2.0,4.0,"{1: False, 2: False, 3: True, 4: False, 5: True, 6: True}","{1: False, 2: False, 3: True, 4: True, 5: False, 6: True}","[(-5, 6), (-4, 6), (-3, 5), (-2, 4), (1, 2, 3)]","[(2, 3), (2, 4), (3, 5), (4, 6), (5, 6)]",Set inclusion is exhaustive evidence; clause differences alone do not identify linguistic causes. Quantifier/arity category is not applicable to propositional syntax.
+598a42ab9b858b2f78c55d2feaed283c81990db9e817eb634579d9e8001e9ecd,sat_09,medium,B-prime,0,0,"{
+""clauses"":[
+    [-1],
+    [2,3],
+    [-2,-3],
+    [2,4],
+    [3,5],
+    [4,6],
+    [5,6]
+]}",SAT,SAT,SAT,False,initial_success,correct,Valid model of the wrong problem,semantic_error,Valid model of the wrong problem,4.0,6.0,2.0,4.0,"{1: False, 2: False, 3: True, 4: False, 5: True, 6: True}","{1: False, 2: False, 3: True, 4: True, 5: False, 6: True}","[(-5, 6), (-4, 6), (-3, 5), (-2, 4), (1, 2, 3)]","[(2, 3), (2, 4), (3, 5), (4, 6), (5, 6)]",Set inclusion is exhaustive evidence; clause differences alone do not identify linguistic causes. Quantifier/arity category is not applicable to propositional syntax.
+08875dee96c041615978b1b3fe27386e90fc80826b2e47cb4acd028c994c6f5b,sat_10,medium,B,0,0,"{
+""clauses"":[
+    [-1],
+    [2,3],
+    [-2,-3],
+    [2,4],
+    [-2,-4],
+    [3,5],
+    [-3,-5],
+    [4,-6],
+    [-4,-6],
+    [-6]
+]}",SAT,UNSAT,SAT,False,silent_incorrect,incorrect,"Valid syntax, under-constrained",semantic_error,"Valid syntax, under-constrained",0.0,2.0,0.0,2.0,,"{1: False, 2: False, 3: True, 4: True, 5: False, 6: False}","[(-5, 6), (-4, 6), (-3, 5), (-2, 4), (1, 2, 3)]","[(-6, -4), (-6, 4), (-5, -3), (-4, -2), (2, 3), (2, 4), (3, 5)]",Set inclusion is exhaustive evidence; clause differences alone do not identify linguistic causes. Quantifier/arity category is not applicable to propositional syntax.
+b962d567b12f17d5293a3a858a3ee2e40cc761f43bfbeb586cb75453a9bb8c24,sat_10,medium,B-prime,0,0,"{
+""clauses"":[
+    [-1],
+    [2,3],
+    [-2,-3],
+    [2,4],
+    [-2,-4],
+    [3,5],
+    [-3,-5],
+    [4,-6],
+    [-4,-6],
+    [-6]
+]}",SAT,UNSAT,SAT,False,silent_incorrect,incorrect,"Valid syntax, under-constrained",semantic_error,"Valid syntax, under-constrained",0.0,2.0,0.0,2.0,,"{1: False, 2: False, 3: True, 4: True, 5: False, 6: False}","[(-5, 6), (-4, 6), (-3, 5), (-2, 4), (1, 2, 3)]","[(-6, -4), (-6, 4), (-5, -3), (-4, -2), (2, 3), (2, 4), (3, 5)]",Set inclusion is exhaustive evidence; clause differences alone do not identify linguistic causes. Quantifier/arity category is not applicable to propositional syntax.
+776219d42d9ca030e0f468ddad3e001f55a538239d6ceb21808b34027bfaa97d,sat_10,medium,C,0,0,"{""answer"":""SAT"",""explanation"":""Se puede elegir portada y reseña.""}",NOT_RUN,UNSAT,SAT,False,,incorrect,Wrong SAT/UNSAT result,semantic_error,,,,,,,,,,
+0fbb3d5cb6db37e44a0cb6c44392eecc272a45e26bb26d3d37572459942aa058,sat_11,medium,B,0,0,"{
+""clauses"":[
+    [-1,-2],
+    [1,3],
+    [-1,2],
+    [-2,4],
+    [1,-5],
+    [3,-5],
+    [-4,-5],
+    [-2,-6],
+    [-4,-6]
+]}",SAT,SAT,SAT,False,initial_success,correct,Valid model of the wrong problem,semantic_error,Valid model of the wrong problem,4.0,4.0,4.0,4.0,"{1: False, 2: True, 3: False, 4: True, 5: False, 6: True}","{1: False, 2: False, 3: True, 4: False, 5: False, 6: False}","[(-5, -3), (-1, 3), (1, 2), (5, 6)]","[(-6, -4), (-6, -2), (-5, 1), (-5, 3), (-1, 2), (1, 3)]",Set inclusion is exhaustive evidence; clause differences alone do not identify linguistic causes. Quantifier/arity category is not applicable to propositional syntax.
+b10d4367e4990bca86bc326da7bfdad9da2ca8c2bd06d0f18c1eed1b8d61289d,sat_11,medium,B-prime,0,0,"{
+""clauses"":[
+    [-1,-2],
+    [1,3],
+    [-1,2],
+    [-2,4],
+    [1,-5],
+    [3,-5],
+    [-4,-5],
+    [-2,-6],
+    [-4,-6]
+]}",SAT,SAT,SAT,False,initial_success,correct,Valid model of the wrong problem,semantic_error,Valid model of the wrong problem,4.0,4.0,4.0,4.0,"{1: False, 2: True, 3: False, 4: True, 5: False, 6: True}","{1: False, 2: False, 3: True, 4: False, 5: False, 6: False}","[(-5, -3), (-1, 3), (1, 2), (5, 6)]","[(-6, -4), (-6, -2), (-5, 1), (-5, 3), (-1, 2), (1, 3)]",Set inclusion is exhaustive evidence; clause differences alone do not identify linguistic causes. Quantifier/arity category is not applicable to propositional syntax.
+95553a90d23a99b2fa95844ff528d935bffa0a20094148f797cb163e5a1b438e,sat_12,medium,B,0,0,"{
+""clauses"":[
+    [-1,-2],
+    [1,-3],
+    [2,-4],
+    [-3,-5],
+    [-4,-5],
+    [-5]
+]}",SAT,UNSAT,SAT,False,silent_incorrect,incorrect,"Valid syntax, under-constrained",semantic_error,"Valid syntax, under-constrained",0.0,10.0,0.0,10.0,,"{1: False, 2: False, 3: False, 4: False, 5: False, 6: False}","[(-6,), (-2, 4), (-1, 3), (1, 2), (5, 6)]","[(-5,), (-4, 2), (-3, 1)]",Set inclusion is exhaustive evidence; clause differences alone do not identify linguistic causes. Quantifier/arity category is not applicable to propositional syntax.
+02d2c035be54467d6814136a306465649d042f3e740570f50ab62adb83d0cfc9,sat_12,medium,B-prime,0,0,"{
+""clauses"":[
+    [-1,-2],
+    [1,-3],
+    [2,-4],
+    [-3,-5],
+    [-4,-5],
+    [-5]
+]}",SAT,UNSAT,SAT,False,silent_incorrect,incorrect,"Valid syntax, under-constrained",semantic_error,"Valid syntax, under-constrained",0.0,10.0,0.0,10.0,,"{1: False, 2: False, 3: False, 4: False, 5: False, 6: False}","[(-6,), (-2, 4), (-1, 3), (1, 2), (5, 6)]","[(-5,), (-4, 2), (-3, 1)]",Set inclusion is exhaustive evidence; clause differences alone do not identify linguistic causes. Quantifier/arity category is not applicable to propositional syntax.
+811374f9a5d3fb835cb07c5b3ff1b4c962762b7f79f03aaa16fc86b5c956d644,sat_13,medium,B,0,0,"{
+""clauses"":[
+    [-1,-2],
+    [1,3],
+    [-1,4],
+    [-3,5],
+    [-4,5],
+    [-5,6],
+    [-3,-4]
+] 
+}",SAT,SAT,SAT,False,initial_success,correct,Valid model of the wrong problem,semantic_error,Valid model of the wrong problem,2.0,3.0,2.0,3.0,"{1: False, 2: True, 3: False, 4: True, 5: True, 6: True}","{1: False, 2: False, 3: True, 4: False, 5: True, 6: True}","[(-2, 4), (-1, 3), (1, 2)]","[(-2, -1), (-1, 4), (1, 3)]",Set inclusion is exhaustive evidence; clause differences alone do not identify linguistic causes. Quantifier/arity category is not applicable to propositional syntax.
+b0d869046adbb653c689502847b614651f3e77f00f5d4e8e5acc274c4de3272b,sat_13,medium,B-prime,0,0,"{
+""clauses"":[
+    [-1,-2],
+    [1,3],
+    [-1,4],
+    [-3,5],
+    [-4,5],
+    [-5,6],
+    [-3,-4]
+] 
+}",SAT,SAT,SAT,False,initial_success,correct,Valid model of the wrong problem,semantic_error,Valid model of the wrong problem,2.0,3.0,2.0,3.0,"{1: False, 2: True, 3: False, 4: True, 5: True, 6: True}","{1: False, 2: False, 3: True, 4: False, 5: True, 6: True}","[(-2, 4), (-1, 3), (1, 2)]","[(-2, -1), (-1, 4), (1, 3)]",Set inclusion is exhaustive evidence; clause differences alone do not identify linguistic causes. Quantifier/arity category is not applicable to propositional syntax.
+12f5de883a2ee3b968ccdfee33bb4a64121454b74456a50fa3b50acf185d05ad,sat_13,medium,C,0,0,"{""answer"":""UNSAT"", ""explanation"":""No se puede elegir bomba y parche al mismo tiempo, lo cual es necesario para elegir lubricante.""}",NOT_RUN,SAT,UNSAT,False,,incorrect,Wrong SAT/UNSAT result,semantic_error,,,,,,,,,,
+1718ab730ca02514cfc86f0e283fd2485b9af56ec72b1c68c00295d5778dd28e,sat_14,medium,B,0,0,"{
+""clauses"":[
+    [-1, -2],
+    [1, -3],
+    [-2, -4],
+    [3, -5],
+    [-4, -5],
+    [-5, -6],
+    [3, 4]
+]}",SAT,UNSAT,SAT,False,silent_incorrect,incorrect,"Valid syntax, under-constrained",semantic_error,"Valid syntax, under-constrained",0.0,9.0,0.0,9.0,,"{1: False, 2: False, 3: False, 4: True, 5: False, 6: False}","[(-6,), (-5, 6), (-4, -3), (-4, 5), (-3, 5), (-2, 4), (-1, 3), (1, 2)]","[(-6, -5), (-5, -4), (-5, 3), (-4, -2), (-3, 1), (-2, -1), (3, 4)]",Set inclusion is exhaustive evidence; clause differences alone do not identify linguistic causes. Quantifier/arity category is not applicable to propositional syntax.
+8a5f7c5f3738758bffa836261d87153c145f9e042c1c0706f9c82efd3b801125,sat_14,medium,B-prime,0,0,"{
+""clauses"":[
+    [-1, -2],
+    [1, -3],
+    [-2, -4],
+    [3, -5],
+    [-4, -5],
+    [-5, -6],
+    [3, 4]
+]}",SAT,UNSAT,SAT,False,silent_incorrect,incorrect,"Valid syntax, under-constrained",semantic_error,"Valid syntax, under-constrained",0.0,9.0,0.0,9.0,,"{1: False, 2: False, 3: False, 4: True, 5: False, 6: False}","[(-6,), (-5, 6), (-4, -3), (-4, 5), (-3, 5), (-2, 4), (-1, 3), (1, 2)]","[(-6, -5), (-5, -4), (-5, 3), (-4, -2), (-3, 1), (-2, -1), (3, 4)]",Set inclusion is exhaustive evidence; clause differences alone do not identify linguistic causes. Quantifier/arity category is not applicable to propositional syntax.
+d0b1831468a07377dbe64f3705e096a9e7087f7a45eb9af2f06b4903cc69214d,sat_15,hard,B,0,0,"{
+""clauses"":[
+    [-1,-2],
+    [1,3],
+    [-1,4],
+    [-3,5],
+    [-1,4],
+    [-3,5],
+    [-2,4],
+    [-3,4],
+    [7]
+]}",SAT,SAT,SAT,False,initial_success,correct,Valid model of the wrong problem,semantic_error,Valid model of the wrong problem,4.0,20.0,4.0,20.0,"{1: False, 2: True, 3: False, 4: True, 5: False, 6: True, 7: True, 8: True}","{1: False, 2: False, 3: True, 4: True, 5: True, 6: False, 7: True, 8: False}","[(-7, 8), (-6, 7), (-5, 7), (-4, -3), (-4, 6), (-1, 3), (1, 2)]","[(-3, 4), (-2, -1), (-1, 4), (1, 3), (7,)]",Set inclusion is exhaustive evidence; clause differences alone do not identify linguistic causes. Quantifier/arity category is not applicable to propositional syntax.
+33e557d3d6fd8776b4781faff1abb23a300e7be53a7827c69472d7fdf8013ee3,sat_15,hard,B-prime,0,0,"{
+""clauses"":[
+    [-1,-2],
+    [1,3],
+    [-1,4],
+    [-3,5],
+    [-1,4],
+    [-3,5],
+    [-2,4],
+    [-3,4],
+    [7]
+]}",SAT,SAT,SAT,False,initial_success,correct,Valid model of the wrong problem,semantic_error,Valid model of the wrong problem,4.0,20.0,4.0,20.0,"{1: False, 2: True, 3: False, 4: True, 5: False, 6: True, 7: True, 8: True}","{1: False, 2: False, 3: True, 4: True, 5: True, 6: False, 7: True, 8: False}","[(-7, 8), (-6, 7), (-5, 7), (-4, -3), (-4, 6), (-1, 3), (1, 2)]","[(-3, 4), (-2, -1), (-1, 4), (1, 3), (7,)]",Set inclusion is exhaustive evidence; clause differences alone do not identify linguistic causes. Quantifier/arity category is not applicable to propositional syntax.
+1b78ba6beb7dc8766c06cef80e6c7a0c99bfb1e6fa852e35c2ad02550d95d8e3,sat_15,hard,C,0,0,"{""answer"":""UNSAT"",""explanation"":""No se puede elegir al mismo tiempo un panel y una vitrina, pero si se elige una vitrina también se debe elegir una pantalla, lo cual no es posible ya que no se puede elegir a la vez proyector y pantalla.""}",NOT_RUN,SAT,UNSAT,False,,incorrect,Wrong SAT/UNSAT result,semantic_error,,,,,,,,,,
+efa8bf7bc1049339fc90886f653539afae4bf457d2f99e088a691d18dc3c9938,sat_16,hard,B,0,0,"{
+""clauses"":[
+    [-1,-2],
+    [1,3],
+    [-2,4],
+    [3,-4],
+    [3,5],
+    [4,6],
+    [5,7],
+    [6,7],
+    [7,-8]
+]}",SAT,UNSAT,SAT,False,silent_incorrect,incorrect,"Valid syntax, under-constrained",semantic_error,"Valid syntax, under-constrained",0.0,40.0,0.0,40.0,,"{1: False, 2: False, 3: True, 4: False, 5: False, 6: True, 7: True, 8: False}","[(-8,), (-7, 8), (-6, 7), (-5, 7), (-4, -3), (-4, 6), (-3, 5), (-1, 3), (1, 2)]","[(-8, 7), (-4, 3), (-2, -1), (1, 3), (3, 5), (4, 6), (5, 7), (6, 7)]",Set inclusion is exhaustive evidence; clause differences alone do not identify linguistic causes. Quantifier/arity category is not applicable to propositional syntax.
+3fb4191376ead69b5249bc760d8ae7530d09a8d21ca876dc6a322565686d84ad,sat_16,hard,B-prime,0,0,"{
+""clauses"":[
+    [-1,-2],
+    [1,3],
+    [-2,4],
+    [3,-4],
+    [3,5],
+    [4,6],
+    [5,7],
+    [6,7],
+    [7,-8]
+]}",SAT,UNSAT,SAT,False,silent_incorrect,incorrect,"Valid syntax, under-constrained",semantic_error,"Valid syntax, under-constrained",0.0,40.0,0.0,40.0,,"{1: False, 2: False, 3: True, 4: False, 5: False, 6: True, 7: True, 8: False}","[(-8,), (-7, 8), (-6, 7), (-5, 7), (-4, -3), (-4, 6), (-3, 5), (-1, 3), (1, 2)]","[(-8, 7), (-4, 3), (-2, -1), (1, 3), (3, 5), (4, 6), (5, 7), (6, 7)]",Set inclusion is exhaustive evidence; clause differences alone do not identify linguistic causes. Quantifier/arity category is not applicable to propositional syntax.
+924956cef186dfb57d2431660508205aa18ba24ded2cd035963d2918648f21ad,sat_17,hard,B,0,0,"{
+""clauses"":[
+    [-1,-2],
+    [1,4],
+    [-2,5],
+    [-3,6],
+    [-4,-7],
+    [-5,-7],
+    [-6,-7],
+    [-7,-8]
+]}",SAT,SAT,SAT,False,initial_success,correct,Valid model of the wrong problem,semantic_error,Valid model of the wrong problem,16.0,43.0,5.0,32.0,"{1: False, 2: False, 3: True, 4: False, 5: False, 6: True, 7: False, 8: True}","{1: False, 2: False, 3: False, 4: True, 5: False, 6: False, 7: False, 8: False}","[(-1, 4), (1, 2, 3), (7, 8)]","[(-8, -7), (1, 4)]",Set inclusion is exhaustive evidence; clause differences alone do not identify linguistic causes. Quantifier/arity category is not applicable to propositional syntax.
+0b17bf8baf99f239ff56b16a58ac51c0d28a7d44352a0f733de1943a4655236c,sat_17,hard,B-prime,0,0,"{
+""clauses"":[
+    [-1,-2],
+    [1,4],
+    [-2,5],
+    [-3,6],
+    [-4,-7],
+    [-5,-7],
+    [-6,-7],
+    [-7,-8]
+]}",SAT,SAT,SAT,False,initial_success,correct,Valid model of the wrong problem,semantic_error,Valid model of the wrong problem,16.0,43.0,5.0,32.0,"{1: False, 2: False, 3: True, 4: False, 5: False, 6: True, 7: False, 8: True}","{1: False, 2: False, 3: False, 4: True, 5: False, 6: False, 7: False, 8: False}","[(-1, 4), (1, 2, 3), (7, 8)]","[(-8, -7), (1, 4)]",Set inclusion is exhaustive evidence; clause differences alone do not identify linguistic causes. Quantifier/arity category is not applicable to propositional syntax.
+820fdee46734829a0af0934037589a7bc4e9012f9c69c4d35247d064ccea407f,sat_18,hard,B,0,0,"{
+""clauses"":[
+[-1,-2],
+[1,4],
+[-2,5],
+[3,6],
+[-4,-7],
+[-5,-7],
+[-6,-7],
+[-7]
+] 
+}",SAT,UNSAT,SAT,False,silent_incorrect,incorrect,"Valid syntax, under-constrained",semantic_error,"Valid syntax, under-constrained",0.0,42.0,0.0,42.0,,"{1: False, 2: False, 3: False, 4: True, 5: False, 6: True, 7: False, 8: False}","[(-8,), (-3, 6), (-1, 4), (1, 2, 3), (7, 8)]","[(-7,), (1, 4), (3, 6)]",Set inclusion is exhaustive evidence; clause differences alone do not identify linguistic causes. Quantifier/arity category is not applicable to propositional syntax.
+7d9e4e5807780421b2d20f6eca53a0a5e0a12d3184bf62d2283b47dff478f0c3,sat_18,hard,B-prime,0,0,"{
+""clauses"":[
+[-1,-2],
+[1,4],
+[-2,5],
+[3,6],
+[-4,-7],
+[-5,-7],
+[-6,-7],
+[-7]
+] 
+}",SAT,UNSAT,SAT,False,silent_incorrect,incorrect,"Valid syntax, under-constrained",semantic_error,"Valid syntax, under-constrained",0.0,42.0,0.0,42.0,,"{1: False, 2: False, 3: False, 4: True, 5: False, 6: True, 7: False, 8: False}","[(-8,), (-3, 6), (-1, 4), (1, 2, 3), (7, 8)]","[(-7,), (1, 4), (3, 6)]",Set inclusion is exhaustive evidence; clause differences alone do not identify linguistic causes. Quantifier/arity category is not applicable to propositional syntax.
+38120933240fd22156c30b64f56f986c4b371aa229f5c255f5be2b7864db277a,sat_19,hard,B,0,0,"{
+""clauses"":[
+    [-1,-2],
+    [-3,-4],
+    [1,-3],
+    [2,-4],
+    [1,5],
+    [4,6],
+    [2,7],
+    [3,7],
+    [5,8],
+    [7,8],
+    [-6,-7]
+]}",SAT,SAT,SAT,False,initial_success,correct,Valid model of the wrong problem,semantic_error,Valid model of the wrong problem,3.0,2.0,3.0,2.0,"{1: False, 2: True, 3: True, 4: False, 5: False, 6: False, 7: True, 8: True}","{1: False, 2: True, 3: False, 4: True, 5: True, 6: False, 7: True, 8: False}","[(-7, 8), (-5, 8), (-4, -2), (-4, 6), (-3, -1), (-3, 7), (-2, 7), (-1, 5), (1, 2), (3, 4)]","[(-4, -3), (-4, 2), (-3, 1), (-2, -1), (1, 5), (2, 7), (3, 7), (4, 6), (5, 8), (7, 8)]",Set inclusion is exhaustive evidence; clause differences alone do not identify linguistic causes. Quantifier/arity category is not applicable to propositional syntax.
+17f4b4b2a2531525dac7c403641890e857c8dcaf292c5a39743419e176345353,sat_19,hard,B-prime,0,0,"{
+""clauses"":[
+    [-1,-2],
+    [-3,-4],
+    [1,-3],
+    [2,-4],
+    [1,5],
+    [4,6],
+    [2,7],
+    [3,7],
+    [5,8],
+    [7,8],
+    [-6,-7]
+]}",SAT,SAT,SAT,False,initial_success,correct,Valid model of the wrong problem,semantic_error,Valid model of the wrong problem,3.0,2.0,3.0,2.0,"{1: False, 2: True, 3: True, 4: False, 5: False, 6: False, 7: True, 8: True}","{1: False, 2: True, 3: False, 4: True, 5: True, 6: False, 7: True, 8: False}","[(-7, 8), (-5, 8), (-4, -2), (-4, 6), (-3, -1), (-3, 7), (-2, 7), (-1, 5), (1, 2), (3, 4)]","[(-4, -3), (-4, 2), (-3, 1), (-2, -1), (1, 5), (2, 7), (3, 7), (4, 6), (5, 8), (7, 8)]",Set inclusion is exhaustive evidence; clause differences alone do not identify linguistic causes. Quantifier/arity category is not applicable to propositional syntax.
+43c2c57135156978557b5f1329a2a14fd2135a3aa12de6c16b942c50f4cc64a6,sat_19,hard,C,0,0,"{""answer"":""UNSAT"",""explanation"":""La restricción de no poder elegir albahaca y romero a la vez, junto con la restricción de tener que elegir orégano si se elige albahaca y perejil si se elige romero, crea un conflicto insuperable. Si se elige albahaca, entonces también se debe elegir orégano, pero no se puede elegir romero. Si se elige romero, entonces también se debe elegir perejil, pero no se puede elegir albahaca. Esto significa que no hay una selección posible que cumpla todas las reglas.""}",NOT_RUN,SAT,UNSAT,False,,incorrect,Wrong SAT/UNSAT result,semantic_error,,,,,,,,,,
+a06504f7bcc4611e681a2f7ed0e7bb8aa53a545329b6329143192b7c201020b0,sat_20,hard,B,0,0,"{
+""clauses"":[
+    [-1,-2],
+    [-3,-4],
+    [1,-3],
+    [2,-4],
+    [1,5],
+    [4,6],
+    [2,7],
+    [3,7],
+    [5,-8],
+    [7,-8],
+    [6,-7]
+]}",SAT,UNSAT,SAT,False,silent_incorrect,incorrect,"Valid syntax, under-constrained",semantic_error,"Valid syntax, under-constrained",0.0,12.0,0.0,12.0,,"{1: False, 2: False, 3: False, 4: False, 5: True, 6: True, 7: True, 8: False}","[(-8,), (-7, -6), (-7, 8), (-5, 8), (-4, -2), (-4, 6), (-3, -1), (-3, 7), (-2, 7), (-1, 5), (1, 2), (3, 4)]","[(-8, 5), (-8, 7), (-7, 6), (-4, -3), (-4, 2), (-3, 1), (-2, -1), (1, 5), (2, 7), (3, 7), (4, 6)]",Set inclusion is exhaustive evidence; clause differences alone do not identify linguistic causes. Quantifier/arity category is not applicable to propositional syntax.
+637667f5e63e81b12866bd7b873e76d614cabc483f008d56a91f98a07eb3b475,sat_20,hard,B-prime,0,0,"{
+""clauses"":[
+    [-1,-2],
+    [-3,-4],
+    [1,-3],
+    [2,-4],
+    [1,5],
+    [4,6],
+    [2,7],
+    [3,7],
+    [5,-8],
+    [7,-8],
+    [6,-7]
+]}",SAT,UNSAT,SAT,False,silent_incorrect,incorrect,"Valid syntax, under-constrained",semantic_error,"Valid syntax, under-constrained",0.0,12.0,0.0,12.0,,"{1: False, 2: False, 3: False, 4: False, 5: True, 6: True, 7: True, 8: False}","[(-8,), (-7, -6), (-7, 8), (-5, 8), (-4, -2), (-4, 6), (-3, -1), (-3, 7), (-2, 7), (-1, 5), (1, 2), (3, 4)]","[(-8, 5), (-8, 7), (-7, 6), (-4, -3), (-4, 2), (-3, 1), (-2, -1), (1, 5), (2, 7), (3, 7), (4, 6)]",Set inclusion is exhaustive evidence; clause differences alone do not identify linguistic causes. Quantifier/arity category is not applicable to propositional syntax.

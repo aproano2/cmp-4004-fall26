@@ -1,0 +1,167 @@
+{
+  "row": {
+    "run_id": "2410fa936632cebf1ea90f9098236c208dd871e6e34189d883f3fa04d5201a31",
+    "problem_id": "sat_06",
+    "difficulty": "easy",
+    "arm": "B-prime",
+    "repeat": 1,
+    "provider": "ollama",
+    "model": "llama3.1:latest",
+    "model_size": "8.0B; Q4_K_M",
+    "temperature": 0.0,
+    "expected_status": "UNSAT",
+    "predicted_status": "SAT",
+    "correctness": "incorrect",
+    "taxonomy_category": "Valid syntax, under-constrained",
+    "semantic_category": "Valid syntax, under-constrained",
+    "reference_solutions": 0,
+    "generated_solutions": 2,
+    "lost_solutions": 0,
+    "added_solutions": 2,
+    "lost_counterexample": null,
+    "added_counterexample": {
+      "1": true,
+      "2": false,
+      "3": false,
+      "4": false
+    },
+    "missing_clauses": [
+      [
+        -3
+      ],
+      [
+        -1,
+        2
+      ],
+      [
+        1,
+        3
+      ]
+    ],
+    "extra_clauses": [
+      [
+        -3,
+        -1
+      ],
+      [
+        1
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "review_note": "Set inclusion is exhaustive evidence; clause differences alone do not identify linguistic causes. Quantifier/arity category is not applicable to propositional syntax.",
+    "error_category": "semantic_error",
+    "detectable_error": false,
+    "error_message": "",
+    "llm_time_seconds": 63.6696391459991,
+    "solver_time_seconds": 0.0006454119993577478,
+    "parse_validation_seconds": 0.0004443710004125023,
+    "wall_clock_seconds": 0.00023020099979476072,
+    "pipeline_time_seconds": 63.67072892899887,
+    "cache_access_seconds": 0,
+    "input_tokens": 262,
+    "output_tokens": 36,
+    "total_tokens": 298,
+    "token_source": "provider",
+    "estimated_cost_usd": null,
+    "charged_cost_usd": 0,
+    "solver_status": "SAT",
+    "refinement_iterations": 0,
+    "final_iteration": 0,
+    "refinement_time_seconds": 0,
+    "cache_hit": false,
+    "initial_call_id": "e143680beb3161db99812c15efa085edb17470651ec5d77b576b1576a3d8a49b",
+    "observable_convergence": true,
+    "convergence": "silent_incorrect",
+    "timestamp": "2026-11-19T04:32:40.115059+00:00",
+    "campaign_id": "301f830d833670aec538771d704e1b1bdc5f43afd783784248e3a58abd1766e8",
+    "paired_checkpoint_reused": true
+  },
+  "attempts": [
+    {
+      "call": {
+        "provider": "ollama",
+        "model": "llama3.1:latest",
+        "base_url": "http://localhost:11434",
+        "prompt_version": "sat-v1",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Traduce todas las reglas a CNF proposicional sin resolverlas. Responde exclusivamente con un objeto JSON {\"clauses\":[[1,-2],[3]]}. Cada lista interior es una disyunción; la lista exterior es una conjunción. Usa enteros positivos para variables y negativos para negaciones, exclusivamente del mapa dado. No añadas variables ni premisas. Una cláusula vacía significa falso; una lista sin cláusulas significa verdadero. No incluyas markdown ni explicación."
+          },
+          {
+            "role": "user",
+            "content": "{\"problem\": \"Para una excursión puedes llevar estos artículos: mapa, brújula, GPS, linterna. Debes elegir al menos una de estas opciones: mapa o GPS. No puedes elegir GPS. Si eliges mapa, también debes elegir brújula. No puedes elegir a la vez brújula y linterna. No puedes elegir brújula. ¿Existe una selección que cumpla todas las reglas?\", \"variables\": {\"mapa\": 1, \"brújula\": 2, \"GPS\": 3, \"linterna\": 4}}"
+          }
+        ],
+        "parameters": {
+          "temperature": 0.0,
+          "max_tokens": 2048,
+          "seed": 20261119
+        },
+        "repeat": 1,
+        "problem_id": "sat_06",
+        "arm": "B",
+        "iteration": 0,
+        "call_id": "e143680beb3161db99812c15efa085edb17470651ec5d77b576b1576a3d8a49b",
+        "raw": "{\n\"clauses\":[\n    [-1,-3],\n    [1],\n    [1,2],\n    [-2,-4],\n    [-2]\n] \n}",
+        "model_size": "8.0B; Q4_K_M",
+        "reported_model": "llama3.1:latest",
+        "response_id": "",
+        "input_tokens": 262,
+        "output_tokens": 36,
+        "token_source": "provider",
+        "llm_time_seconds": 63.6696391459991,
+        "access_seconds": 63.6696391459991,
+        "cache_hit": false,
+        "estimated_cost_usd": null,
+        "charged_cost_usd": null,
+        "error_category": "",
+        "error_message": "",
+        "timestamp": "2026-11-19T04:32:40.053125+00:00"
+      },
+      "iteration": 0,
+      "predicted_status": "SAT",
+      "solver_status": "SAT",
+      "solver_time_seconds": 0.0006454119993577478,
+      "clauses": [
+        [
+          -1,
+          -3
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          -2,
+          -4
+        ],
+        [
+          -2
+        ]
+      ],
+      "error_category": "",
+      "error_message": "",
+      "warnings": [],
+      "assignment": {
+        "1": true,
+        "2": false,
+        "3": false,
+        "4": false
+      },
+      "solver_stats": {
+        "calls": 1,
+        "propagations": 3
+      },
+      "detectable_error": false,
+      "processing_seconds": 0.0010897829997702502,
+      "parse_validation_seconds": 0.0004443710004125023
+    }
+  ]
+}

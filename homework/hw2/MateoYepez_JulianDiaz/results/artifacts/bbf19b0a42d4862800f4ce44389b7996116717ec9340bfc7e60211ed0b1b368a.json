@@ -1,0 +1,100 @@
+{
+  "row": {
+    "run_id": "bbf19b0a42d4862800f4ce44389b7996116717ec9340bfc7e60211ed0b1b368a",
+    "problem_id": "sat_14",
+    "difficulty": "medium",
+    "arm": "C",
+    "repeat": 0,
+    "provider": "ollama",
+    "model": "llama3.1:latest",
+    "model_size": "8.0B; Q4_K_M",
+    "temperature": 0.0,
+    "expected_status": "UNSAT",
+    "predicted_status": "UNSAT",
+    "correctness": "correct",
+    "taxonomy_category": "",
+    "error_category": "",
+    "detectable_error": false,
+    "error_message": "",
+    "llm_time_seconds": 54.41789223500018,
+    "solver_time_seconds": 0.0,
+    "parse_validation_seconds": 0.0001546460007375572,
+    "wall_clock_seconds": 54.42108878400177,
+    "pipeline_time_seconds": 54.41804688100092,
+    "cache_access_seconds": 0,
+    "input_tokens": 202,
+    "output_tokens": 35,
+    "total_tokens": 237,
+    "token_source": "provider",
+    "estimated_cost_usd": null,
+    "charged_cost_usd": null,
+    "solver_status": "NOT_RUN",
+    "refinement_iterations": 0,
+    "final_iteration": 0,
+    "refinement_time_seconds": 0,
+    "cache_hit": false,
+    "initial_call_id": "8d9178994d0730d280657f05ad63fb132cdc7612575ee66aa83418bbcc3ec674",
+    "observable_convergence": true,
+    "convergence": "",
+    "timestamp": "2026-11-19T03:50:03.349379+00:00",
+    "campaign_id": "301f830d833670aec538771d704e1b1bdc5f43afd783784248e3a58abd1766e8",
+    "paired_checkpoint_reused": false
+  },
+  "attempts": [
+    {
+      "call": {
+        "provider": "ollama",
+        "model": "llama3.1:latest",
+        "base_url": "http://localhost:11434",
+        "prompt_version": "sat-v1",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Resuelve el problema de satisfacibilidad. Responde exclusivamente con JSON: {\"answer\":\"SAT\" o \"UNSAT\", \"explanation\":\"justificación breve\"}."
+          },
+          {
+            "role": "user",
+            "content": "Para reparar una bicicleta puedes usar estas herramientas: llave, pinzas, bomba, parche, lubricante, trapo. Debes elegir al menos una de estas opciones: llave o pinzas. Si eliges llave, también debes elegir bomba. Si eliges pinzas, también debes elegir parche. Si eliges bomba, también debes elegir lubricante. Si eliges parche, también debes elegir lubricante. Si eliges lubricante, también debes elegir trapo. No puedes elegir a la vez bomba y parche. No puedes elegir trapo. ¿Existe una selección que cumpla todas las reglas?"
+          }
+        ],
+        "parameters": {
+          "temperature": 0.0,
+          "max_tokens": 2048,
+          "seed": 20261118
+        },
+        "repeat": 0,
+        "problem_id": "sat_14",
+        "arm": "C",
+        "iteration": 0,
+        "call_id": "8d9178994d0730d280657f05ad63fb132cdc7612575ee66aa83418bbcc3ec674",
+        "raw": "{\"answer\":\"UNSAT\", \"explanation\":\"No se puede elegir el lubricante sin el trapo, pero no se puede elegir el trapo.\"}",
+        "model_size": "8.0B; Q4_K_M",
+        "reported_model": "llama3.1:latest",
+        "response_id": "",
+        "input_tokens": 202,
+        "output_tokens": 35,
+        "token_source": "provider",
+        "llm_time_seconds": 54.41789223500018,
+        "access_seconds": 54.41789223500018,
+        "cache_hit": false,
+        "estimated_cost_usd": null,
+        "charged_cost_usd": null,
+        "error_category": "",
+        "error_message": "",
+        "timestamp": "2026-11-19T03:50:03.346326+00:00"
+      },
+      "iteration": 0,
+      "predicted_status": "UNSAT",
+      "solver_status": "NOT_RUN",
+      "solver_time_seconds": 0.0,
+      "clauses": null,
+      "error_category": "",
+      "error_message": "",
+      "warnings": [],
+      "assignment": null,
+      "detectable_error": false,
+      "processing_seconds": 0.0001546460007375572,
+      "parse_validation_seconds": 0.0001546460007375572
+    }
+  ]
+}

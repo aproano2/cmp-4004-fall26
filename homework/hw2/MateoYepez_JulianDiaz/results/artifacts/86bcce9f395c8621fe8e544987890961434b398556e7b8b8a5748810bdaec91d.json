@@ -1,0 +1,100 @@
+{
+  "row": {
+    "run_id": "86bcce9f395c8621fe8e544987890961434b398556e7b8b8a5748810bdaec91d",
+    "problem_id": "sat_20",
+    "difficulty": "hard",
+    "arm": "C",
+    "repeat": 0,
+    "provider": "ollama",
+    "model": "llama3.1:latest",
+    "model_size": "8.0B; Q4_K_M",
+    "temperature": 0.0,
+    "expected_status": "UNSAT",
+    "predicted_status": "UNSAT",
+    "correctness": "correct",
+    "taxonomy_category": "",
+    "error_category": "",
+    "detectable_error": false,
+    "error_message": "",
+    "llm_time_seconds": 81.38845373599906,
+    "solver_time_seconds": 0.0,
+    "parse_validation_seconds": 0.00014511200060951523,
+    "wall_clock_seconds": 81.39130800400017,
+    "pipeline_time_seconds": 81.38859884799967,
+    "cache_access_seconds": 0,
+    "input_tokens": 282,
+    "output_tokens": 70,
+    "total_tokens": 352,
+    "token_source": "provider",
+    "estimated_cost_usd": null,
+    "charged_cost_usd": null,
+    "solver_status": "NOT_RUN",
+    "refinement_iterations": 0,
+    "final_iteration": 0,
+    "refinement_time_seconds": 0,
+    "cache_hit": false,
+    "initial_call_id": "618432d0720d43f1eadae3ae15640e9ab146f6a971dcb03c29fe3f0526528284",
+    "observable_convergence": true,
+    "convergence": "",
+    "timestamp": "2026-11-19T04:14:56.542514+00:00",
+    "campaign_id": "301f830d833670aec538771d704e1b1bdc5f43afd783784248e3a58abd1766e8",
+    "paired_checkpoint_reused": false
+  },
+  "attempts": [
+    {
+      "call": {
+        "provider": "ollama",
+        "model": "llama3.1:latest",
+        "base_url": "http://localhost:11434",
+        "prompt_version": "sat-v1",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Resuelve el problema de satisfacibilidad. Responde exclusivamente con JSON: {\"answer\":\"SAT\" o \"UNSAT\", \"explanation\":\"justificación breve\"}."
+          },
+          {
+            "role": "user",
+            "content": "Para un jardín puedes sembrar estas plantas: albahaca, menta, romero, tomillo, orégano, salvia, perejil, cilantro. Debes elegir al menos una de estas opciones: albahaca o menta. Debes elegir al menos una de estas opciones: romero o tomillo. No puedes elegir a la vez albahaca y romero. No puedes elegir a la vez menta y tomillo. Si eliges albahaca, también debes elegir orégano. Si eliges tomillo, también debes elegir salvia. Si eliges menta, también debes elegir perejil. Si eliges romero, también debes elegir perejil. Si eliges orégano, también debes elegir cilantro. Si eliges perejil, también debes elegir cilantro. No puedes elegir a la vez salvia y perejil. No puedes elegir cilantro. ¿Existe una selección que cumpla todas las reglas?"
+          }
+        ],
+        "parameters": {
+          "temperature": 0.0,
+          "max_tokens": 2048,
+          "seed": 20261118
+        },
+        "repeat": 0,
+        "problem_id": "sat_20",
+        "arm": "C",
+        "iteration": 0,
+        "call_id": "618432d0720d43f1eadae3ae15640e9ab146f6a971dcb03c29fe3f0526528284",
+        "raw": "{\"answer\":\"UNSAT\", \"explanation\":\"La restricción de no poder elegir albahaca y romero a la vez, junto con la restricción de no poder elegir menta y tomillo a la vez, hace que sea imposible elegir todas las plantas sin violar alguna regla.\"}",
+        "model_size": "8.0B; Q4_K_M",
+        "reported_model": "llama3.1:latest",
+        "response_id": "",
+        "input_tokens": 282,
+        "output_tokens": 70,
+        "token_source": "provider",
+        "llm_time_seconds": 81.38845373599906,
+        "access_seconds": 81.38845373599906,
+        "cache_hit": false,
+        "estimated_cost_usd": null,
+        "charged_cost_usd": null,
+        "error_category": "",
+        "error_message": "",
+        "timestamp": "2026-11-19T04:14:56.539746+00:00"
+      },
+      "iteration": 0,
+      "predicted_status": "UNSAT",
+      "solver_status": "NOT_RUN",
+      "solver_time_seconds": 0.0,
+      "clauses": null,
+      "error_category": "",
+      "error_message": "",
+      "warnings": [],
+      "assignment": null,
+      "detectable_error": false,
+      "processing_seconds": 0.00014511200060951523,
+      "parse_validation_seconds": 0.00014511200060951523
+    }
+  ]
+}

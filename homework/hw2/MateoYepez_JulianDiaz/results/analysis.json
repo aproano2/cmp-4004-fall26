@@ -1,0 +1,11 @@
+{
+  "paired_units": 20,
+  "refinement_delta_percentage_points": 0.0,
+  "physical_provider_requests": 46,
+  "physical_cost_usd": null,
+  "physical_llm_seconds": 3944.0835931730003,
+  "physical_input_tokens": 11954,
+  "physical_output_tokens": 2184,
+  "estimated_token_calls": 2,
+  "note": "Arm costs are standalone policy costs; never sum B and B-prime as actual spend."
+}

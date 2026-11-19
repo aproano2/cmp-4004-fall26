@@ -1,0 +1,75 @@
+{
+  "id": "sat_19",
+  "difficulty": "hard",
+  "prompt": "Para un jardín puedes sembrar estas plantas: albahaca, menta, romero, tomillo, orégano, salvia, perejil, cilantro. Debes elegir al menos una de estas opciones: albahaca o menta. Debes elegir al menos una de estas opciones: romero o tomillo. No puedes elegir a la vez albahaca y romero. No puedes elegir a la vez menta y tomillo. Si eliges albahaca, también debes elegir orégano. Si eliges tomillo, también debes elegir salvia. Si eliges menta, también debes elegir perejil. Si eliges romero, también debes elegir perejil. Si eliges orégano, también debes elegir cilantro. Si eliges perejil, también debes elegir cilantro. No puedes elegir a la vez salvia y perejil. ¿Existe una selección que cumpla todas las reglas?",
+  "variables": {
+    "albahaca": 1,
+    "menta": 2,
+    "romero": 3,
+    "tomillo": 4,
+    "orégano": 5,
+    "salvia": 6,
+    "perejil": 7,
+    "cilantro": 8
+  },
+  "clauses": [
+    [
+      1,
+      2
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      -1,
+      -3
+    ],
+    [
+      -2,
+      -4
+    ],
+    [
+      -1,
+      5
+    ],
+    [
+      -4,
+      6
+    ],
+    [
+      -2,
+      7
+    ],
+    [
+      -3,
+      7
+    ],
+    [
+      -5,
+      8
+    ],
+    [
+      -7,
+      8
+    ],
+    [
+      -6,
+      -7
+    ]
+  ],
+  "ground_truth": {
+    "status": "SAT",
+    "witness": {
+      "albahaca": true,
+      "menta": false,
+      "romero": false,
+      "tomillo": true,
+      "orégano": true,
+      "salvia": true,
+      "perejil": false,
+      "cilantro": true
+    },
+    "reasoning": "Elegir albahaca, tomillo, orégano, salvia, cilantro y dejar fuera las demás opciones cumple todas las reglas."
+  }
+}

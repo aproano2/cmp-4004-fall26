@@ -1,0 +1,27 @@
+{
+  "6324ebebc6e5c74bd4004dd4486f8e5075e4f062f47ece51f8a25fbc1e6c7660": {
+    "problem_id": "sat_01",
+    "reviewer": "coding assistant; post-hoc, not human verification",
+    "note": "Assistant post-hoc clause review: the premise Arte → Robótica requires [-1,3], but the output contains [-1,-3], reversing the consequent polarity. The mandatory Danza clause [4] is absent. Clause [3,-4] adds Danza → Robótica, which is not a supplied premise. These are explicit incorrect-negation, dropped-premise and hallucinated-constraint findings, supported by the original Spanish text."
+  },
+  "155d45f602be6999643134a6c0e44201183b19785e60b92731a03923615fe282": {
+    "problem_id": "sat_02",
+    "reviewer": "coding assistant; post-hoc, not human verification",
+    "note": "Assistant post-hoc clause review: at least one of cámara/trípode requires [1,2], whereas [-1,-2] expresses at most one. The required exclusion of micrófono and lámpara is [-3,-4], not generated [3,-4]. Exhaustive analysis finds two generated solutions and no reference solution. The category under-constrained follows from solution sets, not merely the wrong SAT answer."
+  },
+  "7d2daa470f74e82bc802fd3117577cd72cce0224fb74358e27aaa65e8c9840e5": {
+    "problem_id": "sat_03",
+    "reviewer": "coding assistant; post-hoc, not human verification",
+    "note": "Assistant post-hoc clause review: the output contains both [-1] and [1], directly forcing carteles false and true. The text requires carteles, corresponding to [1], and does not authorize [-1]. This explicit contradictory, hallucinated negative unit clause explains why the generated model is UNSAT despite a satisfiable reference."
+  },
+  "fd08700c4812b38675235a2b493f36cf2ca62fc403bff9d0cca037dbef394947": {
+    "problem_id": "sat_04",
+    "reviewer": "coding assistant; post-hoc, not human verification",
+    "note": "Assistant post-hoc clause review: the text requires carteles ([1]), but the output starts with [-1]. The exclusion of maquetas and folletos requires [-2,-3], while generated [-2,3] requires folletos when maquetas is chosen. These are identifiable polarity errors; the solution-set test establishes the resulting semantic category."
+  },
+  "6ae3cbc31798ac3f91be62c684c0ef0f772ec7487dc82f4945ccbb17f0d7c883": {
+    "problem_id": "sat_05",
+    "reviewer": "coding assistant; post-hoc, not human verification",
+    "note": "Assistant post-hoc clause review: the premise mapa → brújula requires [-1,2], whereas [1,-2] encodes brújula → mapa, a reversed implication. The generated model allows mapa=true and brújula=false, which violates the original premise. Both formulas are SAT, so status accuracy hides this under-constrained translation."
+  }
+}

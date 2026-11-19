@@ -1,0 +1,100 @@
+{
+  "row": {
+    "run_id": "811374f9a5d3fb835cb07c5b3ff1b4c962762b7f79f03aaa16fc86b5c956d644",
+    "problem_id": "sat_13",
+    "difficulty": "medium",
+    "arm": "B",
+    "repeat": 0,
+    "provider": "ollama",
+    "model": "llama3.1:latest",
+    "model_size": "8.0B; Q4_K_M",
+    "temperature": 0.0,
+    "expected_status": "SAT",
+    "predicted_status": "NO_ANSWER",
+    "correctness": "no-answer",
+    "taxonomy_category": "llm_timeout",
+    "error_category": "llm_timeout",
+    "detectable_error": true,
+    "error_message": "LLM request timed out",
+    "llm_time_seconds": 300.2396574760005,
+    "solver_time_seconds": 0.0,
+    "parse_validation_seconds": 0.033296411000264925,
+    "wall_clock_seconds": 300.9955855750004,
+    "pipeline_time_seconds": 300.27295388700077,
+    "cache_access_seconds": 0,
+    "input_tokens": 267,
+    "output_tokens": 0,
+    "total_tokens": 267,
+    "token_source": "estimated_chars_div_4",
+    "estimated_cost_usd": null,
+    "charged_cost_usd": null,
+    "solver_status": "NOT_RUN",
+    "refinement_iterations": 0,
+    "final_iteration": 0,
+    "refinement_time_seconds": 0,
+    "cache_hit": false,
+    "initial_call_id": "f84675f3592fe89c0c42ef440c1fd5dfbe10141036b75b87a9c54b3d05c5b358",
+    "observable_convergence": false,
+    "convergence": "",
+    "timestamp": "2026-11-19T02:39:47.538498+00:00",
+    "campaign_id": "301f830d833670aec538771d704e1b1bdc5f43afd783784248e3a58abd1766e8",
+    "paired_checkpoint_reused": false
+  },
+  "attempts": [
+    {
+      "call": {
+        "provider": "ollama",
+        "model": "llama3.1:latest",
+        "base_url": "http://localhost:11434",
+        "prompt_version": "sat-v1",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Traduce todas las reglas a CNF proposicional sin resolverlas. Responde exclusivamente con un objeto JSON {\"clauses\":[[1,-2],[3]]}. Cada lista interior es una disyunción; la lista exterior es una conjunción. Usa enteros positivos para variables y negativos para negaciones, exclusivamente del mapa dado. No añadas variables ni premisas. Una cláusula vacía significa falso; una lista sin cláusulas significa verdadero. No incluyas markdown ni explicación."
+          },
+          {
+            "role": "user",
+            "content": "{\"problem\": \"Para reparar una bicicleta puedes usar estas herramientas: llave, pinzas, bomba, parche, lubricante, trapo. Debes elegir al menos una de estas opciones: llave o pinzas. Si eliges llave, también debes elegir bomba. Si eliges pinzas, también debes elegir parche. Si eliges bomba, también debes elegir lubricante. Si eliges parche, también debes elegir lubricante. Si eliges lubricante, también debes elegir trapo. No puedes elegir a la vez bomba y parche. ¿Existe una selección que cumpla todas las reglas?\", \"variables\": {\"llave\": 1, \"pinzas\": 2, \"bomba\": 3, \"parche\": 4, \"lubricante\": 5, \"trapo\": 6}}"
+          }
+        ],
+        "parameters": {
+          "temperature": 0.0,
+          "max_tokens": 2048,
+          "seed": 20261118
+        },
+        "repeat": 0,
+        "problem_id": "sat_13",
+        "arm": "B",
+        "iteration": 0,
+        "call_id": "f84675f3592fe89c0c42ef440c1fd5dfbe10141036b75b87a9c54b3d05c5b358",
+        "raw": "",
+        "model_size": "8.0B; Q4_K_M",
+        "reported_model": "",
+        "response_id": "",
+        "input_tokens": 267,
+        "output_tokens": 0,
+        "token_source": "estimated_chars_div_4",
+        "llm_time_seconds": 300.2396574760005,
+        "access_seconds": 300.2396574760005,
+        "cache_hit": false,
+        "estimated_cost_usd": null,
+        "charged_cost_usd": null,
+        "error_category": "llm_timeout",
+        "error_message": "LLM request timed out",
+        "timestamp": "2026-11-19T02:39:46.812306+00:00"
+      },
+      "iteration": 0,
+      "predicted_status": "NO_ANSWER",
+      "solver_status": "NOT_RUN",
+      "solver_time_seconds": 0.0,
+      "clauses": null,
+      "error_category": "llm_timeout",
+      "error_message": "LLM request timed out",
+      "warnings": [],
+      "assignment": null,
+      "detectable_error": true,
+      "processing_seconds": 0.033296411000264925,
+      "parse_validation_seconds": 0.033296411000264925
+    }
+  ]
+}

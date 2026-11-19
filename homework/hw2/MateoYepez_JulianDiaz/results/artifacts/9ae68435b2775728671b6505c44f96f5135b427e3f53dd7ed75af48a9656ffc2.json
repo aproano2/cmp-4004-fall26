@@ -1,0 +1,181 @@
+{
+  "row": {
+    "run_id": "9ae68435b2775728671b6505c44f96f5135b427e3f53dd7ed75af48a9656ffc2",
+    "problem_id": "sat_02",
+    "difficulty": "easy",
+    "arm": "B",
+    "repeat": 1,
+    "provider": "ollama",
+    "model": "llama3.1:latest",
+    "model_size": "8.0B; Q4_K_M",
+    "temperature": 0.0,
+    "expected_status": "UNSAT",
+    "predicted_status": "SAT",
+    "correctness": "incorrect",
+    "taxonomy_category": "Valid syntax, under-constrained",
+    "semantic_category": "Valid syntax, under-constrained",
+    "reference_solutions": 0,
+    "generated_solutions": 2,
+    "lost_solutions": 0,
+    "added_solutions": 2,
+    "lost_counterexample": null,
+    "added_counterexample": {
+      "1": false,
+      "2": false,
+      "3": true,
+      "4": true
+    },
+    "missing_clauses": [
+      [
+        -4,
+        -3
+      ],
+      [
+        -1,
+        3
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "extra_clauses": [
+      [
+        -4,
+        3
+      ],
+      [
+        -2,
+        -1
+      ],
+      [
+        -1,
+        2
+      ],
+      [
+        1,
+        3
+      ]
+    ],
+    "review_note": "Set inclusion is exhaustive evidence; clause differences alone do not identify linguistic causes. Quantifier/arity category is not applicable to propositional syntax.",
+    "error_category": "semantic_error",
+    "detectable_error": false,
+    "error_message": "",
+    "llm_time_seconds": 67.60625575699851,
+    "solver_time_seconds": 0.0006900619991938584,
+    "parse_validation_seconds": 0.0005322990018612472,
+    "wall_clock_seconds": 67.62028844400083,
+    "pipeline_time_seconds": 67.60747811799956,
+    "cache_access_seconds": 0,
+    "input_tokens": 287,
+    "output_tokens": 44,
+    "total_tokens": 331,
+    "token_source": "provider",
+    "estimated_cost_usd": null,
+    "charged_cost_usd": null,
+    "solver_status": "SAT",
+    "refinement_iterations": 0,
+    "final_iteration": 0,
+    "refinement_time_seconds": 0,
+    "cache_hit": false,
+    "initial_call_id": "6fd14759ddfc3c679839f99a5cc7cb542ca8ad6d1fd700c09c5e45bac47f71ec",
+    "observable_convergence": true,
+    "convergence": "",
+    "timestamp": "2026-11-19T04:25:09.251099+00:00",
+    "campaign_id": "301f830d833670aec538771d704e1b1bdc5f43afd783784248e3a58abd1766e8",
+    "paired_checkpoint_reused": false
+  },
+  "attempts": [
+    {
+      "call": {
+        "provider": "ollama",
+        "model": "llama3.1:latest",
+        "base_url": "http://localhost:11434",
+        "prompt_version": "sat-v1",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Traduce todas las reglas a CNF proposicional sin resolverlas. Responde exclusivamente con un objeto JSON {\"clauses\":[[1,-2],[3]]}. Cada lista interior es una disyunción; la lista exterior es una conjunción. Usa enteros positivos para variables y negativos para negaciones, exclusivamente del mapa dado. No añadas variables ni premisas. Una cláusula vacía significa falso; una lista sin cláusulas significa verdadero. No incluyas markdown ni explicación."
+          },
+          {
+            "role": "user",
+            "content": "{\"problem\": \"Para una grabación puedes reservar estos equipos: cámara, trípode, micrófono, lámpara. Debes elegir al menos una de estas opciones: cámara o trípode. Si eliges cámara, también debes elegir micrófono. Si eliges trípode, también debes elegir micrófono. Si eliges micrófono, también debes elegir lámpara. No puedes elegir a la vez micrófono y lámpara. ¿Existe una selección que cumpla todas las reglas?\", \"variables\": {\"cámara\": 1, \"trípode\": 2, \"micrófono\": 3, \"lámpara\": 4}}"
+          }
+        ],
+        "parameters": {
+          "temperature": 0.0,
+          "max_tokens": 2048,
+          "seed": 20261119
+        },
+        "repeat": 1,
+        "problem_id": "sat_02",
+        "arm": "B",
+        "iteration": 0,
+        "call_id": "6fd14759ddfc3c679839f99a5cc7cb542ca8ad6d1fd700c09c5e45bac47f71ec",
+        "raw": "{\n\"clauses\":[\n    [-1,-2],\n    [1,3],\n    [-1,2],\n    [-2,3],\n    [-3,4],\n    [3,-4]\n]}",
+        "model_size": "8.0B; Q4_K_M",
+        "reported_model": "llama3.1:latest",
+        "response_id": "",
+        "input_tokens": 287,
+        "output_tokens": 44,
+        "token_source": "provider",
+        "llm_time_seconds": 67.60625575699851,
+        "access_seconds": 67.60625575699851,
+        "cache_hit": false,
+        "estimated_cost_usd": null,
+        "charged_cost_usd": null,
+        "error_category": "",
+        "error_message": "",
+        "timestamp": "2026-11-19T04:25:09.236845+00:00"
+      },
+      "iteration": 0,
+      "predicted_status": "SAT",
+      "solver_status": "SAT",
+      "solver_time_seconds": 0.0006900619991938584,
+      "clauses": [
+        [
+          -1,
+          -2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          -1,
+          2
+        ],
+        [
+          -2,
+          3
+        ],
+        [
+          -3,
+          4
+        ],
+        [
+          3,
+          -4
+        ]
+      ],
+      "error_category": "",
+      "error_message": "",
+      "warnings": [],
+      "assignment": {
+        "1": false,
+        "2": false,
+        "3": true,
+        "4": true
+      },
+      "solver_stats": {
+        "calls": 3,
+        "decisions": 2,
+        "propagations": 3,
+        "conflicts": 1
+      },
+      "detectable_error": false,
+      "processing_seconds": 0.0012223610010551056,
+      "parse_validation_seconds": 0.0005322990018612472
+    }
+  ]
+}

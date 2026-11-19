@@ -1,0 +1,100 @@
+{
+  "row": {
+    "run_id": "cc6884cf19d20545dafa1e6ee6ba14777e7701aca5f07a6d5f9760b860ec7213",
+    "problem_id": "sat_12",
+    "difficulty": "medium",
+    "arm": "C",
+    "repeat": 0,
+    "provider": "ollama",
+    "model": "llama3.1:latest",
+    "model_size": "8.0B; Q4_K_M",
+    "temperature": 0.0,
+    "expected_status": "UNSAT",
+    "predicted_status": "UNSAT",
+    "correctness": "correct",
+    "taxonomy_category": "",
+    "error_category": "",
+    "detectable_error": false,
+    "error_message": "",
+    "llm_time_seconds": 82.59364800399999,
+    "solver_time_seconds": 0.0,
+    "parse_validation_seconds": 0.0006231340003068908,
+    "wall_clock_seconds": 82.61528852900028,
+    "pipeline_time_seconds": 82.5942711380003,
+    "cache_access_seconds": 0,
+    "input_tokens": 203,
+    "output_tokens": 26,
+    "total_tokens": 229,
+    "token_source": "provider",
+    "estimated_cost_usd": null,
+    "charged_cost_usd": null,
+    "solver_status": "NOT_RUN",
+    "refinement_iterations": 0,
+    "final_iteration": 0,
+    "refinement_time_seconds": 0,
+    "cache_hit": false,
+    "initial_call_id": "4bb91d729ebfbd216590051c40c54f6c64d7053a7d8c660452de6652d21594eb",
+    "observable_convergence": true,
+    "convergence": "",
+    "timestamp": "2026-11-19T02:34:35.604915+00:00",
+    "campaign_id": "301f830d833670aec538771d704e1b1bdc5f43afd783784248e3a58abd1766e8",
+    "paired_checkpoint_reused": false
+  },
+  "attempts": [
+    {
+      "call": {
+        "provider": "ollama",
+        "model": "llama3.1:latest",
+        "base_url": "http://localhost:11434",
+        "prompt_version": "sat-v1",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Resuelve el problema de satisfacibilidad. Responde exclusivamente con JSON: {\"answer\":\"SAT\" o \"UNSAT\", \"explanation\":\"justificación breve\"}."
+          },
+          {
+            "role": "user",
+            "content": "Para un almuerzo puedes ofrecer estos platos y bebidas: sopa, ensalada, pasta, arroz, jugo, agua. Debes elegir al menos una de estas opciones: sopa o ensalada. No puedes elegir a la vez sopa y ensalada. Si eliges sopa, también debes elegir pasta. Si eliges ensalada, también debes elegir arroz. No puedes elegir a la vez pasta y jugo. No puedes elegir a la vez arroz y jugo. Debes elegir al menos una de estas opciones: jugo o agua. No puedes elegir agua. ¿Existe una selección que cumpla todas las reglas?"
+          }
+        ],
+        "parameters": {
+          "temperature": 0.0,
+          "max_tokens": 2048,
+          "seed": 20261118
+        },
+        "repeat": 0,
+        "problem_id": "sat_12",
+        "arm": "C",
+        "iteration": 0,
+        "call_id": "4bb91d729ebfbd216590051c40c54f6c64d7053a7d8c660452de6652d21594eb",
+        "raw": "{\"answer\":\"UNSAT\", \"explanation\":\"No se puede elegir agua, por lo tanto no hay solución\"}",
+        "model_size": "8.0B; Q4_K_M",
+        "reported_model": "llama3.1:latest",
+        "response_id": "",
+        "input_tokens": 203,
+        "output_tokens": 26,
+        "token_source": "provider",
+        "llm_time_seconds": 82.59364800399999,
+        "access_seconds": 82.59364800399999,
+        "cache_hit": false,
+        "estimated_cost_usd": null,
+        "charged_cost_usd": null,
+        "error_category": "",
+        "error_message": "",
+        "timestamp": "2026-11-19T02:34:35.583520+00:00"
+      },
+      "iteration": 0,
+      "predicted_status": "UNSAT",
+      "solver_status": "NOT_RUN",
+      "solver_time_seconds": 0.0,
+      "clauses": null,
+      "error_category": "",
+      "error_message": "",
+      "warnings": [],
+      "assignment": null,
+      "detectable_error": false,
+      "processing_seconds": 0.0006231340003068908,
+      "parse_validation_seconds": 0.0006231340003068908
+    }
+  ]
+}

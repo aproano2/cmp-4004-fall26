@@ -1,0 +1,36 @@
+{
+  "id": "sat_04",
+  "difficulty": "easy",
+  "prompt": "Para una muestra escolar puedes incluir estos materiales: carteles, maquetas, folletos, fotos. Debes elegir carteles. Si eliges carteles, también debes elegir maquetas. No puedes elegir a la vez maquetas y folletos. Debes elegir al menos una de estas opciones: folletos o fotos. No puedes elegir fotos. ¿Existe una selección que cumpla todas las reglas?",
+  "variables": {
+    "carteles": 1,
+    "maquetas": 2,
+    "folletos": 3,
+    "fotos": 4
+  },
+  "clauses": [
+    [
+      1
+    ],
+    [
+      -1,
+      2
+    ],
+    [
+      -2,
+      -3
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      -4
+    ]
+  ],
+  "ground_truth": {
+    "status": "UNSAT",
+    "witness": null,
+    "reasoning": "Los carteles obligan a incluir maquetas. Las maquetas excluyen los folletos. Como debes incluir folletos o fotos, las fotos son obligatorias. La última regla prohíbe elegir fotos, así que las reglas se contradicen."
+  }
+}
