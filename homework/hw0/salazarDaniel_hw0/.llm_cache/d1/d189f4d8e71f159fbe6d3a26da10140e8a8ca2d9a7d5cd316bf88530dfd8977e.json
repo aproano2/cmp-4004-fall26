@@ -1,0 +1,13 @@
+{
+  "text": "[echo backend] 73 chars received. This is NOT a model response.",
+  "backend": "echo",
+  "model": "qwen2.5:3b",
+  "prompt": "Name the author of the 1950 paper 'Computing Machinery and Intelligence'.",
+  "temperature": 0.0,
+  "seed": 0,
+  "elapsed": 1.160003012046218e-05,
+  "meta": {
+    "fake": true
+  },
+  "cached_at": "2026-08-30T22:01:10"
+}

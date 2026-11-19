@@ -1,0 +1,15 @@
+{
+  "text": "The author of the 1950 paper \"Computing Machinery and Intelligence\" is Alan Turing.",
+  "backend": "ollama",
+  "model": "qwen2.5:1.5b",
+  "prompt": "Name the author of the 1950 paper 'Computing Machinery and Intelligence'.",
+  "temperature": 0.0,
+  "seed": 0,
+  "elapsed": 3.7478500000433996,
+  "meta": {
+    "eval_count": 22,
+    "prompt_eval_count": 47,
+    "total_duration": 1702415500
+  },
+  "cached_at": "2026-08-30T22:06:22"
+}

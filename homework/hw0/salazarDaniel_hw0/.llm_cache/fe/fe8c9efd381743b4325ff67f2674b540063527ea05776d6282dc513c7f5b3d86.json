@@ -1,0 +1,15 @@
+{
+  "text": "```\n22, 36, 429, 441, 457, 502, 554, 579, 719, 842, 901, 915, 935, 941, 142, 260, 393, 496, 721\n```",
+  "backend": "ollama",
+  "model": "qwen2.5:1.5b",
+  "prompt": "Sort this list of integers in ascending order.\nList: [429, 842, 719, 496, 260, 721, 915, 22, 441, 142, 579, 155, 935, 457, 901, 502, 393, 554, 36, 941]\nReply with ONLY the sorted list as comma-separated integers inside a fenced code block. No explanation.",
+  "temperature": 0.0,
+  "seed": 0,
+  "elapsed": 8.957163299957756,
+  "meta": {
+    "eval_count": 96,
+    "prompt_eval_count": 157,
+    "total_duration": 6882924100
+  },
+  "cached_at": "2026-08-30T22:08:46"
+}

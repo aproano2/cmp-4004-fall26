@@ -1,0 +1,15 @@
+{
+  "text": "A heuristic is an intelligent but approximate strategy used to solve problems or find solutions more efficiently than through trial and error.",
+  "backend": "ollama",
+  "model": "qwen2.5:1.5b",
+  "prompt": "In one sentence: what is a heuristic in search?",
+  "temperature": 0.0,
+  "seed": 0,
+  "elapsed": 3.6523627000278793,
+  "meta": {
+    "eval_count": 24,
+    "prompt_eval_count": 40,
+    "total_duration": 1603933700
+  },
+  "cached_at": "2026-08-30T22:06:18"
+}

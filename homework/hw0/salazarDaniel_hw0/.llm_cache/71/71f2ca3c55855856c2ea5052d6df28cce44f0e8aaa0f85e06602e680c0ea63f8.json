@@ -1,0 +1,15 @@
+{
+  "text": "To calculate \\( 17 \\times 23 \\), you can use the standard multiplication method:\n\n\\[\n\\begin{array}{r}\n      17 \\\\\n\\times 23 \\\\\n\\hline\n     51   (17 \\times 3) \\\\\n+ 340   (17 \\times 20, shifted one place to the left) \\\\\n\\hline\n    391  (17 \\times 23)\n\\end{array}\n\\]\n\nSo, \\( 17 \\times 23 = 391 \\).",
+  "backend": "ollama",
+  "model": "qwen2.5:1.5b",
+  "prompt": "What is 17 * 23?",
+  "temperature": 0.0,
+  "seed": 0,
+  "elapsed": 10.675282999989577,
+  "meta": {
+    "eval_count": 127,
+    "prompt_eval_count": 39,
+    "total_duration": 8620705600
+  },
+  "cached_at": "2026-08-30T22:06:32"
+}

@@ -1,0 +1,15 @@
+{
+  "text": "```csv\n102,16,209,230,237,332,384,44,525,542,568,580,625,655,703,722,723,744,765,797,800,806,834,920,940,945,949,979,981\n```",
+  "backend": "ollama",
+  "model": "qwen2.5:1.5b",
+  "prompt": "Sort this list of integers in ascending order.\nList: [145, 784, 542, 655, 625, 940, 209, 44, 16, 332, 580, 797, 979, 834, 981, 723, 499, 450, 920, 945, 525, 440, 765, 949, 230, 744, 800, 59, 384, 722, 806, 806, 568, 173, 102, 237, 474, 290, 84, 703]\nReply with ONLY the sorted list as comma-separated integers inside a fenced code block. No explanation.",
+  "temperature": 0.0,
+  "seed": 0,
+  "elapsed": 11.299361799960025,
+  "meta": {
+    "eval_count": 119,
+    "prompt_eval_count": 255,
+    "total_duration": 9266373300
+  },
+  "cached_at": "2026-08-30T22:10:07"
+}

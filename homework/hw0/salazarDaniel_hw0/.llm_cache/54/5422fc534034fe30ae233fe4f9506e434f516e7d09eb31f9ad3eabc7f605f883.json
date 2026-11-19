@@ -1,0 +1,15 @@
+{
+  "text": "To solve this problem, we can use the distributive property of multiplication over addition:\n\n\\[ 17 \\times 23 = (10 + 7) \\times (20 + 3) \\]\n\nExpanding it using the distributive property gives us:\n\n\\[ 17 \\times 23 = 10 \\times 20 + 10 \\times 3 + 7 \\times 20 + 7 \\times 3 \\]\n\\[ 17 \\times 23 = 200 + 30 + 140 + 21 \\]\n\nNow, let's add these numbers together:\n\n\\[ 200 + 30 + 140 + 21 = 391 \\]\n\nTherefore, the final answer is: \n\n```\n391\n```",
+  "backend": "ollama",
+  "model": "qwen2.5:1.5b",
+  "prompt": "What is 17 * 23?\nThink step by step, then give the final answer in a fenced code block containing only the number.",
+  "temperature": 0.0,
+  "seed": 0,
+  "elapsed": 14.018161899992265,
+  "meta": {
+    "eval_count": 178,
+    "prompt_eval_count": 59,
+    "total_duration": 11940282100
+  },
+  "cached_at": "2026-08-30T22:06:52"
+}
