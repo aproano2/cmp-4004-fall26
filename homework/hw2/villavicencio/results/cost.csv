@@ -1,0 +1,5 @@
+arm,completion_tokens,correct,prompt_tokens,tokens_per_attempt,tokens_per_correct,wall_s_per_correct
+A — Hand,0,60,0,0.0,0.0,0.00042106953527157505
+B — Hybrid,49575,0,28308,1298.05,inf,inf
+B′ — Refinement,203099,0,214557,6960.933333333333,inf,inf
+C — Direct,3396,22,14064,291.0,793.6363636363636,7.478711999878711
