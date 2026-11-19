@@ -1,0 +1,11 @@
+{
+  "response": "{\"num_vars\": 30, \"clauses\": [[3*i + c + 1, 3*(i+10) + d + 1, 3*(i+20) + e + 1, -(3*i + d + 1), -(3*i + e + 1), -(3*(i+10) + c + 1)] for i in range(9) for c in range(3) for d in range(3) for e in range(3) if c != d and c != e and d != e] + [[3*i + c + 1, 3*(i+15) + d + 1, -(3*i + d + 1), -(3*(i+15) + c + 1)] for i in range(9) for c in range(3) for d in range(3) if c != d] + [[3*i + c + 1, 3*(i+20) + d + 1, -(3*i + d + 1), -(3*(i+20) + c + 1)] for i in range(9) for c in range(3) for d in range(3) if c != d]}",
+  "prompt_tokens": 773,
+  "completion_tokens": 269,
+  "done_reason": "stop",
+  "llm_time_s": 10.898169749882072,
+  "cached": false,
+  "model": "qwen2.5:3b",
+  "temperature": 0.7,
+  "seed": 1
+}

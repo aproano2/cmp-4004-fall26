@@ -1,0 +1,13 @@
+arm,difficulty,n,correct,accuracy,ci95_lo,ci95_hi
+A — Hand,easy,18,18,1.0,0.8241,1.0
+A — Hand,medium,21,21,1.0,0.8454,1.0
+A — Hand,hard,21,21,1.0,0.8454,1.0
+B — Hybrid,easy,18,0,0.0,0.0,0.1759
+B — Hybrid,medium,21,0,0.0,0.0,0.1546
+B — Hybrid,hard,21,0,0.0,0.0,0.1546
+B′ — Refinement,easy,18,0,0.0,0.0,0.1759
+B′ — Refinement,medium,21,0,0.0,0.0,0.1546
+B′ — Refinement,hard,21,0,0.0,0.0,0.1546
+C — Direct,easy,18,14,0.7778,0.5478,0.91
+C — Direct,medium,21,8,0.381,0.2075,0.5912
+C — Direct,hard,21,0,0.0,0.0,0.1546
