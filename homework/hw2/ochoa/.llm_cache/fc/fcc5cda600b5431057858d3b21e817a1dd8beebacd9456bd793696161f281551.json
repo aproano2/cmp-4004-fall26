@@ -1,0 +1,15 @@
+{
+  "text": "{\"Animation\": 4, \"Arrow\": 5, \"Bia\": 5, \"Birch\": 2, \"Cedar\": 1, \"Circle\": 4, \"Comedy\": 3, \"Dani\": 3, \"Diamond\": 5, \"Documentary\": 5, \"Elio\": 2, \"Gelato\": 1, \"Luz\": 1, \"Maple\": 3, \"Mystery\": 3, \"Nachos\": 4, \"Paz\": 3, \"Pine\": 1, \"Popcorn\": 1, \"Pretzel\": 4, \"Square\": 4, \"Star\": 4, \"Toffee\": 3, \"Walnut\": 5, \"Western\": 2}",
+  "backend": "ollama",
+  "model": "qwen2.5:7b",
+  "prompt": "You are solving a logic puzzle. Read all the clues carefully.\n\nAn open-air cinema runs five screens along a promenade. There are 5 positions numbered 1 to 5 from left to right. Each position has exactly one item from each list, and each listed item appears once. Projectionists: Bia, Dani, Elio, Luz, Paz. Genres: Animation, Comedy, Documentary, Mystery, Western. Snacks: Gelato, Nachos, Popcorn, Pretzel, Toffee. Symbols: Arrow, Circle, Diamond, Square, Star. Sign woods: Birch, Cedar, Maple, Pine, Walnut.\n1. Luz is in position 1.\n2. Elio is next to Luz.\n3. Paz is immediately to the right of Dani.\n4. Bia is somewhere to the right of Paz.\n5. Western is at the same position as Elio.\n6. Comedy is next to Western.\n7. Comedy is somewhere to the left of Western.\n8. Animation is immediately to the right of Mystery.\n9. Documentary is somewhere to the right of Animation.\n10. Nachos is at the same position as Animation.\n11. Toffee is immediately to the left of Nachos.\n12. Popcorn is somewhere to the left of Pretzel.\n13. Pretzel is somewhere to the left of Toffee.\n14. Star is at the same position as Pretzel.\n15. Circle is next to Star.\n16. Circle is somewhere to the left of Star.\n17. Arrow is immediately to the right of Square.\n18. Diamond is somewhere to the right of Arrow.\n19. Walnut is at the same position as Arrow.\n20. Birch is immediately to the left of Walnut.\n21. Cedar is somewhere to the left of Pine.\n22. Pine is somewhere to the left of Birch.\nFor every listed item, give its position number.\n\nRequired output format:\nVariables to report: Animation, Arrow, Bia, Birch, Cedar, Circle, Comedy, Dani, Diamond, Documentary, Elio, Gelato, Luz, Maple, Mystery, Nachos, Paz, Pine, Popcorn, Pretzel, Square, Star, Toffee, Walnut, Western\nPossible values: 1, 2, 3, 4, 5\nReply with ONE JSON object that maps every listed variable to its value, e.g. {\"Ana\": 1, \"Bruno\": 2}.\n\nReply with ONLY the JSON, no markdown and no extra text.",
+  "temperature": 0.7,
+  "seed": 0,
+  "elapsed": 4.247431200012215,
+  "meta": {
+    "eval_count": 171,
+    "prompt_eval_count": 550,
+    "total_duration": 2212644300
+  },
+  "cached_at": "2026-11-18T20:05:31"
+}

@@ -1,0 +1,314 @@
+{
+  "id": "ej-dificil-01",
+  "nivel": "dificil",
+  "familia": "einstein",
+  "enunciado": "Five houses stand in a row, numbered 1 to 5 from left to right. Ana, Bruno, Carla, Diego and Elena each live in a different house. Each house has a different color (red, green, blue, yellow, white), each person drinks a different drink (tea, coffee, milk, juice, water) and keeps a different pet (cat, dog, fish, bird, horse).\n1. Bruno lives in the red house.\n2. Carla keeps the dog.\n3. Coffee is drunk in the green house.\n4. The white house is immediately to the right of the green house.\n5. Milk is drunk in house 3.\n6. Ana lives in house 1.\n7. Ana lives next to the blue house.\n8. Diego drinks tea.\n9. The horse is kept next to the yellow house.\n10. Elena lives somewhere to the right of Diego.\n11. The water drinker keeps the cat.\n12. Carla lives in the white house.\n13. The juice drinker lives immediately to the right of the fish owner.\nFor each person, color, drink and pet, give the house number.",
+  "formato_respuesta": {
+    "variables": [
+      "Ana",
+      "Bruno",
+      "Carla",
+      "Diego",
+      "Elena",
+      "Red",
+      "Green",
+      "Blue",
+      "Yellow",
+      "White",
+      "Tea",
+      "Coffee",
+      "Milk",
+      "Juice",
+      "Water",
+      "Cat",
+      "Dog",
+      "Fish",
+      "Bird",
+      "Horse"
+    ],
+    "valores": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ]
+  },
+  "modelo_mano": {
+    "variables": {
+      "Ana": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "Bruno": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "Carla": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "Diego": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "Elena": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "Red": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "Green": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "Blue": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "Yellow": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "White": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "Tea": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "Coffee": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "Milk": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "Juice": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "Water": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "Cat": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "Dog": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "Fish": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "Bird": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "Horse": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    "constraints": [
+      {
+        "type": "alldiff",
+        "vars": [
+          "Ana",
+          "Bruno",
+          "Carla",
+          "Diego",
+          "Elena"
+        ]
+      },
+      {
+        "type": "alldiff",
+        "vars": [
+          "Red",
+          "Green",
+          "Blue",
+          "Yellow",
+          "White"
+        ]
+      },
+      {
+        "type": "alldiff",
+        "vars": [
+          "Tea",
+          "Coffee",
+          "Milk",
+          "Juice",
+          "Water"
+        ]
+      },
+      {
+        "type": "alldiff",
+        "vars": [
+          "Cat",
+          "Dog",
+          "Fish",
+          "Bird",
+          "Horse"
+        ]
+      },
+      {
+        "type": "eq",
+        "a": "Bruno",
+        "b": "Red"
+      },
+      {
+        "type": "eq",
+        "a": "Carla",
+        "b": "Dog"
+      },
+      {
+        "type": "eq",
+        "a": "Green",
+        "b": "Coffee"
+      },
+      {
+        "type": "offset",
+        "a": "White",
+        "b": "Green",
+        "k": 1
+      },
+      {
+        "type": "eq",
+        "a": "Milk",
+        "b": 3
+      },
+      {
+        "type": "eq",
+        "a": "Ana",
+        "b": 1
+      },
+      {
+        "type": "adj",
+        "a": "Ana",
+        "b": "Blue"
+      },
+      {
+        "type": "eq",
+        "a": "Diego",
+        "b": "Tea"
+      },
+      {
+        "type": "adj",
+        "a": "Horse",
+        "b": "Yellow"
+      },
+      {
+        "type": "gt",
+        "a": "Elena",
+        "b": "Diego"
+      },
+      {
+        "type": "eq",
+        "a": "Water",
+        "b": "Cat"
+      },
+      {
+        "type": "eq",
+        "a": "Carla",
+        "b": "White"
+      },
+      {
+        "type": "offset",
+        "a": "Juice",
+        "b": "Fish",
+        "k": 1
+      }
+    ]
+  },
+  "gold": {
+    "Ana": 1,
+    "Bruno": 3,
+    "Carla": 5,
+    "Diego": 2,
+    "Elena": 4,
+    "Red": 3,
+    "Green": 4,
+    "Blue": 2,
+    "Yellow": 1,
+    "White": 5,
+    "Tea": 2,
+    "Coffee": 4,
+    "Milk": 3,
+    "Juice": 5,
+    "Water": 1,
+    "Cat": 1,
+    "Dog": 5,
+    "Fish": 4,
+    "Bird": 3,
+    "Horse": 2
+  },
+  "verificacion_manual": "Ana=1 y Blue=2 (pistas 6 y 7). Verde y blanca son consecutivas y no pueden usar 1, 2 ni la 3 si la 3 es roja; probamos Green=3 (White=4) y choca con Milk=3 y Coffee=Green, así que Green=4, White=5, Coffee=4, Carla=5 con el perro. Red=3 con Bruno, Yellow=1. Diego toma té y no está en 3, 4 ni 5 por las bebidas: Diego=2, Elena=4. La casa 1 toma agua y tiene el gato (pista 11, la única bebida libre que encaja con 13); Fish=4, Juice=5, Horse=2 junto a la amarilla, Bird=3. Revisamos las 13 pistas con el gold y el solver confirma solución única.",
+  "fuente": "inventado (adaptado del acertijo de Einstein)"
+}

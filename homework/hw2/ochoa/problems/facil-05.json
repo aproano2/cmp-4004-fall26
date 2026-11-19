@@ -1,0 +1,85 @@
+{
+  "id": "facil-05",
+  "nivel": "facil",
+  "familia": "horario",
+  "enunciado": "A pottery workshop is scheduling demonstrations. Schedule these 8 activities in slots 1 to 8, with exactly one activity per slot: Center, Dry, Fire, Glaze, Pack, Sketch, Stamp, Trim.\n1. Center is scheduled immediately after Sketch.\n2. Stamp is scheduled immediately after Trim.\n3. Fire is scheduled immediately after Glaze.\n4. Pack is scheduled immediately after Fire.\n5. Trim is in slot 3.\n6. Center takes place before Trim.\n7. Dry is immediately after Stamp.\n8. Dry takes place before Glaze.\nFor each named activity, give its slot number.",
+  "formato_respuesta": {
+    "variables": ["Center", "Dry", "Fire", "Glaze", "Pack", "Sketch", "Stamp", "Trim"],
+    "valores": [1, 2, 3, 4, 5, 6, 7, 8]
+  },
+  "modelo_mano": {
+    "variables": {
+      "Center": [1, 2, 3, 4, 5, 6, 7, 8],
+      "Dry": [1, 2, 3, 4, 5, 6, 7, 8],
+      "Fire": [1, 2, 3, 4, 5, 6, 7, 8],
+      "Glaze": [1, 2, 3, 4, 5, 6, 7, 8],
+      "Pack": [1, 2, 3, 4, 5, 6, 7, 8],
+      "Sketch": [1, 2, 3, 4, 5, 6, 7, 8],
+      "Stamp": [1, 2, 3, 4, 5, 6, 7, 8],
+      "Trim": [1, 2, 3, 4, 5, 6, 7, 8]
+    },
+    "constraints": [
+      {
+        "type": "alldiff",
+        "vars": ["Center", "Dry", "Fire", "Glaze", "Pack", "Sketch", "Stamp", "Trim"]
+      },
+      {
+        "type": "offset",
+        "a": "Center",
+        "b": "Sketch",
+        "k": 1
+      },
+      {
+        "type": "offset",
+        "a": "Stamp",
+        "b": "Trim",
+        "k": 1
+      },
+      {
+        "type": "offset",
+        "a": "Fire",
+        "b": "Glaze",
+        "k": 1
+      },
+      {
+        "type": "offset",
+        "a": "Pack",
+        "b": "Fire",
+        "k": 1
+      },
+      {
+        "type": "eq",
+        "a": "Trim",
+        "b": 3
+      },
+      {
+        "type": "lt",
+        "a": "Center",
+        "b": "Trim"
+      },
+      {
+        "type": "offset",
+        "a": "Dry",
+        "b": "Stamp",
+        "k": 1
+      },
+      {
+        "type": "lt",
+        "a": "Dry",
+        "b": "Glaze"
+      }
+    ]
+  },
+  "gold": {
+    "Center": 2,
+    "Dry": 5,
+    "Fire": 7,
+    "Glaze": 6,
+    "Pack": 8,
+    "Sketch": 1,
+    "Stamp": 4,
+    "Trim": 3
+  },
+  "verificacion_manual": "Trim fija el inicio de su bloque en la franja 3. Las precedencias entre bloques y la ocupación de todas las franjas obligan a que el primer bloque empiece en 1 y que los demás lo sigan sin huecos. El orden interno de los bloques determina todas las franjas: Sketch → Center (1–2), Trim → Stamp (3–4), Dry (5–5), Glaze → Fire → Pack (6–8).",
+  "fuente": "Inventado para el HW2 con asistencia de Codex (ver AI_LOG.md)."
+}

@@ -1,0 +1,15 @@
+{
+  "text": "{\"Ana\": null, \"Bruno\": null, \"Cork\": null, \"Dawn\": 4, \"Desert\": 5, \"Eva\": 4, \"Forest\": 5, \"Glass\": 2, \"Hugo\": 3, \"Ivo\": 1, \"Lagoon\": 3, \"Linen\": 1, \"Nina\": 1, \"Oak\": 3, \"Steel\": 4, \"Storm\": 5, \"Vera\": 1}",
+  "backend": "ollama",
+  "model": "qwen2.5:3b",
+  "prompt": "You are solving a logic puzzle. Read all the clues carefully.\n\nA postcard show uses display windows along a corridor. There are 5 positions numbered 1 to 5 from left to right. Each position has exactly one item from each list, and each listed item appears once. Artists: Eva, Hugo, Ivo, Nina, Vera. Postcards: Dawn, Desert, Forest, Lagoon, Storm. Frames: Cork, Glass, Linen, Oak, Steel.\n1. Vera is in position 1.\n2. Hugo is next to Vera.\n3. Ivo is immediately to the right of Nina.\n4. Eva is somewhere to the right of Ivo.\n5. Lagoon is at the same position as Hugo.\n6. Dawn is next to Lagoon.\n7. Dawn is somewhere to the left of Lagoon.\n8. Storm is immediately to the right of Forest.\n9. Desert is somewhere to the right of Storm.\n10. Steel is at the same position as Storm.\n11. Oak is immediately to the left of Steel.\n12. Linen is somewhere to the left of Glass.\n13. Glass is somewhere to the left of Oak.\nFor every listed item, give its position number.\n\nRequired output format:\nVariables to report: Cork, Dawn, Desert, Eva, Forest, Glass, Hugo, Ivo, Lagoon, Linen, Nina, Oak, Steel, Storm, Vera\nPossible values: 1, 2, 3, 4, 5\nReply with ONE JSON object that maps every listed variable to its value, e.g. {\"Ana\": 1, \"Bruno\": 2}.\n\nReply with ONLY the JSON, no markdown and no extra text.",
+  "temperature": 0.7,
+  "seed": 2,
+  "elapsed": 7.278722900002322,
+  "meta": {
+    "eval_count": 111,
+    "prompt_eval_count": 384,
+    "total_duration": 5217201700
+  },
+  "cached_at": "2026-11-18T08:26:58"
+}

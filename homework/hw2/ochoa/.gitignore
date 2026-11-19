@@ -1,0 +1,6 @@
+# El .gitignore de la raíz ignora carpetas ocultas; la caché LLM es evidencia y se versiona.
+!.llm_cache/
+!.llm_cache/**
+# Datos y figuras FALSOS de prueba (datos_falsos.py): no son resultados.
+results/falso/
+fig/falso/

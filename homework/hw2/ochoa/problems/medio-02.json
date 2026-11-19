@@ -1,0 +1,116 @@
+{
+  "id": "medio-02",
+  "nivel": "medio",
+  "familia": "horario",
+  "enunciado": "A planetarium is setting up its outreach program. Schedule these 12 activities in slots 1 to 12, with exactly one activity per slot: Closing, Comets, Eclipses, Lobby, Meteors, Moon, Orbits, Photos, Questions, Survey, Tickets, Welcome.\n1. Lobby is scheduled immediately after Tickets.\n2. Welcome is scheduled immediately after Lobby.\n3. Eclipses is scheduled immediately after Orbits.\n4. Meteors is scheduled immediately after Comets.\n5. Moon is scheduled immediately after Meteors.\n6. Survey is scheduled immediately after Photos.\n7. Closing is scheduled immediately after Survey.\n8. Comets is in slot 6.\n9. Welcome takes place before Orbits.\n10. Eclipses takes place before Comets.\n11. Questions is immediately after Moon.\n12. Questions takes place before Photos.\nFor each named activity, give its slot number.",
+  "formato_respuesta": {
+    "variables": ["Closing", "Comets", "Eclipses", "Lobby", "Meteors", "Moon", "Orbits", "Photos", "Questions", "Survey", "Tickets", "Welcome"],
+    "valores": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+  },
+  "modelo_mano": {
+    "variables": {
+      "Closing": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+      "Comets": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+      "Eclipses": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+      "Lobby": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+      "Meteors": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+      "Moon": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+      "Orbits": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+      "Photos": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+      "Questions": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+      "Survey": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+      "Tickets": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+      "Welcome": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+    },
+    "constraints": [
+      {
+        "type": "alldiff",
+        "vars": ["Closing", "Comets", "Eclipses", "Lobby", "Meteors", "Moon", "Orbits", "Photos", "Questions", "Survey", "Tickets", "Welcome"]
+      },
+      {
+        "type": "offset",
+        "a": "Lobby",
+        "b": "Tickets",
+        "k": 1
+      },
+      {
+        "type": "offset",
+        "a": "Welcome",
+        "b": "Lobby",
+        "k": 1
+      },
+      {
+        "type": "offset",
+        "a": "Eclipses",
+        "b": "Orbits",
+        "k": 1
+      },
+      {
+        "type": "offset",
+        "a": "Meteors",
+        "b": "Comets",
+        "k": 1
+      },
+      {
+        "type": "offset",
+        "a": "Moon",
+        "b": "Meteors",
+        "k": 1
+      },
+      {
+        "type": "offset",
+        "a": "Survey",
+        "b": "Photos",
+        "k": 1
+      },
+      {
+        "type": "offset",
+        "a": "Closing",
+        "b": "Survey",
+        "k": 1
+      },
+      {
+        "type": "eq",
+        "a": "Comets",
+        "b": 6
+      },
+      {
+        "type": "lt",
+        "a": "Welcome",
+        "b": "Orbits"
+      },
+      {
+        "type": "lt",
+        "a": "Eclipses",
+        "b": "Comets"
+      },
+      {
+        "type": "offset",
+        "a": "Questions",
+        "b": "Moon",
+        "k": 1
+      },
+      {
+        "type": "lt",
+        "a": "Questions",
+        "b": "Photos"
+      }
+    ]
+  },
+  "gold": {
+    "Closing": 12,
+    "Comets": 6,
+    "Eclipses": 5,
+    "Lobby": 2,
+    "Meteors": 7,
+    "Moon": 8,
+    "Orbits": 4,
+    "Photos": 10,
+    "Questions": 9,
+    "Survey": 11,
+    "Tickets": 1,
+    "Welcome": 3
+  },
+  "verificacion_manual": "Comets fija el inicio de su bloque en la franja 6. Las precedencias entre bloques y la ocupación de todas las franjas obligan a que el primer bloque empiece en 1 y que los demás lo sigan sin huecos. El orden interno de los bloques determina todas las franjas: Tickets → Lobby → Welcome (1–3), Orbits → Eclipses (4–5), Comets → Meteors → Moon (6–8), Questions (9–9), Photos → Survey → Closing (10–12).",
+  "fuente": "Inventado para el HW2 con asistencia de Codex (ver AI_LOG.md)."
+}

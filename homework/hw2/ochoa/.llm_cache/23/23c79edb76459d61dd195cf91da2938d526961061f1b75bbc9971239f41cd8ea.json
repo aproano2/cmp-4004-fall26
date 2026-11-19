@@ -1,0 +1,15 @@
+{
+  "text": "{\n  \"Blend\": 4,\n  \"Boil\": 11,\n  \"Chill\": 13,\n  \"Chop\": 2,\n  \"Inventory\": 3,\n  \"Label\": 6,\n  \"Lock\": 8,\n  \"Log\": 9,\n  \"Peel\": 1,\n  \"Report\": 12,\n  \"Season\": 10,\n  \"Stack\": 14,\n  \"Strain\": 5,\n  \"Wash\": 7,\n  \"Wipe\": 10\n}",
+  "backend": "ollama",
+  "model": "qwen2.5:3b",
+  "prompt": "You are solving a logic puzzle. Read all the clues carefully.\n\nA community kitchen is scheduling a series of stations for an inspection. Schedule these 15 activities in slots 1 to 15, with exactly one activity per slot: Blend, Boil, Chill, Chop, Inventory, Label, Lock, Log, Peel, Report, Season, Stack, Strain, Wash, Wipe.\n1. Wash is scheduled immediately after Inventory.\n2. Chop is scheduled immediately after Peel.\n3. Blend is scheduled immediately after Chop.\n4. Strain is scheduled immediately after Blend.\n5. Season is scheduled immediately after Boil.\n6. Chill is scheduled immediately after Label.\n7. Stack is scheduled immediately after Chill.\n8. Wipe is scheduled immediately after Log.\n9. Lock is scheduled immediately after Wipe.\n10. Report is scheduled immediately after Lock.\n11. Log is scheduled after slot 11.\n12. Wash takes place before Peel.\n13. Strain takes place before Boil.\n14. Season takes place before Label.\nFor each named activity, give its slot number.\n\nRequired output format:\nVariables to report: Blend, Boil, Chill, Chop, Inventory, Label, Lock, Log, Peel, Report, Season, Stack, Strain, Wash, Wipe\nPossible values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15\nReply with ONE JSON object that maps every listed variable to its value, e.g. {\"Ana\": 1, \"Bruno\": 2}.\n\nReply with ONLY the JSON, no markdown and no extra text.",
+  "temperature": 0.7,
+  "seed": 0,
+  "elapsed": 10.717219800004386,
+  "meta": {
+    "eval_count": 121,
+    "prompt_eval_count": 395,
+    "total_duration": 8672589400
+  },
+  "cached_at": "2026-11-18T10:35:51"
+}
