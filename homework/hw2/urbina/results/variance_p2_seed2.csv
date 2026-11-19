@@ -1,0 +1,158 @@
+id,arm,level,result,signal,wall_clock_s,llm_time_s,solver_time_s,tokens_in,tokens_out,model_duration_s,cached,model,seed,temperature,answer,error,model_output
+q08,B,easy,incorrect,none,4.040241,4.034462,4.2e-05,295,100,1.947758,False,qwen2.5:3b,2,0.0,"{""Coin"": ""4"", ""Aspen"": ""2"", ""Bell"": ""1"", ""Drum"": ""3""}",,"{
+  ""variables"": {
+    ""Aspen"": [""1"", ""2"", ""3"", ""4""],
+    ""Bell"": [""1"", ""2"", ""3"", ""4""],
+    ""Coin"": [""4""],
+    ""Drum"": [""1"", ""2"", ""3"", ""4""]
+  },
+  ""constraints"": [
+    {""type"": ""alldiff"", ""vars"": [""Aspen"", ""Bell"", ""Coin"", ""Drum""]}
+  ]
+}"
+q08,C,easy,incorrect,none,2.76818,2.763058,0.0,128,33,0.700658,False,qwen2.5:3b,2,0.0,"{""Aspen"": ""3"", ""Bell"": ""2"", ""Coin"": ""4"", ""Drum"": ""1""}",,"{
+  ""Aspen"": ""3"",
+  ""Bell"": ""2"",
+  ""Coin"": ""4"",
+  ""Drum"": ""1""
+}"
+q09,B,easy,correct,none,4.997606,4.993175,2.9e-05,304,155,2.920055,False,qwen2.5:3b,2,0.0,"{""Birch"": ""red"", ""Cedar"": ""blue"", ""Delta"": ""green"", ""Elm"": ""red""}",,"{""variables"":{""Birch"":[""red""],""Cedar"":[""red"",""blue"",""green""],""Delta"":[""red"",""blue"",""green""],""Elm"":[""red"",""blue"",""green""]},""constraints"":[{""type"":""alldiff"",""vars"":[""Birch"",""Cedar""]},{""type"":""eq"",""a"":""Birch"",""b"":""red""},{""type"":""neq"",""a"":""Cedar"",""b"":""Birch""},{""type"":""neq"",""a"":""Cedar"",""b"":""green""},{""type"":""neq"",""a"":""Delta"",""b"":""Cedar""},{""type"":""neq"",""a"":""Delta"",""b"":""red""},{""type"":""neq"",""a"":""Elm"",""b"":""Delta""},{""type"":""neq"",""a"":""Elm"",""b"":""blue""}]}"
+q09,C,easy,incorrect,none,2.800502,2.796367,0.0,137,35,0.750656,False,qwen2.5:3b,2,0.0,"{""Birch"": ""red"", ""Cedar"": ""green"", ""Delta"": ""blue"", ""Elm"": ""red""}",,"{
+  ""Birch"": ""red"",
+  ""Cedar"": ""green"",
+  ""Delta"": ""blue"",
+  ""Elm"": ""red""
+}"
+q10,B,medium,incorrect,none,7.220331,7.214186,6.9e-05,312,279,5.159084,False,qwen2.5:3b,2,0.0,"{""Elm"": ""5"", ""Birch"": ""2"", ""Cedar"": ""3"", ""Alder"": ""1"", ""Dune"": ""4""}",,"{
+  ""variables"": {
+    ""Alder"": [""1"", ""2"", ""3"", ""4"", ""5""],
+    ""Birch"": [""1"", ""2"", ""3"", ""4"", ""5""],
+    ""Cedar"": [""1"", ""2"", ""3"", ""4"", ""5""],
+    ""Dune"": [""1"", ""2"", ""3"", ""4"", ""5""],
+    ""Elm"": [""1"", ""2"", ""3"", ""4"", ""5""]
+  },
+  ""constraints"": [
+    {""type"": ""alldiff"", ""vars"": [""Alder"", ""Birch"", ""Cedar"", ""Dune"", ""Elm""]},
+    {""type"": ""neq"", ""a"": ""Cedar"", ""b"": ""1""},
+    {""type"": ""neq"", ""a"": ""Cedar"", ""b"": ""4""},
+    {""type"": ""neq"", ""a"": ""Birch"", ""b"": ""1""},
+    {""type"": ""neq"", ""a"": ""Birch"", ""b"": ""4""},
+    {""type"": ""neq"", ""a"": ""Alder"", ""b"": ""4""},
+    {""type"": ""eq"", ""a"": ""Elm"", ""b"": ""5""}
+  ]
+}"
+q10,C,medium,incorrect,none,2.93969,2.93377,0.0,145,44,0.890099,False,qwen2.5:3b,2,0.0,"{""Alder"": 3, ""Birch"": 2, ""Cedar"": 5, ""Dune"": 1, ""Elm"": 5}",,"{
+  ""Alder"": 3,
+  ""Birch"": 2,
+  ""Cedar"": 5,
+  ""Dune"": 1,
+  ""Elm"": 5
+}"
+q11,B,medium,no_answer,unsat,5.149051,5.141573,2.5e-05,321,164,3.082008,False,qwen2.5:3b,2,0.0,null,no solution,"{
+  ""variables"": {
+    ""A"": [""1"", ""2"", ""3""],
+    ""B"": [""1"", ""2"", ""3""],
+    ""C"": [""1"", ""2"", ""3""],
+    ""D"": [""1"", ""2"", ""3""],
+    ""E"": [""1"", ""2"", ""3""],
+    ""F"": [""1"", ""2"", ""3""]
+  },
+  ""constraints"": [
+    {""type"": ""alldiff"", ""vars"": [""A"", ""B"", ""C"", ""D"", ""E"", ""F""]},
+    {""type"": ""eq"", ""a"": ""A"", ""b"": ""1""},
+    {""type"": ""eq"", ""a"": ""B"", ""b"": ""2""}
+  ]
+}"
+q11,C,medium,correct,none,3.124735,3.119166,0.0,154,45,1.053241,False,qwen2.5:3b,2,0.0,"{""A"": 1, ""B"": 2, ""C"": 3, ""D"": 2, ""E"": 3, ""F"": 1}",,"{
+  ""A"": 1,
+  ""B"": 2,
+  ""C"": 3,
+  ""D"": 2,
+  ""E"": 3,
+  ""F"": 1
+}"
+q12,B,medium,no_answer,unsat,10.38874,10.380896,6e-06,344,457,8.360737,False,qwen2.5:3b,2,0.0,null,no solution,"{
+  ""variables"": {
+    ""Ava"": [1],
+    ""Ben"": [2, 3],
+    ""Cai"": [2, 3],
+    ""Dia"": [1, 2, 3],
+    ""Eli"": [1, 2, 3],
+    ""Fox"": [1, 2, 3]
+  },
+  ""constraints"": [
+    {""type"": ""alldiff"", ""vars"": [""Ava"", ""Ben"", ""Cai"", ""Dia"", ""Eli"", ""Fox""]},
+    {""type"": ""eq"", ""a"": ""Ava"", ""b"": 1},
+    {""type"": ""neq"", ""a"": ""Ava"", ""b"": 2},
+    {""type"": ""neq"", ""a"": ""Dia"", ""b"": 1},
+    {""type"": ""neq"", ""a"": ""Dia"", ""b"": 2},
+    {""type"": ""neq"", ""a"": ""Eli"", ""b"": 1},
+    {""type"": ""neq"", ""a"": ""Eli"", ""b"": 2},
+    {""type"": ""neq"", ""a"": ""Fox"", ""b"": 2},
+    {""type"": ""neq"", ""a"": ""Fox"", ""b"": 3},
+    {""type"": ""eq"", ""a"": ""Dia"", ""b"": 1},
+    {""type"": ""neq"", ""a"": ""Ben"", ""b"": 3},
+    {""type"": ""neq"", ""a"": ""Eli"", ""b"": 1},
+    {""type"": ""neq"", ""a"": ""Eli"", ""b"": 2},
+    {""type"": ""neq"", ""a"": ""Fox"", ""b"": 1},
+    {""type"": ""neq"", ""a"": ""Fox"", ""b"": 2},
+    {""type"": ""neq"", ""a"": ""Fox"", ""b"": 3},
+    {""type"": ""alldiff"", ""vars"": [""Ava"", ""Dia"", ""Ben"", ""Eli"", ""Cai"", ""Fox""]}
+  ]
+}"
+q12,C,medium,incorrect,none,3.067687,3.063312,0.0,177,48,1.01613,False,qwen2.5:3b,2,0.0,"{""Ava"": 1, ""Ben"": 3, ""Cai"": 2, ""Dia"": 3, ""Eli"": 1, ""Fox"": 2}",,"{
+  ""Ava"": 1,
+  ""Ben"": 3,
+  ""Cai"": 2,
+  ""Dia"": 3,
+  ""Eli"": 1,
+  ""Fox"": 2
+}"
+q13,B,hard,no_answer,unsat,10.43192,10.424699,1e-05,368,436,8.374464,False,qwen2.5:3b,2,0.0,null,no solution,"{
+  ""variables"": {
+    ""MorningA"": [""1""],
+    ""MorningB"": [""2""],
+    ""MorningC"": [""3""],
+    ""MorningD"": [""4""],
+    ""AfternoonE"": [""1"", ""2"", ""3"", ""4""],
+    ""AfternoonF"": [""1"", ""2"", ""3"", ""4""],
+    ""AfternoonG"": [""1"", ""2"", ""3"", ""4""]
+  },
+  ""constraints"": [
+    {""type"": ""alldiff"", ""vars"": [""MorningA"", ""MorningB"", ""MorningC"", ""MorningD""]},
+    {""type"": ""eq"", ""a"": ""AfternoonE"", ""b"": ""1""},
+    {""type"": ""eq"", ""a"": ""AfternoonE"", ""b"": ""2""},
+    {""type"": ""eq"", ""a"": ""AfternoonE"", ""b"": ""3""},
+    {""type"": ""eq"", ""a"": ""AfternoonE"", ""b"": ""4""},
+    {""type"": ""neq"", ""a"": ""AfternoonE"", ""b"": ""MorningA""},
+    {""type"": ""neq"", ""a"": ""AfternoonE"", ""b"": ""MorningB""},
+    {""type"": ""neq"", ""a"": ""AfternoonE"", ""b"": ""MorningC""},
+    {""type"": ""neq"", ""a"": ""AfternoonE"", ""b"": ""MorningD""},
+    {""type"": ""alldiff"", ""vars"": [""AfternoonF"", ""MorningB"", ""MorningC"", ""MorningD""]},
+    {""type"": ""neq"", ""a"": ""AfternoonF"", ""b"": ""MorningB""},
+    {""type"": ""neq"", ""a"": ""AfternoonF"", ""b"": ""MorningC""},
+    {""type"": ""neq"", ""a"": ""AfternoonF"", ""b"": ""MorningD""},
+    {""type"": ""alldiff"", ""vars"": [""AfternoonG"", ""MorningA"", ""MorningC"", ""MorningD""]}
+  ]
+}"
+q13,C,hard,incorrect,none,3.240962,3.23276,0.0,201,61,1.206937,False,qwen2.5:3b,2,0.0,"{""MorningA"": 1, ""MorningB"": 2, ""MorningC"": 3, ""MorningD"": null, ""AfternoonE"": 4, ""AfternoonF"": 4, ""AfternoonG"": 4}",,"{
+  ""MorningA"": 1,
+  ""MorningB"": 2,
+  ""MorningC"": 3,
+  ""MorningD"": null,
+  ""AfternoonE"": 4,
+  ""AfternoonF"": 4,
+  ""AfternoonG"": 4
+}"
+q14,B,hard,no_answer,unsat,5.435554,5.428966,3.4e-05,379,179,3.380571,False,qwen2.5:3b,2,0.0,null,no solution,"{""variables"":{""R1C1"":[1],""R1C2"":[2],""R1C3"":[3],""R2C1"":[2],""R2C2"":[3],""R2C3"":[1],""R3C1"":[3],""R3C2"":[1],""R3C3"":[2]}, ""constraints"":[{""type"":""alldiff"",""vars"":[""R1C1"",""R2C1"",""R3C1"",""R1C2"",""R2C2"",""R3C2"",""R1C3"",""R2C3"",""R3C3""]},{""type"":""alldiff"",""vars"":[""R1C1"",""R2C1"",""R3C1"",""R1C2"",""R2C2"",""R3C2"",""R1C3"",""R2C3"",""R3C3""]}]}"
+q14,C,hard,incorrect,none,3.78167,3.77495,0.0,212,93,1.737596,False,qwen2.5:3b,2,0.0,"{""R1C1"": 1, ""R1C2"": 2, ""R1C3"": 3, ""R2C1"": 2, ""R2C2"": 3, ""R2C3"": 1, ""R3C1"": 3, ""R3C2"": 2, ""R3C3"": 1}",,"{
+  ""R1C1"": 1,
+  ""R1C2"": 2,
+  ""R1C3"": 3,
+  ""R2C1"": 2,
+  ""R2C2"": 3,
+  ""R2C3"": 1,
+  ""R3C1"": 3,
+  ""R3C2"": 2,
+  ""R3C3"": 1
+}"

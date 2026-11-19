@@ -1,0 +1,56 @@
+id,arm,level,result,signal,wall_clock_s,llm_time_s,solver_time_s,tokens_in,tokens_out,model_duration_s,cached,model,seed,temperature,answer,error,model_output
+q15,B,easy,incorrect,none,4.295502,4.289716,3.6e-05,296,105,2.213818,False,qwen2.5:3b,2,0.0,"{""Atlas"": ""2"", ""Botany"": ""4"", ""Chemistry"": ""1"", ""Drama"": ""3""}",,"{""variables"":{""Atlas"":[""1"",""2""],""Botany"":[""1"",""2"",""3"",""4""],""Chemistry"":[""1"",""2"",""3"",""4""],""Drama"":[""1"",""2"",""3"",""4""]},""constraints"":[{""type"":""alldiff"",""vars"":[""Atlas"",""Botany"",""Chemistry"",""Drama""]},{""type"":""eq"",""a"":""Atlas"",""b"":""2""},{""type"":""eq"",""a"":""Botany"",""b"":""4""}],""allowedValues"":{""Chemistry"":[""1"",""3"",""4""]}}"
+q15,C,easy,correct,none,2.809106,2.803327,0.0,129,34,0.780084,False,qwen2.5:3b,2,0.0,"{""Atlas"": 2, ""Botany"": 4, ""Chemistry"": 1, ""Drama"": 3}",,"{
+  ""Atlas"": 2,
+  ""Botany"": 4,
+  ""Chemistry"": 1,
+  ""Drama"": 3
+}"
+q16,B,easy,correct,none,4.03588,4.02949,3.4e-05,293,105,2.010554,False,qwen2.5:3b,2,0.0,"{""Arm"": 3, ""Camera"": 1, ""Drone"": 4, ""Engine"": 2}",,"{""variables"":{""Arm"":[1,2,3,4],""Camera"":[1,2,3,4],""Drone"":[1,2,3,4],""Engine"":[1,2,3,4]}, ""constraints"":[{""type"":""alldiff"",""vars"":[""Arm"",""Camera"",""Drone"",""Engine""]},{""type"":""eq"",""a"":""Arm"",""b"":3},{""type"":""eq"",""a"":""Camera"",""b"":1},{""type"":""neq"",""a"":""Drone"",""b"":2}]}"
+q16,C,easy,correct,none,2.7035,2.69742,0.0,126,32,0.67043,False,qwen2.5:3b,2,0.0,"{""Arm"": 3, ""Camera"": 1, ""Drone"": 4, ""Engine"": 2}",,"{
+  ""Arm"": 3,
+  ""Camera"": 1,
+  ""Drone"": 4,
+  ""Engine"": 2
+}"
+q17,B,medium,incorrect,none,5.147825,5.14252,3e-05,305,160,3.106714,False,qwen2.5:3b,2,0.0,"{""Aster"": ""4"", ""Birch"": ""1"", ""Cedar"": ""5"", ""Dahlia"": ""3"", ""Elm"": ""2""}",,"{""variables"":{""Aster"":[""1"",""2"",""3"",""4"",""5""],""Birch"":[""1"",""2"",""3"",""4"",""5""],""Cedar"":[""1"",""2"",""3"",""4"",""5""],""Dahlia"":[""1"",""2"",""3"",""4"",""5""],""Elm"":[""1"",""2"",""3"",""4"",""5""]},""constraints"":[{""type"":""alldiff"",""vars"":[""Aster"",""Birch"",""Cedar"",""Dahlia"",""Elm""]},{""type"":""eq"",""a"":""Aster"",""b"":""4""},{""type"":""eq"",""a"":""Birch"",""b"":""1""},{""type"":""eq"",""a"":""Cedar"",""b"":""5""}],""additional_constraints"":[{""type"":""neq"",""a"":""Dahlia"",""b"":""3""}]}"
+q17,C,medium,correct,none,2.969529,2.964056,0.0,138,45,0.931314,False,qwen2.5:3b,2,0.0,"{""Aster"": 4, ""Birch"": 1, ""Cedar"": 5, ""Dahlia"": 2, ""Elm"": 3}",,"{
+  ""Aster"": 4,
+  ""Birch"": 1,
+  ""Cedar"": 5,
+  ""Dahlia"": 2,
+  ""Elm"": 3
+}"
+q18,B,medium,correct,none,5.634647,5.629664,3.2e-05,318,191,3.588461,False,qwen2.5:3b,2,0.0,"{""Ava"": 5, ""Bela"": 2, ""Cora"": 4, ""Dina"": 1, ""Eli"": 6, ""Fina"": 3}",,"{""variables"":{""Ava"":[1,2,3,4,5,6],""Bela"":[1,2,3,4,5,6],""Cora"":[1,2,3,4,5,6],""Dina"":[1,2,3,4,5,6],""Eli"":[1,2,3,4,5,6],""Fina"":[1,2,3,4,5,6]},""constraints"":[{""type"":""alldiff"",""vars"":[""Ava"",""Bela"",""Cora"",""Dina"",""Eli"",""Fina""]},{""type"":""eq"",""a"":""Ava"",""b"":5},{""type"":""eq"",""a"":""Bela"",""b"":2},{""type"":""eq"",""a"":""Cora"",""b"":4},{""type"":""eq"",""a"":""Dina"",""b"":1},{""type"":""neq"",""a"":""Eli"",""b"":3}]}"
+q18,C,medium,incorrect,none,3.252182,3.248265,0.0,151,55,1.177579,False,qwen2.5:3b,2,0.0,"{""Ava"": 5, ""Bela"": 2, ""Cora"": 4, ""Dina"": 1, ""Eli"": 3, ""Fina"": 6}",,"```json
+{
+  ""Ava"": 5,
+  ""Bela"": 2,
+  ""Cora"": 4,
+  ""Dina"": 1,
+  ""Eli"": 3,
+  ""Fina"": 6
+}
+```"
+q19,B,hard,no_answer,unsat,6.085491,6.080979,6e-06,320,216,4.035506,False,qwen2.5:3b,2,0.0,null,no solution,"{""variables"":{""Amber"":[3],""Bronze"":[7],""Coral"":[1],""Diamond"":[5],""Emerald"":[2],""Flint"":[4,6],""Garnet"":[4,6]},""constraints"":[{""type"":""alldiff"",""vars"":[""Amber"",""Bronze""]},{""type"":""alldiff"",""vars"":[""Coral"",""Diamond""]},{""type"":""alldiff"",""vars"":[""Emerald"",""Flint""]},{""type"":""alldiff"",""vars"":[""Amber"",""Emerald""]},{""type"":""alldiff"",""vars"":[""Bronze"",""Coral""]},{""type"":""alldiff"",""vars"":[""Diamond"",""Garnet""]},{""type"":""alldiff"",""vars"":[""Flint"",""Garnet""]},{""type"":""eq"",""a"":""Amber"",""b"":""3""},{""type"":""eq"",""a"":""Bronze"",""b"":""7""},{""type"":""eq"",""a"":""Coral"",""b"":""1""},{""type"":""eq"",""a"":""Diamond"",""b"":""5""},{""type"":""eq"",""a"":""Emerald"",""b"":""2""}]}"
+q19,C,hard,correct,none,3.313651,3.309284,0.0,153,63,1.257425,False,qwen2.5:3b,2,0.0,"{""Amber"": 3, ""Bronze"": 7, ""Coral"": 1, ""Diamond"": 5, ""Emerald"": 2, ""Flint"": 6, ""Garnet"": 4}",,"```json
+{
+  ""Amber"": 3,
+  ""Bronze"": 7,
+  ""Coral"": 1,
+  ""Diamond"": 5,
+  ""Emerald"": 2,
+  ""Flint"": 6,
+  ""Garnet"": 4
+}
+```"
+q20,B,hard,incorrect,none,7.197645,7.193528,3.2e-05,342,272,5.126593,False,qwen2.5:3b,2,0.0,"{""Aquila"": ""8"", ""Boreal"": ""3"", ""Cygnus"": ""6"", ""Draco"": ""1"", ""Equuleus"": ""7"", ""Fornax"": ""2"", ""Gemini"": ""5""}",,"{""variables"":{""Aquila"":[""1"",""2"",""3"",""4"",""5"",""6"",""7"",""8""],""Boreal"":[""1"",""2"",""3"",""4"",""5"",""6"",""7"",""8""],""Cygnus"":[""1"",""2"",""3"",""4"",""5"",""6"",""7"",""8""],""Draco"":[""1"",""2"",""3"",""4"",""5"",""6"",""7"",""8""],""Equuleus"":[""1"",""2"",""3"",""4"",""5"",""6"",""7"",""8""],""Fornax"":[""1"",""2"",""3"",""4"",""5"",""6"",""7"",""8""],""Gemini"":[""1"",""2"",""3"",""4"",""5"",""6"",""7"",""8""]},""constraints"":[{""type"":""alldiff"",""vars"":[""Aquila"",""Boreal"",""Cygnus"",""Draco"",""Equuleus"",""Fornax"",""Gemini""]},{""type"":""eq"",""a"":""Aquila"",""b"":""8""},{""type"":""eq"",""a"":""Boreal"",""b"":""3""},{""type"":""eq"",""a"":""Cygnus"",""b"":""6""},{""type"":""eq"",""a"":""Draco"",""b"":""1""},{""type"":""eq"",""a"":""Equuleus"",""b"":""7""},{""type"":""eq"",""a"":""Fornax"",""b"":""2""},{""type"":""neq"",""a"":""Gemini"",""b"":""4""}]}"
+q20,C,hard,incorrect,none,3.310555,3.30519,0.0,175,62,1.250318,False,qwen2.5:3b,2,0.0,"{""Aquila"": 8, ""Boreal"": 3, ""Cygnus"": 6, ""Draco"": 1, ""Equuleus"": 7, ""Fornax"": 2, ""Gemini"": 5}",,"{
+  ""Aquila"": 8,
+  ""Boreal"": 3,
+  ""Cygnus"": 6,
+  ""Draco"": 1,
+  ""Equuleus"": 7,
+  ""Fornax"": 2,
+  ""Gemini"": 5
+}"
