@@ -1,0 +1,119 @@
+{
+  "id": "medio-01",
+  "nivel": "medio",
+  "familia": "einstein",
+  "enunciado": "Exhibitors line up in a science hall. There are 4 positions numbered 1 to 4 from left to right. Each position has exactly one item from each list, and each listed item appears once. Exhibitors: Ada, Mina, Noel, Teo. Panel colors: Amber, Coral, Ivory, Teal. Projects: Fossils, Optics, Robots, Sound.\n1. Ada is immediately to the right of Noel.\n2. Mina is in position 3.\n3. Teo is somewhere to the right of Mina.\n4. Noel is somewhere to the left of Mina.\n5. Coral is at the same position as Ada.\n6. Amber is next to Coral.\n7. Amber is somewhere to the left of Coral.\n8. Ivory is immediately to the right of Teal.\n9. Sound is at the same position as Ivory.\n10. Robots is immediately to the left of Sound.\n11. Optics is somewhere to the left of Fossils.\n12. Fossils is somewhere to the left of Robots.\nFor every listed item, give its position number.",
+  "formato_respuesta": {
+    "variables": ["Ada", "Amber", "Coral", "Fossils", "Ivory", "Mina", "Noel", "Optics", "Robots", "Sound", "Teal", "Teo"],
+    "valores": [1, 2, 3, 4]
+  },
+  "modelo_mano": {
+    "variables": {
+      "Ada": [1, 2, 3, 4],
+      "Amber": [1, 2, 3, 4],
+      "Coral": [1, 2, 3, 4],
+      "Fossils": [1, 2, 3, 4],
+      "Ivory": [1, 2, 3, 4],
+      "Mina": [1, 2, 3, 4],
+      "Noel": [1, 2, 3, 4],
+      "Optics": [1, 2, 3, 4],
+      "Robots": [1, 2, 3, 4],
+      "Sound": [1, 2, 3, 4],
+      "Teal": [1, 2, 3, 4],
+      "Teo": [1, 2, 3, 4]
+    },
+    "constraints": [
+      {
+        "type": "alldiff",
+        "vars": ["Ada", "Mina", "Noel", "Teo"]
+      },
+      {
+        "type": "alldiff",
+        "vars": ["Amber", "Coral", "Ivory", "Teal"]
+      },
+      {
+        "type": "alldiff",
+        "vars": ["Fossils", "Optics", "Robots", "Sound"]
+      },
+      {
+        "type": "offset",
+        "a": "Ada",
+        "b": "Noel",
+        "k": 1
+      },
+      {
+        "type": "eq",
+        "a": "Mina",
+        "b": 3
+      },
+      {
+        "type": "gt",
+        "a": "Teo",
+        "b": "Mina"
+      },
+      {
+        "type": "lt",
+        "a": "Noel",
+        "b": "Mina"
+      },
+      {
+        "type": "eq",
+        "a": "Coral",
+        "b": "Ada"
+      },
+      {
+        "type": "adj",
+        "a": "Amber",
+        "b": "Coral"
+      },
+      {
+        "type": "lt",
+        "a": "Amber",
+        "b": "Coral"
+      },
+      {
+        "type": "offset",
+        "a": "Ivory",
+        "b": "Teal",
+        "k": 1
+      },
+      {
+        "type": "eq",
+        "a": "Sound",
+        "b": "Ivory"
+      },
+      {
+        "type": "offset",
+        "a": "Sound",
+        "b": "Robots",
+        "k": 1
+      },
+      {
+        "type": "lt",
+        "a": "Optics",
+        "b": "Fossils"
+      },
+      {
+        "type": "lt",
+        "a": "Fossils",
+        "b": "Robots"
+      }
+    ]
+  },
+  "gold": {
+    "Ada": 2,
+    "Amber": 1,
+    "Coral": 2,
+    "Fossils": 2,
+    "Ivory": 4,
+    "Mina": 3,
+    "Noel": 1,
+    "Optics": 1,
+    "Robots": 3,
+    "Sound": 4,
+    "Teal": 3,
+    "Teo": 4
+  },
+  "verificacion_manual": "Mina ocupa la posición 3, así que la pareja consecutiva Noel–Ada queda en 1 y 2, y Teo ocupa la posición 4. Coral hereda 2 de Ada, Amber es su vecino izquierdo y Teal, Ivory llenan lo que queda según las pistas de orden. Sound hereda 4 de Ivory y Robots queda en 3. Optics y Fossils llenan 1 y 2 en ese orden.",
+  "fuente": "Inventado para el HW2 con asistencia de Codex (ver AI_LOG.md)."
+}

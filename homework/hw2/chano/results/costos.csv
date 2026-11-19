@@ -1,0 +1,5 @@
+proveedor,modelo_equivalente,brazo,intentos,correctas,tokens_totales,usd_total,usd_por_correcta,segundos_totales,segundos_por_correcta,fuente,fecha_consulta
+together,Qwen3.5 9B,A,63,63,0,0.00000000,0.00000000,0.44,0.01,https://www.together.ai/pricing,2026-11-18
+together,Qwen3.5 9B,B,63,3,120080,0.02452904,0.00817635,1720.98,573.66,https://www.together.ai/pricing,2026-11-18
+together,Qwen3.5 9B,Bp,63,6,611288,0.11993160,0.01998860,4342.96,723.83,https://www.together.ai/pricing,2026-11-18
+together,Qwen3.5 9B,C,63,3,31414,0.00587854,0.00195951,508.33,169.44,https://www.together.ai/pricing,2026-11-18

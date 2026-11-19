@@ -1,0 +1,74 @@
+{
+  "id": "facil-01",
+  "nivel": "facil",
+  "familia": "einstein",
+  "enunciado": "Three houses stand in a row, numbered 1 to 3 from left to right. Mateo, Sofía and Lucas each live in a different house. Each house has a different color: red, yellow or blue.\n1. Mateo lives in the red house.\n2. Sofía lives immediately to the right of Mateo.\n3. Lucas lives in house 3.\n4. The blue house is immediately to the right of the yellow house.\nFor each person and color, give the house number.",
+  "formato_respuesta": {
+  "variables": [
+    "Mateo",
+    "Sofía",
+    "Lucas",
+    "Red",
+    "Yellow",
+    "Blue"
+  ],
+  "valores": [1, 2, 3]
+},
+
+  "modelo_mano": {
+    "variables": {
+  "Mateo": [1, 2, 3],
+  "Sofía": [1, 2, 3],
+  "Lucas": [1, 2, 3],
+  "Red": [1, 2, 3],
+  "Yellow": [1, 2, 3],
+  "Blue": [1, 2, 3]
+},
+
+    
+"constraints": [
+  {
+    "type": "alldiff",
+    "vars": ["Mateo", "Sofía", "Lucas"]
+  },
+  {
+    "type": "alldiff",
+    "vars": ["Red", "Yellow", "Blue"]
+  },
+  {
+    "type": "eq",
+    "a": "Mateo",
+    "b": "Red"
+  },
+  {
+    "type": "offset",
+    "a": "Sofía",
+    "b": "Mateo",
+    "k": 1
+  },
+  {
+    "type": "eq",
+    "a": "Lucas",
+    "b": 3
+  },
+  {
+    "type": "offset",
+    "a": "Blue",
+    "b": "Yellow",
+    "k": 1
+  }
+]
+  },
+  
+"gold": {
+  "Mateo": 1,
+  "Sofía": 2,
+  "Lucas": 3,
+  "Red": 1,
+  "Yellow": 2,
+  "Blue": 3
+},
+  
+"verificacion_manual": "Lucas vive en la casa 3. Como Sofia esta inmediatamente a la derecha de Mateo, Mateo no puede estar en la casa 2 porque Sofia ocuparia la casa de Lucas; por eso Mateo=1 y Sofia=2. Mateo vive en la casa roja, entonces Red=1. Como la casa azul esta inmediatamente a la derecha de la amarilla y todos los colores son distintos, Yellow=2 y Blue=3. Todas las variables quedan determinadas, por lo que la solucion es unica.",
+  "fuente": "inventado"
+}

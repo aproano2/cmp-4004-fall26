@@ -1,0 +1,15 @@
+{
+  "text": "{\"Rim\": \"red\", \"Ford\": \"green\", \"Gorge\": \"blue\", \"Dune\": \"blue\", \"Marsh\": \"red\", \"Cliff\": \"green\"}",
+  "backend": "ollama",
+  "model": "qwen2.5:7b",
+  "prompt": "You are solving a logic puzzle. Read all the clues carefully.\n\nA trail map shows six areas of a canyon. Color each region with red, green or blue. A region pair separated by a dash denotes a direct link. Linked regions must have different colors. The links work both ways. The regions are Cliff, Dune, Ford, Gorge, Marsh, Rim.\n1. Rim is red.\n2. Ford is green.\n3. Ford–Gorge, Ford–Marsh, Ford–Rim.\n4. Gorge–Rim.\n5. Dune–Ford, Dune–Gorge, Dune–Marsh.\n6. Cliff–Dune, Cliff–Marsh.\nFor each named region, give its color.\n\nRequired output format:\nVariables to report: Rim, Ford, Gorge, Dune, Marsh, Cliff\nPossible values: red, green, blue\nReply with ONE JSON object that maps every listed variable to its value, e.g. {\"Ana\": 1, \"Bruno\": 2}.\n\nReply with ONLY the JSON, no markdown and no extra text.",
+  "temperature": 0.7,
+  "seed": 2,
+  "elapsed": 2.542967299988959,
+  "meta": {
+    "eval_count": 41,
+    "prompt_eval_count": 253,
+    "total_duration": 508931700
+  },
+  "cached_at": "2026-11-18T20:03:14"
+}

@@ -1,0 +1,15 @@
+{
+  "text": "{\"Mateo\": 1, \"Sofía\": 2, \"Lucas\": 3, \"Red\": 1, \"Yellow\": 2, \"Blue\": 3}",
+  "backend": "ollama",
+  "model": "qwen2.5:7b",
+  "prompt": "You are solving a logic puzzle. Read all the clues carefully.\n\nThree houses stand in a row, numbered 1 to 3 from left to right. Mateo, Sofía and Lucas each live in a different house. Each house has a different color: red, yellow or blue.\n1. Mateo lives in the red house.\n2. Sofía lives immediately to the right of Mateo.\n3. Lucas lives in house 3.\n4. The blue house is immediately to the right of the yellow house.\nFor each person and color, give the house number.\n\nRequired output format:\nVariables to report: Mateo, Sofía, Lucas, Red, Yellow, Blue\nPossible values: 1, 2, 3\nReply with ONE JSON object that maps every listed variable to its value, e.g. {\"Ana\": 1, \"Bruno\": 2}.\n\nReply with ONLY the JSON, no markdown and no extra text.",
+  "temperature": 0.7,
+  "seed": 0,
+  "elapsed": 11.493983799999114,
+  "meta": {
+    "eval_count": 41,
+    "prompt_eval_count": 223,
+    "total_duration": 9406129600
+  },
+  "cached_at": "2026-11-18T20:02:54"
+}

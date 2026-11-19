@@ -1,0 +1,15 @@
+{
+  "text": "{\"Azure\": 4, \"Baggage\": 5, \"Bruno\": 1, \"Camera\": 2, \"Clock\": 1, \"Crane\": 1, \"Cream\": 3, \"Dining\": 6, \"Eagle\": 2, \"Elsa\": 3, \"Falcon\": 2, \"Heron\": 5, \"Ivan\": 4, \"Lantern\": 4, \"Lina\": 5, \"Mail\": 2, \"Mara\": 6, \"Observation\": 5, \"Olive\": 2, \"Pink\": 3, \"Radio\": 1, \"Rust\": 4, \"Sleeper\": 4, \"Swan\": 5, \"Trunk\": 5}",
+  "backend": "ollama",
+  "model": "qwen2.5:7b",
+  "prompt": "You are solving a logic puzzle. Read all the clues carefully.\n\nA railway museum orders five carriages along a straight platform. There are 5 positions numbered 1 to 5 from left to right. Each position has exactly one item from each list, and each listed item appears once. Guides: Bruno, Elsa, Ivan, Lina, Mara. Carriage types: Baggage, Dining, Mail, Observation, Sleeper. Paint colors: Azure, Cream, Olive, Pink, Rust. Exhibits: Camera, Clock, Lantern, Radio, Trunk. Bird emblems: Crane, Eagle, Falcon, Heron, Swan.\n1. Mara is immediately to the right of Bruno.\n2. Elsa is in position 3.\n3. Ivan is somewhere to the right of Elsa.\n4. Bruno is somewhere to the left of Elsa.\n5. Ivan is somewhere to the left of Lina.\n6. Dining is at the same position as Mara.\n7. Mail is next to Dining.\n8. Mail is somewhere to the left of Dining.\n9. Baggage is immediately to the right of Sleeper.\n10. Observation is somewhere to the right of Baggage.\n11. Pink is at the same position as Baggage.\n12. Azure is immediately to the left of Pink.\n13. Cream is somewhere to the left of Rust.\n14. Rust is somewhere to the left of Azure.\n15. Clock is at the same position as Rust.\n16. Radio is next to Clock.\n17. Radio is somewhere to the left of Clock.\n18. Trunk is immediately to the right of Lantern.\n19. Camera is somewhere to the right of Trunk.\n20. Swan is at the same position as Trunk.\n21. Crane is immediately to the left of Swan.\n22. Eagle is somewhere to the left of Falcon.\n23. Falcon is somewhere to the left of Crane.\nFor every listed item, give its position number.\n\nRequired output format:\nVariables to report: Azure, Baggage, Bruno, Camera, Clock, Crane, Cream, Dining, Eagle, Elsa, Falcon, Heron, Ivan, Lantern, Lina, Mail, Mara, Observation, Olive, Pink, Radio, Rust, Sleeper, Swan, Trunk\nPossible values: 1, 2, 3, 4, 5\nReply with ONE JSON object that maps every listed variable to its value, e.g. {\"Ana\": 1, \"Bruno\": 2}.\n\nReply with ONLY the JSON, no markdown and no extra text.",
+  "temperature": 0.7,
+  "seed": 0,
+  "elapsed": 4.310508399998071,
+  "meta": {
+    "eval_count": 171,
+    "prompt_eval_count": 560,
+    "total_duration": 2288389800
+  },
+  "cached_at": "2026-11-18T20:06:08"
+}

@@ -1,0 +1,210 @@
+{
+  "id": "dificil-07",
+  "nivel": "dificil",
+  "familia": "einstein",
+  "enunciado": "A railway museum orders five carriages along a straight platform. There are 5 positions numbered 1 to 5 from left to right. Each position has exactly one item from each list, and each listed item appears once. Guides: Bruno, Elsa, Ivan, Lina, Mara. Carriage types: Baggage, Dining, Mail, Observation, Sleeper. Paint colors: Azure, Cream, Olive, Pink, Rust. Exhibits: Camera, Clock, Lantern, Radio, Trunk. Bird emblems: Crane, Eagle, Falcon, Heron, Swan.\n1. Mara is immediately to the right of Bruno.\n2. Elsa is in position 3.\n3. Ivan is somewhere to the right of Elsa.\n4. Bruno is somewhere to the left of Elsa.\n5. Ivan is somewhere to the left of Lina.\n6. Dining is at the same position as Mara.\n7. Mail is next to Dining.\n8. Mail is somewhere to the left of Dining.\n9. Baggage is immediately to the right of Sleeper.\n10. Observation is somewhere to the right of Baggage.\n11. Pink is at the same position as Baggage.\n12. Azure is immediately to the left of Pink.\n13. Cream is somewhere to the left of Rust.\n14. Rust is somewhere to the left of Azure.\n15. Clock is at the same position as Rust.\n16. Radio is next to Clock.\n17. Radio is somewhere to the left of Clock.\n18. Trunk is immediately to the right of Lantern.\n19. Camera is somewhere to the right of Trunk.\n20. Swan is at the same position as Trunk.\n21. Crane is immediately to the left of Swan.\n22. Eagle is somewhere to the left of Falcon.\n23. Falcon is somewhere to the left of Crane.\nFor every listed item, give its position number.",
+  "formato_respuesta": {
+    "variables": ["Azure", "Baggage", "Bruno", "Camera", "Clock", "Crane", "Cream", "Dining", "Eagle", "Elsa", "Falcon", "Heron", "Ivan", "Lantern", "Lina", "Mail", "Mara", "Observation", "Olive", "Pink", "Radio", "Rust", "Sleeper", "Swan", "Trunk"],
+    "valores": [1, 2, 3, 4, 5]
+  },
+  "modelo_mano": {
+    "variables": {
+      "Azure": [1, 2, 3, 4, 5],
+      "Baggage": [1, 2, 3, 4, 5],
+      "Bruno": [1, 2, 3, 4, 5],
+      "Camera": [1, 2, 3, 4, 5],
+      "Clock": [1, 2, 3, 4, 5],
+      "Crane": [1, 2, 3, 4, 5],
+      "Cream": [1, 2, 3, 4, 5],
+      "Dining": [1, 2, 3, 4, 5],
+      "Eagle": [1, 2, 3, 4, 5],
+      "Elsa": [1, 2, 3, 4, 5],
+      "Falcon": [1, 2, 3, 4, 5],
+      "Heron": [1, 2, 3, 4, 5],
+      "Ivan": [1, 2, 3, 4, 5],
+      "Lantern": [1, 2, 3, 4, 5],
+      "Lina": [1, 2, 3, 4, 5],
+      "Mail": [1, 2, 3, 4, 5],
+      "Mara": [1, 2, 3, 4, 5],
+      "Observation": [1, 2, 3, 4, 5],
+      "Olive": [1, 2, 3, 4, 5],
+      "Pink": [1, 2, 3, 4, 5],
+      "Radio": [1, 2, 3, 4, 5],
+      "Rust": [1, 2, 3, 4, 5],
+      "Sleeper": [1, 2, 3, 4, 5],
+      "Swan": [1, 2, 3, 4, 5],
+      "Trunk": [1, 2, 3, 4, 5]
+    },
+    "constraints": [
+      {
+        "type": "alldiff",
+        "vars": ["Bruno", "Elsa", "Ivan", "Lina", "Mara"]
+      },
+      {
+        "type": "alldiff",
+        "vars": ["Baggage", "Dining", "Mail", "Observation", "Sleeper"]
+      },
+      {
+        "type": "alldiff",
+        "vars": ["Azure", "Cream", "Olive", "Pink", "Rust"]
+      },
+      {
+        "type": "alldiff",
+        "vars": ["Camera", "Clock", "Lantern", "Radio", "Trunk"]
+      },
+      {
+        "type": "alldiff",
+        "vars": ["Crane", "Eagle", "Falcon", "Heron", "Swan"]
+      },
+      {
+        "type": "offset",
+        "a": "Mara",
+        "b": "Bruno",
+        "k": 1
+      },
+      {
+        "type": "eq",
+        "a": "Elsa",
+        "b": 3
+      },
+      {
+        "type": "gt",
+        "a": "Ivan",
+        "b": "Elsa"
+      },
+      {
+        "type": "lt",
+        "a": "Bruno",
+        "b": "Elsa"
+      },
+      {
+        "type": "lt",
+        "a": "Ivan",
+        "b": "Lina"
+      },
+      {
+        "type": "eq",
+        "a": "Dining",
+        "b": "Mara"
+      },
+      {
+        "type": "adj",
+        "a": "Mail",
+        "b": "Dining"
+      },
+      {
+        "type": "lt",
+        "a": "Mail",
+        "b": "Dining"
+      },
+      {
+        "type": "offset",
+        "a": "Baggage",
+        "b": "Sleeper",
+        "k": 1
+      },
+      {
+        "type": "gt",
+        "a": "Observation",
+        "b": "Baggage"
+      },
+      {
+        "type": "eq",
+        "a": "Pink",
+        "b": "Baggage"
+      },
+      {
+        "type": "offset",
+        "a": "Pink",
+        "b": "Azure",
+        "k": 1
+      },
+      {
+        "type": "lt",
+        "a": "Cream",
+        "b": "Rust"
+      },
+      {
+        "type": "lt",
+        "a": "Rust",
+        "b": "Azure"
+      },
+      {
+        "type": "eq",
+        "a": "Clock",
+        "b": "Rust"
+      },
+      {
+        "type": "adj",
+        "a": "Radio",
+        "b": "Clock"
+      },
+      {
+        "type": "lt",
+        "a": "Radio",
+        "b": "Clock"
+      },
+      {
+        "type": "offset",
+        "a": "Trunk",
+        "b": "Lantern",
+        "k": 1
+      },
+      {
+        "type": "gt",
+        "a": "Camera",
+        "b": "Trunk"
+      },
+      {
+        "type": "eq",
+        "a": "Swan",
+        "b": "Trunk"
+      },
+      {
+        "type": "offset",
+        "a": "Swan",
+        "b": "Crane",
+        "k": 1
+      },
+      {
+        "type": "lt",
+        "a": "Eagle",
+        "b": "Falcon"
+      },
+      {
+        "type": "lt",
+        "a": "Falcon",
+        "b": "Crane"
+      }
+    ]
+  },
+  "gold": {
+    "Azure": 3,
+    "Baggage": 4,
+    "Bruno": 1,
+    "Camera": 5,
+    "Clock": 2,
+    "Crane": 3,
+    "Cream": 1,
+    "Dining": 2,
+    "Eagle": 1,
+    "Elsa": 3,
+    "Falcon": 2,
+    "Heron": 5,
+    "Ivan": 4,
+    "Lantern": 3,
+    "Lina": 5,
+    "Mail": 1,
+    "Mara": 2,
+    "Observation": 5,
+    "Olive": 5,
+    "Pink": 4,
+    "Radio": 1,
+    "Rust": 2,
+    "Sleeper": 3,
+    "Swan": 4,
+    "Trunk": 4
+  },
+  "verificacion_manual": "Elsa ocupa la posición 3, así que la pareja consecutiva Bruno–Mara queda en 1 y 2, y Ivan y Lina ocupan las posiciones restantes en ese orden. Dining hereda 2 de Mara, Mail es su vecino izquierdo y Sleeper, Baggage, Observation llenan lo que queda según las pistas de orden. Pink hereda 4 de Baggage y Azure queda en 3. Cream y Rust llenan 1 y 2 en ese orden y Olive queda en 5. Clock hereda 2 de Rust, Radio es su vecino izquierdo y Lantern, Trunk, Camera llenan lo que queda según las pistas de orden. Swan hereda 4 de Trunk y Crane queda en 3. Eagle y Falcon llenan 1 y 2 en ese orden y Heron queda en 5.",
+  "fuente": "Inventado para el HW2 con asistencia de Codex (ver AI_LOG.md)."
+}

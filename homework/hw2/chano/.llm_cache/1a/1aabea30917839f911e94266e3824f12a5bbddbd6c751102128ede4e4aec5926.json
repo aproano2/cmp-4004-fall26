@@ -1,0 +1,15 @@
+{
+  "text": "{\n  \"Closing\": 12,\n  \"Comets\": 6,\n  \"Eclipses\": 7,\n  \"Lobby\": 2,\n  \"Meteors\": 8,\n  \"Moon\": 9,\n  \"Orbits\": 5,\n  \"Photos\": 4,\n  \"Questions\": 10,\n  \"Survey\": 3,\n  \"Tickets\": 1,\n  \"Welcome\": 2\n}",
+  "backend": "ollama",
+  "model": "qwen2.5:3b",
+  "prompt": "You are solving a logic puzzle. Read all the clues carefully.\n\nA planetarium is setting up its outreach program. Schedule these 12 activities in slots 1 to 12, with exactly one activity per slot: Closing, Comets, Eclipses, Lobby, Meteors, Moon, Orbits, Photos, Questions, Survey, Tickets, Welcome.\n1. Lobby is scheduled immediately after Tickets.\n2. Welcome is scheduled immediately after Lobby.\n3. Eclipses is scheduled immediately after Orbits.\n4. Meteors is scheduled immediately after Comets.\n5. Moon is scheduled immediately after Meteors.\n6. Survey is scheduled immediately after Photos.\n7. Closing is scheduled immediately after Survey.\n8. Comets is in slot 6.\n9. Welcome takes place before Orbits.\n10. Eclipses takes place before Comets.\n11. Questions is immediately after Moon.\n12. Questions takes place before Photos.\nFor each named activity, give its slot number.\n\nRequired output format:\nVariables to report: Closing, Comets, Eclipses, Lobby, Meteors, Moon, Orbits, Photos, Questions, Survey, Tickets, Welcome\nPossible values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12\nReply with ONE JSON object that maps every listed variable to its value, e.g. {\"Ana\": 1, \"Bruno\": 2}.\n\nReply with ONLY the JSON, no markdown and no extra text.",
+  "temperature": 0.7,
+  "seed": 1,
+  "elapsed": 7.94962680000026,
+  "meta": {
+    "eval_count": 97,
+    "prompt_eval_count": 362,
+    "total_duration": 5903602700
+  },
+  "cached_at": "2026-11-18T08:26:05"
+}

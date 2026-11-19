@@ -1,0 +1,127 @@
+problema_id,nivel,n_vars,n_restricciones,brazo,repeticion,semilla,resultado,categoria_error,detectable,iteraciones,tiempo_total_s,tiempo_llm_s,tiempo_solver_s,tokens_entrada,tokens_salida,llamadas_llm,cache,modelo,estado_solver,respuesta,detalle
+facil-01,facil,6,6,B,0,0,correcto,,,1,0.001,15.48,6e-05,985,261,1,si,qwen2.5:3b,unica,"{""Blue"": 3, ""Lucas"": 3, ""Mateo"": 1, ""Red"": 1, ""Sofía"": 2, ""Yellow"": 2}",
+facil-01,facil,6,6,Bp,0,0,correcto,,,1,0.001,15.48,6e-05,985,261,1,si,qwen2.5:3b,unica,"{""Blue"": 3, ""Lucas"": 3, ""Mateo"": 1, ""Red"": 1, ""Sofía"": 2, ""Yellow"": 2}",
+facil-01,facil,6,6,B,1,1,correcto,,,1,0.001,5.345,4.9e-05,985,276,1,si,qwen2.5:3b,multiple,"{""Blue"": 3, ""Lucas"": 3, ""Mateo"": 1, ""Red"": 1, ""Sofía"": 2, ""Yellow"": 2}","The model has MORE THAN ONE solution, so some clue is missing or too weak. Two solutions differ in: Blue, Yellow."
+facil-01,facil,6,6,Bp,1,1,correcto,,,4,0.002,21.999,0.000198,4918,1104,4,si,qwen2.5:3b,multiple,"{""Blue"": 3, ""Lucas"": 3, ""Mateo"": 1, ""Red"": 1, ""Sofía"": 2, ""Yellow"": 2}","The model has MORE THAN ONE solution, so some clue is missing or too weak. Two solutions differ in: Blue, Yellow."
+facil-01,facil,6,6,B,2,2,sin_respuesta,sobre_restringido,si,1,0.001,5.185,3.3e-05,985,286,1,si,qwen2.5:3b,sin_solucion,,no hubo respuesta
+facil-01,facil,6,6,Bp,2,2,incorrecto,problema_errado,no,4,0.002,21.353,0.000144,5034,1212,4,si,qwen2.5:3b,unica,"{""Blue"": 2, ""Lucas"": 3, ""Mateo"": 1, ""Red"": 1, ""Sofía"": 2, ""Yellow"": 3}","Yellow: dio 3, era 2; Blue: dio 2, era 3"
+facil-02,facil,6,6,B,0,0,sin_respuesta,sintaxis,si,1,25.408,25.406,0.0,989,319,1,no,qwen2.5:3b,,,no hubo respuesta
+facil-02,facil,6,6,Bp,0,0,sin_respuesta,sintaxis,si,4,109.083,109.071,0.0,5129,1388,4,no,qwen2.5:3b,,,no hubo respuesta
+facil-02,facil,6,6,B,1,1,sin_respuesta,sintaxis,si,1,24.894,24.892,0.0,989,318,1,no,qwen2.5:3b,,,no hubo respuesta
+facil-02,facil,6,6,Bp,1,1,incorrecto,problema_errado,no,3,43.208,43.2,0.00015,3788,1007,3,no,qwen2.5:3b,unica,"{""Interview"": 5, ""Jingle"": 1, ""News"": 3, ""Quiz"": 6, ""Traffic"": 2, ""Weather"": 4}","Interview: dio 5, era 2; Jingle: dio 1, era 4; News: dio 3, era 6"
+facil-02,facil,6,6,B,2,2,sin_respuesta,sintaxis,si,1,5.526,5.524,0.0,989,318,1,no,qwen2.5:3b,,,no hubo respuesta
+facil-02,facil,6,6,Bp,2,2,incorrecto,problema_errado,no,3,17.187,17.179,0.000122,3788,1007,3,no,qwen2.5:3b,unica,"{""Interview"": 5, ""Jingle"": 1, ""News"": 3, ""Quiz"": 6, ""Traffic"": 2, ""Weather"": 4}","Interview: dio 5, era 2; Jingle: dio 1, era 4; News: dio 3, era 6"
+facil-03,facil,6,11,B,0,0,sin_respuesta,sintaxis,si,1,0.0,6.854,0.0,1015,448,1,si,qwen2.5:3b,,,no hubo respuesta
+facil-03,facil,6,11,Bp,0,0,sin_respuesta,aridad_alcance,si,4,0.002,29.87,0.0,5637,1975,4,si,qwen2.5:3b,,,no hubo respuesta
+facil-03,facil,6,11,B,1,1,sin_respuesta,sintaxis,si,1,0.0,7.69,0.0,1015,522,1,si,qwen2.5:3b,,,no hubo respuesta
+facil-03,facil,6,11,Bp,1,1,sin_respuesta,sintaxis,si,4,0.001,32.261,0.0,5767,2088,4,si,qwen2.5:3b,,,no hubo respuesta
+facil-03,facil,6,11,B,2,2,sin_respuesta,aridad_alcance,si,1,0.0,6.991,0.0,1015,461,1,si,qwen2.5:3b,,,no hubo respuesta
+facil-03,facil,6,11,Bp,2,2,sin_respuesta,aridad_alcance,si,4,0.001,30.318,0.0,5687,2016,4,si,qwen2.5:3b,,,no hubo respuesta
+facil-04,facil,8,10,B,0,0,sin_respuesta,sintaxis,si,1,0.0,6.483,0.0,1050,404,1,si,qwen2.5:3b,,,no hubo respuesta
+facil-04,facil,8,10,Bp,0,0,sin_respuesta,sobre_restringido,si,4,0.003,29.252,0.000101,5714,1911,4,si,qwen2.5:3b,sin_solucion,,no hubo respuesta
+facil-04,facil,8,10,B,1,1,sin_respuesta,sobre_restringido,si,1,0.001,6.797,2.8e-05,1050,410,1,si,qwen2.5:3b,sin_solucion,,no hubo respuesta
+facil-04,facil,8,10,Bp,1,1,sin_respuesta,sobre_restringido,si,4,0.003,26.72,0.000101,5553,1640,4,si,qwen2.5:3b,sin_solucion,,no hubo respuesta
+facil-04,facil,8,10,B,2,2,sin_respuesta,sintaxis,si,1,0.0,7.906,0.0,1050,510,1,si,qwen2.5:3b,,,no hubo respuesta
+facil-04,facil,8,10,Bp,2,2,sin_respuesta,sobre_restringido,si,4,0.004,37.555,7e-05,6192,2639,4,si,qwen2.5:3b,sin_solucion,,no hubo respuesta
+facil-05,facil,8,9,B,0,0,sin_respuesta,sintaxis,si,1,0.0,7.511,0.0,1025,500,1,si,qwen2.5:3b,,,no hubo respuesta
+facil-05,facil,8,9,Bp,0,0,correcto,,,3,0.002,23.599,8.4e-05,4240,1565,3,si,qwen2.5:3b,unica,"{""Center"": 2, ""Dry"": 5, ""Fire"": 7, ""Glaze"": 6, ""Pack"": 8, ""Sketch"": 1, ""Stamp"": 4, ""Trim"": 3}",
+facil-05,facil,8,9,B,1,1,correcto,,,1,0.0,7.94,5.3e-05,1025,482,1,si,qwen2.5:3b,unica,"{""Center"": 2, ""Dry"": 5, ""Fire"": 7, ""Glaze"": 6, ""Pack"": 8, ""Sketch"": 1, ""Stamp"": 4, ""Trim"": 3}",
+facil-05,facil,8,9,Bp,1,1,correcto,,,1,0.0,7.94,5.3e-05,1025,482,1,si,qwen2.5:3b,unica,"{""Center"": 2, ""Dry"": 5, ""Fire"": 7, ""Glaze"": 6, ""Pack"": 8, ""Sketch"": 1, ""Stamp"": 4, ""Trim"": 3}",
+facil-05,facil,8,9,B,2,2,sin_respuesta,sintaxis,si,1,0.0,7.499,0.0,1025,500,1,si,qwen2.5:3b,,,no hubo respuesta
+facil-05,facil,8,9,Bp,2,2,correcto,,,2,0.001,15.367,9.9e-05,2597,1032,2,si,qwen2.5:3b,unica,"{""Center"": 2, ""Dry"": 5, ""Fire"": 7, ""Glaze"": 6, ""Pack"": 8, ""Sketch"": 1, ""Stamp"": 4, ""Trim"": 3}",
+facil-06,facil,8,18,B,0,0,sin_respuesta,aridad_alcance,si,1,0.0,8.9,0.0,1055,626,1,si,qwen2.5:3b,,,no hubo respuesta
+facil-06,facil,8,18,Bp,0,0,sin_respuesta,aridad_alcance,si,4,0.001,37.614,0.0,6248,2504,4,si,qwen2.5:3b,,,no hubo respuesta
+facil-06,facil,8,18,B,1,1,sin_respuesta,sintaxis,si,1,0.0,7.893,0.0,1055,537,1,si,qwen2.5:3b,,,no hubo respuesta
+facil-06,facil,8,18,Bp,1,1,sin_respuesta,sintaxis,si,4,0.001,34.094,0.0,6074,2290,4,si,qwen2.5:3b,,,no hubo respuesta
+facil-06,facil,8,18,B,2,2,sin_respuesta,aridad_alcance,si,1,0.0,9.348,0.0,1055,665,1,si,qwen2.5:3b,,,no hubo respuesta
+facil-06,facil,8,18,Bp,2,2,sin_respuesta,aridad_alcance,si,4,0.001,39.568,0.0,6437,2768,4,si,qwen2.5:3b,,,no hubo respuesta
+facil-07,facil,6,7,B,0,0,sin_respuesta,sintaxis,si,1,0.0,4.849,0.0,1011,260,1,si,qwen2.5:3b,,,no hubo respuesta
+facil-07,facil,6,7,Bp,0,0,sin_respuesta,sobre_restringido,si,4,0.003,21.332,0.000153,5020,1171,4,si,qwen2.5:3b,sin_solucion,,no hubo respuesta
+facil-07,facil,6,7,B,1,1,sin_respuesta,sobre_restringido,si,1,0.001,4.826,3.8e-05,1011,261,1,si,qwen2.5:3b,sin_solucion,,no hubo respuesta
+facil-07,facil,6,7,Bp,1,1,sin_respuesta,sobre_restringido,si,4,0.003,22.371,0.000139,5070,1249,4,si,qwen2.5:3b,sin_solucion,,no hubo respuesta
+facil-07,facil,6,7,B,2,2,sin_respuesta,sintaxis,si,1,0.0,5.639,0.0,1011,313,1,si,qwen2.5:3b,,,no hubo respuesta
+facil-07,facil,6,7,Bp,2,2,sin_respuesta,sintaxis,si,4,0.002,21.989,0.0,5124,1252,4,si,qwen2.5:3b,,,no hubo respuesta
+medio-01,medio,12,15,B,0,0,sin_respuesta,sintaxis,si,1,0.0,9.354,0.0,1132,658,1,si,qwen2.5:3b,,,no hubo respuesta
+medio-01,medio,12,15,Bp,0,0,sin_respuesta,sobre_restringido,si,4,0.005,39.666,9.7e-05,6719,2809,4,si,qwen2.5:3b,sin_solucion,,no hubo respuesta
+medio-01,medio,12,15,B,1,1,sin_respuesta,sobre_restringido,si,1,0.002,9.419,5.2e-05,1132,651,1,si,qwen2.5:3b,sin_solucion,,no hubo respuesta
+medio-01,medio,12,15,Bp,1,1,sin_respuesta,sobre_restringido,si,4,0.008,38.012,0.000193,6604,2604,4,si,qwen2.5:3b,sin_solucion,,no hubo respuesta
+medio-01,medio,12,15,B,2,2,sin_respuesta,sintaxis,si,1,0.0,9.168,0.0,1132,642,1,si,qwen2.5:3b,,,no hubo respuesta
+medio-01,medio,12,15,Bp,2,2,sin_respuesta,sintaxis,si,4,0.001,48.259,0.0,7282,3597,4,si,qwen2.5:3b,,,no hubo respuesta
+medio-02,medio,12,13,B,0,0,sin_respuesta,sintaxis,si,1,0.0,12.71,0.0,1124,950,1,si,qwen2.5:3b,,,no hubo respuesta
+medio-02,medio,12,13,Bp,0,0,correcto,,,2,0.001,26.146,0.000255,3246,1953,2,si,qwen2.5:3b,unica,"{""Closing"": 12, ""Comets"": 6, ""Eclipses"": 5, ""Lobby"": 2, ""Meteors"": 7, ""Moon"": 8, ""Orbits"": 4, ""Photos"": 10, ""Questions"": 9, ""Survey"": 11, ""Tickets"": 1, ""Welcome"": 3}",
+medio-02,medio,12,13,B,1,1,sin_respuesta,sobre_restringido,si,1,0.005,13.065,0.000318,1124,985,1,si,qwen2.5:3b,sin_solucion,,no hubo respuesta
+medio-02,medio,12,13,Bp,1,1,incorrecto,sub_restringido,si,4,0.008,48.396,0.000731,7366,3519,4,si,qwen2.5:3b,multiple,"{""Closing"": 4, ""Comets"": 6, ""Eclipses"": 10, ""Lobby"": 2, ""Meteors"": 7, ""Moon"": 8, ""Orbits"": 9, ""Photos"": 11, ""Questions"": 5, ""Survey"": 12, ""Tickets"": 1, ""Welcome"": 3}","Closing: dio 4, era 12; Eclipses: dio 10, era 5; Orbits: dio 9, era 4"
+medio-02,medio,12,13,B,2,2,sin_respuesta,sintaxis,si,1,0.0,12.319,0.0,1124,950,1,si,qwen2.5:3b,,,no hubo respuesta
+medio-02,medio,12,13,Bp,2,2,sin_respuesta,sintaxis,si,4,0.007,50.864,0.000274,7560,3807,4,si,qwen2.5:3b,,,no hubo respuesta
+medio-03,medio,12,27,B,0,0,sin_respuesta,sintaxis,si,1,0.0,8.552,0.0,1114,558,1,si,qwen2.5:3b,,,no hubo respuesta
+medio-03,medio,12,27,Bp,0,0,sin_respuesta,sintaxis,si,4,0.001,155.749,0.0,6517,3222,4,si,qwen2.5:3b,,,no hubo respuesta
+medio-03,medio,12,27,B,1,1,sin_respuesta,aridad_alcance,si,1,0.0,31.766,0.0,1114,783,1,si,qwen2.5:3b,,,no hubo respuesta
+medio-03,medio,12,27,Bp,1,1,sin_respuesta,aridad_alcance,si,4,0.002,64.432,0.0,6938,3130,4,si,qwen2.5:3b,,,no hubo respuesta
+medio-03,medio,12,27,B,2,2,sin_respuesta,aridad_alcance,si,1,0.0,13.235,0.0,1114,1036,1,si,qwen2.5:3b,,,no hubo respuesta
+medio-03,medio,12,27,Bp,2,2,sin_respuesta,aridad_alcance,si,4,0.001,54.158,0.0,7650,4075,4,si,qwen2.5:3b,,,no hubo respuesta
+medio-04,medio,15,16,B,0,0,sin_respuesta,sintaxis,si,1,0.0,9.875,0.0,1146,721,1,si,qwen2.5:3b,,,no hubo respuesta
+medio-04,medio,15,16,Bp,0,0,sin_respuesta,aridad_alcance,si,4,0.001,46.538,0.0,7239,3436,4,si,qwen2.5:3b,,,no hubo respuesta
+medio-04,medio,15,16,B,1,1,sin_respuesta,sobre_restringido,si,1,0.004,10.331,0.000151,1146,768,1,si,qwen2.5:3b,sin_solucion,,no hubo respuesta
+medio-04,medio,15,16,Bp,1,1,sin_respuesta,aridad_alcance,si,4,0.005,42.211,0.000151,7010,3063,4,si,qwen2.5:3b,,,no hubo respuesta
+medio-04,medio,15,16,B,2,2,sin_respuesta,sintaxis,si,1,0.0,10.185,0.0,1146,722,1,si,qwen2.5:3b,,,no hubo respuesta
+medio-04,medio,15,16,Bp,2,2,sin_respuesta,sintaxis,si,4,0.003,48.758,5.2e-05,7257,3628,4,si,qwen2.5:3b,,,no hubo respuesta
+medio-05,medio,15,15,B,0,0,incorrecto,sub_restringido,si,1,17.012,17.004,0.00344,1157,1354,1,no,qwen2.5:3b,multiple,"{""Blend"": 9, ""Boil"": 11, ""Chill"": 14, ""Chop"": 8, ""Inventory"": 5, ""Label"": 13, ""Lock"": 3, ""Log"": 1, ""Peel"": 7, ""Report"": 4, ""Season"": 12, ""Stack"": 15, ""Strain"": 10, ""Wash"": 6, ""Wipe"": 2}","Blend: dio 9, era 5; Boil: dio 11, era 7; Chill: dio 14, era 10"
+medio-05,medio,15,15,Bp,0,0,incorrecto,sub_restringido,si,4,81.885,81.857,0.010979,9363,6406,4,no,qwen2.5:3b,multiple,"{""Blend"": 9, ""Boil"": 11, ""Chill"": 14, ""Chop"": 8, ""Inventory"": 5, ""Label"": 13, ""Lock"": 3, ""Log"": 1, ""Peel"": 7, ""Report"": 4, ""Season"": 12, ""Stack"": 15, ""Strain"": 10, ""Wash"": 6, ""Wipe"": 2}","Blend: dio 9, era 5; Boil: dio 11, era 7; Chill: dio 14, era 10"
+medio-05,medio,15,15,B,1,1,sin_respuesta,sintaxis,si,1,16.069,16.065,0.0,1157,1293,1,no,qwen2.5:3b,,,no hubo respuesta
+medio-05,medio,15,15,Bp,1,1,sin_respuesta,sintaxis,si,4,33.011,66.881,0.0,8645,5172,4,no,qwen2.5:3b,,,no hubo respuesta
+medio-05,medio,15,15,B,2,2,incorrecto,sub_restringido,si,1,16.609,16.604,0.000835,1157,1338,1,no,qwen2.5:3b,multiple,"{""Blend"": 5, ""Boil"": 7, ""Chill"": 9, ""Chop"": 4, ""Inventory"": 1, ""Label"": 10, ""Lock"": 14, ""Log"": 12, ""Peel"": 3, ""Report"": 15, ""Season"": 8, ""Stack"": 11, ""Strain"": 6, ""Wash"": 2, ""Wipe"": 13}","Chill: dio 9, era 10; Label: dio 10, era 9"
+medio-05,medio,15,15,Bp,2,2,incorrecto,sub_restringido,si,4,71.027,71.007,0.003002,8888,5560,4,no,qwen2.5:3b,multiple,"{""Blend"": 6, ""Boil"": 14, ""Chill"": 11, ""Chop"": 5, ""Inventory"": 1, ""Label"": 12, ""Lock"": 9, ""Log"": 13, ""Peel"": 4, ""Report"": 10, ""Season"": 3, ""Stack"": 15, ""Strain"": 7, ""Wash"": 2, ""Wipe"": 8}","Blend: dio 6, era 5; Boil: dio 14, era 7; Chill: dio 11, era 10"
+medio-06,medio,15,34,B,0,0,sin_respuesta,aridad_alcance,si,1,0.001,9.698,0.0,1195,697,1,si,qwen2.5:3b,,,no hubo respuesta
+medio-06,medio,15,34,Bp,0,0,sin_respuesta,sintaxis,si,4,0.004,40.619,0.0,7079,2847,4,si,qwen2.5:3b,,,no hubo respuesta
+medio-06,medio,15,34,B,1,1,sin_respuesta,aridad_alcance,si,1,0.0,9.97,0.0,1195,728,1,si,qwen2.5:3b,,,no hubo respuesta
+medio-06,medio,15,34,Bp,1,1,sin_respuesta,aridad_alcance,si,4,0.001,40.47,0.0,7083,2870,4,si,qwen2.5:3b,,,no hubo respuesta
+medio-06,medio,15,34,B,2,2,sin_respuesta,sintaxis,si,1,0.0,10.498,0.0,1195,774,1,si,qwen2.5:3b,,,no hubo respuesta
+medio-06,medio,15,34,Bp,2,2,sin_respuesta,sintaxis,si,4,0.002,45.493,0.0,7373,3291,4,si,qwen2.5:3b,,,no hubo respuesta
+medio-07,medio,12,14,B,0,0,sin_respuesta,sintaxis,si,1,0.0,8.596,0.0,1123,597,1,si,qwen2.5:3b,,,no hubo respuesta
+medio-07,medio,12,14,Bp,0,0,sin_respuesta,sobre_restringido,si,4,0.004,35.042,9e-05,6453,2389,4,si,qwen2.5:3b,sin_solucion,,no hubo respuesta
+medio-07,medio,12,14,B,1,1,sin_respuesta,sobre_restringido,si,1,0.007,9.028,6.5e-05,1123,606,1,si,qwen2.5:3b,sin_solucion,,no hubo respuesta
+medio-07,medio,12,14,Bp,1,1,sin_respuesta,sobre_restringido,si,4,0.015,36.709,0.000287,6433,2424,4,si,qwen2.5:3b,sin_solucion,,no hubo respuesta
+medio-07,medio,12,14,B,2,2,sin_respuesta,sobre_restringido,si,1,0.003,8.502,9e-05,1123,593,1,si,qwen2.5:3b,sin_solucion,,no hubo respuesta
+medio-07,medio,12,14,Bp,2,2,sin_respuesta,sobre_restringido,si,4,0.012,34.496,0.000268,6397,2372,4,si,qwen2.5:3b,sin_solucion,,no hubo respuesta
+dificil-01,dificil,20,23,B,0,0,sin_respuesta,sintaxis,si,1,0.001,13.187,0.0,1239,1018,1,si,qwen2.5:3b,,,no hubo respuesta
+dificil-01,dificil,20,23,Bp,0,0,sin_respuesta,sintaxis,si,4,0.002,54.227,0.0,8154,4072,4,si,qwen2.5:3b,,,no hubo respuesta
+dificil-01,dificil,20,23,B,1,1,incorrecto,sub_restringido,si,1,0.002,13.808,0.000599,1239,1073,1,si,qwen2.5:3b,multiple,"{""Alma"": 4, ""Bear"": 3, ""Compass"": 1, ""Deer"": 5, ""Flask"": 2, ""Fox"": 2, ""Gold"": 3, ""Hare"": 4, ""Jade"": 2, ""Lilac"": 5, ""Luis"": 3, ""Nico"": 1, ""Owl"": 1, ""Red"": 3, ""Rope"": 1, ""Rosa"": 2, ""Tomas"": 5, ""Torch"": 2, ""Whistle"": 2, ""White"": 4}","Alma: dio 4, era 2; Bear: dio 3, era 4; Gold: dio 3, era 4"
+dificil-01,dificil,20,23,Bp,1,1,sin_respuesta,aridad_alcance,si,4,0.005,58.887,0.000844,8393,4415,4,si,qwen2.5:3b,,,no hubo respuesta
+dificil-01,dificil,20,23,B,2,2,sin_respuesta,sintaxis,si,1,0.0,13.127,0.0,1239,1019,1,si,qwen2.5:3b,,,no hubo respuesta
+dificil-01,dificil,20,23,Bp,2,2,incorrecto,sub_restringido,si,4,0.004,58.146,0.000475,8393,4458,4,si,qwen2.5:3b,multiple,"{""Alma"": 2, ""Bear"": 4, ""Compass"": 1, ""Deer"": 1, ""Flask"": 2, ""Fox"": 2, ""Gold"": 4, ""Hare"": 3, ""Jade"": 3, ""Lilac"": 1, ""Luis"": 3, ""Nico"": 1, ""Owl"": 1, ""Red"": 1, ""Rope"": 2, ""Rosa"": 4, ""Tomas"": 1, ""Torch"": 1, ""Whistle"": 1, ""White"": 2}","Deer: dio 1, era 5; Lilac: dio 1, era 5; Nico: dio 1, era 5"
+dificil-02,dificil,20,21,B,0,0,sin_respuesta,sintaxis,si,1,0.0,26.304,0.0,1250,2208,1,si,qwen2.5:3b,,,no hubo respuesta
+dificil-02,dificil,20,21,Bp,0,0,sin_respuesta,sintaxis,si,4,0.002,106.788,0.0,11530,8523,4,si,qwen2.5:3b,,,no hubo respuesta
+dificil-02,dificil,20,21,B,1,1,sin_respuesta,aridad_alcance,si,1,0.001,22.283,0.0,1250,1847,1,si,qwen2.5:3b,,,no hubo respuesta
+dificil-02,dificil,20,21,Bp,1,1,sin_respuesta,aridad_alcance,si,4,0.002,93.231,0.0,10929,7391,4,si,qwen2.5:3b,,,no hubo respuesta
+dificil-02,dificil,20,21,B,2,2,sin_respuesta,sobre_restringido,si,1,2.007,77.786,6.9e-05,1250,2086,1,si,qwen2.5:3b,sin_solucion,,no hubo respuesta
+dificil-02,dificil,20,21,Bp,2,2,sin_respuesta,aridad_alcance,si,4,2.01,525.619,6.9e-05,11052,7753,4,si,qwen2.5:3b,,,no hubo respuesta
+dificil-03,dificil,20,45,B,0,0,sin_respuesta,sintaxis,si,1,0.0,22.055,0.0,1273,1807,1,si,qwen2.5:3b,,,no hubo respuesta
+dificil-03,dificil,20,45,Bp,0,0,sin_respuesta,sintaxis,si,4,0.003,80.739,0.000269,9858,6298,4,si,qwen2.5:3b,,,no hubo respuesta
+dificil-03,dificil,20,45,B,1,1,sin_respuesta,sintaxis,si,1,0.001,21.916,0.0,1273,1807,1,si,qwen2.5:3b,,,no hubo respuesta
+dificil-03,dificil,20,45,Bp,1,1,sin_respuesta,sintaxis,si,4,0.002,95.314,0.0,10853,7525,4,si,qwen2.5:3b,,,no hubo respuesta
+dificil-03,dificil,20,45,B,2,2,sin_respuesta,sintaxis,si,1,0.001,22.085,0.0,1273,1807,1,si,qwen2.5:3b,,,no hubo respuesta
+dificil-03,dificil,20,45,Bp,2,2,sin_respuesta,sintaxis,si,4,0.002,40.386,0.0,1273,1807,4,si,qwen2.5:3b,,,no hubo respuesta
+dificil-04,dificil,25,27,B,0,0,sin_respuesta,sintaxis,si,1,0.0,16.411,0.0,1312,1209,1,si,qwen2.5:3b,,,no hubo respuesta
+dificil-04,dificil,25,27,Bp,0,0,sin_respuesta,sintaxis,si,4,0.001,65.768,0.0,9019,4836,4,si,qwen2.5:3b,,,no hubo respuesta
+dificil-04,dificil,25,27,B,1,1,sin_respuesta,sobre_restringido,si,1,0.015,16.352,0.000156,1312,1279,1,si,qwen2.5:3b,sin_solucion,,no hubo respuesta
+dificil-04,dificil,25,27,Bp,1,1,sin_respuesta,sobre_restringido,si,4,0.046,67.823,0.000472,9208,5116,4,si,qwen2.5:3b,sin_solucion,,no hubo respuesta
+dificil-04,dificil,25,27,B,2,2,sin_respuesta,sintaxis,si,1,0.0,14.467,0.0,1312,1090,1,si,qwen2.5:3b,,,no hubo respuesta
+dificil-04,dificil,25,27,Bp,2,2,sin_respuesta,sobre_restringido,si,4,0.097,59.726,0.000566,8749,4434,4,si,qwen2.5:3b,sin_solucion,,no hubo respuesta
+dificil-05,dificil,25,25,B,0,0,sin_respuesta,no_termina,si,1,300.008,300.007,0.0,0,0,1,no,qwen2.5:3b,,,no hubo respuesta
+dificil-05,dificil,25,25,Bp,0,0,sin_respuesta,no_termina,si,1,300.008,300.007,0.0,0,0,1,no,qwen2.5:3b,,,no hubo respuesta
+dificil-05,dificil,25,25,B,1,1,sin_respuesta,no_termina,si,1,300.006,300.002,0.0,0,0,1,no,qwen2.5:3b,,,no hubo respuesta
+dificil-05,dificil,25,25,Bp,1,1,sin_respuesta,no_termina,si,1,300.006,300.002,0.0,0,0,1,no,qwen2.5:3b,,,no hubo respuesta
+dificil-05,dificil,25,25,B,2,2,sin_respuesta,no_termina,si,1,300.005,300.004,0.0,0,0,1,no,qwen2.5:3b,,,no hubo respuesta
+dificil-05,dificil,25,25,Bp,2,2,sin_respuesta,no_termina,si,1,300.005,300.004,0.0,0,0,1,no,qwen2.5:3b,,,no hubo respuesta
+dificil-06,dificil,25,56,B,0,0,sin_respuesta,sintaxis,si,1,0.001,19.676,0.0,1362,1087,1,si,qwen2.5:3b,,,no hubo respuesta
+dificil-06,dificil,25,56,Bp,0,0,sin_respuesta,aridad_alcance,si,4,0.004,63.81,0.0,8870,4380,4,si,qwen2.5:3b,,,no hubo respuesta
+dificil-06,dificil,25,56,B,1,1,sin_respuesta,aridad_alcance,si,1,0.001,13.279,0.0,1362,1030,1,si,qwen2.5:3b,,,no hubo respuesta
+dificil-06,dificil,25,56,Bp,1,1,sin_respuesta,aridad_alcance,si,4,0.003,55.484,0.0,8685,4120,4,si,qwen2.5:3b,,,no hubo respuesta
+dificil-06,dificil,25,56,B,2,2,sin_respuesta,sintaxis,si,1,0.001,13.933,0.0,1362,1092,1,si,qwen2.5:3b,,,no hubo respuesta
+dificil-06,dificil,25,56,Bp,2,2,sin_respuesta,sintaxis,si,4,0.004,60.819,0.0,9071,4677,4,si,qwen2.5:3b,,,no hubo respuesta
+dificil-07,dificil,25,28,B,0,0,sin_respuesta,sintaxis,si,1,0.0,16.937,0.0,1322,1311,1,si,qwen2.5:3b,,,no hubo respuesta
+dificil-07,dificil,25,28,Bp,0,0,sin_respuesta,sobre_restringido,si,4,0.059,68.423,0.001427,9355,5247,4,si,qwen2.5:3b,sin_solucion,,no hubo respuesta
+dificil-07,dificil,25,28,B,1,1,sin_respuesta,sobre_restringido,si,1,0.019,16.347,0.000366,1322,1304,1,si,qwen2.5:3b,sin_solucion,,no hubo respuesta
+dificil-07,dificil,25,28,Bp,1,1,sin_respuesta,sobre_restringido,si,4,0.076,67.612,0.000935,9323,5216,4,si,qwen2.5:3b,sin_solucion,,no hubo respuesta
+dificil-07,dificil,25,28,B,2,2,sin_respuesta,sintaxis,si,1,0.001,16.103,0.0,1322,1288,1,si,qwen2.5:3b,,,no hubo respuesta
+dificil-07,dificil,25,28,Bp,2,2,sin_respuesta,sobre_restringido,si,4,0.065,66.223,0.000812,9286,5155,4,si,qwen2.5:3b,sin_solucion,,no hubo respuesta

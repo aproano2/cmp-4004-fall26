@@ -1,0 +1,126 @@
+{
+  "id": "facil-06",
+  "nivel": "facil",
+  "familia": "coloreo",
+  "enunciado": "A craft fair map shows eight booth zones. Color each region with red, green or blue. A region pair separated by a dash denotes a direct link. Linked regions must have different colors. The links work both ways. The regions are Court, Deck, Gate, Lawn, Plaza, Ramp, Stage, Tent.\n1. Plaza is blue.\n2. Gate is red.\n3. Plaza–Tent.\n4. Gate–Plaza, Gate–Stage, Gate–Tent.\n5. Stage–Tent.\n6. Court–Lawn, Court–Stage, Court–Tent.\n7. Lawn–Plaza, Lawn–Ramp, Lawn–Stage.\n8. Deck–Plaza, Deck–Ramp, Deck–Stage, Deck–Tent.\n9. Ramp–Tent.\nFor each named region, give its color.",
+  "formato_respuesta": {
+    "variables": ["Plaza", "Gate", "Tent", "Stage", "Court", "Lawn", "Deck", "Ramp"],
+    "valores": ["red", "green", "blue"]
+  },
+  "modelo_mano": {
+    "variables": {
+      "Plaza": ["red", "green", "blue"],
+      "Gate": ["red", "green", "blue"],
+      "Tent": ["red", "green", "blue"],
+      "Stage": ["red", "green", "blue"],
+      "Court": ["red", "green", "blue"],
+      "Lawn": ["red", "green", "blue"],
+      "Deck": ["red", "green", "blue"],
+      "Ramp": ["red", "green", "blue"]
+    },
+    "constraints": [
+      {
+        "type": "eq",
+        "a": "Plaza",
+        "b": "blue"
+      },
+      {
+        "type": "eq",
+        "a": "Gate",
+        "b": "red"
+      },
+      {
+        "type": "neq",
+        "a": "Court",
+        "b": "Lawn"
+      },
+      {
+        "type": "neq",
+        "a": "Court",
+        "b": "Stage"
+      },
+      {
+        "type": "neq",
+        "a": "Court",
+        "b": "Tent"
+      },
+      {
+        "type": "neq",
+        "a": "Deck",
+        "b": "Plaza"
+      },
+      {
+        "type": "neq",
+        "a": "Deck",
+        "b": "Ramp"
+      },
+      {
+        "type": "neq",
+        "a": "Deck",
+        "b": "Stage"
+      },
+      {
+        "type": "neq",
+        "a": "Deck",
+        "b": "Tent"
+      },
+      {
+        "type": "neq",
+        "a": "Gate",
+        "b": "Plaza"
+      },
+      {
+        "type": "neq",
+        "a": "Gate",
+        "b": "Stage"
+      },
+      {
+        "type": "neq",
+        "a": "Gate",
+        "b": "Tent"
+      },
+      {
+        "type": "neq",
+        "a": "Lawn",
+        "b": "Plaza"
+      },
+      {
+        "type": "neq",
+        "a": "Lawn",
+        "b": "Ramp"
+      },
+      {
+        "type": "neq",
+        "a": "Lawn",
+        "b": "Stage"
+      },
+      {
+        "type": "neq",
+        "a": "Plaza",
+        "b": "Tent"
+      },
+      {
+        "type": "neq",
+        "a": "Ramp",
+        "b": "Tent"
+      },
+      {
+        "type": "neq",
+        "a": "Stage",
+        "b": "Tent"
+      }
+    ]
+  },
+  "gold": {
+    "Plaza": "blue",
+    "Gate": "red",
+    "Tent": "green",
+    "Stage": "blue",
+    "Court": "red",
+    "Lawn": "green",
+    "Deck": "red",
+    "Ramp": "blue"
+  },
+  "verificacion_manual": "Fijamos Plaza=blue y Gate=red por las dos primeras pistas. Cada región queda forzada por los dos vecinos ya fijados que aparecen entre paréntesis: Tent=green (Plaza/Gate), Stage=blue (Gate/Tent), Court=red (Tent/Stage). Repetimos la misma deducción con Lawn=green (Stage/Court), Deck=red (Plaza/Tent), Ramp=blue (Lawn/Deck). Los colores de los extremos difieren también en todas las aristas restantes.",
+  "fuente": "Inventado para el HW2 con asistencia de Codex (ver AI_LOG.md)."
+}
