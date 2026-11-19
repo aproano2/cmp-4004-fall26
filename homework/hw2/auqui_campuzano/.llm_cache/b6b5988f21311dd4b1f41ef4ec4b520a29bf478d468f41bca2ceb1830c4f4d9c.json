@@ -1,0 +1,24 @@
+{
+ "text": "{\n  \"assignment\": {\n    \"R1\": \"green\",\n    \"R2\": \"red\",\n    \"R3\": \"green\",\n    \"R4\": \"blue\",\n    \"R5\": \"red\",\n    \"R6\": \"blue\",\n    \"R7\": \"green\"\n  }\n} \n\nExplicación:\n\n1. R1 y R2 deben tener colores diferentes, así que R1 tendrá verde y R2 rojo.\n2. R1 y R3 deben tener colores diferentes, así que R3 tendrá verde y R1 verde.\n3. R2 y R4 deben tener colores diferentes, así que R2 tendrá rojo y R4 azul.\n4. R3 y R4 deben tener colores diferentes, así que R3 verde y R4 azul.\n5. R3 y R5 deben tener colores diferentes, así que R3 verde y R5 rojo.\n6. R4 y R6 deben tener colores diferentes, así que R4 azul y R6 azul.\n7. R5 y R6 deben tener colores diferentes, así que R5 rojo y R6 verde.\n8. R5 y R7 deben tener colores diferentes, así que R5 rojo y R7 verde.\n9. R6 y R7 deben tener colores diferentes, así que R6 azul y R7 verde. ",
+ "seconds": 1.3452667500000004,
+ "prompt_tokens": 338,
+ "completion_tokens": 397,
+ "model": "allam-2-7b",
+ "key": {
+  "model": "allam-2-7b",
+  "base": "https://api.groq.com/openai/v1",
+  "temperature": 0.7,
+  "max_tokens": 1500,
+  "rep": 0,
+  "messages": [
+   {
+    "role": "system",
+    "content": "Solve the graph-coloring problem. Return ONLY a JSON object {\"assignment\": {region: colour, ...}} assigning every region one allowed colour, using the lower-case English names \"red\", \"green\", \"blue\". Follow every restriction."
+   },
+   {
+    "role": "user",
+    "content": "Asigna un color a cada región R1, R2, R3, R4, R5, R6, R7. Los colores permitidos son rojo, verde y azul. Regiones adyacentes deben tener colores distintos. Adyacencias: R1 no puede tener el mismo color que R2; R1 no puede tener el mismo color que R3; R2 no puede tener el mismo color que R3; R2 no puede tener el mismo color que R4; R3 no puede tener el mismo color que R4; R3 no puede tener el mismo color que R5; R3 no puede tener el mismo color que R7; R4 no puede tener el mismo color que R5; R4 no puede tener el mismo color que R6; R5 no puede tener el mismo color que R6; R5 no puede tener el mismo color que R7; R6 no puede tener el mismo color que R7.  Devuelve una asignación que cumpla todas las reglas."
+   }
+  ]
+ }
+}

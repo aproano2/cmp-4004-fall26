@@ -1,0 +1,68 @@
+{
+  "id": "P06",
+  "difficulty": "easy",
+  "difficulty_metric": {
+    "variables": 4,
+    "binary_constraints": 5,
+    "fixed_color_clues": 0
+  },
+  "prompt": "Asigna un color a cada región R1, R2, R3, R4. Los colores permitidos son rojo, verde y azul. Regiones adyacentes deben tener colores distintos. Adyacencias: R1 no puede tener el mismo color que R2; R1 no puede tener el mismo color que R3; R2 no puede tener el mismo color que R3; R2 no puede tener el mismo color que R4; R3 no puede tener el mismo color que R4.  Devuelve una asignación que cumpla todas las reglas.",
+  "ground_truth_model": {
+    "variables": [
+      "R1",
+      "R2",
+      "R3",
+      "R4"
+    ],
+    "domains": {
+      "R1": [
+        "red",
+        "green",
+        "blue"
+      ],
+      "R2": [
+        "red",
+        "green",
+        "blue"
+      ],
+      "R3": [
+        "red",
+        "green",
+        "blue"
+      ],
+      "R4": [
+        "red",
+        "green",
+        "blue"
+      ]
+    },
+    "constraints": [
+      [
+        "R1",
+        "R2"
+      ],
+      [
+        "R1",
+        "R3"
+      ],
+      [
+        "R2",
+        "R3"
+      ],
+      [
+        "R2",
+        "R4"
+      ],
+      [
+        "R3",
+        "R4"
+      ]
+    ]
+  },
+  "ground_truth_witness": {
+    "R1": "red",
+    "R2": "green",
+    "R3": "blue",
+    "R4": "red"
+  }
+}
