@@ -1,0 +1,130 @@
+{
+  "id": "medio-04",
+  "nivel": "medio",
+  "familia": "einstein",
+  "enunciado": "A postcard show uses display windows along a corridor. There are 5 positions numbered 1 to 5 from left to right. Each position has exactly one item from each list, and each listed item appears once. Artists: Eva, Hugo, Ivo, Nina, Vera. Postcards: Dawn, Desert, Forest, Lagoon, Storm. Frames: Cork, Glass, Linen, Oak, Steel.\n1. Vera is in position 1.\n2. Hugo is next to Vera.\n3. Ivo is immediately to the right of Nina.\n4. Eva is somewhere to the right of Ivo.\n5. Lagoon is at the same position as Hugo.\n6. Dawn is next to Lagoon.\n7. Dawn is somewhere to the left of Lagoon.\n8. Storm is immediately to the right of Forest.\n9. Desert is somewhere to the right of Storm.\n10. Steel is at the same position as Storm.\n11. Oak is immediately to the left of Steel.\n12. Linen is somewhere to the left of Glass.\n13. Glass is somewhere to the left of Oak.\nFor every listed item, give its position number.",
+  "formato_respuesta": {
+    "variables": ["Cork", "Dawn", "Desert", "Eva", "Forest", "Glass", "Hugo", "Ivo", "Lagoon", "Linen", "Nina", "Oak", "Steel", "Storm", "Vera"],
+    "valores": [1, 2, 3, 4, 5]
+  },
+  "modelo_mano": {
+    "variables": {
+      "Cork": [1, 2, 3, 4, 5],
+      "Dawn": [1, 2, 3, 4, 5],
+      "Desert": [1, 2, 3, 4, 5],
+      "Eva": [1, 2, 3, 4, 5],
+      "Forest": [1, 2, 3, 4, 5],
+      "Glass": [1, 2, 3, 4, 5],
+      "Hugo": [1, 2, 3, 4, 5],
+      "Ivo": [1, 2, 3, 4, 5],
+      "Lagoon": [1, 2, 3, 4, 5],
+      "Linen": [1, 2, 3, 4, 5],
+      "Nina": [1, 2, 3, 4, 5],
+      "Oak": [1, 2, 3, 4, 5],
+      "Steel": [1, 2, 3, 4, 5],
+      "Storm": [1, 2, 3, 4, 5],
+      "Vera": [1, 2, 3, 4, 5]
+    },
+    "constraints": [
+      {
+        "type": "alldiff",
+        "vars": ["Eva", "Hugo", "Ivo", "Nina", "Vera"]
+      },
+      {
+        "type": "alldiff",
+        "vars": ["Dawn", "Desert", "Forest", "Lagoon", "Storm"]
+      },
+      {
+        "type": "alldiff",
+        "vars": ["Cork", "Glass", "Linen", "Oak", "Steel"]
+      },
+      {
+        "type": "eq",
+        "a": "Vera",
+        "b": 1
+      },
+      {
+        "type": "adj",
+        "a": "Hugo",
+        "b": "Vera"
+      },
+      {
+        "type": "offset",
+        "a": "Ivo",
+        "b": "Nina",
+        "k": 1
+      },
+      {
+        "type": "gt",
+        "a": "Eva",
+        "b": "Ivo"
+      },
+      {
+        "type": "eq",
+        "a": "Lagoon",
+        "b": "Hugo"
+      },
+      {
+        "type": "adj",
+        "a": "Dawn",
+        "b": "Lagoon"
+      },
+      {
+        "type": "lt",
+        "a": "Dawn",
+        "b": "Lagoon"
+      },
+      {
+        "type": "offset",
+        "a": "Storm",
+        "b": "Forest",
+        "k": 1
+      },
+      {
+        "type": "gt",
+        "a": "Desert",
+        "b": "Storm"
+      },
+      {
+        "type": "eq",
+        "a": "Steel",
+        "b": "Storm"
+      },
+      {
+        "type": "offset",
+        "a": "Steel",
+        "b": "Oak",
+        "k": 1
+      },
+      {
+        "type": "lt",
+        "a": "Linen",
+        "b": "Glass"
+      },
+      {
+        "type": "lt",
+        "a": "Glass",
+        "b": "Oak"
+      }
+    ]
+  },
+  "gold": {
+    "Cork": 5,
+    "Dawn": 1,
+    "Desert": 5,
+    "Eva": 5,
+    "Forest": 3,
+    "Glass": 2,
+    "Hugo": 2,
+    "Ivo": 4,
+    "Lagoon": 2,
+    "Linen": 1,
+    "Nina": 3,
+    "Oak": 3,
+    "Steel": 4,
+    "Storm": 4,
+    "Vera": 1
+  },
+  "verificacion_manual": "Vera fija la posición 1 y su vecino Hugo queda en 2. Desde ahí el bloque Nina–Ivo y la posición posterior de Eva llenan las posiciones restantes. Lagoon hereda 2 de Hugo, Dawn es su vecino izquierdo y Forest, Storm, Desert llenan lo que queda según las pistas de orden. Steel hereda 4 de Storm y Oak queda en 3. Linen y Glass llenan 1 y 2 en ese orden y Cork queda en 5.",
+  "fuente": "Inventado para el HW2 con asistencia de Codex (ver AI_LOG.md)."
+}

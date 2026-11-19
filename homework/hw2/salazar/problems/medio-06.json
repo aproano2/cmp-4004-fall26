@@ -1,0 +1,220 @@
+{
+  "id": "medio-06",
+  "nivel": "medio",
+  "familia": "coloreo",
+  "enunciado": "A harbor master is labeling fifteen dock zones. Color each region with red, green or blue. A region pair separated by a dash denotes a direct link. Linked regions must have different colors. The links work both ways. The regions are Basin, Bay, Crane, Depot, Float, Inlet, Jetty, Lock, Mole, Pier, Quay, Ramp, Reef, Slip, Yard.\n1. Pier is red.\n2. Jetty is blue.\n3. Pier–Yard.\n4. Jetty–Pier, Jetty–Ramp.\n5. Bay–Inlet, Bay–Jetty, Bay–Pier, Bay–Quay, Bay–Ramp.\n6. Ramp–Slip.\n7. Basin–Depot, Basin–Jetty, Basin–Lock, Basin–Pier, Basin–Reef.\n8. Lock–Mole, Lock–Ramp, Lock–Yard.\n9. Quay–Ramp.\n10. Depot–Inlet, Depot–Quay, Depot–Slip.\n11. Crane–Depot, Crane–Float, Crane–Lock, Crane–Pier.\n12. Float–Inlet, Float–Jetty, Float–Lock.\n13. Slip–Yard.\n14. Reef–Slip.\n15. Mole–Pier, Mole–Slip.\nFor each named region, give its color.",
+  "formato_respuesta": {
+    "variables": ["Pier", "Jetty", "Bay", "Ramp", "Basin", "Lock", "Quay", "Depot", "Crane", "Yard", "Float", "Slip", "Reef", "Mole", "Inlet"],
+    "valores": ["red", "green", "blue"]
+  },
+  "modelo_mano": {
+    "variables": {
+      "Pier": ["red", "green", "blue"],
+      "Jetty": ["red", "green", "blue"],
+      "Bay": ["red", "green", "blue"],
+      "Ramp": ["red", "green", "blue"],
+      "Basin": ["red", "green", "blue"],
+      "Lock": ["red", "green", "blue"],
+      "Quay": ["red", "green", "blue"],
+      "Depot": ["red", "green", "blue"],
+      "Crane": ["red", "green", "blue"],
+      "Yard": ["red", "green", "blue"],
+      "Float": ["red", "green", "blue"],
+      "Slip": ["red", "green", "blue"],
+      "Reef": ["red", "green", "blue"],
+      "Mole": ["red", "green", "blue"],
+      "Inlet": ["red", "green", "blue"]
+    },
+    "constraints": [
+      {
+        "type": "eq",
+        "a": "Pier",
+        "b": "red"
+      },
+      {
+        "type": "eq",
+        "a": "Jetty",
+        "b": "blue"
+      },
+      {
+        "type": "neq",
+        "a": "Basin",
+        "b": "Depot"
+      },
+      {
+        "type": "neq",
+        "a": "Basin",
+        "b": "Jetty"
+      },
+      {
+        "type": "neq",
+        "a": "Basin",
+        "b": "Lock"
+      },
+      {
+        "type": "neq",
+        "a": "Basin",
+        "b": "Pier"
+      },
+      {
+        "type": "neq",
+        "a": "Basin",
+        "b": "Reef"
+      },
+      {
+        "type": "neq",
+        "a": "Bay",
+        "b": "Inlet"
+      },
+      {
+        "type": "neq",
+        "a": "Bay",
+        "b": "Jetty"
+      },
+      {
+        "type": "neq",
+        "a": "Bay",
+        "b": "Pier"
+      },
+      {
+        "type": "neq",
+        "a": "Bay",
+        "b": "Quay"
+      },
+      {
+        "type": "neq",
+        "a": "Bay",
+        "b": "Ramp"
+      },
+      {
+        "type": "neq",
+        "a": "Crane",
+        "b": "Depot"
+      },
+      {
+        "type": "neq",
+        "a": "Crane",
+        "b": "Float"
+      },
+      {
+        "type": "neq",
+        "a": "Crane",
+        "b": "Lock"
+      },
+      {
+        "type": "neq",
+        "a": "Crane",
+        "b": "Pier"
+      },
+      {
+        "type": "neq",
+        "a": "Depot",
+        "b": "Inlet"
+      },
+      {
+        "type": "neq",
+        "a": "Depot",
+        "b": "Quay"
+      },
+      {
+        "type": "neq",
+        "a": "Depot",
+        "b": "Slip"
+      },
+      {
+        "type": "neq",
+        "a": "Float",
+        "b": "Inlet"
+      },
+      {
+        "type": "neq",
+        "a": "Float",
+        "b": "Jetty"
+      },
+      {
+        "type": "neq",
+        "a": "Float",
+        "b": "Lock"
+      },
+      {
+        "type": "neq",
+        "a": "Jetty",
+        "b": "Pier"
+      },
+      {
+        "type": "neq",
+        "a": "Jetty",
+        "b": "Ramp"
+      },
+      {
+        "type": "neq",
+        "a": "Lock",
+        "b": "Mole"
+      },
+      {
+        "type": "neq",
+        "a": "Lock",
+        "b": "Ramp"
+      },
+      {
+        "type": "neq",
+        "a": "Lock",
+        "b": "Yard"
+      },
+      {
+        "type": "neq",
+        "a": "Mole",
+        "b": "Pier"
+      },
+      {
+        "type": "neq",
+        "a": "Mole",
+        "b": "Slip"
+      },
+      {
+        "type": "neq",
+        "a": "Pier",
+        "b": "Yard"
+      },
+      {
+        "type": "neq",
+        "a": "Quay",
+        "b": "Ramp"
+      },
+      {
+        "type": "neq",
+        "a": "Ramp",
+        "b": "Slip"
+      },
+      {
+        "type": "neq",
+        "a": "Reef",
+        "b": "Slip"
+      },
+      {
+        "type": "neq",
+        "a": "Slip",
+        "b": "Yard"
+      }
+    ]
+  },
+  "gold": {
+    "Pier": "red",
+    "Jetty": "blue",
+    "Bay": "green",
+    "Ramp": "red",
+    "Basin": "green",
+    "Lock": "blue",
+    "Quay": "blue",
+    "Depot": "red",
+    "Crane": "green",
+    "Yard": "green",
+    "Float": "red",
+    "Slip": "blue",
+    "Reef": "red",
+    "Mole": "green",
+    "Inlet": "blue"
+  },
+  "verificacion_manual": "Fijamos Pier=red y Jetty=blue por las dos primeras pistas. Cada región queda forzada por los dos vecinos ya fijados que aparecen entre paréntesis: Bay=green (Pier/Jetty), Ramp=red (Jetty/Bay), Basin=green (Pier/Jetty), Lock=blue (Ramp/Basin), Quay=blue (Bay/Ramp), Depot=red (Basin/Quay), Crane=green (Lock/Depot). Repetimos la misma deducción con Yard=green (Pier/Lock), Float=red (Lock/Crane), Slip=blue (Depot/Yard), Reef=red (Basin/Slip), Mole=green (Pier/Slip), Inlet=blue (Bay/Float). Los colores de los extremos difieren también en todas las aristas restantes.",
+  "fuente": "Inventado para el HW2 con asistencia de Codex (ver AI_LOG.md)."
+}

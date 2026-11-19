@@ -1,0 +1,285 @@
+{
+  "id": "dificil-03",
+  "nivel": "dificil",
+  "familia": "coloreo",
+  "enunciado": "A conservation map divides a reserve into twenty sectors. Color each region with red, green or blue. A region pair separated by a dash denotes a direct link. Linked regions must have different colors. The links work both ways. The regions are Bank, Birch, Cove, Crest, Dale, Delta, Falls, Fen, Grove, Heath, Hill, Hollow, Lagoon, Meadow, Moss, Pass, Pines, Pool, Shoal, Spur.\n1. Delta is blue.\n2. Pines is green.\n3. Delta–Falls, Delta–Hollow, Delta–Pass, Delta–Pines, Delta–Pool.\n4. Falls–Hollow, Falls–Meadow, Falls–Moss, Falls–Pines, Falls–Shoal.\n5. Hollow–Pass, Hollow–Shoal.\n6. Cove–Crest, Cove–Falls, Cove–Heath, Cove–Hill, Cove–Hollow.\n7. Crest–Heath, Crest–Hollow, Crest–Pool.\n8. Meadow–Pines.\n9. Bank–Cove, Bank–Dale, Bank–Delta, Bank–Fen, Bank–Pool.\n10. Moss–Pines, Moss–Spur.\n11. Birch–Crest, Birch–Hill, Birch–Moss.\n12. Heath–Lagoon, Heath–Pass, Heath–Shoal.\n13. Fen–Moss, Fen–Spur.\n14. Grove–Meadow, Grove–Shoal, Grove–Spur.\n15. Dale–Fen, Dale–Hill.\n16. Lagoon–Pass, Lagoon–Spur.\nFor each named region, give its color.",
+  "formato_respuesta": {
+    "variables": ["Delta", "Pines", "Falls", "Hollow", "Cove", "Crest", "Meadow", "Pool", "Bank", "Moss", "Birch", "Heath", "Hill", "Fen", "Spur", "Shoal", "Grove", "Dale", "Pass", "Lagoon"],
+    "valores": ["red", "green", "blue"]
+  },
+  "modelo_mano": {
+    "variables": {
+      "Delta": ["red", "green", "blue"],
+      "Pines": ["red", "green", "blue"],
+      "Falls": ["red", "green", "blue"],
+      "Hollow": ["red", "green", "blue"],
+      "Cove": ["red", "green", "blue"],
+      "Crest": ["red", "green", "blue"],
+      "Meadow": ["red", "green", "blue"],
+      "Pool": ["red", "green", "blue"],
+      "Bank": ["red", "green", "blue"],
+      "Moss": ["red", "green", "blue"],
+      "Birch": ["red", "green", "blue"],
+      "Heath": ["red", "green", "blue"],
+      "Hill": ["red", "green", "blue"],
+      "Fen": ["red", "green", "blue"],
+      "Spur": ["red", "green", "blue"],
+      "Shoal": ["red", "green", "blue"],
+      "Grove": ["red", "green", "blue"],
+      "Dale": ["red", "green", "blue"],
+      "Pass": ["red", "green", "blue"],
+      "Lagoon": ["red", "green", "blue"]
+    },
+    "constraints": [
+      {
+        "type": "eq",
+        "a": "Delta",
+        "b": "blue"
+      },
+      {
+        "type": "eq",
+        "a": "Pines",
+        "b": "green"
+      },
+      {
+        "type": "neq",
+        "a": "Bank",
+        "b": "Cove"
+      },
+      {
+        "type": "neq",
+        "a": "Bank",
+        "b": "Dale"
+      },
+      {
+        "type": "neq",
+        "a": "Bank",
+        "b": "Delta"
+      },
+      {
+        "type": "neq",
+        "a": "Bank",
+        "b": "Fen"
+      },
+      {
+        "type": "neq",
+        "a": "Bank",
+        "b": "Pool"
+      },
+      {
+        "type": "neq",
+        "a": "Birch",
+        "b": "Crest"
+      },
+      {
+        "type": "neq",
+        "a": "Birch",
+        "b": "Hill"
+      },
+      {
+        "type": "neq",
+        "a": "Birch",
+        "b": "Moss"
+      },
+      {
+        "type": "neq",
+        "a": "Cove",
+        "b": "Crest"
+      },
+      {
+        "type": "neq",
+        "a": "Cove",
+        "b": "Falls"
+      },
+      {
+        "type": "neq",
+        "a": "Cove",
+        "b": "Heath"
+      },
+      {
+        "type": "neq",
+        "a": "Cove",
+        "b": "Hill"
+      },
+      {
+        "type": "neq",
+        "a": "Cove",
+        "b": "Hollow"
+      },
+      {
+        "type": "neq",
+        "a": "Crest",
+        "b": "Heath"
+      },
+      {
+        "type": "neq",
+        "a": "Crest",
+        "b": "Hollow"
+      },
+      {
+        "type": "neq",
+        "a": "Crest",
+        "b": "Pool"
+      },
+      {
+        "type": "neq",
+        "a": "Dale",
+        "b": "Fen"
+      },
+      {
+        "type": "neq",
+        "a": "Dale",
+        "b": "Hill"
+      },
+      {
+        "type": "neq",
+        "a": "Delta",
+        "b": "Falls"
+      },
+      {
+        "type": "neq",
+        "a": "Delta",
+        "b": "Hollow"
+      },
+      {
+        "type": "neq",
+        "a": "Delta",
+        "b": "Pass"
+      },
+      {
+        "type": "neq",
+        "a": "Delta",
+        "b": "Pines"
+      },
+      {
+        "type": "neq",
+        "a": "Delta",
+        "b": "Pool"
+      },
+      {
+        "type": "neq",
+        "a": "Falls",
+        "b": "Hollow"
+      },
+      {
+        "type": "neq",
+        "a": "Falls",
+        "b": "Meadow"
+      },
+      {
+        "type": "neq",
+        "a": "Falls",
+        "b": "Moss"
+      },
+      {
+        "type": "neq",
+        "a": "Falls",
+        "b": "Pines"
+      },
+      {
+        "type": "neq",
+        "a": "Falls",
+        "b": "Shoal"
+      },
+      {
+        "type": "neq",
+        "a": "Fen",
+        "b": "Moss"
+      },
+      {
+        "type": "neq",
+        "a": "Fen",
+        "b": "Spur"
+      },
+      {
+        "type": "neq",
+        "a": "Grove",
+        "b": "Meadow"
+      },
+      {
+        "type": "neq",
+        "a": "Grove",
+        "b": "Shoal"
+      },
+      {
+        "type": "neq",
+        "a": "Grove",
+        "b": "Spur"
+      },
+      {
+        "type": "neq",
+        "a": "Heath",
+        "b": "Lagoon"
+      },
+      {
+        "type": "neq",
+        "a": "Heath",
+        "b": "Pass"
+      },
+      {
+        "type": "neq",
+        "a": "Heath",
+        "b": "Shoal"
+      },
+      {
+        "type": "neq",
+        "a": "Hollow",
+        "b": "Pass"
+      },
+      {
+        "type": "neq",
+        "a": "Hollow",
+        "b": "Shoal"
+      },
+      {
+        "type": "neq",
+        "a": "Lagoon",
+        "b": "Pass"
+      },
+      {
+        "type": "neq",
+        "a": "Lagoon",
+        "b": "Spur"
+      },
+      {
+        "type": "neq",
+        "a": "Meadow",
+        "b": "Pines"
+      },
+      {
+        "type": "neq",
+        "a": "Moss",
+        "b": "Pines"
+      },
+      {
+        "type": "neq",
+        "a": "Moss",
+        "b": "Spur"
+      }
+    ]
+  },
+  "gold": {
+    "Delta": "blue",
+    "Pines": "green",
+    "Falls": "red",
+    "Hollow": "green",
+    "Cove": "blue",
+    "Crest": "red",
+    "Meadow": "blue",
+    "Pool": "green",
+    "Bank": "red",
+    "Moss": "blue",
+    "Birch": "green",
+    "Heath": "green",
+    "Hill": "red",
+    "Fen": "green",
+    "Spur": "red",
+    "Shoal": "blue",
+    "Grove": "green",
+    "Dale": "blue",
+    "Pass": "red",
+    "Lagoon": "blue"
+  },
+  "verificacion_manual": "Fijamos Delta=blue y Pines=green por las dos primeras pistas. Cada región queda forzada por los dos vecinos ya fijados que aparecen entre paréntesis: Falls=red (Delta/Pines), Hollow=green (Delta/Falls), Cove=blue (Falls/Hollow), Crest=red (Hollow/Cove), Meadow=blue (Pines/Falls), Pool=green (Delta/Crest), Bank=red (Cove/Pool), Moss=blue (Pines/Falls), Birch=green (Crest/Moss). Repetimos la misma deducción con Heath=green (Cove/Crest), Hill=red (Cove/Birch), Fen=green (Bank/Moss), Spur=red (Moss/Fen), Shoal=blue (Falls/Heath), Grove=green (Spur/Shoal), Dale=blue (Hill/Fen), Pass=red (Delta/Hollow), Lagoon=blue (Heath/Pass). Los colores de los extremos difieren también en todas las aristas restantes.",
+  "fuente": "Inventado para el HW2 con asistencia de Codex (ver AI_LOG.md)."
+}
