@@ -1,0 +1,15 @@
+{
+  "text": "{\"Plaza\": \"blue\", \"Gate\": \"red\", \"Tent\": \"green\", \"Stage\": \"blue\", \"Court\": \"green\", \"Lawn\": \"blue\", \"Deck\": \"green\", \"Ramp\": \"green\"}",
+  "backend": "ollama",
+  "model": "qwen2.5:7b",
+  "prompt": "You are solving a logic puzzle. Read all the clues carefully.\n\nA craft fair map shows eight booth zones. Color each region with red, green or blue. A region pair separated by a dash denotes a direct link. Linked regions must have different colors. The links work both ways. The regions are Court, Deck, Gate, Lawn, Plaza, Ramp, Stage, Tent.\n1. Plaza is blue.\n2. Gate is red.\n3. Plaza–Tent.\n4. Gate–Plaza, Gate–Stage, Gate–Tent.\n5. Stage–Tent.\n6. Court–Lawn, Court–Stage, Court–Tent.\n7. Lawn–Plaza, Lawn–Ramp, Lawn–Stage.\n8. Deck–Plaza, Deck–Ramp, Deck–Stage, Deck–Tent.\n9. Ramp–Tent.\nFor each named region, give its color.\n\nRequired output format:\nVariables to report: Plaza, Gate, Tent, Stage, Court, Lawn, Deck, Ramp\nPossible values: red, green, blue\nReply with ONE JSON object that maps every listed variable to its value, e.g. {\"Ana\": 1, \"Bruno\": 2}.\n\nReply with ONLY the JSON, no markdown and no extra text.",
+  "temperature": 0.7,
+  "seed": 2,
+  "elapsed": 2.6731419999996433,
+  "meta": {
+    "eval_count": 53,
+    "prompt_eval_count": 293,
+    "total_duration": 642580300
+  },
+  "cached_at": "2026-11-18T20:03:39"
+}

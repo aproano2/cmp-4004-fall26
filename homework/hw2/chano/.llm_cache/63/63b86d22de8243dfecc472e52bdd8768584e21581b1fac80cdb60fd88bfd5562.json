@@ -1,0 +1,15 @@
+{
+  "text": "{\n  \"Ana\": 1,\n  \"Bruno\": 3,\n  \"Carla\": 1,\n  \"Red\": 1,\n  \"Green\": 2,\n  \"Blue\": 3\n}",
+  "backend": "ollama",
+  "model": "qwen2.5:3b",
+  "prompt": "Three houses stand in a row, numbered 1, 2 and 3 from left to right. Ana, Bruno and Carla each live in a different house, and each house is painted a different color: red, green or blue.\n1. Ana lives in the red house.\n2. Bruno lives immediately to the right of the green house.\n3. Carla lives in house 1.\n4. The blue house is not house 3.\nFor each person and each color, give the house number.\nVariables to report: Ana, Bruno, Carla, Red, Green, Blue\nPossible values: 1, 2, 3\nAnswer only with one JSON object mapping each variable to its value.",
+  "temperature": 0.7,
+  "seed": 0,
+  "elapsed": 58.17083099999945,
+  "meta": {
+    "eval_count": 47,
+    "prompt_eval_count": 172,
+    "total_duration": 56122101000
+  },
+  "cached_at": "2026-11-17T17:57:56"
+}

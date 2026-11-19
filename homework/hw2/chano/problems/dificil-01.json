@@ -1,0 +1,175 @@
+{
+  "id": "dificil-01",
+  "nivel": "dificil",
+  "familia": "einstein",
+  "enunciado": "Rangers run five displays on a mountainside path. There are 5 positions numbered 1 to 5 from left to right. Each position has exactly one item from each list, and each listed item appears once. Rangers: Alma, Luis, Nico, Rosa, Tomas. Panel colors: Gold, Jade, Lilac, Red, White. Animal signs: Bear, Deer, Fox, Hare, Owl. Tools: Compass, Flask, Rope, Torch, Whistle.\n1. Alma is immediately to the right of Tomas.\n2. Luis is in position 3.\n3. Rosa is somewhere to the right of Luis.\n4. Tomas is somewhere to the left of Luis.\n5. Rosa is somewhere to the left of Nico.\n6. White is at the same position as Alma.\n7. Red is next to White.\n8. Red is somewhere to the left of White.\n9. Gold is immediately to the right of Jade.\n10. Lilac is somewhere to the right of Gold.\n11. Bear is at the same position as Gold.\n12. Hare is immediately to the left of Bear.\n13. Owl is somewhere to the left of Fox.\n14. Fox is somewhere to the left of Hare.\n15. Flask is at the same position as Fox.\n16. Compass is next to Flask.\n17. Compass is somewhere to the left of Flask.\n18. Rope is immediately to the right of Torch.\n19. Whistle is somewhere to the right of Rope.\nFor every listed item, give its position number.",
+  "formato_respuesta": {
+    "variables": ["Alma", "Bear", "Compass", "Deer", "Flask", "Fox", "Gold", "Hare", "Jade", "Lilac", "Luis", "Nico", "Owl", "Red", "Rope", "Rosa", "Tomas", "Torch", "Whistle", "White"],
+    "valores": [1, 2, 3, 4, 5]
+  },
+  "modelo_mano": {
+    "variables": {
+      "Alma": [1, 2, 3, 4, 5],
+      "Bear": [1, 2, 3, 4, 5],
+      "Compass": [1, 2, 3, 4, 5],
+      "Deer": [1, 2, 3, 4, 5],
+      "Flask": [1, 2, 3, 4, 5],
+      "Fox": [1, 2, 3, 4, 5],
+      "Gold": [1, 2, 3, 4, 5],
+      "Hare": [1, 2, 3, 4, 5],
+      "Jade": [1, 2, 3, 4, 5],
+      "Lilac": [1, 2, 3, 4, 5],
+      "Luis": [1, 2, 3, 4, 5],
+      "Nico": [1, 2, 3, 4, 5],
+      "Owl": [1, 2, 3, 4, 5],
+      "Red": [1, 2, 3, 4, 5],
+      "Rope": [1, 2, 3, 4, 5],
+      "Rosa": [1, 2, 3, 4, 5],
+      "Tomas": [1, 2, 3, 4, 5],
+      "Torch": [1, 2, 3, 4, 5],
+      "Whistle": [1, 2, 3, 4, 5],
+      "White": [1, 2, 3, 4, 5]
+    },
+    "constraints": [
+      {
+        "type": "alldiff",
+        "vars": ["Alma", "Luis", "Nico", "Rosa", "Tomas"]
+      },
+      {
+        "type": "alldiff",
+        "vars": ["Gold", "Jade", "Lilac", "Red", "White"]
+      },
+      {
+        "type": "alldiff",
+        "vars": ["Bear", "Deer", "Fox", "Hare", "Owl"]
+      },
+      {
+        "type": "alldiff",
+        "vars": ["Compass", "Flask", "Rope", "Torch", "Whistle"]
+      },
+      {
+        "type": "offset",
+        "a": "Alma",
+        "b": "Tomas",
+        "k": 1
+      },
+      {
+        "type": "eq",
+        "a": "Luis",
+        "b": 3
+      },
+      {
+        "type": "gt",
+        "a": "Rosa",
+        "b": "Luis"
+      },
+      {
+        "type": "lt",
+        "a": "Tomas",
+        "b": "Luis"
+      },
+      {
+        "type": "lt",
+        "a": "Rosa",
+        "b": "Nico"
+      },
+      {
+        "type": "eq",
+        "a": "White",
+        "b": "Alma"
+      },
+      {
+        "type": "adj",
+        "a": "Red",
+        "b": "White"
+      },
+      {
+        "type": "lt",
+        "a": "Red",
+        "b": "White"
+      },
+      {
+        "type": "offset",
+        "a": "Gold",
+        "b": "Jade",
+        "k": 1
+      },
+      {
+        "type": "gt",
+        "a": "Lilac",
+        "b": "Gold"
+      },
+      {
+        "type": "eq",
+        "a": "Bear",
+        "b": "Gold"
+      },
+      {
+        "type": "offset",
+        "a": "Bear",
+        "b": "Hare",
+        "k": 1
+      },
+      {
+        "type": "lt",
+        "a": "Owl",
+        "b": "Fox"
+      },
+      {
+        "type": "lt",
+        "a": "Fox",
+        "b": "Hare"
+      },
+      {
+        "type": "eq",
+        "a": "Flask",
+        "b": "Fox"
+      },
+      {
+        "type": "adj",
+        "a": "Compass",
+        "b": "Flask"
+      },
+      {
+        "type": "lt",
+        "a": "Compass",
+        "b": "Flask"
+      },
+      {
+        "type": "offset",
+        "a": "Rope",
+        "b": "Torch",
+        "k": 1
+      },
+      {
+        "type": "gt",
+        "a": "Whistle",
+        "b": "Rope"
+      }
+    ]
+  },
+  "gold": {
+    "Alma": 2,
+    "Bear": 4,
+    "Compass": 1,
+    "Deer": 5,
+    "Flask": 2,
+    "Fox": 2,
+    "Gold": 4,
+    "Hare": 3,
+    "Jade": 3,
+    "Lilac": 5,
+    "Luis": 3,
+    "Nico": 5,
+    "Owl": 1,
+    "Red": 1,
+    "Rope": 4,
+    "Rosa": 4,
+    "Tomas": 1,
+    "Torch": 3,
+    "Whistle": 5,
+    "White": 2
+  },
+  "verificacion_manual": "Luis ocupa la posición 3, así que la pareja consecutiva Tomas–Alma queda en 1 y 2, y Rosa y Nico ocupan las posiciones restantes en ese orden. White hereda 2 de Alma, Red es su vecino izquierdo y Jade, Gold, Lilac llenan lo que queda según las pistas de orden. Bear hereda 4 de Gold y Hare queda en 3. Owl y Fox llenan 1 y 2 en ese orden y Deer queda en 5. Flask hereda 2 de Fox, Compass es su vecino izquierdo y Torch, Rope, Whistle llenan lo que queda según las pistas de orden.",
+  "fuente": "Inventado para el HW2 con asistencia de Codex (ver AI_LOG.md)."
+}

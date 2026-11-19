@@ -1,0 +1,178 @@
+{
+  "id": "dificil-02",
+  "nivel": "dificil",
+  "familia": "horario",
+  "enunciado": "A museum is assigning time slots for an installation day. Schedule these 20 activities in slots 1 to 20, with exactly one activity per slot: Align, Caption, Drill, Dust, Inspect, Level, Light, Measure, Mount, Open, Photograph, Place, Register, Review, Seal, Sign, Test, Unload, Unwrap, Wire.\n1. Register is scheduled immediately after Unload.\n2. Measure is scheduled immediately after Register.\n3. Mount is scheduled immediately after Drill.\n4. Level is scheduled immediately after Mount.\n5. Test is scheduled immediately after Wire.\n6. Inspect is scheduled immediately after Unwrap.\n7. Place is scheduled immediately after Inspect.\n8. Align is scheduled immediately after Place.\n9. Light is scheduled immediately after Caption.\n10. Photograph is scheduled immediately after Light.\n11. Seal is scheduled immediately after Dust.\n12. Sign is scheduled immediately after Review.\n13. Open is scheduled immediately after Sign.\n14. Unwrap is in slot 9.\n15. Measure takes place before Drill.\n16. Level takes place before Wire.\n17. Test takes place before Unwrap.\n18. Caption is immediately after Align.\n19. Photograph takes place before Dust.\n20. Seal takes place before Review.\nFor each named activity, give its slot number.",
+  "formato_respuesta": {
+    "variables": ["Align", "Caption", "Drill", "Dust", "Inspect", "Level", "Light", "Measure", "Mount", "Open", "Photograph", "Place", "Register", "Review", "Seal", "Sign", "Test", "Unload", "Unwrap", "Wire"],
+    "valores": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+  },
+  "modelo_mano": {
+    "variables": {
+      "Align": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20],
+      "Caption": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20],
+      "Drill": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20],
+      "Dust": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20],
+      "Inspect": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20],
+      "Level": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20],
+      "Light": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20],
+      "Measure": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20],
+      "Mount": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20],
+      "Open": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20],
+      "Photograph": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20],
+      "Place": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20],
+      "Register": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20],
+      "Review": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20],
+      "Seal": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20],
+      "Sign": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20],
+      "Test": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20],
+      "Unload": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20],
+      "Unwrap": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20],
+      "Wire": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+    },
+    "constraints": [
+      {
+        "type": "alldiff",
+        "vars": ["Align", "Caption", "Drill", "Dust", "Inspect", "Level", "Light", "Measure", "Mount", "Open", "Photograph", "Place", "Register", "Review", "Seal", "Sign", "Test", "Unload", "Unwrap", "Wire"]
+      },
+      {
+        "type": "offset",
+        "a": "Register",
+        "b": "Unload",
+        "k": 1
+      },
+      {
+        "type": "offset",
+        "a": "Measure",
+        "b": "Register",
+        "k": 1
+      },
+      {
+        "type": "offset",
+        "a": "Mount",
+        "b": "Drill",
+        "k": 1
+      },
+      {
+        "type": "offset",
+        "a": "Level",
+        "b": "Mount",
+        "k": 1
+      },
+      {
+        "type": "offset",
+        "a": "Test",
+        "b": "Wire",
+        "k": 1
+      },
+      {
+        "type": "offset",
+        "a": "Inspect",
+        "b": "Unwrap",
+        "k": 1
+      },
+      {
+        "type": "offset",
+        "a": "Place",
+        "b": "Inspect",
+        "k": 1
+      },
+      {
+        "type": "offset",
+        "a": "Align",
+        "b": "Place",
+        "k": 1
+      },
+      {
+        "type": "offset",
+        "a": "Light",
+        "b": "Caption",
+        "k": 1
+      },
+      {
+        "type": "offset",
+        "a": "Photograph",
+        "b": "Light",
+        "k": 1
+      },
+      {
+        "type": "offset",
+        "a": "Seal",
+        "b": "Dust",
+        "k": 1
+      },
+      {
+        "type": "offset",
+        "a": "Sign",
+        "b": "Review",
+        "k": 1
+      },
+      {
+        "type": "offset",
+        "a": "Open",
+        "b": "Sign",
+        "k": 1
+      },
+      {
+        "type": "eq",
+        "a": "Unwrap",
+        "b": 9
+      },
+      {
+        "type": "lt",
+        "a": "Measure",
+        "b": "Drill"
+      },
+      {
+        "type": "lt",
+        "a": "Level",
+        "b": "Wire"
+      },
+      {
+        "type": "lt",
+        "a": "Test",
+        "b": "Unwrap"
+      },
+      {
+        "type": "offset",
+        "a": "Caption",
+        "b": "Align",
+        "k": 1
+      },
+      {
+        "type": "lt",
+        "a": "Photograph",
+        "b": "Dust"
+      },
+      {
+        "type": "lt",
+        "a": "Seal",
+        "b": "Review"
+      }
+    ]
+  },
+  "gold": {
+    "Align": 12,
+    "Caption": 13,
+    "Drill": 4,
+    "Dust": 16,
+    "Inspect": 10,
+    "Level": 6,
+    "Light": 14,
+    "Measure": 3,
+    "Mount": 5,
+    "Open": 20,
+    "Photograph": 15,
+    "Place": 11,
+    "Register": 2,
+    "Review": 18,
+    "Seal": 17,
+    "Sign": 19,
+    "Test": 8,
+    "Unload": 1,
+    "Unwrap": 9,
+    "Wire": 7
+  },
+  "verificacion_manual": "Unwrap fija el inicio de su bloque en la franja 9. Las precedencias entre bloques y la ocupación de todas las franjas obligan a que el primer bloque empiece en 1 y que los demás lo sigan sin huecos. El orden interno de los bloques determina todas las franjas: Unload → Register → Measure (1–3), Drill → Mount → Level (4–6), Wire → Test (7–8), Unwrap → Inspect → Place → Align (9–12), Caption → Light → Photograph (13–15), Dust → Seal (16–17), Review → Sign → Open (18–20).",
+  "fuente": "Inventado para el HW2 con asistencia de Codex (ver AI_LOG.md)."
+}

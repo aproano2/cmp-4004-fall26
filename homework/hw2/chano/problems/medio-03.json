@@ -1,0 +1,179 @@
+{
+  "id": "medio-03",
+  "nivel": "medio",
+  "familia": "coloreo",
+  "enunciado": "A campus wayfinding map marks twelve sectors. Color each region with red, green or blue. A region pair separated by a dash denotes a direct link. Linked regions must have different colors. The links work both ways. The regions are Arena, Bridge, Cafe, Clinic, Dorm, Gym, Hall, Lab, Library, Oaks, Pond, Quad.\n1. Library is green.\n2. Bridge is blue.\n3. Library–Oaks, Library–Pond.\n4. Bridge–Cafe, Bridge–Lab, Bridge–Library, Bridge–Oaks, Bridge–Quad.\n5. Arena–Bridge, Arena–Gym, Arena–Lab, Arena–Library.\n6. Lab–Quad.\n7. Gym–Lab, Gym–Pond, Gym–Quad.\n8. Dorm–Lab, Dorm–Oaks, Dorm–Pond.\n9. Clinic–Dorm, Clinic–Quad.\n10. Hall–Lab, Hall–Oaks, Hall–Pond.\n11. Cafe–Dorm, Cafe–Pond.\nFor each named region, give its color.",
+  "formato_respuesta": {
+    "variables": ["Library", "Bridge", "Arena", "Lab", "Quad", "Gym", "Oaks", "Dorm", "Clinic", "Pond", "Hall", "Cafe"],
+    "valores": ["red", "green", "blue"]
+  },
+  "modelo_mano": {
+    "variables": {
+      "Library": ["red", "green", "blue"],
+      "Bridge": ["red", "green", "blue"],
+      "Arena": ["red", "green", "blue"],
+      "Lab": ["red", "green", "blue"],
+      "Quad": ["red", "green", "blue"],
+      "Gym": ["red", "green", "blue"],
+      "Oaks": ["red", "green", "blue"],
+      "Dorm": ["red", "green", "blue"],
+      "Clinic": ["red", "green", "blue"],
+      "Pond": ["red", "green", "blue"],
+      "Hall": ["red", "green", "blue"],
+      "Cafe": ["red", "green", "blue"]
+    },
+    "constraints": [
+      {
+        "type": "eq",
+        "a": "Library",
+        "b": "green"
+      },
+      {
+        "type": "eq",
+        "a": "Bridge",
+        "b": "blue"
+      },
+      {
+        "type": "neq",
+        "a": "Arena",
+        "b": "Bridge"
+      },
+      {
+        "type": "neq",
+        "a": "Arena",
+        "b": "Gym"
+      },
+      {
+        "type": "neq",
+        "a": "Arena",
+        "b": "Lab"
+      },
+      {
+        "type": "neq",
+        "a": "Arena",
+        "b": "Library"
+      },
+      {
+        "type": "neq",
+        "a": "Bridge",
+        "b": "Cafe"
+      },
+      {
+        "type": "neq",
+        "a": "Bridge",
+        "b": "Lab"
+      },
+      {
+        "type": "neq",
+        "a": "Bridge",
+        "b": "Library"
+      },
+      {
+        "type": "neq",
+        "a": "Bridge",
+        "b": "Oaks"
+      },
+      {
+        "type": "neq",
+        "a": "Bridge",
+        "b": "Quad"
+      },
+      {
+        "type": "neq",
+        "a": "Cafe",
+        "b": "Dorm"
+      },
+      {
+        "type": "neq",
+        "a": "Cafe",
+        "b": "Pond"
+      },
+      {
+        "type": "neq",
+        "a": "Clinic",
+        "b": "Dorm"
+      },
+      {
+        "type": "neq",
+        "a": "Clinic",
+        "b": "Quad"
+      },
+      {
+        "type": "neq",
+        "a": "Dorm",
+        "b": "Lab"
+      },
+      {
+        "type": "neq",
+        "a": "Dorm",
+        "b": "Oaks"
+      },
+      {
+        "type": "neq",
+        "a": "Dorm",
+        "b": "Pond"
+      },
+      {
+        "type": "neq",
+        "a": "Gym",
+        "b": "Lab"
+      },
+      {
+        "type": "neq",
+        "a": "Gym",
+        "b": "Pond"
+      },
+      {
+        "type": "neq",
+        "a": "Gym",
+        "b": "Quad"
+      },
+      {
+        "type": "neq",
+        "a": "Hall",
+        "b": "Lab"
+      },
+      {
+        "type": "neq",
+        "a": "Hall",
+        "b": "Oaks"
+      },
+      {
+        "type": "neq",
+        "a": "Hall",
+        "b": "Pond"
+      },
+      {
+        "type": "neq",
+        "a": "Lab",
+        "b": "Quad"
+      },
+      {
+        "type": "neq",
+        "a": "Library",
+        "b": "Oaks"
+      },
+      {
+        "type": "neq",
+        "a": "Library",
+        "b": "Pond"
+      }
+    ]
+  },
+  "gold": {
+    "Library": "green",
+    "Bridge": "blue",
+    "Arena": "red",
+    "Lab": "green",
+    "Quad": "red",
+    "Gym": "blue",
+    "Oaks": "red",
+    "Dorm": "blue",
+    "Clinic": "green",
+    "Pond": "red",
+    "Hall": "blue",
+    "Cafe": "green"
+  },
+  "verificacion_manual": "Fijamos Library=green y Bridge=blue por las dos primeras pistas. Cada región queda forzada por los dos vecinos ya fijados que aparecen entre paréntesis: Arena=red (Library/Bridge), Lab=green (Bridge/Arena), Quad=red (Bridge/Lab), Gym=blue (Lab/Quad), Oaks=red (Library/Bridge). Repetimos la misma deducción con Dorm=blue (Lab/Oaks), Clinic=green (Quad/Dorm), Pond=red (Library/Dorm), Hall=blue (Lab/Pond), Cafe=green (Bridge/Pond). Los colores de los extremos difieren también en todas las aristas restantes.",
+  "fuente": "Inventado para el HW2 con asistencia de Codex (ver AI_LOG.md)."
+}

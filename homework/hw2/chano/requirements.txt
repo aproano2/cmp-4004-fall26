@@ -1,0 +1,9 @@
+# Sin pandas: csv de la librería estándar + numpy/matplotlib para las figuras.
+numpy>=1.24
+matplotlib>=3.7
+
+# notebook de presentación
+nbformat>=5.9
+nbclient>=0.9
+nbconvert>=7
+ipykernel>=6

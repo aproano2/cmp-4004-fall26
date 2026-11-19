@@ -1,0 +1,350 @@
+{
+  "id": "dificil-06",
+  "nivel": "dificil",
+  "familia": "coloreo",
+  "enunciado": "A utility map divides a rail yard into twenty-five work zones. Color each region with red, green or blue. A region pair separated by a dash denotes a direct link. Linked regions must have different colors. The links work both ways. The regions are Bridge, Cabin, Crane, Depot, Fence, Furnace, Gantry, Gate, Lane, Loop, Platform, Point, Ramp, Relay, Shed, Siding, Signal, Station, Switch, Tower, Track, Trench, Tunnel, Viaduct, Workshop.\n1. Switch is green.\n2. Signal is red.\n3. Switch–Tunnel.\n4. Signal–Switch, Signal–Tower, Signal–Tunnel, Signal–Workshop.\n5. Siding–Switch, Siding–Track, Siding–Tunnel, Siding–Viaduct.\n6. Track–Tunnel.\n7. Cabin–Crane, Cabin–Signal, Cabin–Track.\n8. Platform–Switch, Platform–Tunnel.\n9. Tower–Track, Tower–Viaduct, Tower–Workshop.\n10. Furnace–Point, Furnace–Signal, Furnace–Station, Furnace–Tunnel.\n11. Gate–Signal, Gate–Switch, Gate–Trench.\n12. Station–Tower.\n13. Loop–Tower, Loop–Viaduct.\n14. Relay–Station, Relay–Track, Relay–Trench.\n15. Depot–Furnace, Depot–Gantry, Depot–Signal.\n16. Crane–Fence, Crane–Gate, Crane–Platform.\n17. Fence–Gantry, Fence–Point, Fence–Relay, Fence–Tower.\n18. Bridge–Relay, Bridge–Trench, Bridge–Viaduct, Bridge–Workshop.\n19. Shed–Signal, Shed–Viaduct, Shed–Workshop.\n20. Ramp–Relay, Ramp–Switch.\n21. Gantry–Siding.\n22. Lane–Ramp, Lane–Track, Lane–Trench.\nFor each named region, give its color.",
+  "formato_respuesta": {
+    "variables": ["Switch", "Signal", "Tunnel", "Siding", "Track", "Cabin", "Platform", "Tower", "Viaduct", "Furnace", "Gate", "Station", "Loop", "Workshop", "Relay", "Depot", "Crane", "Fence", "Point", "Bridge", "Trench", "Shed", "Ramp", "Gantry", "Lane"],
+    "valores": ["red", "green", "blue"]
+  },
+  "modelo_mano": {
+    "variables": {
+      "Switch": ["red", "green", "blue"],
+      "Signal": ["red", "green", "blue"],
+      "Tunnel": ["red", "green", "blue"],
+      "Siding": ["red", "green", "blue"],
+      "Track": ["red", "green", "blue"],
+      "Cabin": ["red", "green", "blue"],
+      "Platform": ["red", "green", "blue"],
+      "Tower": ["red", "green", "blue"],
+      "Viaduct": ["red", "green", "blue"],
+      "Furnace": ["red", "green", "blue"],
+      "Gate": ["red", "green", "blue"],
+      "Station": ["red", "green", "blue"],
+      "Loop": ["red", "green", "blue"],
+      "Workshop": ["red", "green", "blue"],
+      "Relay": ["red", "green", "blue"],
+      "Depot": ["red", "green", "blue"],
+      "Crane": ["red", "green", "blue"],
+      "Fence": ["red", "green", "blue"],
+      "Point": ["red", "green", "blue"],
+      "Bridge": ["red", "green", "blue"],
+      "Trench": ["red", "green", "blue"],
+      "Shed": ["red", "green", "blue"],
+      "Ramp": ["red", "green", "blue"],
+      "Gantry": ["red", "green", "blue"],
+      "Lane": ["red", "green", "blue"]
+    },
+    "constraints": [
+      {
+        "type": "eq",
+        "a": "Switch",
+        "b": "green"
+      },
+      {
+        "type": "eq",
+        "a": "Signal",
+        "b": "red"
+      },
+      {
+        "type": "neq",
+        "a": "Bridge",
+        "b": "Relay"
+      },
+      {
+        "type": "neq",
+        "a": "Bridge",
+        "b": "Trench"
+      },
+      {
+        "type": "neq",
+        "a": "Bridge",
+        "b": "Viaduct"
+      },
+      {
+        "type": "neq",
+        "a": "Bridge",
+        "b": "Workshop"
+      },
+      {
+        "type": "neq",
+        "a": "Cabin",
+        "b": "Crane"
+      },
+      {
+        "type": "neq",
+        "a": "Cabin",
+        "b": "Signal"
+      },
+      {
+        "type": "neq",
+        "a": "Cabin",
+        "b": "Track"
+      },
+      {
+        "type": "neq",
+        "a": "Crane",
+        "b": "Fence"
+      },
+      {
+        "type": "neq",
+        "a": "Crane",
+        "b": "Gate"
+      },
+      {
+        "type": "neq",
+        "a": "Crane",
+        "b": "Platform"
+      },
+      {
+        "type": "neq",
+        "a": "Depot",
+        "b": "Furnace"
+      },
+      {
+        "type": "neq",
+        "a": "Depot",
+        "b": "Gantry"
+      },
+      {
+        "type": "neq",
+        "a": "Depot",
+        "b": "Signal"
+      },
+      {
+        "type": "neq",
+        "a": "Fence",
+        "b": "Gantry"
+      },
+      {
+        "type": "neq",
+        "a": "Fence",
+        "b": "Point"
+      },
+      {
+        "type": "neq",
+        "a": "Fence",
+        "b": "Relay"
+      },
+      {
+        "type": "neq",
+        "a": "Fence",
+        "b": "Tower"
+      },
+      {
+        "type": "neq",
+        "a": "Furnace",
+        "b": "Point"
+      },
+      {
+        "type": "neq",
+        "a": "Furnace",
+        "b": "Signal"
+      },
+      {
+        "type": "neq",
+        "a": "Furnace",
+        "b": "Station"
+      },
+      {
+        "type": "neq",
+        "a": "Furnace",
+        "b": "Tunnel"
+      },
+      {
+        "type": "neq",
+        "a": "Gantry",
+        "b": "Siding"
+      },
+      {
+        "type": "neq",
+        "a": "Gate",
+        "b": "Signal"
+      },
+      {
+        "type": "neq",
+        "a": "Gate",
+        "b": "Switch"
+      },
+      {
+        "type": "neq",
+        "a": "Gate",
+        "b": "Trench"
+      },
+      {
+        "type": "neq",
+        "a": "Lane",
+        "b": "Ramp"
+      },
+      {
+        "type": "neq",
+        "a": "Lane",
+        "b": "Track"
+      },
+      {
+        "type": "neq",
+        "a": "Lane",
+        "b": "Trench"
+      },
+      {
+        "type": "neq",
+        "a": "Loop",
+        "b": "Tower"
+      },
+      {
+        "type": "neq",
+        "a": "Loop",
+        "b": "Viaduct"
+      },
+      {
+        "type": "neq",
+        "a": "Platform",
+        "b": "Switch"
+      },
+      {
+        "type": "neq",
+        "a": "Platform",
+        "b": "Tunnel"
+      },
+      {
+        "type": "neq",
+        "a": "Ramp",
+        "b": "Relay"
+      },
+      {
+        "type": "neq",
+        "a": "Ramp",
+        "b": "Switch"
+      },
+      {
+        "type": "neq",
+        "a": "Relay",
+        "b": "Station"
+      },
+      {
+        "type": "neq",
+        "a": "Relay",
+        "b": "Track"
+      },
+      {
+        "type": "neq",
+        "a": "Relay",
+        "b": "Trench"
+      },
+      {
+        "type": "neq",
+        "a": "Shed",
+        "b": "Signal"
+      },
+      {
+        "type": "neq",
+        "a": "Shed",
+        "b": "Viaduct"
+      },
+      {
+        "type": "neq",
+        "a": "Shed",
+        "b": "Workshop"
+      },
+      {
+        "type": "neq",
+        "a": "Siding",
+        "b": "Switch"
+      },
+      {
+        "type": "neq",
+        "a": "Siding",
+        "b": "Track"
+      },
+      {
+        "type": "neq",
+        "a": "Siding",
+        "b": "Tunnel"
+      },
+      {
+        "type": "neq",
+        "a": "Siding",
+        "b": "Viaduct"
+      },
+      {
+        "type": "neq",
+        "a": "Signal",
+        "b": "Switch"
+      },
+      {
+        "type": "neq",
+        "a": "Signal",
+        "b": "Tower"
+      },
+      {
+        "type": "neq",
+        "a": "Signal",
+        "b": "Tunnel"
+      },
+      {
+        "type": "neq",
+        "a": "Signal",
+        "b": "Workshop"
+      },
+      {
+        "type": "neq",
+        "a": "Station",
+        "b": "Tower"
+      },
+      {
+        "type": "neq",
+        "a": "Switch",
+        "b": "Tunnel"
+      },
+      {
+        "type": "neq",
+        "a": "Tower",
+        "b": "Track"
+      },
+      {
+        "type": "neq",
+        "a": "Tower",
+        "b": "Viaduct"
+      },
+      {
+        "type": "neq",
+        "a": "Tower",
+        "b": "Workshop"
+      },
+      {
+        "type": "neq",
+        "a": "Track",
+        "b": "Tunnel"
+      }
+    ]
+  },
+  "gold": {
+    "Switch": "green",
+    "Signal": "red",
+    "Tunnel": "blue",
+    "Siding": "red",
+    "Track": "green",
+    "Cabin": "blue",
+    "Platform": "red",
+    "Tower": "blue",
+    "Viaduct": "green",
+    "Furnace": "green",
+    "Gate": "blue",
+    "Station": "red",
+    "Loop": "red",
+    "Workshop": "green",
+    "Relay": "blue",
+    "Depot": "blue",
+    "Crane": "green",
+    "Fence": "red",
+    "Point": "blue",
+    "Bridge": "red",
+    "Trench": "green",
+    "Shed": "blue",
+    "Ramp": "red",
+    "Gantry": "green",
+    "Lane": "blue"
+  },
+  "verificacion_manual": "Fijamos Switch=green y Signal=red por las dos primeras pistas. Cada región queda forzada por los dos vecinos ya fijados que aparecen entre paréntesis: Tunnel=blue (Switch/Signal), Siding=red (Switch/Tunnel), Track=green (Tunnel/Siding), Cabin=blue (Signal/Track), Platform=red (Switch/Tunnel), Tower=blue (Signal/Track), Viaduct=green (Siding/Tower), Furnace=green (Signal/Tunnel), Gate=blue (Switch/Signal), Station=red (Tower/Furnace), Loop=red (Tower/Viaduct), Workshop=green (Signal/Tower). Repetimos la misma deducción con Relay=blue (Track/Station), Depot=blue (Signal/Furnace), Crane=green (Platform/Gate), Fence=red (Relay/Crane), Point=blue (Furnace/Fence), Bridge=red (Workshop/Relay), Trench=green (Relay/Bridge), Shed=blue (Signal/Viaduct), Ramp=red (Switch/Relay), Gantry=green (Siding/Depot), Lane=blue (Track/Ramp). Los colores de los extremos difieren también en todas las aristas restantes.",
+  "fuente": "Inventado para el HW2 con asistencia de Codex (ver AI_LOG.md)."
+}
