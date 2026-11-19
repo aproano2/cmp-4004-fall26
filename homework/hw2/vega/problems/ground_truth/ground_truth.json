@@ -1,0 +1,2524 @@
+{
+ "_readme": "GROUND TRUTH de HW2. NO enviar este archivo (ni su contenido) a ningún LLM. Los enunciados para los brazos B/B'/C están en problems/public/problems.json. Si editas un problema, vuelve a correr code/export_problem_files.py y code/verify_ground_truth.py.",
+ "problems": [
+  {
+   "id": "F01",
+   "title": "Asignación de órdenes a máquinas",
+   "area": "Producción",
+   "difficulty": "facil",
+   "context": "Un taller metalmecánico debe procesar hoy tres órdenes de producción: OP1 (un eje de acero), OP2 (una brida de aluminio con ranuras) y OP3 (una carcasa de polímero). Dispone de tres máquinas: un centro CNC, un torno y una fresadora. Cada orden se procesa completa en una sola máquina.",
+   "rules_nl": [
+    "Cada máquina procesa exactamente una orden y cada orden va a exactamente una máquina.",
+    "El torno no puede hacer ranuras, por lo que la OP2 no puede asignarse al torno.",
+    "El torno está calibrado solo para metales, por lo que la OP3 no puede asignarse al torno.",
+    "La sujeción de la fresadora no es compatible con la carcasa de polímero, por lo que la OP3 no puede asignarse a la fresadora."
+   ],
+   "question": "¿Qué máquina procesa cada orden (OP1, OP2 y OP3)?",
+   "variable_descriptions": {
+    "OP1": "máquina asignada a la orden OP1",
+    "OP2": "máquina asignada a la orden OP2",
+    "OP3": "máquina asignada a la orden OP3"
+   },
+   "model": {
+    "variables": {
+     "OP1": [
+      "CNC",
+      "TORNO",
+      "FRESADORA"
+     ],
+     "OP2": [
+      "CNC",
+      "TORNO",
+      "FRESADORA"
+     ],
+     "OP3": [
+      "CNC",
+      "TORNO",
+      "FRESADORA"
+     ]
+    },
+    "constraints": [
+     {
+      "id": "R1",
+      "expr": "alldiff(OP1, OP2, OP3)",
+      "rule": 1
+     },
+     {
+      "id": "R2",
+      "expr": "OP2 != 'TORNO'",
+      "rule": 2
+     },
+     {
+      "id": "R3",
+      "expr": "OP3 != 'TORNO'",
+      "rule": 3
+     },
+     {
+      "id": "R4",
+      "expr": "OP3 != 'FRESADORA'",
+      "rule": 4
+     }
+    ]
+   },
+   "solution": {
+    "OP1": "TORNO",
+    "OP2": "FRESADORA",
+    "OP3": "CNC"
+   },
+   "deduction": "Por R2 y R3, ni OP2 ni OP3 pueden ir al torno, así que el torno queda para OP1. Por R4, OP3 tampoco va a la fresadora, así que OP3 = CNC. Por R1, OP2 = FRESADORA.",
+   "review": {
+    "solver_unique": "ver results/ground_truth_check.csv",
+    "manual_review": "OK",
+    "reviewed_by": "Diego Changotasig",
+    "notes": "Revisé que cada orden se asigne a una máquina distinta y que las restricciones del torno y la fresadora coincidan con las incompatibilidades indicadas en el enunciado."
+   }
+  },
+  {
+   "id": "F02",
+   "title": "Asignación de muelles de carga",
+   "area": "Logística",
+   "difficulty": "facil",
+   "context": "Un centro de distribución recibe a la misma hora tres camiones: C1 (refrigerado), C2 (carga a granel) y C3 (paquetería). Hay tres muelles numerados 1, 2 y 3, ubicados uno junto al otro en ese orden, de modo que los muelles 1 y 2 son vecinos, y los muelles 2 y 3 también.",
+   "rules_nl": [
+    "Cada muelle atiende exactamente a un camión.",
+    "Solo los muelles 1 y 3 tienen conexión eléctrica para equipos de frío, y el camión refrigerado C1 la necesita.",
+    "El camión de granel C2 necesita la rampa niveladora, que no existe en el muelle 3.",
+    "C3 debe quedar en un muelle vecino al de C1, porque ambos comparten el mismo montacargas."
+   ],
+   "question": "¿En qué muelle (1, 2 o 3) se descarga cada camión (C1, C2 y C3)?",
+   "variable_descriptions": {
+    "C1": "muelle del camión C1",
+    "C2": "muelle del camión C2",
+    "C3": "muelle del camión C3"
+   },
+   "model": {
+    "variables": {
+     "C1": [
+      1,
+      2,
+      3
+     ],
+     "C2": [
+      1,
+      2,
+      3
+     ],
+     "C3": [
+      1,
+      2,
+      3
+     ]
+    },
+    "constraints": [
+     {
+      "id": "R1",
+      "expr": "alldiff(C1, C2, C3)",
+      "rule": 1
+     },
+     {
+      "id": "R2",
+      "expr": "C1 in [1, 3]",
+      "rule": 2
+     },
+     {
+      "id": "R3",
+      "expr": "C2 != 3",
+      "rule": 3
+     },
+     {
+      "id": "R4",
+      "expr": "abs(C3 - C1) == 1",
+      "rule": 4
+     }
+    ]
+   },
+   "solution": {
+    "C1": 3,
+    "C2": 1,
+    "C3": 2
+   },
+   "deduction": "Por R2, C1 ∈ {1, 3}. Si C1 = 1, por R4 C3 = 2 y entonces C2 = 3, lo que viola R3. Por tanto C1 = 3, C3 = 2 (R4) y C2 = 1 (R1), que cumple R3.",
+   "review": {
+    "solver_unique": "ver results/ground_truth_check.csv",
+    "manual_review": "OK",
+    "reviewed_by": "Diego Changotasig",
+    "notes": "Comprobé que la condición de muelles vecinos signifique una diferencia de una posición, y que las limitaciones de conexión eléctrica y de rampa estén bien representadas."
+   }
+  },
+  {
+   "id": "F03",
+   "title": "Calendario de mantenimiento preventivo",
+   "area": "Mantenimiento",
+   "difficulty": "facil",
+   "context": "La jefatura de mantenimiento de una planta de alimentos debe programar el mantenimiento preventivo de cuatro equipos: el compresor, la caldera, la banda transportadora y la prensa. Hay cuatro días disponibles, numerados del 1 (lunes) al 4 (jueves), y la cuadrilla atiende exactamente un equipo por día.",
+   "rules_nl": [
+    "Cada equipo recibe mantenimiento en un día distinto (uno por día).",
+    "La prensa es neumática, por lo que el compresor debe revisarse en un día anterior al de la prensa.",
+    "La caldera no puede detenerse el día 1 por un pedido urgente.",
+    "La banda debe revisarse exactamente el día siguiente al de la caldera, porque usa el mismo electricista.",
+    "La prensa no puede revisarse el día 4, porque ese día se usa para una auditoría."
+   ],
+   "question": "¿Qué día (1 a 4) recibe mantenimiento cada equipo?",
+   "variable_descriptions": {
+    "COMPRESOR": "día de mantenimiento del compresor",
+    "CALDERA": "día de mantenimiento de la caldera",
+    "BANDA": "día de mantenimiento de la banda transportadora",
+    "PRENSA": "día de mantenimiento de la prensa"
+   },
+   "model": {
+    "variables": {
+     "COMPRESOR": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "CALDERA": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "BANDA": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "PRENSA": [
+      1,
+      2,
+      3,
+      4
+     ]
+    },
+    "constraints": [
+     {
+      "id": "R1",
+      "expr": "alldiff(COMPRESOR, CALDERA, BANDA, PRENSA)",
+      "rule": 1
+     },
+     {
+      "id": "R2",
+      "expr": "COMPRESOR < PRENSA",
+      "rule": 2
+     },
+     {
+      "id": "R3",
+      "expr": "CALDERA != 1",
+      "rule": 3
+     },
+     {
+      "id": "R4",
+      "expr": "BANDA == CALDERA + 1",
+      "rule": 4
+     },
+     {
+      "id": "R5",
+      "expr": "PRENSA != 4",
+      "rule": 5
+     }
+    ]
+   },
+   "solution": {
+    "COMPRESOR": 1,
+    "CALDERA": 3,
+    "BANDA": 4,
+    "PRENSA": 2
+   },
+   "deduction": "Por R3, CALDERA ∈ {2, 3, 4}, y por R4 BANDA = CALDERA + 1 ≤ 4, así que CALDERA ∈ {2, 3}. Si CALDERA = 2 y BANDA = 3, quedan los días {1, 4} para COMPRESOR < PRENSA, lo que da PRENSA = 4 y viola R5. Entonces CALDERA = 3, BANDA = 4, y en {1, 2} se cumple COMPRESOR = 1 < PRENSA = 2.",
+   "review": {
+    "solver_unique": "ver results/ground_truth_check.csv",
+    "manual_review": "OK",
+    "reviewed_by": "Diego Changotasig",
+    "notes": "Revisé que 'antes de la prensa' sea una desigualdad estricta y que la banda se programe exactamente al día siguiente de la caldera. También comprobé los días que están prohibidos."
+   }
+  },
+  {
+   "id": "F04",
+   "title": "Secuencia de operaciones en una estación",
+   "area": "Producción",
+   "difficulty": "facil",
+   "context": "En una estación de fabricación de soportes metálicos se realizan cuatro operaciones, una después de otra, ocupando las posiciones 1, 2, 3 y 4 de la secuencia (1 es la primera): corte, soldadura, pintura e inspección.",
+   "rules_nl": [
+    "Cada operación ocupa una posición distinta.",
+    "El corte debe realizarse antes que la soldadura.",
+    "La soldadura debe realizarse antes que la pintura.",
+    "La inspección debe hacerse después de la soldadura.",
+    "La inspección no puede ir inmediatamente después de la pintura, porque la pintura aún estaría húmeda."
+   ],
+   "question": "¿En qué posición (1 a 4) se realiza cada operación?",
+   "variable_descriptions": {
+    "CORTE": "posición del corte en la secuencia",
+    "SOLDADURA": "posición de la soldadura",
+    "PINTURA": "posición de la pintura",
+    "INSPECCION": "posición de la inspección"
+   },
+   "model": {
+    "variables": {
+     "CORTE": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "SOLDADURA": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "PINTURA": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "INSPECCION": [
+      1,
+      2,
+      3,
+      4
+     ]
+    },
+    "constraints": [
+     {
+      "id": "R1",
+      "expr": "alldiff(CORTE, SOLDADURA, PINTURA, INSPECCION)",
+      "rule": 1
+     },
+     {
+      "id": "R2",
+      "expr": "CORTE < SOLDADURA",
+      "rule": 2
+     },
+     {
+      "id": "R3",
+      "expr": "SOLDADURA < PINTURA",
+      "rule": 3
+     },
+     {
+      "id": "R4",
+      "expr": "INSPECCION > SOLDADURA",
+      "rule": 4
+     },
+     {
+      "id": "R5",
+      "expr": "INSPECCION != PINTURA + 1",
+      "rule": 5
+     }
+    ]
+   },
+   "solution": {
+    "CORTE": 1,
+    "SOLDADURA": 2,
+    "PINTURA": 4,
+    "INSPECCION": 3
+   },
+   "deduction": "Por R2 y R3, CORTE < SOLDADURA < PINTURA, y por R4 INSPECCION > SOLDADURA. Entonces SOLDADURA tiene después al menos dos operaciones, así que SOLDADURA ≤ 2; como CORTE < SOLDADURA, CORTE = 1 y SOLDADURA = 2. PINTURA e INSPECCION ocupan {3, 4}. Si PINTURA = 3, INSPECCION = 4 = PINTURA + 1, lo que viola R5. Por tanto PINTURA = 4 e INSPECCION = 3.",
+   "review": {
+    "solver_unique": "ver results/ground_truth_check.csv",
+    "manual_review": "OK",
+    "reviewed_by": "Diego Changotasig",
+    "notes": "Comparé el orden de las operaciones con las cinco reglas. El enunciado permite inspeccionar después de soldar y antes de pintar; no exige que la inspección sea la última operación, por eso el modelo no agrega esa condición."
+   }
+  },
+  {
+   "id": "F05",
+   "title": "Ubicación de productos en zonas del almacén",
+   "area": "Inventarios",
+   "difficulty": "facil",
+   "context": "Un almacén tiene tres zonas: A (con ventilación forzada), B (estándar) y C (refrigerada). Hay que ubicar cuatro productos: ácido, alimento, solvente y papel. Cada producto se guarda completo en una sola zona.",
+   "rules_nl": [
+    "Cada zona puede contener como máximo dos de estos productos.",
+    "El alimento debe guardarse en la zona refrigerada.",
+    "Ni el ácido ni el solvente pueden compartir zona con el alimento.",
+    "El ácido y el solvente reaccionan entre sí y no pueden compartir zona.",
+    "El solvente es volátil y debe guardarse en la zona con ventilación forzada.",
+    "El papel no puede ir en la zona refrigerada (absorbe humedad) ni compartir zona con el solvente (es inflamable)."
+   ],
+   "question": "¿En qué zona (A, B o C) se guarda cada producto?",
+   "variable_descriptions": {
+    "ACIDO": "zona del ácido",
+    "ALIMENTO": "zona del alimento",
+    "SOLVENTE": "zona del solvente",
+    "PAPEL": "zona del papel"
+   },
+   "model": {
+    "variables": {
+     "ACIDO": [
+      "A",
+      "B",
+      "C"
+     ],
+     "ALIMENTO": [
+      "A",
+      "B",
+      "C"
+     ],
+     "SOLVENTE": [
+      "A",
+      "B",
+      "C"
+     ],
+     "PAPEL": [
+      "A",
+      "B",
+      "C"
+     ]
+    },
+    "constraints": [
+     {
+      "id": "R1a",
+      "expr": "count('A', ACIDO, ALIMENTO, SOLVENTE, PAPEL) <= 2",
+      "rule": 1
+     },
+     {
+      "id": "R1b",
+      "expr": "count('B', ACIDO, ALIMENTO, SOLVENTE, PAPEL) <= 2",
+      "rule": 1
+     },
+     {
+      "id": "R1c",
+      "expr": "count('C', ACIDO, ALIMENTO, SOLVENTE, PAPEL) <= 2",
+      "rule": 1
+     },
+     {
+      "id": "R2",
+      "expr": "ALIMENTO == 'C'",
+      "rule": 2
+     },
+     {
+      "id": "R3a",
+      "expr": "ACIDO != ALIMENTO",
+      "rule": 3
+     },
+     {
+      "id": "R3b",
+      "expr": "SOLVENTE != ALIMENTO",
+      "rule": 3
+     },
+     {
+      "id": "R4",
+      "expr": "ACIDO != SOLVENTE",
+      "rule": 4
+     },
+     {
+      "id": "R5",
+      "expr": "SOLVENTE == 'A'",
+      "rule": 5
+     },
+     {
+      "id": "R6a",
+      "expr": "PAPEL != 'C'",
+      "rule": 6
+     },
+     {
+      "id": "R6b",
+      "expr": "PAPEL != SOLVENTE",
+      "rule": 6
+     }
+    ]
+   },
+   "solution": {
+    "ACIDO": "B",
+    "ALIMENTO": "C",
+    "SOLVENTE": "A",
+    "PAPEL": "B"
+   },
+   "deduction": "Por R2, ALIMENTO = C. Por R5, SOLVENTE = A. Por R3 y R4, ÁCIDO ≠ C y ÁCIDO ≠ A, así que ÁCIDO = B. Por R6, PAPEL ≠ C y PAPEL ≠ A, así que PAPEL = B. Cada zona queda con a lo sumo 2 productos (R1).",
+   "review": {
+    "solver_unique": "ver results/ground_truth_check.csv",
+    "manual_review": "OK",
+    "reviewed_by": "Diego Changotasig",
+    "notes": "Comprobé que se incluyan por separado las incompatibilidades del ácido y del solvente con el alimento, las condiciones de almacenamiento y el límite de dos productos por zona."
+   }
+  },
+  {
+   "id": "F06",
+   "title": "Asignación de inspectores de calidad",
+   "area": "Asignación de recursos",
+   "difficulty": "facil",
+   "context": "Tres inspectores de calidad, Rosa, Pablo y Elena, deben revisar cuatro lotes recibidos hoy. LOTE1 y LOTE3 son de componentes eléctricos, LOTE2 es de insumos alimenticios y LOTE4 es metalmecánico. Rosa está certificada en eléctricos y metalmecánica; Pablo en alimentos y metalmecánica; Elena en eléctricos y alimentos. Cada lote es revisado por un solo inspector.",
+   "rules_nl": [
+    "Cada lote solo puede ser revisado por un inspector certificado en su tipo de producto.",
+    "Los dos lotes eléctricos deben ser revisados por inspectores distintos.",
+    "Elena no puede revisar el LOTE2 por conflicto de interés con el proveedor.",
+    "El LOTE1 y el LOTE4 vienen del mismo proveedor y deben ser revisados por el mismo inspector."
+   ],
+   "question": "¿Qué inspector revisa cada lote (LOTE1 a LOTE4)?",
+   "variable_descriptions": {
+    "LOTE1": "inspector del LOTE1",
+    "LOTE2": "inspector del LOTE2",
+    "LOTE3": "inspector del LOTE3",
+    "LOTE4": "inspector del LOTE4"
+   },
+   "model": {
+    "variables": {
+     "LOTE1": [
+      "ROSA",
+      "PABLO",
+      "ELENA"
+     ],
+     "LOTE2": [
+      "ROSA",
+      "PABLO",
+      "ELENA"
+     ],
+     "LOTE3": [
+      "ROSA",
+      "PABLO",
+      "ELENA"
+     ],
+     "LOTE4": [
+      "ROSA",
+      "PABLO",
+      "ELENA"
+     ]
+    },
+    "constraints": [
+     {
+      "id": "R1a",
+      "expr": "LOTE1 in ['ROSA', 'ELENA']",
+      "rule": 1
+     },
+     {
+      "id": "R1b",
+      "expr": "LOTE2 in ['PABLO', 'ELENA']",
+      "rule": 1
+     },
+     {
+      "id": "R1c",
+      "expr": "LOTE3 in ['ROSA', 'ELENA']",
+      "rule": 1
+     },
+     {
+      "id": "R1d",
+      "expr": "LOTE4 in ['ROSA', 'PABLO']",
+      "rule": 1
+     },
+     {
+      "id": "R2",
+      "expr": "LOTE1 != LOTE3",
+      "rule": 2
+     },
+     {
+      "id": "R3",
+      "expr": "LOTE2 != 'ELENA'",
+      "rule": 3
+     },
+     {
+      "id": "R4",
+      "expr": "LOTE1 == LOTE4",
+      "rule": 4
+     }
+    ]
+   },
+   "solution": {
+    "LOTE1": "ROSA",
+    "LOTE2": "PABLO",
+    "LOTE3": "ELENA",
+    "LOTE4": "ROSA"
+   },
+   "deduction": "Por R1 y R3, LOTE2 ∈ {PABLO, ELENA} y LOTE2 ≠ ELENA, así que LOTE2 = PABLO. Por R4 LOTE1 = LOTE4; LOTE1 ∈ {ROSA, ELENA} y LOTE4 ∈ {ROSA, PABLO}, por lo que ambos son ROSA. Por R2, LOTE3 ≠ ROSA, y como LOTE3 ∈ {ROSA, ELENA}, LOTE3 = ELENA.",
+   "review": {
+    "solver_unique": "ver results/ground_truth_check.csv",
+    "manual_review": "OK",
+    "reviewed_by": "Diego Changotasig",
+    "notes": "Revisé las certificaciones de los tres inspectores y la excepción de Elena con LOTE2. Las reglas para separar los lotes eléctricos y juntar LOTE1 con LOTE4 coinciden con el enunciado."
+   }
+  },
+  {
+   "id": "F07",
+   "title": "Asignación de operarios a turnos",
+   "area": "Turnos de trabajo",
+   "difficulty": "facil",
+   "context": "Una planta de envasado opera en tres turnos: mañana, tarde y noche. Cuatro operarios, Ana, Bruno, Carla y Diego, deben asignarse cada uno a exactamente un turno para la próxima semana.",
+   "rules_nl": [
+    "Cada turno debe tener al menos un operario.",
+    "Ana y Bruno no pueden estar en el mismo turno.",
+    "Carla no trabaja de noche.",
+    "Diego está en entrenamiento y debe estar en el mismo turno que Carla.",
+    "Bruno no puede trabajar en el turno de la mañana.",
+    "Ana no puede trabajar de noche.",
+    "Diego no puede trabajar en el turno de la tarde."
+   ],
+   "question": "¿En qué turno (mañana, tarde o noche) trabaja cada operario?",
+   "variable_descriptions": {
+    "ANA": "turno de Ana",
+    "BRUNO": "turno de Bruno",
+    "CARLA": "turno de Carla",
+    "DIEGO": "turno de Diego"
+   },
+   "model": {
+    "variables": {
+     "ANA": [
+      "MANANA",
+      "TARDE",
+      "NOCHE"
+     ],
+     "BRUNO": [
+      "MANANA",
+      "TARDE",
+      "NOCHE"
+     ],
+     "CARLA": [
+      "MANANA",
+      "TARDE",
+      "NOCHE"
+     ],
+     "DIEGO": [
+      "MANANA",
+      "TARDE",
+      "NOCHE"
+     ]
+    },
+    "constraints": [
+     {
+      "id": "R1a",
+      "expr": "count('MANANA', ANA, BRUNO, CARLA, DIEGO) >= 1",
+      "rule": 1
+     },
+     {
+      "id": "R1b",
+      "expr": "count('TARDE', ANA, BRUNO, CARLA, DIEGO) >= 1",
+      "rule": 1
+     },
+     {
+      "id": "R1c",
+      "expr": "count('NOCHE', ANA, BRUNO, CARLA, DIEGO) >= 1",
+      "rule": 1
+     },
+     {
+      "id": "R2",
+      "expr": "ANA != BRUNO",
+      "rule": 2
+     },
+     {
+      "id": "R3",
+      "expr": "CARLA != 'NOCHE'",
+      "rule": 3
+     },
+     {
+      "id": "R4",
+      "expr": "DIEGO == CARLA",
+      "rule": 4
+     },
+     {
+      "id": "R5",
+      "expr": "BRUNO != 'MANANA'",
+      "rule": 5
+     },
+     {
+      "id": "R6",
+      "expr": "ANA != 'NOCHE'",
+      "rule": 6
+     },
+     {
+      "id": "R7",
+      "expr": "DIEGO != 'TARDE'",
+      "rule": 7
+     }
+    ]
+   },
+   "solution": {
+    "ANA": "TARDE",
+    "BRUNO": "NOCHE",
+    "CARLA": "MANANA",
+    "DIEGO": "MANANA"
+   },
+   "deduction": "Por R4 DIEGO = CARLA. CARLA ≠ NOCHE (R3) y DIEGO ≠ TARDE (R7), así que ambos están en MAÑANA. Por R1, la TARDE y la NOCHE deben cubrirlas ANA y BRUNO, que además deben estar en turnos distintos (R2). ANA ≠ NOCHE (R6), así que ANA = TARDE y BRUNO = NOCHE (esto cumple R5).",
+   "review": {
+    "solver_unique": "ver results/ground_truth_check.csv",
+    "manual_review": "OK",
+    "reviewed_by": "Diego Changotasig",
+    "notes": "Comprobé que los tres turnos deban quedar cubiertos, que Diego trabaje con Carla y que se respeten las restricciones de disponibilidad de cada operario."
+   }
+  },
+  {
+   "id": "M08",
+   "title": "Secuenciación de pedidos en una inyectora",
+   "area": "Producción",
+   "difficulty": "intermedio",
+   "context": "Una inyectora de plásticos debe procesar cinco pedidos, P1 a P5, uno tras otro. Cada pedido ocupa una posición de la secuencia del día, de la 1 (primera) a la 5 (última).",
+   "rules_nl": [
+    "Cada pedido ocupa una posición distinta.",
+    "P2 es urgente y debe ir en una de las dos primeras posiciones.",
+    "P3 reutiliza el molde que se ajusta durante P1, así que P1 debe ir antes que P3.",
+    "P4 y P5 usan el mismo colorante y deben ir en posiciones consecutivas (en cualquier orden).",
+    "P3 debe ir antes que P5.",
+    "La materia prima de P1 llega tarde, por lo que P1 no puede ir en la posición 1.",
+    "P5 requiere una limpieza posterior larga, por lo que no puede ser el último pedido del día."
+   ],
+   "question": "¿En qué posición (1 a 5) se procesa cada pedido?",
+   "variable_descriptions": {
+    "P1": "posición del pedido P1 en la secuencia",
+    "P2": "posición del pedido P2 en la secuencia",
+    "P3": "posición del pedido P3 en la secuencia",
+    "P4": "posición del pedido P4 en la secuencia",
+    "P5": "posición del pedido P5 en la secuencia"
+   },
+   "model": {
+    "variables": {
+     "P1": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "P2": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "P3": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "P4": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "P5": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ]
+    },
+    "constraints": [
+     {
+      "id": "R1",
+      "expr": "alldiff(P1, P2, P3, P4, P5)",
+      "rule": 1
+     },
+     {
+      "id": "R2",
+      "expr": "P2 <= 2",
+      "rule": 2
+     },
+     {
+      "id": "R3",
+      "expr": "P1 < P3",
+      "rule": 3
+     },
+     {
+      "id": "R4",
+      "expr": "abs(P4 - P5) == 1",
+      "rule": 4
+     },
+     {
+      "id": "R5",
+      "expr": "P3 < P5",
+      "rule": 5
+     },
+     {
+      "id": "R6",
+      "expr": "P1 != 1",
+      "rule": 6
+     },
+     {
+      "id": "R7",
+      "expr": "P5 != 5",
+      "rule": 7
+     }
+    ]
+   },
+   "solution": {
+    "P1": 2,
+    "P2": 1,
+    "P3": 3,
+    "P4": 5,
+    "P5": 4
+   },
+   "deduction": "Por R6, P1 ≥ 2. Por R3 y R5, P1 < P3 < P5, así que P5 ≥ 4; como P5 ≠ 5 (R7), P5 = 4 y entonces P3 = 3 y P1 = 2. Por R4, P4 es vecino de P5 = 4 y el 3 está ocupado, así que P4 = 5. Queda P2 = 1, que cumple R2.",
+   "review": {
+    "solver_unique": "ver results/ground_truth_check.csv",
+    "manual_review": "OK",
+    "reviewed_by": "Diego Changotasig",
+    "notes": "Revisé que 'antes' se represente con <, 'dos primeras posiciones' con <= 2 y 'consecutivos' con una diferencia absoluta de 1. También comprobé las dos posiciones prohibidas."
+   }
+  },
+  {
+   "id": "M09",
+   "title": "Asignación de operarios a estaciones de trabajo",
+   "area": "Asignación de recursos",
+   "difficulty": "intermedio",
+   "context": "Una línea de ensamble de electrodomésticos tiene tres estaciones: ENSAMBLE, EMPAQUE y CONTROL (control de calidad). Seis operarios, Ana, Beto, Caro, Dani, Edu y Fer, deben asignarse cada uno a exactamente una estación. Solo Ana, Beto y Dani tienen la certificación de control de calidad.",
+   "rules_nl": [
+    "Cada estación debe tener exactamente dos operarios.",
+    "En CONTROL solo pueden trabajar operarios certificados.",
+    "Ana y Beto son supervisores de relevo y no pueden estar en la misma estación.",
+    "Edu y Fer son nuevos y no pueden estar en la misma estación.",
+    "Caro es la tutora de Edu y debe estar en la misma estación que él.",
+    "Dani tiene una restricción médica y no puede trabajar en EMPAQUE.",
+    "Ana y Fer no pueden estar en la misma estación.",
+    "Beto no tiene el curso de la máquina de ensamble, así que no puede trabajar en ENSAMBLE."
+   ],
+   "question": "¿En qué estación trabaja cada operario?",
+   "variable_descriptions": {
+    "ANA": "estación de Ana",
+    "BETO": "estación de Beto",
+    "CARO": "estación de Caro",
+    "DANI": "estación de Dani",
+    "EDU": "estación de Edu",
+    "FER": "estación de Fer"
+   },
+   "model": {
+    "variables": {
+     "ANA": [
+      "ENSAMBLE",
+      "EMPAQUE",
+      "CONTROL"
+     ],
+     "BETO": [
+      "ENSAMBLE",
+      "EMPAQUE",
+      "CONTROL"
+     ],
+     "CARO": [
+      "ENSAMBLE",
+      "EMPAQUE",
+      "CONTROL"
+     ],
+     "DANI": [
+      "ENSAMBLE",
+      "EMPAQUE",
+      "CONTROL"
+     ],
+     "EDU": [
+      "ENSAMBLE",
+      "EMPAQUE",
+      "CONTROL"
+     ],
+     "FER": [
+      "ENSAMBLE",
+      "EMPAQUE",
+      "CONTROL"
+     ]
+    },
+    "constraints": [
+     {
+      "id": "R1a",
+      "expr": "count('ENSAMBLE', ANA, BETO, CARO, DANI, EDU, FER) == 2",
+      "rule": 1
+     },
+     {
+      "id": "R1b",
+      "expr": "count('EMPAQUE', ANA, BETO, CARO, DANI, EDU, FER) == 2",
+      "rule": 1
+     },
+     {
+      "id": "R1c",
+      "expr": "count('CONTROL', ANA, BETO, CARO, DANI, EDU, FER) == 2",
+      "rule": 1
+     },
+     {
+      "id": "R2a",
+      "expr": "CARO != 'CONTROL'",
+      "rule": 2
+     },
+     {
+      "id": "R2b",
+      "expr": "EDU != 'CONTROL'",
+      "rule": 2
+     },
+     {
+      "id": "R2c",
+      "expr": "FER != 'CONTROL'",
+      "rule": 2
+     },
+     {
+      "id": "R3",
+      "expr": "ANA != BETO",
+      "rule": 3
+     },
+     {
+      "id": "R4",
+      "expr": "EDU != FER",
+      "rule": 4
+     },
+     {
+      "id": "R5",
+      "expr": "CARO == EDU",
+      "rule": 5
+     },
+     {
+      "id": "R6",
+      "expr": "DANI != 'EMPAQUE'",
+      "rule": 6
+     },
+     {
+      "id": "R7",
+      "expr": "ANA != FER",
+      "rule": 7
+     },
+     {
+      "id": "R8",
+      "expr": "BETO != 'ENSAMBLE'",
+      "rule": 8
+     }
+    ]
+   },
+   "solution": {
+    "ANA": "CONTROL",
+    "BETO": "EMPAQUE",
+    "CARO": "ENSAMBLE",
+    "DANI": "CONTROL",
+    "EDU": "ENSAMBLE",
+    "FER": "EMPAQUE"
+   },
+   "deduction": "CONTROL necesita dos certificados (R1, R2) entre {ANA, BETO, DANI}, y ANA ≠ BETO (R3), así que CONTROL = DANI + uno de ANA/BETO. Por R5 CARO = EDU, y ambos llenan una estación no-control. FER ≠ EDU (R4), así que FER va a la otra estación no-control junto con el supervisor que no está en CONTROL. Por R7 ANA ≠ FER, de modo que ANA = CONTROL y BETO va con FER. Por R8 BETO ≠ ENSAMBLE, así que BETO y FER están en EMPAQUE y CARO y EDU en ENSAMBLE.",
+   "review": {
+    "solver_unique": "ver results/ground_truth_check.csv",
+    "manual_review": "OK",
+    "reviewed_by": "Diego Changotasig",
+    "notes": "Comparé las certificaciones para CONTROL, el límite exacto de dos personas por estación y las reglas sobre compañeros que deben trabajar juntos o separados. No encontré reglas omitidas en el modelo."
+   }
+  },
+  {
+   "id": "M10",
+   "title": "Asignación de clientes a vehículos de reparto",
+   "area": "Logística",
+   "difficulty": "intermedio",
+   "context": "Una distribuidora debe atender mañana a cinco clientes con tres vehículos. Capacidades: V1 = 10 toneladas, V2 = 8 toneladas y V3 = 6 toneladas. Demandas: C1 = 6 t, C2 = 3 t, C3 = 5 t, C4 = 2 t y C5 = 4 t. Cada cliente es atendido completo por un solo vehículo. Solo V1 tiene equipo de refrigeración.",
+   "rules_nl": [
+    "La carga total asignada a cada vehículo no puede superar su capacidad.",
+    "El pedido de C2 es perecible y requiere refrigeración.",
+    "C4 está en el centro histórico, donde solo puede circular V3.",
+    "C1 y C3 están en direcciones opuestas de la ciudad y no pueden ir en el mismo vehículo.",
+    "C2 y C3 son sucursales de la misma cadena y deben ser atendidas por el mismo vehículo.",
+    "Los tres vehículos deben salir con al menos un cliente."
+   ],
+   "question": "¿Qué vehículo (V1, V2 o V3) atiende a cada cliente?",
+   "variable_descriptions": {
+    "C1": "vehículo que atiende al cliente C1",
+    "C2": "vehículo que atiende al cliente C2",
+    "C3": "vehículo que atiende al cliente C3",
+    "C4": "vehículo que atiende al cliente C4",
+    "C5": "vehículo que atiende al cliente C5"
+   },
+   "model": {
+    "variables": {
+     "C1": [
+      "V1",
+      "V2",
+      "V3"
+     ],
+     "C2": [
+      "V1",
+      "V2",
+      "V3"
+     ],
+     "C3": [
+      "V1",
+      "V2",
+      "V3"
+     ],
+     "C4": [
+      "V1",
+      "V2",
+      "V3"
+     ],
+     "C5": [
+      "V1",
+      "V2",
+      "V3"
+     ]
+    },
+    "constraints": [
+     {
+      "id": "R1a",
+      "expr": "(C1 == 'V1')*6 + (C2 == 'V1')*3 + (C3 == 'V1')*5 + (C4 == 'V1')*2 + (C5 == 'V1')*4 <= 10",
+      "rule": 1
+     },
+     {
+      "id": "R1b",
+      "expr": "(C1 == 'V2')*6 + (C2 == 'V2')*3 + (C3 == 'V2')*5 + (C4 == 'V2')*2 + (C5 == 'V2')*4 <= 8",
+      "rule": 1
+     },
+     {
+      "id": "R1c",
+      "expr": "(C1 == 'V3')*6 + (C2 == 'V3')*3 + (C3 == 'V3')*5 + (C4 == 'V3')*2 + (C5 == 'V3')*4 <= 6",
+      "rule": 1
+     },
+     {
+      "id": "R2",
+      "expr": "C2 == 'V1'",
+      "rule": 2
+     },
+     {
+      "id": "R3",
+      "expr": "C4 == 'V3'",
+      "rule": 3
+     },
+     {
+      "id": "R4",
+      "expr": "C1 != C3",
+      "rule": 4
+     },
+     {
+      "id": "R5",
+      "expr": "C3 == C2",
+      "rule": 5
+     },
+     {
+      "id": "R6a",
+      "expr": "count('V1', C1, C2, C3, C4, C5) >= 1",
+      "rule": 6
+     },
+     {
+      "id": "R6b",
+      "expr": "count('V2', C1, C2, C3, C4, C5) >= 1",
+      "rule": 6
+     },
+     {
+      "id": "R6c",
+      "expr": "count('V3', C1, C2, C3, C4, C5) >= 1",
+      "rule": 6
+     }
+    ]
+   },
+   "solution": {
+    "C1": "V2",
+    "C2": "V1",
+    "C3": "V1",
+    "C4": "V3",
+    "C5": "V3"
+   },
+   "deduction": "Por R2 y R5, C2 = C3 = V1. Por R3, C4 = V3. Por R4, C1 ≠ V1. Si C1 = V3, la carga sería 2 + 6 = 8 > 6, así que C1 = V2. C5 (4 t): en V1 serían 3 + 5 + 4 = 12 > 10, en V2 serían 6 + 4 = 10 > 8, y en V3 son 2 + 4 = 6 ≤ 6, así que C5 = V3. Los tres vehículos salen con clientes (R6).",
+   "review": {
+    "solver_unique": "ver results/ground_truth_check.csv",
+    "manual_review": "OK",
+    "reviewed_by": "Diego Changotasig",
+    "notes": "Comprobé que las demandas de los cinco clientes y las capacidades de V1, V2 y V3 coincidan con el contexto. También revisé la refrigeración, las restricciones de compartir vehículo y que cada vehículo atienda al menos un cliente."
+   }
+  },
+  {
+   "id": "M11",
+   "title": "Programa de mantenimiento con capacidad limitada",
+   "area": "Mantenimiento",
+   "difficulty": "intermedio",
+   "context": "Una planta textil debe dar mantenimiento a cinco equipos durante una parada de tres días (días 1, 2 y 3): el generador, el tablero eléctrico, el compresor, el secador de aire y el horno de termofijado. Cada equipo se atiende completo en un solo día.",
+   "rules_nl": [
+    "La cuadrilla puede atender como máximo dos equipos por día.",
+    "El generador debe atenderse en un día anterior al del tablero, porque es la energía de respaldo durante esa intervención.",
+    "El compresor y el secador forman el mismo sistema neumático y se atienden el mismo día.",
+    "El horno no puede atenderse el día 1 porque todavía estará caliente.",
+    "El tablero no puede atenderse el día 3, porque ese día llega el inspector eléctrico externo para certificarlo ya reparado."
+   ],
+   "question": "¿Qué día (1, 2 o 3) se atiende cada equipo?",
+   "variable_descriptions": {
+    "GENERADOR": "día del generador",
+    "TABLERO": "día del tablero eléctrico",
+    "COMPRESOR": "día del compresor",
+    "SECADOR": "día del secador de aire",
+    "HORNO": "día del horno"
+   },
+   "model": {
+    "variables": {
+     "GENERADOR": [
+      1,
+      2,
+      3
+     ],
+     "TABLERO": [
+      1,
+      2,
+      3
+     ],
+     "COMPRESOR": [
+      1,
+      2,
+      3
+     ],
+     "SECADOR": [
+      1,
+      2,
+      3
+     ],
+     "HORNO": [
+      1,
+      2,
+      3
+     ]
+    },
+    "constraints": [
+     {
+      "id": "R1a",
+      "expr": "count(1, GENERADOR, TABLERO, COMPRESOR, SECADOR, HORNO) <= 2",
+      "rule": 1
+     },
+     {
+      "id": "R1b",
+      "expr": "count(2, GENERADOR, TABLERO, COMPRESOR, SECADOR, HORNO) <= 2",
+      "rule": 1
+     },
+     {
+      "id": "R1c",
+      "expr": "count(3, GENERADOR, TABLERO, COMPRESOR, SECADOR, HORNO) <= 2",
+      "rule": 1
+     },
+     {
+      "id": "R2",
+      "expr": "GENERADOR < TABLERO",
+      "rule": 2
+     },
+     {
+      "id": "R3",
+      "expr": "COMPRESOR == SECADOR",
+      "rule": 3
+     },
+     {
+      "id": "R4",
+      "expr": "HORNO != 1",
+      "rule": 4
+     },
+     {
+      "id": "R5",
+      "expr": "TABLERO != 3",
+      "rule": 5
+     }
+    ]
+   },
+   "solution": {
+    "GENERADOR": 1,
+    "TABLERO": 2,
+    "COMPRESOR": 3,
+    "SECADOR": 3,
+    "HORNO": 2
+   },
+   "deduction": "Por R2 GENERADOR < TABLERO, así que TABLERO ≥ 2, y por R5 TABLERO ≠ 3, así que TABLERO = 2 y GENERADOR = 1. Por R4, HORNO ∈ {2, 3}. COMPRESOR = SECADOR (R3) necesitan un día con dos cupos libres (R1). Si HORNO = 3, los tres días quedan con un solo cupo libre y no hay solución. Entonces HORNO = 2 (día 2 lleno con TABLERO y HORNO), y COMPRESOR = SECADOR = 3.",
+   "review": {
+    "solver_unique": "ver results/ground_truth_check.csv",
+    "manual_review": "OK",
+    "reviewed_by": "Diego Changotasig",
+    "notes": "Revisé el máximo de dos mantenimientos por día, el orden generador-tablero y que compresor y secador se atiendan juntos. También verifiqué las prohibiciones del horno y del tablero."
+   }
+  },
+  {
+   "id": "M12",
+   "title": "Días libres del personal de bodega",
+   "area": "Turnos de trabajo",
+   "difficulty": "intermedio",
+   "context": "Una bodega trabaja de lunes a viernes (días 1 = lunes a 5 = viernes). Cada uno de sus cinco trabajadores, Luis, María, Jorge, Sofía y Pedro, tiene exactamente un día libre a la semana. Jorge y Sofía son los únicos operadores de montacargas.",
+   "rules_nl": [
+    "Para mantener la cobertura, no puede haber dos trabajadores libres el mismo día.",
+    "Los días libres de los dos operadores de montacargas no pueden ser consecutivos ni iguales (debe haber al menos un día entre ellos).",
+    "María estudia y su día libre debe ser lunes o viernes.",
+    "Pedro es el encargado de recepción y no puede librar ni lunes ni viernes, que son días de mayor recepción.",
+    "Luis debe librar un día anterior al de Pedro.",
+    "Sofía libra después que Jorge.",
+    "María libra el día inmediatamente posterior al de Sofía.",
+    "Luis no puede librar el lunes, porque ese día hace el inventario semanal."
+   ],
+   "question": "¿Qué día de la semana (1 a 5) libra cada trabajador?",
+   "variable_descriptions": {
+    "LUIS": "día libre de Luis",
+    "MARIA": "día libre de Maria",
+    "JORGE": "día libre de Jorge",
+    "SOFIA": "día libre de Sofia",
+    "PEDRO": "día libre de Pedro"
+   },
+   "model": {
+    "variables": {
+     "LUIS": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "MARIA": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "JORGE": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "SOFIA": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "PEDRO": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ]
+    },
+    "constraints": [
+     {
+      "id": "R1",
+      "expr": "alldiff(LUIS, MARIA, JORGE, SOFIA, PEDRO)",
+      "rule": 1
+     },
+     {
+      "id": "R2",
+      "expr": "abs(JORGE - SOFIA) >= 2",
+      "rule": 2
+     },
+     {
+      "id": "R3",
+      "expr": "MARIA in [1, 5]",
+      "rule": 3
+     },
+     {
+      "id": "R4",
+      "expr": "PEDRO not in [1, 5]",
+      "rule": 4
+     },
+     {
+      "id": "R5",
+      "expr": "LUIS < PEDRO",
+      "rule": 5
+     },
+     {
+      "id": "R6",
+      "expr": "SOFIA > JORGE",
+      "rule": 6
+     },
+     {
+      "id": "R7",
+      "expr": "MARIA == SOFIA + 1",
+      "rule": 7
+     },
+     {
+      "id": "R8",
+      "expr": "LUIS != 1",
+      "rule": 8
+     }
+    ]
+   },
+   "solution": {
+    "LUIS": 2,
+    "MARIA": 5,
+    "JORGE": 1,
+    "SOFIA": 4,
+    "PEDRO": 3
+   },
+   "deduction": "Por R3 y R7, MARIA ∈ {1, 5} y MARIA = SOFIA + 1, así que MARIA = 5 y SOFIA = 4. Por R6 y R2, JORGE < 4 y |JORGE − 4| ≥ 2, así que JORGE ≤ 2. Por R4, PEDRO ∈ {2, 3, 4} y el 4 está ocupado. Quedan los días {1, 2, 3} para LUIS, JORGE y PEDRO. LUIS ≠ 1 (R8) y LUIS < PEDRO (R5) obligan a LUIS = 2, PEDRO = 3, y entonces JORGE = 1.",
+   "review": {
+    "solver_unique": "ver results/ground_truth_check.csv",
+    "manual_review": "OK",
+    "reviewed_by": "Diego Changotasig",
+    "notes": "Comprobé que los días libres sean distintos, que los de Jorge y Sofía tengan al menos un día de separación y que María libre exactamente al día siguiente de Sofía. Las demás disponibilidades también coinciden."
+   }
+  },
+  {
+   "id": "M13",
+   "title": "Ubicación de productos en una estantería",
+   "area": "Inventarios",
+   "difficulty": "intermedio",
+   "context": "En una bodega de repuestos hay una estantería de tres niveles: nivel 1 (piso), nivel 2 (altura de la cintura) y nivel 3 (alto). Deben ubicarse seis productos: motor, tornillos, cable, pintura, filtros y guantes. El motor y la pintura pesan más de 20 kg, y los tornillos y los guantes son los de mayor rotación.",
+   "rules_nl": [
+    "Cada nivel tiene espacio para exactamente dos productos.",
+    "Los productos de más de 20 kg no pueden ir en el nivel 3.",
+    "Los dos productos de mayor rotación no pueden ir en el nivel 3.",
+    "La pintura es líquida y no puede estar en un nivel superior al del cable, para no gotear sobre él.",
+    "El motor y la pintura no pueden compartir nivel (no caben juntos).",
+    "Los tornillos y los guantes no pueden compartir nivel, para separar los dos puntos de mayor tránsito.",
+    "La pintura no puede compartir nivel con los guantes, para evitar que se manchen.",
+    "Los tornillos no van en el nivel 1, para evitar que el operario se agache con tanta frecuencia."
+   ],
+   "question": "¿En qué nivel (1, 2 o 3) se ubica cada producto?",
+   "variable_descriptions": {
+    "MOTOR": "nivel del producto motor",
+    "TORNILLOS": "nivel del producto tornillos",
+    "CABLE": "nivel del producto cable",
+    "PINTURA": "nivel del producto pintura",
+    "FILTROS": "nivel del producto filtros",
+    "GUANTES": "nivel del producto guantes"
+   },
+   "model": {
+    "variables": {
+     "MOTOR": [
+      1,
+      2,
+      3
+     ],
+     "TORNILLOS": [
+      1,
+      2,
+      3
+     ],
+     "CABLE": [
+      1,
+      2,
+      3
+     ],
+     "PINTURA": [
+      1,
+      2,
+      3
+     ],
+     "FILTROS": [
+      1,
+      2,
+      3
+     ],
+     "GUANTES": [
+      1,
+      2,
+      3
+     ]
+    },
+    "constraints": [
+     {
+      "id": "R1a",
+      "expr": "count(1, MOTOR, TORNILLOS, CABLE, PINTURA, FILTROS, GUANTES) == 2",
+      "rule": 1
+     },
+     {
+      "id": "R1b",
+      "expr": "count(2, MOTOR, TORNILLOS, CABLE, PINTURA, FILTROS, GUANTES) == 2",
+      "rule": 1
+     },
+     {
+      "id": "R1c",
+      "expr": "count(3, MOTOR, TORNILLOS, CABLE, PINTURA, FILTROS, GUANTES) == 2",
+      "rule": 1
+     },
+     {
+      "id": "R2a",
+      "expr": "MOTOR != 3",
+      "rule": 2
+     },
+     {
+      "id": "R2b",
+      "expr": "PINTURA != 3",
+      "rule": 2
+     },
+     {
+      "id": "R3a",
+      "expr": "TORNILLOS != 3",
+      "rule": 3
+     },
+     {
+      "id": "R3b",
+      "expr": "GUANTES != 3",
+      "rule": 3
+     },
+     {
+      "id": "R4",
+      "expr": "PINTURA <= CABLE",
+      "rule": 4
+     },
+     {
+      "id": "R5",
+      "expr": "MOTOR != PINTURA",
+      "rule": 5
+     },
+     {
+      "id": "R6",
+      "expr": "TORNILLOS != GUANTES",
+      "rule": 6
+     },
+     {
+      "id": "R7",
+      "expr": "PINTURA != GUANTES",
+      "rule": 7
+     },
+     {
+      "id": "R8",
+      "expr": "TORNILLOS != 1",
+      "rule": 8
+     }
+    ]
+   },
+   "solution": {
+    "MOTOR": 1,
+    "TORNILLOS": 2,
+    "CABLE": 3,
+    "PINTURA": 2,
+    "FILTROS": 3,
+    "GUANTES": 1
+   },
+   "deduction": "Por R3 y R6, TORNILLOS y GUANTES ∈ {1, 2} y son distintos; TORNILLOS ≠ 1 (R8), así que TORNILLOS = 2 y GUANTES = 1. Por R2 y R5, MOTOR y PINTURA ∈ {1, 2} y son distintos; PINTURA ≠ GUANTES (R7), así que PINTURA = 2 y MOTOR = 1. Los niveles 1 y 2 quedan llenos (R1), así que CABLE = FILTROS = 3. R4 se cumple (2 ≤ 3).",
+   "review": {
+    "solver_unique": "ver results/ground_truth_check.csv",
+    "manual_review": "OK",
+    "reviewed_by": "Diego Changotasig",
+    "notes": "Revisé la capacidad exacta de dos productos por nivel, las restricciones por peso y rotación y las incompatibilidades entre productos. La condición de pintura respecto al cable está bien expresada como <=."
+   }
+  },
+  {
+   "id": "M14",
+   "title": "Distribución en planta de departamentos",
+   "area": "Producción",
+   "difficulty": "intermedio",
+   "context": "Se va a redistribuir una nave industrial con seis espacios en línea recta, numerados del 1 al 6; dos espacios son vecinos si sus números difieren en 1. Deben ubicarse seis departamentos: recepción, corte, soldadura, ensamble, pintura y despacho, uno por espacio.",
+   "rules_nl": [
+    "Cada departamento ocupa un espacio distinto.",
+    "Recepción y despacho deben estar en los dos extremos de la nave (espacios 1 y 6, en cualquier orden).",
+    "Corte debe estar junto a recepción, porque recibe la materia prima.",
+    "Soldadura debe estar junto a corte.",
+    "Pintura no puede estar junto a corte ni junto a soldadura, por el riesgo de chispas.",
+    "Ensamble debe estar junto a pintura.",
+    "La toma de corriente trifásica que necesita corte solo existe en los espacios 1, 2 y 3."
+   ],
+   "question": "¿En qué espacio (1 a 6) queda cada departamento?",
+   "variable_descriptions": {
+    "RECEPCION": "espacio del departamento de recepcion",
+    "CORTE": "espacio del departamento de corte",
+    "SOLDADURA": "espacio del departamento de soldadura",
+    "ENSAMBLE": "espacio del departamento de ensamble",
+    "PINTURA": "espacio del departamento de pintura",
+    "DESPACHO": "espacio del departamento de despacho"
+   },
+   "model": {
+    "variables": {
+     "RECEPCION": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+     ],
+     "CORTE": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+     ],
+     "SOLDADURA": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+     ],
+     "ENSAMBLE": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+     ],
+     "PINTURA": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+     ],
+     "DESPACHO": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+     ]
+    },
+    "constraints": [
+     {
+      "id": "R1",
+      "expr": "alldiff(RECEPCION, CORTE, SOLDADURA, ENSAMBLE, PINTURA, DESPACHO)",
+      "rule": 1
+     },
+     {
+      "id": "R2",
+      "expr": "abs(RECEPCION - DESPACHO) == 5",
+      "rule": 2
+     },
+     {
+      "id": "R3",
+      "expr": "abs(CORTE - RECEPCION) == 1",
+      "rule": 3
+     },
+     {
+      "id": "R4",
+      "expr": "abs(SOLDADURA - CORTE) == 1",
+      "rule": 4
+     },
+     {
+      "id": "R5a",
+      "expr": "abs(PINTURA - CORTE) >= 2",
+      "rule": 5
+     },
+     {
+      "id": "R5b",
+      "expr": "abs(PINTURA - SOLDADURA) >= 2",
+      "rule": 5
+     },
+     {
+      "id": "R6",
+      "expr": "abs(ENSAMBLE - PINTURA) == 1",
+      "rule": 6
+     },
+     {
+      "id": "R7",
+      "expr": "CORTE in [1, 2, 3]",
+      "rule": 7
+     }
+    ]
+   },
+   "solution": {
+    "RECEPCION": 1,
+    "CORTE": 2,
+    "SOLDADURA": 3,
+    "ENSAMBLE": 4,
+    "PINTURA": 5,
+    "DESPACHO": 6
+   },
+   "deduction": "Por R2, RECEPCION y DESPACHO ocupan los extremos. Si RECEPCION = 6, por R3 CORTE = 5, lo que viola R7. Entonces RECEPCION = 1, DESPACHO = 6 y CORTE = 2. Por R4, SOLDADURA = 3. PINTURA y ENSAMBLE quedan en {4, 5}; por R5, PINTURA ≠ 4 (vecino de SOLDADURA), así que PINTURA = 5 y ENSAMBLE = 4, que cumple R6.",
+   "review": {
+    "solver_unique": "ver results/ground_truth_check.csv",
+    "manual_review": "OK",
+    "reviewed_by": "Diego Changotasig",
+    "notes": "Comprobé que recepción y despacho ocupen extremos opuestos y que 'junto a' se represente con diferencia absoluta de 1. También revisé las separaciones de pintura y los espacios permitidos para corte."
+   }
+  },
+  {
+   "id": "D15",
+   "title": "Programación de un taller de fabricación (job shop)",
+   "area": "Producción",
+   "difficulty": "dificil",
+   "context": "Un taller debe fabricar hoy tres pedidos, A, B y C, durante una jornada de 8 horas (las horas se cuentan desde 0, inicio de la jornada, hasta 8, fin de la jornada). Cada operación empieza en una hora entera y se ejecuta sin interrupción. Las operaciones son:\n- A1: corte de A, 2 h; A2: doblado de A, 1 h.\n- B1: corte de B, 1 h; B2: doblado de B, 2 h.\n- C1: corte de C, 2 h; C2: doblado de C, 2 h; C3: pintura de C, 1 h.\nHay una sola cortadora, una sola dobladora y una sola cabina de pintura. La pregunta es la hora de inicio de cada operación.",
+   "rules_nl": [
+    "Dentro de cada pedido, una operación solo puede empezar cuando terminó la anterior (A1 antes que A2; B1 antes que B2; C1 antes que C2 y C2 antes que C3).",
+    "La cortadora solo puede hacer una operación a la vez (A1, B1 y C1 no pueden solaparse).",
+    "La dobladora solo puede hacer una operación a la vez (A2, B2 y C2 no pueden solaparse).",
+    "Todas las operaciones deben terminar a más tardar en la hora 8 (fin de la jornada).",
+    "El doblado de B requiere cambiar el dado de la dobladora, por lo que B2 solo puede empezar después de que termine A2.",
+    "La pintura de C debe empezar exactamente cuando termina su doblado (C2), para que la pieza no se oxide.",
+    "La cabina de pintura está ocupada por otro cliente hasta la hora 7, así que C3 no puede empezar antes de la hora 7."
+   ],
+   "question": "¿A qué hora (0 a 7) empieza cada operación (A1, A2, B1, B2, C1, C2, C3)?",
+   "variable_descriptions": {
+    "A1": "hora de inicio de la operación A1",
+    "A2": "hora de inicio de la operación A2",
+    "B1": "hora de inicio de la operación B1",
+    "B2": "hora de inicio de la operación B2",
+    "C1": "hora de inicio de la operación C1",
+    "C2": "hora de inicio de la operación C2",
+    "C3": "hora de inicio de la operación C3"
+   },
+   "model": {
+    "variables": {
+     "A1": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+     ],
+     "A2": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+     ],
+     "B1": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+     ],
+     "B2": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+     ],
+     "C1": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+     ],
+     "C2": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+     ],
+     "C3": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+     ]
+    },
+    "constraints": [
+     {
+      "id": "R1a",
+      "expr": "A1 + 2 <= A2",
+      "rule": 1
+     },
+     {
+      "id": "R1b",
+      "expr": "B1 + 1 <= B2",
+      "rule": 1
+     },
+     {
+      "id": "R1c",
+      "expr": "C1 + 2 <= C2",
+      "rule": 1
+     },
+     {
+      "id": "R1d",
+      "expr": "C2 + 2 <= C3",
+      "rule": 1
+     },
+     {
+      "id": "R2a",
+      "expr": "A1 + 2 <= B1 or B1 + 1 <= A1",
+      "rule": 2
+     },
+     {
+      "id": "R2b",
+      "expr": "A1 + 2 <= C1 or C1 + 2 <= A1",
+      "rule": 2
+     },
+     {
+      "id": "R2c",
+      "expr": "B1 + 1 <= C1 or C1 + 2 <= B1",
+      "rule": 2
+     },
+     {
+      "id": "R3a",
+      "expr": "A2 + 1 <= B2 or B2 + 2 <= A2",
+      "rule": 3
+     },
+     {
+      "id": "R3b",
+      "expr": "A2 + 1 <= C2 or C2 + 2 <= A2",
+      "rule": 3
+     },
+     {
+      "id": "R3c",
+      "expr": "B2 + 2 <= C2 or C2 + 2 <= B2",
+      "rule": 3
+     },
+     {
+      "id": "R4a",
+      "expr": "A2 + 1 <= 8",
+      "rule": 4
+     },
+     {
+      "id": "R4b",
+      "expr": "B2 + 2 <= 8",
+      "rule": 4
+     },
+     {
+      "id": "R4c",
+      "expr": "C3 + 1 <= 8",
+      "rule": 4
+     },
+     {
+      "id": "R5",
+      "expr": "A2 + 1 <= B2",
+      "rule": 5
+     },
+     {
+      "id": "R6",
+      "expr": "C3 == C2 + 2",
+      "rule": 6
+     },
+     {
+      "id": "R7",
+      "expr": "C3 >= 7",
+      "rule": 7
+     }
+    ]
+   },
+   "solution": {
+    "A1": 0,
+    "A2": 2,
+    "B1": 2,
+    "B2": 3,
+    "C1": 3,
+    "C2": 5,
+    "C3": 7
+   },
+   "deduction": "Por R7 y R4 (C3 ≥ 7 y C3 + 1 ≤ 8), C3 = 7, y por R6 C2 = 5, y la dobladora está ocupada en [5, 7). B2 (2 h, fin ≤ 8) no puede solaparse con C2, así que B2 ≤ 3. Por R5, A2 ≤ B2 − 1 ≤ 2, y por R1 A2 ≥ A1 + 2 ≥ 2, de modo que A2 = 2, A1 = 0 y B2 = 3. Por R1, B1 ≤ 2, y la cortadora está ocupada en [0, 2) por A1, así que B1 = 2. C1 debe terminar antes de C2 = 5 (C1 ≤ 3) y no puede solaparse con [0, 3), así que C1 = 3.",
+   "review": {
+    "solver_unique": "ver results/ground_truth_check.csv",
+    "manual_review": "OK",
+    "reviewed_by": "Diego Changotasig",
+    "notes": "Revisé las duraciones de cada operación, las precedencias y que las máquinas no atiendan dos tareas a la vez. La hora límite es 8, y la pintura C3 debe empezar justo al terminar C2 y no antes de la hora 7."
+   }
+  },
+  {
+   "id": "D16",
+   "title": "Asignación de pedidos a líneas de producción con capacidad",
+   "area": "Producción",
+   "difficulty": "dificil",
+   "context": "Una planta de envases tiene tres líneas de producción: L1 y L2, con 8 horas disponibles cada una, y L3, con 6 horas disponibles. Debe asignar ocho pedidos, cada uno completo a una sola línea. Duración de cada pedido: P1 = 4 h, P2 = 3 h, P3 = 2 h, P4 = 5 h, P5 = 3 h, P6 = 2 h, P7 = 1 h y P8 = 2 h. P3 y P6 son envases para alimentos; P7 usa un recubrimiento con lubricante industrial.",
+   "rules_nl": [
+    "La suma de las duraciones de los pedidos asignados a una línea no puede superar las horas disponibles de esa línea.",
+    "L3 es una línea pequeña y no puede procesar pedidos de más de 3 horas.",
+    "P2 y P5 son del mismo cliente y deben producirse en la misma línea.",
+    "Los envases para alimentos no pueden producirse en la misma línea que P7.",
+    "Si P1 se asigna a L1, entonces P8 debe asignarse a L3."
+   ],
+   "question": "¿A qué línea (L1, L2 o L3) se asigna cada pedido (P1 a P8)?",
+   "variable_descriptions": {
+    "P1": "línea asignada al pedido P1",
+    "P2": "línea asignada al pedido P2",
+    "P3": "línea asignada al pedido P3",
+    "P4": "línea asignada al pedido P4",
+    "P5": "línea asignada al pedido P5",
+    "P6": "línea asignada al pedido P6",
+    "P7": "línea asignada al pedido P7",
+    "P8": "línea asignada al pedido P8"
+   },
+   "model": {
+    "variables": {
+     "P1": [
+      "L1",
+      "L2",
+      "L3"
+     ],
+     "P2": [
+      "L1",
+      "L2",
+      "L3"
+     ],
+     "P3": [
+      "L1",
+      "L2",
+      "L3"
+     ],
+     "P4": [
+      "L1",
+      "L2",
+      "L3"
+     ],
+     "P5": [
+      "L1",
+      "L2",
+      "L3"
+     ],
+     "P6": [
+      "L1",
+      "L2",
+      "L3"
+     ],
+     "P7": [
+      "L1",
+      "L2",
+      "L3"
+     ],
+     "P8": [
+      "L1",
+      "L2",
+      "L3"
+     ]
+    },
+    "constraints": [
+     {
+      "id": "R1a",
+      "expr": "(P1=='L1')*4 + (P2=='L1')*3 + (P3=='L1')*2 + (P4=='L1')*5 + (P5=='L1')*3 + (P6=='L1')*2 + (P7=='L1')*1 + (P8=='L1')*2 <= 8",
+      "rule": 1
+     },
+     {
+      "id": "R1b",
+      "expr": "(P1=='L2')*4 + (P2=='L2')*3 + (P3=='L2')*2 + (P4=='L2')*5 + (P5=='L2')*3 + (P6=='L2')*2 + (P7=='L2')*1 + (P8=='L2')*2 <= 8",
+      "rule": 1
+     },
+     {
+      "id": "R1c",
+      "expr": "(P1=='L3')*4 + (P2=='L3')*3 + (P3=='L3')*2 + (P4=='L3')*5 + (P5=='L3')*3 + (P6=='L3')*2 + (P7=='L3')*1 + (P8=='L3')*2 <= 6",
+      "rule": 1
+     },
+     {
+      "id": "R2a",
+      "expr": "P1 != 'L3'",
+      "rule": 2
+     },
+     {
+      "id": "R2b",
+      "expr": "P4 != 'L3'",
+      "rule": 2
+     },
+     {
+      "id": "R3",
+      "expr": "P2 == P5",
+      "rule": 3
+     },
+     {
+      "id": "R4a",
+      "expr": "P3 != P7",
+      "rule": 4
+     },
+     {
+      "id": "R4b",
+      "expr": "P6 != P7",
+      "rule": 4
+     },
+     {
+      "id": "R5",
+      "expr": "implies(P1 == 'L1', P8 == 'L3')",
+      "rule": 5
+     }
+    ]
+   },
+   "solution": {
+    "P1": "L2",
+    "P2": "L3",
+    "P3": "L2",
+    "P4": "L1",
+    "P5": "L3",
+    "P6": "L2",
+    "P7": "L1",
+    "P8": "L1"
+   },
+   "deduction": "Las capacidades suman 22 h, igual que la demanda, así que todas las líneas quedan llenas. P1 y P4 no van en L3 (R2), y juntos suman 9 h > 8, así que uno va en L1 y el otro en L2. Si P1 = L1, por R5 P8 = L3, y el bloque P2 + P5 (6 h, R3) no cabe en ninguna línea (10, 11 y 8 h): contradicción. Por tanto P1 = L2 y P4 = L1. El bloque P2 + P5 solo cabe en L3, que queda llena. Quedan P3, P6, P7 y P8 (7 h) para L1 (3 h libres) y L2 (4 h libres). Con R4, la única forma de sumar 3 h en L1 sin juntar P7 con P3 o P6 es {P7, P8}, así que L2 = {P1, P3, P6}.",
+   "review": {
+    "solver_unique": "ver results/ground_truth_check.csv",
+    "manual_review": "OK",
+    "reviewed_by": "Diego Changotasig",
+    "notes": "Comprobé las ocho duraciones y las capacidades 8, 8 y 6 horas. También revisé la asignación conjunta de P2 y P5, las incompatibilidades con P7 y la dirección de la condición: si P1 va a L1, P8 debe ir a L3."
+   }
+  },
+  {
+   "id": "D17",
+   "title": "Programación de turnos con habilidades y cobertura",
+   "area": "Turnos de trabajo",
+   "difficulty": "dificil",
+   "context": "Una planta química opera en tres turnos: mañana, tarde y noche. Ocho técnicos deben asignarse cada uno a exactamente un turno: Andrés, Beatriz, Carlos, Diana, Esteban, Fabiola, Gabriel y Helena. Andrés y Beatriz son supervisores; Carlos, Fabiola y Helena son los únicos electricistas.",
+   "rules_nl": [
+    "La mañana y la tarde deben tener exactamente tres técnicos cada una, y la noche exactamente dos.",
+    "Cada turno debe tener exactamente un electricista.",
+    "Los dos supervisores no pueden estar en el mismo turno.",
+    "El turno de noche debe tener al menos un supervisor.",
+    "Diana y Esteban comparten transporte y deben estar en el mismo turno.",
+    "Gabriel tiene clases por la mañana y no puede trabajar en ese turno.",
+    "Si Helena trabaja de noche, entonces Andrés también debe trabajar de noche.",
+    "Fabiola no puede trabajar de noche.",
+    "Beatriz no puede trabajar en la tarde.",
+    "Fabiola está capacitando a Diana, así que ambas deben estar en el mismo turno."
+   ],
+   "question": "¿En qué turno (mañana, tarde o noche) trabaja cada técnico?",
+   "variable_descriptions": {
+    "ANDRES": "turno de Andres",
+    "BEATRIZ": "turno de Beatriz",
+    "CARLOS": "turno de Carlos",
+    "DIANA": "turno de Diana",
+    "ESTEBAN": "turno de Esteban",
+    "FABIOLA": "turno de Fabiola",
+    "GABRIEL": "turno de Gabriel",
+    "HELENA": "turno de Helena"
+   },
+   "model": {
+    "variables": {
+     "ANDRES": [
+      "MANANA",
+      "TARDE",
+      "NOCHE"
+     ],
+     "BEATRIZ": [
+      "MANANA",
+      "TARDE",
+      "NOCHE"
+     ],
+     "CARLOS": [
+      "MANANA",
+      "TARDE",
+      "NOCHE"
+     ],
+     "DIANA": [
+      "MANANA",
+      "TARDE",
+      "NOCHE"
+     ],
+     "ESTEBAN": [
+      "MANANA",
+      "TARDE",
+      "NOCHE"
+     ],
+     "FABIOLA": [
+      "MANANA",
+      "TARDE",
+      "NOCHE"
+     ],
+     "GABRIEL": [
+      "MANANA",
+      "TARDE",
+      "NOCHE"
+     ],
+     "HELENA": [
+      "MANANA",
+      "TARDE",
+      "NOCHE"
+     ]
+    },
+    "constraints": [
+     {
+      "id": "R1a",
+      "expr": "count('MANANA', ANDRES, BEATRIZ, CARLOS, DIANA, ESTEBAN, FABIOLA, GABRIEL, HELENA) == 3",
+      "rule": 1
+     },
+     {
+      "id": "R1b",
+      "expr": "count('TARDE', ANDRES, BEATRIZ, CARLOS, DIANA, ESTEBAN, FABIOLA, GABRIEL, HELENA) == 3",
+      "rule": 1
+     },
+     {
+      "id": "R1c",
+      "expr": "count('NOCHE', ANDRES, BEATRIZ, CARLOS, DIANA, ESTEBAN, FABIOLA, GABRIEL, HELENA) == 2",
+      "rule": 1
+     },
+     {
+      "id": "R2",
+      "expr": "alldiff(CARLOS, FABIOLA, HELENA)",
+      "rule": 2
+     },
+     {
+      "id": "R3",
+      "expr": "ANDRES != BEATRIZ",
+      "rule": 3
+     },
+     {
+      "id": "R4",
+      "expr": "count('NOCHE', ANDRES, BEATRIZ) >= 1",
+      "rule": 4
+     },
+     {
+      "id": "R5",
+      "expr": "DIANA == ESTEBAN",
+      "rule": 5
+     },
+     {
+      "id": "R6",
+      "expr": "GABRIEL != 'MANANA'",
+      "rule": 6
+     },
+     {
+      "id": "R7",
+      "expr": "implies(HELENA == 'NOCHE', ANDRES == 'NOCHE')",
+      "rule": 7
+     },
+     {
+      "id": "R8",
+      "expr": "FABIOLA != 'NOCHE'",
+      "rule": 8
+     },
+     {
+      "id": "R9",
+      "expr": "BEATRIZ != 'TARDE'",
+      "rule": 9
+     },
+     {
+      "id": "R10",
+      "expr": "FABIOLA == DIANA",
+      "rule": 10
+     }
+    ]
+   },
+   "solution": {
+    "ANDRES": "TARDE",
+    "BEATRIZ": "NOCHE",
+    "CARLOS": "NOCHE",
+    "DIANA": "MANANA",
+    "ESTEBAN": "MANANA",
+    "FABIOLA": "MANANA",
+    "GABRIEL": "TARDE",
+    "HELENA": "TARDE"
+   },
+   "deduction": "Por R5 y R10, FABIOLA = DIANA = ESTEBAN, que forman un turno completo de 3 y no de noche (R8). Si fuera la TARDE, GABRIEL (≠ MAÑANA) iría a la NOCHE, que además necesitaría un electricista (R2) y un supervisor (R4): serían 3 personas > 2. Entonces el trío está en la MAÑANA. Si HELENA = NOCHE, por R7 ANDRES = NOCHE y BEATRIZ (≠ ANDRES, ≠ TARDE) iría a la MAÑANA, que ya está llena. Entonces CARLOS = NOCHE y HELENA = TARDE. La NOCHE necesita un supervisor; BEATRIZ no puede ir a la TARDE ni a la MAÑANA (llena), así que BEATRIZ = NOCHE. ANDRES y GABRIEL completan la TARDE.",
+   "review": {
+    "solver_unique": "ver results/ground_truth_check.csv",
+    "manual_review": "OK",
+    "reviewed_by": "Diego Changotasig",
+    "notes": "Revisé la cobertura exacta de 3, 3 y 2 técnicos, un electricista por turno y la presencia de un supervisor nocturno. También comprobé las igualdades, disponibilidades y la condición que se activa si Helena trabaja de noche."
+   }
+  },
+  {
+   "id": "D18",
+   "title": "Plan semanal de mantenimiento de equipos",
+   "area": "Mantenimiento",
+   "difficulty": "dificil",
+   "context": "Un taller de manufactura debe programar el mantenimiento de siete equipos en una semana laboral de cinco días (día 1 = lunes, ..., día 5 = viernes): dos tornos de la línea A (TORNO1 y TORNO2), dos fresadoras de la línea B (FRESA1 y FRESA2), una prensa, un compresor y un puente grúa. Cada equipo se atiende completo en un solo día.",
+   "rules_nl": [
+    "Se pueden atender como máximo dos equipos por día.",
+    "El lunes (día 1) y el miércoles (día 3) hay capacitación del personal, así que esos días se atiende como máximo un equipo.",
+    "Para no detener una línea completa, dos equipos de la misma línea no pueden atenderse el mismo día.",
+    "La prensa se desmonta con el puente grúa recién revisado, así que la prensa se atiende exactamente el día siguiente al de la grúa.",
+    "La prensa fabrica los bujes de repuesto de los tornos, así que ambos tornos se atienden en días posteriores al de la prensa.",
+    "Los dos tornos usan el mismo kit de repuestos y se atienden en días consecutivos, primero TORNO1 y luego TORNO2.",
+    "Los tornos deben estar operativos el viernes, así que ninguno puede atenderse el día 5.",
+    "Tornos y fresadoras los atiende el mismo mecánico, así que ninguna fresadora puede atenderse el mismo día que un torno.",
+    "Las fresadoras se prueban con aire comprimido, así que ninguna puede atenderse el mismo día que el compresor.",
+    "El compresor y la prensa usan al mismo electricista, así que no pueden atenderse el mismo día.",
+    "FRESA1 es la de mayor uso y debe atenderse antes que FRESA2."
+   ],
+   "question": "¿Qué día (1 a 5) recibe mantenimiento cada equipo?",
+   "variable_descriptions": {
+    "TORNO1": "día de mantenimiento de TORNO1",
+    "TORNO2": "día de mantenimiento de TORNO2",
+    "FRESA1": "día de mantenimiento de FRESA1",
+    "FRESA2": "día de mantenimiento de FRESA2",
+    "PRENSA": "día de mantenimiento de PRENSA",
+    "COMPRESOR": "día de mantenimiento de COMPRESOR",
+    "GRUA": "día de mantenimiento de GRUA"
+   },
+   "model": {
+    "variables": {
+     "TORNO1": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "TORNO2": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "FRESA1": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "FRESA2": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "PRENSA": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "COMPRESOR": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "GRUA": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ]
+    },
+    "constraints": [
+     {
+      "id": "R1a",
+      "expr": "count(1, TORNO1, TORNO2, FRESA1, FRESA2, PRENSA, COMPRESOR, GRUA) <= 2",
+      "rule": 1
+     },
+     {
+      "id": "R1b",
+      "expr": "count(2, TORNO1, TORNO2, FRESA1, FRESA2, PRENSA, COMPRESOR, GRUA) <= 2",
+      "rule": 1
+     },
+     {
+      "id": "R1c",
+      "expr": "count(3, TORNO1, TORNO2, FRESA1, FRESA2, PRENSA, COMPRESOR, GRUA) <= 2",
+      "rule": 1
+     },
+     {
+      "id": "R1d",
+      "expr": "count(4, TORNO1, TORNO2, FRESA1, FRESA2, PRENSA, COMPRESOR, GRUA) <= 2",
+      "rule": 1
+     },
+     {
+      "id": "R1e",
+      "expr": "count(5, TORNO1, TORNO2, FRESA1, FRESA2, PRENSA, COMPRESOR, GRUA) <= 2",
+      "rule": 1
+     },
+     {
+      "id": "R2a",
+      "expr": "count(1, TORNO1, TORNO2, FRESA1, FRESA2, PRENSA, COMPRESOR, GRUA) <= 1",
+      "rule": 2
+     },
+     {
+      "id": "R2b",
+      "expr": "count(3, TORNO1, TORNO2, FRESA1, FRESA2, PRENSA, COMPRESOR, GRUA) <= 1",
+      "rule": 2
+     },
+     {
+      "id": "R3a",
+      "expr": "TORNO1 != TORNO2",
+      "rule": 3
+     },
+     {
+      "id": "R3b",
+      "expr": "FRESA1 != FRESA2",
+      "rule": 3
+     },
+     {
+      "id": "R4",
+      "expr": "PRENSA == GRUA + 1",
+      "rule": 4
+     },
+     {
+      "id": "R5a",
+      "expr": "TORNO1 > PRENSA",
+      "rule": 5
+     },
+     {
+      "id": "R5b",
+      "expr": "TORNO2 > PRENSA",
+      "rule": 5
+     },
+     {
+      "id": "R6",
+      "expr": "TORNO2 == TORNO1 + 1",
+      "rule": 6
+     },
+     {
+      "id": "R7a",
+      "expr": "TORNO1 != 5",
+      "rule": 7
+     },
+     {
+      "id": "R7b",
+      "expr": "TORNO2 != 5",
+      "rule": 7
+     },
+     {
+      "id": "R8a",
+      "expr": "FRESA1 != TORNO1",
+      "rule": 8
+     },
+     {
+      "id": "R8b",
+      "expr": "FRESA1 != TORNO2",
+      "rule": 8
+     },
+     {
+      "id": "R8c",
+      "expr": "FRESA2 != TORNO1",
+      "rule": 8
+     },
+     {
+      "id": "R8d",
+      "expr": "FRESA2 != TORNO2",
+      "rule": 8
+     },
+     {
+      "id": "R9a",
+      "expr": "FRESA1 != COMPRESOR",
+      "rule": 9
+     },
+     {
+      "id": "R9b",
+      "expr": "FRESA2 != COMPRESOR",
+      "rule": 9
+     },
+     {
+      "id": "R10",
+      "expr": "COMPRESOR != PRENSA",
+      "rule": 10
+     },
+     {
+      "id": "R11",
+      "expr": "FRESA1 < FRESA2",
+      "rule": 11
+     }
+    ]
+   },
+   "solution": {
+    "TORNO1": 3,
+    "TORNO2": 4,
+    "FRESA1": 2,
+    "FRESA2": 5,
+    "PRENSA": 2,
+    "COMPRESOR": 4,
+    "GRUA": 1
+   },
+   "deduction": "Por R6 y R7, TORNO2 = TORNO1 + 1 ≤ 4, así que TORNO1 ≤ 3. Por R5, PRENSA < TORNO1, así que PRENSA ≤ 2, y por R4 PRENSA = GRUA + 1 ≥ 2. Entonces PRENSA = 2, GRUA = 1, TORNO1 = 3 y TORNO2 = 4. Los días 1 y 3 ya tienen su único cupo (R2). Las fresadoras no pueden ir en los días 3 y 4 (R8) ni en el día 1 (lleno), así que van en {2, 5}, y por R11 FRESA1 = 2 y FRESA2 = 5. El COMPRESOR no puede ir en los días 2 ni 5 (R9, R10) ni en los días 1 ni 3 (llenos), así que COMPRESOR = 4.",
+   "review": {
+    "solver_unique": "ver results/ground_truth_check.csv",
+    "manual_review": "OK",
+    "reviewed_by": "Diego Changotasig",
+    "notes": "Comprobé el máximo de dos equipos diarios, la excepción de un equipo en los días 1 y 3, las precedencias y las restricciones de personal compartido. También revisé que los tornos sean consecutivos y no se programen el día 5."
+   }
+  },
+  {
+   "id": "D19",
+   "title": "Plan maestro de producción por semanas",
+   "area": "Producción",
+   "difficulty": "dificil",
+   "context": "Una fábrica de muebles debe programar nueve lotes (L1 a L9) en las próximas tres semanas (semanas 1, 2 y 3). Cada lote se produce completo en una sola semana. Horas requeridas: L1 = 10, L2 = 8, L3 = 12, L4 = 6, L5 = 10, L6 = 8, L7 = 14, L8 = 6 y L9 = 6. La planta dispone de 30 horas por semana. L1 fabrica los componentes que luego se ensamblan en L5. L2 y L6 pertenecen a la misma familia de productos (mismo acabado).",
+   "rules_nl": [
+    "Las horas totales de los lotes de una misma semana no pueden superar 30.",
+    "L3 debe entregarse al final de la semana 1.",
+    "L7 debe entregarse a más tardar al final de la semana 2.",
+    "Los componentes de L1 deben producirse en una semana anterior a la del ensamble L5.",
+    "L2 y L6 deben producirse en la misma semana para aprovechar la preparación del acabado.",
+    "Por los cambios de formato, en cada semana se pueden producir como máximo cuatro lotes.",
+    "L8 usa los moldes que se fabrican en L4, así que L4 debe producirse en una semana anterior a la de L8.",
+    "L9 es la versión de exportación de L4 y debe producirse en la misma semana que L4."
+   ],
+   "question": "¿En qué semana (1, 2 o 3) se produce cada lote (L1 a L9)?",
+   "variable_descriptions": {
+    "L1": "semana en que se produce el lote L1",
+    "L2": "semana en que se produce el lote L2",
+    "L3": "semana en que se produce el lote L3",
+    "L4": "semana en que se produce el lote L4",
+    "L5": "semana en que se produce el lote L5",
+    "L6": "semana en que se produce el lote L6",
+    "L7": "semana en que se produce el lote L7",
+    "L8": "semana en que se produce el lote L8",
+    "L9": "semana en que se produce el lote L9"
+   },
+   "model": {
+    "variables": {
+     "L1": [
+      1,
+      2,
+      3
+     ],
+     "L2": [
+      1,
+      2,
+      3
+     ],
+     "L3": [
+      1,
+      2,
+      3
+     ],
+     "L4": [
+      1,
+      2,
+      3
+     ],
+     "L5": [
+      1,
+      2,
+      3
+     ],
+     "L6": [
+      1,
+      2,
+      3
+     ],
+     "L7": [
+      1,
+      2,
+      3
+     ],
+     "L8": [
+      1,
+      2,
+      3
+     ],
+     "L9": [
+      1,
+      2,
+      3
+     ]
+    },
+    "constraints": [
+     {
+      "id": "R1a",
+      "expr": "(L1==1)*10 + (L2==1)*8 + (L3==1)*12 + (L4==1)*6 + (L5==1)*10 + (L6==1)*8 + (L7==1)*14 + (L8==1)*6 + (L9==1)*6 <= 30",
+      "rule": 1
+     },
+     {
+      "id": "R1b",
+      "expr": "(L1==2)*10 + (L2==2)*8 + (L3==2)*12 + (L4==2)*6 + (L5==2)*10 + (L6==2)*8 + (L7==2)*14 + (L8==2)*6 + (L9==2)*6 <= 30",
+      "rule": 1
+     },
+     {
+      "id": "R1c",
+      "expr": "(L1==3)*10 + (L2==3)*8 + (L3==3)*12 + (L4==3)*6 + (L5==3)*10 + (L6==3)*8 + (L7==3)*14 + (L8==3)*6 + (L9==3)*6 <= 30",
+      "rule": 1
+     },
+     {
+      "id": "R2",
+      "expr": "L3 == 1",
+      "rule": 2
+     },
+     {
+      "id": "R3",
+      "expr": "L7 <= 2",
+      "rule": 3
+     },
+     {
+      "id": "R4",
+      "expr": "L1 < L5",
+      "rule": 4
+     },
+     {
+      "id": "R5",
+      "expr": "L2 == L6",
+      "rule": 5
+     },
+     {
+      "id": "R6a",
+      "expr": "count(1, L1, L2, L3, L4, L5, L6, L7, L8, L9) <= 4",
+      "rule": 6
+     },
+     {
+      "id": "R6b",
+      "expr": "count(2, L1, L2, L3, L4, L5, L6, L7, L8, L9) <= 4",
+      "rule": 6
+     },
+     {
+      "id": "R6c",
+      "expr": "count(3, L1, L2, L3, L4, L5, L6, L7, L8, L9) <= 4",
+      "rule": 6
+     },
+     {
+      "id": "R7",
+      "expr": "L4 < L8",
+      "rule": 7
+     },
+     {
+      "id": "R8",
+      "expr": "L9 == L4",
+      "rule": 8
+     }
+    ]
+   },
+   "solution": {
+    "L1": 2,
+    "L2": 3,
+    "L3": 1,
+    "L4": 1,
+    "L5": 3,
+    "L6": 3,
+    "L7": 2,
+    "L8": 2,
+    "L9": 1
+   },
+   "deduction": "Por R2, L3 = 1. Por R7 y R8, L4 = L9 < L8, así que L4 = L9 ∈ {1, 2}. Si L4 = L9 = 2, L8 = 3, y el par L2 = L6 (16 h) junto con L1 < L5 no cabe en ninguna asignación de capacidad (se prueban L7 = 1 y L7 = 2, y ambas fallan). Entonces L4 = L9 = 1, y la semana 1 queda con 24 h, donde ya no cabe L7 (14 h). Así L7 = 2. L1 no cabe en la semana 1, y por R4 L1 < L5, así que L1 = 2 y L5 = 3. El par L2 = L6 (16 h) no cabe en la semana 2 (24 + 16), así que va en la semana 3 (10 + 16 = 26). L8 (6 h) no cabe en la semana 3 (32), así que L8 = 2 (30 h). Ninguna semana pasa de 4 lotes (R6).",
+   "review": {
+    "solver_unique": "ver results/ground_truth_check.csv",
+    "manual_review": "OK",
+    "reviewed_by": "Diego Changotasig",
+    "notes": "Revisé las horas de los nueve lotes, el límite de 30 horas y cuatro lotes por semana. También comprobé que 'a más tardar la semana 2' sea <= 2 y que las reglas de precedencia y producción conjunta estén completas."
+   }
+  },
+  {
+   "id": "D20",
+   "title": "Programación de ventanas en un centro de cross-docking",
+   "area": "Logística",
+   "difficulty": "dificil",
+   "context": "Un centro de cross-docking tiene dos muelles y cuatro ventanas horarias consecutivas (1, 2, 3 y 4). Ocho camiones, T1 a T8, deben recibir cada uno una ventana. T1 y T2 son refrigerados. T3 trae componentes que luego recoge T6. T4 y T5 se transfieren carga directamente de uno a otro.",
+   "rules_nl": [
+    "Como hay dos muelles, en cada ventana pueden atenderse como máximo dos camiones.",
+    "Los camiones refrigerados deben atenderse en las ventanas 1 o 2.",
+    "T6 recoge lo que trae T3, así que T6 debe atenderse en una ventana posterior a la de T3.",
+    "T4 y T5 deben atenderse en la misma ventana para hacer la transferencia directa.",
+    "T7 llega desde otra ciudad y solo puede atenderse en las ventanas 3 o 4.",
+    "Si T8 se atiende en la ventana 1, entonces T2 debe atenderse en la ventana 2.",
+    "Los dos refrigerados no pueden atenderse en la misma ventana, porque solo hay una toma de frío.",
+    "T6 debe atenderse exactamente en la ventana siguiente a la de T3, para que la mercadería no espere en el andén.",
+    "T8 debe atenderse en una ventana anterior a la de T7."
+   ],
+   "question": "¿En qué ventana (1 a 4) se atiende cada camión (T1 a T8)?",
+   "variable_descriptions": {
+    "T1": "ventana horaria del camión T1",
+    "T2": "ventana horaria del camión T2",
+    "T3": "ventana horaria del camión T3",
+    "T4": "ventana horaria del camión T4",
+    "T5": "ventana horaria del camión T5",
+    "T6": "ventana horaria del camión T6",
+    "T7": "ventana horaria del camión T7",
+    "T8": "ventana horaria del camión T8"
+   },
+   "model": {
+    "variables": {
+     "T1": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "T2": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "T3": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "T4": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "T5": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "T6": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "T7": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "T8": [
+      1,
+      2,
+      3,
+      4
+     ]
+    },
+    "constraints": [
+     {
+      "id": "R1a",
+      "expr": "count(1, T1, T2, T3, T4, T5, T6, T7, T8) <= 2",
+      "rule": 1
+     },
+     {
+      "id": "R1b",
+      "expr": "count(2, T1, T2, T3, T4, T5, T6, T7, T8) <= 2",
+      "rule": 1
+     },
+     {
+      "id": "R1c",
+      "expr": "count(3, T1, T2, T3, T4, T5, T6, T7, T8) <= 2",
+      "rule": 1
+     },
+     {
+      "id": "R1d",
+      "expr": "count(4, T1, T2, T3, T4, T5, T6, T7, T8) <= 2",
+      "rule": 1
+     },
+     {
+      "id": "R2a",
+      "expr": "T1 <= 2",
+      "rule": 2
+     },
+     {
+      "id": "R2b",
+      "expr": "T2 <= 2",
+      "rule": 2
+     },
+     {
+      "id": "R3",
+      "expr": "T3 < T6",
+      "rule": 3
+     },
+     {
+      "id": "R4",
+      "expr": "T4 == T5",
+      "rule": 4
+     },
+     {
+      "id": "R5",
+      "expr": "T7 >= 3",
+      "rule": 5
+     },
+     {
+      "id": "R6",
+      "expr": "implies(T8 == 1, T2 == 2)",
+      "rule": 6
+     },
+     {
+      "id": "R7",
+      "expr": "T1 != T2",
+      "rule": 7
+     },
+     {
+      "id": "R8",
+      "expr": "T6 == T3 + 1",
+      "rule": 8
+     },
+     {
+      "id": "R9",
+      "expr": "T8 < T7",
+      "rule": 9
+     }
+    ]
+   },
+   "solution": {
+    "T1": 1,
+    "T2": 2,
+    "T3": 2,
+    "T4": 4,
+    "T5": 4,
+    "T6": 3,
+    "T7": 3,
+    "T8": 1
+   },
+   "deduction": "Hay 8 camiones y 4 ventanas de 2 cupos, así que cada ventana queda llena. Por R2 y R7, T1 y T2 ocupan un cupo de la ventana 1 y otro de la 2. El par T4 = T5 (R4) necesita una ventana completa, así que va en la 3 o la 4. Si T4 = T5 = 3, entonces T7 = 4 (R5), y T3, T6 y T8 ocupan un cupo en las ventanas 1, 2 y 4. T6 = T3 + 1 (R8) obliga a T3 = 1 y T6 = 2, con lo que T8 = 4, que no es < T7 (R9): contradicción. Entonces T4 = T5 = 4 y T7 = 3. Si T3 = 1 y T6 = 2, T8 = 3, que no es < 3: contradicción. Así T3 = 2, T6 = 3 y T8 = 1. Por R6, T2 = 2 y T1 = 1.",
+   "review": {
+    "solver_unique": "ver results/ground_truth_check.csv",
+    "manual_review": "OK",
+    "reviewed_by": "Diego Changotasig",
+    "notes": "Comprobé los dos cupos por ventana, las ventanas permitidas para los refrigerados y para T7, y las relaciones entre los camiones. La condición sobre T8 y T2 está expresada como implicación, y T6 va exactamente una ventana después de T3."
+   }
+  }
+ ]
+}

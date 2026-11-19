@@ -1,0 +1,21 @@
+problem_id,difficulty,arm,outcome,answer,solver_status,attempts,wall_s,llm_s,solver_s,tokens_in,tokens_out,cost_usd,model,error_category,error_message,timestamp
+F01,facil,A,correct,"{""OP1"": ""TORNO"", ""OP2"": ""FRESADORA"", ""OP3"": ""CNC""}",unique,1,0.000196,0.000000,0.000044,0,0,0.000000,human,,,2026-11-08T15:35:50+00:00
+F02,facil,A,correct,"{""C1"": 3, ""C2"": 1, ""C3"": 2}",unique,1,0.000241,0.000000,0.000048,0,0,0.000000,human,,,2026-11-08T15:35:50+00:00
+F03,facil,A,correct,"{""BANDA"": 4, ""CALDERA"": 3, ""COMPRESOR"": 1, ""PRENSA"": 2}",unique,1,0.000204,0.000000,0.000064,0,0,0.000000,human,,,2026-11-08T15:35:50+00:00
+F04,facil,A,correct,"{""CORTE"": 1, ""INSPECCION"": 3, ""PINTURA"": 4, ""SOLDADURA"": 2}",unique,1,0.000246,0.000000,0.000068,0,0,0.000000,human,,,2026-11-08T15:35:50+00:00
+F05,facil,A,correct,"{""ACIDO"": ""B"", ""ALIMENTO"": ""C"", ""PAPEL"": ""B"", ""SOLVENTE"": ""A""}",unique,1,0.000466,0.000000,0.000056,0,0,0.000000,human,,,2026-11-08T15:35:50+00:00
+F06,facil,A,correct,"{""LOTE1"": ""ROSA"", ""LOTE2"": ""PABLO"", ""LOTE3"": ""ELENA"", ""LOTE4"": ""ROSA""}",unique,1,0.000353,0.000000,0.000055,0,0,0.000000,human,,,2026-11-08T15:35:50+00:00
+F07,facil,A,correct,"{""ANA"": ""TARDE"", ""BRUNO"": ""NOCHE"", ""CARLA"": ""MANANA"", ""DIEGO"": ""MANANA""}",unique,1,0.000468,0.000000,0.000105,0,0,0.000000,human,,,2026-11-08T15:35:50+00:00
+M08,intermedio,A,correct,"{""P1"": 2, ""P2"": 1, ""P3"": 3, ""P4"": 5, ""P5"": 4}",unique,1,0.000474,0.000000,0.000186,0,0,0.000000,human,,,2026-11-08T15:35:50+00:00
+M09,intermedio,A,correct,"{""ANA"": ""CONTROL"", ""BETO"": ""EMPAQUE"", ""CARO"": ""ENSAMBLE"", ""DANI"": ""CONTROL"", ""EDU"": ""ENSAMBLE"", ""FER"": ""EMPAQUE""}",unique,1,0.000560,0.000000,0.000121,0,0,0.000000,human,,,2026-11-08T15:35:50+00:00
+M10,intermedio,A,correct,"{""C1"": ""V2"", ""C2"": ""V1"", ""C3"": ""V1"", ""C4"": ""V3"", ""C5"": ""V3""}",unique,1,0.000790,0.000000,0.000077,0,0,0.000000,human,,,2026-11-08T15:35:50+00:00
+M11,intermedio,A,correct,"{""COMPRESOR"": 3, ""GENERADOR"": 1, ""HORNO"": 2, ""SECADOR"": 3, ""TABLERO"": 2}",unique,1,0.000265,0.000000,0.000078,0,0,0.000000,human,,,2026-11-08T15:35:50+00:00
+M12,intermedio,A,correct,"{""JORGE"": 1, ""LUIS"": 2, ""MARIA"": 5, ""PEDRO"": 3, ""SOFIA"": 4}",unique,1,0.000225,0.000000,0.000060,0,0,0.000000,human,,,2026-11-08T15:35:50+00:00
+M13,intermedio,A,correct,"{""CABLE"": 3, ""FILTROS"": 3, ""GUANTES"": 1, ""MOTOR"": 1, ""PINTURA"": 2, ""TORNILLOS"": 2}",unique,1,0.000286,0.000000,0.000050,0,0,0.000000,human,,,2026-11-08T15:35:50+00:00
+M14,intermedio,A,correct,"{""CORTE"": 2, ""DESPACHO"": 6, ""ENSAMBLE"": 4, ""PINTURA"": 5, ""RECEPCION"": 1, ""SOLDADURA"": 3}",unique,1,0.000295,0.000000,0.000092,0,0,0.000000,human,,,2026-11-08T15:35:50+00:00
+D15,dificil,A,correct,"{""A1"": 0, ""A2"": 2, ""B1"": 2, ""B2"": 3, ""C1"": 3, ""C2"": 5, ""C3"": 7}",unique,1,0.000467,0.000000,0.000097,0,0,0.000000,human,,,2026-11-08T15:35:50+00:00
+D16,dificil,A,correct,"{""P1"": ""L2"", ""P2"": ""L3"", ""P3"": ""L2"", ""P4"": ""L1"", ""P5"": ""L3"", ""P6"": ""L2"", ""P7"": ""L1"", ""P8"": ""L1""}",unique,1,0.001572,0.000000,0.001125,0,0,0.000000,human,,,2026-11-08T15:35:50+00:00
+D17,dificil,A,correct,"{""ANDRES"": ""TARDE"", ""BEATRIZ"": ""NOCHE"", ""CARLOS"": ""NOCHE"", ""DIANA"": ""MANANA"", ""ESTEBAN"": ""MANANA"", ""FABIOLA"": ""MANANA"", ""GABRIEL"": ""TARDE"", ""HELENA"": ""TARDE""}",unique,1,0.000565,0.000000,0.000251,0,0,0.000000,human,,,2026-11-08T15:35:50+00:00
+D18,dificil,A,correct,"{""COMPRESOR"": 4, ""FRESA1"": 2, ""FRESA2"": 5, ""GRUA"": 1, ""PRENSA"": 2, ""TORNO1"": 3, ""TORNO2"": 4}",unique,1,0.000709,0.000000,0.000200,0,0,0.000000,human,,,2026-11-08T15:35:50+00:00
+D19,dificil,A,correct,"{""L1"": 2, ""L2"": 3, ""L3"": 1, ""L4"": 1, ""L5"": 3, ""L6"": 3, ""L7"": 2, ""L8"": 2, ""L9"": 1}",unique,1,0.001135,0.000000,0.000516,0,0,0.000000,human,,,2026-11-08T15:35:50+00:00
+D20,dificil,A,correct,"{""T1"": 1, ""T2"": 2, ""T3"": 2, ""T4"": 4, ""T5"": 4, ""T6"": 3, ""T7"": 3, ""T8"": 1}",unique,1,0.001418,0.000000,0.001081,0,0,0.000000,human,,,2026-11-08T15:35:50+00:00
