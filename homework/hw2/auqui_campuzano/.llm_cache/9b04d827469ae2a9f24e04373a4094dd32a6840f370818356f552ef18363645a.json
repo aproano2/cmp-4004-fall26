@@ -1,0 +1,24 @@
+{
+ "text": "{\n  \"assignment\": {\n    \"R1\": \"red\",\n    \"R2\": \"green\",\n    \"R3\": \"blue\",\n    \"R4\": \"green\",\n    \"R5\": \"red\",\n    \"R6\": \"blue\",\n    \"R7\": \"red\",\n    \"R8\": \"blue\",\n    \"R9\": \"red\"\n  }\n} \n\nSegún las restricciones proporcionadas, la solución es seguir este coloríng:\n\nR1: rojo\nR2: verde\nR3: azul\nR4: verde\nR5: rojo\nR6: azul\nR7: rojo\nR8: azul\nR9: rojo ",
+ "seconds": 0.9964546249999842,
+ "prompt_tokens": 479,
+ "completion_tokens": 199,
+ "model": "allam-2-7b",
+ "key": {
+  "model": "allam-2-7b",
+  "base": "https://api.groq.com/openai/v1",
+  "temperature": 0.7,
+  "max_tokens": 1500,
+  "rep": 0,
+  "messages": [
+   {
+    "role": "system",
+    "content": "Solve the graph-coloring problem. Return ONLY a JSON object {\"assignment\": {region: colour, ...}} assigning every region one allowed colour, using the lower-case English names \"red\", \"green\", \"blue\". Follow every restriction."
+   },
+   {
+    "role": "user",
+    "content": "Asigna un color a cada región R1, R2, R3, R4, R5, R6, R7, R8, R9. Los colores permitidos son rojo, verde y azul. Regiones adyacentes deben tener colores distintos. Adyacencias: R1 no puede tener el mismo color que R2; R1 no puede tener el mismo color que R3; R1 no puede tener el mismo color que R5; R1 no puede tener el mismo color que R6; R2 no puede tener el mismo color que R3; R2 no puede tener el mismo color que R6; R2 no puede tener el mismo color que R7; R3 no puede tener el mismo color que R4; R3 no puede tener el mismo color que R5; R3 no puede tener el mismo color que R8; R4 no puede tener el mismo color que R5; R4 no puede tener el mismo color que R6; R4 no puede tener el mismo color que R9; R5 no puede tener el mismo color que R6; R5 no puede tener el mismo color que R7; R6 no puede tener el mismo color que R7; R6 no puede tener el mismo color que R8; R7 no puede tener el mismo color que R8; R7 no puede tener el mismo color que R9; R8 no puede tener el mismo color que R9. R1 debe ser rojo. R9 debe ser azul. Devuelve una asignación que cumpla todas las reglas."
+   }
+  ]
+ }
+}

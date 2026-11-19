@@ -1,0 +1,24 @@
+{
+ "text": "{\n  \"variables\": [\"R1\", \"R2\", \"R3\", \"R4\", \"R5\", \"R6\", \"R7\", \"R8\", \"R9\"],\n  \"domains\": {\n    \"R1\": [\"red\"],\n    \"R2\": [\"green\", \"red\", \"blue\"],\n    \"R3\": [\"green\", \"red\", \"blue\"],\n    \"R4\": [\"blue\"],\n    \"R5\": [\"green\", \"red\", \"blue\"],\n    \"R6\": [\"green\", \"red\", \"blue\"],\n    \"R7\": [\"green\", \"red\", \"blue\"],\n    \"R8\": [\"green\", \"red\", \"blue\"],\n    \"R9\": [\"blue\"]\n  },\n  \"constraints\": [\n    [\"R1\", \"R2\"],\n    [\"R1\", \"R3\"],\n    [\"R1\", \"R4\"],\n    [\"R2\", \"R3\"],\n    [\"R2\", \"R4\"],\n    [\"R2\", \"R6\"],\n    [\"R2\", \"R7\"],\n    [\"R2\", \"R8\"],\n    [\"R3\", \"R4\"],\n    [\"R3\", \"R6\"],\n    [\"R3\", \"R7\"],\n    [\"R3\", \"R8\"],\n    [\"R4\", \"R6\"],\n    [\"R4\", \"R7\"],\n    [\"R4\", \"R8\"],\n    [\"R5\", \"R6\"],\n    [\"R5\", \"R7\"],\n    [\"R5\", \"R8\"],\n    [\"R6\", \"R7\"],\n    [\"R6\", \"R8\"],\n    [\"R7\", \"R8\"],\n    [\"R1\", \"R9\"],\n    [\"R2\", \"R9\"],\n    [\"R3\", \"R9\"],\n    [\"R4\", \"R9\"],\n    [\"R5\", \"R9\"],\n    [\"R6\", \"R9\"],\n    [\"R7\", \"R9\"],\n    [\"R8\", \"R9\"]\n  ]\n} ",
+ "seconds": 0.9834311249999246,
+ "prompt_tokens": 554,
+ "completion_tokens": 551,
+ "model": "allam-2-7b",
+ "key": {
+  "model": "allam-2-7b",
+  "base": "https://api.groq.com/openai/v1",
+  "temperature": 0.7,
+  "max_tokens": 1500,
+  "rep": 1,
+  "messages": [
+   {
+    "role": "system",
+    "content": "You translate natural-language graph-coloring problems into a CSP encoded as JSON. Output ONLY one JSON object with keys: \"variables\" (array of region names), \"domains\" (object mapping EACH region to an array of allowed colours), \"constraints\" (array of two-element arrays [regionA, regionB], meaning the two regions must have DIFFERENT colours). Use the lower-case English colour names \"red\", \"green\", \"blue\". Do NOT solve the problem. Preserve every stated restriction (including colour clues) and do not add restrictions that are not stated."
+   },
+   {
+    "role": "user",
+    "content": "Asigna un color a cada región R1, R2, R3, R4, R5, R6, R7, R8, R9. Los colores permitidos son rojo, verde y azul. Regiones adyacentes deben tener colores distintos. Adyacencias: R1 no puede tener el mismo color que R2; R1 no puede tener el mismo color que R3; R2 no puede tener el mismo color que R3; R2 no puede tener el mismo color que R4; R2 no puede tener el mismo color que R6; R2 no puede tener el mismo color que R7; R2 no puede tener el mismo color que R9; R3 no puede tener el mismo color que R4; R3 no puede tener el mismo color que R5; R3 no puede tener el mismo color que R8; R4 no puede tener el mismo color que R5; R4 no puede tener el mismo color que R8; R4 no puede tener el mismo color que R9; R5 no puede tener el mismo color que R6; R5 no puede tener el mismo color que R7; R5 no puede tener el mismo color que R9; R6 no puede tener el mismo color que R7; R6 no puede tener el mismo color que R8; R7 no puede tener el mismo color que R8; R8 no puede tener el mismo color que R9. R1 debe ser rojo. R9 debe ser azul. Devuelve una asignación que cumpla todas las reglas."
+   }
+  ]
+ }
+}

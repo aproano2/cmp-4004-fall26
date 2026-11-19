@@ -1,0 +1,24 @@
+{
+ "text": "{\n  \"assignment\": {\n    \"R1\": \"red\",\n    \"R2\": \"red\",\n    \"R3\": \"green\",\n    \"R4\": \"green\",\n    \"R5\": \"blue\",\n    \"R6\": \"blue\",\n    \"R7\": \"blue\",\n    \"R8\": \"blue\",\n    \"R9\": \"blue\"\n  }\n} \n\nSeleccionamos primero R1 como rojo ya que no se indica ninguna restricción específica para que. Después, tenemos que R2 también se pinten rojo ya que no se indica ninguna restricción para R2. R3 debe ser verde ya que solo se pueden tener colores diferentes para cada nodo y R3 no tiene nodos contiguos con R1, R2 ni R8. Debido a que R4 tiene un nodo contiguo con R3 (R4-R3), R4 también debe ser verde. Debido a que R5 tiene nodos contiguos con R4 y R6, R5 también debe ser verde.\n\nR6 tiene nodos contiguos con R4 y R5, así que R6 debe ser azul. R7 tiene nodos contiguos con R5 y R6, por lo que R7 también debe ser azul. R8 tiene nodos contiguos con R5 y R7, por lo que R8 debe ser azul. Por último, R9 no tiene nodos contiguos con ninguno de los nodos anteriores, por lo que R9 puede pintarse cualquiera de los colores rojo, verde o azul. \n\nEntonces, la solución es: rojo (R1), rojo (R2), verde (R3), verde (R4), verde (R5), azul (R6), azul (R7), azul (R8), rojo (R9) y verde (R10). \n\nPara mostrar la solución en forma de JSON, presentamos la solución en forma de un diccionario donde las claves son los nombres de las regiones y los valores son los colores asignados a cada región. ",
+ "seconds": 1.0884719999999675,
+ "prompt_tokens": 479,
+ "completion_tokens": 580,
+ "model": "allam-2-7b",
+ "key": {
+  "model": "allam-2-7b",
+  "base": "https://api.groq.com/openai/v1",
+  "temperature": 0.7,
+  "max_tokens": 1500,
+  "rep": 1,
+  "messages": [
+   {
+    "role": "system",
+    "content": "Solve the graph-coloring problem. Return ONLY a JSON object {\"assignment\": {region: colour, ...}} assigning every region one allowed colour, using the lower-case English names \"red\", \"green\", \"blue\". Follow every restriction."
+   },
+   {
+    "role": "user",
+    "content": "Asigna un color a cada región R1, R2, R3, R4, R5, R6, R7, R8, R9. Los colores permitidos son rojo, verde y azul. Regiones adyacentes deben tener colores distintos. Adyacencias: R1 no puede tener el mismo color que R2; R1 no puede tener el mismo color que R3; R1 no puede tener el mismo color que R6; R1 no puede tener el mismo color que R8; R1 no puede tener el mismo color que R9; R2 no puede tener el mismo color que R3; R2 no puede tener el mismo color que R9; R3 no puede tener el mismo color que R4; R3 no puede tener el mismo color que R5; R3 no puede tener el mismo color que R8; R4 no puede tener el mismo color que R5; R4 no puede tener el mismo color que R8; R4 no puede tener el mismo color que R9; R5 no puede tener el mismo color que R6; R5 no puede tener el mismo color que R7; R5 no puede tener el mismo color que R9; R6 no puede tener el mismo color que R7; R7 no puede tener el mismo color que R8; R7 no puede tener el mismo color que R9; R8 no puede tener el mismo color que R9. R1 debe ser rojo. R9 debe ser azul. Devuelve una asignación que cumpla todas las reglas."
+   }
+  ]
+ }
+}

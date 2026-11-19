@@ -1,0 +1,24 @@
+{
+ "text": "{\n  \"assignment\": {\n    \"r1\": \"red\",\n    \"r2\": \"green\",\n    \"r3\": \"red\",\n    \"r4\": \"blue\",\n    \"r5\": \"green\",\n    \"r6\": \"blue\",\n    \"r7\": \"green\"\n  }\n} ",
+ "seconds": 0.7941895840000086,
+ "prompt_tokens": 338,
+ "completion_tokens": 92,
+ "model": "allam-2-7b",
+ "key": {
+  "model": "allam-2-7b",
+  "base": "https://api.groq.com/openai/v1",
+  "temperature": 0.7,
+  "max_tokens": 1500,
+  "rep": 1,
+  "messages": [
+   {
+    "role": "system",
+    "content": "Solve the graph-coloring problem. Return ONLY a JSON object {\"assignment\": {region: colour, ...}} assigning every region one allowed colour, using the lower-case English names \"red\", \"green\", \"blue\". Follow every restriction."
+   },
+   {
+    "role": "user",
+    "content": "Asigna un color a cada región R1, R2, R3, R4, R5, R6, R7. Los colores permitidos son rojo, verde y azul. Regiones adyacentes deben tener colores distintos. Adyacencias: R1 no puede tener el mismo color que R2; R1 no puede tener el mismo color que R6; R2 no puede tener el mismo color que R3; R2 no puede tener el mismo color que R4; R2 no puede tener el mismo color que R6; R2 no puede tener el mismo color que R7; R3 no puede tener el mismo color que R4; R3 no puede tener el mismo color que R7; R4 no puede tener el mismo color que R5; R5 no puede tener el mismo color que R6; R5 no puede tener el mismo color que R7; R6 no puede tener el mismo color que R7.  Devuelve una asignación que cumpla todas las reglas."
+   }
+  ]
+ }
+}
