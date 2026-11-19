@@ -1,0 +1,13 @@
+arm,difficulty,n,correct,accuracy
+A,facil,7,7,1.0
+A,intermedio,7,7,1.0
+A,dificil,6,6,1.0
+B,facil,7,0,0.0
+B,intermedio,7,0,0.0
+B,dificil,6,0,0.0
+B',facil,7,0,0.0
+B',intermedio,7,0,0.0
+B',dificil,6,0,0.0
+C,facil,7,2,0.2857142857142857
+C,intermedio,7,1,0.14285714285714285
+C,dificil,6,0,0.0

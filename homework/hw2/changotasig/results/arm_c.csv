@@ -1,0 +1,21 @@
+problem_id,difficulty,arm,outcome,answer,solver_status,attempts,wall_s,llm_s,solver_s,tokens_in,tokens_out,cost_usd,model,error_category,error_message,timestamp
+F01,facil,C,incorrect,"{""OP1"": ""CNC"", ""OP2"": ""TORNO"", ""OP3"": ""FRESADORA""}",none,1,2.623593,2.623565,0.000000,419,27,,qwen2.5:3b,,,2026-11-17T05:12:29+00:00
+F02,facil,C,incorrect,"{""C1"": 1, ""C2"": 2, ""C3"": 3}",none,1,2.535713,2.535686,0.000000,412,22,,qwen2.5:3b,,,2026-11-17T05:12:29+00:00
+F03,facil,C,incorrect,"{""BANDA"": 3, ""CALDERA"": 2, ""COMPRESOR"": 3, ""PRENSA"": 1}",none,1,2.631253,2.631231,0.000000,451,33,,qwen2.5:3b,,,2026-11-17T05:12:29+00:00
+F04,facil,C,incorrect,"{""CORTE"": 1, ""INSPECCION"": 4, ""PINTURA"": 3, ""SOLDADURA"": 2}",none,1,2.612672,2.612654,0.000000,409,34,,qwen2.5:3b,,,2026-11-17T05:12:29+00:00
+F05,facil,C,correct,"{""ACIDO"": ""B"", ""ALIMENTO"": ""C"", ""PAPEL"": ""B"", ""SOLVENTE"": ""A""}",none,1,2.792575,2.792543,0.000000,420,33,,qwen2.5:3b,,,2026-11-17T05:12:29+00:00
+F06,facil,C,incorrect,"{""LOTE1"": ""ROSA"", ""LOTE2"": ""PABLO"", ""LOTE3"": ""ROSA"", ""LOTE4"": ""ELENA""}",none,1,2.709416,2.709392,0.000000,457,39,,qwen2.5:3b,,,2026-11-17T05:12:29+00:00
+F07,facil,C,correct,"{""ANA"": ""TARDE"", ""BRUNO"": ""NOCHE"", ""CARLA"": ""MANANA"", ""DIEGO"": ""MANANA""}",none,1,2.705860,2.705836,0.000000,384,36,,qwen2.5:3b,,,2026-11-17T05:12:29+00:00
+M08,intermedio,C,incorrect,"{""P1"": 3, ""P2"": 1, ""P3"": 2, ""P4"": 4, ""P5"": 5}",none,1,2.659648,2.659621,0.000000,487,36,,qwen2.5:3b,,,2026-11-17T05:12:29+00:00
+M09,intermedio,C,incorrect,"{""ANA"": ""CONTROL"", ""BETO"": ""EMPAQUE"", ""CARO"": ""ENSAMBLE"", ""DANI"": ""ENSAMBLE"", ""EDU"": ""ENSAMBLE"", ""FER"": ""EMPAQUE""}",none,1,2.794798,2.794769,0.000000,507,51,,qwen2.5:3b,,,2026-11-17T05:12:29+00:00
+M10,intermedio,C,incorrect,"{""C1"": ""V1"", ""C2"": ""V1"", ""C3"": ""V1"", ""C4"": ""V3"", ""C5"": ""V2""}",none,1,2.769193,2.769162,0.000000,492,41,,qwen2.5:3b,,,2026-11-17T05:12:29+00:00
+M11,intermedio,C,incorrect,"{""COMPRESOR"": 1, ""GENERADOR"": 2, ""HORNO"": 2, ""SECADOR"": 1, ""TABLERO"": 3}",none,1,2.744936,2.744903,0.000000,462,39,,qwen2.5:3b,,,2026-11-17T05:12:29+00:00
+M12,intermedio,C,incorrect,"{""JORGE"": 2, ""LUIS"": 3, ""MARIA"": 4, ""PEDRO"": 1, ""SOFIA"": 5}",none,1,2.724710,2.724673,0.000000,519,37,,qwen2.5:3b,,,2026-11-17T05:12:29+00:00
+M13,intermedio,C,incorrect,"{""CABLE"": 3, ""FILTROS"": 2, ""GUANTES"": 3, ""MOTOR"": 2, ""PINTURA"": 1, ""TORNILLOS"": 1}",none,1,2.803179,2.803149,0.000000,559,48,,qwen2.5:3b,,,2026-11-17T05:12:29+00:00
+M14,intermedio,C,correct,"{""CORTE"": 2, ""DESPACHO"": 6, ""ENSAMBLE"": 4, ""PINTURA"": 5, ""RECEPCION"": 1, ""SOLDADURA"": 3}",none,1,2.878699,2.878662,0.000000,563,51,,qwen2.5:3b,,,2026-11-17T05:12:29+00:00
+D15,dificil,C,incorrect,"{""A1"": 0, ""A2"": 2, ""B1"": 3, ""B2"": 5, ""C1"": 6, ""C2"": 8, ""C3"": 7}",none,1,2.895820,2.895768,0.000000,857,50,,qwen2.5:3b,,out_of_domain:C2=8,2026-11-17T05:12:29+00:00
+D16,dificil,C,incorrect,"{""P1"": ""L2"", ""P2"": ""L1"", ""P3"": ""L1"", ""P4"": ""L2"", ""P5"": ""L1"", ""P6"": ""L2"", ""P7"": ""L2"", ""P8"": ""L3""}",none,1,2.983568,2.983538,0.000000,604,65,,qwen2.5:3b,,,2026-11-17T05:12:29+00:00
+D17,dificil,C,incorrect,"{""ANDRES"": ""NOCHE"", ""BEATRIZ"": ""MANANA"", ""CARLOS"": ""TARDE"", ""DIANA"": ""NOCHE"", ""ESTEBAN"": ""NOCHE"", ""FABIOLA"": ""TARDE"", ""GABRIEL"": ""MANANA"", ""HELENA"": ""NOCHE""}",none,1,3.148882,3.148845,0.000000,616,78,,qwen2.5:3b,,,2026-11-17T05:12:29+00:00
+D18,dificil,C,incorrect,"{""COMPRESOR"": 7, ""FRESA1"": 5, ""FRESA2"": 3, ""GRUA"": 8, ""PRENSA"": 6, ""TORNO1"": 2, ""TORNO2"": 4}",none,1,2.993367,2.993324,0.000000,802,58,,qwen2.5:3b,,out_of_domain:PRENSA=6; out_of_domain:COMPRESOR=7; out_of_domain:GRUA=8,2026-11-17T05:12:29+00:00
+D19,dificil,C,incorrect,"{""L1"": 1, ""L2"": 2, ""L3"": 1, ""L4"": 1, ""L5"": 2, ""L6"": 2, ""L7"": 2, ""L8"": 3, ""L9"": 3}",none,1,2.933148,2.933113,0.000000,704,64,,qwen2.5:3b,,,2026-11-17T05:12:29+00:00
+D20,dificil,C,incorrect,"{""T1"": 2, ""T2"": 1, ""T3"": 3, ""T4"": 4, ""T5"": 4, ""T6"": 4, ""T7"": 3, ""T8"": 1}",none,1,2.932276,2.932241,0.000000,664,57,,qwen2.5:3b,,,2026-11-17T05:12:29+00:00
