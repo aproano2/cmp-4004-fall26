@@ -1,0 +1,23 @@
+{
+  "request": {
+    "model": "qwen2.5:3b",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Resuelve el siguiente problema razonando internamente.\nDevuelve solo un objeto JSON válido, sin Markdown ni explicaciones.\nLa respuesta NO repite answer_format: es un objeto plano con exactamente estas claves,\nreemplazando cada \"?\" por uno de los valores permitidos para esa clave:\n{\"TORNO1\": \"?\", \"TORNO2\": \"?\", \"FRESA1\": \"?\", \"FRESA2\": \"?\", \"PRENSA\": \"?\", \"COMPRESOR\": \"?\", \"GRUA\": \"?\"}\n\nEnunciado:\nUn taller de manufactura debe programar el mantenimiento de siete equipos en una semana laboral de cinco días (día 1 = lunes, ..., día 5 = viernes): dos tornos de la línea A (TORNO1 y TORNO2), dos fresadoras de la línea B (FRESA1 y FRESA2), una prensa, un compresor y un puente grúa. Cada equipo se atiende completo en un solo día.\n\nReglas:\n1. Se pueden atender como máximo dos equipos por día.\n2. El lunes (día 1) y el miércoles (día 3) hay capacitación del personal, así que esos días se atiende como máximo un equipo.\n3. Para no detener una línea completa, dos equipos de la misma línea no pueden atenderse el mismo día.\n4. La prensa se desmonta con el puente grúa recién revisado, así que la prensa se atiende exactamente el día siguiente al de la grúa.\n5. La prensa fabrica los bujes de repuesto de los tornos, así que ambos tornos se atienden en días posteriores al de la prensa.\n6. Los dos tornos usan el mismo kit de repuestos y se atienden en días consecutivos, primero TORNO1 y luego TORNO2.\n7. Los tornos deben estar operativos el viernes, así que ninguno puede atenderse el día 5.\n8. Tornos y fresadoras los atiende el mismo mecánico, así que ninguna fresadora puede atenderse el mismo día que un torno.\n9. Las fresadoras se prueban con aire comprimido, así que ninguna puede atenderse el mismo día que el compresor.\n10. El compresor y la prensa usan al mismo electricista, así que no pueden atenderse el mismo día.\n11. FRESA1 es la de mayor uso y debe atenderse antes que FRESA2.\n\nPregunta: ¿Qué día (1 a 5) recibe mantenimiento cada equipo?\n\nanswer_format (claves y valores permitidos):\n{\"keys\": [\"TORNO1\", \"TORNO2\", \"FRESA1\", \"FRESA2\", \"PRENSA\", \"COMPRESOR\", \"GRUA\"], \"allowed_values\": {\"TORNO1\": [1, 2, 3, 4, 5], \"TORNO2\": [1, 2, 3, 4, 5], \"FRESA1\": [1, 2, 3, 4, 5], \"FRESA2\": [1, 2, 3, 4, 5], \"PRENSA\": [1, 2, 3, 4, 5], \"COMPRESOR\": [1, 2, 3, 4, 5], \"GRUA\": [1, 2, 3, 4, 5]}}\n"
+      }
+    ],
+    "stream": false,
+    "options": {
+      "temperature": 0.0,
+      "seed": 0,
+      "num_predict": 4096
+    }
+  },
+  "text": "{\"TORNO1\": 2, \"TORNO2\": 4, \"FRESA1\": 5, \"FRESA2\": 3, \"PRENSA\": 6, \"COMPRESOR\": 7, \"GRUA\": 8}",
+  "llm_s": 2.9933238999947207,
+  "tokens_in": 802,
+  "tokens_out": 58,
+  "done_reason": "stop",
+  "model": "qwen2.5:3b"
+}

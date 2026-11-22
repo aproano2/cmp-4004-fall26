@@ -1,0 +1,21 @@
+problem_id,difficulty,arm,outcome,answer,solver_status,attempts,wall_s,llm_s,solver_s,tokens_in,tokens_out,cost_usd,model,error_category,error_message,timestamp
+F01,facil,B,no_answer,,unsat,1,31.788163,31.787615,0.000544,503,294,,qwen2.5:3b,,solver returned unsat,2026-11-12T22:16:07+00:00
+F02,facil,B,incorrect,"{""C1"": 2, ""C2"": 1, ""C3"": 1}",multiple,1,16.479565,16.479172,0.000391,496,172,,qwen2.5:3b,,,2026-11-12T22:16:07+00:00
+F03,facil,B,incorrect,"{""BANDA"": 3, ""CALDERA"": 2, ""COMPRESOR"": 4, ""PRENSA"": 1}",multiple,1,23.707859,23.707504,0.000352,525,242,,qwen2.5:3b,,,2026-11-12T22:16:07+00:00
+F04,facil,B,incorrect,"{""CORTE"": 1, ""INSPECCION"": 4, ""PINTURA"": 3, ""SOLDADURA"": 2}",unique,1,21.950934,21.950584,0.000348,482,239,,qwen2.5:3b,,,2026-11-12T22:16:07+00:00
+F05,facil,B,no_answer,,spec_error,1,28.791707,28.791644,0.000061,494,330,,qwen2.5:3b,,"JSONDecodeError: Expecting ',' delimiter: line 1 column 720 (char 719)",2026-11-12T22:16:07+00:00
+F06,facil,B,no_answer,,spec_error,1,21.880893,21.880615,0.000275,531,230,,qwen2.5:3b,,SpecError: unknown variable 'ELENA' in 'ELENA != LOTE2',2026-11-12T22:16:07+00:00
+F07,facil,B,no_answer,,spec_error,1,22.461983,22.461903,0.000078,461,230,,qwen2.5:3b,,"SpecError: unknown function in 'sum(ANA, BRUNO, CARLA, DIEGO) >= 4'",2026-11-12T22:16:07+00:00
+M08,intermedio,B,incorrect,"{""P1"": 2, ""P2"": 1, ""P3"": 3, ""P4"": 1, ""P5"": 4}",multiple,1,23.051276,23.050930,0.000343,559,234,,qwen2.5:3b,,,2026-11-12T22:16:07+00:00
+M09,intermedio,B,no_answer,,spec_error,1,400.581660,400.581420,0.000235,575,4096,,qwen2.5:3b,,JSONDecodeError: Unterminated string starting at: line 220 column 12 (char 8545),2026-11-12T22:16:07+00:00
+M10,intermedio,B,no_answer,,spec_error,1,24.040080,24.039627,0.000448,564,216,,qwen2.5:3b,,"SpecError: unknown function in 'all(C1, C2, C3, C4, C5) != []'",2026-11-12T22:16:07+00:00
+M11,intermedio,B,no_answer,,unsat,1,22.198257,22.197504,0.000749,531,198,,qwen2.5:3b,,solver returned unsat,2026-11-12T22:16:07+00:00
+M12,intermedio,B,no_answer,,spec_error,1,49.353358,49.353301,0.000053,590,564,,qwen2.5:3b,,"JSONDecodeError: Expecting ',' delimiter: line 1 column 1077 (char 1076)",2026-11-12T22:16:07+00:00
+M13,intermedio,B,no_answer,,unsat,1,49.564410,49.563182,0.001222,620,559,,qwen2.5:3b,,solver returned unsat,2026-11-12T22:16:07+00:00
+M14,intermedio,B,no_answer,,spec_error,1,51.476356,51.476299,0.000053,621,577,,qwen2.5:3b,,"JSONDecodeError: Expecting ',' delimiter: line 1 column 1207 (char 1206)",2026-11-12T22:16:07+00:00
+D15,dificil,B,no_answer,,spec_error,1,53.201854,53.201783,0.000066,917,531,,qwen2.5:3b,,"JSONDecodeError: Expecting ',' delimiter: line 1 column 870 (char 869)",2026-11-12T22:16:07+00:00
+D16,dificil,B,no_answer,,unsat,1,33.060851,33.059806,0.001039,658,343,,qwen2.5:3b,,solver returned unsat,2026-11-12T22:16:07+00:00
+D17,dificil,B,no_answer,,spec_error,1,379.250999,379.250800,0.000193,663,4096,,qwen2.5:3b,,JSONDecodeError: Invalid control character at: line 1 column 7091 (char 7090),2026-11-12T22:16:07+00:00
+D18,dificil,B,no_answer,,spec_error,1,411.876383,411.876179,0.000200,854,4096,,qwen2.5:3b,,JSONDecodeError: Unterminated string starting at: line 1 column 8556 (char 8555),2026-11-12T22:16:07+00:00
+D19,dificil,B,no_answer,,unsat,1,46.774957,46.773796,0.001155,752,408,,qwen2.5:3b,,solver returned unsat,2026-11-12T22:16:07+00:00
+D20,dificil,B,incorrect,"{""T1"": 3, ""T2"": 2, ""T3"": 2, ""T4"": 2, ""T5"": 2, ""T6"": 3, ""T7"": 3, ""T8"": 2}",multiple,1,39.827523,39.826267,0.001250,718,412,,qwen2.5:3b,,,2026-11-12T22:16:07+00:00

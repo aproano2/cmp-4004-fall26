@@ -1,0 +1,23 @@
+{
+  "request": {
+    "model": "qwen2.5:3b",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Traduce el problema a un CSP. Devuelve solo un objeto JSON válido, sin Markdown.\nUsa exactamente las claves y dominios de answer_format como variables de salida;\npuedes añadir variables auxiliares si hacen falta. Codifica todas las reglas.\nFormato: {\"variables\": {\"X\": [1, 2]}, \"constraints\": [{\"id\": \"R1\", \"expr\": \"X != 1\"}]}.\nCada expr usa sintaxis de expresión Python: + - * // %, comparaciones, and/or/not,\nlistas y funciones abs, min, max, alldiff(*variables), count(valor, *variables),\nimplies(condición, condición). Cadenas dentro de expr llevan comillas simples.\nNo uses funciones ni sintaxis fuera de esa lista.\n\nEnunciado:\nUna inyectora de plásticos debe procesar cinco pedidos, P1 a P5, uno tras otro. Cada pedido ocupa una posición de la secuencia del día, de la 1 (primera) a la 5 (última).\n\nReglas:\n1. Cada pedido ocupa una posición distinta.\n2. P2 es urgente y debe ir en una de las dos primeras posiciones.\n3. P3 reutiliza el molde que se ajusta durante P1, así que P1 debe ir antes que P3.\n4. P4 y P5 usan el mismo colorante y deben ir en posiciones consecutivas (en cualquier orden).\n5. P3 debe ir antes que P5.\n6. La materia prima de P1 llega tarde, por lo que P1 no puede ir en la posición 1.\n7. P5 requiere una limpieza posterior larga, por lo que no puede ser el último pedido del día.\n\nPregunta: ¿En qué posición (1 a 5) se procesa cada pedido?\n\nanswer_format:\n{\"keys\": [\"P1\", \"P2\", \"P3\", \"P4\", \"P5\"], \"allowed_values\": {\"P1\": [1, 2, 3, 4, 5], \"P2\": [1, 2, 3, 4, 5], \"P3\": [1, 2, 3, 4, 5], \"P4\": [1, 2, 3, 4, 5], \"P5\": [1, 2, 3, 4, 5]}}\n"
+      }
+    ],
+    "stream": false,
+    "options": {
+      "temperature": 0.0,
+      "seed": 0,
+      "num_predict": 4096
+    }
+  },
+  "text": "{\"variables\": {\"P1\": [1, 2, 3, 4, 5], \"P2\": [1, 2, 3, 4, 5], \"P3\": [1, 2, 3, 4, 5], \"P4\": [1, 2, 3, 4, 5], \"P5\": [1, 2, 3, 4, 5]}, \"constraints\": [{\"id\": \"R1\", \"expr\": \"P1 != 1\"}, {\"id\": \"R2\", \"expr\": \"P2 == 1 or P2 == 2\"}, {\"id\": \"R3\", \"expr\": \"P1 < P3\"}, {\"id\": \"R4\", \"expr\": \"P4 < P5 or P5 < P4\"}, {\"id\": \"R5\", \"expr\": \"P3 < P5\"}, {\"id\": \"R6\", \"expr\": \"P1 != 1\"}, {\"id\": \"R7\", \"expr\": \"P5 != 5\"}]}",
+  "llm_s": 23.050930131001223,
+  "tokens_in": 559,
+  "tokens_out": 234,
+  "done_reason": "stop",
+  "model": "qwen2.5:3b"
+}

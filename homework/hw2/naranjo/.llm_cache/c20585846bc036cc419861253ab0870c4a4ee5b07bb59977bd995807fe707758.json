@@ -1,0 +1,23 @@
+{
+  "request": {
+    "model": "qwen2.5:3b",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Resuelve el siguiente problema razonando internamente.\nDevuelve solo un objeto JSON válido, sin Markdown ni explicaciones.\nLa respuesta NO repite answer_format: es un objeto plano con exactamente estas claves,\nreemplazando cada \"?\" por uno de los valores permitidos para esa clave:\n{\"ANDRES\": \"?\", \"BEATRIZ\": \"?\", \"CARLOS\": \"?\", \"DIANA\": \"?\", \"ESTEBAN\": \"?\", \"FABIOLA\": \"?\", \"GABRIEL\": \"?\", \"HELENA\": \"?\"}\n\nEnunciado:\nUna planta química opera en tres turnos: mañana, tarde y noche. Ocho técnicos deben asignarse cada uno a exactamente un turno: Andrés, Beatriz, Carlos, Diana, Esteban, Fabiola, Gabriel y Helena. Andrés y Beatriz son supervisores; Carlos, Fabiola y Helena son los únicos electricistas.\n\nReglas:\n1. La mañana y la tarde deben tener exactamente tres técnicos cada una, y la noche exactamente dos.\n2. Cada turno debe tener exactamente un electricista.\n3. Los dos supervisores no pueden estar en el mismo turno.\n4. El turno de noche debe tener al menos un supervisor.\n5. Diana y Esteban comparten transporte y deben estar en el mismo turno.\n6. Gabriel tiene clases por la mañana y no puede trabajar en ese turno.\n7. Si Helena trabaja de noche, entonces Andrés también debe trabajar de noche.\n8. Fabiola no puede trabajar de noche.\n9. Beatriz no puede trabajar en la tarde.\n10. Fabiola está capacitando a Diana, así que ambas deben estar en el mismo turno.\n\nPregunta: ¿En qué turno (mañana, tarde o noche) trabaja cada técnico?\n\nanswer_format (claves y valores permitidos):\n{\"keys\": [\"ANDRES\", \"BEATRIZ\", \"CARLOS\", \"DIANA\", \"ESTEBAN\", \"FABIOLA\", \"GABRIEL\", \"HELENA\"], \"allowed_values\": {\"ANDRES\": [\"MANANA\", \"TARDE\", \"NOCHE\"], \"BEATRIZ\": [\"MANANA\", \"TARDE\", \"NOCHE\"], \"CARLOS\": [\"MANANA\", \"TARDE\", \"NOCHE\"], \"DIANA\": [\"MANANA\", \"TARDE\", \"NOCHE\"], \"ESTEBAN\": [\"MANANA\", \"TARDE\", \"NOCHE\"], \"FABIOLA\": [\"MANANA\", \"TARDE\", \"NOCHE\"], \"GABRIEL\": [\"MANANA\", \"TARDE\", \"NOCHE\"], \"HELENA\": [\"MANANA\", \"TARDE\", \"NOCHE\"]}}\n"
+      }
+    ],
+    "stream": false,
+    "options": {
+      "temperature": 0.7,
+      "seed": 4,
+      "num_predict": 4096
+    }
+  },
+  "text": "{\"ANDRES\": \"MANANA\", \"BEATRIZ\": \"NOCHE\", \"CARLOS\": \"NOCHE\", \"DIANA\": \"NOCHE\", \"ESTEBAN\": \"NOCHE\", \"FABIOLA\": \"TARDE\", \"GABRIEL\": \"MANANA\", \"HELENA\": \"MANANA\"}",
+  "llm_s": 2.9501528999971924,
+  "tokens_in": 616,
+  "tokens_out": 77,
+  "done_reason": "stop",
+  "model": "qwen2.5:3b"
+}
