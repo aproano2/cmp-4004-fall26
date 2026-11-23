@@ -1,0 +1,15 @@
+{
+  "text": "Hi.",
+  "backend": "ollama",
+  "model": "qwen2.5:3b",
+  "prompt": "Say hi in one word.",
+  "temperature": 0.7,
+  "seed": 0,
+  "elapsed": 2.1677049999998417,
+  "meta": {
+    "eval_count": 3,
+    "prompt_eval_count": 35,
+    "total_duration": 124859800
+  },
+  "cached_at": "2026-11-18T10:21:14"
+}

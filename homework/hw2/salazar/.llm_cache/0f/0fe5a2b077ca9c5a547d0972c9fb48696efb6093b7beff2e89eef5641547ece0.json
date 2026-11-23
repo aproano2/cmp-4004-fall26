@@ -1,0 +1,15 @@
+{
+  "text": "{\"Ari\": 1, \"Beacon\": 2, \"Bell\": 2, \"Beto\": 3, \"Celia\": 4, \"Dora\": 1, \"Flag\": 1, \"Kite\": 3, \"Otter\": 2, \"Puffin\": 4, \"Seal\": 3, \"Turtle\": 2}",
+  "backend": "ollama",
+  "model": "qwen2.5:3b",
+  "prompt": "You are solving a logic puzzle. Read all the clues carefully.\n\nA waterfront rescue festival has tents along the boardwalk. There are 4 positions numbered 1 to 4 from left to right. Each position has exactly one item from each list, and each listed item appears once. Hosts: Ari, Beto, Celia, Dora. Markers: Beacon, Bell, Flag, Kite. Mascots: Otter, Puffin, Seal, Turtle.\n1. Dora is in position 1.\n2. Ari is next to Dora.\n3. Celia is immediately to the right of Beto.\n4. Flag is at the same position as Ari.\n5. Kite is next to Flag.\n6. Kite is somewhere to the left of Flag.\n7. Bell is immediately to the right of Beacon.\n8. Puffin is at the same position as Bell.\n9. Seal is immediately to the left of Puffin.\n10. Turtle is somewhere to the left of Otter.\n11. Otter is somewhere to the left of Seal.\nFor every listed item, give its position number.\n\nRequired output format:\nVariables to report: Ari, Beacon, Bell, Beto, Celia, Dora, Flag, Kite, Otter, Puffin, Seal, Turtle\nPossible values: 1, 2, 3, 4\nReply with ONE JSON object that maps every listed variable to its value, e.g. {\"Ana\": 1, \"Bruno\": 2}.\n\nReply with ONLY the JSON, no markdown and no extra text.",
+  "temperature": 0.7,
+  "seed": 0,
+  "elapsed": 13.41633350000484,
+  "meta": {
+    "eval_count": 84,
+    "prompt_eval_count": 361,
+    "total_duration": 11376397400
+  },
+  "cached_at": "2026-11-18T08:28:07"
+}

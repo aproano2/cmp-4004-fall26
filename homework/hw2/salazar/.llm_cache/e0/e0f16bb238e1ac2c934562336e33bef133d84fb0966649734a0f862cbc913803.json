@@ -1,0 +1,15 @@
+{
+  "text": "{\"Center\": 5, \"Dry\": 4, \"Fire\": 8, \"Glaze\": 7, \"Pack\": 6, \"Sketch\": 2, \"Stamp\": 3, \"Trim\": 3}",
+  "backend": "ollama",
+  "model": "qwen2.5:3b",
+  "prompt": "You are solving a logic puzzle. Read all the clues carefully.\n\nA pottery workshop is scheduling demonstrations. Schedule these 8 activities in slots 1 to 8, with exactly one activity per slot: Center, Dry, Fire, Glaze, Pack, Sketch, Stamp, Trim.\n1. Center is scheduled immediately after Sketch.\n2. Stamp is scheduled immediately after Trim.\n3. Fire is scheduled immediately after Glaze.\n4. Pack is scheduled immediately after Fire.\n5. Trim is in slot 3.\n6. Center takes place before Trim.\n7. Dry is immediately after Stamp.\n8. Dry takes place before Glaze.\nFor each named activity, give its slot number.\n\nRequired output format:\nVariables to report: Center, Dry, Fire, Glaze, Pack, Sketch, Stamp, Trim\nPossible values: 1, 2, 3, 4, 5, 6, 7, 8\nReply with ONE JSON object that maps every listed variable to its value, e.g. {\"Ana\": 1, \"Bruno\": 2}.\n\nReply with ONLY the JSON, no markdown and no extra text.",
+  "temperature": 0.7,
+  "seed": 1,
+  "elapsed": 7.961713800003054,
+  "meta": {
+    "eval_count": 50,
+    "prompt_eval_count": 263,
+    "total_duration": 5920939600
+  },
+  "cached_at": "2026-11-18T08:24:36"
+}

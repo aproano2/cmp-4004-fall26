@@ -1,0 +1,127 @@
+{
+  "id": "facil-02",
+  "nivel": "facil",
+  "familia": "horario",
+  "enunciado": "A radio station is arranging its afternoon segments. Schedule these 6 activities in slots 1 to 6, with exactly one activity per slot: Interview, Jingle, News, Quiz, Traffic, Weather.\n1. Interview is scheduled immediately after Weather.\n2. Traffic is scheduled immediately after Jingle.\n3. News is scheduled immediately after Traffic.\n4. Jingle is scheduled after slot 3.\n5. Interview takes place before Quiz.\nFor each named activity, give its slot number.",
+  "formato_respuesta": {
+    "variables": [
+      "Interview",
+      "Jingle",
+      "News",
+      "Quiz",
+      "Traffic",
+      "Weather"
+    ],
+    "valores": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ]
+  },
+  "modelo_mano": {
+    "variables": {
+      "Interview": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "Jingle": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "News": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "Quiz": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "Traffic": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "Weather": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    "constraints": [
+      {
+        "type": "alldiff",
+        "vars": [
+          "Interview",
+          "Jingle",
+          "News",
+          "Quiz",
+          "Traffic",
+          "Weather"
+        ]
+      },
+      {
+        "type": "offset",
+        "a": "Interview",
+        "b": "Weather",
+        "k": 1
+      },
+      {
+        "type": "offset",
+        "a": "Traffic",
+        "b": "Jingle",
+        "k": 1
+      },
+      {
+        "type": "offset",
+        "a": "News",
+        "b": "Traffic",
+        "k": 1
+      },
+      {
+        "type": "gt",
+        "a": "Jingle",
+        "b": 3
+      },
+      {
+        "type": "lt",
+        "a": "Interview",
+        "b": "Quiz"
+      }
+    ]
+  },
+  "gold": {
+    "Interview": 2,
+    "Jingle": 4,
+    "News": 6,
+    "Quiz": 3,
+    "Traffic": 5,
+    "Weather": 1
+  },
+  "verificacion_manual": "El bloque de Jingle tiene longitud 3 y debe caber en 6 franjas, así que puede empezar como máximo en 4. La pista de que Jingle va después de la franja 3 lo fija en 4 y los demás bloques llenan, por orden, las franjas que quedan antes. El orden interno de los bloques determina todas las franjas: Weather → Interview (1–2), Quiz (3–3), Jingle → Traffic → News (4–6).",
+  "fuente": "Inventado para el HW2 con asistencia de Codex (ver AI_LOG.md)."
+}

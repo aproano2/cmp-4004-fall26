@@ -1,0 +1,15 @@
+{
+  "text": "{\n    \"Align\": 1,\n    \"Caption\": 6,\n    \"Drill\": 7,\n    \"Dust\": 19,\n    \"Inspect\": 11,\n    \"Level\": 12,\n    \"Light\": 5,\n    \"Measure\": 8,\n    \"Mount\": 13,\n    \"Open\": 17,\n    \"Photograph\": 20,\n    \"Place\": 14,\n    \"Register\": 10,\n    \"Review\": 18,\n    \"Seal\": 15,\n    \"Sign\": 16,\n    \"Test\": 19,\n    \"Unload\": 3,\n    \"Unwrap\": 9,\n    \"Wire\": 16,\n    \"Mount\": 13\n}",
+  "backend": "ollama",
+  "model": "qwen2.5:3b",
+  "prompt": "You are solving a logic puzzle. Read all the clues carefully.\n\nA museum is assigning time slots for an installation day. Schedule these 20 activities in slots 1 to 20, with exactly one activity per slot: Align, Caption, Drill, Dust, Inspect, Level, Light, Measure, Mount, Open, Photograph, Place, Register, Review, Seal, Sign, Test, Unload, Unwrap, Wire.\n1. Register is scheduled immediately after Unload.\n2. Measure is scheduled immediately after Register.\n3. Mount is scheduled immediately after Drill.\n4. Level is scheduled immediately after Mount.\n5. Test is scheduled immediately after Wire.\n6. Inspect is scheduled immediately after Unwrap.\n7. Place is scheduled immediately after Inspect.\n8. Align is scheduled immediately after Place.\n9. Light is scheduled immediately after Caption.\n10. Photograph is scheduled immediately after Light.\n11. Seal is scheduled immediately after Dust.\n12. Sign is scheduled immediately after Review.\n13. Open is scheduled immediately after Sign.\n14. Unwrap is in slot 9.\n15. Measure takes place before Drill.\n16. Level takes place before Wire.\n17. Test takes place before Unwrap.\n18. Caption is immediately after Align.\n19. Photograph takes place before Dust.\n20. Seal takes place before Review.\nFor each named activity, give its slot number.\n\nRequired output format:\nVariables to report: Align, Caption, Drill, Dust, Inspect, Level, Light, Measure, Mount, Open, Photograph, Place, Register, Review, Seal, Sign, Test, Unload, Unwrap, Wire\nPossible values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20\nReply with ONE JSON object that maps every listed variable to its value, e.g. {\"Ana\": 1, \"Bruno\": 2}.\n\nReply with ONLY the JSON, no markdown and no extra text.",
+  "temperature": 0.7,
+  "seed": 0,
+  "elapsed": 5.991751900000963,
+  "meta": {
+    "eval_count": 169,
+    "prompt_eval_count": 488,
+    "total_duration": 3943142400
+  },
+  "cached_at": "2026-11-18T08:28:53"
+}
