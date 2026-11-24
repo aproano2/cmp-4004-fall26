@@ -1,0 +1,47 @@
+{
+  "id": "sat_08",
+  "difficulty": "medium",
+  "prompt": "Para una jornada cultural puedes organizar estas actividades: cine, teatro, música, baile, pintura, lectura. Debes elegir al menos una de estas opciones: cine o teatro. Si eliges cine, también debes elegir música. Si eliges teatro, también debes elegir música. Si eliges música, también debes elegir baile. No puedes elegir a la vez baile y pintura. Debes elegir al menos una de estas opciones: pintura o lectura. No puedes elegir lectura. ¿Existe una selección que cumpla todas las reglas?",
+  "variables": {
+    "cine": 1,
+    "teatro": 2,
+    "música": 3,
+    "baile": 4,
+    "pintura": 5,
+    "lectura": 6
+  },
+  "clauses": [
+    [
+      1,
+      2
+    ],
+    [
+      -1,
+      3
+    ],
+    [
+      -2,
+      3
+    ],
+    [
+      -3,
+      4
+    ],
+    [
+      -4,
+      -5
+    ],
+    [
+      5,
+      6
+    ],
+    [
+      -6
+    ]
+  ],
+  "ground_truth": {
+    "status": "UNSAT",
+    "witness": null,
+    "reasoning": "Debes elegir cine o teatro, y cualquiera de los dos obliga a incluir música. La música obliga a incluir baile, que excluye pintura. Como debes elegir pintura o lectura, queda lectura. La última regla prohíbe elegir lectura, así que las reglas se contradicen."
+  }
+}

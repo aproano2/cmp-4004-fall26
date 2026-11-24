@@ -1,0 +1,91 @@
+{
+  "call": {
+    "provider": "ollama",
+    "model": "llama3.1:latest",
+    "base_url": "http://localhost:11434",
+    "prompt_version": "sat-v1",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Traduce todas las reglas a CNF proposicional sin resolverlas. Responde exclusivamente con un objeto JSON {\"clauses\":[[1,-2],[3]]}. Cada lista interior es una disyunción; la lista exterior es una conjunción. Usa enteros positivos para variables y negativos para negaciones, exclusivamente del mapa dado. No añadas variables ni premisas. Una cláusula vacía significa falso; una lista sin cláusulas significa verdadero. No incluyas markdown ni explicación."
+      },
+      {
+        "role": "user",
+        "content": "{\"problem\": \"Para una muestra escolar puedes incluir estos materiales: carteles, maquetas, folletos, fotos. Debes elegir carteles. Si eliges carteles, también debes elegir maquetas. No puedes elegir a la vez maquetas y folletos. Debes elegir al menos una de estas opciones: folletos o fotos. ¿Existe una selección que cumpla todas las reglas?\", \"variables\": {\"carteles\": 1, \"maquetas\": 2, \"folletos\": 3, \"fotos\": 4}}"
+      }
+    ],
+    "parameters": {
+      "temperature": 0.0,
+      "max_tokens": 2048,
+      "seed": 20261118
+    },
+    "repeat": 0,
+    "problem_id": "sat_03",
+    "arm": "B",
+    "iteration": 0,
+    "call_id": "7d2daa470f74e82bc802fd3117577cd72cce0224fb74358e27aaa65e8c9840e5",
+    "raw": "{\n\"clauses\": [\n[-1],\n[1, -2],\n[-1, 2, 3],\n[-1, 2, -3],\n[-1, -2, -3],\n[-1, -2, -4],\n[1]\n] \n}",
+    "model_size": "8.0B; Q4_K_M",
+    "reported_model": "llama3.1:latest",
+    "response_id": "",
+    "input_tokens": 260,
+    "output_tokens": 58,
+    "token_source": "provider",
+    "llm_time_seconds": 90.89984247500024,
+    "access_seconds": 90.89984247500024,
+    "cache_hit": false,
+    "estimated_cost_usd": null,
+    "charged_cost_usd": null,
+    "error_category": "",
+    "error_message": "",
+    "timestamp": "2026-11-19T02:09:24.640813+00:00"
+  },
+  "iteration": 0,
+  "predicted_status": "UNSAT",
+  "solver_status": "UNSAT",
+  "solver_time_seconds": 0.00042733400005090516,
+  "clauses": [
+    [
+      -1
+    ],
+    [
+      1,
+      -2
+    ],
+    [
+      -1,
+      2,
+      3
+    ],
+    [
+      -1,
+      2,
+      -3
+    ],
+    [
+      -1,
+      -2,
+      -3
+    ],
+    [
+      -1,
+      -2,
+      -4
+    ],
+    [
+      1
+    ]
+  ],
+  "error_category": "",
+  "error_message": "",
+  "warnings": [],
+  "assignment": null,
+  "solver_stats": {
+    "calls": 1,
+    "propagations": 2,
+    "conflicts": 1
+  },
+  "detectable_error": false,
+  "processing_seconds": 0.0007668299999750161,
+  "parse_validation_seconds": 0.00033949599992411095
+}

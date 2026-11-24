@@ -1,0 +1,142 @@
+{
+  "campaigns": {
+    "14fc6de7c61f56d7729868371c34d3fff82f355e2011b1a0b37e97716d23baeb": {
+      "config": {
+        "provider": "",
+        "model": "",
+        "base_url": "",
+        "model_size": "unknown",
+        "temperature": 0.0,
+        "max_tokens": 2048,
+        "timeout": 120.0,
+        "solver_timeout": 10.0,
+        "seed": null,
+        "cache": true,
+        "input_price": null,
+        "output_price": null,
+        "local_hourly_price": null,
+        "price_source": "unconfigured; no monetary claim",
+        "price_date": ""
+      },
+      "prompt_version": "sat-v1",
+      "policy": "observable-errors-only-v1",
+      "solver_sha256": "05eb04d90f466c423e08f34ac18b75bba03165de3c6a59e75481a8693f2eb948",
+      "dataset": {
+        "sat_01.json": "ca81f3f1ac67512b9986a96bf81990522a9cbf4ed7e44073981068052e6b59d3",
+        "sat_02.json": "04b894bc837d003d8ce5b45ed191b842d71f1491ec5721a9e9ea171341a10b70",
+        "sat_03.json": "517573c55c0ac3201e62e70ee4acb3d0d7d9875684164fb2b83a052c4f401cea",
+        "sat_04.json": "b0d158dc835154f2c679706b9755005184f733c145691c733942b59f3fb02bd4",
+        "sat_05.json": "fdcc6b9e2b9aa86ee73b1b2a3ae3c09db0ec1e9d31d2b9dca84949e7ba962e40",
+        "sat_06.json": "d785f814ba5e94747f5ed0460126035cc9ae333dcb85908f9852817c911618a9",
+        "sat_07.json": "44af74b461c8e93a239532b8a10fe268d586b14edb6799d70ac73b3f762d47df",
+        "sat_08.json": "fd3c370bc0dcdfa7b17cdf992ab49e5a8d5e7f4cee41f0db288c348f70d8fdd0",
+        "sat_09.json": "f328ab6d16c75c062d3fee6c66c92ed3677142d62169093c62964d87f4af0176",
+        "sat_10.json": "dbefd9f250e50d590c04b9b9663a358be08f4c41479337d582b08073f9a99442",
+        "sat_11.json": "f660be4c7f2244ffc2b15ca308c35aabcc3e6c8b0372788383a113b01295161e",
+        "sat_12.json": "e5e4efad38adba48e3bb96e0762ab027a3f69b8b8af0834bfb9a17f508231dd2",
+        "sat_13.json": "329bd7f2658513c0b5e58c1616e7f82501034dcd445821aa77bf19ce3407235d",
+        "sat_14.json": "c2d429534c2b093d328ae7941ae2c60aa3b867c879c0f22a25cd7598a2590bb8",
+        "sat_15.json": "2b84136dc3832cc8dc0afa650a3f64c756a9e92b6381a1abc4dc82532806b947",
+        "sat_16.json": "3e89a816f2e96c49ddb3b865916f607710210fdabe3a268aab0bcef3627f26b4",
+        "sat_17.json": "761b03beea2709b2e221a4ee62b36ea78e7702897833062136fe85fba5c5ad17",
+        "sat_18.json": "e958422c85958483605abe76982b56b87a3b7369a8542471417e63c80f5c14a2",
+        "sat_19.json": "d0251de085f68f802219c8cf9f587ab2fa59b4ca2a7047eb855cb670e122a64c",
+        "sat_20.json": "ead7e93faa8d6a7d45bfae7c612a45beba9acdf3850cbb3182c14f816e07409f"
+      },
+      "python": "3.14.7 (main, Aug 10 2026, 00:00:00) [GCC 15.3.1 20260722 (Red Hat 15.3.1-1)]",
+      "platform": "Linux-7.1.10-100.fc43.x86_64-x86_64-with-glibc2.42",
+      "processor": "",
+      "timestamp": "2026-11-19T01:51:40.878736+00:00",
+      "selected_problems": [
+        "sat_01",
+        "sat_02",
+        "sat_03",
+        "sat_04",
+        "sat_05",
+        "sat_06",
+        "sat_07",
+        "sat_08",
+        "sat_09",
+        "sat_10",
+        "sat_11",
+        "sat_12",
+        "sat_13",
+        "sat_14",
+        "sat_15",
+        "sat_16",
+        "sat_17",
+        "sat_18",
+        "sat_19",
+        "sat_20"
+      ],
+      "requested_arms": [
+        "A"
+      ],
+      "requested_repeats": 3,
+      "determinism": "Seed is best effort; provider determinism is not guaranteed."
+    },
+    "6d15b19874a41c121fbde73b97d4a2cb95de19996edf744b88063b4e79064b2e": {
+      "config": {
+        "provider": "ollama",
+        "model": "llama3.1:latest",
+        "base_url": "http://localhost:11434",
+        "model_size": "8.0B; Q4_K_M",
+        "temperature": 0.0,
+        "max_tokens": 2048,
+        "timeout": 120.0,
+        "solver_timeout": 10.0,
+        "seed": 20261118,
+        "input_price": null,
+        "output_price": null,
+        "local_hourly_price": null,
+        "price_source": "unconfigured; no monetary claim",
+        "price_date": ""
+      },
+      "prompt_version": "sat-v1",
+      "policy": "observable-errors-only-v1",
+      "solver_sha256": "05eb04d90f466c423e08f34ac18b75bba03165de3c6a59e75481a8693f2eb948",
+      "dataset": {
+        "sat_01.json": "ca81f3f1ac67512b9986a96bf81990522a9cbf4ed7e44073981068052e6b59d3",
+        "sat_02.json": "04b894bc837d003d8ce5b45ed191b842d71f1491ec5721a9e9ea171341a10b70",
+        "sat_03.json": "517573c55c0ac3201e62e70ee4acb3d0d7d9875684164fb2b83a052c4f401cea",
+        "sat_04.json": "b0d158dc835154f2c679706b9755005184f733c145691c733942b59f3fb02bd4",
+        "sat_05.json": "fdcc6b9e2b9aa86ee73b1b2a3ae3c09db0ec1e9d31d2b9dca84949e7ba962e40",
+        "sat_06.json": "d785f814ba5e94747f5ed0460126035cc9ae333dcb85908f9852817c911618a9",
+        "sat_07.json": "44af74b461c8e93a239532b8a10fe268d586b14edb6799d70ac73b3f762d47df",
+        "sat_08.json": "fd3c370bc0dcdfa7b17cdf992ab49e5a8d5e7f4cee41f0db288c348f70d8fdd0",
+        "sat_09.json": "f328ab6d16c75c062d3fee6c66c92ed3677142d62169093c62964d87f4af0176",
+        "sat_10.json": "dbefd9f250e50d590c04b9b9663a358be08f4c41479337d582b08073f9a99442",
+        "sat_11.json": "f660be4c7f2244ffc2b15ca308c35aabcc3e6c8b0372788383a113b01295161e",
+        "sat_12.json": "e5e4efad38adba48e3bb96e0762ab027a3f69b8b8af0834bfb9a17f508231dd2",
+        "sat_13.json": "329bd7f2658513c0b5e58c1616e7f82501034dcd445821aa77bf19ce3407235d",
+        "sat_14.json": "c2d429534c2b093d328ae7941ae2c60aa3b867c879c0f22a25cd7598a2590bb8",
+        "sat_15.json": "2b84136dc3832cc8dc0afa650a3f64c756a9e92b6381a1abc4dc82532806b947",
+        "sat_16.json": "3e89a816f2e96c49ddb3b865916f607710210fdabe3a268aab0bcef3627f26b4",
+        "sat_17.json": "761b03beea2709b2e221a4ee62b36ea78e7702897833062136fe85fba5c5ad17",
+        "sat_18.json": "e958422c85958483605abe76982b56b87a3b7369a8542471417e63c80f5c14a2",
+        "sat_19.json": "d0251de085f68f802219c8cf9f587ab2fa59b4ca2a7047eb855cb670e122a64c",
+        "sat_20.json": "ead7e93faa8d6a7d45bfae7c612a45beba9acdf3850cbb3182c14f816e07409f"
+      },
+      "python": "3.14.7 (main, Aug 10 2026, 00:00:00) [GCC 15.3.1 20260722 (Red Hat 15.3.1-1)]",
+      "platform": "Linux-7.1.10-100.fc43.x86_64-x86_64-with-glibc2.42",
+      "processor": "",
+      "cpu_count": 4,
+      "dependencies": {
+        "numpy": "2.4.3",
+        "pandas": "3.0.2",
+        "matplotlib": "3.10.9",
+        "requests": "2.31.0",
+        "python-dotenv": "1.2.2"
+      },
+      "timestamp": "2026-11-19T02:00:36.366800+00:00",
+      "selected_problems": [
+        "sat_01"
+      ],
+      "requested_arms": [
+        "B"
+      ],
+      "requested_repeats": 1,
+      "determinism": "Seed is best effort; provider determinism is not guaranteed."
+    }
+  }
+}

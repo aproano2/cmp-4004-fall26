@@ -1,0 +1,100 @@
+{
+  "row": {
+    "run_id": "5235eedc6f05cca7d17a99f6cedc0599bec0df9d59cfc4e88dbc1d2c19481443",
+    "problem_id": "sat_03",
+    "difficulty": "easy",
+    "arm": "C",
+    "repeat": 0,
+    "provider": "ollama",
+    "model": "llama3.1:latest",
+    "model_size": "8.0B; Q4_K_M",
+    "temperature": 0.0,
+    "expected_status": "SAT",
+    "predicted_status": "SAT",
+    "correctness": "correct",
+    "taxonomy_category": "",
+    "error_category": "",
+    "detectable_error": false,
+    "error_message": "",
+    "llm_time_seconds": 66.89224490300012,
+    "solver_time_seconds": 0.0,
+    "parse_validation_seconds": 0.00036508500033960445,
+    "wall_clock_seconds": 66.90410109999993,
+    "pipeline_time_seconds": 66.89260998800046,
+    "cache_access_seconds": 0,
+    "input_tokens": 143,
+    "output_tokens": 87,
+    "total_tokens": 230,
+    "token_source": "provider",
+    "estimated_cost_usd": null,
+    "charged_cost_usd": null,
+    "solver_status": "NOT_RUN",
+    "refinement_iterations": 0,
+    "final_iteration": 0,
+    "refinement_time_seconds": 0,
+    "cache_hit": false,
+    "initial_call_id": "bcf7b8ac2350949a4f3df070865ec15ca37db19dec3d6536b50eef42d0a811fc",
+    "observable_convergence": true,
+    "convergence": "",
+    "timestamp": "2026-11-19T02:10:31.686164+00:00",
+    "campaign_id": "301f830d833670aec538771d704e1b1bdc5f43afd783784248e3a58abd1766e8",
+    "paired_checkpoint_reused": false
+  },
+  "attempts": [
+    {
+      "call": {
+        "provider": "ollama",
+        "model": "llama3.1:latest",
+        "base_url": "http://localhost:11434",
+        "prompt_version": "sat-v1",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Resuelve el problema de satisfacibilidad. Responde exclusivamente con JSON: {\"answer\":\"SAT\" o \"UNSAT\", \"explanation\":\"justificación breve\"}."
+          },
+          {
+            "role": "user",
+            "content": "Para una muestra escolar puedes incluir estos materiales: carteles, maquetas, folletos, fotos. Debes elegir carteles. Si eliges carteles, también debes elegir maquetas. No puedes elegir a la vez maquetas y folletos. Debes elegir al menos una de estas opciones: folletos o fotos. ¿Existe una selección que cumpla todas las reglas?"
+          }
+        ],
+        "parameters": {
+          "temperature": 0.0,
+          "max_tokens": 2048,
+          "seed": 20261118
+        },
+        "repeat": 0,
+        "problem_id": "sat_03",
+        "arm": "C",
+        "iteration": 0,
+        "call_id": "bcf7b8ac2350949a4f3df070865ec15ca37db19dec3d6536b50eef42d0a811fc",
+        "raw": "{\"answer\":\"SAT\",\"explanation\":\"Puedes elegir carteles, ya que debes elegirlos. También puedes elegir maquetas porque debes elegirlas si eliges carteles. No puedes elegir folletos y maquetas a la vez, pero no has elegido folletos. Puedes elegir fotos porque debes elegirlas o los folletos.\"}",
+        "model_size": "8.0B; Q4_K_M",
+        "reported_model": "llama3.1:latest",
+        "response_id": "",
+        "input_tokens": 143,
+        "output_tokens": 87,
+        "token_source": "provider",
+        "llm_time_seconds": 66.89224490300012,
+        "access_seconds": 66.89224490300012,
+        "cache_hit": false,
+        "estimated_cost_usd": null,
+        "charged_cost_usd": null,
+        "error_category": "",
+        "error_message": "",
+        "timestamp": "2026-11-19T02:10:31.674370+00:00"
+      },
+      "iteration": 0,
+      "predicted_status": "SAT",
+      "solver_status": "NOT_RUN",
+      "solver_time_seconds": 0.0,
+      "clauses": null,
+      "error_category": "",
+      "error_message": "",
+      "warnings": [],
+      "assignment": null,
+      "detectable_error": false,
+      "processing_seconds": 0.00036508500033960445,
+      "parse_validation_seconds": 0.00036508500033960445
+    }
+  ]
+}

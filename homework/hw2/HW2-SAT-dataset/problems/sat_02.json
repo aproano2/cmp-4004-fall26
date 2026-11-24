@@ -1,0 +1,38 @@
+{
+  "id": "sat_02",
+  "difficulty": "easy",
+  "prompt": "Para una grabación puedes reservar estos equipos: cámara, trípode, micrófono, lámpara. Debes elegir al menos una de estas opciones: cámara o trípode. Si eliges cámara, también debes elegir micrófono. Si eliges trípode, también debes elegir micrófono. Si eliges micrófono, también debes elegir lámpara. No puedes elegir a la vez micrófono y lámpara. ¿Existe una selección que cumpla todas las reglas?",
+  "variables": {
+    "cámara": 1,
+    "trípode": 2,
+    "micrófono": 3,
+    "lámpara": 4
+  },
+  "clauses": [
+    [
+      1,
+      2
+    ],
+    [
+      -1,
+      3
+    ],
+    [
+      -2,
+      3
+    ],
+    [
+      -3,
+      4
+    ],
+    [
+      -3,
+      -4
+    ]
+  ],
+  "ground_truth": {
+    "status": "UNSAT",
+    "witness": null,
+    "reasoning": "Debes reservar cámara o trípode. Cualquiera de los dos obliga a reservar micrófono. Si reservas micrófono, la cuarta regla exige lámpara y la quinta la prohíbe."
+  }
+}

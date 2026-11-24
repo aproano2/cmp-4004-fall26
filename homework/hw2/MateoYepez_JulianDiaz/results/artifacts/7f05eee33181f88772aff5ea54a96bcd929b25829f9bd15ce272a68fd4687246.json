@@ -1,0 +1,100 @@
+{
+  "row": {
+    "run_id": "7f05eee33181f88772aff5ea54a96bcd929b25829f9bd15ce272a68fd4687246",
+    "problem_id": "sat_17",
+    "difficulty": "hard",
+    "arm": "C",
+    "repeat": 0,
+    "provider": "ollama",
+    "model": "llama3.1:latest",
+    "model_size": "8.0B; Q4_K_M",
+    "temperature": 0.0,
+    "expected_status": "SAT",
+    "predicted_status": "SAT",
+    "correctness": "correct",
+    "taxonomy_category": "",
+    "error_category": "",
+    "detectable_error": false,
+    "error_message": "",
+    "llm_time_seconds": 52.91376218499863,
+    "solver_time_seconds": 0.0,
+    "parse_validation_seconds": 0.00024057599875959568,
+    "wall_clock_seconds": 52.918173783000384,
+    "pipeline_time_seconds": 52.91400276099739,
+    "cache_access_seconds": 0,
+    "input_tokens": 221,
+    "output_tokens": 20,
+    "total_tokens": 241,
+    "token_source": "provider",
+    "estimated_cost_usd": null,
+    "charged_cost_usd": null,
+    "solver_status": "NOT_RUN",
+    "refinement_iterations": 0,
+    "final_iteration": 0,
+    "refinement_time_seconds": 0,
+    "cache_hit": false,
+    "initial_call_id": "4089086ab05bd5a7ddde8e7c076c4af334d92011abdfe65529f2dab4ec5e3a9c",
+    "observable_convergence": true,
+    "convergence": "",
+    "timestamp": "2026-11-19T04:01:54.957762+00:00",
+    "campaign_id": "301f830d833670aec538771d704e1b1bdc5f43afd783784248e3a58abd1766e8",
+    "paired_checkpoint_reused": false
+  },
+  "attempts": [
+    {
+      "call": {
+        "provider": "ollama",
+        "model": "llama3.1:latest",
+        "base_url": "http://localhost:11434",
+        "prompt_version": "sat-v1",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Resuelve el problema de satisfacibilidad. Responde exclusivamente con JSON: {\"answer\":\"SAT\" o \"UNSAT\", \"explanation\":\"justificación breve\"}."
+          },
+          {
+            "role": "user",
+            "content": "Para una campaña puedes usar estos canales y materiales: correo, afiches, radio, video, encuesta, volantes, registro, informe. Debes elegir al menos una de estas opciones: correo, afiches o radio. No puedes elegir a la vez correo y afiches. Si eliges correo, también debes elegir video. Si eliges afiches, también debes elegir encuesta. Si eliges radio, también debes elegir volantes. No puedes elegir a la vez video y registro. No puedes elegir a la vez encuesta y registro. No puedes elegir a la vez volantes y registro. Debes elegir al menos una de estas opciones: registro o informe. ¿Existe una selección que cumpla todas las reglas?"
+          }
+        ],
+        "parameters": {
+          "temperature": 0.0,
+          "max_tokens": 2048,
+          "seed": 20261118
+        },
+        "repeat": 0,
+        "problem_id": "sat_17",
+        "arm": "C",
+        "iteration": 0,
+        "call_id": "4089086ab05bd5a7ddde8e7c076c4af334d92011abdfe65529f2dab4ec5e3a9c",
+        "raw": "{\"answer\":\"SAT\",\"explanation\":\"Se puede elegir correo, radio y registro.\"}",
+        "model_size": "8.0B; Q4_K_M",
+        "reported_model": "llama3.1:latest",
+        "response_id": "",
+        "input_tokens": 221,
+        "output_tokens": 20,
+        "token_source": "provider",
+        "llm_time_seconds": 52.91376218499863,
+        "access_seconds": 52.91376218499863,
+        "cache_hit": false,
+        "estimated_cost_usd": null,
+        "charged_cost_usd": null,
+        "error_category": "",
+        "error_message": "",
+        "timestamp": "2026-11-19T04:01:54.953389+00:00"
+      },
+      "iteration": 0,
+      "predicted_status": "SAT",
+      "solver_status": "NOT_RUN",
+      "solver_time_seconds": 0.0,
+      "clauses": null,
+      "error_category": "",
+      "error_message": "",
+      "warnings": [],
+      "assignment": null,
+      "detectable_error": false,
+      "processing_seconds": 0.00024057599875959568,
+      "parse_validation_seconds": 0.00024057599875959568
+    }
+  ]
+}

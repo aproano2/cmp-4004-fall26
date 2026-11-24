@@ -1,0 +1,21 @@
+problem_id,repeat,initial_correct,final_correct,improved,regressed,observable_convergence,outcome,iterations,first_correct_iteration,budget_exhausted,initial_category,final_category
+sat_01,0,True,True,False,False,True,initial_success,0,0.0,False,Valid model of the wrong problem,Valid model of the wrong problem
+sat_02,0,False,False,False,False,True,silent_incorrect,0,,False,"Valid syntax, under-constrained","Valid syntax, under-constrained"
+sat_03,0,False,False,False,False,True,silent_incorrect,0,,False,"Valid syntax, over-constrained","Valid syntax, over-constrained"
+sat_04,0,False,False,False,False,True,silent_incorrect,0,,False,"Valid syntax, under-constrained","Valid syntax, under-constrained"
+sat_05,0,True,True,False,False,True,initial_success,0,0.0,False,"Valid syntax, under-constrained","Valid syntax, under-constrained"
+sat_06,0,False,False,False,False,True,silent_incorrect,0,,False,"Valid syntax, under-constrained","Valid syntax, under-constrained"
+sat_07,0,True,True,False,False,True,initial_success,0,0.0,False,Valid model of the wrong problem,Valid model of the wrong problem
+sat_08,0,False,False,False,False,True,silent_incorrect,0,,False,"Valid syntax, under-constrained","Valid syntax, under-constrained"
+sat_09,0,True,True,False,False,True,initial_success,0,0.0,False,Valid model of the wrong problem,Valid model of the wrong problem
+sat_10,0,False,False,False,False,True,silent_incorrect,0,,False,"Valid syntax, under-constrained","Valid syntax, under-constrained"
+sat_11,0,True,True,False,False,True,initial_success,0,0.0,False,Valid model of the wrong problem,Valid model of the wrong problem
+sat_12,0,False,False,False,False,True,silent_incorrect,0,,False,"Valid syntax, under-constrained","Valid syntax, under-constrained"
+sat_13,0,True,True,False,False,True,initial_success,0,0.0,False,Valid model of the wrong problem,Valid model of the wrong problem
+sat_14,0,False,False,False,False,True,silent_incorrect,0,,False,"Valid syntax, under-constrained","Valid syntax, under-constrained"
+sat_15,0,True,True,False,False,True,initial_success,0,0.0,False,Valid model of the wrong problem,Valid model of the wrong problem
+sat_16,0,False,False,False,False,True,silent_incorrect,0,,False,"Valid syntax, under-constrained","Valid syntax, under-constrained"
+sat_17,0,True,True,False,False,True,initial_success,0,0.0,False,Valid model of the wrong problem,Valid model of the wrong problem
+sat_18,0,False,False,False,False,True,silent_incorrect,0,,False,"Valid syntax, under-constrained","Valid syntax, under-constrained"
+sat_19,0,True,True,False,False,True,initial_success,0,0.0,False,Valid model of the wrong problem,Valid model of the wrong problem
+sat_20,0,False,False,False,False,True,silent_incorrect,0,,False,"Valid syntax, under-constrained","Valid syntax, under-constrained"

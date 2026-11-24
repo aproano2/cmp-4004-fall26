@@ -1,0 +1,6 @@
+numpy>=1.26
+pandas>=2.1
+matplotlib>=3.8
+requests>=2.31
+python-dotenv>=1.0
+pytest>=8.0

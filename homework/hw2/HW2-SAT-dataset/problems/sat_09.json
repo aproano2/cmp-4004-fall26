@@ -1,0 +1,55 @@
+{
+  "id": "sat_09",
+  "difficulty": "medium",
+  "prompt": "Para un boletín puedes incluir estas secciones: portada, entrevista, reseña, agenda, fotos, editorial. No puedes elegir portada. Debes elegir al menos una de estas opciones: portada, entrevista o reseña. No puedes elegir a la vez entrevista y reseña. Si eliges entrevista, también debes elegir agenda. Si eliges reseña, también debes elegir fotos. Si eliges agenda, también debes elegir editorial. Si eliges fotos, también debes elegir editorial. ¿Existe una selección que cumpla todas las reglas?",
+  "variables": {
+    "portada": 1,
+    "entrevista": 2,
+    "reseña": 3,
+    "agenda": 4,
+    "fotos": 5,
+    "editorial": 6
+  },
+  "clauses": [
+    [
+      -1
+    ],
+    [
+      1,
+      2,
+      3
+    ],
+    [
+      -2,
+      -3
+    ],
+    [
+      -2,
+      4
+    ],
+    [
+      -3,
+      5
+    ],
+    [
+      -4,
+      6
+    ],
+    [
+      -5,
+      6
+    ]
+  ],
+  "ground_truth": {
+    "status": "SAT",
+    "witness": {
+      "portada": false,
+      "entrevista": true,
+      "reseña": false,
+      "agenda": true,
+      "fotos": false,
+      "editorial": true
+    },
+    "reasoning": "Elegir entrevista, agenda, editorial y dejar fuera las demás opciones cumple todas las reglas."
+  }
+}

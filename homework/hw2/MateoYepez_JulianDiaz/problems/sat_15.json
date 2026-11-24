@@ -1,0 +1,67 @@
+{
+  "id": "sat_15",
+  "difficulty": "hard",
+  "prompt": "Para una exposición puedes instalar estos elementos: panel, vitrina, proyector, pantalla, altavoz, micrófono, tarima, cortina. Debes elegir al menos una de estas opciones: panel o vitrina. Si eliges panel, también debes elegir proyector. Si eliges vitrina, también debes elegir pantalla. Si eliges proyector, también debes elegir altavoz. Si eliges pantalla, también debes elegir micrófono. Si eliges altavoz, también debes elegir tarima. Si eliges micrófono, también debes elegir tarima. Si eliges tarima, también debes elegir cortina. No puedes elegir a la vez proyector y pantalla. ¿Existe una selección que cumpla todas las reglas?",
+  "variables": {
+    "panel": 1,
+    "vitrina": 2,
+    "proyector": 3,
+    "pantalla": 4,
+    "altavoz": 5,
+    "micrófono": 6,
+    "tarima": 7,
+    "cortina": 8
+  },
+  "clauses": [
+    [
+      1,
+      2
+    ],
+    [
+      -1,
+      3
+    ],
+    [
+      -2,
+      4
+    ],
+    [
+      -3,
+      5
+    ],
+    [
+      -4,
+      6
+    ],
+    [
+      -5,
+      7
+    ],
+    [
+      -6,
+      7
+    ],
+    [
+      -7,
+      8
+    ],
+    [
+      -3,
+      -4
+    ]
+  ],
+  "ground_truth": {
+    "status": "SAT",
+    "witness": {
+      "panel": true,
+      "vitrina": false,
+      "proyector": true,
+      "pantalla": false,
+      "altavoz": true,
+      "micrófono": false,
+      "tarima": true,
+      "cortina": true
+    },
+    "reasoning": "Elegir panel, proyector, altavoz, tarima, cortina y dejar fuera las demás opciones cumple todas las reglas."
+  }
+}

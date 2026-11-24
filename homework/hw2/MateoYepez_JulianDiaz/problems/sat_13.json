@@ -1,0 +1,55 @@
+{
+  "id": "sat_13",
+  "difficulty": "medium",
+  "prompt": "Para reparar una bicicleta puedes usar estas herramientas: llave, pinzas, bomba, parche, lubricante, trapo. Debes elegir al menos una de estas opciones: llave o pinzas. Si eliges llave, también debes elegir bomba. Si eliges pinzas, también debes elegir parche. Si eliges bomba, también debes elegir lubricante. Si eliges parche, también debes elegir lubricante. Si eliges lubricante, también debes elegir trapo. No puedes elegir a la vez bomba y parche. ¿Existe una selección que cumpla todas las reglas?",
+  "variables": {
+    "llave": 1,
+    "pinzas": 2,
+    "bomba": 3,
+    "parche": 4,
+    "lubricante": 5,
+    "trapo": 6
+  },
+  "clauses": [
+    [
+      1,
+      2
+    ],
+    [
+      -1,
+      3
+    ],
+    [
+      -2,
+      4
+    ],
+    [
+      -3,
+      5
+    ],
+    [
+      -4,
+      5
+    ],
+    [
+      -5,
+      6
+    ],
+    [
+      -3,
+      -4
+    ]
+  ],
+  "ground_truth": {
+    "status": "SAT",
+    "witness": {
+      "llave": false,
+      "pinzas": true,
+      "bomba": false,
+      "parche": true,
+      "lubricante": true,
+      "trapo": true
+    },
+    "reasoning": "Elegir pinzas, parche, lubricante, trapo y dejar fuera las demás opciones cumple todas las reglas."
+  }
+}

@@ -1,0 +1,1 @@
+{"timestamp": "2026-11-19T02:23:46.099976+00:00", "event": "runner_exit", "exit_code": 143, "detail": "Long-lived CLI process terminated by SIGTERM after C sat_08 was persisted. Cause not established. Resume from durable artifacts; any interrupted in-flight request has unknown usage and is not counted as a completed model observation."}

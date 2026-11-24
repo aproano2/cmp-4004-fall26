@@ -1,0 +1,198 @@
+{
+  "row": {
+    "run_id": "820fdee46734829a0af0934037589a7bc4e9012f9c69c4d35247d064ccea407f",
+    "problem_id": "sat_18",
+    "difficulty": "hard",
+    "arm": "B",
+    "repeat": 0,
+    "provider": "ollama",
+    "model": "llama3.1:latest",
+    "model_size": "8.0B; Q4_K_M",
+    "temperature": 0.0,
+    "expected_status": "UNSAT",
+    "predicted_status": "SAT",
+    "correctness": "incorrect",
+    "taxonomy_category": "Valid syntax, under-constrained",
+    "semantic_category": "Valid syntax, under-constrained",
+    "reference_solutions": 0,
+    "generated_solutions": 42,
+    "lost_solutions": 0,
+    "added_solutions": 42,
+    "lost_counterexample": null,
+    "added_counterexample": {
+      "1": false,
+      "2": false,
+      "3": false,
+      "4": true,
+      "5": false,
+      "6": true,
+      "7": false,
+      "8": false
+    },
+    "missing_clauses": [
+      [
+        -8
+      ],
+      [
+        -3,
+        6
+      ],
+      [
+        -1,
+        4
+      ],
+      [
+        1,
+        2,
+        3
+      ],
+      [
+        7,
+        8
+      ]
+    ],
+    "extra_clauses": [
+      [
+        -7
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        3,
+        6
+      ]
+    ],
+    "review_note": "Set inclusion is exhaustive evidence; clause differences alone do not identify linguistic causes. Quantifier/arity category is not applicable to propositional syntax.",
+    "error_category": "semantic_error",
+    "detectable_error": false,
+    "error_message": "",
+    "llm_time_seconds": 81.77048568200007,
+    "solver_time_seconds": 0.0013278129990794696,
+    "parse_validation_seconds": 0.00047750300109328236,
+    "wall_clock_seconds": 81.77640514000086,
+    "pipeline_time_seconds": 81.77229099800024,
+    "cache_access_seconds": 0,
+    "input_tokens": 367,
+    "output_tokens": 48,
+    "total_tokens": 415,
+    "token_source": "provider",
+    "estimated_cost_usd": null,
+    "charged_cost_usd": null,
+    "solver_status": "SAT",
+    "refinement_iterations": 0,
+    "final_iteration": 0,
+    "refinement_time_seconds": 0,
+    "cache_hit": false,
+    "initial_call_id": "bf1e7137f3191ba0f886861b3fad8d009d032608d644adebeb1628637528b1e3",
+    "observable_convergence": true,
+    "convergence": "",
+    "timestamp": "2026-11-19T04:05:11.793349+00:00",
+    "campaign_id": "301f830d833670aec538771d704e1b1bdc5f43afd783784248e3a58abd1766e8",
+    "paired_checkpoint_reused": false
+  },
+  "attempts": [
+    {
+      "call": {
+        "provider": "ollama",
+        "model": "llama3.1:latest",
+        "base_url": "http://localhost:11434",
+        "prompt_version": "sat-v1",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Traduce todas las reglas a CNF proposicional sin resolverlas. Responde exclusivamente con un objeto JSON {\"clauses\":[[1,-2],[3]]}. Cada lista interior es una disyunción; la lista exterior es una conjunción. Usa enteros positivos para variables y negativos para negaciones, exclusivamente del mapa dado. No añadas variables ni premisas. Una cláusula vacía significa falso; una lista sin cláusulas significa verdadero. No incluyas markdown ni explicación."
+          },
+          {
+            "role": "user",
+            "content": "{\"problem\": \"Para una campaña puedes usar estos canales y materiales: correo, afiches, radio, video, encuesta, volantes, registro, informe. Debes elegir al menos una de estas opciones: correo, afiches o radio. No puedes elegir a la vez correo y afiches. Si eliges correo, también debes elegir video. Si eliges afiches, también debes elegir encuesta. Si eliges radio, también debes elegir volantes. No puedes elegir a la vez video y registro. No puedes elegir a la vez encuesta y registro. No puedes elegir a la vez volantes y registro. Debes elegir al menos una de estas opciones: registro o informe. No puedes elegir informe. ¿Existe una selección que cumpla todas las reglas?\", \"variables\": {\"correo\": 1, \"afiches\": 2, \"radio\": 3, \"video\": 4, \"encuesta\": 5, \"volantes\": 6, \"registro\": 7, \"informe\": 8}}"
+          }
+        ],
+        "parameters": {
+          "temperature": 0.0,
+          "max_tokens": 2048,
+          "seed": 20261118
+        },
+        "repeat": 0,
+        "problem_id": "sat_18",
+        "arm": "B",
+        "iteration": 0,
+        "call_id": "bf1e7137f3191ba0f886861b3fad8d009d032608d644adebeb1628637528b1e3",
+        "raw": "{\n\"clauses\":[\n[-1,-2],\n[1,4],\n[-2,5],\n[3,6],\n[-4,-7],\n[-5,-7],\n[-6,-7],\n[-7]\n] \n}",
+        "model_size": "8.0B; Q4_K_M",
+        "reported_model": "llama3.1:latest",
+        "response_id": "",
+        "input_tokens": 367,
+        "output_tokens": 48,
+        "token_source": "provider",
+        "llm_time_seconds": 81.77048568200007,
+        "access_seconds": 81.77048568200007,
+        "cache_hit": false,
+        "estimated_cost_usd": null,
+        "charged_cost_usd": null,
+        "error_category": "",
+        "error_message": "",
+        "timestamp": "2026-11-19T04:05:11.785891+00:00"
+      },
+      "iteration": 0,
+      "predicted_status": "SAT",
+      "solver_status": "SAT",
+      "solver_time_seconds": 0.0013278129990794696,
+      "clauses": [
+        [
+          -1,
+          -2
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          -2,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          -4,
+          -7
+        ],
+        [
+          -5,
+          -7
+        ],
+        [
+          -6,
+          -7
+        ],
+        [
+          -7
+        ]
+      ],
+      "error_category": "",
+      "error_message": "",
+      "warnings": [],
+      "assignment": {
+        "1": false,
+        "2": false,
+        "3": true,
+        "4": true,
+        "5": true,
+        "6": true,
+        "7": false,
+        "8": false
+      },
+      "solver_stats": {
+        "calls": 1,
+        "propagations": 1,
+        "pure": 5
+      },
+      "detectable_error": false,
+      "processing_seconds": 0.001805316000172752,
+      "parse_validation_seconds": 0.00047750300109328236
+    }
+  ]
+}

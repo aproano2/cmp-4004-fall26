@@ -1,0 +1,30 @@
+{
+  "valid": true,
+  "issues": [],
+  "coverage": {
+    "A": {
+      "runs": 60,
+      "instances": 20,
+      "repeats": 3
+    },
+    "B": {
+      "runs": 20,
+      "instances": 20,
+      "repeats": 1
+    },
+    "B-prime": {
+      "runs": 20,
+      "instances": 20,
+      "repeats": 1
+    },
+    "C": {
+      "runs": 20,
+      "instances": 20,
+      "repeats": 1
+    }
+  },
+  "report_words": 1420,
+  "expected_main_runs": 240,
+  "completed_main_runs": 120,
+  "all_four_arms_three_repeats_complete": false
+}
