@@ -1,0 +1,15 @@
+{
+  "text": "{\n  \"Hana\": 1,\n  \"Ivo\": 6,\n  \"Jun\": 1,\n  \"Kai\": 2,\n  \"Lia\": 3,\n  \"Moe\": 4\n}",
+  "backend": "ollama",
+  "model": "qwen2.5:3b",
+  "prompt": "Solve this puzzle directly. Return only one flat JSON object mapping every named entity or cell to its answer. Do not show your reasoning.\n\nPuzzle:\nSix students -- Hana, Ivo, Jun, Kai, Lia, Moe -- finished a quiz in positions 1 to 6, with no ties. Jun finished first. Ivo finished last. Lia was not third, not fourth and not fifth. Hana was neither fourth nor fifth. Moe was not fourth.",
+  "temperature": 0.0,
+  "seed": 0,
+  "elapsed": 3.632578699995065,
+  "meta": {
+    "eval_count": 50,
+    "prompt_eval_count": 127,
+    "total_duration": 1551916200
+  },
+  "cached_at": "2026-11-14T22:53:36"
+}

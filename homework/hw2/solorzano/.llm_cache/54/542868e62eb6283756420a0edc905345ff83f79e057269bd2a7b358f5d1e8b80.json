@@ -1,0 +1,15 @@
+{
+  "text": "{\n  \"Dana\": \"tea\",\n  \"Eric\": \"juice\",\n  \"Fay\": \"coffee\",\n  \"Gus\": \"water\"\n}",
+  "backend": "ollama",
+  "model": "qwen2.5:3b",
+  "prompt": "Solve this puzzle directly. Return only one flat JSON object mapping every named entity or cell to its answer. Do not show your reasoning.\n\nPuzzle:\nFour coworkers -- Dana, Eric, Fay, Gus -- each order a different drink: coffee, tea, juice, or water. Dana orders tea. Eric orders neither coffee nor water. Fay does not order water. Gus does not order juice.",
+  "temperature": 0.0,
+  "seed": 0,
+  "elapsed": 3.1006374999997206,
+  "meta": {
+    "eval_count": 35,
+    "prompt_eval_count": 109,
+    "total_duration": 1060522400
+  },
+  "cached_at": "2026-11-14T14:35:37"
+}

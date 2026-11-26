@@ -1,0 +1,15 @@
+{
+  "text": "{\n  \"Ava\": 1,\n  \"Ben\": 3,\n  \"Cai\": 2,\n  \"Dia\": 3,\n  \"Eli\": 1,\n  \"Fox\": 2\n}",
+  "backend": "ollama",
+  "model": "qwen2.5:3b",
+  "prompt": "Solve this puzzle directly. Return only one flat JSON object mapping every named entity or cell to its answer. Do not show your reasoning.\n\nPuzzle:\nSix runners train in two groups. Ava, Ben and Cai are in group 1; Dia, Eli and Fox are in group 2. Each group uses lanes 1, 2 and 3 once, but the two groups may reuse the same lane numbers. Ava takes lane 1. Ben does not take lane 3. Dia's lane differs from Ava's and Dia does not take lane 2. Eli's lane differs from Cai's and Eli does not take lane 1. Fox's lane differs from Ben's. Which lane does each runner take?",
+  "temperature": 0.0,
+  "seed": 2,
+  "elapsed": 3.0633120000002236,
+  "meta": {
+    "eval_count": 48,
+    "prompt_eval_count": 177,
+    "total_duration": 1016130300
+  },
+  "cached_at": "2026-11-17T10:25:17"
+}

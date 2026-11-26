@@ -1,0 +1,15 @@
+{
+  "text": "{\n  \"Birch\": \"red\",\n  \"Cedar\": \"green\",\n  \"Delta\": \"blue\",\n  \"Elm\": \"red\"\n}",
+  "backend": "ollama",
+  "model": "qwen2.5:3b",
+  "prompt": "Solve this puzzle directly. Return only one flat JSON object mapping every named entity or cell to its answer. Do not show your reasoning.\n\nPuzzle:\nFour antennas, Birch, Cedar, Delta and Elm, each use one frequency: red, blue or green. Frequencies may be reused. Birch uses red. Cedar uses a different frequency from Birch and does not use green. Delta uses a different frequency from Cedar and does not use red. Elm uses a different frequency from Delta and does not use blue. What does each antenna use?",
+  "temperature": 0.0,
+  "seed": 0,
+  "elapsed": 3.2490945999998075,
+  "meta": {
+    "eval_count": 35,
+    "prompt_eval_count": 137,
+    "total_duration": 1217405900
+  },
+  "cached_at": "2026-11-15T06:26:42"
+}

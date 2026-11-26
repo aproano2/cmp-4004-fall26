@@ -1,0 +1,649 @@
+{
+  "difficulty_rule": "easy <=4 variables, medium 5-6, hard >=7; same as P1/P2.",
+  "puzzles": [
+    {
+      "id": "q15",
+      "level": "easy",
+      "family": "Library shelves",
+      "puzzle": "At the library shelves, 4 books (Atlas, Botany, Chemistry, Drama) must be assigned to different numbered shelfs from 1 to 4; each shelf is used exactly once. Atlas uses shelf 2. Botany uses shelf 4. Chemistry does not use shelf 3. Which shelf is assigned to each book?",
+      "gold": {
+        "Atlas": 2,
+        "Botany": 4,
+        "Chemistry": 1,
+        "Drama": 3
+      },
+      "spec": {
+        "variables": {
+          "Atlas": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "Botany": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "Chemistry": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "Drama": [
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        "constraints": [
+          {
+            "type": "alldiff",
+            "vars": [
+              "Atlas",
+              "Botany",
+              "Chemistry",
+              "Drama"
+            ]
+          },
+          {
+            "type": "eq",
+            "a": "Atlas",
+            "b": 2
+          },
+          {
+            "type": "eq",
+            "a": "Botany",
+            "b": 4
+          },
+          {
+            "type": "neq",
+            "a": "Chemistry",
+            "b": 3
+          }
+        ]
+      },
+      "derivation": [
+        "The first 2 direct assignments are fixed by explicit clues.",
+        "Two unused shelfs remain; the exclusion resolves the final two assignments."
+      ],
+      "traps": [
+        "Do not omit all-different.",
+        "Respect every fixed assignment and exclusion."
+      ]
+    },
+    {
+      "id": "q16",
+      "level": "easy",
+      "family": "Robotics stations",
+      "puzzle": "At the robotics stations, 4 robots (Arm, Camera, Drone, Engine) must be assigned to different numbered stations from 1 to 4; each station is used exactly once. Arm uses station 3. Camera uses station 1. Drone does not use station 2. Which station is assigned to each robot?",
+      "gold": {
+        "Arm": 3,
+        "Camera": 1,
+        "Drone": 4,
+        "Engine": 2
+      },
+      "spec": {
+        "variables": {
+          "Arm": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "Camera": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "Drone": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "Engine": [
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        "constraints": [
+          {
+            "type": "alldiff",
+            "vars": [
+              "Arm",
+              "Camera",
+              "Drone",
+              "Engine"
+            ]
+          },
+          {
+            "type": "eq",
+            "a": "Arm",
+            "b": 3
+          },
+          {
+            "type": "eq",
+            "a": "Camera",
+            "b": 1
+          },
+          {
+            "type": "neq",
+            "a": "Drone",
+            "b": 2
+          }
+        ]
+      },
+      "derivation": [
+        "The first 2 direct assignments are fixed by explicit clues.",
+        "Two unused stations remain; the exclusion resolves the final two assignments."
+      ],
+      "traps": [
+        "Do not omit all-different.",
+        "Respect every fixed assignment and exclusion."
+      ]
+    },
+    {
+      "id": "q17",
+      "level": "medium",
+      "family": "Science fair booths",
+      "puzzle": "At the science fair booths, 5 teams (Aster, Birch, Cedar, Dahlia, Elm) must be assigned to different numbered booths from 1 to 5; each booth is used exactly once. Aster uses booth 4. Birch uses booth 1. Cedar uses booth 5. Dahlia does not use booth 3. Which booth is assigned to each team?",
+      "gold": {
+        "Aster": 4,
+        "Birch": 1,
+        "Cedar": 5,
+        "Dahlia": 2,
+        "Elm": 3
+      },
+      "spec": {
+        "variables": {
+          "Aster": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "Birch": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "Cedar": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "Dahlia": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "Elm": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        "constraints": [
+          {
+            "type": "alldiff",
+            "vars": [
+              "Aster",
+              "Birch",
+              "Cedar",
+              "Dahlia",
+              "Elm"
+            ]
+          },
+          {
+            "type": "eq",
+            "a": "Aster",
+            "b": 4
+          },
+          {
+            "type": "eq",
+            "a": "Birch",
+            "b": 1
+          },
+          {
+            "type": "eq",
+            "a": "Cedar",
+            "b": 5
+          },
+          {
+            "type": "neq",
+            "a": "Dahlia",
+            "b": 3
+          }
+        ]
+      },
+      "derivation": [
+        "The first 3 direct assignments are fixed by explicit clues.",
+        "Two unused booths remain; the exclusion resolves the final two assignments."
+      ],
+      "traps": [
+        "Do not omit all-different.",
+        "Respect every fixed assignment and exclusion."
+      ]
+    },
+    {
+      "id": "q18",
+      "level": "medium",
+      "family": "Conference presentation slots",
+      "puzzle": "At the conference presentation slots, 6 speakers (Ava, Bela, Cora, Dina, Eli, Fina) must be assigned to different numbered slots from 1 to 6; each slot is used exactly once. Ava uses slot 5. Bela uses slot 2. Cora uses slot 4. Dina uses slot 1. Eli does not use slot 3. Which slot is assigned to each speaker?",
+      "gold": {
+        "Ava": 5,
+        "Bela": 2,
+        "Cora": 4,
+        "Dina": 1,
+        "Eli": 6,
+        "Fina": 3
+      },
+      "spec": {
+        "variables": {
+          "Ava": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "Bela": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "Cora": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "Dina": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "Eli": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "Fina": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ]
+        },
+        "constraints": [
+          {
+            "type": "alldiff",
+            "vars": [
+              "Ava",
+              "Bela",
+              "Cora",
+              "Dina",
+              "Eli",
+              "Fina"
+            ]
+          },
+          {
+            "type": "eq",
+            "a": "Ava",
+            "b": 5
+          },
+          {
+            "type": "eq",
+            "a": "Bela",
+            "b": 2
+          },
+          {
+            "type": "eq",
+            "a": "Cora",
+            "b": 4
+          },
+          {
+            "type": "eq",
+            "a": "Dina",
+            "b": 1
+          },
+          {
+            "type": "neq",
+            "a": "Eli",
+            "b": 3
+          }
+        ]
+      },
+      "derivation": [
+        "The first 4 direct assignments are fixed by explicit clues.",
+        "Two unused slots remain; the exclusion resolves the final two assignments."
+      ],
+      "traps": [
+        "Do not omit all-different.",
+        "Respect every fixed assignment and exclusion."
+      ]
+    },
+    {
+      "id": "q19",
+      "level": "hard",
+      "family": "Museum exhibition rooms",
+      "puzzle": "At the museum exhibition rooms, 7 artifacts (Amber, Bronze, Coral, Diamond, Emerald, Flint, Garnet) must be assigned to different numbered rooms from 1 to 7; each room is used exactly once. Amber uses room 3. Bronze uses room 7. Coral uses room 1. Diamond uses room 5. Emerald uses room 2. Flint does not use room 4. Which room is assigned to each artifact?",
+      "gold": {
+        "Amber": 3,
+        "Bronze": 7,
+        "Coral": 1,
+        "Diamond": 5,
+        "Emerald": 2,
+        "Flint": 6,
+        "Garnet": 4
+      },
+      "spec": {
+        "variables": {
+          "Amber": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "Bronze": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "Coral": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "Diamond": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "Emerald": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "Flint": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "Garnet": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        },
+        "constraints": [
+          {
+            "type": "alldiff",
+            "vars": [
+              "Amber",
+              "Bronze",
+              "Coral",
+              "Diamond",
+              "Emerald",
+              "Flint",
+              "Garnet"
+            ]
+          },
+          {
+            "type": "eq",
+            "a": "Amber",
+            "b": 3
+          },
+          {
+            "type": "eq",
+            "a": "Bronze",
+            "b": 7
+          },
+          {
+            "type": "eq",
+            "a": "Coral",
+            "b": 1
+          },
+          {
+            "type": "eq",
+            "a": "Diamond",
+            "b": 5
+          },
+          {
+            "type": "eq",
+            "a": "Emerald",
+            "b": 2
+          },
+          {
+            "type": "neq",
+            "a": "Flint",
+            "b": 4
+          }
+        ]
+      },
+      "derivation": [
+        "The first 5 direct assignments are fixed by explicit clues.",
+        "Two unused rooms remain; the exclusion resolves the final two assignments."
+      ],
+      "traps": [
+        "Do not omit all-different.",
+        "Respect every fixed assignment and exclusion."
+      ]
+    },
+    {
+      "id": "q20",
+      "level": "hard",
+      "family": "Satellite tracking windows",
+      "puzzle": "At the satellite tracking windows, 8 satellites (Aquila, Boreal, Cygnus, Draco, Equuleus, Fornax, Gemini, Hydra) must be assigned to different numbered windows from 1 to 8; each window is used exactly once. Aquila uses window 8. Boreal uses window 3. Cygnus uses window 6. Draco uses window 1. Equuleus uses window 7. Fornax uses window 2. Gemini does not use window 4. Which window is assigned to each satellite?",
+      "gold": {
+        "Aquila": 8,
+        "Boreal": 3,
+        "Cygnus": 6,
+        "Draco": 1,
+        "Equuleus": 7,
+        "Fornax": 2,
+        "Gemini": 5,
+        "Hydra": 4
+      },
+      "spec": {
+        "variables": {
+          "Aquila": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "Boreal": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "Cygnus": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "Draco": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "Equuleus": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "Fornax": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "Gemini": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "Hydra": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        },
+        "constraints": [
+          {
+            "type": "alldiff",
+            "vars": [
+              "Aquila",
+              "Boreal",
+              "Cygnus",
+              "Draco",
+              "Equuleus",
+              "Fornax",
+              "Gemini",
+              "Hydra"
+            ]
+          },
+          {
+            "type": "eq",
+            "a": "Aquila",
+            "b": 8
+          },
+          {
+            "type": "eq",
+            "a": "Boreal",
+            "b": 3
+          },
+          {
+            "type": "eq",
+            "a": "Cygnus",
+            "b": 6
+          },
+          {
+            "type": "eq",
+            "a": "Draco",
+            "b": 1
+          },
+          {
+            "type": "eq",
+            "a": "Equuleus",
+            "b": 7
+          },
+          {
+            "type": "eq",
+            "a": "Fornax",
+            "b": 2
+          },
+          {
+            "type": "neq",
+            "a": "Gemini",
+            "b": 4
+          }
+        ]
+      },
+      "derivation": [
+        "The first 6 direct assignments are fixed by explicit clues.",
+        "Two unused windows remain; the exclusion resolves the final two assignments."
+      ],
+      "traps": [
+        "Do not omit all-different.",
+        "Respect every fixed assignment and exclusion."
+      ]
+    }
+  ]
+}

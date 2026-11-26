@@ -1,0 +1,15 @@
+{
+  "text": "{\"variables\":{\"R1C1\":[1],\"R1C2\":[2],\"R1C3\":[3],\"R2C1\":[2],\"R2C2\":[3],\"R2C3\":[1],\"R3C1\":[3],\"R3C2\":[1],\"R3C3\":[2]}, \"constraints\":[{\"type\":\"alldiff\",\"vars\":[\"R1C1\",\"R2C1\",\"R3C1\",\"R1C2\",\"R2C2\",\"R3C2\",\"R1C3\",\"R2C3\",\"R3C3\"]},{\"type\":\"alldiff\",\"vars\":[\"R1C1\",\"R2C1\",\"R3C1\",\"R1C2\",\"R2C2\",\"R3C2\",\"R1C3\",\"R2C3\",\"R3C3\"]}]}",
+  "backend": "ollama",
+  "model": "qwen2.5:3b",
+  "prompt": "Translate the puzzle into a CSP. Output only a JSON object; do not solve it.\nEach variable is one named person, object, room or cell whose value must be found. Map each variable name to a flat list of allowed values, with no nested lists. Do not create variables named 'name', 'value', or 'domain'.\nUse only these constraints: {\"type\":\"alldiff\",\"vars\":[\"A\",\"B\"]}, {\"type\":\"eq\",\"a\":\"A\",\"b\":\"red\"}, {\"type\":\"neq\",\"a\":\"A\",\"b\":\"B\"}. For neq, b may also be a domain value. Keep numeric values as numbers.\nExample: 'Ana and Bo choose different colours, red or blue. Ana chooses red.'\n{\"variables\":{\"Ana\":[\"red\",\"blue\"],\"Bo\":[\"red\",\"blue\"]},\"constraints\":[{\"type\":\"alldiff\",\"vars\":[\"Ana\",\"Bo\"]},{\"type\":\"eq\",\"a\":\"Ana\",\"b\":\"red\"}]}\nPuzzle:\nFill a 3x3 grid with the numbers 1, 2 and 3. Name the nine cells R1C1, R1C2, R1C3, R2C1, R2C2, R2C3, R3C1, R3C2 and R3C3, where R is the row and C is the column. Each row contains 1, 2 and 3 exactly once, and each column also contains 1, 2 and 3 exactly once. The given cells are R1C1 = 1, R1C2 = 2, R2C1 = 2 and R2C2 = 3. What number goes in every cell?",
+  "temperature": 0.0,
+  "seed": 2,
+  "elapsed": 5.428965600000083,
+  "meta": {
+    "eval_count": 179,
+    "prompt_eval_count": 379,
+    "total_duration": 3380570600
+  },
+  "cached_at": "2026-11-17T10:25:36"
+}

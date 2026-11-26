@@ -1,0 +1,15 @@
+{
+  "text": "{\n  \"variables\": {\n    \"Amber\": [3],\n    \"Bronze\": [7],\n    \"Coral\": [1],\n    \"Diamond\": [5],\n    \"Emerald\": [2],\n    \"Flint\": [4, 6],\n    \"Garnet\": [1, 2, 3, 4, 5, 6, 7]\n  },\n  \"constraints\": [\n    {\"type\": \"alldiff\", \"vars\": [\"Amber\", \"Bronze\", \"Coral\", \"Diamond\", \"Emerald\", \"Flint\", \"Garnet\"]}\n  ]\n}",
+  "backend": "ollama",
+  "model": "qwen2.5:3b",
+  "prompt": "Translate the puzzle into a CSP. Output only a JSON object; do not solve it.\nEach variable is one named person, object, room or cell whose value must be found. Map each variable name to a flat list of allowed values, with no nested lists. Do not create variables named 'name', 'value', or 'domain'.\nUse only these constraints: {\"type\":\"alldiff\",\"vars\":[\"A\",\"B\"]}, {\"type\":\"eq\",\"a\":\"A\",\"b\":\"red\"}, {\"type\":\"neq\",\"a\":\"A\",\"b\":\"B\"}. For neq, b may also be a domain value. Keep numeric values as numbers.\nExample: 'Ana and Bo choose different colours, red or blue. Ana chooses red.'\n{\"variables\":{\"Ana\":[\"red\",\"blue\"],\"Bo\":[\"red\",\"blue\"]},\"constraints\":[{\"type\":\"alldiff\",\"vars\":[\"Ana\",\"Bo\"]},{\"type\":\"eq\",\"a\":\"Ana\",\"b\":\"red\"}]}\nPuzzle:\nAt the museum exhibition rooms, 7 artifacts (Amber, Bronze, Coral, Diamond, Emerald, Flint, Garnet) must be assigned to different numbered rooms from 1 to 7; each room is used exactly once. Amber uses room 3. Bronze uses room 7. Coral uses room 1. Diamond uses room 5. Emerald uses room 2. Flint does not use room 4. Which room is assigned to each artifact?",
+  "temperature": 0.0,
+  "seed": 1,
+  "elapsed": 4.635303299999578,
+  "meta": {
+    "eval_count": 134,
+    "prompt_eval_count": 320,
+    "total_duration": 2604648700
+  },
+  "cached_at": "2026-11-17T10:23:07"
+}

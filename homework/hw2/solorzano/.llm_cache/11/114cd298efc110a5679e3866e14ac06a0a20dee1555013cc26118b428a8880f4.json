@@ -1,0 +1,15 @@
+{
+  "text": "{\n  \"MorningA\": 1,\n  \"MorningB\": 2,\n  \"MorningC\": 3,\n  \"MorningD\": null,\n  \"AfternoonE\": 4,\n  \"AfternoonF\": 4,\n  \"AfternoonG\": 4\n}",
+  "backend": "ollama",
+  "model": "qwen2.5:3b",
+  "prompt": "Solve this puzzle directly. Return only one flat JSON object mapping every named entity or cell to its answer. Do not show your reasoning.\n\nPuzzle:\nSeven workshops use rooms numbered 1 to 4. MorningA, MorningB, MorningC and MorningD happen at the same time and must use four different rooms. AfternoonE, AfternoonF and AfternoonG also happen at the same time and must use different rooms, but an afternoon workshop may reuse a morning room. MorningA uses room 1, MorningB room 2 and MorningC room 3. AfternoonE must use a room different from MorningA, MorningB and MorningC. AfternoonF must differ from MorningB, MorningC and MorningD. AfternoonG must differ from MorningA, MorningC and MorningD. Which room does each workshop use?",
+  "temperature": 0.0,
+  "seed": 0,
+  "elapsed": 3.930123000000094,
+  "meta": {
+    "eval_count": 61,
+    "prompt_eval_count": 201,
+    "total_duration": 1877524100
+  },
+  "cached_at": "2026-11-15T06:27:40"
+}

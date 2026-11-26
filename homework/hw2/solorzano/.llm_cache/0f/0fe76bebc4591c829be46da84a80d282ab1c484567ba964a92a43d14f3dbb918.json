@@ -1,0 +1,15 @@
+{
+  "text": "{\n  \"variables\": {\n    \"Hana\": [\"1\", \"2\", \"3\", \"4\", \"5\"],\n    \"Ivo\": [\"1\", \"2\", \"3\", \"4\", \"5\", \"6\"],\n    \"Jun\": [\"1\"],\n    \"Kai\": [\"1\", \"2\", \"3\", \"4\", \"5\", \"6\"],\n    \"Lia\": [\"2\", \"3\", \"4\", \"5\", \"6\"],\n    \"Moe\": [\"1\", \"2\", \"3\", \"4\", \"5\", \"6\"]\n  },\n  \"constraints\": [\n    {\"type\": \"alldiff\", \"vars\": [\"Hana\", \"Ivo\", \"Jun\", \"Kai\", \"Lia\", \"Moe\"]},\n    {\"type\": \"neq\", \"a\": \"Jun\", \"b\": \"1\"},\n    {\"type\": \"neq\", \"a\": \"Ivo\", \"b\": \"6\"},\n    {\"type\": \"neq\", \"a\": \"Lia\", \"b\": \"4\"},\n    {\"type\": \"neq\", \"a\": \"Lia\", \"b\": \"5\"},\n    {\"type\": \"neq\", \"a\": \"Lia\", \"b\": \"6\"},\n    {\"type\": \"neq\", \"a\": \"Hana\", \"b\": \"4\"},\n    {\"type\": \"neq\", \"a\": \"Hana\", \"b\": \"5\"},\n    {\"type\": \"neq\", \"a\": \"Moe\", \"b\": \"4\"}\n  ]\n}",
+  "backend": "ollama",
+  "model": "qwen2.5:3b",
+  "prompt": "Translate the puzzle into a CSP. Output only a JSON object; do not solve it.\nEach variable is one named person, object, room or cell whose value must be found. Map each variable name to a flat list of allowed values, with no nested lists. Do not create variables named 'name', 'value', or 'domain'.\nUse only these constraints: {\"type\":\"alldiff\",\"vars\":[\"A\",\"B\"]}, {\"type\":\"eq\",\"a\":\"A\",\"b\":\"red\"}, {\"type\":\"neq\",\"a\":\"A\",\"b\":\"B\"}. For neq, b may also be a domain value. Keep numeric values as numbers.\nExample: 'Ana and Bo choose different colours, red or blue. Ana chooses red.'\n{\"variables\":{\"Ana\":[\"red\",\"blue\"],\"Bo\":[\"red\",\"blue\"]},\"constraints\":[{\"type\":\"alldiff\",\"vars\":[\"Ana\",\"Bo\"]},{\"type\":\"eq\",\"a\":\"Ana\",\"b\":\"red\"}]}\nPuzzle:\nSix students -- Hana, Ivo, Jun, Kai, Lia, Moe -- finished a quiz in positions 1 to 6, with no ties. Jun finished first. Ivo finished last. Lia was not third, not fourth and not fifth. Hana was neither fourth nor fifth. Moe was not fourth.",
+  "temperature": 0.0,
+  "seed": 1,
+  "elapsed": 8.329684400001497,
+  "meta": {
+    "eval_count": 336,
+    "prompt_eval_count": 294,
+    "total_duration": 6271067400
+  },
+  "cached_at": "2026-11-17T10:20:41"
+}
