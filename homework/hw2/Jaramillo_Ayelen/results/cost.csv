@@ -1,0 +1,8 @@
+arm,run,correct,instances,tokens_per_attempt,tokens_per_correct,llm_seconds_per_correct,usd_per_1000_attempts_together_qwen2.5_7b,usd_per_1000_correct_together_qwen2.5_7b,usd_per_1000_attempts_groq_llama3.1_8b,usd_per_1000_correct_groq_llama3.1_8b
+A,T=0 (principal),40,40,0,0,0.0,0.0,0.0,0.0,0.0
+B,T=0 (principal),3,40,1191,15874,103.07,0.3572,4.7623,0.071,0.9467
+B,T=0.7 (4 réplicas),8,160,1205,24097,95.51,0.3615,7.2291,0.0721,1.4429
+B',T=0 (principal),3,40,5624,74988,441.43,1.6872,22.4965,0.3336,4.4478
+B',T=0.7 (4 réplicas),8,160,4947,98943,362.88,1.4841,29.6829,0.2921,5.8429
+C,T=0 (principal),0,40,697,inf,inf,0.209,inf,0.0449,inf
+C,T=0.7 (4 réplicas),2,160,700,56026,314.95,0.2101,16.8078,0.0452,3.6153

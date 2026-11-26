@@ -1,0 +1,13 @@
+arm,cause,failures_with_cause,failures
+B,hallucinated,132,189
+B,reversed,111,189
+B,dropped,83,189
+B,missing,14,189
+B,alldiff_issues,9,189
+B,extra,1,189
+B',hallucinated,126,189
+B',dropped,119,189
+B',reversed,105,189
+B',missing,18,189
+B',alldiff_issues,12,189
+B',extra,1,189
