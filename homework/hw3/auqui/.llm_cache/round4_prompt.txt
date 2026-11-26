@@ -1,0 +1,13 @@
+HISTORIAL DE CONFIGURACIONES EVALUADAS (PSO, Rastrigin D=10, 25000 evals, 5 seeds de entrenamiento):
+config #1: n=40, w=0.730 -> mean_final=4.185 (median 4.975, std 1.457, per-seed [4.97, 5.97, 3.02, 1.99, 4.97]); mean best-so-far at 4%/10%/25%/50%/100% of budget = 34.82/12.67/7.98/4.98/4.19
+config #2: n=80, w=0.600 -> mean_final=5.970 (median 5.970, std 0.629, per-seed [5.97, 6.96, 5.97, 5.97, 4.97]); mean best-so-far at 4%/10%/25%/50%/100% of budget = 41.78/18.67/6.84/5.97/5.97
+config #3: n=20, w=0.500 -> mean_final=12.537 (median 13.929, std 5.754, per-seed [7.96, 3.98, 13.93, 17.91, 18.9]); mean best-so-far at 4%/10%/25%/50%/100% of budget = 13.03/12.54/12.54/12.54/12.54
+config #4: n=60, w=0.850 -> mean_final=7.901 (median 6.273, std 4.137, per-seed [6.27, 2.1, 11.19, 6.12, 13.84]); mean best-so-far at 4%/10%/25%/50%/100% of budget = 48.59/37.66/24.50/17.07/7.90
+config #5: n=40, w=0.800 -> mean_final=3.184 (median 2.985, std 1.592, per-seed [1.99, 4.97, 4.97, 2.98, 0.99]); mean best-so-far at 4%/10%/25%/50%/100% of budget = 46.28/26.37/6.61/4.47/3.18
+config #6: n=25, w=0.850 -> mean_final=4.578 (median 5.392, std 2.534, per-seed [5.39, 2.01, 7.79, 6.45, 1.25]); mean best-so-far at 4%/10%/25%/50%/100% of budget = 49.63/34.51/18.78/12.64/4.58
+config #7: n=30, w=0.700 -> mean_final=10.746 (median 9.950, std 4.511, per-seed [4.97, 15.92, 6.96, 9.95, 15.92]); mean best-so-far at 4%/10%/25%/50%/100% of budget = 28.36/15.40/10.95/10.75/10.75
+config #8: n=100, w=0.800 -> mean_final=4.521 (median 4.174, std 1.924, per-seed [3.91, 4.49, 7.98, 2.05, 4.17]); mean best-so-far at 4%/10%/25%/50%/100% of budget = 56.59/47.31/25.66/13.15/4.52
+config #9: n=40, w=0.880 -> mean_final=12.474 (median 11.904, std 3.643, per-seed [7.13, 13.06, 18.53, 11.75, 11.9]); mean best-so-far at 4%/10%/25%/50%/100% of budget = 52.56/37.44/23.13/14.87/12.47
+config #10: n=50, w=0.800 -> mean_final=3.630 (median 3.223, std 0.766, per-seed [2.98, 3.98, 3.22, 4.97, 2.98]); mean best-so-far at 4%/10%/25%/50%/100% of budget = 53.05/32.04/12.83/6.31/3.63
+config #11: n=60, w=0.750 -> mean_final=5.174 (median 3.980, std 2.699, per-seed [3.98, 9.95, 1.99, 5.97, 3.98]); mean best-so-far at 4%/10%/25%/50%/100% of budget = 46.25/24.50/8.40/6.37/5.17
+config #12: n=35, w=0.800 -> mean_final=3.582 (median 3.980, std 0.487, per-seed [2.98, 3.98, 3.98, 3.98, 2.98]); mean best-so-far at 4%/10%/25%/50%/100% of budget = 43.67/25.14/10.31/4.54/3.58

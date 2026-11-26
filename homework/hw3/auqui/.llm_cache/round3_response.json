@@ -1,0 +1,7 @@
+{"round": 3,
+ "configs": [
+  {"n": 40, "w": 0.88, "why": "A n=40, subir w de 0.73 a 0.80 bajó el error medio de 4.19 a 3.18. Continúo en esa dirección para localizar dónde se rompe (más w = más lento al final con 25000 evals)."},
+  {"n": 50, "w": 0.80, "why": "Variar solo n alrededor de la mejor (40,0.80): n=25 y n=100 con w=0.8-0.85 seguían descendiendo al final, así que el óptimo debería estar entre ambos; pruebo 50."},
+  {"n": 60, "w": 0.75, "why": "Compromiso entre #4 (60,0.85: lento) y #1 (40,0.73: estancamiento parcial). Explora la franja intermedia con más diversidad."},
+  {"n": 35, "w": 0.80, "why": "Variar solo n por debajo de la mejor, para ver si la curva en n es plana (en cuyo caso n no importa a w=0.8)."}
+ ]}

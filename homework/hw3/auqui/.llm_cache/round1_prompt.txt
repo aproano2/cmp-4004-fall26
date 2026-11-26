@@ -1,0 +1,6 @@
+TAREA (rol: sintonizador de hiperparámetros, LLM en el bucle)
+Algoritmo: PSO gbest (c1=c2=1.49618 fijos). Problema: Rastrigin D=10, dominio [-5.12,5.12]^10, mínimo global 0.
+Presupuesto por corrida: 25000 evaluaciones de la función objetivo. Evaluación de una configuración = media del error final en 5 semillas de entrenamiento.
+Espacio: n (tamaño de enjambre, entero 5..100), w (inercia, 0.1..1.0).
+Tienes 4 rondas x 4 configuraciones = 16 configuraciones en total (mismo número que random y grid search).
+Ronda 1: sin historial. Propón 4 configuraciones en JSON con una justificación breve por configuración.
