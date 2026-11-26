@@ -1,0 +1,7 @@
+{"round": 4,
+ "configs": [
+  {"n": 40, "w": 0.77, "why": "w=0.80 es el mejor y 0.88 se rompe (12.5, aún descendiendo: falta de tiempo) mientras 0.73 se estanca un poco; la cresta parece estar en 0.77-0.83. Pruebo el lado inferior."},
+  {"n": 40, "w": 0.83, "why": "Lado superior de la cresta, a n fijo en 40."},
+  {"n": 45, "w": 0.80, "why": "n entre 35 (3.58), 40 (3.18) y 50 (3.63) es prácticamente plano a w=0.8; pruebo 45 como confirmación de que n importa poco en esa franja."},
+  {"n": 30, "w": 0.80, "why": "Último punto en la dirección de n menor a w=0.8, para cerrar la curva en n por debajo."}
+ ]}

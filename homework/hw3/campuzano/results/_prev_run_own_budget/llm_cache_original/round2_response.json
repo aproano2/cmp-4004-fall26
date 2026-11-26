@@ -1,0 +1,7 @@
+{"round": 2,
+ "configs": [
+  {"n": 40, "w": 0.80, "why": "La mejor hasta ahora fue (40,0.73) y seguía mejorando lentamente. Config #4 (w=0.85) llegó aún descendiendo al final => falta tiempo, no diversidad. Sondeo un poco más de inercia que la mejor para conservar diversidad sin pasarme."},
+  {"n": 25, "w": 0.85, "why": "Enjambre pequeño (muchas iteraciones, ~1000) pero con inercia alta: #3 (n=20,w=0.5) se estancó ya al 4% del presupuesto, lo que indica que el problema fue w bajo, no n pequeño. Pruebo que con w alta un n pequeño no se estanca."},
+  {"n": 30, "w": 0.70, "why": "Vecino de la mejor en dirección de menos n: más iteraciones y w algo menor que el óptimo observado; separa el efecto de n del efecto de w."},
+  {"n": 100, "w": 0.80, "why": "#2 (n=80,w=0.6) se estancó a 5.97 antes del 50% del presupuesto: baja w mata la exploración aunque n sea grande. Pruebo el extremo de n alto con w alta para ver si la diversidad pagada con evaluaciones compensa."}
+ ]}
