@@ -1,0 +1,7 @@
+{"round": 1,
+ "configs": [
+  {"n": 40, "w": 0.73, "why": "Referencia clásica (constricción de Clerc: w=0.7298 con c1=c2=1.496). Sirve de ancla para medir si ayuda moverse."},
+  {"n": 80, "w": 0.60, "why": "Rastrigin es muy multimodal: un enjambre grande mantiene diversidad; w menor para contrarrestar el mayor coste por iteración y converger en el nº de iteraciones restante (25000/80 ~ 312 iteraciones)."},
+  {"n": 20, "w": 0.50, "why": "Enjambre pequeño con inercia baja: muchas iteraciones (~1250) y explotación fuerte. Hipótesis: se atasca en un mínimo local; sirve para delimitar el extremo explotador."},
+  {"n": 60, "w": 0.85, "why": "Inercia alta = más exploración/largos recorridos; con c1=c2=1.5 puede ser inestable (w+... > 1). Sondea el borde explorador."}
+ ]}
