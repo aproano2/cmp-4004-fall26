@@ -1,0 +1,6 @@
+first_category,fixed_in_1,fixed_in_2,fixed_in_3,feedback_to_wrong_answer,never_converged,wrong_first_try (no feedback),total
+malformed_syntax,0,0,0,4,8,0,12
+scope_arity,0,0,0,5,10,1,16
+over_constrained,0,0,0,27,52,0,79
+under_constrained,0,0,0,0,0,71,71
+wrong_problem,0,0,0,0,0,11,11

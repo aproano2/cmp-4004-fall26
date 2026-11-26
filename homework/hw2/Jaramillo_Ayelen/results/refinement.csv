@@ -1,0 +1,201 @@
+problem,rep,level,first_stage,final_stage,rounds,kind,iterations_to_success,stages
+L1-01,0,1,solved,solved,0,solved_first_try,0,solved
+L1-02,0,1,solved,solved,0,wrong_first_try (no feedback),,solved
+L1-03,0,1,solved,solved,0,solved_first_try,0,solved
+L1-04,0,1,solved,solved,0,wrong_first_try (no feedback),,solved
+L1-05,0,1,unsat,unsat,3,never_converged,,unsat > unsat > unsat > unsat
+L1-06,0,1,unsat,unsat,3,never_converged,,unsat > unsat > unsat > unsat
+L1-07,0,1,solved,solved,0,wrong_first_try (no feedback),,solved
+L1-08,0,1,schema,solved,1,feedback_to_wrong_answer,,schema > solved
+L1-09,0,1,solved,solved,0,wrong_first_try (no feedback),,solved
+L1-10,0,1,solved,solved,0,wrong_first_try (no feedback),,solved
+L2-01,0,2,unsat,solved,2,feedback_to_wrong_answer,,unsat > unsat > solved
+L2-02,0,2,unsat,solved,1,feedback_to_wrong_answer,,unsat > solved
+L2-03,0,2,unsat,solved,1,feedback_to_wrong_answer,,unsat > solved
+L2-04,0,2,unsat,solved,1,feedback_to_wrong_answer,,unsat > solved
+L2-05,0,2,solved,solved,0,solved_first_try,0,solved
+L2-06,0,2,unsat,unsat,3,never_converged,,unsat > unsat > unsat > unsat
+L2-07,0,2,solved,solved,0,wrong_first_try (no feedback),,solved
+L2-08,0,2,solved,solved,0,wrong_first_try (no feedback),,solved
+L2-09,0,2,solved,solved,0,wrong_first_try (no feedback),,solved
+L2-10,0,2,unsat,unsat,3,never_converged,,unsat > unsat > unsat > unsat
+L3-01,0,3,unsat,unsat,3,never_converged,,unsat > unsat > unsat > unsat
+L3-02,0,3,unsat,unsat,3,never_converged,,unsat > unsat > unsat > unsat
+L3-03,0,3,unsat,unsat,3,never_converged,,unsat > unsat > unsat > unsat
+L3-04,0,3,solved,solved,0,wrong_first_try (no feedback),,solved
+L3-05,0,3,unsat,unsat,3,never_converged,,unsat > unsat > unsat > unsat
+L3-06,0,3,solved,solved,0,wrong_first_try (no feedback),,solved
+L3-07,0,3,scope,scope,3,never_converged,,scope > scope > scope > scope
+L3-08,0,3,unsat,solved,1,feedback_to_wrong_answer,,unsat > solved
+L3-09,0,3,solved,solved,0,wrong_first_try (no feedback),,solved
+L3-10,0,3,unsat,unsat,3,never_converged,,unsat > unsat > unsat > unsat
+L4-01,0,4,unsat,unsat,3,never_converged,,unsat > unsat > unsat > unsat
+L4-02,0,4,solved,solved,0,wrong_first_try (no feedback),,solved
+L4-03,0,4,solved,solved,0,wrong_first_try (no feedback),,solved
+L4-04,0,4,unsat,unsat,3,never_converged,,unsat > unsat > unsat > unsat
+L4-05,0,4,unsat,unsat,3,never_converged,,unsat > unsat > unsat > unsat
+L4-06,0,4,unsat,unsat,3,never_converged,,unsat > unsat > unsat > unsat
+L4-07,0,4,schema,unsat,3,never_converged,,schema > unsat > unsat > unsat
+L4-08,0,4,unsat,scope,3,never_converged,,unsat > scope > unsat > scope
+L4-09,0,4,solved,solved,0,wrong_first_try (no feedback),,solved
+L4-10,0,4,unsat,unsat,3,never_converged,,unsat > unsat > unsat > unsat
+L1-01,1,1,solved,solved,0,solved_first_try,0,solved
+L1-02,1,1,solved,solved,0,wrong_first_try (no feedback),,solved
+L1-03,1,1,solved,solved,0,solved_first_try,0,solved
+L1-04,1,1,solved,solved,0,wrong_first_try (no feedback),,solved
+L1-05,1,1,parse,parse,3,never_converged,,parse > parse > parse > parse
+L1-06,1,1,unsat,solved,1,feedback_to_wrong_answer,,unsat > solved
+L1-07,1,1,solved,solved,0,wrong_first_try (no feedback),,solved
+L1-08,1,1,solved,solved,0,wrong_first_try (no feedback),,solved
+L1-09,1,1,solved,solved,0,wrong_first_try (no feedback),,solved
+L1-10,1,1,solved,solved,0,wrong_first_try (no feedback),,solved
+L2-01,1,2,unsat,unsat,3,never_converged,,unsat > unsat > unsat > unsat
+L2-02,1,2,unsat,solved,1,feedback_to_wrong_answer,,unsat > solved
+L2-03,1,2,unsat,solved,2,feedback_to_wrong_answer,,unsat > unsat > solved
+L2-04,1,2,unsat,solved,3,feedback_to_wrong_answer,,unsat > unsat > unsat > solved
+L2-05,1,2,solved,solved,0,solved_first_try,0,solved
+L2-06,1,2,unsat,unsat,3,never_converged,,unsat > unsat > unsat > unsat
+L2-07,1,2,solved,solved,0,wrong_first_try (no feedback),,solved
+L2-08,1,2,scope,scope,3,never_converged,,scope > scope > scope > scope
+L2-09,1,2,solved,solved,0,wrong_first_try (no feedback),,solved
+L2-10,1,2,solved,solved,0,wrong_first_try (no feedback),,solved
+L3-01,1,3,unsat,unsat,3,never_converged,,unsat > unsat > unsat > unsat
+L3-02,1,3,solved,solved,0,wrong_first_try (no feedback),,solved
+L3-03,1,3,unsat,unsat,3,never_converged,,unsat > unsat > parse > unsat
+L3-04,1,3,solved,solved,0,wrong_first_try (no feedback),,solved
+L3-05,1,3,solved,solved,0,wrong_first_try (no feedback),,solved
+L3-06,1,3,solved,solved,0,wrong_first_try (no feedback),,solved
+L3-07,1,3,scope,solved,3,feedback_to_wrong_answer,,scope > scope > scope > solved
+L3-08,1,3,solved,solved,0,wrong_first_try (no feedback),,solved
+L3-09,1,3,solved,solved,0,wrong_first_try (no feedback),,solved
+L3-10,1,3,unsat,solved,2,feedback_to_wrong_answer,,unsat > unsat > solved
+L4-01,1,4,parse,parse,3,never_converged,,parse > parse > parse > parse
+L4-02,1,4,unsat,unsat,3,never_converged,,unsat > unsat > unsat > unsat
+L4-03,1,4,scope,solved,3,feedback_to_wrong_answer,,scope > scope > scope > solved
+L4-04,1,4,unsat,unsat,3,never_converged,,unsat > unsat > unsat > unsat
+L4-05,1,4,schema,unsat,3,never_converged,,schema > unsat > unsat > unsat
+L4-06,1,4,unsat,unsat,3,never_converged,,unsat > scope > scope > unsat
+L4-07,1,4,unsat,unsat,3,never_converged,,unsat > unsat > unsat > unsat
+L4-08,1,4,schema,unsat,3,never_converged,,schema > schema > schema > unsat
+L4-09,1,4,unsat,unsat,3,never_converged,,unsat > unsat > unsat > unsat
+L4-10,1,4,solved,solved,0,wrong_first_try (no feedback),,solved
+L1-01,2,1,solved,solved,0,solved_first_try,0,solved
+L1-02,2,1,solved,solved,0,wrong_first_try (no feedback),,solved
+L1-03,2,1,solved,solved,0,solved_first_try,0,solved
+L1-04,2,1,solved,solved,0,wrong_first_try (no feedback),,solved
+L1-05,2,1,solved,solved,0,wrong_first_try (no feedback),,solved
+L1-06,2,1,unsat,solved,2,feedback_to_wrong_answer,,unsat > unsat > solved
+L1-07,2,1,solved,solved,0,wrong_first_try (no feedback),,solved
+L1-08,2,1,solved,solved,0,wrong_first_try (no feedback),,solved
+L1-09,2,1,solved,solved,0,wrong_first_try (no feedback),,solved
+L1-10,2,1,solved,solved,0,wrong_first_try (no feedback),,solved
+L2-01,2,2,unsat,unsat,3,never_converged,,unsat > unsat > unsat > unsat
+L2-02,2,2,unsat,solved,1,feedback_to_wrong_answer,,unsat > solved
+L2-03,2,2,unsat,solved,2,feedback_to_wrong_answer,,unsat > unsat > solved
+L2-04,2,2,unsat,solved,1,feedback_to_wrong_answer,,unsat > solved
+L2-05,2,2,solved,solved,0,wrong_first_try (no feedback),,solved
+L2-06,2,2,unsat,solved,1,feedback_to_wrong_answer,,unsat > solved
+L2-07,2,2,solved,solved,0,wrong_first_try (no feedback),,solved
+L2-08,2,2,unsat,unsat,3,never_converged,,unsat > unsat > unsat > unsat
+L2-09,2,2,solved,solved,0,wrong_first_try (no feedback),,solved
+L2-10,2,2,unsat,unsat,3,never_converged,,unsat > unsat > unsat > unsat
+L3-01,2,3,unsat,unsat,3,never_converged,,unsat > unsat > unsat > unsat
+L3-02,2,3,unsat,solved,1,feedback_to_wrong_answer,,unsat > solved
+L3-03,2,3,unsat,solved,1,feedback_to_wrong_answer,,unsat > solved
+L3-04,2,3,solved,solved,0,wrong_first_try (no feedback),,solved
+L3-05,2,3,unsat,schema,3,never_converged,,unsat > schema > schema > schema
+L3-06,2,3,solved,solved,0,wrong_first_try (no feedback),,solved
+L3-07,2,3,unsat,unsat,3,never_converged,,unsat > unsat > unsat > unsat
+L3-08,2,3,unsat,unsat,3,never_converged,,unsat > unsat > unsat > unsat
+L3-09,2,3,solved,solved,0,wrong_first_try (no feedback),,solved
+L3-10,2,3,unsat,unsat,3,never_converged,,unsat > unsat > unsat > unsat
+L4-01,2,4,unsat,solved,1,feedback_to_wrong_answer,,unsat > solved
+L4-02,2,4,solved,solved,0,wrong_first_try (no feedback),,solved
+L4-03,2,4,solved,solved,0,wrong_first_try (no feedback),,solved
+L4-04,2,4,unsat,unsat,3,never_converged,,unsat > unsat > unsat > unsat
+L4-05,2,4,scope,scope,3,never_converged,,scope > scope > scope > scope
+L4-06,2,4,unsat,unsat,3,never_converged,,unsat > unsat > unsat > unsat
+L4-07,2,4,unsat,solved,1,feedback_to_wrong_answer,,unsat > solved
+L4-08,2,4,unsat,unsat,3,never_converged,,unsat > unsat > unsat > unsat
+L4-09,2,4,solved,solved,0,wrong_first_try (no feedback),,solved
+L4-10,2,4,unsat,unsat,3,never_converged,,unsat > unsat > unsat > unsat
+L1-01,3,1,solved,solved,0,solved_first_try,0,solved
+L1-02,3,1,solved,solved,0,wrong_first_try (no feedback),,solved
+L1-03,3,1,solved,solved,0,wrong_first_try (no feedback),,solved
+L1-04,3,1,solved,solved,0,wrong_first_try (no feedback),,solved
+L1-05,3,1,parse,solved,1,feedback_to_wrong_answer,,parse > solved
+L1-06,3,1,unsat,solved,1,feedback_to_wrong_answer,,unsat > solved
+L1-07,3,1,solved,solved,0,wrong_first_try (no feedback),,solved
+L1-08,3,1,schema,solved,1,feedback_to_wrong_answer,,schema > solved
+L1-09,3,1,solved,solved,0,wrong_first_try (no feedback),,solved
+L1-10,3,1,solved,solved,0,wrong_first_try (no feedback),,solved
+L2-01,3,2,unsat,solved,1,feedback_to_wrong_answer,,unsat > solved
+L2-02,3,2,solved,solved,0,wrong_first_try (no feedback),,solved
+L2-03,3,2,solved,solved,0,wrong_first_try (no feedback),,solved
+L2-04,3,2,unsat,unsat,3,never_converged,,unsat > unsat > unsat > unsat
+L2-05,3,2,unsat,unsat,3,never_converged,,unsat > unsat > unsat > unsat
+L2-06,3,2,unsat,unsat,3,never_converged,,unsat > unsat > unsat > unsat
+L2-07,3,2,solved,solved,0,wrong_first_try (no feedback),,solved
+L2-08,3,2,unsat,solved,1,feedback_to_wrong_answer,,unsat > solved
+L2-09,3,2,solved,solved,0,wrong_first_try (no feedback),,solved
+L2-10,3,2,solved,solved,0,solved_first_try,0,solved
+L3-01,3,3,unsat,unsat,3,never_converged,,unsat > unsat > unsat > unsat
+L3-02,3,3,unsat,unsat,3,never_converged,,unsat > unsat > unsat > unsat
+L3-03,3,3,unsat,unsat,3,never_converged,,unsat > unsat > unsat > unsat
+L3-04,3,3,solved,solved,0,wrong_first_try (no feedback),,solved
+L3-05,3,3,solved,solved,0,wrong_first_try (no feedback),,solved
+L3-06,3,3,solved,solved,0,wrong_first_try (no feedback),,solved
+L3-07,3,3,schema,unsat,3,never_converged,,schema > unsat > parse > unsat
+L3-08,3,3,solved,solved,0,wrong_first_try (no feedback),,solved
+L3-09,3,3,solved,solved,0,wrong_first_try (no feedback),,solved
+L3-10,3,3,solved,solved,0,wrong_first_try (no feedback),,solved
+L4-01,3,4,unsat,unsat,3,never_converged,,unsat > unsat > unsat > unsat
+L4-02,3,4,unsat,parse,3,never_converged,,unsat > unsat > unsat > parse
+L4-03,3,4,solved,solved,0,wrong_first_try (no feedback),,solved
+L4-04,3,4,unsat,unsat,3,never_converged,,unsat > unsat > unsat > unsat
+L4-05,3,4,unsat,unsat,3,never_converged,,unsat > unsat > unsat > unsat
+L4-06,3,4,unsat,scope,3,never_converged,,unsat > unsat > unsat > scope
+L4-07,3,4,schema,unsat,3,never_converged,,schema > schema > unsat > unsat
+L4-08,3,4,unsat,scope,3,never_converged,,unsat > scope > unsat > scope
+L4-09,3,4,solved,solved,0,wrong_first_try (no feedback),,solved
+L4-10,3,4,solved,solved,0,wrong_first_try (no feedback),,solved
+L1-01,4,1,solved,solved,0,wrong_first_try (no feedback),,solved
+L1-02,4,1,solved,solved,0,wrong_first_try (no feedback),,solved
+L1-03,4,1,solved,solved,0,solved_first_try,0,solved
+L1-04,4,1,unsat,scope,3,never_converged,,unsat > scope > scope > scope
+L1-05,4,1,solved,solved,0,wrong_first_try (no feedback),,solved
+L1-06,4,1,unsat,solved,1,feedback_to_wrong_answer,,unsat > solved
+L1-07,4,1,solved,solved,0,wrong_first_try (no feedback),,solved
+L1-08,4,1,solved,solved,0,wrong_first_try (no feedback),,solved
+L1-09,4,1,solved,solved,0,wrong_first_try (no feedback),,solved
+L1-10,4,1,unsat,solved,1,feedback_to_wrong_answer,,unsat > solved
+L2-01,4,2,unsat,solved,1,feedback_to_wrong_answer,,unsat > solved
+L2-02,4,2,solved,solved,0,wrong_first_try (no feedback),,solved
+L2-03,4,2,solved,solved,0,wrong_first_try (no feedback),,solved
+L2-04,4,2,unsat,unsat,3,never_converged,,unsat > unsat > unsat > unsat
+L2-05,4,2,solved,solved,0,wrong_first_try (no feedback),,solved
+L2-06,4,2,unsat,unsat,3,never_converged,,unsat > unsat > unsat > unsat
+L2-07,4,2,solved,solved,0,wrong_first_try (no feedback),,solved
+L2-08,4,2,scope,unsat,3,never_converged,,scope > unsat > unsat > unsat
+L2-09,4,2,solved,solved,0,wrong_first_try (no feedback),,solved
+L2-10,4,2,unsat,solved,1,feedback_to_wrong_answer,,unsat > solved
+L3-01,4,3,unsat,unsat,3,never_converged,,unsat > unsat > unsat > unsat
+L3-02,4,3,unsat,unsat,3,never_converged,,unsat > unsat > scope > unsat
+L3-03,4,3,unsat,unsat,3,never_converged,,unsat > unsat > unsat > unsat
+L3-04,4,3,solved,solved,0,wrong_first_try (no feedback),,solved
+L3-05,4,3,unsat,solved,1,feedback_to_wrong_answer,,unsat > solved
+L3-06,4,3,solved,solved,0,wrong_first_try (no feedback),,solved
+L3-07,4,3,scope,solved,2,feedback_to_wrong_answer,,scope > scope > solved
+L3-08,4,3,unsat,unsat,3,never_converged,,unsat > unsat > unsat > unsat
+L3-09,4,3,solved,solved,0,wrong_first_try (no feedback),,solved
+L3-10,4,3,solved,solved,0,wrong_first_try (no feedback),,solved
+L4-01,4,4,solved,solved,0,wrong_first_try (no feedback),,solved
+L4-02,4,4,solved,solved,0,wrong_first_try (no feedback),,solved
+L4-03,4,4,parse,solved,1,feedback_to_wrong_answer,,parse > solved
+L4-04,4,4,unsat,solved,1,feedback_to_wrong_answer,,unsat > solved
+L4-05,4,4,unsat,solved,1,feedback_to_wrong_answer,,unsat > solved
+L4-06,4,4,unsat,unsat,3,never_converged,,unsat > unsat > unsat > unsat
+L4-07,4,4,unsat,unsat,3,never_converged,,unsat > unsat > unsat > unsat
+L4-08,4,4,schema,unsat,3,never_converged,,schema > schema > scope > unsat
+L4-09,4,4,solved,solved,0,wrong_first_try (no feedback),,solved
+L4-10,4,4,unsat,unsat,3,never_converged,,unsat > unsat > unsat > unsat
