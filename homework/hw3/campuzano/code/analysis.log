@@ -1,0 +1,36 @@
+          problem  budget    winner  winner_median best_metaheuristic     bm_median  heuristic_median    rs_median  bm_beats_RS_p  bm_beats_heuristic_p  rs_rank  n_algos
+0   rastrigin_D10   25000       ABC   2.842171e-14                ABC  2.842171e-14      2.935119e+01    63.354222   3.242859e-08          3.242859e-08        7        7
+1    rastrigin_D2    5000       ABC   0.000000e+00                ABC  0.000000e+00      3.051603e-11     0.860757   4.003273e-09          4.003273e-09        7        7
+2   rastrigin_D30   75000       ABC   1.583498e-08                ABC  1.583498e-08      1.547154e+02   331.479847   3.397808e-08          3.397808e-08        7        7
+3  rosenbrock_D10   25000        HC   1.155243e-01                ABC  8.950766e-01      1.155243e-01   147.488274   3.397808e-08          9.999353e-01        7        7
+4   rosenbrock_D2    5000       PSO   2.780369e-10                PSO  2.780369e-10      7.201347e-05     0.005187   3.397808e-08          3.397808e-08        7        7
+5  rosenbrock_D30   75000        HC   1.098082e+01          PSO_clerc  1.898954e+01      1.098082e+01  2730.797953   3.397808e-08          1.000000e+00        7        7
+6          tsp_20   20000       ACO   3.667601e+00                ACO  3.667601e+00      3.667601e+00     6.287377   4.003273e-09          1.000000e+00        8        8
+7          tsp_30   30000  ACO_MMAS   4.735773e+00           ACO_MMAS  4.735773e+00      4.735773e+00    10.882971   1.938138e-08          9.980464e-01        8        8
+8          tsp_50   50000    NN2OPT   6.046585e+00           ACO_MMAS  6.057635e+00      6.046585e+00    19.773240   3.169970e-08          5.057825e-01        8        8
+/home/claude/hw3/campuzano/code/analysis.py:91: MatplotlibDeprecationWarning: vert: bool was deprecated in Matplotlib 3.11 and will be removed in 3.13. Use orientation: {'vertical', 'horizontal'} instead.
+  bp = ax.boxplot([d[d.algo == a].final for a in order], vert=False, patch_artist=True, widths=0.6,
+/home/claude/hw3/campuzano/code/analysis.py:91: MatplotlibDeprecationWarning: vert: bool was deprecated in Matplotlib 3.11 and will be removed in 3.13. Use orientation: {'vertical', 'horizontal'} instead.
+  bp = ax.boxplot([d[d.algo == a].final for a in order], vert=False, patch_artist=True, widths=0.6,
+/home/claude/hw3/campuzano/code/analysis.py:91: MatplotlibDeprecationWarning: vert: bool was deprecated in Matplotlib 3.11 and will be removed in 3.13. Use orientation: {'vertical', 'horizontal'} instead.
+  bp = ax.boxplot([d[d.algo == a].final for a in order], vert=False, patch_artist=True, widths=0.6,
+/home/claude/hw3/campuzano/code/analysis.py:91: MatplotlibDeprecationWarning: vert: bool was deprecated in Matplotlib 3.11 and will be removed in 3.13. Use orientation: {'vertical', 'horizontal'} instead.
+  bp = ax.boxplot([d[d.algo == a].final for a in order], vert=False, patch_artist=True, widths=0.6,
+/home/claude/hw3/campuzano/code/analysis.py:91: MatplotlibDeprecationWarning: vert: bool was deprecated in Matplotlib 3.11 and will be removed in 3.13. Use orientation: {'vertical', 'horizontal'} instead.
+  bp = ax.boxplot([d[d.algo == a].final for a in order], vert=False, patch_artist=True, widths=0.6,
+/home/claude/hw3/campuzano/code/analysis.py:91: MatplotlibDeprecationWarning: vert: bool was deprecated in Matplotlib 3.11 and will be removed in 3.13. Use orientation: {'vertical', 'horizontal'} instead.
+  bp = ax.boxplot([d[d.algo == a].final for a in order], vert=False, patch_artist=True, widths=0.6,
+/home/claude/hw3/campuzano/code/analysis.py:91: MatplotlibDeprecationWarning: vert: bool was deprecated in Matplotlib 3.11 and will be removed in 3.13. Use orientation: {'vertical', 'horizontal'} instead.
+  bp = ax.boxplot([d[d.algo == a].final for a in order], vert=False, patch_artist=True, widths=0.6,
+/home/claude/hw3/campuzano/code/analysis.py:91: MatplotlibDeprecationWarning: vert: bool was deprecated in Matplotlib 3.11 and will be removed in 3.13. Use orientation: {'vertical', 'horizontal'} instead.
+  bp = ax.boxplot([d[d.algo == a].final for a in order], vert=False, patch_artist=True, widths=0.6,
+/home/claude/hw3/campuzano/code/analysis.py:91: MatplotlibDeprecationWarning: vert: bool was deprecated in Matplotlib 3.11 and will be removed in 3.13. Use orientation: {'vertical', 'horizontal'} instead.
+  bp = ax.boxplot([d[d.algo == a].final for a in order], vert=False, patch_artist=True, widths=0.6,
+LLM test mean 4.522266982450679 grid 9.999331535444028 default 6.019499913141319 random mean-of-means 6.060785521553673 frac random draws better than LLM: 0.3333333333333333 LLM vs default MWU p 0.09468891472485541
+random-draw train best median 4.388180785533562 LLM train 3.1838814786531344 Grid train 7.959668426491072
+method
+Default (n=40,w=0.7298)         NaN
+Grid                       7.959668
+LLM                        3.183881
+Random                     3.581852
+Name: train_mean, dtype: float64
